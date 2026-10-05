@@ -1,0 +1,12 @@
+Use case: historical-scene.
+Asset type: final background artwork for an interactive hidden-person browser game.
+Primary request: Create a very wide panoramic ORIGINAL Chinese Song-dynasty-inspired handscroll painting, resembling the fine ink outlines, scattered perspective, muted mineral washes and warm aged silk of Zhang Zeduan's Qingming Shanghe Tu. This is an imaginary imperial examination results day, a continuous lively city street, not a reproduction.
+Composition: panoramic 3:1 landscape, aim for 3072x1024 or wider if available. Left third has a town wall and examination list with a crowd watching the results. Middle third has tea stalls, booksellers, tiled roofs, trees and everyday street activity. Right third has a stone bridge, river, boats, and a shaded bridge approach. About 50 small detailed full-body figures integrated into the scene. Keep all buildings and people finely drawn; restrained antique ochre, muted teal-blue, olive and brown. Fill the whole image with the painting, no decorative frame or blank title panels.
+Five GAMEPLAY ACTORS must be clearly depicted with distinctive body props, at approximately these composition positions:
+1. At x=19%, y=63%, an examination copyist seated on a low stool in front of the left results wall, facing partly sideways, holding a writing brush over paper, muted cream clothes.
+2. At x=48%, y=59%, a tea-stall proprietor standing next to his stall, holding a visible teapot in one hand, brown apron and pale robe.
+3. At x=71%, y=73%, a scholar in muted teal-blue long robe holding a white rolled scroll, with NO backpack or box.
+4. At x=81%, y=54%, a scholar in gray-brown long robe carrying a clearly rectangular pale wooden book box on his back.
+5. At x=90%, y=72%, at the right bridge approach, the target scholar in muted teal-blue long robe carrying a clearly visible rectangular pale wooden book box on his back, three-quarter rear view. Only this ONE person combines a teal-blue robe AND rectangular book box. He is standing in the painting, not a large foreground portrait.
+Background figures have different poses, robes and props. All five actors should match the linework, scale and painterly quality of surrounding people, with enough space to distinguish their props when zoomed. Strongly preserve readable teapot, brush, scroll, and rectangular book boxes.
+Lighting: soft calm daylight. Text: any tiny period-like signage can be abstract brush strokes; no large legible words needed. No game interface, labels, glowing markers, modern objects, 3D look, anime, cartoon or photorealism.
