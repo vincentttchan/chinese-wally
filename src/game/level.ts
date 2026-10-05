@@ -26,7 +26,7 @@ export const level = {
   actors: [
     { id: 'copyist', kind: 'witness', name: '抄榜人', x: .0525, y: .395, width: .029, height: .112, quote: '與書童同行的那位考生，穿青色長衫。', clueTitle: '一襲青衫' },
     { id: 'tea-keeper', kind: 'witness', name: '茶攤掌櫃', x: .413, y: .275, width: .026, height: .125, quote: '他買茶時，把一只方形書箱放在腳邊。離開時也帶上了。', clueTitle: '隨身書箱' },
-    { id: 'board-observer', kind: 'witness', name: '榜前圍觀者', x: .0598, y: .281, width: .014, height: .128, quote: '方才有個考生嫌這裏擠，說要到有石欄的地方等同行的人。', clueTitle: '石欄之約' },
+    { id: 'board-observer', kind: 'witness', name: '榜前圍觀者', x: .196, y: .218, width: .029, height: .145, quote: '方才有個考生嫌這裏擠，說要到有石欄的地方等同行的人。', clueTitle: '石欄之約' },
     { id: 'scholar-scroll', kind: 'candidate', name: '候選考生一', x: .721, y: .805, width: .022, height: .155 },
     { id: 'scholar-brown', kind: 'candidate', name: '候選考生二', x: .762, y: .243, width: .020, height: .145 },
     { id: 'scholar-target', kind: 'target', name: '候選考生三', x: .792, y: .725, width: .022, height: .162 },
