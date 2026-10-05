@@ -1,0 +1,5 @@
+Input: output/art-direction/hd-inputs/center.png
+Mode: built-in imagegen edit.
+Actual output: 1254 x 1254 (requested dimensions in prompt are not the delivered dimensions).
+
+Enhance this EXACT square painting tile at the highest native resolution, requested 2048x2048. Preserve the entire composition, every person's position and scale, architecture, palette and ALL FOUR EDGE CROPS exactly. It is one tile in a continuous Chinese handscroll, so do not recenter, zoom, extend or change framing. Keep outer 5% of each edge composition unchanged for seamless adjoining. Repaint blurred internal fine details into crisp traditional ink: distinct small faces and hands, clothing folds, tea cups, brush, scroll and book boxes. Fine brown linework, pale mineral washes, light silk grain, no extra texture, sharpening halos or blur. Keep original character count and props, no new people, objects, UI or border. Output only the enhanced same square image, not a whole panorama.

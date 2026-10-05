@@ -21,6 +21,7 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 .scroll-viewport.is-dragging {cursor: grabbing;}
 .painting-world {position: absolute; inset: 0 auto auto 0; transform-origin: 0 0; will-change: transform;}
 .painting {width: 100%; height: 100%; display: block; pointer-events: none;}
+.painting-detail-tile {position: absolute; top: 0; height: 100%; display: block; pointer-events: none;}
 .is-ready .painting {animation: painting-arrives 400ms var(--ease-soft) both;}
 .scene-vignette {position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg,#463b2914,transparent 120px,transparent 75%,#30291f48); box-shadow: inset 0 0 95px #44351e25; transition: background var(--motion-scene);}
 .ending-visible .scene-vignette {background-color: #151a160d;}
@@ -180,3 +181,68 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 .notebook-count {border-color: #82785966;}
 .notebook-toggle > .art-icon:first-child, .hint-button > .art-icon {width: 28px !important; height: 28px !important;}
 .primary-button .art-icon {filter: brightness(0) invert(.94) sepia(.35);}
+
+/* A full-page prelude opens the painting; the mission is a small in-scene control. */
+.introduction {position: absolute; inset: 0; z-index: 9; color: #353b30; background: linear-gradient(90deg,#f2ead5fa 0%,#f2ead5f5 21%,#f2ead5d9 35%,#f2ead573 49%,#f2ead50a 68%,transparent 80%); transition: opacity 600ms var(--ease-scene), transform 600ms var(--ease-scene);}
+.introduction.is-leaving {opacity: 0; transform: translateX(-18px); pointer-events: none;}
+.intro-brand {position: absolute; top: clamp(28px,6vh,65px); left: clamp(28px,6vw,100px); display: flex; align-items: center; gap: 16px; font-size: 12px; letter-spacing: .35em; color: #646653;}
+.intro-brand > span {width: 34px; height: 1px; background: currentColor; opacity: .7;}
+.intro-content {position: absolute; left: clamp(28px,6vw,100px); top: 50%; transform: translateY(-50%); width: 365px; display: grid; grid-template-columns: 220px 86px; gap: 42px; align-items: center;}
+.intro-title {display: flex; flex-direction: column; align-items: center; gap: 24px;}
+.intro-title h1 {writing-mode: vertical-rl; text-orientation: upright; font-size: clamp(52px,5.8vw,76px); line-height: 1.05; letter-spacing: .14em; font-weight: 500; margin: 0;}
+.intro-seal {border: 1px solid #9a5039; color: #9a5039; writing-mode: vertical-rl; padding: 6px 5px; font-size: 13px; letter-spacing: .18em; transform: rotate(-3deg);}
+.intro-chapter {font-size: 13px; letter-spacing: .38em; margin: 0 0 32px; color: #775e45;}
+.intro-story, .intro-invitation {font-size: 14px; line-height: 2.25; margin: 0 0 22px; letter-spacing: .025em;}
+.intro-invitation {color: #626853;}
+.intro-enter {margin-top: 24px; padding: 15px 0; display: flex; align-items: center; justify-content: space-between; gap: 25px; width: 100%; background: transparent; border-block: 1px solid #716b4f66; font-size: 19px; letter-spacing: .18em;}
+.intro-enter:hover:not(:disabled) {color: #924b35; background: #fff4d126;}
+.intro-enter:disabled {opacity: .45;}
+.intro-play-note {display: block; margin-top: 15px; font-size: 10px; letter-spacing: .15em; color: #74745d;}
+.intro-footer {position: absolute; bottom: clamp(28px,6vh,65px); left: clamp(28px,6vw,100px); margin: 0; font-size: 11px; letter-spacing: .16em; color: #75755f;}
+.phase-intro .scroll-viewport {cursor: default;}
+.phase-intro .scroll-viewport:focus {outline: none;}
+.mission, .mission.is-collapsed {width: 224px; background: #f1ead7ed; border: 1px solid #c6bb9970; border-image: none; border-radius: 3px; backdrop-filter: none; box-shadow: 0 2px 15px #322b1812;}
+.mission-summary, .is-collapsed .mission-summary {padding: 12px 14px; align-items: center; gap: 12px;}
+.mission-chapter, .is-collapsed .mission-chapter {display: block; font-size: 13px; letter-spacing: .1em; margin: 0;}
+.mission-objective, .is-collapsed .mission-objective {display: block; font-size: 9px; letter-spacing: .06em; line-height: 1.5; margin-top: 3px;}
+.mission-count, .is-collapsed .mission-count {display: block; margin: 0; padding-left: 12px; font-size: 20px; border-color: #a99c7c66;}
+.mission-count small {font-size: 13px;}
+.mission-chevron, .is-collapsed .mission-chevron {margin: 0;}
+.mission.is-expanded .mission-chevron {transform: rotate(180deg);}
+.phase-exploring .mission-details, .phase-complete .mission-details {display: block; position: absolute; top: calc(100% + 9px); left: 0; width: 292px; padding: 19px 21px; background: #f1ead7f5; border: 1px solid #c6bb9970; border-radius: 3px; box-shadow: 0 3px 20px #322b1818;}
+.mission-details[hidden] {display: none !important;}
+.mission-details strong {display: block; font-size: 13px; font-weight: 500; margin-bottom: 12px;}
+.scene-loaded .mission {animation: soft-arrive 380ms var(--ease-ui) 350ms both;}
+@media (max-width: 700px) {
+  .introduction {background: linear-gradient(90deg,#f2ead5f5,#f2ead5eb 42%,#f2ead5a8 74%,#f2ead558);}
+  .intro-content {left: 7vw; width: 86vw; grid-template-columns: minmax(0,1fr) 65px; gap: 25px; max-width: 365px;}
+  .intro-title h1 {font-size: 55px;}
+  .intro-brand, .intro-footer {left: 7vw;}
+  .intro-story, .intro-invitation {font-size: 13px;}
+  .intro-enter {font-size: 17px;}
+  .mission, .mission.is-collapsed {width: 180px;}
+  .mission-summary, .is-collapsed .mission-summary {padding: 10px 11px; gap: 8px;}
+  .mission-objective, .is-collapsed .mission-objective {font-size: 8px;}
+  .mission-count, .is-collapsed .mission-count {padding-left: 8px; font-size: 18px;}
+  .mission-count small {font-size: 11px;}
+}
+@media (max-height: 580px) {
+  .intro-title h1 {font-size: 44px;}
+  .intro-title {gap: 16px;}
+  .intro-chapter {margin-bottom: 16px;}
+  .intro-story, .intro-invitation {margin-bottom: 10px; font-size: 12px;}
+  .intro-enter {margin-top: 13px; padding-block: 10px;}
+  .intro-play-note {margin-top: 10px;}
+  .intro-brand {top: 19px;}
+  .intro-footer {bottom: 19px;}
+}
+@media (max-width: 380px) {
+  .mission, .mission.is-collapsed {width: 142px;}
+  .mission-chapter, .is-collapsed .mission-chapter {font-size: 11px;}
+  .mission-objective, .is-collapsed .mission-objective {display: none;}
+  .mission-count, .is-collapsed .mission-count {font-size: 16px;}
+  .mission-count small {font-size: 10px;}
+  .scene-settings {gap: 6px;}
+  .round-control {width: 34px; height: 34px;}
+  .scene-hud {gap: 8px;}
+}

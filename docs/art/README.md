@@ -18,6 +18,12 @@
 
 提示保存在 `ui-atlas-prompt.txt` 與 `ui-paper-prompt.txt`。
 
+## 高清分段
+
+主畫卷現以 `public/art/hd/board.png`、`tea.png`、`bridge.png` 三段高清美術呈現，每段 1254 × 1254，有效總畫面為 3762 × 1254。先前 2172 × 724 的主圖作為載入底圖，不再是細節呈現的唯一素材。精確分區參考來自原畫在瀏覽器中的 724 × 724 分區顯示，再由內建 imagegen 重製細節。
+
+最終提示見 `hd-left-final-prompt.txt`、`hd-center-final-prompt.txt`、`hd-right-final-prompt.txt`；完整流程、實際尺寸與引言頁記錄見 `../introduction-and-hd-art.md`。首次直接由整幅圖生成的分區存在重疊，未採用。
+
 ## 目前使用的長卷
 
 使用者確認第二版局部樣稿後，已用內建 imagegen 向右延伸為 `public/art/examination-dense-scroll-v3.png`，尺寸 2172 × 724（3:1）。左側沿用榜牆、茶攤及密集生活群組，右側延伸街市與石橋。最終提示為 `examination-dense-scroll-v3-final-prompt.txt`，輸入為第二版樣稿。第一次長描述請求連線失敗，精簡後重試成功；原請求保存於 `examination-dense-scroll-v3-prompt.txt`。

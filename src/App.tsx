@@ -2,6 +2,7 @@ import { useEffect, useReducer, useRef, useState } from 'react';
 import type { CSSProperties } from 'react';
 import { ArrowRight, BookOpen, Check, ChevronDown, ChevronUp, CircleHelp, Maximize, Minimize, MoreHorizontal, RotateCcw, Volume2, VolumeX, Waves, X, ZoomIn, ZoomOut } from './components/ArtIcons.tsx';
 import { PaintedPortrait } from './components/PaintedPortrait.tsx';
+import { Introduction } from './components/Introduction.tsx';
 import { ScrollScene } from './components/ScrollScene.tsx';
 import type { SceneCommand, SceneHint, SceneSelection } from './components/ScrollScene.tsx';
 import { useAmbience } from './audio/useAmbience.ts';
@@ -21,7 +22,8 @@ export default function App() {
   const [journal, setJournal] = useState(false);
   const [journalPresent, setJournalPresent] = useState(false);
   const [menu, setMenu] = useState(false);
-  const [missionOpen, setMissionOpen] = useState(true);
+  const [missionOpen, setMissionOpen] = useState(false);
+  const [introPresent, setIntroPresent] = useState(true);
   const [instruction, setInstruction] = useState(true);
   const [endingVisible, setEndingVisible] = useState(false);
   const [reading, setReading] = useState<'knowledge' | 'guide' | null>(null);
@@ -52,6 +54,12 @@ export default function App() {
   const soundLabel = sound.state === 'on' ? '關閉市井聲音' : sound.state === 'loading' ? '聲音載入中，點擊取消' : sound.state === 'error' ? '重試市井聲音' : '開啟市井聲音';
 
   useEffect(() => {
+    if (game.phase === 'intro') {setIntroPresent(true); return;}
+    const timer = window.setTimeout(() => {setIntroPresent(false); paperButton.current?.focus({preventScroll: true});}, reduced ? 0 : 600);
+    return () => window.clearTimeout(timer);
+  }, [game.phase, reduced]);
+
+  useEffect(() => {
     if (journal) {setJournalPresent(true); return;}
     const timer = window.setTimeout(() => setJournalPresent(false), reduced ? 0 : 380);
     return () => window.clearTimeout(timer);
@@ -74,10 +82,10 @@ export default function App() {
     return () => window.clearTimeout(timeout);
   }, [notice]);
   useEffect(() => {
-    if (!ready || !instruction) return;
+    if (!ready || !instruction || !playing) return;
     const timer = window.setTimeout(() => setInstruction(false), 6200);
     return () => window.clearTimeout(timer);
-  }, [ready, instruction]);
+  }, [ready, instruction, playing]);
   useEffect(() => {
     if (!finished) {setEndingVisible(false); return;}
     const timeout = window.setTimeout(() => setEndingVisible(true), reduced ? 250 : 1750);
@@ -109,7 +117,7 @@ export default function App() {
   const begin = () => {
     dispatch({type: game.phase === 'intro' ? 'start' : 'restart'});
     setDialogue(null); setJournal(false); setMenu(false); setReading(null); setHint(null); setSelection(null); setHintText('');
-    hintCounts.current = {}; explored.current = false; setMissionOpen(true); setResetKey(key => key + 1);
+    hintCounts.current = {}; explored.current = false; setMissionOpen(false); setInstruction(true); setResetKey(key => key + 1);
     if (collapseTimer.current !== null) window.clearTimeout(collapseTimer.current);
   };
   const explore = () => {
@@ -164,26 +172,27 @@ export default function App() {
   const placement = anchor ? {'--dialog-x': `${anchor.x < window.innerWidth * .58 ? anchor.x + 36 : anchor.x - 386}px`, '--dialog-y': `${anchor.y - 100}px`} as CSSProperties : undefined;
 
   return <main className={`immersive-game phase-${game.phase} ${ready ? 'scene-loaded' : ''} ${reduced ? 'reduced-motion' : ''} ${endingVisible ? 'ending-visible' : ''}`} aria-label="榜下尋人遊戲">
-    <h1 className="sr-only">榜下尋人 · 科舉放榜日</h1>
-    <ScrollScene image={level.image} actors={level.actors} active={game.phase !== 'intro'} blocked={Boolean(dialogue) || Boolean(reading) || finished} resetKey={resetKey} hint={hint} selection={selection} command={command} onInspect={inspect} onExplore={explore} onReady={setReady} motion={motion}/>
+    {game.phase !== 'intro' && <h1 className="sr-only">榜下尋人 · 科舉放榜日</h1>}
+    <ScrollScene image={level.image} tiles={level.detailTiles} actors={level.actors} active={game.phase !== 'intro'} blocked={game.phase === 'intro' || Boolean(dialogue) || Boolean(reading) || finished} resetKey={resetKey} hint={hint} selection={selection} command={command} onInspect={inspect} onExplore={explore} onReady={setReady} motion={motion}/>
     <div className="scene-vignette" aria-hidden="true"/>
-    <header className="scene-hud">
+    {introPresent && <Introduction ready={ready} leaving={game.phase !== 'intro'} onBegin={begin}/>}
+    {game.phase !== 'intro' && <header className="scene-hud">
       <section className={`mission ${missionOpen ? 'is-expanded' : 'is-collapsed'}`} aria-label="尋人任務">
         <button ref={paperButton} className="mission-summary" aria-expanded={missionOpen} aria-controls="mission-details" onClick={toggleMission}>
-          <span className="mini-seal">畫</span><span className="mission-heading"><span className="mission-chapter">{level.subtitle}</span><strong>替書童找回走散的考生</strong><span className="mission-objective" aria-live="polite">{objective}</span></span><span className="mission-count" key={game.clues.length}><b>{game.clues.length}</b> / 2</span><ChevronDown size={14} className="mission-chevron"/>
+          <span className="mission-heading"><span className="mission-chapter">榜下尋人</span><span className="mission-objective">尋線索，辨人物</span></span><span className="mission-count" key={game.clues.length} aria-label={`已取得${game.clues.length}條證詞，共2條`} aria-live="polite"><b>{game.clues.length}</b><small> / 2</small></span><ChevronDown size={14} className="mission-chevron"/>
         </button>
-        <div className="mission-details" id="mission-details" hidden={!missionOpen}>{game.phase === 'intro' ? <><p>{level.introduction}</p><button className="primary-button" onClick={begin} disabled={!ready}><span>{ready ? '入畫尋人' : '正在展卷'}</span><ArrowRight size={17}/></button></> : <p>先取得兩條證詞，再從人群中找出符合特徵的考生。左右拖曳尋找人物，放大能看清細節。</p>}</div>
+        <div className="mission-details" id="mission-details" hidden={!missionOpen}><strong>替書童找回走散的考生</strong><p>{objective}</p><p>先取得兩條證詞，再從人群中尋人。左右拖曳探索，放大可看清細節。</p></div>
       </section>
       <nav className="scene-settings" aria-label="場景設定">
         <button className={`round-control ${sound.state === 'on' ? 'is-on' : ''}`} aria-label={soundLabel} title={soundLabel} aria-pressed={sound.state === 'on' || sound.state === 'loading'} onClick={() => void sound.toggle()}>{sound.state === 'on' ? <Volume2 size={19}/> : <VolumeX size={19}/>}</button>
         <button className="round-control" aria-label={fullscreen ? '離開全螢幕' : '進入全螢幕'} title="全螢幕" onClick={() => void toggleFullscreen()}>{fullscreen ? <Minimize size={18}/> : <Maximize size={18}/>}</button>
         <button ref={moreButton} className="round-control" aria-label="更多觀畫設定" aria-expanded={menu} aria-controls="scene-menu" title="更多" onClick={() => setMenu(value => !value)}><MoreHorizontal size={21}/></button>
       </nav>
-    </header>
+    </header>}
     {menu && <div className="settings-paper" id="scene-menu" ref={menuPanel} role="region" aria-label="觀畫設定"><span className="card-kicker">觀畫有法</span><button onClick={() => setMotion(value => !value)} aria-pressed={motion}><Waves size={17}/>{motion ? '關閉畫卷微動' : '開啟畫卷微動'}</button><button onClick={() => sceneCommand('in')}><ZoomIn size={17}/>放大畫卷</button><button onClick={() => sceneCommand('out')}><ZoomOut size={17}/>縮小畫卷</button><button onClick={() => sceneCommand('overview')}><Maximize size={17}/>回到卷首</button><button onClick={() => {setMenu(false); setReading('guide');}}><CircleHelp size={17}/>遊玩指南</button></div>}
 
-    <div className="bottom-hud"><button ref={notebookButton} className="notebook-toggle" disabled={game.phase === 'intro'} aria-expanded={journal} aria-controls="clue-notebook" onClick={() => {setDialogue(null); setJournal(value => !value);}} aria-label={`線索簿，已找到${game.clues.length}條線索`}><BookOpen size={19}/><span>線索簿</span><span className="notebook-count" key={game.clues.length}>{game.clues.length}<small>/ 2</small></span>{journal ? <ChevronDown size={14}/> : <ChevronUp size={14}/>}</button><span className={`gesture-note ${instruction ? '' : 'is-dismissed'}`}>左右拖曳探索 · 滾動看細節</span>{playing && <button className="hint-button" disabled={!ready || Boolean(dialogue) || Boolean(reading)} onClick={showHint}><CircleHelp size={19}/><span>尋人錦囊</span></button>}</div>
-    {journalPresent && <aside ref={notebook} className={`notebook-paper ${journal ? '' : 'is-closing'}`} aria-hidden={!journal} inert={!journal} id="clue-notebook" aria-label="線索簿內容"><button className="paper-close" aria-label="收起線索簿" onClick={() => {setJournal(false); notebookButton.current?.focus({preventScroll: true});}}><X size={18}/></button><span className="card-kicker">隨身筆記</span><h2>線索簿 <span className="journal-count">{game.clues.length} / 2</span></h2><div className="clue-list">{clues.map((actor, index) => <button key={actor.id} className={`clue-card ${game.clues.includes(actor.id) ? 'is-collected' : ''}`} disabled={!game.clues.includes(actor.id)} onClick={() => readClue(actor)} style={{'--clue-delay': `${index * 50}ms`} as CSSProperties}><PaintedPortrait actor={actor} image={level.image}/><span className="clue-content"><span className="clue-kicker">{game.clues.includes(actor.id) ? actor.name : `線索${index === 0 ? '一' : '二'} · 待尋`}</span><span className="clue-title">{game.clues.includes(actor.id) ? actor.clueTitle : actor.search}</span><span className="clue-description">{game.clues.includes(actor.id) ? actor.quote : '在畫中找到他，點擊聽取證詞。'}</span></span>{game.clues.includes(actor.id) && <Check size={15}/>}</button>)}</div><p className="journal-objective">{objective}</p></aside>}
+    {game.phase !== 'intro' && <div className="bottom-hud"><button ref={notebookButton} className="notebook-toggle" aria-expanded={journal} aria-controls="clue-notebook" onClick={() => {setDialogue(null); setJournal(value => !value);}} aria-label={`線索簿，已找到${game.clues.length}條線索`}><BookOpen size={19}/><span>線索簿</span><span className="notebook-count" key={game.clues.length}>{game.clues.length}<small>/ 2</small></span>{journal ? <ChevronDown size={14}/> : <ChevronUp size={14}/>}</button><span className={`gesture-note ${instruction ? '' : 'is-dismissed'}`}>左右拖曳探索 · 滾動看細節</span>{playing && <button className="hint-button" disabled={!ready || Boolean(dialogue) || Boolean(reading)} onClick={showHint}><CircleHelp size={19}/><span>尋人錦囊</span></button>}</div>}
+    {journalPresent && <aside ref={notebook} className={`notebook-paper ${journal ? '' : 'is-closing'}`} aria-hidden={!journal} inert={!journal} id="clue-notebook" aria-label="線索簿內容"><button className="paper-close" aria-label="收起線索簿" onClick={() => {setJournal(false); notebookButton.current?.focus({preventScroll: true});}}><X size={18}/></button><span className="card-kicker">隨身筆記</span><h2>線索簿 <span className="journal-count">{game.clues.length} / 2</span></h2><div className="clue-list">{clues.map((actor, index) => <button key={actor.id} className={`clue-card ${game.clues.includes(actor.id) ? 'is-collected' : ''}`} disabled={!game.clues.includes(actor.id)} onClick={() => readClue(actor)} style={{'--clue-delay': `${index * 50}ms`} as CSSProperties}><PaintedPortrait actor={actor} image={level.image} tiles={level.detailTiles}/><span className="clue-content"><span className="clue-kicker">{game.clues.includes(actor.id) ? actor.name : `線索${index === 0 ? '一' : '二'} · 待尋`}</span><span className="clue-title">{game.clues.includes(actor.id) ? actor.clueTitle : actor.search}</span><span className="clue-description">{game.clues.includes(actor.id) ? actor.quote : '在畫中找到他，點擊聽取證詞。'}</span></span>{game.clues.includes(actor.id) && <Check size={15}/>}</button>)}</div><p className="journal-objective">{objective}</p></aside>}
     {dialogue && <section ref={witness} className={`witness-paper ${anchor ? 'is-anchored' : ''}`} style={placement} role="dialog" aria-modal="false" aria-labelledby="witness-title"><button ref={witnessClose} className="paper-close" aria-label="關閉證詞" onClick={closeWitness}><X size={18}/></button><span className="card-kicker">{dialogue.subtitle}</span><h2 id="witness-title">{dialogue.title}</h2><p className="witness-quote">{dialogue.text}</p><button className="primary-button" onClick={closeWitness}><span>記下，繼續尋人</span><ArrowRight size={17}/></button></section>}
     {hintText && <aside className="hint-paper" role="status"><span className="card-kicker">尋人錦囊</span><p>{hintText}</p></aside>}
     {(notice || sound.state === 'error') && <p className="scene-toast" role="status">{notice || '聲音未能載入，可點擊右上角重試。'}</p>}

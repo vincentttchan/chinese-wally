@@ -4,20 +4,20 @@ import { RotateCcw } from './ArtIcons.tsx';
 import { LivingPainting } from './LivingPainting.tsx';
 import { clampView, coverView, zoomAt } from '../game/geometry.ts';
 import type { Point, Size, View } from '../game/geometry.ts';
-import type { SceneActor } from '../game/level.ts';
+import type { PaintingTile, SceneActor } from '../game/level.ts';
 
 export type SceneHint = {actorId: string; level: number; token: number};
 export type SceneSelection = {actorId: string; kind: 'wrong' | 'found' | 'clue'; token: number};
 export type SceneCommand = {type: 'in' | 'out' | 'overview'; token: number};
 type Props = {
-  image: string; actors: SceneActor[]; active: boolean; blocked: boolean;
+  image: string; tiles?: PaintingTile[]; actors: SceneActor[]; active: boolean; blocked: boolean;
   resetKey: number; hint: SceneHint | null; selection?: SceneSelection | null;
   command?: SceneCommand | null; onInspect: (id: string, anchor?: Point) => void;
   onExplore?: () => void; motion?: boolean; onReady: (ready: boolean) => void;
 };
 const zoomStops = [1, 1.1, 1.25, 1.5, 1.75];
 
-export function ScrollScene({image, actors, active, blocked, resetKey, hint, selection, command, onInspect, onExplore, onReady, motion = true}: Props) {
+export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hint, selection, command, onInspect, onExplore, onReady, motion = true}: Props) {
   const root = useRef<HTMLDivElement>(null);
   const frame = useRef<Size>({width: 1280, height: 800});
   const picture = useRef<Size>({width: 2172, height: 724});
@@ -25,6 +25,7 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, sel
   const [view, setView] = useState(current.current);
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
+  const [tileStatus, setTileStatus] = useState<Record<string, 'loaded' | 'failed'>>({});
   const [attempt, setAttempt] = useState(0);
   const [dimensions, setDimensions] = useState(picture.current);
   const [frameSize, setFrameSize] = useState(frame.current);
@@ -72,6 +73,8 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, sel
     const next = direction > 0 ? zoomStops.find(stop => stop > ratio + .02) ?? 1.75 : [...zoomStops].reverse().find(stop => stop < ratio - .02) ?? 1;
     animateView(zoomAt(current.current, baseScale() * next / current.current.scale, anchor, limits()), 180);
   };
+
+  useEffect(() => {onReady(loaded && (tiles ?? []).every(tile => Boolean(tileStatus[tile.image])));}, [loaded, tiles, tileStatus, onReady]);
 
   useEffect(() => {
     const node = root.current; if (!node) return;
@@ -205,17 +208,18 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, sel
   const emphasis = highlight && actors.find(a => a.id === highlight.actorId);
   const marked = mark && actors.find(a => a.id === mark.actorId);
   return <div className={`scroll-frame ${loaded ? 'is-ready' : ''}`} style={{backgroundImage: `url("${image}")`}}>
-    <div className={`scroll-viewport ${dragging ? 'is-dragging' : ''}`} ref={root} onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up} tabIndex={0} onKeyDown={event => {
+    <div className={`scroll-viewport ${dragging ? 'is-dragging' : ''}`} ref={root} onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up} onKeyDown={event => {
       if (blocked || !loaded) return;
       if (event.key === '+' || event.key === '=') {event.preventDefault(); zoomStep(1);}
       if (event.key === '-') {event.preventDefault(); zoomStep(-1);}
       if (event.key === 'Home') {event.preventDefault(); animateView(coverView(frame.current, picture.current));}
-    }} aria-label="可拖曳與放大的科舉放榜日長卷">
+    }} aria-label="可拖曳與放大的科舉放榜日長卷" tabIndex={active ? 0 : -1}>
       <div className="painting-world" style={{width: dimensions.width, height: dimensions.height, transform: `translate(${view.x}px, ${view.y}px) scale(${view.scale})`}}>
         <img className="painting" src={`${image}${attempt ? `?retry=${attempt}` : ''}`} alt="原創科舉放榜日全景古畫，左側榜牆、中央茶攤、右側橋頭與人群" draggable={false} onLoad={event => {
           const next = {width: event.currentTarget.naturalWidth, height: event.currentTarget.naturalHeight};
-          picture.current = next; setDimensions(next); setLoaded(true); setFailed(false); onReady(true);
+          picture.current = next; setDimensions(next); setLoaded(true); setFailed(false);
         }} onError={() => {setFailed(true); setLoaded(false); onReady(false);}}/>
+        {tiles?.map(tile => <img key={tile.image} className="painting-detail-tile" src={tile.image} alt="" aria-hidden="true" draggable={false} style={{left: `${tile.x * 100}%`, width: `${tile.width * 100}%`, visibility: tileStatus[tile.image] === 'failed' ? 'hidden' : undefined}} onLoad={() => setTileStatus(previous => ({...previous, [tile.image]: 'loaded'}))} onError={() => setTileStatus(previous => ({...previous, [tile.image]: 'failed'}))}/>)}
         {loaded && <LivingPainting enabled={motion}/>}
         {active && actors.map(actor => <button key={actor.id} type="button" className="actor-hitbox" data-actor={actor.id} aria-label={`查看${actor.name}`} disabled={blocked} style={{left: actor.x * dimensions.width, top: actor.y * dimensions.height, width: Math.max(actor.width * dimensions.width, 44 / view.scale), height: Math.max(actor.height * dimensions.height, 44 / view.scale), '--outline-width': `${2 / view.scale}px`} as React.CSSProperties} onFocus={event => {
           if (!event.currentTarget.matches(':focus-visible')) return;

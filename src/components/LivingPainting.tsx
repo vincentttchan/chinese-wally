@@ -5,8 +5,8 @@ export function LivingPainting({enabled}: {enabled: boolean}) {
       <filter id="steam-soft"><feGaussianBlur stdDeviation="1.1"/></filter>
     </defs>
     <g className="steam" fill="none" stroke="#e9e4ce" strokeWidth="1.2" strokeLinecap="round" filter="url(#steam-soft)">
-      <path className="steam-wisp wisp-one" d="M402 96c-2-4 2-6 0-10s-1-6 1-9"/>
-      <path className="steam-wisp wisp-two" d="M403 96c2-3-2-5-1-9s3-5 1-8"/>
+      <path className="steam-wisp wisp-one" d="M406 91c-2-4 2-6 0-10s-1-6 1-9"/>
+      <path className="steam-wisp wisp-two" d="M407 91c2-3-2-5-1-9s3-5 1-8"/>
     </g>
   </svg>;
 }
