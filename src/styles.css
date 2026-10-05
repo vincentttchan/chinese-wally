@@ -288,3 +288,8 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 .quiz-feedback.is-correct strong {color: #4c6144;}
 .reading-paper .quiz-feedback p {font-size: 12px; line-height: 1.9; margin: 6px 0 0;}
 .reading-paper .quiz-note {font-size: 10px; color: #827b64; line-height: 1.8; margin: 10px 0 0;}
+
+.knowledge-stage h2:focus {outline: none;}
+.stage-question .knowledge-quiz {border-top: 0; padding-top: 0; margin-top: 0;}
+.knowledge-back {display: block; padding: 12px 0; margin: 6px 0 12px; background: transparent; color: #72765e; font-size: 12px; text-decoration: underline; text-underline-offset: 4px;}
+.knowledge-back:hover {color: var(--red);}
