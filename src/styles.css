@@ -92,7 +92,8 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 .clue-card {padding: 18px 0; border-top: 1px solid var(--line); background: transparent; text-align: left; display: flex; align-items: center; gap: 14px; animation: soft-arrive var(--motion-standard) var(--ease-ui) var(--clue-delay) both;}
 .clue-card:disabled {opacity: .62;}
 .clue-card:hover:not(:disabled) {background: #e9e5d566;}
-.clue-icon {width: 26px; display: grid; place-items: center; color: #849170; flex-shrink: 0;}
+.painted-portrait {position: relative; display: block; width: 56px; height: 76px; flex-shrink: 0; overflow: hidden; border-radius: 2px; background: #d7c59f; mask-image: linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);}
+.painted-portrait img {position: absolute; max-width: none; pointer-events: none;}
 .clue-content {flex: 1; min-width: 0;}
 .clue-kicker {font-size: 9px; letter-spacing: .1em; color: #818569;}
 .clue-title {display: block; font-size: 14px; margin: 5px 0; letter-spacing: .05em;}
@@ -127,10 +128,7 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 .river-light {mix-blend-mode: soft-light;}
 .river-ripples {animation: river-drift 10s linear infinite; opacity: 0;}
 .ripple-1 {animation-delay: -3.3s;}.ripple-2 {animation-delay: -6.6s;}
-.tea-banner {animation: flag-sway 6s var(--ease-soft) infinite;}
 .steam-wisp {opacity: 0; animation: steam-rise 9s var(--ease-soft) infinite;}.wisp-two {animation-delay: -4.5s;}
-.wisp-three {animation-delay: -2s; animation-duration: 11s;}
-.smoke-wisp {opacity: 0; animation: smoke-rise 15s var(--ease-soft) infinite;}.smoke-second {animation-delay: -7s;}
 @keyframes painting-arrives {from {opacity: 0;} to {opacity: 1;}}
 @keyframes paper-seen {from {opacity: 0; transform: translateY(-6px);} to {opacity: 1; transform: translateY(0);}}
 @keyframes soft-arrive {from {opacity: 0;} to {opacity: 1;}}
@@ -140,9 +138,7 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 @keyframes wrong-notice {0% {opacity: 0;} 15%,75% {opacity: 1;} 100% {opacity: 0;}}
 @keyframes atmosphere {0%,100% {opacity: 0;} 20%,70% {opacity: 1;}}
 @keyframes river-drift {0% {opacity: 0; transform: translateX(-5px);} 30%,60% {opacity: .38;} 100% {opacity: 0; transform: translateX(8px);}}
-@keyframes flag-sway {0%,100% {transform: skewY(-.6deg) scaleX(.996);} 50% {transform: skewY(.8deg) scaleX(1.006);}}
 @keyframes steam-rise {0% {opacity: 0; transform: translate(0,3px);} 25% {opacity: .22;} 70% {opacity: .12;} 100% {opacity: 0; transform: translate(6px,-18px);}}
-@keyframes smoke-rise {0% {opacity: 0; transform: translate(0,4px);} 30% {opacity: .15;} 100% {opacity: 0; transform: translate(10px,-24px);}}
 @media (max-width: 900px) {.gesture-note {font-size: 10px; gap: 8px;}.mission {width: 420px;}.mission-summary {padding: 15px; gap: 10px;}.mission-count {padding-left: 12px;}.scene-settings {gap: 9px;}}
 @media (max-width: 650px) {
   .scene-hud {top: max(17px,env(safe-area-inset-top)); left: max(18px,env(safe-area-inset-left)); right: max(18px,env(safe-area-inset-right)); gap: 10px; flex-wrap: wrap;}
@@ -152,7 +148,7 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
   .scene-settings {position: absolute; right: 0; top: 0; flex-direction: column; gap: 7px;}.round-control {width: 36px; height: 36px;}
   .settings-paper {top: 149px; right: 18px; width: 200px;}
   .bottom-hud {left: max(18px,env(safe-area-inset-left)); right: max(18px,env(safe-area-inset-right)); bottom: max(20px,env(safe-area-inset-bottom)); gap: 10px;}
-  .notebook-toggle {height: 44px; gap: 8px; padding: 0 12px; font-size: 11px;}.notebook-count {font-size: 16px; padding-left: 8px;}.notebook-toggle > svg:last-child {display: none;}
+  .notebook-toggle {height: 44px; gap: 8px; padding: 0 12px; font-size: 11px;}.notebook-count {font-size: 16px; padding-left: 8px;}.notebook-toggle > .art-icon:last-child {display: none;}
   .hint-button {height: 44px; padding: 0 12px; font-size: 11px; gap: 6px;}.gesture-note {bottom: 61px; font-size: 10px;}
   .notebook-paper {width: calc(100% - 36px); left: 18px; bottom: 79px; padding: 24px; max-height: calc(100dvh - 160px);}
   .witness-paper, .witness-paper.is-anchored {width: calc(100% - 36px); left: 18px; right: 18px; top: auto; bottom: 80px; transform: none; padding: 27px 24px; max-height: calc(100dvh - 150px); overflow-y: auto;}
@@ -172,3 +168,15 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 @keyframes paper-fold {from {opacity: 1; transform: translateY(0) scale(1);} to {opacity: 0; transform: translateY(8px) scale(.985);}}
 
 .phase-exploring .mission-details, .phase-complete .mission-details {display: none;}
+
+/* Generated paper and painted raster icons replace the interface's vector art. */
+.art-icon {display: inline-block; flex-shrink: 0; background-image: url('/art/ui/painted-icons.png'); background-repeat: no-repeat; background-size: 400% 400%; vertical-align: middle; pointer-events: none;}
+.art-zoom {display: inline-block; position: relative; flex-shrink: 0;}
+.art-zoom b {position: absolute; inset: 0; display: grid; place-items: center; font-size: 12px; font-weight: 400;}
+.round-control .art-icon {width: 32px !important; height: 32px !important;}
+.mission, .settings-paper, .notebook-paper, .witness-paper, .reading-paper, .hint-paper, .ending-card, .notebook-toggle, .hint-button {background: #f4ead3; border: 0 solid transparent; border-image: url('/art/ui/reading-paper.png') 180 fill / 18px / 0 stretch; backdrop-filter: none; border-radius: 2px;}
+.notebook-toggle, .hint-button {color: var(--ink); opacity: 1;}
+.notebook-toggle:hover:not(:disabled), .hint-button:hover:not(:disabled) {background-color: #f9efd8; filter: brightness(1.04);}
+.notebook-count {border-color: #82785966;}
+.notebook-toggle > .art-icon:first-child, .hint-button > .art-icon {width: 28px !important; height: 28px !important;}
+.primary-button .art-icon {filter: brightness(0) invert(.94) sepia(.35);}

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import type { PointerEvent as ReactPointerEvent } from 'react';
-import { RotateCcw } from 'lucide-react';
+import { RotateCcw } from './ArtIcons.tsx';
 import { LivingPainting } from './LivingPainting.tsx';
 import { clampView, fitView, zoomAt } from '../game/geometry.ts';
 import type { Point, Size, View } from '../game/geometry.ts';
@@ -196,7 +196,7 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, sel
           const next = {width: event.currentTarget.naturalWidth, height: event.currentTarget.naturalHeight};
           picture.current = next; setDimensions(next); setLoaded(true); setFailed(false); onReady(true);
         }} onError={() => {setFailed(true); setLoaded(false); onReady(false);}}/>
-        {loaded && <LivingPainting image={image} enabled={motion}/>}
+        {loaded && <LivingPainting enabled={motion}/>}
         {active && actors.map(actor => <button key={actor.id} type="button" className="actor-hitbox" data-actor={actor.id} aria-label={`查看${actor.name}`} disabled={blocked} style={{left: actor.x * dimensions.width, top: actor.y * dimensions.height, width: Math.max(actor.width * dimensions.width, 44 / view.scale), height: Math.max(actor.height * dimensions.height, 44 / view.scale), '--outline-width': `${2 / view.scale}px`} as React.CSSProperties} onFocus={event => {
           if (!event.currentTarget.matches(':focus-visible')) return;
           const x = actor.x * picture.current.width * current.current.scale + current.current.x;

@@ -29,7 +29,7 @@ npm run preview -- --port 5189
 - 左下角線索簿可展開重讀，保持場景可見；點錯顯示短暫文字；完成後可重玩。
 - 場景鋪滿視窗；右上角可進入瀏覽器全螢幕。
 - 右上角「聲音關」可開啟低音量人群低語、腳步與倒茶聲，離開頁面時自動靜音，閱讀證詞時降低音量。
-- 河面、茶攤旗幟與炊煙有少量微動，可獨立關閉；系統設定減少動態效果時預設停用。
+- 河面與茶壺蒸汽有少量微動，可獨立關閉；系統設定減少動態效果時預設停用。
 - 「⋯」內可縮放、覽全卷或查看指南。預設全景已可直接點選人物。
 - 找到考生後可自行打開一則科舉小知識，附史料來源。
 - 任務紙箋在首次探索後收起，點擊可展開；底部操作提示在探索後消失。
@@ -40,8 +40,9 @@ npm run preview -- --port 5189
 - `src/game/level.ts`：案件、人物文案與相對座標。
 - `src/game/state.ts`：遊戲流程。
 - `src/components/ScrollScene.tsx`：畫卷、手勢與點擊。
-- `public/art/examination-scroll.png`：使用內建 imagegen 生成的原創長卷。
-- `docs/art/examination-scroll-prompt.txt`：最終生成提示。
+- `public/art/examination-panorama-v2.png`：使用內建 imagegen 生成的原創全景古畫。
+- `docs/art/examination-panorama-v2-prompt.txt`：目前全景的最終生成提示。
+- `public/art/ui/`：手繪圖示與紙箋美術；介面已移除 Lucide SVG 圖示。
 - `docs/superpowers/specs/2026-10-05-scroll-mystery-design.md`：已確認的設計。
 
 遊戲場景及案件為虛構；真實古畫關卡留作後續設計。
