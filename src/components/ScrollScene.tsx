@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import type { PointerEvent as ReactPointerEvent } from 'react';
 import { Maximize, Minus, Plus, RotateCcw, ScanLine } from 'lucide-react';
 import { clampView, fitView, zoomAt } from '../game/geometry.ts';
@@ -68,6 +68,9 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, onI
     if (active) {
       const scale = base.scale * (frame.current.width < 650 ? 3.3 : 1.5);
       applyView({scale, x: frame.current.width / 2 - picture.current.width * .28 * scale, y: frame.current.height / 2 - picture.current.height * .57 * scale});
+    } else if (frame.current.width < 650) {
+      const scale = Math.min(limits().max, Math.max(base.scale, frame.current.height / picture.current.height));
+      applyView({scale, x: frame.current.width / 2 - picture.current.width * .60 * scale, y: 0});
     } else fullView();
     setHighlight(null);
     // A restart or resize establishes a new safe viewport; dialogs do not reset it.
@@ -75,6 +78,7 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, onI
   }, [resetKey, loaded, frameSize.width, frameSize.height]);
 
   useEffect(() => {
+    setHighlight(null);
     if (!hint || !loaded) return;
     const actor = actors.find(a => a.id === hint.actorId);
     if (!actor) return;
@@ -151,7 +155,11 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, onI
           const next = {width: event.currentTarget.naturalWidth, height: event.currentTarget.naturalHeight};
           picture.current = next; setDimensions(next); setLoaded(true); setFailed(false); onReady(true);
         }} onError={() => {setFailed(true); setLoaded(false); onReady(false);}} />
-        {active && actors.map(actor => <button key={actor.id} type="button" className="actor-hitbox" data-actor={actor.id} aria-label={`查看${actor.name}`} disabled={blocked} style={{left: actor.x * dimensions.width, top: actor.y * dimensions.height, width: Math.max(actor.width * dimensions.width, 44 / view.scale), height: Math.max(actor.height * dimensions.height, 44 / view.scale), '--outline-width': `${2 / view.scale}px`} as React.CSSProperties} onClick={event => { if (event.detail === 0 && !blocked) onInspect(actor.id); }} />)}
+        {active && actors.map(actor => <button key={actor.id} type="button" className="actor-hitbox" data-actor={actor.id} aria-label={`查看${actor.name}`} disabled={blocked} style={{left: actor.x * dimensions.width, top: actor.y * dimensions.height, width: Math.max(actor.width * dimensions.width, 44 / view.scale), height: Math.max(actor.height * dimensions.height, 44 / view.scale), '--outline-width': `${2 / view.scale}px`} as React.CSSProperties} onFocus={event => {
+          if (!event.currentTarget.matches(':focus-visible')) return;
+          const scale = Math.max(current.current.scale, limits().min * (frame.current.width < 650 ? 3.3 : 2));
+          applyView({scale, x: frame.current.width / 2 - actor.x * picture.current.width * scale, y: frame.current.height / 2 - actor.y * picture.current.height * scale});
+        }} onClick={event => { if (event.detail === 0 && !blocked) onInspect(actor.id); }} />)}
         {focusedActor && <div className={`hint-ring hint-level-${highlight.level}`} style={{left: focusedActor.x * dimensions.width, top: focusedActor.y * dimensions.height, width: dimensions.width * (highlight.level === 1 ? .13 : .043), height: dimensions.height * (highlight.level === 1 ? .40 : .145), borderWidth: 2 / view.scale}} />}
       </div>
       {!loaded && <div className="scene-status" role="status">{failed ? <><span>畫卷暫時未能展開</span><button className="small-button" onClick={() => {setFailed(false); setAttempt(a => a + 1);}}><RotateCcw size={15}/>重新載入</button></> : <><span className="loading-seal">卷</span><span>正在展開畫卷…</span></>}</div>}
