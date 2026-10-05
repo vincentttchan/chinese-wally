@@ -9,7 +9,6 @@ export type SceneActor = {
   width: number;
   height: number;
   quote?: string;
-  search?: string;
   clueTitle?: string;
 };
 
@@ -22,13 +21,16 @@ export const level = {
     {id: 'tea', image: '/art/hd/tea.png', x: 1 / 3, width: 1 / 3},
     {id: 'bridge', image: '/art/hd/bridge-v2.png', x: 2 / 3, width: 1 / 3},
   ] satisfies PaintingTile[],
-  introduction: '放榜的人潮沖散了書童與考生。循着兩條線索，替他們找到彼此。',
+  introduction: '放榜的人潮沖散了書童與考生。聽取畫中人的證詞，替他們找到彼此。',
   ending: '原來他避開榜前的人潮，到橋邊等書童。隔着熙攘人海，兩人終於會合了。',
   actors: [
-    { id: 'copyist', kind: 'witness', name: '抄榜人', x: .0525, y: .395, width: .029, height: .112, quote: '與書童同行的那位考生，穿青色長衫。', search: '找正在持筆抄榜的人', clueTitle: '一襲青衫' },
-    { id: 'tea-keeper', kind: 'witness', name: '茶攤掌櫃', x: .413, y: .275, width: .026, height: .125, quote: '那人帶着方形書箱，方才往橋頭去了。', search: '找提着茶壺的掌櫃', clueTitle: '書箱與去向' },
+    { id: 'copyist', kind: 'witness', name: '抄榜人', x: .0525, y: .395, width: .029, height: .112, quote: '與書童同行的那位考生，穿青色長衫。', clueTitle: '一襲青衫' },
+    { id: 'tea-keeper', kind: 'witness', name: '茶攤掌櫃', x: .413, y: .275, width: .026, height: .125, quote: '他買茶時，把一只方形書箱放在腳邊。離開時也帶上了。', clueTitle: '隨身書箱' },
+    { id: 'board-observer', kind: 'witness', name: '榜前圍觀者', x: .0598, y: .281, width: .014, height: .128, quote: '方才有個考生嫌這裏擠，說要到有石欄的地方等同行的人。', clueTitle: '石欄之約' },
     { id: 'scholar-scroll', kind: 'candidate', name: '候選考生一', x: .721, y: .805, width: .022, height: .155 },
     { id: 'scholar-brown', kind: 'candidate', name: '候選考生二', x: .762, y: .243, width: .020, height: .145 },
     { id: 'scholar-target', kind: 'target', name: '候選考生三', x: .792, y: .725, width: .022, height: .162 },
   ] satisfies SceneActor[],
 };
+
+export const witnesses = level.actors.filter(actor => actor.kind === 'witness');

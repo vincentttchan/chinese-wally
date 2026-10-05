@@ -4,7 +4,7 @@ import { ArrowRight } from './ArtIcons.tsx';
 const chapters = [
   {title: '科舉放榜日', text: '今日放榜。\n榜牆前，人聲漸起。', action: '走進此日'},
   {title: '人潮之中', text: '書童回過頭，\n同行的考生已不見蹤影。', action: '聽他的委託'},
-  {title: '一樁委託', text: '「請替我找到他。」\n先向榜牆前的抄榜人問一問。', action: '入畫尋人'},
+  {title: '一樁委託', text: '「請替我找到他。」\n畫中有人，或許見過他的身影。', action: '入畫尋人'},
 ];
 
 export function Introduction({ready, leaving, onBegin}: {ready: boolean; leaving: boolean; onBegin: () => void}) {

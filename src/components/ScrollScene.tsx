@@ -6,7 +6,7 @@ import { clampView, coverView, zoomAt } from '../game/geometry.ts';
 import type { Point, Size, View } from '../game/geometry.ts';
 import type { PaintingTile, SceneActor } from '../game/level.ts';
 
-export type SceneHint = {actorId: string; level: number; token: number};
+export type SceneHint = {region: Point; token: number};
 export type SceneSelection = {actorId: string; kind: 'wrong' | 'found' | 'clue'; token: number};
 export type SceneCommand = {type: 'in' | 'out' | 'overview'; token: number};
 type Props = {
@@ -29,7 +29,6 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
   const [attempt, setAttempt] = useState(0);
   const [dimensions, setDimensions] = useState(picture.current);
   const [frameSize, setFrameSize] = useState(frame.current);
-  const [highlight, setHighlight] = useState<SceneHint | null>(null);
   const [mark, setMark] = useState<SceneSelection | null>(null);
   const [dragging, setDragging] = useState(false);
   const pointers = useRef(new Map<number, Point>());
@@ -92,7 +91,7 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
     const reset = !previous || previous.resetKey !== resetKey || previous.picture.width !== picture.current.width || previous.picture.height !== picture.current.height;
     if (reset) {
       applyView(coverView(frame.current, picture.current));
-      setHighlight(null); setMark(null);
+      setMark(null);
     } else {
       // Preserve the place being explored when the website viewport changes size.
       const ratio = current.current.scale / coverView(previous.frame, previous.picture).scale;
@@ -108,15 +107,9 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
   useEffect(() => {if (blocked && selection?.kind !== 'found') stopAnimation();}, [blocked]);
   useEffect(() => {if (reduced()) stopAnimation();}, [motion]);
   useEffect(() => {
-    setHighlight(null); if (!hint || !loaded) return;
-    const actor = actors.find(a => a.id === hint.actorId); if (!actor) return;
-    // Hints preserve the zoom and softly bring off-screen regions into view.
-    const x = actor.x * picture.current.width * current.current.scale + current.current.x;
-    const y = actor.y * picture.current.height * current.current.scale + current.current.y;
-    if (x < 80 || x > frame.current.width - 80 || y < 100 || y > frame.current.height - 80) animateView({...current.current, x: frame.current.width / 2 - actor.x * picture.current.width * current.current.scale, y: frame.current.height / 2 - actor.y * picture.current.height * current.current.scale});
-    const reveal = window.setTimeout(() => setHighlight(hint), reduced() ? 0 : 400);
-    const timer = window.setTimeout(() => setHighlight(null), 2600);
-    return () => {window.clearTimeout(reveal); window.clearTimeout(timer);};
+    if (!hint || !loaded || blocked) return;
+    // Only the explicitly requested final hint moves the camera to a broad district.
+    animateView({...current.current, x: frame.current.width / 2 - hint.region.x * picture.current.width * current.current.scale, y: frame.current.height / 2 - hint.region.y * picture.current.height * current.current.scale});
   }, [hint?.token, loaded]);
   useEffect(() => {
     setMark(null); if (!selection || !loaded) return;
@@ -205,7 +198,6 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
       .sort((a, b) => Math.hypot(world.x - a.x * picture.current.width, world.y - a.y * picture.current.height) - Math.hypot(world.x - b.x * picture.current.width, world.y - b.y * picture.current.height))[0];
     if (selected) inspectActor(selected);
   };
-  const emphasis = highlight && actors.find(a => a.id === highlight.actorId);
   const marked = mark && actors.find(a => a.id === mark.actorId);
   return <div className={`scroll-frame ${loaded ? 'is-ready' : ''}`} style={{backgroundImage: `url("${image}")`}}>
     <div className={`scroll-viewport ${dragging ? 'is-dragging' : ''}`} ref={root} onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up} onKeyDown={event => {
@@ -227,7 +219,6 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
           const y = actor.y * picture.current.height * current.current.scale + current.current.y;
           if (x < 30 || x > frame.current.width - 30 || y < 100 || y > frame.current.height - 60) applyView({...current.current, x: frame.current.width / 2 - actor.x * picture.current.width * current.current.scale, y: frame.current.height / 2 - actor.y * picture.current.height * current.current.scale});
         }} onClick={event => {if (event.detail === 0 && !blocked) inspectActor(actor);}}/>)}
-        {emphasis && <div className="hint-atmosphere" style={{left: emphasis.x * dimensions.width, top: emphasis.y * dimensions.height, width: dimensions.width * .24, height: dimensions.height * .29}}/>}
         {marked && <div className={`character-mark mark-${mark.kind}`} style={{left: marked.x * dimensions.width, top: (marked.y - marked.height / 2) * dimensions.height - 10 / view.scale, transform: `translate(-50%, -100%) scale(${1 / view.scale})`}} role="status">{mark.kind === 'wrong' ? '似乎不是他……' : mark.kind === 'found' ? '尋得' : '記下'}</div>}
       </div>
       {!loaded && <div className="scene-status" role="status">{failed ? <><span>畫卷暫時未能展開</span><button className="small-button" onPointerDown={e => e.stopPropagation()} onClick={() => {setFailed(false); setAttempt(a => a + 1);}}><RotateCcw size={15}/>重新載入</button></> : <><span className="loading-seal">卷</span><span>正在展開畫卷…</span></>}</div>}

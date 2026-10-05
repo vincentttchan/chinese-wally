@@ -5,7 +5,7 @@
   --paper: #f5efdf; --ink: #353c32; --green: #485a47; --red: #954c37; --line: #b8a58266;
   --motion-instant: 120ms; --motion-fast: 180ms; --motion-standard: 260ms; --motion-panel: 380ms; --motion-scene: 550ms; --motion-cinematic: 950ms;
   --ease-ui: cubic-bezier(.22,1,.36,1); --ease-soft: cubic-bezier(.33,1,.68,1); --ease-scene: cubic-bezier(.16,1,.3,1);
-  --painting-grade: saturate(.38) sepia(.12) contrast(.9) brightness(1.035);
+  --painting-grade: saturate(.68) sepia(.09) contrast(.96) brightness(1.045);
 }
 * {box-sizing: border-box;}
 html, body, #root {margin: 0; width: 100%; height: 100%; overflow: hidden;}
@@ -24,7 +24,7 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 .painting {width: 100%; height: 100%; display: block; pointer-events: none; filter: var(--painting-grade);}
 .painting-detail-tile {position: absolute; top: 0; height: 100%; display: block; pointer-events: none; filter: var(--painting-grade);}
 .is-ready .painting {animation: painting-arrives 400ms var(--ease-soft) both;}
-.scene-vignette {position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg,#463b2914,transparent 120px,transparent 75%,#30291f48); box-shadow: inset 0 0 95px #44351e25; transition: background var(--motion-scene);}
+.scene-vignette {position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg,#463b290c,transparent 120px,transparent 80%,#30291f28); box-shadow: inset 0 0 95px #44351e15; transition: background var(--motion-scene);}
 .ending-visible .scene-vignette {background-color: #151a160d;}
 .actor-hitbox {position: absolute; transform: translate(-50%,-50%); padding: 0; background: transparent; cursor: pointer;}
 .actor-hitbox:focus-visible {outline: var(--outline-width,2px) dashed var(--red); outline-offset: 0; background: #f2e7c610;}
@@ -76,7 +76,6 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 .hint-button {margin-left: auto; height: 46px; display: inline-flex; align-items: center; gap: 10px; padding: 0 17px; border-radius: 24px; border: 1px solid #e8d8b655; background: #5e604cd9; color: #f4ead1; font-size: 12px; letter-spacing: .08em; opacity: .8;}
 .hint-button:hover:not(:disabled) {opacity: 1; background: #565c43f2;}
 .hint-button:disabled {opacity: .4;}
-.hint-atmosphere {position: absolute; transform: translate(-50%,-50%); pointer-events: none; background: radial-gradient(ellipse,#fff0c721,transparent 70%); mix-blend-mode: screen; animation: atmosphere 2s var(--ease-soft) both;}
 .character-mark {position: absolute; pointer-events: none; white-space: nowrap; font-size: 12px; padding: 7px 12px; background: #f4ebd9ee; color: #4d5540; border: 1px solid #c9b68d70; box-shadow: 0 3px 12px #39322016;}
 .mark-wrong {animation: wrong-notice 1.4s var(--ease-soft) both;}
 .mark-found, .mark-clue {color: var(--red); border: 1px solid currentColor; background: #f6ecd3e8; font-size: 18px; letter-spacing: .08em; padding: 5px 8px; animation: seal-seen 220ms var(--ease-soft) both;}
@@ -261,8 +260,13 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 .intro-skip {position: absolute; top: clamp(25px,6vh,62px); right: clamp(28px,5vw,80px); padding: 8px 12px; font-size: 10px; letter-spacing: .15em; color: #5b5949; background: #ede5d1b0; border-radius: 2px;}
 .intro-skip:disabled {opacity: .4;}
 .painted-portrait img {filter: var(--painting-grade);}
+.unrecorded-clue {width: 56px; height: 76px; flex-shrink: 0; display: grid; place-items: center; border-block: 1px solid #82785c45; color: #82785c99; font-size: 21px; letter-spacing: .12em;}
+.hint-stage {font-size: 10px; color: #82785c; margin-left: 12px;}
 @media (max-height: 580px) {
   .intro-narrative {min-height: 136px;}
   .intro-sequence {margin-top: 4px;}
   .intro-skip {top: 14px;}
 }
+
+.reading-paper .music-credit {font-size: 10px; line-height: 1.8; color: #82785c;}
+.music-credit a {color: inherit; text-underline-offset: 3px;}

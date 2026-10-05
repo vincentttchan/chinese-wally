@@ -2,12 +2,16 @@ import { useEffect, useRef, useState } from 'react';
 
 type SoundState = 'off' | 'loading' | 'on' | 'error';
 type Engine = {
-  context: AudioContext; master: GainNode; sources: Set<AudioBufferSourceNode>;
-  controller: AbortController; timer: number | null; started: boolean;
-  ready: Promise<{ crowd: AudioBuffer; tea: AudioBuffer }>;
+  context: AudioContext;
+  master: GainNode;
+  sources: Set<AudioBufferSourceNode>;
+  controller: AbortController;
+  timer: number | null;
+  started: boolean;
+  ready: Promise<AudioBuffer>;
 };
 
-/** Three quiet layers. Audio starts only from the player's sound button. */
+/** A quiet instrumental track, enabled only by a player's sound-button gesture. */
 export function useAmbience(quiet: boolean) {
   const [state, setState] = useState<SoundState>('off');
   const engine = useRef<Engine | null>(null);
@@ -16,22 +20,23 @@ export function useAmbience(quiet: boolean) {
   quietRef.current = quiet;
 
   const level = (item: Engine) => {
-    const volume = wanted.current && !document.hidden ? (quietRef.current ? .16 : .42) : 0;
-    item.master.gain.setTargetAtTime(volume, item.context.currentTime, .35);
+    const volume = wanted.current && !document.hidden ? (quietRef.current ? .07 : .19) : 0;
+    item.master.gain.setTargetAtTime(volume, item.context.currentTime, .45);
   };
-  useEffect(() => { if (engine.current) level(engine.current); }, [quiet]);
+  const dispose = (item: Engine) => {
+    item.controller.abort();
+    if (item.timer !== null) window.clearInterval(item.timer);
+    item.sources.forEach(source => {try {source.stop();} catch { /* Already ended. */ }});
+    void item.context.close();
+  };
+  useEffect(() => {if (engine.current) level(engine.current);}, [quiet]);
   useEffect(() => {
-    const visibility = () => { if (engine.current) level(engine.current); };
+    const visibility = () => {if (engine.current) level(engine.current);};
     document.addEventListener('visibilitychange', visibility);
     return () => {
       document.removeEventListener('visibilitychange', visibility);
       wanted.current = false;
-      const item = engine.current;
-      if (!item) return;
-      item.controller.abort();
-      if (item.timer !== null) window.clearInterval(item.timer);
-      item.sources.forEach(source => { try { source.stop(); } catch { /* already ended */ } });
-      void item.context.close();
+      if (engine.current) dispose(engine.current);
       engine.current = null;
     };
   }, []);
@@ -51,62 +56,45 @@ export function useAmbience(quiet: boolean) {
         master.gain.value = 0;
         master.connect(context.destination);
         const controller = new AbortController();
-        const decode = async (url: string) => {
-          const response = await fetch(url, {signal: controller.signal});
-          if (!response.ok) throw new Error('Audio unavailable');
+        const ready = fetch('/audio/scroll-music.mp3', {signal: controller.signal}).then(async response => {
+          if (!response.ok) throw new Error('Music unavailable');
           return context.decodeAudioData(await response.arrayBuffer());
-        };
-        const ready = Promise.all([decode('/audio/crowd.ogg'), decode('/audio/tea.ogg')])
-          .then(([crowd, tea]) => ({crowd, tea}));
+        });
         engine.current = {context, master, controller, ready, sources: new Set(), timer: null, started: false};
       }
       const item = engine.current;
-      // Resume immediately within the click gesture, before waiting for downloads.
+      // Unlock audio while the player's click gesture is still active.
       await item.context.resume();
-      const buffers = await item.ready;
+      const music = await item.ready;
       if (engine.current !== item || !wanted.current) return;
       if (!item.started) {
         const ctx = item.context;
-        const play = (buffer: AudioBuffer, volume: number, pan: number, when = ctx.currentTime, loop = false, cutoff = 1500) => {
+        const fade = Math.min(4, music.duration / 4);
+        const play = (when: number) => {
           const source = ctx.createBufferSource();
-          source.buffer = buffer; source.loop = loop;
-          const filter = ctx.createBiquadFilter();
-          filter.type = 'lowpass'; filter.frequency.value = cutoff;
           const gain = ctx.createGain();
-          gain.gain.value = loop ? volume : 0;
-          if (!loop) {
-            gain.gain.setValueAtTime(0, when);
-            gain.gain.linearRampToValueAtTime(volume, when + Math.min(.12, buffer.duration / 4));
-            gain.gain.setValueAtTime(volume, when + buffer.duration * .8);
-            gain.gain.linearRampToValueAtTime(0, when + buffer.duration);
-          }
-          const stereo = ctx.createStereoPanner(); stereo.pan.value = pan;
-          source.connect(filter); filter.connect(gain); gain.connect(stereo); stereo.connect(item.master);
+          source.buffer = music;
+          gain.gain.setValueAtTime(0, when);
+          gain.gain.linearRampToValueAtTime(1, when + fade);
+          gain.gain.setValueAtTime(1, when + music.duration - fade);
+          gain.gain.linearRampToValueAtTime(0, when + music.duration);
+          source.connect(gain);
+          gain.connect(item.master);
           item.sources.add(source);
-          source.onended = () => {item.sources.delete(source); source.disconnect(); filter.disconnect(); gain.disconnect(); stereo.disconnect();};
+          source.onended = () => {item.sources.delete(source); source.disconnect(); gain.disconnect();};
           source.start(when);
         };
-        // Low-pass and low gain make recorded voices a distant, indistinct murmur.
-        play(buffers.crowd, .36, -.12, ctx.currentTime, true, 850);
-        const footstep = ctx.createBuffer(1, Math.round(ctx.sampleRate * .22), ctx.sampleRate);
-        const samples = footstep.getChannelData(0);
-        for (let i = 0; i < samples.length; i++) {
-          const t = i / ctx.sampleRate;
-          samples[i] = ((Math.random() * 2 - 1) * .3 + Math.sin(t * Math.PI * 2 * 145) * .7) * Math.exp(-t * 29);
-        }
-        let nextSteps = ctx.currentTime + 3;
-        let nextTea = ctx.currentTime + 7;
+        const first = ctx.currentTime + .05;
+        play(first);
+        let next = first + music.duration - fade;
         item.timer = window.setInterval(() => {
-          if (!wanted.current || document.hidden || ctx.state !== 'running') return;
-          if (ctx.currentTime >= nextSteps) {
-            for (let i = 0; i < 5; i++) play(footstep, .09, -.45 + i * .16, ctx.currentTime + i * .57, false, 1000);
-            nextSteps = ctx.currentTime + 12 + Math.random() * 8;
+          if (ctx.state !== 'running') return;
+          if (next <= ctx.currentTime + 1.5) {
+            const when = Math.max(next, ctx.currentTime + .05);
+            play(when);
+            next = when + music.duration - fade;
           }
-          if (ctx.currentTime >= nextTea) {
-            play(buffers.tea, .13, .25);
-            nextTea = ctx.currentTime + 28 + Math.random() * 12;
-          }
-        }, 1000);
+        }, 500);
         item.started = true;
       }
       level(item);
@@ -114,9 +102,8 @@ export function useAmbience(quiet: boolean) {
     } catch {
       if (!wanted.current) return;
       wanted.current = false;
-      const item = engine.current;
+      if (engine.current) dispose(engine.current);
       engine.current = null;
-      if (item) {item.controller.abort(); if (item.timer !== null) window.clearInterval(item.timer); void item.context.close();}
       setState('error');
     }
   };

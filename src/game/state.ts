@@ -1,3 +1,5 @@
+import { level, witnesses } from './level.ts';
+
 export type GameState = {
   phase: 'intro' | 'exploring' | 'complete';
   clues: string[];
@@ -11,11 +13,12 @@ export function reduceGame(state: GameState, action: GameAction): GameState {
   }
   if (action.type === 'dismiss-feedback') return { ...state, feedback: null };
   if (state.phase !== 'exploring' || action.type !== 'inspect') return state;
-  if (action.id === 'copyist' || action.id === 'tea-keeper') {
+  const actor = level.actors.find(item => item.id === action.id);
+  if (!actor) return state;
+  if (actor.kind === 'witness') {
     return { ...state, clues: state.clues.includes(action.id) ? state.clues : [...state.clues, action.id], feedback: null };
   }
-  if (!['scholar-target', 'scholar-scroll', 'scholar-brown'].includes(action.id)) return state;
-  if (state.clues.length < 2) return { ...state, feedback: 'need-clues' };
-  if (action.id === 'scholar-target') return { ...state, phase: 'complete', feedback: null };
+  if (state.clues.length < witnesses.length) return { ...state, feedback: 'need-clues' };
+  if (actor.kind === 'target') return { ...state, phase: 'complete', feedback: null };
   return { ...state, feedback: 'mismatch' };
 }
