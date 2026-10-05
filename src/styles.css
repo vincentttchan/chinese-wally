@@ -270,3 +270,21 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 
 .reading-paper .music-credit {font-size: 10px; line-height: 1.8; color: #82785c;}
 .music-credit a {color: inherit; text-underline-offset: 3px;}
+
+/* A single reading question, styled as a small annotation on the paper. */
+.knowledge-quiz {margin-top: 25px; padding: 20px 0 5px; border-top: 1px solid var(--line);}
+.knowledge-quiz fieldset {border: 0; padding: 0; margin: 13px 0 16px; min-width: 0;}
+.knowledge-quiz legend {font-size: 15px; line-height: 1.9; margin-bottom: 14px; color: var(--ink);}
+.quiz-option {display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 12px 10px; margin: 7px 0; border: 1px solid #95896b45; background: #fffaf029; cursor: pointer; font-size: 12px; line-height: 1.8;}
+.quiz-option:hover {background: #e9e5d566;}
+.quiz-option.is-selected {border-color: #69745f; background: #e3e6d685;}
+.quiz-option input {accent-color: var(--green); flex-shrink: 0; width: 16px; height: 16px; margin: 0;}
+.quiz-option:has(input:focus-visible) {outline: 2px solid var(--red); outline-offset: 2px;}
+.quiz-letter {color: #897755; flex-shrink: 0;}
+.knowledge-quiz fieldset:disabled .quiz-option {cursor: default;}
+.quiz-feedback {border-left: 2px solid #a27b4d; padding: 10px 14px; margin: 12px 0 18px; background: #d9c59424;}
+.quiz-feedback.is-correct {border-color: #687659; background: #c2cfb229;}
+.quiz-feedback strong {font-size: 12px; font-weight: 500; color: #785f3e;}
+.quiz-feedback.is-correct strong {color: #4c6144;}
+.reading-paper .quiz-feedback p {font-size: 12px; line-height: 1.9; margin: 6px 0 0;}
+.reading-paper .quiz-note {font-size: 10px; color: #827b64; line-height: 1.8; margin: 10px 0 0;}
