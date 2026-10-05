@@ -20,10 +20,14 @@
 
 ## 目前使用的長卷
 
-使用者要求恢復左右展開的長卷氛圍，因此網站已恢復 `public/art/examination-scroll.png`，尺寸 2172 × 724（3:1）；提示為 `examination-scroll-prompt.txt`。網站直接以滿版尺度顯示畫作，沒有上下留白；人物熱區與微動位置同步恢復，旗幟重影圖層維持移除。較早未成功的全景規格保留在 `examination-panorama-prompt.txt`。
+使用者確認第二版局部樣稿後，已用內建 imagegen 向右延伸為 `public/art/examination-dense-scroll-v3.png`，尺寸 2172 × 724（3:1）。左側沿用榜牆、茶攤及密集生活群組，右側延伸街市與石橋。最終提示為 `examination-dense-scroll-v3-final-prompt.txt`，輸入為第二版樣稿。第一次長描述請求連線失敗，精簡後重試成功；原請求保存於 `examination-dense-scroll-v3-prompt.txt`。
+
+新圖已取代網站主圖。人物熱區、線索簿小像及蒸汽位置同步調整。橋頭三名候選人的青衫、手卷與書箱互為干擾，只有橋頭的青衫書箱者符合兩條證詞；其他區域仍有青衫書箱者，證詞中的去向亦為必要條件。書箱畫在身前，因此文案使用「帶着」，不再稱「背着」。
+
+網站直接以 cover 尺度顯示，最小縮放維持滿版，拖曳探索左右。新畫面沒有清晰開闊河面，移除原圖水紋圖層，避免浮在人物或石橋上；保留茶壺淡蒸汽。旗幟仍直接使用畫內的「茶」幡，沒有扭曲重影圖層。舊長卷 `examination-scroll.png` 及其提示保留作比較。
 
 ## 新的尋人美術方向樣稿
 
-內建 imagegen 生成的榜牆與茶攤局部樣稿已保存為 `output/art-direction/examination-crowd-study-v1.png`；經人物尺度調整後，選定第二版 `output/art-direction/examination-crowd-study-v2.png`（1586 × 992）。樣稿尚未取代可玩長卷，供使用者評閱密集尋人畫面與傳統墨線淡彩的結合。
+內建 imagegen 生成的榜牆與茶攤局部樣稿已保存為 `output/art-direction/examination-crowd-study-v1.png`；經人物尺度調整後，選定第二版 `output/art-direction/examination-crowd-study-v2.png`（1586 × 992）。使用者確認後，第二版已延伸成目前可玩的 3:1 長卷。
 
 生成及編輯提示為 `examination-crowd-study-v1-prompt.txt`、`examination-crowd-study-v2-edit-prompt.txt`；方向及評閱記錄見 `seek-and-find-direction.md`。

@@ -144,7 +144,7 @@ export default function App() {
     const messages: Record<string, string[]> = {
       copyist: ['榜牆前，有人正伏案記下榜上的名字。', '留意榜牆下的小桌，持筆的人或許知道些甚麼。'],
       'tea-keeper': ['茶攤前的掌櫃，可能見過匆匆經過的考生。', '找找中央茶攤，誰正提着茶壺招呼客人？'],
-      'scholar-target': ['把「青色長衫」與「方形書箱」合起來，再看看橋頭。', '橋頭附近，有人背着書箱等候；留意他的衣衫。'],
+      'scholar-target': ['把「青色長衫」與「方形書箱」合起來，再看看橋頭。', '橋頭附近，有人帶着書箱等候；留意他的衣衫。'],
     };
     setHintText(messages[id][Math.min(count - 1, 1)]);
     setHint({actorId: id, level: Math.min(count, 2), token: ++token.current});
