@@ -22,6 +22,8 @@
 
 主畫卷現以 `public/art/hd/board.png`、`tea.png`、`bridge.png` 三段高清美術呈現，每段 1254 × 1254，有效總畫面為 3762 × 1254。先前 2172 × 724 的主圖作為載入底圖，不再是細節呈現的唯一素材。精確分區參考來自原畫在瀏覽器中的 724 × 724 分區顯示，再由內建 imagegen 重製細節。
 
+橋頭段目前已更新為 `public/art/hd/bridge-v2.png`：三名書生不再並排於空地，而是融入不同人群；生成提示為 `bridge-v2-concealment-prompt.txt`。全卷及證人小像在網站中採用共用淡彩色彩呈現，避免過鮮的藍、粉紅與橙色；原始 PNG 與網站的呈現分開記錄。新版尺寸仍為 1254 × 1254。
+
 最終提示見 `hd-left-final-prompt.txt`、`hd-center-final-prompt.txt`、`hd-right-final-prompt.txt`；完整流程、實際尺寸與引言頁記錄見 `../introduction-and-hd-art.md`。首次直接由整幅圖生成的分區存在重疊，未採用。
 
 ## 目前使用的長卷

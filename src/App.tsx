@@ -167,7 +167,8 @@ export default function App() {
   };
   const sceneCommand = (type: SceneCommand['type']) => {setMenu(false); setCommand({type, token: ++token.current});};
   const toggleMission = () => {if (collapseTimer.current !== null) window.clearTimeout(collapseTimer.current); setMissionOpen(value => !value);};
-  const objective = finished ? '書童與考生，終於相逢。' : game.clues.length === 2 ? '結合兩條證詞，尋找橋邊的考生。' : '向抄榜人與茶攤掌櫃問訊。';
+  const objective = finished ? '書童與考生，終於相逢。' : game.clues.length === 2 ? '結合兩條證詞，尋找橋邊的考生。' : game.clues.includes('copyist') ? '到茶攤問掌櫃，尋找另一條證詞。' : game.clues.includes('tea-keeper') ? '回到榜牆，向抄榜人問訊。' : '先向榜牆前的抄榜人問訊。';
+  const nextStep = finished ? '人海相逢' : game.clues.length === 2 ? '循線索，尋考生' : game.clues.includes('copyist') ? '再問茶攤掌櫃' : game.clues.includes('tea-keeper') ? '回榜牆問訊' : '先找抄榜人';
   const anchor = dialogue?.anchor;
   const placement = anchor ? {'--dialog-x': `${anchor.x < window.innerWidth * .58 ? anchor.x + 36 : anchor.x - 386}px`, '--dialog-y': `${anchor.y - 100}px`} as CSSProperties : undefined;
 
@@ -179,9 +180,9 @@ export default function App() {
     {game.phase !== 'intro' && <header className="scene-hud">
       <section className={`mission ${missionOpen ? 'is-expanded' : 'is-collapsed'}`} aria-label="尋人任務">
         <button ref={paperButton} className="mission-summary" aria-expanded={missionOpen} aria-controls="mission-details" onClick={toggleMission}>
-          <span className="mission-heading"><span className="mission-chapter">榜下尋人</span><span className="mission-objective">尋線索，辨人物</span></span><span className="mission-count" key={game.clues.length} aria-label={`已取得${game.clues.length}條證詞，共2條`} aria-live="polite"><b>{game.clues.length}</b><small> / 2</small></span><ChevronDown size={14} className="mission-chevron"/>
+          <span className="mission-heading"><span className="mission-chapter">榜下尋人</span><span className="mission-objective" aria-live="polite">{nextStep}</span></span><span className="mission-count" key={game.clues.length} aria-label={`已取得${game.clues.length}條證詞，共2條`} aria-live="polite"><b>{game.clues.length}</b><small> / 2</small></span><ChevronDown size={14} className="mission-chevron"/>
         </button>
-        <div className="mission-details" id="mission-details" hidden={!missionOpen}><strong>替書童找回走散的考生</strong><p>{objective}</p><p>先取得兩條證詞，再從人群中尋人。左右拖曳探索，放大可看清細節。</p></div>
+        <div className="mission-details" id="mission-details" hidden={!missionOpen}><strong>替書童找回走散的考生</strong><p>{objective}</p><p>點選畫中人物，聽取證詞。左右拖曳探索，放大可看清細節。</p></div>
       </section>
       <nav className="scene-settings" aria-label="場景設定">
         <button className={`round-control ${sound.state === 'on' ? 'is-on' : ''}`} aria-label={soundLabel} title={soundLabel} aria-pressed={sound.state === 'on' || sound.state === 'loading'} onClick={() => void sound.toggle()}>{sound.state === 'on' ? <Volume2 size={19}/> : <VolumeX size={19}/>}</button>

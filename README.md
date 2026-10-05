@@ -2,7 +2,7 @@
 
 一個約兩分鐘的古風尋人網頁遊戲。原創「科舉放榜日」長卷參照《清明上河圖》的城市風俗畫風。
 
-先由滿版引言頁入畫：直排題字、短引言及一個尋人入口。進入畫卷後，任務只佔左上角的小型控制，點擊可展開說明。
+先由滿版引言頁入畫：直排題字，手動推進放榜日、走散與委託三幕，可返回或略過。進入畫卷後，小型任務控制按證詞逐步交代下一個行動，點擊可展開說明。
 
 先在畫中點擊抄榜人與茶攤掌櫃，取得兩條證詞；結合線索，再從橋邊的人群中找出走散的考生。
 
@@ -44,6 +44,7 @@ npm run preview -- --port 5189
 - `src/components/ScrollScene.tsx`：畫卷、手勢與點擊。
 - `public/art/examination-dense-scroll-v3.png`：目前使用的原創 3:1 密集尋人長卷，從確認的第二版樣稿向右延伸至橋頭。
 - `public/art/hd/`：三段 1254 × 1254 的細節重製素材，在同一畫卷內拼接顯示，有效畫面 3762 × 1254；原主圖留作載入底圖。
+- `public/art/hd/bridge-v2.png`：目前橋頭段，書生已分散並融入人群；全卷以共用淡彩色彩呈現降低飽和度及硬對比。
 - `docs/art/examination-dense-scroll-v3-final-prompt.txt`：目前長卷的最終生成提示。
 - `public/art/ui/`：手繪圖示與紙箋美術；介面已移除 Lucide SVG 圖示。
 - `output/art-direction/examination-crowd-study-v2.png`：已確認的局部美術樣稿，為目前長卷的延伸素材。
