@@ -2,11 +2,11 @@
 
 所有美術素材均由內建 imagegen 生成，已複製到專案內，可隨網站部署。
 
-## 目前使用的全景
+## 上一版全景（保留作比較）
 
 `public/art/examination-panorama-v2.png`：1586 × 992，約 16:10。沿用張擇端《清明上河圖》的細線、淡彩和古絹語言，場景、人物及尋人故事均為虛構。參考截圖只提供介面與構圖方向。
 
-檢視生成畫作後，依抄榜人、茶攤掌櫃、青衫持卷者、褐衣書箱者與青衫書箱者的實際位置更新 `src/game/level.ts`。河水及茶壺蒸汽亦重新定位。旗幟直接使用畫作中的布幡，不再複製局部圖像作扭曲動畫。
+上一版檢視生成畫作後，曾依抄榜人、茶攤掌櫃、青衫持卷者、褐衣書箱者與青衫書箱者的實際位置更新 `src/game/level.ts`。河水及茶壺蒸汽亦重新定位。旗幟直接使用畫作中的布幡，不再複製局部圖像作扭曲動畫。
 
 最終生成提示：`examination-panorama-v2-prompt.txt`。附參考圖的首次請求連線失敗，改用同一構圖與畫風描述、無參考圖的請求成功。
 
@@ -18,6 +18,12 @@
 
 提示保存在 `ui-atlas-prompt.txt` 與 `ui-paper-prompt.txt`。
 
-## 保留素材
+## 目前使用的長卷
 
-`public/art/examination-scroll.png` 為最初的 2172 × 724（3:1）長卷，保留作為畫風參考；提示為 `examination-scroll-prompt.txt`。較早未成功的全景規格保留在 `examination-panorama-prompt.txt`。
+使用者要求恢復左右展開的長卷氛圍，因此網站已恢復 `public/art/examination-scroll.png`，尺寸 2172 × 724（3:1）；提示為 `examination-scroll-prompt.txt`。網站直接以滿版尺度顯示畫作，沒有上下留白；人物熱區與微動位置同步恢復，旗幟重影圖層維持移除。較早未成功的全景規格保留在 `examination-panorama-prompt.txt`。
+
+## 新的尋人美術方向樣稿
+
+內建 imagegen 生成的榜牆與茶攤局部樣稿已保存為 `output/art-direction/examination-crowd-study-v1.png`；經人物尺度調整後，選定第二版 `output/art-direction/examination-crowd-study-v2.png`（1586 × 992）。樣稿尚未取代可玩長卷，供使用者評閱密集尋人畫面與傳統墨線淡彩的結合。
+
+生成及編輯提示為 `examination-crowd-study-v1-prompt.txt`、`examination-crowd-study-v2-edit-prompt.txt`；方向及評閱記錄見 `seek-and-find-direction.md`。

@@ -6,6 +6,11 @@ export function fitView(size: Size, image: Size): View {
   const scale = Math.min(size.width / image.width, size.height / image.height);
   return { scale, x: (size.width - image.width * scale) / 2, y: (size.height - image.height * scale) / 2 };
 }
+/** Fill the website viewport; the rest of the handscroll extends horizontally. */
+export function coverView(size: Size, image: Size): View {
+  const scale = Math.max(size.width / image.width, size.height / image.height);
+  return {scale, x: 0, y: (size.height - image.height * scale) / 2};
+}
 export function clampView(view: View, size: Size, image: Size): View {
   const width = image.width * view.scale;
   const height = image.height * view.scale;

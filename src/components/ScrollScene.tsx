@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import type { PointerEvent as ReactPointerEvent } from 'react';
 import { RotateCcw } from './ArtIcons.tsx';
 import { LivingPainting } from './LivingPainting.tsx';
-import { clampView, fitView, zoomAt } from '../game/geometry.ts';
+import { clampView, coverView, zoomAt } from '../game/geometry.ts';
 import type { Point, Size, View } from '../game/geometry.ts';
 import type { SceneActor } from '../game/level.ts';
 
@@ -20,7 +20,7 @@ const zoomStops = [1, 1.1, 1.25, 1.5, 1.75];
 export function ScrollScene({image, actors, active, blocked, resetKey, hint, selection, command, onInspect, onExplore, onReady, motion = true}: Props) {
   const root = useRef<HTMLDivElement>(null);
   const frame = useRef<Size>({width: 1280, height: 800});
-  const picture = useRef<Size>({width: 2560, height: 1600});
+  const picture = useRef<Size>({width: 2172, height: 724});
   const current = useRef<View>({scale: 1, x: 0, y: 0});
   const [view, setView] = useState(current.current);
   const [loaded, setLoaded] = useState(false);
@@ -39,12 +39,19 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, sel
   const animation = useRef<number | null>(null);
   const velocity = useRef({x: 0, y: 0, time: 0});
   const wheelSum = useRef(0);
+  const lastLayout = useRef<{frame: Size; picture: Size; resetKey: number} | null>(null);
   const onExploreRef = useRef(onExplore); onExploreRef.current = onExplore;
   const reduced = () => !motion || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const stopAnimation = () => {if (animation.current !== null) cancelAnimationFrame(animation.current); animation.current = null;};
-  const applyView = (next: View) => {const bounded = clampView(next, frame.current, picture.current); current.current = bounded; setView(bounded);};
-  const overviewScale = () => fitView(frame.current, picture.current).scale;
-  const limits = () => ({min: overviewScale(), max: overviewScale() * 1.75});
+  const baseScale = () => coverView(frame.current, picture.current).scale;
+  const limits = () => ({min: baseScale(), max: baseScale() * 1.75});
+  const applyView = (next: View) => {
+    const range = limits();
+    const scale = Math.max(range.min, Math.min(range.max, next.scale));
+    const covered = zoomAt(next, scale / next.scale, {x: frame.current.width / 2, y: frame.current.height / 2}, range);
+    const bounded = clampView(covered, frame.current, picture.current);
+    current.current = bounded; setView(bounded);
+  };
   const animateView = (next: View, duration = 550) => {
     stopAnimation();
     const target = clampView(next, frame.current, picture.current);
@@ -61,9 +68,9 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, sel
   const point = (x: number, y: number): Point => {const bounds = root.current!.getBoundingClientRect(); return {x: x - bounds.left, y: y - bounds.top};};
   const zoomStep = (direction: number, anchor = {x: frame.current.width / 2, y: frame.current.height / 2}) => {
     onExploreRef.current?.();
-    const ratio = current.current.scale / overviewScale();
+    const ratio = current.current.scale / baseScale();
     const next = direction > 0 ? zoomStops.find(stop => stop > ratio + .02) ?? 1.75 : [...zoomStops].reverse().find(stop => stop < ratio - .02) ?? 1;
-    animateView(zoomAt(current.current, overviewScale() * next / current.current.scale, anchor, limits()), 180);
+    animateView(zoomAt(current.current, baseScale() * next / current.current.scale, anchor, limits()), 180);
   };
 
   useEffect(() => {
@@ -75,12 +82,25 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, sel
     });
     observer.observe(node); return () => {observer.disconnect(); stopAnimation();};
   }, []);
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!loaded) return;
     stopAnimation(); pointers.current.clear(); setDragging(false);
-    // Keep every clue and candidate visible at the initial overview, on any aspect ratio.
-    applyView(fitView(frame.current, picture.current));
-    setHighlight(null); setMark(null);
+    const previous = lastLayout.current;
+    const reset = !previous || previous.resetKey !== resetKey || previous.picture.width !== picture.current.width || previous.picture.height !== picture.current.height;
+    if (reset) {
+      applyView(coverView(frame.current, picture.current));
+      setHighlight(null); setMark(null);
+    } else {
+      // Preserve the place being explored when the website viewport changes size.
+      const ratio = current.current.scale / coverView(previous.frame, previous.picture).scale;
+      const center = {x: (previous.frame.width / 2 - current.current.x) / current.current.scale, y: (previous.frame.height / 2 - current.current.y) / current.current.scale};
+      const scale = baseScale() * ratio;
+      const atStart = current.current.x >= -.5;
+      const atEnd = previous.picture.width * current.current.scale + current.current.x <= previous.frame.width + .5;
+      const x = atStart ? 0 : atEnd ? frame.current.width - picture.current.width * scale : frame.current.width / 2 - center.x * scale;
+      applyView({scale, x, y: frame.current.height / 2 - center.y * scale});
+    }
+    lastLayout.current = {frame: {...frame.current}, picture: {...picture.current}, resetKey};
   }, [resetKey, loaded, frameSize.width, frameSize.height, dimensions.width, dimensions.height]);
   useEffect(() => {if (blocked && selection?.kind !== 'found') stopAnimation();}, [blocked]);
   useEffect(() => {if (reduced()) stopAnimation();}, [motion]);
@@ -108,7 +128,7 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, sel
   }, [selection?.token, loaded]);
   useEffect(() => {
     if (!command || !loaded || blocked) return;
-    if (command.type === 'overview') {onExploreRef.current?.(); animateView(fitView(frame.current, picture.current));}
+    if (command.type === 'overview') {onExploreRef.current?.(); animateView(coverView(frame.current, picture.current));}
     else zoomStep(command.type === 'in' ? 1 : -1);
   }, [command?.token]);
   useEffect(() => {
@@ -165,9 +185,9 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, sel
     if (event.type === 'pointercancel' || blocked) return;
     if (!isTap) {
       if (!pointers.current.size && pinched.current) {
-        const ratio = current.current.scale / overviewScale();
+        const ratio = current.current.scale / baseScale();
         const nearest = zoomStops.reduce((a, b) => Math.abs(a - ratio) < Math.abs(b - ratio) ? a : b);
-        animateView(zoomAt(current.current, overviewScale() * nearest / current.current.scale, pinchMiddle.current ?? p, limits()), 180);
+        animateView(zoomAt(current.current, baseScale() * nearest / current.current.scale, pinchMiddle.current ?? p, limits()), 180);
         return;
       }
       if (single && !pointers.current.size && !reduced() && performance.now() - velocity.current.time < 60) {
@@ -184,12 +204,12 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, sel
   };
   const emphasis = highlight && actors.find(a => a.id === highlight.actorId);
   const marked = mark && actors.find(a => a.id === mark.actorId);
-  return <div className={`scroll-frame ${loaded ? 'is-ready' : ''}`}>
+  return <div className={`scroll-frame ${loaded ? 'is-ready' : ''}`} style={{backgroundImage: `url("${image}")`}}>
     <div className={`scroll-viewport ${dragging ? 'is-dragging' : ''}`} ref={root} onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up} tabIndex={0} onKeyDown={event => {
       if (blocked || !loaded) return;
       if (event.key === '+' || event.key === '=') {event.preventDefault(); zoomStep(1);}
       if (event.key === '-') {event.preventDefault(); zoomStep(-1);}
-      if (event.key === 'Home') {event.preventDefault(); animateView(fitView(frame.current, picture.current));}
+      if (event.key === 'Home') {event.preventDefault(); animateView(coverView(frame.current, picture.current));}
     }} aria-label="可拖曳與放大的科舉放榜日長卷">
       <div className="painting-world" style={{width: dimensions.width, height: dimensions.height, transform: `translate(${view.x}px, ${view.y}px) scale(${view.scale})`}}>
         <img className="painting" src={`${image}${attempt ? `?retry=${attempt}` : ''}`} alt="原創科舉放榜日全景古畫，左側榜牆、中央茶攤、右側橋頭與人群" draggable={false} onLoad={event => {
