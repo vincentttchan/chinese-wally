@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import type { PointerEvent as ReactPointerEvent } from 'react';
-import { Maximize, Minus, Plus, RotateCcw, ScanLine } from 'lucide-react';
+import { Maximize, Minus, Plus, RotateCcw } from 'lucide-react';
+import { LivingPainting } from './LivingPainting.tsx';
 import { clampView, fitView, zoomAt } from '../game/geometry.ts';
 import type { Point, Size, View } from '../game/geometry.ts';
 import type { SceneActor } from '../game/level.ts';
@@ -8,11 +9,12 @@ import type { SceneActor } from '../game/level.ts';
 export type SceneHint = { actorId: string; level: number; token: number };
 type Props = {
   image: string; actors: SceneActor[]; active: boolean; blocked: boolean;
-  resetKey: number; hint: SceneHint | null; onInspect: (id: string) => void;
+  resetKey: number; hint: SceneHint | null; onInspect: (id: string, anchor?: Point) => void;
+  motion?: boolean;
   onReady: (ready: boolean) => void;
 };
 
-export function ScrollScene({image, actors, active, blocked, resetKey, hint, onInspect, onReady}: Props) {
+export function ScrollScene({image, actors, active, blocked, resetKey, hint, onInspect, onReady, motion = true}: Props) {
   const root = useRef<HTMLDivElement>(null);
   const frame = useRef<Size>({width: 1000, height: 450});
   const picture = useRef<Size>({width: 3072, height: 1024});
@@ -34,9 +36,10 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, onI
     current.current = bounded;
     setView(bounded);
   };
+  const coverScale = () => Math.max(frame.current.width / picture.current.width, frame.current.height / picture.current.height);
   const limits = () => {
     const min = fitView(frame.current, picture.current).scale;
-    return {min, max: min * 8};
+    return {min, max: Math.max(min * 8, coverScale() * 3)};
   };
   const zoom = (factor: number, point: Point = {x: frame.current.width / 2, y: frame.current.height / 2}) => {
     applyView(zoomAt(current.current, factor, point, limits()));
@@ -64,14 +67,8 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, onI
     if (!loaded) return;
     pointers.current.clear();
     setDragging(false);
-    const base = fitView(frame.current, picture.current);
-    if (active) {
-      const scale = base.scale * (frame.current.width < 650 ? 3.3 : 1.5);
-      applyView({scale, x: frame.current.width / 2 - picture.current.width * .28 * scale, y: frame.current.height / 2 - picture.current.height * .57 * scale});
-    } else if (frame.current.width < 650) {
-      const scale = Math.min(limits().max, Math.max(base.scale, frame.current.height / picture.current.height));
-      applyView({scale, x: frame.current.width / 2 - picture.current.width * .60 * scale, y: 0});
-    } else fullView();
+    const scale = coverScale() * (active ? 1.04 : 1);
+    applyView({scale, x: frame.current.width / 2 - picture.current.width * .28 * scale, y: frame.current.height / 2 - picture.current.height * .52 * scale});
     setHighlight(null);
     // A restart or resize establishes a new safe viewport; dialogs do not reset it.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -83,7 +80,7 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, onI
     const actor = actors.find(a => a.id === hint.actorId);
     if (!actor) return;
     const base = fitView(frame.current, picture.current);
-    const scale = base.scale * (frame.current.width < 650 ? 4.8 : 2.7);
+    const scale = Math.max(coverScale() * 1.08, base.scale * 2.7);
     applyView({scale, x: frame.current.width / 2 - actor.x * picture.current.width * scale, y: frame.current.height / 2 - actor.y * picture.current.height * scale});
     setHighlight(hint);
     const timer = window.setTimeout(() => setHighlight(null), 6500);
@@ -144,7 +141,12 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, onI
     const selected = actors
       .filter(a => Math.abs(world.x - a.x * picture.current.width) <= Math.max(a.width * picture.current.width, 44 / current.current.scale) / 2 && Math.abs(world.y - a.y * picture.current.height) <= Math.max(a.height * picture.current.height, 44 / current.current.scale) / 2)
       .sort((a, b) => Math.hypot(world.x - a.x * picture.current.width, world.y - a.y * picture.current.height) - Math.hypot(world.x - b.x * picture.current.width, world.y - b.y * picture.current.height))[0];
-    if (selected) onInspect(selected.id);
+    if (selected) inspectActor(selected);
+  };
+
+  const inspectActor = (actor: SceneActor) => {
+    const bounds = root.current!.getBoundingClientRect();
+    onInspect(actor.id, {x: bounds.left + current.current.x + actor.x * picture.current.width * current.current.scale, y: bounds.top + current.current.y + actor.y * picture.current.height * current.current.scale});
   };
 
   const focusedActor = highlight && actors.find(a => a.id === highlight.actorId);
@@ -155,11 +157,12 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, onI
           const next = {width: event.currentTarget.naturalWidth, height: event.currentTarget.naturalHeight};
           picture.current = next; setDimensions(next); setLoaded(true); setFailed(false); onReady(true);
         }} onError={() => {setFailed(true); setLoaded(false); onReady(false);}} />
+        {loaded && <LivingPainting image={image} enabled={motion}/>}
         {active && actors.map(actor => <button key={actor.id} type="button" className="actor-hitbox" data-actor={actor.id} aria-label={`查看${actor.name}`} disabled={blocked} style={{left: actor.x * dimensions.width, top: actor.y * dimensions.height, width: Math.max(actor.width * dimensions.width, 44 / view.scale), height: Math.max(actor.height * dimensions.height, 44 / view.scale), '--outline-width': `${2 / view.scale}px`} as React.CSSProperties} onFocus={event => {
           if (!event.currentTarget.matches(':focus-visible')) return;
-          const scale = Math.max(current.current.scale, limits().min * (frame.current.width < 650 ? 3.3 : 2));
+          const scale = Math.max(current.current.scale, Math.max(coverScale(), limits().min * 2));
           applyView({scale, x: frame.current.width / 2 - actor.x * picture.current.width * scale, y: frame.current.height / 2 - actor.y * picture.current.height * scale});
-        }} onClick={event => { if (event.detail === 0 && !blocked) onInspect(actor.id); }} />)}
+        }} onClick={event => { if (event.detail === 0 && !blocked) inspectActor(actor); }} />)}
         {focusedActor && <div className={`hint-ring hint-level-${highlight.level}`} style={{left: focusedActor.x * dimensions.width, top: focusedActor.y * dimensions.height, width: dimensions.width * (highlight.level === 1 ? .13 : .043), height: dimensions.height * (highlight.level === 1 ? .40 : .145), borderWidth: 2 / view.scale}} />}
       </div>
       {!loaded && <div className="scene-status" role="status">{failed ? <><span>畫卷暫時未能展開</span><button className="small-button" onClick={() => {setFailed(false); setAttempt(a => a + 1);}}><RotateCcw size={15}/>重新載入</button></> : <><span className="loading-seal">卷</span><span>正在展開畫卷…</span></>}</div>}
@@ -169,8 +172,7 @@ export function ScrollScene({image, actors, active, blocked, resetKey, hint, onI
       <span className="zoom-value">{Math.round(view.scale / (limits().min || 1) * 100)}%</span>
       <button aria-label="縮小畫卷" title="縮小" disabled={!loaded || blocked} onClick={() => zoom(1 / 1.35)}><Minus size={18}/></button>
       <span className="tools-divider"/>
-      <button aria-label="返回全景" title="全景" disabled={!loaded || blocked} onClick={fullView}><Maximize size={17}/></button>
+      <button aria-label="返回全景" title="覽全卷" disabled={!loaded || blocked} onClick={fullView}><Maximize size={17}/></button>
     </div>
-    <div className="scene-caption"><ScanLine size={14}/><span>拖曳觀畫 · 放大尋蹤</span><span className="scene-caption-right">原創畫卷 · 科舉放榜日</span></div>
   </div>;
 }
