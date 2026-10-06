@@ -6,6 +6,13 @@
 
 自行探索畫中人物，收錄抄榜人、茶攤掌櫃與左上榜前圍觀者的三條證詞。把衣衫、方形書箱與石欄等候之約合起來，辨認走散的考生。三位證人可按任意順序訪問。
 
+## 線上遊玩與部署
+
+- 網站：https://vincentttchan.github.io/chinese-wally/
+- 儲存庫：https://github.com/vincentttchan/chinese-wally
+- 推送至 `main` 後，GitHub Actions 會自動建置並部署至 GitHub Pages。
+- 第二卷維持「待展」狀態，待美術及人物位置完成後再開放。
+
 ## 啟動
 
 需要 Node.js 22.18 或更新版本。
@@ -52,6 +59,14 @@ npm run preview -- --port 5189
 - `docs/introduction-and-hd-art.md`：引言頁、高清分段、生成提示及對位記錄。
 
 遊戲場景及案件為虛構；真實古畫關卡留作後續設計。
+
+## 第二卷：廟會尋蹤・微服出巡（製作中）
+
+獨立的城鎮廟會案件，以人物證詞、補扇物件、看客目光三類線索辨認微服的皇帝。已加入獨立引言、線索資料、分層提示、結局與廟會閱讀題；兩名看客的觀察合併為同一條線索，換卷重新建立一局。
+
+使用者已提供廟會原圖，並完成線索與比例修圖；高清局部與視覺驗收記錄見 `docs/art/temple-fair-visual-review.md`。第二卷目前在引言顯示「待展」。人物座標仍是設計估算，需要依最終美術定位。美術完成後，接入全景與高清段、確認人物細節與熱區，再將 `src/game/chapters.ts` 的 `available` 設為 true，便可從 `#temple-fair` 或選卷入口開啟。
+
+設計與文案見 `docs/temple-fair-design.md`、`docs/temple-fair-copy.md`；三次內建生成提示及介面規格見 `docs/art/temple-fair-*.txt` 與 `docs/art/temple-fair-ui-spec.md`。第一卷原美術、人物與科舉閱讀保留。
 
 ## 聲音來源
 

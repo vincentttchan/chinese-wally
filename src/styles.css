@@ -199,6 +199,17 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 .intro-enter:disabled {opacity: .45;}
 .intro-play-note {display: block; margin-top: 15px; font-size: 10px; letter-spacing: .15em; color: #74745d;}
 .intro-footer {position: absolute; bottom: clamp(28px,6vh,65px); left: clamp(28px,6vw,100px); margin: 0; font-size: 11px; letter-spacing: .16em; color: #75755f;}
+.intro-footer p {margin: 0;}
+.chapter-links {display: flex; gap: 20px; margin-top: 15px; font-size: 11px; letter-spacing: .08em;}
+.chapter-links a {display: inline-flex; align-items: center; gap: 7px; color: inherit; text-decoration: none; padding: 6px 0; border-bottom: 1px solid transparent;}
+.chapter-links a[aria-current] {color: var(--ink); border-color: #82785c88;}
+.chapter-links a:hover {color: var(--red);}
+.chapter-links a span {font-size: 9px; opacity: .65;}
+.chapter-pending {display: inline-flex; align-items: center; gap: 7px; padding: 6px 0; color: #8c856f;}
+.chapter-pending > span {font-size: 9px; opacity: .65;}
+.settings-paper .other-chapter {display: flex; gap: 10px; align-items: center; padding: 11px 5px; margin-top: 5px; border-top: 1px solid var(--line); color: inherit; text-decoration: none; font-size: 12px;}
+.settings-paper .other-chapter:hover {color: var(--red);}
+.evidence-source {display: block; font-size: 9px; color: #8b6848; margin-bottom: 5px; letter-spacing: .09em;}
 .phase-intro .scroll-viewport {cursor: default;}
 .phase-intro .scroll-viewport:focus {outline: none;}
 .mission, .mission.is-collapsed {width: 224px; background: #f1ead7ed; border: 1px solid #c6bb9970; border-image: none; border-radius: 3px; backdrop-filter: none; box-shadow: 0 2px 15px #322b1812;}

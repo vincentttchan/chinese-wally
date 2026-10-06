@@ -14,10 +14,11 @@ type Props = {
   resetKey: number; hint: SceneHint | null; selection?: SceneSelection | null;
   command?: SceneCommand | null; onInspect: (id: string, anchor?: Point) => void;
   onExplore?: () => void; motion?: boolean; onReady: (ready: boolean) => void;
+  title?: string; description?: string; steam?: Point | null;
 };
 const zoomStops = [1, 1.1, 1.25, 1.5, 1.75];
 
-export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hint, selection, command, onInspect, onExplore, onReady, motion = true}: Props) {
+export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hint, selection, command, onInspect, onExplore, onReady, motion = true, title = '科舉放榜日', description = '原創科舉放榜日全景古畫，左側榜牆、中央茶攤、右側橋頭與人群', steam}: Props) {
   const root = useRef<HTMLDivElement>(null);
   const frame = useRef<Size>({width: 1280, height: 800});
   const picture = useRef<Size>({width: 2172, height: 724});
@@ -205,14 +206,14 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
       if (event.key === '+' || event.key === '=') {event.preventDefault(); zoomStep(1);}
       if (event.key === '-') {event.preventDefault(); zoomStep(-1);}
       if (event.key === 'Home') {event.preventDefault(); animateView(coverView(frame.current, picture.current));}
-    }} aria-label="可拖曳與放大的科舉放榜日長卷" tabIndex={active ? 0 : -1}>
+    }} aria-label={`可拖曳與放大的${title}長卷`} tabIndex={active ? 0 : -1}>
       <div className="painting-world" style={{width: dimensions.width, height: dimensions.height, transform: `translate(${view.x}px, ${view.y}px) scale(${view.scale})`}}>
-        <img className="painting" src={`${image}${attempt ? `?retry=${attempt}` : ''}`} alt="原創科舉放榜日全景古畫，左側榜牆、中央茶攤、右側橋頭與人群" draggable={false} onLoad={event => {
+        <img className="painting" src={`${image}${attempt ? `?retry=${attempt}` : ''}`} alt={description} draggable={false} onLoad={event => {
           const next = {width: event.currentTarget.naturalWidth, height: event.currentTarget.naturalHeight};
           picture.current = next; setDimensions(next); setLoaded(true); setFailed(false);
         }} onError={() => {setFailed(true); setLoaded(false); onReady(false);}}/>
         {tiles?.map(tile => <img key={tile.image} className="painting-detail-tile" src={tile.image} alt="" aria-hidden="true" draggable={false} style={{left: `${tile.x * 100}%`, width: `${tile.width * 100}%`, visibility: tileStatus[tile.image] === 'failed' ? 'hidden' : undefined}} onLoad={() => setTileStatus(previous => ({...previous, [tile.image]: 'loaded'}))} onError={() => setTileStatus(previous => ({...previous, [tile.image]: 'failed'}))}/>)}
-        {loaded && <LivingPainting enabled={motion}/>}
+        {loaded && <LivingPainting enabled={motion} steam={steam}/>}
         {active && actors.map(actor => <button key={actor.id} type="button" className="actor-hitbox" data-actor={actor.id} aria-label={`查看${actor.name}`} disabled={blocked} style={{left: actor.x * dimensions.width, top: actor.y * dimensions.height, width: Math.max(actor.width * dimensions.width, 44 / view.scale), height: Math.max(actor.height * dimensions.height, 44 / view.scale), '--outline-width': `${2 / view.scale}px`} as React.CSSProperties} onFocus={event => {
           if (!event.currentTarget.matches(':focus-visible')) return;
           const x = actor.x * picture.current.width * current.current.scale + current.current.x;

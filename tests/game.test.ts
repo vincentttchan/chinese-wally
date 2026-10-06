@@ -24,9 +24,10 @@ test('repeated witness visits preserve one copy of each clue', () => {
   assert.deepEqual(state.clues, ['copyist']);
 });
 
-test('target cannot complete before both clues are collected', () => {
+test('target cannot complete before all three clues are collected', () => {
   let state = reduceGame(createGame(), { type: 'start' });
   state = reduceGame(state, { type: 'inspect', id: 'copyist' });
+  state = reduceGame(state, { type: 'inspect', id: 'tea-keeper' });
   state = reduceGame(state, { type: 'inspect', id: 'scholar-target' });
   assert.equal(state.phase, 'exploring');
   assert.equal(state.feedback, 'need-clues');
@@ -34,17 +35,17 @@ test('target cannot complete before both clues are collected', () => {
 
 test('wrong candidates retain evidence and never complete the case', () => {
   let state = reduceGame(createGame(), { type: 'start' });
-  for (const id of ['copyist', 'tea-keeper', 'scholar-scroll', 'scholar-brown']) {
+  for (const id of ['copyist', 'tea-keeper', 'board-observer', 'scholar-scroll', 'scholar-brown']) {
     state = reduceGame(state, { type: 'inspect', id });
   }
   assert.equal(state.phase, 'exploring');
   assert.equal(state.feedback, 'mismatch');
-  assert.equal(state.clues.length, 2);
+  assert.equal(state.clues.length, 3);
 });
 
-test('correct target completes only after both witnesses', () => {
+test('correct target completes only after all three witnesses', () => {
   let state = reduceGame(createGame(), { type: 'start' });
-  for (const id of ['copyist', 'tea-keeper', 'scholar-target']) {
+  for (const id of ['copyist', 'tea-keeper', 'board-observer', 'scholar-target']) {
     state = reduceGame(state, { type: 'inspect', id });
   }
   assert.equal(state.phase, 'complete');
@@ -52,7 +53,7 @@ test('correct target completes only after both witnesses', () => {
 
 test('restart clears clues, feedback and returns to exploration', () => {
   let state = reduceGame(createGame(), { type: 'start' });
-  for (const id of ['copyist', 'tea-keeper', 'scholar-target']) {
+  for (const id of ['copyist', 'tea-keeper', 'board-observer', 'scholar-target']) {
     state = reduceGame(state, { type: 'inspect', id });
   }
   state = reduceGame(state, { type: 'restart' });

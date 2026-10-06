@@ -1,0 +1,15 @@
+Use case: precise-object-edit
+Asset type: ancient Chinese hidden-person game panorama, 3:1 horizontal scroll.
+Input image: edit target, the current distant temple-fair panorama.
+Primary request: improve the natural crowd integration around the grey-blue white-fan holder in the lower-left-middle street (approximately x=34.5%, y=74%) and disperse his two companions. Produce one complete panorama.
+
+PRESERVE: exact elevated distant oblique viewpoint, entire panorama framing, existing gradual depth scale, small full-body people, left teahouse and stalls, central canal and stone arch bridge, upper-right temple, all large architecture and palette. Fine Qingming-style ink drawing on warm silk, restrained pale blue, grey-green, ochre and muted vermilion. No close-up foreground crowd, no larger target, no extra blur.
+
+Changes:
+1. The grey-blue fan holder must blend into normal market activity. Break the conspicuous open patch around him with 4–6 ordinary shoppers/pedestrians, one small buying interaction at a basket stall, and natural staggered walking poses. Keep paths plausible. A pedestrian may overlap the bottom of his robe but keep his own chest, fan hand and cuff readable. No circle of empty ground, no lineup, no centered heroic pose.
+2. Move the ochre-robed companion currently immediately to his right to the edge of the market stall behind and to his left (around x=29%, y=65%). Move the grey-green companion currently further right to the right side of this market street (around x=44%, y=73%). Place several ordinary people between each companion and the fan holder. They are dressed as ordinary townsmen; one partly turned at a stall and one pausing among pedestrians, each subtly turning his head and upper torso toward the fan holder. Keep scale correct for each depth. Replace their former positions with normal unrelated fair visitors.
+3. On the fan holder's OWN right hand, visibly connect fingers, wrist, right sleeve and opened ivory fan. Add a dark muted green thread loop knot with two short tails tied to the FAN HANDLE at its base, below the ribs; not on the fan paper or someone else's hand. Add a small irregular off-white flour smudge on his right sleeve just ABOVE the cream cuff, distinguishable from the cuff itself. The fan repair stall behind him has one matching ivory folding fan with a matching green handle knot as an object clue.
+4. Keep several unrelated blue-grey dressed people and other ivory fans elsewhere so no single color or white fan alone reveals the answer.
+
+Avoid: oversized faces or hands, sharp spotlight on the target, literal arrows/markers, neon green, white sleeve bands mistaken for flour, merged limbs, fan handed to an adjacent person, new text or UI, significant architectural or composition changes.
+Render crisp native detail throughout the artwork.

@@ -29,7 +29,7 @@ async function setup(initialHint: SceneHint | null, frame = {width: 900, height:
   window.document.body.appendChild(container);
   const root = createRoot(container as unknown as HTMLElement);
   const render = async (hint: SceneHint | null) => {
-    await act(async () => root.render(<ScrollScene image="/test-scroll.png" actors={actors} active={active} blocked={false} resetKey={1} hint={hint} onInspect={() => {}} onReady={() => {}}/>));
+    await act(async () => root.render(<ScrollScene image="/test-scroll.png" actors={actors} active={active} blocked={false} resetKey={1} hint={hint} motion={false} onInspect={() => {}} onReady={() => {}}/>));
   };
   await render(initialHint);
   const image = container.querySelector('img')!;
@@ -38,12 +38,15 @@ async function setup(initialHint: SceneHint | null, frame = {width: 900, height:
   return {window, container, render, cleanup: async () => {await act(async () => root.unmount()); await window.happyDOM.abort();}};
 }
 
-test('clearing a witness hint removes its ring immediately', async () => {
-  const app = await setup({actorId: 'copyist', level: 1, token: 1});
+test('a requested region hint moves the view without marking the answer, and clearing preserves the view', async () => {
+  const app = await setup({region: {x: .7, y: .5}, token: 1});
   try {
-    assert.equal(app.container.querySelectorAll('.hint-ring').length, 1);
+    const world = app.container.querySelector('.painting-world')! as unknown as HTMLElement;
+    const position = world.style.transform;
+    assert.ok(Number(position.match(/translate\(([-\d.]+)px/)![1]) < 0);
+    assert.equal(app.container.querySelectorAll('.hint-ring, .character-mark').length, 0);
     await app.render(null);
-    assert.equal(app.container.querySelectorAll('.hint-ring').length, 0);
+    assert.equal(world.style.transform, position);
   } finally {await app.cleanup();}
 });
 

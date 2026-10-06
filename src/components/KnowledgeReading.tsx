@@ -2,12 +2,12 @@ import { useRef, useState } from 'react';
 import { ArrowRight } from './ArtIcons.tsx';
 import { knowledge } from '../game/knowledge.ts';
 
-export function KnowledgeReading({completed, onComplete, onReturn}: {completed: boolean; onComplete: () => void; onReturn: () => void}) {
+export function KnowledgeReading({completed, onComplete, onReturn, article = knowledge, label = '科舉小知識'}: {completed: boolean; onComplete: () => void; onReturn: () => void; article?: typeof knowledge; label?: string}) {
   const [stage, setStage] = useState<'reading' | 'question'>('reading');
-  const [selected, setSelected] = useState<number | null>(completed ? knowledge.question.correctIndex : null);
+  const [selected, setSelected] = useState<number | null>(completed ? article.question.correctIndex : null);
   const [submitted, setSubmitted] = useState<number | null>(null);
   const heading = useRef<HTMLHeadingElement>(null);
-  const question = knowledge.question;
+  const question = article.question;
   const changeStage = (next: 'reading' | 'question') => {
     setStage(next);
     requestAnimationFrame(() => {
@@ -16,13 +16,13 @@ export function KnowledgeReading({completed, onComplete, onReturn}: {completed: 
     });
   };
   return <div className={`knowledge-stage stage-${stage}`}>
-    <span className="card-kicker">{stage === 'reading' ? '科舉小知識 · 一／二 · 閱讀' : '科舉小知識 · 二／二 · 讀後一問'}</span>
-    <h2 ref={heading} id="reading-title" tabIndex={-1}>{stage === 'reading' ? knowledge.title : '讀後一問'}</h2>
+    <span className="card-kicker">{label} · {stage === 'reading' ? '一／二 · 閱讀' : '二／二 · 讀後一問'}</span>
+    <h2 ref={heading} id="reading-title" tabIndex={-1}>{stage === 'reading' ? article.title : '讀後一問'}</h2>
     {stage === 'reading' ? <>
-      <span className="knowledge-scope">{knowledge.scope}</span>
-      {knowledge.paragraphs.map(text => <p key={text}>{text}</p>)}
-      <div className="knowledge-note">{knowledge.note}</div>
-      <div className="knowledge-sources"><span>延伸閱讀與來源</span>{knowledge.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noopener noreferrer">{source.title}<ArrowRight size={13}/></a>)}</div>
+      <span className="knowledge-scope">{article.scope}</span>
+      {article.paragraphs.map(text => <p key={text}>{text}</p>)}
+      <div className="knowledge-note">{article.note}</div>
+      <div className="knowledge-sources"><span>延伸閱讀與來源</span>{article.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noopener noreferrer">{source.title}<ArrowRight size={13}/></a>)}</div>
       <button className="primary-button" onClick={() => changeStage('question')}><span>{completed ? '查看已完成的題目' : '讀完了，答一題'}</span><ArrowRight size={17}/></button>
     </> : <>
       <form className="knowledge-quiz" onSubmit={event => {

@@ -1,8 +1,9 @@
+import { assetPath } from './assets.ts';
 export type PaintingTile = {id: string; image: string; x: number; width: number};
 
 export type SceneActor = {
   id: string;
-  kind: 'witness' | 'candidate' | 'target';
+  kind: 'witness' | 'object' | 'observation' | 'candidate' | 'target';
   name: string;
   x: number;
   y: number;
@@ -10,16 +11,33 @@ export type SceneActor = {
   height: number;
   quote?: string;
   clueTitle?: string;
+  evidenceId?: string;
+  mismatch?: string;
 };
+
+export type GameLevel = {
+  title: string;
+  subtitle: string;
+  image: string;
+  detailTiles?: PaintingTile[];
+  introduction: string;
+  ending: string;
+  actors: SceneActor[];
+};
+
+export const isEvidence = (actor: SceneActor) => ['witness', 'object', 'observation'].includes(actor.kind);
+export const evidenceId = (actor: SceneActor) => actor.evidenceId ?? actor.id;
+export const getEvidenceActors = (scene: GameLevel) => scene.actors.filter(actor => isEvidence(actor) && evidenceId(actor) === actor.id);
+export const evidenceLabel = (actor: SceneActor) => actor.kind === 'object' ? '物件細節' : actor.kind === 'observation' ? '現場觀察' : '人物證詞';
 
 export const level = {
   title: '榜下尋人',
   subtitle: '科舉放榜日',
-  image: '/art/examination-dense-scroll-v3.png',
+  image: assetPath('/art/examination-dense-scroll-v3.png'),
   detailTiles: [
-    {id: 'board', image: '/art/hd/board.png', x: 0, width: 1 / 3},
-    {id: 'tea', image: '/art/hd/tea.png', x: 1 / 3, width: 1 / 3},
-    {id: 'bridge', image: '/art/hd/bridge-v2.png', x: 2 / 3, width: 1 / 3},
+    {id: 'board', image: assetPath('/art/hd/board.png'), x: 0, width: 1 / 3},
+    {id: 'tea', image: assetPath('/art/hd/tea.png'), x: 1 / 3, width: 1 / 3},
+    {id: 'bridge', image: assetPath('/art/hd/bridge-v2.png'), x: 2 / 3, width: 1 / 3},
   ] satisfies PaintingTile[],
   introduction: '放榜的人潮沖散了書童與考生。聽取畫中人的證詞，替他們找到彼此。',
   ending: '原來他避開榜前的人潮，到橋邊等書童。隔着熙攘人海，兩人終於會合了。',

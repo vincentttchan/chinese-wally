@@ -1,0 +1,9 @@
+Use case: precise-object-edit
+Input: the last image is an exact enlarged square crop of the current distant temple fair panorama. It is the EDIT TARGET, not a new composition.
+Primary request: redraw this exact square region as a crisp high-resolution aligned detail, adding the two tiny gameplay clues to the existing grey-blue robe man holding an ivory open fan near x=52%, y=59% of this square crop.
+Preserve ALL architecture, stalls, people, object locations, poses, silhouette sizes, framing and the elevated distant viewpoint. Keep the crowd integration already shown. Preserve warm silk, fine Chinese ink lines and restrained pale grey-blue, ochre, grey-green and muted red. Equal clarity and line weight on all people; target must not be polished more than others.
+Change only these tiny details:
+- The central grey-blue man's OWN right hand (viewer LEFT side of his body) grips the opened ivory fan handle at his lower chest. Make fingers, wrist, right forearm, sleeve and fan grip anatomically connected and unambiguous. Tie a subdued dark green THREAD LOOP KNOT with TWO SHORT TAILS around the bottom of that handle, visible just beneath his gripping fingers. Green cord must be clearly on the fan HANDLE, not on the paper or a neighboring body.
+- Paint a small ragged patch of off-white flour on his right forearm sleeve, just ABOVE its light cream cuff on viewer-left. It must read as powder flecks on blue-grey fabric, not a wide white cuff or random sleeve ornament.
+- On the ivory folding fan lying diagonally at the fan-repair table behind him (around x=58%, y=38%), paint the same green loop knot at the bottom of its wooden handle. Preserve the vendor and table geometry.
+Keep all other neighboring people ordinary and in place; no new characters, no large closeup body, no arrows/circles, no labels, no neon green, no merged arms, no blur. Output the same square region with sharp hand-drawn detail.

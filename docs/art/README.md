@@ -1,6 +1,12 @@
 # 古畫與介面美術
 
-所有美術素材均由內建 imagegen 生成，已複製到專案內，可隨網站部署。
+第一卷與介面美術由內建 imagegen 生成，已複製到專案內。第二卷原圖由使用者提供，後續修圖與高清局部亦使用內建 imagegen。
+
+## 第二卷廟會（修圖與高清製作中）
+
+2026-10-06 已確認獨立城鎮廟會的微服尋君方向。早前三次新畫卷請求連線失敗；其後使用者提供原圖，保存為 `public/art/temple-fair/scroll-original.png`。線索修圖為 `scroll-clues-v1.png`，比例修正為 `scroll-proportion-v2.png`。原圖與兩版全景均為 2172×724。
+
+高清局部採用瀏覽器 724×724 精準分區畫面作參考，再由 imagegen 重製細節；目前每段為 1254×1254。檔案、提示詞與驗收記錄見 `temple-fair-visual-review.md`。全景比較工具為 `output/art-direction/temple-fair-review.html`。右段持扇手歸屬已改善，正在補回細墨線；尚未啟用第二卷或定位最終互動區。未使用 CLI/API 備援。
 
 ## 上一版全景（保留作比較）
 

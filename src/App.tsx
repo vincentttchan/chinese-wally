@@ -6,16 +6,36 @@ import { Introduction } from './components/Introduction.tsx';
 import { ScrollScene } from './components/ScrollScene.tsx';
 import type { SceneCommand, SceneHint, SceneSelection } from './components/ScrollScene.tsx';
 import { useAmbience } from './audio/useAmbience.ts';
-import { level, witnesses } from './game/level.ts';
+import { evidenceId, evidenceLabel, getEvidenceActors, isEvidence } from './game/level.ts';
+import { chapterFromHash, chapterHref, chapters } from './game/chapters.ts';
+import type { Chapter } from './game/chapters.ts';
 import { KnowledgeReading } from './components/KnowledgeReading.tsx';
 import type { SceneActor } from './game/level.ts';
 import type { Point } from './game/geometry.ts';
-import { createGame, reduceGame } from './game/state.ts';
+import { createGame, reduceGameForLevel } from './game/state.ts';
+import type { GameState, GameAction } from './game/state.ts';
 
 type Dialogue = {title: string; subtitle: string; text: string; anchor?: Point};
+const availableChapter = (hash: string) => {
+  const id = chapterFromHash(hash);
+  return chapters[id].available === false ? 'examination' : id;
+};
 
 export default function App() {
-  const [game, dispatch] = useReducer(reduceGame, undefined, createGame);
+  const [chapterId, setChapterId] = useState(() => availableChapter(window.location.hash));
+  useEffect(() => {
+    const selectChapter = () => setChapterId(availableChapter(window.location.hash));
+    window.addEventListener('hashchange', selectChapter);
+    return () => window.removeEventListener('hashchange', selectChapter);
+  }, []);
+  useEffect(() => {document.title = `${chapters[chapterId].scene.title} · 畫中有案`;}, [chapterId]);
+  return <ChapterGame key={chapterId} chapter={chapters[chapterId]}/>;
+}
+
+function ChapterGame({chapter}: {chapter: Chapter}) {
+  const level = chapter.scene;
+  const otherChapter = chapters[chapter.id === 'examination' ? 'temple-fair' : 'examination'];
+  const [game, dispatch] = useReducer((state: GameState, action: GameAction) => reduceGameForLevel(state, action, level), undefined, createGame);
   const [ready, setReady] = useState(false);
   const [resetKey, setResetKey] = useState(0);
   const [dialogue, setDialogue] = useState<Dialogue | null>(null);
@@ -48,9 +68,9 @@ export default function App() {
   const notebook = useRef<HTMLElement>(null);
   const menuPanel = useRef<HTMLDivElement>(null);
   const witness = useRef<HTMLElement>(null);
-  const clues = witnesses;
+  const clues = getEvidenceActors(level);
   const clueTotal = clues.length;
-  const nextHintId = clues.find(actor => !game.clues.includes(actor.id))?.id ?? 'scholar-target';
+  const nextHintId = clues.find(actor => !game.clues.includes(actor.id))?.id ?? level.actors.find(actor => actor.kind === 'target')!.id;
   const nextHintStage = Math.min((hintCounts.current[nextHintId] ?? 0) + 1, 3);
   const hintLabel = nextHintStage === 1 ? '尋人錦囊' : nextHintStage === 2 ? '再給些方向' : '帶我看區域';
   const playing = game.phase === 'exploring';
@@ -138,14 +158,17 @@ export default function App() {
     if (!actor || !playing) return;
     setMenu(false); setJournal(false);
     dispatch({type: 'inspect', id});
-    if (actor.kind === 'witness') {
-      setDialogue({title: actor.name, subtitle: game.clues.includes(id) ? '重讀證詞' : '線索已錄', text: actor.quote!, anchor});
-      if (!game.clues.includes(id)) setSelection({actorId: id, kind: 'clue', token: ++token.current});
+    if (isEvidence(actor)) {
+      const collected = game.clues.includes(evidenceId(actor));
+      const source = chapter.id === 'examination' ? '證詞' : evidenceLabel(actor);
+      setDialogue({title: actor.name, subtitle: collected ? `重讀${source}` : `${source} · 線索已錄`, text: actor.quote!, anchor});
+      if (!collected) setSelection({actorId: id, kind: 'clue', token: ++token.current});
       setHint(null); setHintText('');
     } else if (game.clues.length < clueTotal) {
-      setNotice('還有些事情未問清楚。再聽聽畫中人的證詞。');
+      setNotice(chapter.id === 'examination' ? '還有些事情未問清楚。再聽聽畫中人的證詞。' : '還有些線索未確認。再看看廟會裏的人與物。');
     } else if (actor.kind !== 'target') {
       setSelection({actorId: id, kind: 'wrong', token: ++token.current});
+      if (actor.mismatch) setNotice(actor.mismatch);
     } else {
       setDialogue(null); setHint(null); setHintText('');
       setSelection({actorId: id, kind: 'found', token: ++token.current});
@@ -154,23 +177,12 @@ export default function App() {
   const showHint = () => {
     const count = Math.min((hintCounts.current[nextHintId] ?? 0) + 1, 3);
     hintCounts.current[nextHintId] = count;
-    const messages: Record<string, string[]> = {
-      copyist: ['忙於記錄的人，或許比匆匆過客更留意身旁。', '榜文附近，除了抬頭張望的人，也有人低頭忙碌。', '已展開榜牆一帶。留意正伏案持筆的人。'],
-      'tea-keeper': ['歇腳買茶的人，常會與招呼客人的人說上幾句。', '沿街看看哪裏有人停下喝茶；招呼客人的人可能記得他。', '已展開茶攤一帶。留意正在提壺招呼客人的掌櫃。'],
-      'board-observer': ['擠在人潮裏的人，或許聽過別人離開前說的話。', '榜牆前有人忙着記錄，也有人一邊看、一邊與旁人交談。', '已展開看榜的人群。留意榜文右端、舉手的赭衣人。'],
-      'scholar-target': ['衣着、隨身之物與約定之處，三條證詞要一同考慮。', '畫中哪些地方有石欄，適合等候同行的人？', '已展開石橋一帶。將衣衫與隨身物件一同辨認。'],
-    };
-    const regions: Record<string, Point> = {
-      copyist: {x: .14, y: .43},
-      'tea-keeper': {x: .47, y: .4},
-      'board-observer': {x: .23, y: .29},
-      'scholar-target': {x: .84, y: .55},
-    };
+    const suggestion = chapter.hints[nextHintId];
     setHintStage(count);
-    setHintText(messages[nextHintId][count - 1]);
-    setHint(count === 3 ? {region: regions[nextHintId], token: ++token.current} : null);
+    setHintText(suggestion.messages[count - 1]);
+    setHint(count === 3 ? {region: suggestion.region, token: ++token.current} : null);
   };
-  const readClue = (actor: SceneActor) => {if (game.clues.includes(actor.id)) {setJournal(false); setDialogue({title: actor.name, subtitle: '線索簿 · 證詞', text: actor.quote!});}};
+  const readClue = (actor: SceneActor) => {if (game.clues.includes(actor.id)) {setJournal(false); setDialogue({title: actor.name, subtitle: `線索簿 · ${chapter.id === 'examination' ? '證詞' : evidenceLabel(actor)}`, text: actor.quote!});}};
   const toggleFullscreen = async () => {
     try {
       if (document.fullscreenElement) await document.exitFullscreen();
@@ -180,22 +192,22 @@ export default function App() {
   };
   const sceneCommand = (type: SceneCommand['type']) => {setMenu(false); setCommand({type, token: ++token.current});};
   const toggleMission = () => {if (collapseTimer.current !== null) window.clearTimeout(collapseTimer.current); setMissionOpen(value => !value);};
-  const objective = finished ? '書童與考生，終於相逢。' : game.clues.length === clueTotal ? '證詞已錄齊。結合衣着、隨身之物與約定之處，辨認畫中人。' : '有人見過他的身影。觀察畫中人的動作，點選人物聽取證詞。';
-  const nextStep = finished ? '人海相逢' : '替書童尋回考生';
+  const objective = finished ? chapter.objectives.complete : game.clues.length === clueTotal ? chapter.objectives.ready : chapter.objectives.exploring;
+  const nextStep = finished ? chapter.endingTitle : chapter.mission;
   const anchor = dialogue?.anchor;
   const placement = anchor ? {'--dialog-x': `${anchor.x < window.innerWidth * .58 ? anchor.x + 36 : anchor.x - 386}px`, '--dialog-y': `${anchor.y - 100}px`} as CSSProperties : undefined;
 
-  return <main className={`immersive-game phase-${game.phase} ${ready ? 'scene-loaded' : ''} ${reduced ? 'reduced-motion' : ''} ${endingVisible ? 'ending-visible' : ''}`} aria-label="榜下尋人遊戲">
-    {game.phase !== 'intro' && <h1 className="sr-only">榜下尋人 · 科舉放榜日</h1>}
-    <ScrollScene image={level.image} tiles={level.detailTiles} actors={level.actors} active={game.phase !== 'intro'} blocked={game.phase === 'intro' || Boolean(dialogue) || Boolean(reading) || finished} resetKey={resetKey} hint={hint} selection={selection} command={command} onInspect={inspect} onExplore={explore} onReady={setReady} motion={motion}/>
+  return <main className={`immersive-game phase-${game.phase} ${ready ? 'scene-loaded' : ''} ${reduced ? 'reduced-motion' : ''} ${endingVisible ? 'ending-visible' : ''}`} aria-label={`${level.title}遊戲`}>
+    {game.phase !== 'intro' && <h1 className="sr-only">{level.title} · {level.subtitle}</h1>}
+    <ScrollScene image={level.image} tiles={level.detailTiles} actors={level.actors} active={game.phase !== 'intro'} blocked={game.phase === 'intro' || Boolean(dialogue) || Boolean(reading) || finished} resetKey={resetKey} hint={hint} selection={selection} command={command} onInspect={inspect} onExplore={explore} onReady={setReady} motion={motion} title={level.subtitle} description={chapter.alt} steam={chapter.steam ?? null}/>
     <div className="scene-vignette" aria-hidden="true"/>
-    {introPresent && <Introduction ready={ready} leaving={game.phase !== 'intro'} onBegin={begin}/>}
+    {introPresent && <Introduction steps={chapter.intro} title={level.title} footer={chapter.footer} chapterId={chapter.id} ready={ready} leaving={game.phase !== 'intro'} onBegin={begin}/>}
     {game.phase !== 'intro' && <header className="scene-hud">
       <section className={`mission ${missionOpen ? 'is-expanded' : 'is-collapsed'}`} aria-label="尋人任務">
         <button ref={paperButton} className="mission-summary" aria-expanded={missionOpen} aria-controls="mission-details" onClick={toggleMission}>
-          <span className="mission-heading"><span className="mission-chapter">榜下尋人</span><span className="mission-objective" aria-live="polite">{nextStep}</span></span><span className="mission-count" key={game.clues.length} aria-label={`已取得${game.clues.length}條證詞，共${clueTotal}條`} aria-live="polite"><b>{game.clues.length}</b><small> / {clueTotal}</small></span><ChevronDown size={14} className="mission-chevron"/>
+          <span className="mission-heading"><span className="mission-chapter">{level.title}</span><span className="mission-objective" aria-live="polite">{nextStep}</span></span><span className="mission-count" key={game.clues.length} aria-label={`已取得${game.clues.length}條${chapter.evidenceWord}，共${clueTotal}條`} aria-live="polite"><b>{game.clues.length}</b><small> / {clueTotal}</small></span><ChevronDown size={14} className="mission-chevron"/>
         </button>
-        <div className="mission-details" id="mission-details" hidden={!missionOpen}><strong>替書童找回走散的考生</strong><p>{objective}</p><p>點選畫中人物，聽取證詞。左右拖曳探索，放大可看清細節。</p></div>
+        <div className="mission-details" id="mission-details" hidden={!missionOpen}><strong>{chapter.id === 'examination' ? '替書童找回走散的考生' : chapter.mission}</strong><p>{objective}</p><p>{chapter.instruction}</p></div>
       </section>
       <nav className="scene-settings" aria-label="場景設定">
         <button className={`round-control ${sound.state === 'on' ? 'is-on' : ''}`} aria-label={soundLabel} title={soundLabel} aria-pressed={sound.state === 'on' || sound.state === 'loading'} onClick={() => void sound.toggle()}>{sound.state === 'on' ? <Volume2 size={19}/> : <VolumeX size={19}/>}</button>
@@ -203,16 +215,16 @@ export default function App() {
         <button ref={moreButton} className="round-control" aria-label="更多觀畫設定" aria-expanded={menu} aria-controls="scene-menu" title="更多" onClick={() => setMenu(value => !value)}><MoreHorizontal size={21}/></button>
       </nav>
     </header>}
-    {menu && <div className="settings-paper" id="scene-menu" ref={menuPanel} role="region" aria-label="觀畫設定"><span className="card-kicker">觀畫有法</span><button onClick={() => setMotion(value => !value)} aria-pressed={motion}><Waves size={17}/>{motion ? '關閉畫卷微動' : '開啟畫卷微動'}</button><button onClick={() => sceneCommand('in')}><ZoomIn size={17}/>放大畫卷</button><button onClick={() => sceneCommand('out')}><ZoomOut size={17}/>縮小畫卷</button><button onClick={() => sceneCommand('overview')}><Maximize size={17}/>回到卷首</button><button onClick={() => {setMenu(false); setReading('guide');}}><CircleHelp size={17}/>遊玩指南</button><button onClick={() => {setMenu(false); setReading('knowledge');}}><BookOpen size={17}/>{knowledgeComplete ? '科舉小知識 · 已完成' : '科舉小知識'}</button></div>}
+    {menu && <div className="settings-paper" id="scene-menu" ref={menuPanel} role="region" aria-label="觀畫設定"><span className="card-kicker">觀畫有法</span><button onClick={() => setMotion(value => !value)} aria-pressed={motion}><Waves size={17}/>{motion ? '關閉畫卷微動' : '開啟畫卷微動'}</button><button onClick={() => sceneCommand('in')}><ZoomIn size={17}/>放大畫卷</button><button onClick={() => sceneCommand('out')}><ZoomOut size={17}/>縮小畫卷</button><button onClick={() => sceneCommand('overview')}><Maximize size={17}/>回到卷首</button><button onClick={() => {setMenu(false); setReading('guide');}}><CircleHelp size={17}/>遊玩指南</button><button onClick={() => {setMenu(false); setReading('knowledge');}}><BookOpen size={17}/>{chapter.knowledgeLabel}{knowledgeComplete ? ' · 已完成' : ''}</button>{otherChapter.available !== false && <a className="other-chapter" href={chapterHref(otherChapter.id)}><BookOpen size={17}/>另展一卷 · {otherChapter.scene.title}</a>}</div>}
 
     {game.phase !== 'intro' && <div className="bottom-hud"><button ref={notebookButton} className="notebook-toggle" aria-expanded={journal} aria-controls="clue-notebook" onClick={() => {setDialogue(null); setJournal(value => !value);}} aria-label={`線索簿，已找到${game.clues.length}條線索`}><BookOpen size={19}/><span>線索簿</span><span className="notebook-count" key={game.clues.length}>{game.clues.length}<small>/ {clueTotal}</small></span>{journal ? <ChevronDown size={14}/> : <ChevronUp size={14}/>}</button><span className={`gesture-note ${instruction ? '' : 'is-dismissed'}`}>左右拖曳探索 · 滾動看細節</span>{playing && <button className="hint-button" disabled={!ready || Boolean(dialogue) || Boolean(reading)} onClick={showHint}><CircleHelp size={19}/><span>{hintLabel}</span></button>}</div>}
-    {journalPresent && <aside ref={notebook} className={`notebook-paper ${journal ? '' : 'is-closing'}`} aria-hidden={!journal} inert={!journal} id="clue-notebook" aria-label="線索簿內容"><button className="paper-close" aria-label="收起線索簿" onClick={() => {setJournal(false); notebookButton.current?.focus({preventScroll: true});}}><X size={18}/></button><span className="card-kicker">隨身筆記</span><h2>線索簿 <span className="journal-count">{game.clues.length} / {clueTotal}</span></h2><div className="clue-list">{clues.map((actor, index) => <button key={actor.id} className={`clue-card ${game.clues.includes(actor.id) ? 'is-collected' : ''}`} disabled={!game.clues.includes(actor.id)} onClick={() => readClue(actor)} style={{'--clue-delay': `${index * 50}ms`} as CSSProperties}>{game.clues.includes(actor.id) ? <PaintedPortrait actor={actor} image={level.image} tiles={level.detailTiles}/> : <span className="unrecorded-clue" aria-hidden="true">未錄</span>}<span className="clue-content"><span className="clue-kicker">{game.clues.includes(actor.id) ? actor.name : `證詞${['一', '二', '三'][index] ?? index + 1} · 待錄`}</span><span className="clue-title">{game.clues.includes(actor.id) ? actor.clueTitle : '尚未記錄證詞'}</span><span className="clue-description">{game.clues.includes(actor.id) ? actor.quote : '畫中人或許知道他的去向。'}</span></span>{game.clues.includes(actor.id) && <Check size={15}/>}</button>)}</div><p className="journal-objective">{objective}</p></aside>}
+    {journalPresent && <aside ref={notebook} className={`notebook-paper ${journal ? '' : 'is-closing'}`} aria-hidden={!journal} inert={!journal} id="clue-notebook" aria-label="線索簿內容"><button className="paper-close" aria-label="收起線索簿" onClick={() => {setJournal(false); notebookButton.current?.focus({preventScroll: true});}}><X size={18}/></button><span className="card-kicker">隨身筆記</span><h2>線索簿 <span className="journal-count">{game.clues.length} / {clueTotal}</span></h2><div className="clue-list">{clues.map((actor, index) => <button key={actor.id} className={`clue-card ${game.clues.includes(actor.id) ? 'is-collected' : ''}`} disabled={!game.clues.includes(actor.id)} onClick={() => readClue(actor)} style={{'--clue-delay': `${index * 50}ms`} as CSSProperties}>{game.clues.includes(actor.id) ? <PaintedPortrait actor={actor} image={level.image} tiles={level.detailTiles}/> : <span className="unrecorded-clue" aria-hidden="true">未錄</span>}<span className="clue-content">{chapter.id !== 'examination' && game.clues.includes(actor.id) && <span className="evidence-source">{evidenceLabel(actor)}</span>}<span className="clue-kicker">{game.clues.includes(actor.id) ? actor.name : `${chapter.evidenceWord}${['一', '二', '三'][index] ?? index + 1} · 待錄`}</span><span className="clue-title">{game.clues.includes(actor.id) ? actor.clueTitle : `尚未記錄${chapter.evidenceWord}`}</span><span className="clue-description">{game.clues.includes(actor.id) ? actor.quote : chapter.id === 'examination' ? '畫中人或許知道他的去向。' : '人物與物件裏，或許藏着一點端倪。'}</span></span>{game.clues.includes(actor.id) && <Check size={15}/>}</button>)}</div><p className="journal-objective">{objective}</p></aside>}
     {dialogue && <section ref={witness} className={`witness-paper ${anchor ? 'is-anchored' : ''}`} style={placement} role="dialog" aria-modal="false" aria-labelledby="witness-title"><button ref={witnessClose} className="paper-close" aria-label="關閉證詞" onClick={closeWitness}><X size={18}/></button><span className="card-kicker">{dialogue.subtitle}</span><h2 id="witness-title">{dialogue.title}</h2><p className="witness-quote">{dialogue.text}</p><button className="primary-button" onClick={closeWitness}><span>記下，繼續尋人</span><ArrowRight size={17}/></button></section>}
     {hintText && <aside className="hint-paper" role="status"><button className="paper-close" aria-label="收起錦囊" onClick={() => setHintText('')}><X size={16}/></button><span className="card-kicker">尋人錦囊</span><span className="hint-stage">{hintStage} / 3</span><p>{hintText}</p></aside>}
     {(notice || sound.state === 'error') && <p className="scene-toast" role="status">{notice || '音樂未能載入，可點擊右上角重試。'}</p>}
     {finished && !endingVisible && <button className="skip-ending" onClick={() => setEndingVisible(true)}>略過，查看結局</button>}
-    {finished && endingVisible && <section className="ending-card" role="status"><span className="card-kicker">此案已解</span><h2>人海相逢</h2><p>{level.ending}</p><button className="primary-button" onClick={() => setReading('knowledge')}><span>讀一則科舉小知識</span><BookOpen size={17}/></button><button className="replay-button" onClick={begin}><RotateCcw size={15}/>再展此卷</button></section>}
+    {finished && endingVisible && <section className="ending-card" role="status"><span className="card-kicker">此案已解</span><h2>{chapter.endingTitle}</h2><p>{level.ending}</p><button className="primary-button" onClick={() => setReading('knowledge')}><span>讀一則{chapter.knowledgeLabel}</span><BookOpen size={17}/></button><button className="replay-button" onClick={begin}><RotateCcw size={15}/>再展此卷</button></section>}
 
-    <dialog ref={dialog} className="reading-paper" onCancel={() => setReading(null)} onClose={() => setReading(null)} aria-labelledby="reading-title"><button className="paper-close" aria-label={reading === 'knowledge' && !knowledgeComplete ? '稍後再讀' : '關閉閱讀'} onClick={() => setReading(null)}><X size={19}/></button>{reading === 'knowledge' ? <KnowledgeReading completed={knowledgeComplete} onComplete={() => setKnowledgeComplete(true)} onReturn={() => setReading(null)}/> : <><span className="card-kicker">遊玩指南</span><h2 id="reading-title">觀畫有法，尋人有據</h2><p>替書童找回走散的考生。觀察畫中人物，點選問訊；收錄三條證詞後，結合線索辨認考生。</p><p>畫作鋪滿視窗，左右拖曳探索並點選人物。滾輪或雙指縮放；鍵盤 Tab 可選人物，Enter 問訊。畫卷獲得焦點時，＋／－縮放，Home 回到卷首。</p><p>左下線索簿可重讀證詞。尋人錦囊先提供思路，再提供方向；選擇「帶我看區域」才會移動畫卷。右上可開啟古風音樂、進入全螢幕；微動與其他工具放在「⋯」內。</p><p className="music-credit">配樂：<a href="https://ende.app/en/song/12393-chinese-restaurant-background-4" target="_blank" rel="noopener noreferrer">Chinese Restaurant Background 4 · Sascha Ende</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></p><button className="primary-button" onClick={() => setReading(null)}><span>回到畫卷</span><ArrowRight size={17}/></button></>}</dialog>
+    <dialog ref={dialog} className="reading-paper" onCancel={() => setReading(null)} onClose={() => setReading(null)} aria-labelledby="reading-title"><button className="paper-close" aria-label={reading === 'knowledge' && !knowledgeComplete ? '稍後再讀' : '關閉閱讀'} onClick={() => setReading(null)}><X size={19}/></button>{reading === 'knowledge' ? <KnowledgeReading article={chapter.knowledge} label={chapter.knowledgeLabel} completed={knowledgeComplete} onComplete={() => setKnowledgeComplete(true)} onReturn={() => setReading(null)}/> : <><span className="card-kicker">遊玩指南</span><h2 id="reading-title">觀畫有法，尋人有據</h2><p>{chapter.guide}</p><p>畫作鋪滿視窗，左右拖曳探索並點選人物。滾輪或雙指縮放；鍵盤 Tab 可選人物，Enter 問訊。畫卷獲得焦點時，＋／－縮放，Home 回到卷首。</p><p>左下線索簿可重讀{chapter.evidenceWord}。尋人錦囊先提供思路，再提供方向；選擇「帶我看區域」才會移動畫卷。右上可開啟古風音樂、進入全螢幕；微動與其他工具放在「⋯」內。</p><p className="music-credit">配樂：<a href="https://ende.app/en/song/12393-chinese-restaurant-background-4" target="_blank" rel="noopener noreferrer">Chinese Restaurant Background 4 · Sascha Ende</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></p><button className="primary-button" onClick={() => setReading(null)}><span>回到畫卷</span><ArrowRight size={17}/></button></>}</dialog>
   </main>;
 }

@@ -1,3 +1,4 @@
+import { assetPath } from '../game/assets.ts';
 import { useEffect, useRef, useState } from 'react';
 
 type SoundState = 'off' | 'loading' | 'on' | 'error';
@@ -56,7 +57,7 @@ export function useAmbience(quiet: boolean) {
         master.gain.value = 0;
         master.connect(context.destination);
         const controller = new AbortController();
-        const ready = fetch('/audio/scroll-music.mp3', {signal: controller.signal}).then(async response => {
+        const ready = fetch(assetPath('/audio/scroll-music.mp3'), {signal: controller.signal}).then(async response => {
           if (!response.ok) throw new Error('Music unavailable');
           return context.decodeAudioData(await response.arrayBuffer());
         });
