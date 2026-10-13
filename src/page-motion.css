@@ -1,0 +1,9 @@
+/* A quiet silk bridge between chapter covers, shared by both document runtimes. */
+html,body{background-color:#f1ead7}
+/* Keep a cross-document arrival on silk while its inline runtime is parsed. */
+html:not(.chapter-motion-ready)::after{content:'';position:fixed;inset:0;z-index:2147483000;background:#f1ead7;pointer-events:none}
+.chapter-transition-veil{position:fixed;inset:0;z-index:2147483000;pointer-events:none;opacity:0;background:#f1ead7;contain:strict}
+.chapter-transition-veil.is-blocking{pointer-events:auto;touch-action:none}
+/* The chapter veil owns arrival; a second painting fade changes the backdrop. */
+.chapter-motion-ready .lantern-game .is-ready .painting{animation:none}
+@media(prefers-reduced-motion:reduce){.chapter-transition-veil,html:not(.chapter-motion-ready)::after{display:none}}

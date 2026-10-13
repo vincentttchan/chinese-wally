@@ -1,0 +1,13 @@
+.lantern-market-animation {position:absolute;inset:0;z-index:24;overflow:hidden;pointer-events:none;}
+.lantern-market-world,.lantern-market-tile {position:absolute;left:0;top:0;transform-origin:0 0;}
+.lantern-market-tile {filter:var(--painting-grade);}
+.lantern-market-filter {position:absolute;pointer-events:none;}
+.lantern-market-plate {position:absolute;left:255px;top:674px;width:354px;height:390px;background-size:1255px 1500px;background-position:-255px -674px;background-repeat:no-repeat;mask-size:100% 100%;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;-webkit-mask-repeat:no-repeat;}
+.lantern-market-hanging-plate {position:absolute;left:185px;top:535px;width:365px;height:130px;background-size:1255px 1500px;background-position:-185px -535px;background-repeat:no-repeat;mask-size:100% 100%;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;-webkit-mask-repeat:no-repeat;}
+.lantern-market-hanging-pivot {position:absolute;width:0;height:0;transform-origin:0 0;}
+.lantern-market-hanging-piece {position:absolute;background-size:1148px 1371px;background-repeat:no-repeat;transform-origin:0 0;}
+.lantern-market-poses {position:absolute;left:275px;top:647.5px;width:522px;height:700px;background-size:2172px 724px;background-repeat:no-repeat;transform:scale(.58);transform-origin:0 0;}
+.lantern-market-caption {position:absolute;left:50%;bottom:24px;transform:translateX(-50%);margin:0;padding:7px 12px;color:#454e3a;background:#f3ead6dd;font:12px/1.5 'Noto Serif TC',serif;}
+.lantern-market-preview-header {position:absolute;z-index:29;top:24px;left:28px;display:flex;gap:18px;align-items:center;color:#465039;background:#f2ead7ed;padding:12px 16px;font-size:14px;}
+.lantern-market-preview-header a {color:inherit;text-underline-offset:4px;}
+@media(max-width:699px){.lantern-market-preview-header {left:16px;top:16px;font-size:12px;padding:8px 12px;}.lantern-market-caption {bottom:12px;}}

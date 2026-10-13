@@ -1,0 +1,62 @@
+/* Only painting geometry, chapter content sizing and DOM-runtime wiring live
+   here. UI surfaces, fonts, buttons and icons come from the game's Lantern CSS. */
+@font-face{font-family:'LXGW WenKai TC';src:url('../../../../public/fonts/LXGWWenKaiTC-Regular.ttf');font-display:swap}
+[hidden]{display:none!important}
+.painting-area{position:absolute;inset:0}
+.kangqu-game .scene{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}
+.kangqu-game .painting-world{left:0;top:0;transform-origin:0 0}
+.kangqu-game .painting{position:absolute;max-width:none;user-select:none}
+.kangqu-game .scene.dragging{cursor:grabbing}
+.hotspot{position:absolute;border:0;padding:0;min-height:0;background:transparent;color:transparent;pointer-events:none}
+.hotspot:focus-visible{outline:2px dashed var(--red);outline-offset:3px;background:#f1ead730;pointer-events:auto}
+.chapter-region-select{display:block;width:100%;min-height:44px;margin:8px 0 16px;font:inherit;color:inherit;background:transparent;border:1px solid var(--line);padding:8px}
+.chapter-sources>p{font-size:14px}.chapter-sources>a{font-size:12px}
+.chapter-storage-note{left:28px;bottom:155px;transform:none;max-width:300px}
+.chapter-storage-note:empty{display:none}
+.kangqu-game .lantern-face-illustration{object-fit:contain}
+.kangqu-game .intro-reference{display:flex;align-items:center;gap:16px;margin-top:18px}
+.kangqu-game .intro-reference img{width:72px;height:94px;object-fit:contain}
+.kangqu-game .intro-reference p{font-size:12px;line-height:1.8;margin:0;color:#626853}
+.chapter-face-art{display:block;width:112px;height:150px;object-fit:contain;margin:0 auto}
+.chapter-face-source{font-size:12px;line-height:1.8;color:#797d66;margin-top:12px}
+.chapter-face-source summary{min-height:40px;padding:8px 0;cursor:pointer}
+.chapter-face-source img{display:block;max-width:none;object-fit:none;margin:8px 0}
+.chapter-face-source p{font-size:12px;margin:8px 0}
+.chapter-field-layer{background:none;padding:0;pointer-events:none}
+.chapter-field-layer>section{pointer-events:auto}
+.chapter-end-layer{background:none;padding:0;pointer-events:none}
+.chapter-end-layer>section{pointer-events:auto}
+.kangqu-game .chapter-field-layer>section,.kangqu-game .chapter-end-layer>section{overflow-y:auto;overscroll-behavior:contain}
+.kangqu-game .moving{opacity:0;pointer-events:none}
+.collection-flight{position:fixed;object-fit:contain;z-index:40;pointer-events:none}
+.ensemble-animation{position:absolute;left:880px;top:2290px;width:205px;height:270px;pointer-events:none;z-index:5;opacity:0;mask-repeat:no-repeat;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;-webkit-mask-size:100% 100%}
+.ensemble-native-motion{position:absolute;inset:0;background-size:4500px 2843px;background-position:-880px -2290px;background-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-repeat:no-repeat;filter:var(--painting-grade);will-change:transform}
+.chapter-motif-entries{font-size:14px;line-height:1.8;border-top:1px solid var(--line);margin-top:22px;padding-top:16px}
+.chapter-motif-entries h3{font:inherit;font-size:17px}
+.chapter-motif-entries span{display:block}
+.kangqu-game .collection-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.kangqu-game .collection-illustration img.chapter-collection-art{position:static;width:100%;height:100%;max-width:100%;object-fit:contain}
+.kangqu-game .lantern-field-journal.is-looking{pointer-events:none}
+.kangqu-game .lantern-field-journal.is-looking .collection-return,.kangqu-game .lantern-field-journal.is-looking .collection-resume{pointer-events:auto}
+.kangqu-game .chapter-map{width:220px;flex:0 0 220px}
+.kangqu-game .chapter-map-canvas{position:relative;display:block;width:100%;height:auto;padding:0;border:0;overflow:hidden;touch-action:none;cursor:move;aspect-ratio:4500 / 2588;background:transparent}
+.kangqu-game .chapter-map-image{position:absolute;display:block;max-width:none;pointer-events:none}
+.kangqu-game .chapter-map .lantern-navigator-window{bottom:auto;pointer-events:none}
+.kangqu-game .chapter-map .lantern-navigator-courts>button{font-size:10px;min-height:40px;flex:1;padding:7px 1px;letter-spacing:0}
+.kangqu-game .chapter-map-canvas:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+@media(max-width:759px){
+ .kangqu-game .chapter-map{position:absolute;bottom:62px;left:50%;transform:translateX(-50%);width:180px;flex-basis:180px}
+ .kangqu-game .chapter-map .lantern-navigator-courts{display:none}
+ .chapter-storage-note{left:14px;bottom:145px}
+ .kangqu-game .lantern-field-journal.is-looking{pointer-events:none;overflow:visible}
+ .kangqu-game .lantern-field-journal.is-looking .collection-return,.kangqu-game .lantern-field-journal.is-looking .collection-resume{pointer-events:auto}
+}
+@media(max-height:560px){
+ .kangqu-game .intro-reference img{width:45px;height:58px}
+}
+@media(prefers-reduced-motion:reduce){.kangqu-game *{animation-duration:1ms!important;animation-delay:0ms!important;transition:none!important}}
+
+/* Upgrade detail in place; the preview and native image share one camera. */
+.kangqu-game #painting{opacity:0;transition:opacity 220ms ease-out}
+.kangqu-game #painting.is-decoded{opacity:1}
+.kangqu-game #layout[data-mode="intro"] #painting{opacity:0;transition:none}

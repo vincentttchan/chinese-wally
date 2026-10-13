@@ -1,6 +1,25 @@
-# 榜下尋人：配樂與環境聲來源
+# 畫中尋人：各章配樂與環境聲來源
 
-## 目前使用的配樂
+## 2026-10-13：每章獨立配樂
+
+| 章節 | 曲目／作者 | 本地音檔 | 來源 |
+|---|---|---|---|
+| 宮中鬧元宵 | Chinese Restaurant Background 4／Sascha Ende | `scroll-music.mp3` | [曲目頁](https://ende.app/en/song/12393-chinese-restaurant-background-4) |
+| 榜下尋人 | Chinese Restaurant Background 8／Sascha Ende | `examination-music.mp3` | [曲目頁](https://ende.app/en/song/12397-chinese-restaurant-background-8) |
+| 在人群中聽樂 | Chinese Restaurant Background 7／Sascha Ende | `kangqu-music.mp3` | [曲目頁](https://ende.app/en/song/12396-chinese-restaurant-background-7) |
+
+原有曲目依下方既有 CC BY 4.0 來源紀錄保留；本次新增兩首曲目頁亦標示 CC BY 4.0。遊戲各章的來源說明保留作者、曲名、曲目頁與授權連結。這些是現代背景配樂，不是畫中歷史演奏曲目的復原。
+
+新增音檔於 2026-10-13 由曲目頁公開音源取得，未修改原音檔；兩首均為雙聲道、48kHz、128kbps MP3，檔案實際時長約 131.16 秒。網站用 Web Audio 低音量播放、閱讀時降低音量、曲末 4 秒交疊；直接開啟本地檔案時使用音訊元素循環，音量漸變。玩家自行開啟，切換到背景時靜音，離開章節釋放播放資源。所有曲目在遊戲內由本地資產播放。
+
+- Chinese Restaurant Background 8 by Sascha Ende — ende.app. License: CC BY 4.0.
+  - 公開音源：`https://ende.app/storage/mp3low/67e0a847-ee6f-4254-9461-fab048384fb5.mp3`
+  - SHA256：`0fc1757554a51d3359a5e8f483e609b43387cbff014b4a4fe6e590e43c72ebe8`
+- Chinese Restaurant Background 7 by Sascha Ende — ende.app. License: CC BY 4.0.
+  - 公開音源：`https://ende.app/storage/mp3low/72c3e60f-96e5-4ad1-992c-3b730b653c10.mp3`
+  - SHA256：`6482317dfc38cc81cc0ffc96180197b5e065e38bba088442074beedb17ca4292`
+
+## 宮中鬧元宵原有配樂記錄
 
 - 本地檔案：`scroll-music.mp3`。
 - 曲目：**Chinese Restaurant Background 4**。

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "qingming-tile-1",
+    "image": "art/qingming/tile-01.jpg",
+    "x": 0.0,
+    "width": 0.10412870307700317
+  },
+  {
+    "id": "qingming-tile-2",
+    "image": "art/qingming/tile-02.jpg",
+    "x": 0.10412870307700317,
+    "width": 0.10412870307700317
+  },
+  {
+    "id": "qingming-tile-3",
+    "image": "art/qingming/tile-03.jpg",
+    "x": 0.20825740615400634,
+    "width": 0.10412870307700317
+  },
+  {
+    "id": "qingming-tile-4",
+    "image": "art/qingming/tile-04.jpg",
+    "x": 0.3123861092310095,
+    "width": 0.10412870307700317
+  },
+  {
+    "id": "qingming-tile-5",
+    "image": "art/qingming/tile-05.jpg",
+    "x": 0.4165148123080127,
+    "width": 0.10412870307700317
+  },
+  {
+    "id": "qingming-tile-6",
+    "image": "art/qingming/tile-06.jpg",
+    "x": 0.5206435153850159,
+    "width": 0.10412870307700317
+  },
+  {
+    "id": "qingming-tile-7",
+    "image": "art/qingming/tile-07.jpg",
+    "x": 0.624772218462019,
+    "width": 0.10412870307700317
+  },
+  {
+    "id": "qingming-tile-8",
+    "image": "art/qingming/tile-08.jpg",
+    "x": 0.7289009215390222,
+    "width": 0.10412870307700317
+  },
+  {
+    "id": "qingming-tile-9",
+    "image": "art/qingming/tile-09.jpg",
+    "x": 0.8330296246160254,
+    "width": 0.10412870307700317
+  },
+  {
+    "id": "qingming-tile-10",
+    "image": "art/qingming/tile-10.jpg",
+    "x": 0.9371583276930285,
+    "width": 0.06284167230697142
+  }
+]

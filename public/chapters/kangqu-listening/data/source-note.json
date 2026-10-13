@@ -1,0 +1,69 @@
+{
+  "painting": "崇慶皇太后六旬萬壽圖 · 第三卷 康衢駢慶",
+  "catalog": "https://www.dpm.org.cn/collection/paint/232815.html",
+  "nativeViewer": "https://www.dpm.org.cn/dyx.html?path=/Uploads/tilegenerator/dest/files/image/8831/2015/0778/img0002.xml",
+  "nativeSegment": {
+    "sourceDimensions": [
+      24592,
+      2843
+    ],
+    "sourceCrop": [
+      8000,
+      0,
+      12500,
+      2843
+    ],
+    "dimensions": [
+      4500,
+      2843
+    ],
+    "sha256": "00a6d98cda0787326a49dc3aed754ba6396e265da8c581446330041df378103a",
+    "method": "官方原生圖磚拼合及裁切，沒有放大、補畫或生成原畫。"
+  },
+  "completeComposition": {
+    "page": "https://yihua.art/chong-qing-wan-shou-qing-dian.html",
+    "image": "https://yihua.art/wp-content/uploads/2023/04/wanshoutu-shang.jpg",
+    "dimensions": [
+      33949,
+      800
+    ],
+    "scope": "完整公開構圖；不當作全卷原生高清。"
+  },
+  "interfaceArt": "頭像與收藏圖樣為原畫衍生插圖；角色短句為遊戲虛構對白。",
+  "scope": "互動位置位於 4500×2843 的原生清晰段落，完整第三卷其他位置未有同等高清互動覆蓋。",
+  "displayBounds": {
+    "nativeBounds": [
+      0,
+      120,
+      4500,
+      2708
+    ],
+    "fullBounds": [
+      0,
+      20,
+      33949,
+      782
+    ],
+    "initialPoint": [
+      2250,
+      1700
+    ],
+    "initialZoomRatio": 1.5,
+    "gutter": 1,
+    "method": "Display bounds only. Original image files, registration and hotspot coordinates are unchanged.",
+    "evidence": "Source pixels and original overview inspected. Native registered people extend from y=630 to y=2675; the chosen bounds contain them. Black photograph margins lie outside the display bounds.",
+    "validation": "Source inspection only; no tests, browser or gameplay execution."
+  },
+  "runtimeNativeEncoding": {
+    "method": "lossless WebP encoding, unchanged source dimensions and RGB pixels",
+    "dimensions": [
+      4500,
+      2843
+    ],
+    "originalBytes": 15450097,
+    "runtimeBytes": 10300464,
+    "originalPixelSHA256": "d66a9d170253e7128c3508ad84a141260b7b48d3695e7fbd4a1817b5cb7ed173",
+    "runtimePixelSHA256": "d66a9d170253e7128c3508ad84a141260b7b48d3695e7fbd4a1817b5cb7ed173",
+    "encodingSeconds": 14.29
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-13",
+  "method": "built-in image_gen",
+  "prompts": {
+    "gong": "Use case: background-extraction. Reference image: native Qing historical painting detail. Create ONLY the single hanging round gong, with its suspension cord and slightly raised center as an isolated transparent watercolor and fine ink collection illustration. Trace the exact reference silhouette and muted gold/bronze color, without modernizing or adding ornament. Remove ALL human faces, hands, garments, architecture and scenery. Center the entire object with generous transparent margin. Match understated hand-painted historical-game journal art. No lettering, borders, symbols or square paper backgrounds. This is an interpretive collection illustration, not original artwork.",
+    "horn": "Use case: background-extraction. Reference image: native Qing historical painting detail. Create ONLY the long straight horn including the thin long tube and flared bell at its left end as an isolated transparent watercolor and fine ink collection illustration. Trace the exact reference silhouette and muted gold/bronze color, without modernizing or adding ornament. Remove ALL human faces, hands, garments, architecture and scenery. Center the entire object with generous transparent margin. Match understated hand-painted historical-game journal art. No lettering, borders, symbols or square paper backgrounds. This is an interpretive collection illustration, not original artwork."
+  },
+  "assets": [
+    "gong-illustration-v1.png",
+    "horn-illustration-v1.png"
+  ],
+  "references": {
+    "gong": [
+      1215,
+      2405,
+      1295,
+      2505
+    ],
+    "horn": [
+      1035,
+      2275,
+      1165,
+      2355
+    ]
+  },
+  "inspection": "Both transparent illustrations inspected; they are original-painting-derived collection art and do not replace the painting.",
+  "sources": [
+    {
+      "title": "故宮：大鑼",
+      "url": "https://www.dpm.org.cn/collection/music/232801.html?hl=%E5%A4%A7%E9%94%A3"
+    },
+    {
+      "title": "故宮數字文物庫：大銅角（號角、吹奏樂器）",
+      "url": "https://digicol.dpm.org.cn/cultural/detail?id=8bab202a5cd345ecaca5f46859306ef8"
+    }
+  ],
+  "inventory": {
+    "newObjects": [
+      "gong-pavilion-small",
+      "gong-pavilion-large",
+      "horn-pavilion"
+    ],
+    "inspectedRegions": [
+      "lower pavilion ensemble",
+      "upper pavilion",
+      "grotto ensemble"
+    ],
+    "excluded": "Grotto round objects and small wind instruments lack sufficiently distinct native shapes to register as these newly identified gong/horn types. Their existing character responses remain; not counted as identified new instruments."
+  }
+}

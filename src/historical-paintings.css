@@ -1,0 +1,26 @@
+/* All selectors are confined to the new gallery and Kangqu document host. */
+@font-face{font-family:HistoricalWenKai;src:url('/fonts/LXGWWenKaiTC-Regular.ttf');font-display:swap}
+.historical-paintings{height:100dvh;overflow:auto;background:#f1ead7;color:#384333;padding:clamp(28px,5vh,60px) max(28px,calc((100vw - 1120px)/2));font-family:HistoricalWenKai,serif;line-height:1.8}
+.historical-paintings-heading{max-width:760px;margin-bottom:36px}
+.historical-kicker{font-size:13px;letter-spacing:.1em;color:#93513d}
+.historical-paintings h1{font-size:clamp(28px,3vw,36px);line-height:1.5;font-weight:400;margin:8px 0 12px}
+.historical-paintings h2{font-size:28px;line-height:1.5;font-weight:400;margin:10px 0 10px}
+.historical-paintings p{font-size:17px;line-height:1.8;margin:0 0 20px}
+.historical-paintings-list{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+.historical-painting-entry{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.historical-painting-preview{position:relative;display:block;width:100%;aspect-ratio:16/10;overflow:hidden;margin-bottom:22px;background:#ded4b9;isolation:isolate}
+.historical-painting-preview img{display:block;width:100%;height:100%;object-fit:cover;object-position:70% 38%}
+/* The photographed Kangqu mount falls outside this landscape viewing window. */
+.historical-painting-kangqu-listening .historical-painting-preview img{object-position:50% 57%;transform:scale(1.12)}
+.historical-preview-note{position:absolute;right:12px;bottom:10px;font-size:11px;letter-spacing:.08em;color:#384333;background:#f1ead7ed;padding:2px 8px;pointer-events:none}
+.historical-painting-entry>p{max-width:30em;min-height:3.6em;margin-bottom:18px}
+.historical-painting-heading{display:flex;justify-content:space-between;gap:16px;width:100%;align-items:baseline}
+.historical-painting-status{font-size:12px;color:#696f58;white-space:nowrap}
+.historical-paintings a{color:#93513d;text-underline-offset:4px}
+.historical-enter{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;font-size:17px;min-height:48px;padding:10px 0;margin-top:auto;border-top:1px solid #9b8e6e55;border-bottom:1px solid #9b8e6e55;text-decoration:none}
+.historical-enter:hover{color:#633a2c;background:#e4dac333}
+.historical-paintings-footer{display:flex;gap:24px;flex-wrap:wrap;border-top:1px solid #9b8e6e55;margin-top:36px;padding-top:20px;font-size:14px}
+.historical-paintings a:focus-visible,.kangqu-chapter-host a:focus-visible,.kangqu-chapter-host button:focus-visible{outline:2px solid #93513d;outline-offset:4px}
+.kangqu-chapter-host{position:relative;height:100dvh;width:100%;background:#f1ead7}
+.kangqu-chapter-frame{display:block;border:0;width:100%;height:100%}
+@media(max-width:700px){.historical-paintings{padding:28px 20px}.historical-paintings-heading{margin-bottom:28px}.historical-paintings h1{font-size:26px}.historical-paintings-list{grid-template-columns:1fr;gap:36px}.historical-paintings h2{font-size:25px}.historical-painting-entry>p{min-height:0}.historical-painting-preview{margin-bottom:16px}}

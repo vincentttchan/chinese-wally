@@ -1,0 +1,12 @@
+/* A readable confirmation at a consistent location, separate from characters' voices. */
+.lantern-feedback-notice {position:fixed;z-index:35;bottom:100px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;width:max-content;max-width:calc(100vw - 32px);box-sizing:border-box;padding:12px 20px;background:#f1ead7fa;color:#3d4835;border:1px solid #a59a7855;box-shadow:0 3px 16px #252d1c18;pointer-events:none;font-family:'LXGW WenKai TC','Kaiti TC',serif;animation:lantern-notice-in 3600ms ease both;}
+.lantern-feedback-notice p {font-size:17px;line-height:1.6;margin:0;}
+.lantern-feedback-notice>div>span {display:block;font-size:13px;line-height:1.7;color:#777960;margin-top:2px;}
+.feedback-illustration {display:block;position:relative;overflow:hidden;width:48px;height:48px;flex:0 0 48px;}
+.feedback-illustration img {position:absolute;width:300%;height:200%;max-width:none;}
+.lantern-feedback-notice.is-quiet {padding:9px 16px;}
+.lantern-feedback-notice.is-quiet p {font-size:15px;}
+.lantern-feedback-notice.is-quiet .feedback-illustration {width:34px;height:34px;flex-basis:34px;}
+@keyframes lantern-notice-in {0%,100%{opacity:0;}6%,92%{opacity:1;}}
+@media(max-width:600px) {.lantern-feedback-notice {bottom:110px;padding:10px 14px;gap:8px;}.lantern-feedback-notice p {font-size:16px;}}
+@media(prefers-reduced-motion:reduce) {.lantern-feedback-notice {animation:none;}}

@@ -1,0 +1,70 @@
+{
+  "standard": "宮中鬧元宵現行介面",
+  "sources": [
+    {
+      "path": "src/styles.css",
+      "sha256": "ce9c9cf4fcc879805dcd3169d01eed89c7facc1b1670055c5a0d469a246763ec"
+    },
+    {
+      "path": "src/lantern.css",
+      "sha256": "b9e22cad10b8a9a490aef88277bfeb87fb1cf8dc40b6cca83e1c1f01543b0bd9"
+    },
+    {
+      "path": "src/lantern-journal.css",
+      "sha256": "3f5e6f2c9f3f821d9d56a6cc5fca50ab663f8422c4ed59212bdd00c9bc437548"
+    },
+    {
+      "path": "src/lantern-search-hud.css",
+      "sha256": "372794b0ecc33c14262598cd5a4502bd707a5b9bdc7a45b5bf744b8b2f90c6f2"
+    },
+    {
+      "path": "src/lantern-observation.css",
+      "sha256": "6cd1e438a4b25ff4236f187ca4a2e32413c0615e7a111ba33dcd08eb175d1fb0"
+    },
+    {
+      "path": "src/lantern-field-journal.css",
+      "sha256": "7c685228f98257bdd1d32973d22136e28c27d39f27227991271e8fa2d7bf41cf"
+    },
+    {
+      "path": "src/lantern-feedback.css",
+      "sha256": "7e32fbd86f03423b916fa5b54008ca262f331149ac8a33ddf4482c12ad5d1165"
+    },
+    {
+      "path": "src/lantern-spark.css",
+      "sha256": "97cf4eb04d338307cc8d6ff1a3ab210ef52f29af3e1c6e7a43783cfb40c46fc1"
+    },
+    {
+      "path": "src/page-motion.css",
+      "sha256": "347667f247107df48581b47fc4c4fb4d3b3c01eae7265febcb19d700f80cdf43"
+    },
+    {
+      "path": "src/components/ArtIcons.tsx",
+      "sha256": "67e6d6329ae6c95016ef805392800d6ad566799b1555846fc62a651c946fb5b9"
+    },
+    {
+      "path": "src/audio/chapterMusic.js",
+      "sha256": "e5bdb981f6bf817ba38f19663faa850dcea4400db92c4299f865c32ed70730b9"
+    },
+    {
+      "path": "src/audio/chapterMusicTracks.js",
+      "sha256": "45ca939918a4358a5ec29a93d41752c5f7ecbc53a76d6a4863ed60637e7af9fb"
+    }
+  ],
+  "chapterAdaptations": [
+    "source-coordinate display bounds and cover camera",
+    "initial view at 1.5 times cover minimum",
+    "undistorted native-content map with viewport rectangle",
+    "four target portraits",
+    "202 people with individually authored three-line fictional dialogue and native evidence records",
+    "six collection illustrations in two columns, plus visible motif progress",
+    "four characters, spatial observation, evidence judgement, two historical interpretations and native-pixel hand motion with fixed original faces"
+  ],
+  "retiredStyles": [
+    "v0.2/common.css",
+    "v0.2/effects.css",
+    "v0.2/art-ui.css",
+    "v0.2/journal-ui.css",
+    "v0.3.2/play.css",
+    "v0.5/play.css"
+  ]
+}

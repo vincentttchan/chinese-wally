@@ -1,0 +1,30 @@
+/* The same hand-painted ember supplies both discovery feedback and the collection. */
+.lantern-spark-discovery {position:absolute;inset:0;z-index:17;pointer-events:none;overflow:hidden;}
+.lantern-spark-source {position:absolute;width:0;height:0;}
+.lantern-ember {position:absolute;left:0;top:0;object-fit:contain;transform-origin:center;animation:lantern-ember-away 850ms var(--ember-delay) cubic-bezier(.18,.65,.3,1) both;}
+.lantern-firelight-token {position:absolute;left:-55px;top:-55px;width:110px;height:110px;object-fit:contain;animation:lantern-firelight-collect 1500ms linear both;}
+.lantern-collectible-token {display:block;overflow:hidden;}
+.lantern-collectible-token img {position:absolute;width:300%;height:200%;max-width:none;}
+.lantern-spark-discovery.is-revisit .lantern-firelight-token {width:80px;height:80px;left:-40px;top:-40px;animation:lantern-firelight-collect 900ms linear both;}
+.lantern-game .lantern-journal-button.is-spark-arriving {animation:lantern-journal-receive 650ms ease both;}
+@keyframes lantern-ember-away {0%{opacity:0;transform:translate(-50%,-50%) scale(.4);}18%{opacity:.9;}100%{opacity:0;transform:translate(var(--ember-x),var(--ember-y)) rotate(var(--ember-angle)) scale(.7);}}
+@keyframes lantern-firelight-collect {
+  0%{opacity:0;transform:translate(0,8px) scale(.65);}
+  12%,35%{opacity:1;transform:translate(0,-8px) scale(1.05);}
+  65%{opacity:1;transform:translate(var(--arc-x),var(--arc-y)) scale(.72);}
+  95%{opacity:1;transform:translate(var(--token-x),var(--token-y)) scale(.18);}
+  100%{opacity:0;transform:translate(var(--token-x),var(--token-y)) scale(.08);}
+}
+@keyframes lantern-firelight-note {0%,20%{opacity:0;}35%,82%{opacity:1;}100%{opacity:0;}}
+@keyframes lantern-firelight-revisit {0%,100%{opacity:0;transform:scale(.8);}35%{opacity:.65;transform:scale(1);}}
+@keyframes lantern-journal-receive {0%,100%{box-shadow:0 0 0 transparent;}45%{box-shadow:0 0 0 1px #c9ad6d66,0 0 14px #b18d3a33;}}
+@media(prefers-reduced-motion:reduce) {
+  .lantern-ember {display:none;}
+  .lantern-firelight-token,.lantern-spark-discovery.is-revisit .lantern-firelight-token {animation:lantern-firelight-still 1200ms ease both;}
+  .lantern-game .lantern-journal-button.is-spark-arriving {animation:none;}
+}
+@keyframes lantern-firelight-still {0%,100%{opacity:0;}20%,80%{opacity:1;}}
+
+.lantern-journal-button.is-spark-arriving svg {animation:lantern-journal-close 650ms ease both;transform-origin:center;}
+@keyframes lantern-journal-close {0%,100%{transform:scaleX(1);}35%{transform:scaleX(.35) rotate(-8deg);}70%{transform:scaleX(1.12);}}
+@media(prefers-reduced-motion:reduce){.lantern-journal-button.is-spark-arriving svg{animation:none;}}

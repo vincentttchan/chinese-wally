@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && vite build && python3 scripts/package-local-home.py",
     "preview": "vite preview --host 127.0.0.1",
     "test": "tsx --tsconfig tsconfig.json --test tests/*.test.ts tests/*.test.tsx"
   },

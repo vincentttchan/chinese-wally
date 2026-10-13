@@ -1,0 +1,166 @@
+{
+  "date": "2026-10-13",
+  "scope": "康衢駢慶 v1.2：第四輪空間觀察、必經背景與收尾解讀，命中、原位演繹及冊頁操作",
+  "journalRecord": "docs/chapters/kangqu-listening-journal-v1.1.md",
+  "additionalInstrumentSources": [
+    {
+      "name": "鑼",
+      "url": "https://www.dpm.org.cn/collection/music/232801.html?hl=%E5%A4%A7%E9%94%A3",
+      "usedFor": "懸持與槌擊形制，對照原畫中的兩面鑼"
+    },
+    {
+      "name": "號角",
+      "url": "https://digicol.dpm.org.cn/cultural/detail?id=8bab202a5cd345ecaca5f46859306ef8",
+      "usedFor": "號角與吹奏樂器的類名，對照原畫中的長管及張開管口"
+    }
+  ],
+  "completionRecord": "docs/chapters/kangqu-listening-completion-v1.0.2.md",
+  "animationAlignmentRecord": "docs/chapters/kangqu-listening-animation-v1.0.1.md",
+  "endingRecord": "docs/chapters/kangqu-listening-ending-v1.0.md",
+  "animationRecord": "animation/generation-records.json",
+  "selectionRecord": "docs/chapters/kangqu-listening-inquiry-v0.9.md",
+  "interpretationLimit": "彩衣人物僅按可見冠飾、裝束及道具描述，不將他定名為某位八仙。",
+  "sources": [
+    {
+      "title": "『駢慶』：崇慶皇太后《萬壽圖》第三卷卷名考析",
+      "author": "劉潞",
+      "publisher": "故宮博物院院刊",
+      "year": 2015,
+      "url": "https://www.dpm.org.cn/journal/247006.html",
+      "usedFor": [
+        "第三卷畫西直門至西安門沿途",
+        "第三卷樂隊與旗仗可與大駕鹵簿制度相互對讀",
+        "『駢慶』連結皇太后六旬萬壽與乾隆首次南巡禮成"
+      ]
+    },
+    {
+      "title": "暗八仙",
+      "publisher": "故宮博物院",
+      "url": "https://www.dpm.org.cn/lemmas/241137.html",
+      "usedFor": [
+        "暗八仙的正式名稱",
+        "葫蘆、扇、花籃、漁鼓、荷花、寶劍、洞簫、玉板八件寶物",
+        "八件寶物與八仙的逐一對應",
+        "以物代仙及逢凶化吉的吉祥寓意"
+      ]
+    },
+    {
+      "title": "崇慶皇太后六旬《萬壽圖》初步研究（下）",
+      "author": "林姝",
+      "publisher": "故宮學刊",
+      "year": 2020,
+      "url": "https://www.dpm.org.cn/explode/others/255421.html",
+      "usedFor": [
+        "萬壽沿途點景由整體規劃形成",
+        "八仙祝壽等題材被用於萬壽點景",
+        "彩畫、人物、景觀與戲台共同構成慶典環境"
+      ]
+    }
+  ],
+  "imageReadings": [
+    {
+      "subject": "亭內樂器",
+      "nativeCoordinates": [
+        [
+          974,
+          2453,
+          1068,
+          2544
+        ],
+        [
+          907,
+          2347,
+          969,
+          2420
+        ]
+      ],
+      "reading": "鼓與雙手分持的鈸並置，人物構成合奏組合。"
+    },
+    {
+      "subject": "院牆暗八仙",
+      "nativeCoordinates": [
+        [
+          333,
+          2394,
+          488,
+          2493
+        ],
+        [
+          1340,
+          2405,
+          1565,
+          2503
+        ],
+        [
+          3410,
+          2306,
+          3577,
+          2390
+        ],
+        [
+          3620,
+          2308,
+          3778,
+          2420
+        ]
+      ],
+      "reading": "可清楚辨認玉板、扇、荷花、花籃等以飄帶串連的寶物圖案；與全組器物對讀後定名為暗八仙。"
+    },
+    {
+      "subject": "亭內演奏與亭外觀看",
+      "nativeCoordinates": [
+        [
+          293,
+          2458,
+          341,
+          2511
+        ],
+        [
+          907,
+          2310,
+          1248,
+          2545
+        ]
+      ],
+      "reading": "人物朝向與亭內外位置作空間比較，不能據此確定其身份、心情或實際所聽曲目。"
+    }
+  ],
+  "copyPolicy": "原畫可見內容稱為畫面判讀；館方論文的儀仗與卷名解釋稱為研究結論；人物短句仍標示為遊戲虛構對白。",
+  "currentDesignRecord": "docs/chapters/kangqu-listening-integrated-v1.2.md",
+  "motifPositionReview": {
+    "date": "2026-10-13",
+    "record": "docs/chapters/kangqu-listening-motif-positions-2026-10-13.md",
+    "anchors": {
+      "jade": [
+        410,
+        2446
+      ],
+      "fan": [
+        1450,
+        2470
+      ],
+      "lotus": [
+        3495,
+        2350
+      ],
+      "basket": [
+        3690,
+        2350
+      ]
+    },
+    "fanBox": [
+      1340,
+      2405,
+      1565,
+      2503
+    ],
+    "scope": "Native-pixel inspection and pure-coordinate checks only; no actual browser click or journal operation."
+  },
+  "dialogueRevision": {
+    "date": "2026-10-13",
+    "record": "docs/chapters/kangqu-listening-dialogue-v1.2.md",
+    "data": "dialogue/dialogue-evidence.json",
+    "scope": "202 registered people in the native segment; three individually authored fictional responses per person. Original regions inspected; no browser speech layout or individual hitbox validation.",
+    "policy": "Visible posture, clothing, confidently identified instruments, neighbouring people and architecture; no fabricated names, emotions, journeys or tunes."
+  }
+}

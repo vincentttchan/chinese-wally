@@ -1,0 +1,184 @@
+{
+  "date": "2026-10-13",
+  "version": "1.2",
+  "sourceVersion": "1.2",
+  "route": "#kangqu-listening",
+  "homeRoute": "#lantern-festival",
+  "method": "research-backed content assembly; no test, app build or browser execution",
+  "assets": [
+    {
+      "source": "output/art-direction/wanshou-third-scroll/stage-and-crowd-native.png",
+      "applicationAsset": "art/native-segment.png",
+      "bytes": 15450097,
+      "sha256": "00a6d98cda0787326a49dc3aed754ba6396e265da8c581446330041df378103a"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v1.2/art/native-segment-lossless.webp",
+      "applicationAsset": "art/native-segment-lossless.webp",
+      "bytes": 10300464,
+      "sha256": "475057289c4d3c869eecdc6d4f51be9c8837d347429f1f9c32080e91a244dcb8"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v1.2/art/encoding-record.json",
+      "applicationAsset": "data/native-encoding-record.json",
+      "bytes": 397,
+      "sha256": "233e13451413f6c915b4a777390113ce2d232482d11a46b91d2eac4a793e2f5e"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/stage-and-crowd-overview.jpg",
+      "applicationAsset": "art/overview.jpg",
+      "bytes": 1404407,
+      "sha256": "7446ac67efa0a688ef9f3b166d031649260d4955229eb6521750be08f45be9d5"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v0.2/sources/third-scroll-public-33949x800.jpg",
+      "applicationAsset": "art/complete-scroll.jpg",
+      "bytes": 10521379,
+      "sha256": "48b68bb139ad030f8d0af5cb7143602a8ae92ea6d94e9db67004c079816ed45f"
+    },
+    {
+      "source": "public/art/ui/painted-icons.png",
+      "applicationAsset": "ui/painted-icons.png",
+      "bytes": 948267,
+      "sha256": "a7b9aee34c9f4bfc9501f0f6af9bc993e3afdb5eb734dc53aa15ae85b2edda3f"
+    },
+    {
+      "source": "public/art/ui/reading-paper.png",
+      "applicationAsset": "ui/reading-paper.png",
+      "bytes": 2248234,
+      "sha256": "2722e956b8033de67219903bf519da3eec10dd4042250d521b7c339529fdaf30"
+    },
+    {
+      "source": "public/art/ui/lantern-search-frame-v1.png",
+      "applicationAsset": "ui/lantern-search-frame-v1.png",
+      "bytes": 2179662,
+      "sha256": "dfe79984c74047201d02d8f4192ff2cd28cf89ed6bb76a245d00470d491d76f1"
+    },
+    {
+      "source": "public/art/ui/lantern-silk-note-v1.png",
+      "applicationAsset": "ui/lantern-silk-note-v1.png",
+      "bytes": 2351976,
+      "sha256": "8ef10fa3ae5dae574d427d8f91c0880615cb981efcae41c3650a1310b7dc63cf"
+    },
+    {
+      "source": "public/art/ui/lantern-dialogue-ink-frame-v1.png",
+      "applicationAsset": "ui/lantern-dialogue-ink-frame-v1.png",
+      "bytes": 694548,
+      "sha256": "f7a18b50c25390687ca5f5c34f6aab5c7bd07a46f0f1d95003b054c6e144fd62"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v0.2/journal-art/drum-illustration-v1.png",
+      "applicationAsset": "collections/drum-illustration-v1.png",
+      "bytes": 2138857,
+      "sha256": "87185df0662243853950ebba368669a897095766c273c7b7626006eb523ab577"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v0.2/journal-art/discs-illustration-v1.png",
+      "applicationAsset": "collections/discs-illustration-v1.png",
+      "bytes": 1941286,
+      "sha256": "6a9abcc13b2f2f0fd301534fe256235f3800e2a54c5f29dda70856c5f9e536d8"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v0.2/journal-art/flag-illustration-v1.png",
+      "applicationAsset": "collections/flag-illustration-v1.png",
+      "bytes": 916565,
+      "sha256": "8b9767f7840be7e94e63cbd0d30b0e5bcb8060c9b405967867b38589ab36d5c1"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v0.2/journal-art/painted-wall-illustration-v1.png",
+      "applicationAsset": "collections/painted-wall-illustration-v1.png",
+      "bytes": 2210147,
+      "sha256": "1e7ff9373884e0f49457de2ee37f5aa51a631569697a655690b07336021490fd"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v1.2/collections/gong-illustration-v1.png",
+      "applicationAsset": "collections/gong-illustration-v1.png",
+      "bytes": 1394139,
+      "sha256": "da00234ee13432454cc86ec17dce2e8517efe95e2ff8ca8fd7cfdad0dc0846b8"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v1.2/collections/horn-illustration-v1.png",
+      "applicationAsset": "collections/horn-illustration-v1.png",
+      "bytes": 305412,
+      "sha256": "53e9544174fd7d7794d267789b77233a99d34c9dc93f553cac63bcda236fa952"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v0.3.2/recognition/seated-drum-head-source.png",
+      "applicationAsset": "recognition/seated-drum-head-source.png",
+      "bytes": 3604,
+      "sha256": "4068996a12ba20c7e601f2156c05eec2d164b2fe870e85249cb2c7960824fa31"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v0.3.2/recognition/seated-drum-head-tracing-v2.png",
+      "applicationAsset": "recognition/seated-drum-head-tracing-v2.png",
+      "bytes": 1184176,
+      "sha256": "606f088c5d77683531149b36a6cc5fde29a1c000e57405e0ab3603b1a49834ac"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v0.3.2/recognition/hand-at-hat-head-source.png",
+      "applicationAsset": "recognition/hand-at-hat-head-source.png",
+      "bytes": 4648,
+      "sha256": "5f5cdba8e8692b8ed57e0a90a7725f012d6f4ff58d05a47efbe52e7c0105bcf7"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v0.3.2/recognition/hand-at-hat-head-tracing-v2.png",
+      "applicationAsset": "recognition/hand-at-hat-head-tracing-v2.png",
+      "bytes": 901242,
+      "sha256": "e6f0acab9623f9d09e0bb3b11e58af4160e769910e10ed5404ee205f55fc0215"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v0.3.2/recognition/brown-green-hem-head-source.png",
+      "applicationAsset": "recognition/brown-green-hem-head-source.png",
+      "bytes": 6107,
+      "sha256": "aaaf3a35f18cd3dfc3334737bf58ec381f3a7546e18aa5979ff7f169c0313c62"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v0.3.2/recognition/brown-green-hem-head-tracing-v2.png",
+      "applicationAsset": "recognition/brown-green-hem-head-tracing-v2.png",
+      "bytes": 871000,
+      "sha256": "ea5c697f8fbe7af5dab7706eeef0a9caf377c57d1a61441acafc21ac13c2a99a"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v1.2/recognition/red-front-east-05-head-source.png",
+      "applicationAsset": "recognition/red-front-east-05-head-source.png",
+      "bytes": 5798,
+      "sha256": "8e998bfaf1905862e012d351401608d4d41f6bef49d3dfedd5f998d001ea9bd6"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v1.2/recognition/red-front-east-05-head-tracing-v2.png",
+      "applicationAsset": "recognition/red-front-east-05-head-tracing-v2.png",
+      "bytes": 1122374,
+      "sha256": "c6fb1c8bbdecbb2d4f652ae153da9b11a8893342a38535fa6a97398c6b8ee8d3"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v1.2/recognition/watcher-pattern-head-source.png",
+      "applicationAsset": "recognition/watcher-pattern-head-source.png",
+      "bytes": 7421,
+      "sha256": "bc2452f5d3b88eb5db85925068d0ab056e2f55c75222da89c916a2ec2c50c03a"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v1.2/recognition/watcher-pattern-head-tracing-v2.png",
+      "applicationAsset": "recognition/watcher-pattern-head-tracing-v2.png",
+      "bytes": 1078321,
+      "sha256": "526a3e4e1d0ef4b3dd021bada8fa3b3e9bb19fc704dd4444842186757e0849be"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v1.2/recognition/watcher-blue-head-source.png",
+      "applicationAsset": "recognition/watcher-blue-head-source.png",
+      "bytes": 4357,
+      "sha256": "ea3a091f946e28ef36c40785d3a9592858f177c63f306c98eb0feb7529cf91ce"
+    },
+    {
+      "source": "output/art-direction/wanshou-third-scroll/v1.2/recognition/watcher-blue-head-tracing-v2.png",
+      "applicationAsset": "recognition/watcher-blue-head-tracing-v2.png",
+      "bytes": 1095252,
+      "sha256": "a14f628da9cfd3bc16ad3e9dc7df3df73c3c0cde7c005eba32172091939681d1"
+    }
+  ],
+  "notes": [
+    "All v0.2/v0.3/v0.5 preview style layers remain excluded. The site and current Lantern CSS are read directly by the source builder.",
+    "v1.2 integrates spatial observation, mandatory celebration background, evidence judgement, original-pixel motion, collection hit tolerance and journal navigation.",
+    "Observation conclusions now connect the visible instruments, procession and auspicious wall motifs to the historical meaning of 康衢駢慶.",
+    "The wall motif is identified as 暗八仙 from visible native pixels and the Palace Museum motif definition; source scope is recorded in content-sources.json."
+  ]
+}

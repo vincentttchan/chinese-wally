@@ -1,0 +1,218 @@
+.lantern-game {--painting-grade: saturate(.78) contrast(.96); background: #bba77d; color: #343a30;}
+.lantern-game .painting-world > .painting {visibility: visible;}
+.lantern-game .scroll-frame {background-size: cover;}
+.lantern-game .scene-status {background: #ded5bd; z-index: 4;}
+.lantern-game .round-control {opacity: 1; animation: none;}
+.lantern-hud {position: absolute; inset: 24px 28px auto; z-index: 6; display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; pointer-events: none;}
+.lantern-hud > * {pointer-events: auto;}
+.lantern-target {display: flex; align-items: center; gap: 15px; padding: 13px 18px 13px 13px; background: rgba(244,239,221,.93); box-shadow: 0 3px 18px #35291820; border: 1px solid #74633d35; max-width: 340px;}
+.lantern-target .lantern-crop {width: 90px; flex: 0 0 90px;}
+.lantern-target h1 {font-size: 19px; margin: 10px 0; font-weight: 600;}
+.lantern-eyebrow {font-size: 12px; letter-spacing: .14em; color: #6f705c; line-height: 1.6; margin: 0;}
+.lantern-trail {font-size: 13px; line-height: 1.75; color: #565e49; margin: 0 0 8px; text-wrap: pretty;}
+.lantern-progress {font-size: 12px; margin: 0; color: #747562;}
+.lantern-crop {position: relative; overflow: hidden; isolation: isolate; filter: saturate(.78) contrast(.96); background: #d2bf92;}
+.lantern-crop img {position: absolute; max-width: none; height: auto; pointer-events: none;}
+.lantern-tools {display: flex; align-items: center; gap: 10px; margin-left: auto;}
+.lantern-mode {height: 40px; padding: 0 17px; background: #f1ebd6e8; color: #394333; border: 1px solid #74633d35; border-radius: 24px; font-size: 13px; letter-spacing: .1em; box-shadow: 0 3px 14px #35291810;}
+.lantern-footer {position: absolute; bottom: 24px; left: 28px; right: 28px; z-index: 6; display: flex; align-items: flex-end; justify-content: space-between; pointer-events: none; gap: 15px;}
+.lantern-footer button {pointer-events: auto;}
+.lantern-quiet-button {display: flex; gap: 9px; align-items: center; padding: 12px 17px; background: #394535e8; border: 1px solid #e7dfbf6b; border-radius: 3px; color: #f1ebd6; font-size: 13px; letter-spacing: .1em; box-shadow: 0 3px 12px #171b2420;}
+.lantern-operation {text-align: center; color: #f3eddb; text-shadow: 0 1px 5px #262513; font-size: 12px; letter-spacing: .12em; margin: 0 0 3px;}
+.lantern-operation span {display: block; font-size: 10px; opacity: .75; margin-top: 6px;}
+.lantern-status {position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%); z-index: 8; max-width: calc(100% - 30px); text-align: center; background: #f1ebd6ec; padding: 12px 20px; font-size: 14px; border-radius: 3px; pointer-events: none;}
+.lantern-status:empty {display: none;}
+.lantern-dialog-layer {position: absolute; inset: 0; z-index: 20; display: grid; place-items: center; padding: 22px; background: #292b224d;}
+.lantern-paper {position: relative; background: #f2edda url('/art/ui/reading-paper.png') center / cover; border: 1px solid #7e725043; width: min(540px, 100%); max-height: calc(100dvh - 44px); overflow-y: auto; padding: 34px; box-shadow: 0 15px 60px #1c211f40; outline: none;}
+.lantern-paper h2 {font-size: 25px; font-weight: 500; letter-spacing: .12em; padding-right: 22px; margin: 0 0 18px;}
+.lantern-paper p {font-size: 16px; line-height: 1.9;}
+.lantern-paper .lantern-eyebrow {font-size: 12px; margin-top: -6px;}
+.lantern-paper .paper-close {position: absolute; right: 12px; top: 12px;}
+.lantern-paper a {color: #52654b; text-underline-offset: 4px;}
+.lantern-paper summary {cursor: pointer; font-size: 14px; margin-top: 22px;}
+.lantern-paper li {font-size: 13px; line-height: 1.9; margin: 5px 0;}
+.lantern-paper .lantern-source-note {font-size: 12px; color: #777664;}
+.lantern-discovery {place-items: end center; background: transparent; padding-bottom: 85px;}
+.lantern-discovery .lantern-paper {width: min(570px, 100%); padding: 26px 30px;}
+.lantern-found-content {display: flex; gap: 25px; align-items: center; margin: 20px 0;}
+.lantern-found-content .lantern-crop {width: 120px; flex: 0 0 120px; }
+.lantern-found-content p {margin: 0;}
+.lantern-help-portrait {width: 180px; max-width: 55%;  margin: 25px auto;}
+.lantern-paper-actions {display: flex; align-items: center; gap: 18px; justify-content: space-between; margin-top: 22px; flex-wrap: wrap;}
+.lantern-paper .primary-button {gap: 15px; font-size: 15px;}
+.lantern-text-button {padding: 8px 0; border: 0; background: none; color: #6c705a; text-decoration: underline; text-underline-offset: 5px; font-size: 14px;}
+.lantern-menu-controls {display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap;}
+.lantern-ending-portraits {display: flex; justify-content: space-around; align-items: flex-end; gap: 15px; margin: 26px 0;}
+.lantern-ending-portraits .lantern-crop {width: 100px; max-width: 28%;}
+.lantern-introduction .intro-reference {display: none;}
+.lantern-game button:focus-visible, .lantern-game a:focus-visible {outline: 2px solid #92603d; outline-offset: 5px;}
+@media (max-width: 680px) {
+  .lantern-hud {inset: 15px 14px auto; flex-direction: column-reverse; gap: 14px;}
+  .lantern-tools {gap: 8px;}
+  .lantern-target {gap: 12px; padding: 10px 14px 10px 10px;}
+  .lantern-target .lantern-crop {width: 65px; flex-basis: 65px;}
+  .lantern-target h1 {font-size: 16px; margin: 7px 0;}
+  .lantern-footer {bottom: 16px; left: 14px; right: 14px;}
+  .lantern-operation {display: none;}
+  .lantern-quiet-button {padding: 12px; font-size: 12px;}
+  .lantern-paper {padding: 26px 22px;}
+  .lantern-paper p {font-size: 15px;}
+  .lantern-discovery {padding: 14px 14px 78px;}
+  .lantern-discovery .lantern-paper {padding: 25px 22px;}
+  .lantern-found-content {gap: 18px;}
+  .lantern-found-content .lantern-crop {width: 90px; flex-basis: 90px;}
+}
+@media (max-height: 600px) {
+  .lantern-target .lantern-crop {width: 65px; flex-basis: 65px;}
+  .lantern-discovery {padding-bottom: 18px;}
+  .lantern-found-content .lantern-crop {width: 72px; flex-basis: 72px;}
+  .lantern-help-portrait {width: 80px;}
+}
+
+.lantern-game .intro-story {white-space: pre-line;}
+.introduction .chapter-links {flex-wrap: wrap; gap: 6px 18px; max-width: calc(100vw - 56px);}
+
+/* Observation stays on the original scroll; notes have no panel or paper surface. */
+.lantern-game.is-near-view .lantern-hud, .lantern-game.is-near-view .lantern-footer {visibility: hidden;}
+.lantern-study-light .observation-shade {background: #17201626; backdrop-filter: grayscale(1) brightness(.78); -webkit-backdrop-filter: grayscale(1) brightness(.78);}
+.lantern-study-light .observation-shade {mask-image: radial-gradient(circle at var(--focus-x) var(--focus-y), transparent 0, transparent calc(var(--focus-radius) * .64), #000 calc(var(--focus-radius) * 1.25)); -webkit-mask-image: radial-gradient(circle at var(--focus-x) var(--focus-y), transparent 0, transparent calc(var(--focus-radius) * .64), #000 calc(var(--focus-radius) * 1.25));}
+.lantern-study-grayscale {position: absolute; inset: 0; backdrop-filter: grayscale(1); -webkit-backdrop-filter: grayscale(1);}
+.lantern-inline-study {position: absolute; left: var(--note-x); top: var(--note-y); width: var(--note-width, 300px); z-index: 22; color: #fff6df; outline: none; text-shadow: 0 1px 4px #121b10, 0 2px 12px #121b10; isolation: isolate;}
+.lantern-inline-study::before {content: ''; position: absolute; inset: -80px -65px; z-index: -1; pointer-events: none; background: radial-gradient(ellipse, #142012c9 0, #1420128a 32%, #14201200 72%);}
+.lantern-inline-study h2 {font-weight: 500; font-size: 27px; line-height: 1.5; letter-spacing: .08em; margin: 0 0 16px;}
+.lantern-inline-context {display: flex; align-items: center; gap: 24px; font-size: 12px; color: #f2e8cc; margin: 0 0 10px;}
+.lantern-inline-context span {opacity: .8; font-size: 11px;}
+.lantern-inline-message {font-size: 18px; line-height: 1.95; margin: 0 0 18px; text-wrap: pretty;}
+.lantern-inline-link {display: flex; align-items: center; justify-content: space-between; width: fit-content; gap: 30px; min-height: 44px; border: 0; border-bottom: 1px solid #eee2bc8a; background: transparent; color: #fff6df; font-size: 15px; padding: 9px 0; text-shadow: inherit;}
+.lantern-inline-link:hover {border-color: #fff6df; color: #fff;}
+.lantern-inline-link > span {font-size: 20px;}
+.lantern-inline-modes {display: flex; gap: 22px; margin: 0 0 13px;}
+.lantern-inline-modes button {border: 0; border-bottom: 1px solid transparent; padding: 8px 0; min-height: 40px; font-size: 14px; color: #e3ddc9; background: transparent; text-shadow: inherit;}
+.lantern-inline-modes button[aria-pressed="true"] {color: #fff; border-color: #fff3d4;}
+.lantern-inline-revisits {display: flex; flex-wrap: wrap; gap: 14px; margin: 4px 0 18px;}
+.lantern-inline-revisits button {background: transparent; border: 0; border-bottom: 1px solid #e8dcb96b; padding: 8px 0; font-size: 13px; color: #f4e9cd; text-shadow: inherit;}
+.lantern-inline-revisits button[aria-pressed="true"] {border-color: #fff6df; color: #fff;}
+.lantern-inline-revisits button span {display: block; margin-top: 5px; font-size: 10px; opacity: .7;}
+.lantern-inline-next {margin-top: 10px;}
+.lantern-inline-markers {position: absolute; inset: 0; pointer-events: none; z-index: 21;}
+.lantern-court-label {position: absolute; transform: translateY(-50%); font-family: 'LXGW WenKai TC', 'Kaiti TC', 'BiauKai', serif; font-size: 12px; font-weight: 400; line-height: 1.5; letter-spacing: .08em; white-space: nowrap; color: #e5dfce; text-shadow: 0 1px 3px #172113b3;}
+.lantern-court-anchor {position: absolute; width: 3px; height: 3px; transform: translate(-50%, -50%); border-radius: 50%; background: #d8d1bbad;}
+.lantern-court-leader {position: absolute; height: 1px; transform-origin: 0 50%; background: #d8d1bb80;}
+.lantern-inline-ending {left: auto; top: auto; right: 7vw; bottom: 12vh; width: min(360px, calc(100vw - 48px));}
+.lantern-inline-ending h2 {font-size: 26px;}
+.lantern-inline-restart {display: block; background: none; border: 0; padding: 12px 0; color: #e3ddc9; text-shadow: inherit; font-size: 12px; margin-top: 10px;}
+.lantern-study-notes section {border-top: 1px solid #91876b3b; margin-top: 22px; padding-top: 18px;}
+.lantern-study-notes h3, .lantern-study-notes h4 {font-size: 16px; font-weight: 500; line-height: 1.7; margin: 10px 0;}
+.lantern-paper .lantern-study-notes p {font-size: 14px; margin: 8px 0 18px;}
+@media (max-width: 680px) {
+  .lantern-inline-study {left: 24px; right: 24px; top: auto; bottom: 26px; width: auto; max-height: calc(100dvh - 48px); overflow-y: auto;}
+  .lantern-inline-study::before {position: fixed; inset: auto -80px -100px; height: 520px; background: radial-gradient(ellipse at center bottom, #142012eb 0, #142012a8 38%, #14201200 73%);}
+  .lantern-inline-study h2 {font-size: 23px; margin-bottom: 9px;}
+  .lantern-inline-message {font-size: 16px; margin-bottom: 10px;}
+  .lantern-inline-context {margin-bottom: 6px;}
+  .lantern-inline-revisits {margin-bottom: 10px;}
+}
+@media (max-height: 580px) and (min-width: 681px) {
+  .lantern-inline-study {top: 25px; max-height: calc(100dvh - 50px); overflow-y: auto;}
+  .lantern-inline-study h2 {font-size: 23px; margin-bottom: 8px;}
+  .lantern-inline-message {font-size: 16px; margin-bottom: 10px;}
+}
+
+.lantern-navigator {width: min(420px, calc(100vw - 400px)); padding: 7px 9px 3px; background: #eee8d6e8; border: 1px solid #75664460; box-shadow: 0 3px 18px #211b2428; pointer-events: auto;}
+.lantern-navigator-strip {position: relative; height: 32px; overflow: hidden;}
+.lantern-navigator-strip > img {width: 100%; height: 100%; object-fit: fill; filter: saturate(.65); pointer-events: none;}
+.lantern-navigator-window {position: absolute; top: 0; bottom: 0; border: 2px solid #f9f0d6; background: #faf2cf22; box-shadow: 0 0 0 1px #454e36; pointer-events: none;}
+.lantern-navigator-strip > input {position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize;}
+.lantern-navigator-strip:focus-within {outline: 2px solid #92603d; outline-offset: 2px;}
+.lantern-navigator-courts {display: flex; justify-content: space-between;}
+.lantern-navigator-courts > button {font-size: 10px; letter-spacing: .1em; color: #525d47; border: 0; background: transparent; padding: 7px 2px 5px;}
+
+/* Discovery notes use the selected A dialogue typography, without a large heading. */
+.lantern-discovery-note {font-family: 'LXGW WenKai TC', 'Kaiti TC', 'BiauKai', serif; text-shadow: 0 1px 3px #10180ee6, 0 2px 9px #10180e80;}
+.lantern-discovery-note::before {inset: -30px -28px; background: radial-gradient(ellipse, #17201383 0, #17201350 32%, transparent 72%);}
+.lantern-discovery-note .lantern-inline-context {font-size: 11px; gap: 12px; margin-bottom: 6px; color: #e8d8b5;}
+.lantern-discovery-note h2 {font-size: 14px; font-weight: 400; line-height: 1.5; letter-spacing: .06em; margin: 0 0 10px; color: #e8d8b5;}
+.lantern-discovery-note .lantern-inline-message {font-size: 20px; font-weight: 400; line-height: 1.55; margin: 0 0 12px; letter-spacing: 0; white-space: pre-line;}
+.lantern-discovery-note .lantern-inline-link {font-size: 13px; gap: 26px; border-bottom: 0; padding: 8px 0;}
+.lantern-discovery-note .lantern-inline-link > span {font-size: 17px;}
+.lantern-discovery-note .lantern-inline-next {margin-top: 4px;}
+.lantern-discovery-note .lantern-inline-modes {margin-bottom: 4px;}
+.lantern-discovery-note .lantern-inline-modes button {font-size: 13px;}
+@media (max-width: 680px) {
+  .lantern-discovery-note {left: 24px; right: auto; width: min(260px, calc(100vw - 48px));}
+  .lantern-discovery-note::before {position: absolute; height: auto;}
+}
+@media (max-width: 680px) {
+  .lantern-navigator {position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); width: min(360px, calc(100vw - 28px));}
+  .lantern-navigator-strip {height: 24px;}
+}
+
+/* The original scroll fills the viewport; a fixed reading column gives it room. */
+.lantern-game.is-reviewing .lantern-hud, .lantern-game.is-reviewing .lantern-footer {visibility: hidden;}
+.painting-departing {pointer-events: none;}
+.lantern-review {position: absolute; inset: 0; z-index: 22; outline: none; color: #f3ead3; font-family: 'LXGW WenKai TC', 'Kaiti TC', 'BiauKai', serif;}
+.lantern-review-colour {position: absolute; inset: 0; pointer-events: none; backdrop-filter: grayscale(1); -webkit-backdrop-filter: grayscale(1); animation: lantern-review-colour 400ms ease-out both;}
+.lantern-review-shade {position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, transparent 40%, #19231b1a 50%, #19231be8 67%, #19231bf5 100%); animation: lantern-review-arrive 400ms ease-out both;}
+.lantern-epilogue {position: absolute; left: 68%; right: 4%; top: 8%; bottom: 7%; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #c7b98e66 transparent; padding: 0 6px 12px 0; opacity: 1;}
+.lantern-epilogue.is-changing, .lantern-review-art-caption.is-changing {opacity: 0;}
+.lantern-epilogue h2 {font-size: 26px; font-weight: 400; line-height: 1.5; margin: 0 0 26px; letter-spacing: .025em;}
+.lantern-epilogue p {font-size: 20px; font-weight: 400; line-height: 1.65; margin: 0 0 22px; text-wrap: pretty;}
+.lantern-epilogue .lantern-epilogue-progress {display: flex; justify-content: space-between; gap: 16px; font-size: 12px; letter-spacing: .12em; color: #c9c4ad; margin-bottom: 28px;}
+.lantern-epilogue-progress span {font-size: 11px; letter-spacing: .08em;}
+.lantern-epilogue .lantern-epilogue-caption {font-size: 14px; line-height: 1.75; color: #cdc9b7; margin-bottom: 20px;}
+.lantern-epilogue .lantern-epilogue-prompt {font-size: 16px; margin-bottom: 8px;}
+.lantern-epilogue .lantern-epilogue-feedback {font-size: 14px; color: #d8cfaf; margin: 16px 0 0; line-height: 1.65;}
+.lantern-epilogue-revisits {display: flex; gap: 24px; margin: 0 0 16px;}
+.lantern-epilogue-revisits button {padding: 5px 0 8px; min-height: 44px; background: transparent; color: #b6baaa; border: 0; border-bottom: 1px solid transparent; font-size: 16px; letter-spacing: .08em;}
+.lantern-epilogue-revisits button[aria-pressed="true"] {border-color: #d9c591; color: #fff1cc;}
+.lantern-epilogue-choices {display: grid; gap: 0; margin-bottom: 8px;}
+.lantern-epilogue-choices button {display: flex; align-items: baseline; gap: 14px; background: transparent; color: #e8e3d1; border: 0; border-bottom: 1px solid #d8cfaf35; padding: 14px 0; min-height: 48px; text-align: left; font-size: 20px; font-weight: 400; line-height: 1.5; transition: color 160ms, border-color 160ms;}
+.lantern-choice-index {flex: 0 0 18px; font-size: 11px; color: #aaa994; letter-spacing: .04em;}
+.lantern-epilogue-choices button:hover, .lantern-epilogue-choices button[aria-pressed="true"] {color: #ffe7ae; border-color: #d9c591;}
+.lantern-epilogue-choices button[aria-pressed="true"] .lantern-choice-index {color: #ffe7ae;}
+.lantern-epilogue-next, .lantern-epilogue-restart {background: transparent; color: #f3ead3; font-size: 16px; line-height: 1.6; padding: 10px 0; min-height: 44px;}
+.lantern-epilogue-next {display: flex; align-items: center; justify-content: space-between; gap: 20px; width: 100%; margin-top: 26px; border-top: 1px solid #d8cfaf55; text-align: left;}
+.lantern-epilogue-next span {font-family: serif; font-size: 24px;}
+.lantern-epilogue-restart {display: block; font-size: 13px; color: #bcbba8;}
+.lantern-epilogue-concept {margin: 28px 0 22px; padding-left: 18px; border-left: 1px solid #c1b28499;}
+.lantern-epilogue-concept .lantern-epilogue-caption {font-size: 12px; letter-spacing: .1em; margin-bottom: 8px;}
+.lantern-epilogue-concept h3 {font-size: 22px; font-weight: 400; margin: 0 0 12px; color: #f0dbab;}
+.lantern-epilogue-concept p:last-child {font-size: 18px; line-height: 1.7; margin-bottom: 0;}
+.lantern-epilogue-findings {margin: 0;}
+.lantern-epilogue-findings > div {margin-bottom: 22px;}
+.lantern-epilogue-findings dt {font-size: 12px; letter-spacing: .1em; color: #bcbba8; margin-bottom: 7px;}
+.lantern-epilogue-findings dd {margin: 0; font-size: 20px; line-height: 1.65;}
+.lantern-epilogue-history {font-size: 14px; line-height: 1.7; margin: 24px 0 8px; color: #d1cbb5;}
+.lantern-epilogue-history summary {cursor: pointer; padding: 10px 0;}
+.lantern-epilogue-history p {font-size: 16px; margin: 14px 0;}
+.lantern-epilogue-sources {display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 18px;}
+.lantern-epilogue-sources a {font-size: 11px; color: #aaa994; text-underline-offset: 4px;}
+.lantern-epilogue .lantern-review-colour-note {font-size: 11px; margin-top: 30px; color: #aaa994;}
+.lantern-review-art-caption {position: absolute; left: 3%; bottom: 4%; margin: 0; padding: 8px 12px; background: #1c241a9c; color: #ede3ca; font-size: 12px; line-height: 1.65; pointer-events: none; transition: opacity 220ms;}
+.lantern-review-art-caption span {display: block; font-size: 11px; color: #d0c8af;}
+.lantern-review button:focus-visible, .lantern-review a:focus-visible, .lantern-review summary:focus-visible {outline: 1px solid #e5d3a5; outline-offset: 4px;}
+@keyframes lantern-review-arrive {from {opacity: 0;} to {opacity: 1;}}
+@keyframes lantern-review-colour {from {opacity: 1;} to {opacity: 0;}}
+@media (min-width: 760px) and (max-height: 740px) {
+  .lantern-epilogue {top: 5%; bottom: 4%;}
+  .lantern-epilogue h2 {margin-bottom: 18px; font-size: 24px;}
+  .lantern-epilogue .lantern-epilogue-progress {margin-bottom: 18px;}
+  .lantern-epilogue-choices button {padding: 10px 0;}
+  .lantern-epilogue-next {margin-top: 18px;}
+}
+@media (max-width: 759px) {
+  .lantern-review-shade {background: linear-gradient(180deg, transparent 22%, #19231b33 33%, #19231bed 45%, #19231bf5 100%);}
+  .lantern-epilogue {left: 7%; right: 7%; top: 45%; bottom: 3%;}
+  .lantern-epilogue h2 {font-size: 23px; margin-bottom: 18px;}
+  .lantern-epilogue h2 br {display: none;}
+  .lantern-epilogue .lantern-epilogue-progress {margin-bottom: 14px;}
+  .lantern-epilogue-revisits {gap: 28px; margin-bottom: 10px;}
+  .lantern-epilogue-choices button {padding: 10px 0;}
+  .lantern-epilogue-next {margin-top: 18px;}
+  .lantern-review-art-caption {left: 5%; bottom: auto; top: 2%;}
+}
+@media (prefers-reduced-motion: reduce) {
+  .lantern-review-shade {animation: none;}
+  .lantern-review-colour {animation: none; opacity: 0;}
+  .lantern-review *, .lantern-review *::before {transition: none !important;}
+}

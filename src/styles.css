@@ -23,9 +23,22 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 .painting-world {position: absolute; inset: 0 auto auto 0; transform-origin: 0 0; will-change: transform;}
 .painting {width: 100%; height: 100%; display: block; pointer-events: none; filter: var(--painting-grade);}
 .painting-detail-tile {position: absolute; top: 0; height: 100%; display: block; pointer-events: none; filter: var(--painting-grade);}
+/* One movable observation area; the original painting stays intact. */
+.observation-light {position: absolute; inset: 0; pointer-events: none;}
+.observation-shade, .observation-warmth {position: absolute; inset: 0; pointer-events: none;}
+.observation-shade {backdrop-filter: grayscale(1); -webkit-backdrop-filter: grayscale(1);}
+.is-focusing .observation-shade {background: #2525251a; backdrop-filter: grayscale(1) brightness(.96); -webkit-backdrop-filter: grayscale(1) brightness(.96); mask-image: radial-gradient(circle at var(--focus-x) var(--focus-y), transparent 0, transparent calc(var(--focus-radius) * .64), #000 calc(var(--focus-radius) * 1.08)); -webkit-mask-image: radial-gradient(circle at var(--focus-x) var(--focus-y), transparent 0, transparent calc(var(--focus-radius) * .64), #000 calc(var(--focus-radius) * 1.08));}
+.observation-warmth {background: radial-gradient(circle at var(--focus-x) var(--focus-y), #f8d68609 0, transparent var(--focus-radius));}
+.focus-control {font-size: 12px; letter-spacing: .06em; white-space: nowrap;}
+.round-control.focus-control.is-on, .round-control.focus-control.is-on:hover {background: #47573c; color: #fff3d7; box-shadow: 0 0 0 1px #f0dfae80;}
+.focus-control:disabled {opacity: .4;}
+.focus-instruction {position: absolute; z-index: 5; pointer-events: none; left: 50%; transform: translateX(-50%); bottom: 86px; margin: 0; font-size: 11px; letter-spacing: .08em; color: #f4ead6; text-shadow: 0 1px 5px #201f19; text-align: center; width: max-content; max-width: calc(100% - 40px);}
+.focus-touch {display: none;}
+@media (pointer: coarse) {.focus-desktop {display: none;}.focus-touch {display: inline;}}
 .is-ready .painting {animation: painting-arrives 400ms var(--ease-soft) both;}
-.scene-vignette {position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg,#463b290c,transparent 120px,transparent 80%,#30291f28); box-shadow: inset 0 0 95px #44351e15; transition: background var(--motion-scene);}
+.scene-vignette {position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg,#2929290c,transparent 120px,transparent 80%,#1f1f1f28); box-shadow: inset 0 0 95px #29292915; transition: background var(--motion-scene);}
 .ending-visible .scene-vignette {background-color: #151a160d;}
+/* Keep failed-load recovery reachable above the introduction. */
 .actor-hitbox {position: absolute; transform: translate(-50%,-50%); padding: 0; background: transparent; cursor: pointer;}
 .actor-hitbox:focus-visible {outline: var(--outline-width,2px) dashed var(--red); outline-offset: 0; background: #f2e7c610;}
 .is-dragging .actor-hitbox {cursor: grabbing;}
@@ -100,6 +113,10 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 .clue-title {display: block; font-size: 14px; margin: 5px 0; letter-spacing: .05em;}
 .clue-description {display: block; color: #727961; font-size: 11px; line-height: 1.9;}
 .journal-objective {font-size: 11px; color: #646e53; line-height: 1.9; margin: 0;}
+.journal-section-note {font-size: 12px; color: #646e53; line-height: 1.8; margin: 0 0 12px;}
+.supplementary-clues {margin-top: 22px; padding-top: 19px; border-top: 1px solid var(--line);}
+.supplementary-clues h3 {font-size: 16px; font-weight: 500; margin: 0 0 10px; letter-spacing: .05em;}
+.supplementary-clues h3 span {display: block; margin-top: 6px; font-size: 11px; color: #646e53; letter-spacing: .02em;}
 .witness-paper {position: absolute; z-index: 9; width: min(350px,calc(100% - 40px)); left: 50%; top: 50%; transform: translate(-50%,-50%); animation: soft-arrive var(--motion-standard) var(--ease-ui) both;}
 .witness-paper.is-anchored {left: clamp(24px,var(--dialog-x,24px),calc(100vw - 374px)); top: clamp(94px,var(--dialog-y,120px),calc(100dvh - 330px)); transform: none;}
 .witness-quote {font-size: 17px; line-height: 2; color: #626e55; border-left: 2px solid #a8b291; padding-left: 14px; margin: 0 0 24px;}
@@ -147,7 +164,8 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
   .mission-chapter {font-size: 9px;}.mission-heading strong {font-size: 12px; white-space: normal; line-height: 1.7;}.mission-objective {font-size: 9px;}.mission-count {display: none;}.mission-chevron {width: 12px;}
   .mission-details {padding: 0 15px 15px;}.mission-details p {font-size: 10px;}.mission.is-collapsed {width: 190px;}
   .scene-settings {position: absolute; right: 0; top: 0; flex-direction: column; gap: 7px;}.round-control {width: 36px; height: 36px;}
-  .settings-paper {top: 149px; right: 18px; width: 200px;}
+  .settings-paper {top: 193px; right: 18px; width: 200px;}
+  .focus-instruction {bottom: 81px; font-size: 10px; line-height: 1.8;}
   .bottom-hud {left: max(18px,env(safe-area-inset-left)); right: max(18px,env(safe-area-inset-right)); bottom: max(20px,env(safe-area-inset-bottom)); gap: 10px;}
   .notebook-toggle {height: 44px; gap: 8px; padding: 0 12px; font-size: 11px;}.notebook-count {font-size: 16px; padding-left: 8px;}.notebook-toggle > .art-icon:last-child {display: none;}
   .hint-button {height: 44px; padding: 0 12px; font-size: 11px; gap: 6px;}.gesture-note {bottom: 61px; font-size: 10px;}
@@ -300,7 +318,44 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 .reading-paper .quiz-feedback p {font-size: 12px; line-height: 1.9; margin: 6px 0 0;}
 .reading-paper .quiz-note {font-size: 10px; color: #827b64; line-height: 1.8; margin: 10px 0 0;}
 
+/* The target portrait appears only before entering the painting. */
+.mission.memory-mission {position: relative; width: 280px; max-width: calc(100vw - 160px);}
+.memory-mission .mission-summary {padding: 13px 15px; gap: 10px; align-items: flex-start;}
+.memory-mission .mission-chapter {font-size: 14px; line-height: 1.6; letter-spacing: .04em;}
+.memory-mission .mission-objective {display: block; font-size: 13px; letter-spacing: 0; line-height: 1.7; margin-top: 5px;}
+.memory-mission .mission-details {width: 100%; padding: 19px 21px;}
+.memory-mission .mission-details p {font-size: 13px; line-height: 1.9;}
+.intro-reference {display: flex; align-items: center; gap: 13px; margin-top: 16px;}
+.intro-target-cutout {display: block; position: relative; width: 112px; height: 168px; flex: 0 0 auto; overflow: hidden; background: transparent;}
+.intro-target-cutout img {position: absolute; left: 50%; top: 50%; height: 114%; width: auto; max-width: none; transform: translate(-50%, -50%);}
+/* Original-pixel reference window; framing comes from chapter art data. */
+.intro-target-cutout.is-source-crop {mask-image: linear-gradient(transparent, #000 5%, #000 95%, transparent);}
+.intro-target-cutout.is-source-crop img {max-width: none;}
+.intro-reference p {font-size: 12px; line-height: 1.9; color: #606b52; margin: 0;}
+.intro-enter.is-ready-to-search {font-size: 17px; letter-spacing: .04em; gap: 12px;}
+.hint-paper p {font-size: 14px; line-height: 1.9; color: #485a47;}
+.clue-card:not(.is-collected):not(:disabled) {cursor: pointer; opacity: 1;}
+.clue-card:not(.is-collected):not(:disabled):hover {background: #d9c59424;}
+.journal-section-note {font-size: 13px; line-height: 1.9;}
+@media (max-width: 700px) {
+  .mission.memory-mission {width: 270px; max-width: calc(100vw - 85px);}
+  .memory-mission .mission-summary {padding: 10px 12px;}
+  .memory-mission .mission-objective {font-size: 12px;}
+  .memory-mission .mission-details {width: min(310px,calc(100vw - 36px));}
+  .intro-target-cutout {width: 84px; height: 126px;}
+  .notebook-toggle, .hint-button {font-size: 12px; letter-spacing: 0; padding-inline: 10px; gap: 6px;}
+  .notebook-toggle > span, .hint-button > span {white-space: nowrap;}
+  .notebook-toggle > .art-icon:first-child, .hint-button > .art-icon {width: 24px !important; height: 24px !important;}
+  .notebook-count {display: none;}
+}
+@media (max-height: 580px) {
+  .intro-reference {margin-top: 10px; gap: 10px;}
+  .intro-target-cutout {width: 70px; height: 105px;}
+  .intro-reference p {font-size: 11px;}
+}
+
 .knowledge-stage h2:focus {outline: none;}
 .stage-question .knowledge-quiz {border-top: 0; padding-top: 0; margin-top: 0;}
 .knowledge-back {display: block; padding: 12px 0; margin: 6px 0 12px; background: transparent; color: #72765e; font-size: 12px; text-decoration: underline; text-underline-offset: 4px;}
 .knowledge-back:hover {color: var(--red);}
+

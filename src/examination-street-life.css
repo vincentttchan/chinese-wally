@@ -1,0 +1,22 @@
+/* Chapter geometry and single-image adapters only. Interface artwork and typography
+   are supplied by the existing lantern stylesheets. */
+.examination-life {position:fixed;inset:0;font-family:'LXGW WenKai TC','Kaiti TC',serif;}
+.examination-life .el-source-head {display:block;width:48px;height:53px;object-fit:contain;}
+.examination-life .el-intro-position {position:absolute;z-index:30;left:6%;top:16%;width:min(390px,88vw);}
+
+.examination-life .el-note-position {--note-x:24px;--note-y:auto;--note-width:400px;bottom:100px;}
+.examination-life .el-four-collections {grid-template-columns:repeat(2,minmax(0,1fr));}
+.examination-life .el-single-illustration img {width:100%;height:100%;left:0;top:0;object-fit:contain;}
+.examination-life .el-collection-detail-image {width:148px;height:148px;object-fit:contain;}
+@media(max-width:700px){.examination-life .el-intro-position {left:16px;top:15%;max-height:75dvh;}.examination-life .el-note-position {bottom:88px;}}
+
+/* The enlarged reference is confined to the help card; the corner likeness stays small. */
+.examination-life .lantern-appearance-figure .el-source-head {width:112px;height:150px;max-width:100%;}
+
+.examination-life .lantern-character-reply:not(.emperor-speech-bubble) p {white-space:normal;}
+
+@media(min-width:700px){.examination-life .el-note-at-board {--note-x:calc(100% - 424px);}}
+
+.examination-life .el-single-token img {width:100%;height:100%;left:0;top:0;object-fit:contain;}
+.examination-life .el-object-note {--note-x:calc(100% - 424px);--note-y:160px;--note-width:400px;}
+.examination-life .collection-detail {max-width:460px;}
