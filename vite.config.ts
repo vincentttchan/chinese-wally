@@ -4,4 +4,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({command}) => ({
   base: command === 'build' ? '/chinese-wally/' : '/',
   plugins: [react()],
+  // Preserve both standard and WebKit backdrop filters. The default CSS
+  // minifier drops the standard declaration when these are paired.
+  build: {cssMinify: false},
 }));
