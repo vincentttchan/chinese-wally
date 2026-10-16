@@ -1,3 +1,15 @@
+import {LanternFireworksAnimation,lanternFireworksRegions,lanternFireworksFocus} from './LanternFireworksAnimation.tsx';
+import {LanternEmperorAnimation} from './LanternEmperorAnimation.tsx';
+import {LanternStoveAnimation} from './LanternStoveAnimation.tsx';
+import {LanternTheatreAnimation} from './LanternTheatreAnimation.tsx';
+import {LanternMonkAnimation} from './LanternMonkAnimation.tsx';
+import {LanternZhongKuiAnimation} from './LanternZhongKuiAnimation.tsx';
+import {lanternStoveRegions} from '../game/lanternStove.ts';
+import {lanternTheatreRegions} from '../game/lanternTheatre.ts';
+import {lanternMonkRegions} from '../game/lanternMonk.ts';
+import {lanternZhongKuiRegions} from '../game/lanternZhongKui.ts';
+import {assetPath} from '../game/assets.ts';
+import type {SceneActor} from '../game/level.ts';
 import { useEffect, useReducer, useRef, useState } from 'react';
 import { ChapterLinks } from './ChapterLinks.tsx';
 import { returnToChapterCover } from '../game/chapterCover.ts';
@@ -28,7 +40,23 @@ import '../lantern.css';
 import '../lantern-journal.css';
 import '../lantern-search-hud.css';
 
-const explorationActors = [...lanternActors, ...lanternFindings.map(item => item.actor), ...lanternAdditionalFindingActors];
+type MotionKind='fireworks'|'stove'|'theatre'|'monk'|'zhongkui'|'emperor';
+const motionRegions=[['fireworks',lanternFireworksRegions],['stove',lanternStoveRegions],['theatre',lanternTheatreRegions],['monk',lanternMonkRegions],['zhongkui',lanternZhongKuiRegions]] as const;
+const motionActors:SceneActor[]=motionRegions.flatMap(([kind,regions])=>regions.map((region,index)=>{
+  const xs=region.points.map(p=>p.x),ys=region.points.map(p=>p.y),left=Math.min(...xs),right=Math.max(...xs),top=Math.min(...ys),bottom=Math.max(...ys);
+  return {id:`motion-${kind}-${index}`,kind:'observation',name:{fireworks:'爆竹群像',stove:'爐旁取暖',theatre:'戲班群像',monk:'和尚戲裝',zhongkui:'鍾馗與小鬼'}[kind],x:(left+right)/2,y:(top+bottom)/2,width:right-left,height:bottom-top};
+}));
+const explorationActors = [...lanternActors, ...lanternFindings.map(item => item.actor), ...lanternAdditionalFindingActors,...motionActors];
+function motionFor(id:string):MotionKind|undefined{
+  if(id.startsWith('motion-'))return id.split('-')[1] as MotionKind;
+  if(id==='finding-stove'||['extra-15-0','extra-15-1'].includes(id))return 'stove';
+  if(id==='finding-costume'||id==='extra-7-8')return 'monk';
+  if(id==='finding-zhongkui'||[8,9,10,11].some(i=>id===`extra-11-${i}`))return 'zhongkui';
+  if([5,6,7,9,11].some(i=>id===`extra-7-${i}`))return 'theatre';
+  const actor=lanternActors.find(a=>a.id===id);
+  if(actor&&lanternFireworksRegions.some(region=>actor.x>=Math.min(...region.points.map(p=>p.x))&&actor.x<=Math.max(...region.points.map(p=>p.x))&&actor.y>=Math.min(...region.points.map(p=>p.y))&&actor.y<=Math.max(...region.points.map(p=>p.y))))return 'fireworks';
+}
+
 
 
 function LanternDialog({title, children, onClose, className = ''}: {title: string; children: ReactNode; onClose?: () => void; className?: string}) {
@@ -59,6 +87,8 @@ function LanternDialog({title, children, onClose, className = ''}: {title: strin
 
 export function LanternGame() {
   const [game, dispatch] = useReducer(lanternReducer, initialLanternState);
+  const [motion,setMotion]=useState<{kind:MotionKind;index?:number;finding?:LanternFinding;actorId:string;emperor?:boolean}|null>(null);
+  const motionBusy=useRef(false);
   const [intro, setIntro] = useState(0);
   const [entering,setEntering] = useState(false);
   const introRef = useRef<HTMLElement>(null);
@@ -106,7 +136,7 @@ export function LanternGame() {
   const studyActor = lanternActors.find(actor => actor.id === lanternTargets[studyAppearance.index].id)!;
   useEffect(() => {if (game.phase === 'found') setStudyAppearance({index: game.index, monochrome: false});}, [game.phase, game.index]);
   const active = game.phase !== 'intro' && ready;
-  const blocked = !active || game.phase === 'found' || Boolean(overlay);
+  const blocked = !active || game.phase === 'found' || Boolean(overlay) || Boolean(motion);
   useEffect(()=>{if(blocked)setSpark(null);},[blocked]);
   useEffect(()=>{setSpark(null);},[viewport.frame.width,viewport.frame.height]);
   const sound = useAmbience(blocked);
@@ -133,7 +163,7 @@ export function LanternGame() {
     };
     window.addEventListener('keydown', keys); return () => window.removeEventListener('keydown', keys);
   }, [active, blocked, reply]);
-  const restart = () => {dispatch({type: 'restart'}); visits.current={}; setReset(n => n + 1); setHint(null); setStudyCommand(null); setOverlay(null); setFocusing(true); setLearningComplete(false); setCollectionFeedback(null); setReply(null); setSpark(null);};
+  const restart = () => {setMotion(null);motionBusy.current=false;dispatch({type: 'restart'}); visits.current={}; setReset(n => n + 1); setHint(null); setStudyCommand(null); setOverlay(null); setFocusing(true); setLearningComplete(false); setCollectionFeedback(null); setReply(null); setSpark(null);};
   const fullscreen = async () => {
     try {if (document.fullscreenElement) await document.exitFullscreen(); else await document.documentElement.requestFullscreen();}
     catch {setNotice('此瀏覽器未能切換全螢幕；畫卷仍會填滿視窗。');}
@@ -196,7 +226,7 @@ export function LanternGame() {
       setJournalCount(previous=>Math.max(previous,count));
       setReceiving(true);
       setCollectionFeedback({token:performance.now(),newlyCollected,findingId:finding.id,count});
-      if(newlyCollected && count===6)setNotice('六則見聞集齊了，紀念頁已解鎖。');
+      if(newlyCollected && count===lanternFindings.length)setNotice('八則見聞集齊了，紀念頁已解鎖。');
       const settle=window.setTimeout(()=>{setReceiving(false);arrivalTimers.current.delete(settle);},650);
       arrivalTimers.current.add(settle);
     },newlyCollected?1500:900);
@@ -208,20 +238,33 @@ export function LanternGame() {
         y:(bounds?.top??viewport.frame.height-70)-(root?.top??0)+(bounds?.height??44)*.5},frame:viewport.frame});
 
   };
+  const finishMotion=(failed=false)=>{
+    const current=motion;if(!current)return;
+    setMotion(null);motionBusy.current=false;
+    if(failed){setNotice('動畫暫未載入，請再點一次重試。');return;}
+    if(current.emperor){dispatch({type:'inspect',id:current.actorId});return;}
+    if(current.finding)discoverFinding(current.finding,current.actorId);
+  };
   const inspect = (id: string) => {
-    if(blocked)return;
-    setReply(null);
-    const finding=lanternFindingAt(id);
-    setSpark(null);
-    if(game.phase === 'searching' && id===target.id){dispatch({type:'inspect',id});return;}
+    if(blocked||motionBusy.current)return;
+    setReply(null);setSpark(null);
+    if(game.phase==='searching'&&id===target.id){
+      motionBusy.current=true;setMotion({kind:'emperor',index:game.index,actorId:id,emperor:true});return;
+    }
     if(id==='background')return;
+    const kind=motionFor(id);
+    if(kind){
+      const category=kind==='monk'?'costume':kind;
+      const base=lanternFindings.find(item=>item.id===category);
+      const finding=kind==='fireworks'&&base?{...base,crop:{image:assetPath('art/lantern-festival/detail-17.jpg'),sourceWidth:1231,rect:[160,660,800,430] as const},actor:{...base.actor,id:'finding-fireworks-group',x:lanternFireworksFocus.x,y:lanternFireworksFocus.y}}:base;
+      motionBusy.current=true;setMotion({kind,actorId:finding?.actor.id??id,finding});return;
+    }
+    const finding=lanternFindingAt(id);
     if(finding)discoverFinding(finding,id);
-    const visit=visits.current[id]??0; visits.current[id]=visit+1;
-    const actor=lanternActors.find(item=>item.id===id);
-    if(!actor)return;
-    const text=lanternReplyFor(id,visit);
-    setReply({id,text,token:performance.now()});
-    if(!finding && game.phase==='searching')dispatch({type:'inspect',id});
+    const visit=visits.current[id]??0;visits.current[id]=visit+1;
+    const actor=lanternActors.find(item=>item.id===id);if(!actor)return;
+    setReply({id,text:lanternReplyFor(id,visit),token:performance.now()});
+    if(!finding&&game.phase==='searching')dispatch({type:'inspect',id});
   };
   const next = () => {
     if (game.index === lanternTargets.length - 1) setOverlay('ending');
@@ -261,16 +304,24 @@ export function LanternGame() {
         </div>
       </header>
       <footer className="lantern-footer" inert={blocked}>
-        <button ref={journalButton} className={`lantern-quiet-button lantern-journal-button ${receiving?'is-spark-arriving':''}`} onClick={openJournal}><BookOpen size={18}/>見聞冊 <span>{journalCount}／6</span></button>
+        <button ref={journalButton} className={`lantern-quiet-button lantern-journal-button ${receiving?'is-spark-arriving':''}`} onClick={openJournal}><BookOpen size={18}/>見聞冊 <span>{journalCount}／{lanternFindings.length}</span></button>
         <LanternNavigator window={scrollWindow} onNavigate={x => setHint({region: {x, y: .5}, token: Date.now()})}/>
         {game.phase === 'complete' ? <button className="lantern-quiet-button" onClick={() => setOverlay('ending')}>長卷的秘密</button> : <button className="lantern-quiet-button" onClick={seekHelp}><CircleHelp size={18}/>給我提示</button>}
       </footer>
       <div className="lantern-status" role="status" aria-live="polite">{notice || (sound.state === 'error' ? '音樂未能載入，可再次點擊重試。' : '')}</div>
     </>}
 
+    {motion&&<div className={`lantern-scene-motion ${focusing?'is-monochrome':''}`} style={{display:'contents'}}>
+      {motion.kind==='emperor'?<LanternEmperorAnimation index={motion.index!} viewport={viewport} onDone={()=>finishMotion()} onError={()=>finishMotion(true)}/>:
+      motion.kind==='fireworks'?<LanternFireworksAnimation viewport={viewport} onDone={()=>finishMotion()} onError={()=>finishMotion(true)}/>:
+      motion.kind==='stove'?<LanternStoveAnimation viewport={viewport} onDone={()=>finishMotion()} onError={()=>finishMotion(true)}/>:
+      motion.kind==='theatre'?<LanternTheatreAnimation viewport={viewport} onDone={()=>finishMotion()} onError={()=>finishMotion(true)}/>:
+      motion.kind==='monk'?<LanternMonkAnimation viewport={viewport} onDone={()=>finishMotion()} onError={()=>finishMotion(true)}/>:
+      <LanternZhongKuiAnimation viewport={viewport} onDone={()=>finishMotion()} onError={()=>finishMotion(true)}/>}
+    </div>}
     {collectionFeedback && !blocked && <LanternNotice key={collectionFeedback.token} findingId={collectionFeedback.findingId} quiet={!collectionFeedback.newlyCollected}
       text={`${collectionFeedback.newlyCollected?'已收集':'已收藏'}：${lanternJournalItems[collectionFeedback.findingId].title}`}
-      detail={collectionFeedback.newlyCollected?`元宵見聞 ${collectionFeedback.count}／6`:undefined}/>}
+      detail={collectionFeedback.newlyCollected?`元宵見聞 ${collectionFeedback.count}／${lanternFindings.length}`:undefined}/>}
     {spark && !blocked && <LanternSparkDiscovery key={spark.token} discovery={spark} onDone={()=>setSpark(null)}/>}
     {reply && !blocked && (()=>{
       const actor=lanternActors.find(item=>item.id===reply.id)!;
@@ -339,6 +390,6 @@ export function LanternGame() {
       <div className="lantern-paper-actions"><button className="lantern-text-button" onClick={restart}>重新尋人</button><button className="lantern-text-button" onClick={returnToChapterCover}>回到本章封面</button></div>
     </LanternDialog>}
     {overlay === 'ending' && <LanternEpilogue completed={learningComplete} collected={collected.length} onJournal={openJournal} initialScene={studyAppearance.index} viewport={viewport} onComplete={() => setLearningComplete(true)}
-      onLook={reviewLook} onClose={() => {setStudyCommand(null); setOverlay(null); if(collected.length<6)setNotice(`尋得皇帝，畫中仍有 ${6-collected.length} 則見聞等待發現。`);}} onRestart={restart}/>}
+      onLook={reviewLook} onClose={() => {setStudyCommand(null); setOverlay(null); if(collected.length<lanternFindings.length)setNotice(`尋得皇帝，畫中仍有 ${lanternFindings.length-collected.length} 則見聞等待發現。`);}} onRestart={restart}/>}
   </main>;
 }

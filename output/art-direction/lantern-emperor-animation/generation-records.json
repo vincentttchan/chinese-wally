@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-16",
+  "tool": "built-in image_gen",
+  "originalPixels": "Animated heads and hands are clipped directly from untouched original painting tiles; generated images repair only hidden background.",
+  "backgrounds": [
+    {
+      "id": "first",
+      "tile": 9,
+      "prompt": "Use case precise-object-edit. Edit target original historical painting detail-9.jpg. Make a precise temporary animation repair plate, SAME full composition, camera, aspect ratio and pixel alignment. seated brown/dark patterned-robed emperor in the UPPER RIGHT under yellow canopy, head around x1140..1232,y310..455 and exposed RIGHT-side hand with forearm around x1195..1255,y480..538. Remove ONLY that head including black cap and long black beard, fill behind it with existing yellow canopy. Remove only his right-side hand and lower forearm patch, reconstruct same adjacent brown patterned sleeve and lap behind it. KEEP body, other hand on left, chair, canopy and ENTIRE DIAGONAL foreground white balustrade perfectly fixed. All pixels outside these tiny head/forearm regions MUST remain unchanged. Do not remove whole person or create a new face, no new people, no extra objects, no text, no blur patch. Preserve source fine ink lines, aged silk texture, muted palette and brightness. The ORIGINAL head and hand pixels will be animated on top; this image is ONLY small hidden-background repair, not a restyled painting.",
+      "result": {
+        "output_hint": "Generated images are saved to /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98 as /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98/exec-d695a971-27b4-49a0-862b-1a8bfe1c18d4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "handFix": {
+        "prompt": "Precise image edit. Target is a temporary animation repair plate, no history claim. The seated HEADLESS brown-robed figure at upper RIGHT still has a WHITE HAND visible on the IMAGE-RIGHT side of his lap (not anatomical right). Erase ONLY that remaining white hand and nearby lower sleeve between approximately 91%..96% of image width and 33%..36% of image height. Fill the hand shape with the brown patterned robe behind it. Keep all robe folds and original image positions. The head was already removed; leave it removed. Full image composition MUST stay EXACTLY unchanged, no crop, no resize, no restyling, no new hands or face. Preserve all background, architecture, surrounding people and current headless body. This is only tiny repair to the last visible white hand.",
+        "result": {
+          "output_hint": "Generated images are saved to /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98 as /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98/exec-47f6a64d-948a-42eb-86d9-b8df262fc598.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        }
+      }
+    },
+    {
+      "id": "second",
+      "tile": 1,
+      "prompt": "Use case precise-object-edit. Edit target original historical painting detail-1.jpg. Make a precise temporary animation repair plate, SAME full composition, camera, aspect ratio and pixel alignment. standing ORANGE-robed bearded emperor at LEFT MIDDLE, head around x350..432,y455..603 and RIGHT-side exposed hand with sleeve forearm x384..468,y607..670. Remove ONLY head including black cap and long black beard; reconstruct exact horizontal palace wall and/or step lines behind the head, preserve red pillar immediately behind left. Remove only right-side hand and short forearm, reconstruct same adjacent orange robe and background. KEEP all orange body/dragon robe below, left arm, belt, ENTIRE HORIZONTAL foreground white balustrade at y724..880 and all nearby attendants fixed. All pixels outside these tiny head/forearm regions MUST remain unchanged. Do not remove whole person or create a new face, no new people, no extra objects, no text, no blur patch. Preserve source fine ink lines, aged silk texture, muted palette and brightness. The ORIGINAL head and hand pixels will be animated on top; this image is ONLY small hidden-background repair, not a restyled painting.",
+      "result": {
+        "output_hint": "Generated images are saved to /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98 as /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98/exec-b8a812c3-679d-4d4b-b310-278daea90aca.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "third",
+      "tile": 5,
+      "prompt": "Use case precise-object-edit. Edit target original historical painting detail-5.jpg. Make a precise temporary animation repair plate, SAME full composition, camera, aspect ratio and pixel alignment. seated PALE YELLOW-robed bearded emperor under canopy at LEFT MIDDLE. Head around x70..138,y390..535; RIGHT-side hand with forearm around x135..193,y535..605. Remove ONLY head including black cap and long black beard; reconstruct existing yellow canopy/ground and collar behind it, DO NOT alter red chair. Remove only right-side hand and short forearm, reconstruct same adjacent pale-yellow robe and canopy behind it. KEEP entire seated lower body, left hand on left knee, white shoes, chair, patterned mat, red platform and draped yellow canopy cords/poles fixed. All pixels outside these tiny head/forearm regions MUST remain unchanged. Do not remove whole person or create a new face, no new people, no extra objects, no text, no blur patch. Preserve source fine ink lines, aged silk texture, muted palette and brightness. The ORIGINAL head and hand pixels will be animated on top; this image is ONLY small hidden-background repair, not a restyled painting.",
+      "result": {
+        "output_hint": "Generated images are saved to /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98 as /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98/exec-f9dd2d66-c05b-4a0a-99b7-c26cc9a45f37.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "handFix": {
+        "prompt": "Precise image edit. Target is a temporary animation repair plate, no history claim. The seated HEADLESS pale-yellow robed figure at far LEFT still has a WHITE HAND visible on the IMAGE-RIGHT edge of his lap, just LEFT of the vertical hanging canopy curtain. Erase ONLY that remaining white hand at approximately 12%..16% of image width and 37%..40% of image height. Fill only its silhouette with same pale yellow sleeve/robe. Do not erase white shoe at bottom. Head was already removed, leave it removed. Full image composition MUST stay EXACTLY unchanged, no crop, no resize, no restyling, no new hands or face. Preserve all background, architecture, surrounding people and current headless body. This is only tiny repair to the last visible white hand.",
+        "result": {
+          "output_hint": "Generated images are saved to /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98 as /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98/exec-450fb390-1b00-432e-a248-7c3d046c8771.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        }
+      }
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+import {lanternStoveFinding} from './lanternStove.ts';
+import {lanternZhongKuiFinding} from './lanternZhongKui.ts';
 import { lanternLampLocations } from './lanternLampLocations.ts';
 import { assetPath } from './assets.ts';
 import { lanternActors, lanternLocation, lanternSize } from './lanternFestival.ts';
@@ -12,13 +14,15 @@ export type LanternFinding = {
 };
 /** These collectible illustrations are interpretations; observations use the original scroll. */
 export const lanternJournalAtlas = assetPath('art/collectibles/lantern-journal-atlas-v1.png');
-export const lanternJournalItems: Record<string,{index:number;title:string;mystery:string}> = {
+export const lanternJournalItems: Record<string,{index:number;title:string;mystery:string;image?:string;frame?:{image:string;width:number;height:number;rect:readonly [number,number,number,number]}}> = {
+  zhongkui:{index:0,title:'鍾馗戲裝',mystery:'一身威風',image:assetPath('art/collectibles/lantern-zhongkui-v1.png')},
+  stove:{index:0,title:'爐旁取暖',mystery:'一處暖意',image:assetPath('art/collectibles/lantern-stove-v2.png')},
   fireworks:{index:0,title:'一點元宵火光',mystery:'一點火光'},
   'standing-lamp':{index:1,title:'元宵花燈',mystery:'一盞燈影'},
   fish:{index:2,title:'魚形燈的祝願',mystery:'一尾游魚'},
   market:{index:3,title:'宮中的貨郎擔',mystery:'一擔小物'},
   acrobat:{index:4,title:'輪上的童子',mystery:'一場巧技'},
-  costume:{index:5,title:'演出中的裝扮',mystery:'一身戲裝'},
+  costume:{index:5,title:'和尚戲裝',mystery:'一身黃袍',frame:{image:assetPath('art/animations/lantern-monk/monk-poses-v1.png'),width:2172,height:724,rect:[55,85,470,610]}},
 };
 function finding(id: string, court: number, title: string, teaser: string, tileNumber: number,
   rect: ArtCrop['rect'], hit: readonly [number, number, number, number], quote: string, observe: string, note: string, next: string): LanternFinding {
@@ -49,9 +53,10 @@ export const lanternFindings: LanternFinding[] = [
   finding('acrobat',2,'輪上的童子','一個意想不到的立足點',10,[740,210,295,515],[890,380,200,330],
     '先看他站在哪裡，再看看下面的人！', '上面的童子站在輪上，下面的人如何把輪托起？',
     '畫家仔細交代上下兩人的姿勢與配合。從這一處雜耍，可以觀察人物動作如何帶出表演的驚險。', '這一庭院還有人以特別的裝扮參與演出。'),
-  finding('costume',2,'演出中的裝扮','兩種不同的演出裝扮',5,[955,1000,290,330],[1090,1140,240,320],
-    '看熱鬧，也別錯過我們的裝扮呀。', '比較兩人的帽子、衣服和手中物件，有哪些不同？',
-    '國博介紹這一段包含化裝演出與各式雜耍。人物不同的衣飾、神態和動作，讓表演場面各有情趣。', '回看這場元宵，你還注意到哪些細小的動作？'),
+  finding('costume',2,'和尚戲裝','笑臉與寬袍',7,[400,580,130,160],[465,660,120,150],
+    '看看我的笑臉，還有這身寬袍。', '看看光頭、笑臉、敞開的黃色寬袍，以及抬到頭旁的手。',
+    '戲班旁這位和尚裝扮人物穿着黃色寬袍，袒腹而立，一手抬在頭旁。下方的褐衣演出者遮住了他的部分衣袍。把這身裝扮與鍾馗的藍袍長鬚並看，可以觀察畫中不同的演出造型。', '再看看同場的鍾馗與小鬼，裝扮與姿勢有甚麼不同。'),
+  lanternStoveFinding,lanternZhongKuiFinding,
 ];
 const storageKey = 'chinese-wally:lantern-findings:v1';
 export function loadLanternFindings(): string[] {
@@ -69,8 +74,9 @@ const relatedPeople: Record<string, readonly string[]> = {
   fish:['festival-person-10'],
   market:[...[0,1,2,3,5,6,7,8,9].map(i=>`festival-person-${i}`),'extra-15-8','extra-15-10','extra-15-11'],
   acrobat:['festival-person-12','festival-person-13'],
-  costume:[...[22,23,24].map(i=>`festival-person-${i}`),...[8,9,10,11,12,13,14].map(i=>`extra-11-${i}`),
-    ...[1,2,3,4].map(i=>`extra-3-${i}`),...[8,9,10,12].map(i=>`extra-7-${i}`)],
+  costume:['extra-7-8'],
+  stove:['extra-15-0','extra-15-1'],
+  zhongkui:['extra-11-8','extra-11-9','extra-11-10','extra-11-11'],
 };
 const secondMarket = finding('market',1,'宮中的貨郎擔','另一副裝滿小物的擔子',15,[680,950,440,410],[900,1140,440,350],
   '這一副擔子，也有不少小物。','看看兩邊的箱子、上方的燈，以及圍看的人。',
@@ -87,6 +93,10 @@ const lampFindings = lanternLampLocations.map(([tile,x,y,width,height],index) =>
 });
 export const lanternAdditionalFindingActors = [secondMarket.actor,...lampFindings.map(item=>item.actor)];
 export function lanternFindingAt(actorId: string): LanternFinding | undefined {
+  if(actorId==='finding-fireworks-group'){
+    const base=lanternFindings.find(item=>item.id==='fireworks')!,point=lanternLocation(17,560,875);
+    return {...base,crop:{image:assetPath('art/lantern-festival/detail-17.jpg'),sourceWidth:1231,rect:[160,660,800,430]},actor:{...base.actor,id:actorId,x:point.x,y:point.y}};
+  }
   if(actorId===secondMarket.actor.id)return secondMarket;
   const lamp=lampFindings.find(item=>item.actor.id===actorId);
   if(lamp)return lamp;

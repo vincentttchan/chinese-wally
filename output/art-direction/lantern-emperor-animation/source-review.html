@@ -1,0 +1,8 @@
+<!doctype html><meta charset="utf-8"><title>皇帝動作對位參考</title><style>body{margin:0;background:#f1ead7;font:14px sans-serif;display:flex;flex-wrap:wrap;gap:20px}figure{margin:10px}.crop{position:relative;overflow:hidden}img{position:absolute;max-width:none}svg{position:absolute;inset:0}text{font:11px sans-serif;paint-order:stroke;stroke:#fff;stroke-width:3px;fill:#111}</style><body><script>
+for(const [tile,x,y,w,h] of [[9,1050,280,246,320],[1,285,435,220,280],[5,20,365,220,280]]){
+const f=document.createElement('figure');f.innerHTML=`<figcaption>detail-${tile} (${x}, ${y})</figcaption><div class="crop" style="width:${w*1.5}px;height:${h*1.5}px"><img src="/art/lantern-festival/detail-${tile}.jpg" style="width:${tile===5?1254:1296}px;left:${-x}px;top:${-y}px;transform:scale(1.5);transform-origin:${x}px ${y}px"><svg viewBox="${x} ${y} ${w} ${h}"></svg></div>`;
+document.body.append(f);const s=f.querySelector('svg');
+for(let xx=Math.ceil(x/25)*25;xx<x+w;xx+=25)s.innerHTML+=`<path d="M${xx} ${y} V${y+h}" stroke="#006699" stroke-opacity=".4" stroke-width=".6"/><text x="${xx}" y="${y+12}">${xx}</text>`;
+for(let yy=Math.ceil(y/25)*25;yy<y+h;yy+=25)s.innerHTML+=`<path d="M${x} ${yy} H${x+w}" stroke="#006699" stroke-opacity=".4" stroke-width=".6"/><text x="${x+2}" y="${yy}">${yy}</text>`;
+}
+</script>

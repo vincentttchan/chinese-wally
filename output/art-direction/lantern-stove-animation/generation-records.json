@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-16",
+  "tool": "built-in image_gen",
+  "reference": "public/art/lantern-festival/detail-15.jpg",
+  "jobs": [
+    {
+      "id": "red",
+      "prompt": "Use case precise-object-edit historical painting animation sprite. Reference original Ming court painting detail15. Extract ONLY the small RED-ROBED CHILD to the LEFT of the large red round brazier at upper left, source x5..145,y310..480. Pale child face in RIGHT profile, shaved forehead and small topknot, white collar, muted red patterned robe, dark belt, black shoes, bending slightly forward with both hands reaching RIGHT over fire. Do not extract green child or stove. ONE transparent 3:1 PNG strip with FOUR EXACT equal slots, one complete SAME child in each slot, fixed feet positions, same scale and bottom baseline. Four connected anatomical poses: 1 source leaning forward reaching hands toward warmth. 2 extends both open palms a little farther toward right, elbows and sleeves move naturally. 3 draws hands slightly toward chest with palms together, rubbing for warmth, shoulders and head react subtly; child remains planted at same spot. 4 settles toward source reaching pose. Preserve source exact head size, costume, short child proportions, Ming fine ink and muted aged silk paint style. Full head, robe, hands and boots contained inside each slot with alpha margins. No loose paper-cut hands, no scenery, no paper texture, no letters, no drum or props, no new people, no glow, no extra limbs. Truly transparent alpha.",
+      "result": {
+        "output_hint": "Generated images are saved to /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98 as /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98/exec-cebf7834-1f3c-474e-a0c9-6e5a721a3417.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "green",
+      "prompt": "Use case precise-object-edit historical painting animation sprite. Reference original Ming court painting detail15. Extract ONLY small GREEN-ROBED CHILD to RIGHT of large red round brazier at upper left, source x255..397,y310..475. Pale child face in LEFT profile, shaved forehead and small topknot, white collar, muted olive green patterned robe, dark belt with hanging red-white trinket, black shoes. Child bends forward reaching hands LEFT toward fire. NO red child, NO stove. ONE transparent 3:1 PNG sprite strip with FOUR EXACT equal slots, same full child in each slot, FIXED feet positions and baseline, same scale. Four connected anatomical poses: 1 source forward lean hands reaching left. 2 extends open palms a little farther LEFT, head leans toward warmth, elbows and sleeves follow naturally. 3 draws hands slightly toward chest with palms together rubbing for warmth, shoulders follow subtly. 4 returns toward original reaching pose. Small readable gestures. Preserve original identity, small child proportions, facing LEFT, costume and fine ink lines/subdued aged silk palette. Generous alpha margins around full child including hands and boots. No background, no paper, no captions, no other figures or objects, no isolated moving hands, no extra fingers/limbs. Truly transparent alpha.",
+      "result": {
+        "output_hint": "Generated images are saved to /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98 as /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98/exec-b6d30bdf-e804-4248-a9dd-257e2b3fcc4e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "background",
+      "prompt": "Precise-object-edit. Edit original Ming painting detail15 full 1296x1500 composition. Remove ONLY the TWO SMALL CHILDREN beside red round brazier at UPPER LEFT: red child x5..145 y310..480 and green child x255..397 y310..475. Repair only their silhouettes with the source stone floor, steps, mat or throne platform behind them, keeping source lines/perspective exactly. KEEP ENTIRE RED BRAZIER and its original flames/wood, golden throne, yellow rug, nearby standing lantern, red frame, ALL other people and architecture unchanged. Original full aspect and pixel alignment, no crop, no restyling. Match original aged silk muted color and texture; no bright patch, no blur, no new people, no letters. This is only hidden-background repair for a temporary animation overlay.",
+      "result": {
+        "output_hint": "Generated images are saved to /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98 as /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98/exec-f4164dc2-f105-4ab2-9165-e767344188ba.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    },
+    {
+      "id": "collectible",
+      "prompt": "Use case historical-scene collectible illustration based on original painting reference. Isolate ONLY the red decorated ROUND BRAZIER at UPPER LEFT between two warming children (x95..285,y365..510). Small shallow round red bowl, flared rim in oblique elevated view, ornate red pedestal with gold fine-line cloud scrolls and a dark opening, angular charcoal/wood and a few low ochre-orange flames above bowl. Preserve source form, proportions, Ming fine ink contour and muted aged red/gold paint, hand-painted appearance. One centered complete brazier with small low flames, true transparent background, generous alpha margins. No children, hands, floor, smoke cloud, scenery, shadow, text, badge or frame. This is a collectible motif matching existing historical painted game illustrations, no cartoon redesign, no neon glow, no modern stove.",
+      "result": {
+        "output_hint": "Generated images are saved to /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98 as /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98/exec-b65825da-fb8f-4015-a5af-b1424a9b5aeb.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    }
+  ],
+  "collectibleCleanup": {
+    "prompt": "Precise background-extraction edit of this collectible brazier image. Preserve the red and gold painted brazier, black wood and small low orange flames EXACTLY as they are. REMOVE ALL the diffuse brown/orange halo, glow, smoke, shadow and translucent haze around and beneath the object. Output a CLEAN cutout with actual alpha=0 everywhere outside the physical brazier and flames, including between protrusions. No black or paper background. No new glow, no ambient light, no shadow. Keep complete centered object, exact same shape, colors and style, generous transparent margins. The edge should be crisp fine painted ink, not faded into a halo.",
+    "result": {
+      "output_hint": "Generated images are saved to /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98 as /Users/vincentttchan99/.codex/generated_images/01a1423a-673f-7971-879d-17acd9daaf98/exec-5f117326-ac10-4307-8461-67ebb1abf25e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  }
+}

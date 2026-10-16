@@ -1,7 +1,8 @@
+import {LanternCollectionImage} from './LanternCollectionImage.tsx';
 import type { CSSProperties } from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { ArtCrop } from './ArtCrop.tsx';
-import { lanternFindings, lanternJournalAtlas, lanternJournalItems } from '../game/lanternCollection.ts';
+import { lanternFindings, lanternJournalItems } from '../game/lanternCollection.ts';
 import type { LanternFinding } from '../game/lanternCollection.ts';
 import type { SceneViewport } from './ScrollScene.tsx';
 import { lanternSize } from '../game/lanternFestival.ts';
@@ -16,12 +17,12 @@ function CollectionIllustration({finding,locked=false}:{finding:LanternFinding;l
   return <span className={`collection-illustration ${locked?'is-locked':''}`} role="img"
     aria-label={locked?'尚未收下的收藏輪廓':`${item.title} · 依原畫創作的收藏插畫`}
     style={{'--atlas-left':`${-(item.index%3)*100}%`,'--atlas-top':`${-Math.floor(item.index/3)*100}%`} as CSSProperties}>
-    <img src={lanternJournalAtlas} alt="" draggable={false}/>
+    <LanternCollectionImage findingId={finding.id}/>
   </span>;
 }
 
-export function LanternJournal({collected,onClose,onLook,compact}: {
-  collected: string[]; onClose: () => void;
+export function LanternJournal({collected,onClose,onLook,compact,findings=lanternFindings,sessionOnly=false}: {
+  collected: string[]; findings?: LanternFinding[]; sessionOnly?:boolean; onClose: () => void;
   onLook: (finding: LanternFinding, onSettled: () => void) => void; compact: boolean;
 }) {
   const [selected,setSelected] = useState<string | null>(null);
@@ -37,15 +38,15 @@ export function LanternJournal({collected,onClose,onLook,compact}: {
   const look = useRef(onLook); look.current = onLook;
   const closeAction = useRef(onClose); closeAction.current = onClose;
   const count = collected.length;
-  const finding = lanternFindings.find(item => item.id === selected);
-  const available = lanternFindings.filter(item=>collected.includes(item.id));
+  const finding = findings.find(item => item.id === selected);
+  const available = findings.filter(item=>collected.includes(item.id));
   useEffect(() => {
     const previous = document.activeElement as HTMLElement | null;
     ref.current?.focus({preventScroll:true});
     return () => {window.clearTimeout(timer.current); request.current++; if(previous?.isConnected)previous.focus({preventScroll:true});};
   }, []);
   useEffect(() => {
-    const current = lanternFindings.find(item=>item.id===selection.current);
+    const current = findings.find(item=>item.id===selection.current);
     if(!current || closing)return;
     const token = ++request.current;
     window.clearTimeout(timer.current);
@@ -61,7 +62,7 @@ export function LanternJournal({collected,onClose,onLook,compact}: {
   };
   const select = (id:string) => {
     if(moving || closing || id===selected && !souvenir)return;
-    const next = lanternFindings.find(item=>item.id===id);
+    const next = findings.find(item=>item.id===id);
     if(!next || !collected.includes(id))return;
     const token = ++request.current;
     setMoving(true);setLooking(false);
@@ -107,13 +108,13 @@ export function LanternJournal({collected,onClose,onLook,compact}: {
     <div className="collection-reading" inert={looking}>
       <header className="collection-header">
         <p className="collection-kicker">畫中拾趣</p>
-        <div className="collection-title-row"><h1>元宵見聞冊</h1><span>已收下 {count}／6</span></div>
+        <div className="collection-title-row"><h1>元宵見聞冊</h1><span>已收下 {count}／{findings.length}</span></div>
         <button className="collection-close" onClick={close} aria-label="合上見聞冊">×</button>
       </header>
       <div ref={pages} className="collection-pages" inert={moving||closing} aria-busy={moving}>
         {!selected&&!souvenir&&<div className="collection-overview">
           <p className="collection-introduction">把偶然看見的細節，收成自己的元宵。</p>
-          <div className="collection-grid">{lanternFindings.map(item=>{
+          <div className="collection-grid">{findings.map(item=>{
             const found=collected.includes(item.id);
             const art=lanternJournalItems[item.id];
             return <button className={`collection-item ${found?'is-collected':'is-undiscovered'}`} key={item.id} disabled={!found} onClick={()=>select(item.id)} aria-label={found?`翻閱${art.title}`:`未發現：${art.mystery}`}>
@@ -122,7 +123,7 @@ export function LanternJournal({collected,onClose,onLook,compact}: {
               <span className="collection-item-state" aria-hidden="true">{found?'已收下':''}</span>
             </button>;
           })}</div>
-          {count===6&&<button className="collection-souvenir-link" onClick={()=>overview(true)}>翻開我的宮廷元宵見聞 <span aria-hidden="true">→</span></button>}
+          {count===findings.length&&<button className="collection-souvenir-link" onClick={()=>overview(true)}>翻開我的宮廷元宵見聞 <span aria-hidden="true">→</span></button>}
         </div>}
         {finding&&!souvenir&&<article className="collection-detail" key={finding.id}>
           <button className="collection-back" onClick={()=>overview()}>← 全部收藏</button>
@@ -132,13 +133,13 @@ export function LanternJournal({collected,onClose,onLook,compact}: {
           <p className="collection-body">{finding.note}</p>
           <button className="collection-look" onClick={lookInPainting}>看看畫中位置 <span aria-hidden="true">↗</span></button>
           <p className="collection-next"><span>再留意一處</span>{finding.next}</p>
-          <details className="collection-source"><summary>畫作資料</summary><p>左側為原畫，收藏圖樣為依畫中細節製作的插畫。</p><a href="https://www.chnmuseum.cn/portals/0/web/zt/202102yuaxiao/" target="_blank" rel="noreferrer">中國國家博物館 · 畫作與節俗資料</a><p>收藏保存在此瀏覽器，重新尋人仍保留。</p></details>
+          <details className="collection-source"><summary>畫作資料</summary><p>{finding.id==='costume'?'左側為原畫；收藏圖樣沿用動畫的創作姿勢，完整衣袍含補繪部分，不作為原畫被遮擋處的依據。':'左側為原畫，收藏圖樣為依畫中細節製作的插畫。'}</p><a href="https://www.chnmuseum.cn/portals/0/web/zt/202102yuaxiao/" target="_blank" rel="noreferrer">中國國家博物館 · 畫作與節俗資料</a><p>{sessionOnly?'樣段收藏只在本次預覽保留。':'收藏保存在此瀏覽器，重新尋人仍保留。'}</p></details>
           {available.length>1&&<nav className="collection-detail-nav" aria-label="已收藏見聞"><button aria-label="上一則已收藏見聞" onClick={()=>step(-1)}>←</button><span>{available.findIndex(item=>item.id===selected)+1}／{available.length}</span><button aria-label="下一則已收藏見聞" onClick={()=>step(1)}>→</button></nav>}
         </article>}
         {souvenir&&<article className="collection-souvenir">
           <button className="collection-back" onClick={()=>overview()}>← 全部收藏</button>
           <h2>我的宮廷元宵見聞</h2>
-          <div className="collection-souvenir-art">{lanternFindings.map(item=><CollectionIllustration key={item.id} finding={item}/>)}</div>
+          <div className="collection-souvenir-art">{findings.map(item=><CollectionIllustration key={item.id} finding={item}/>)}</div>
           <p className="collection-body">從一點火光、一盞花燈，到貨郎擔與表演者，你已看見皇帝身邊的元宵。</p>
           <p className="collection-observe">人物的動作、器物的細線、節慶的祝願，都藏在這一卷裡。</p>
           <p className="collection-source">《憲宗元宵行樂圖》 · 中國國家博物館藏</p>

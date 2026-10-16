@@ -9,3 +9,6 @@
 .lantern-acrobat-preview-header {position:absolute;z-index:29;top:24px;left:28px;display:flex;gap:18px;align-items:center;color:#465039;background:#f2ead7ed;padding:12px 16px;font-size:14px;}
 .lantern-acrobat-preview-header a {color:inherit;text-underline-offset:4px;}
 @media(max-width:699px){.lantern-acrobat-preview-header {left:16px;top:16px;font-size:12px;padding:8px 12px;}.lantern-acrobat-caption {bottom:12px;}}
+
+/* In-game motion follows the player-controlled observation palette. */
+.lantern-scene-motion.is-monochrome > .lantern-acrobat-animation {filter:grayscale(1);}

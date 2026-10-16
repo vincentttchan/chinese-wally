@@ -7,6 +7,13 @@ import './page-motion.css';
 import './page-motion.js';
 import { LanternGame } from './components/LanternGame.tsx';
 import { LanternDialoguePreview } from './components/LanternDialoguePreview.tsx';
+import {LanternMonkPreview} from './components/LanternMonkPreview.tsx';
+import {LanternZhongKuiPreview} from './components/LanternZhongKuiPreview.tsx';
+import {LanternTheatrePreview} from './components/LanternTheatrePreview.tsx';
+import {LanternStovePreview} from './components/LanternStovePreview.tsx';
+import {LanternEmperorPreview} from './components/LanternEmperorPreview.tsx';
+import {LanternFireworksPreview} from './components/LanternFireworksPreview.tsx';
+import {LanternDrummerPreview} from './components/LanternDrummerPreview.tsx';
 import {LanternAcrobatPreview} from './components/LanternAcrobatPreview.tsx';
 import {LanternMarketPreview} from './components/LanternMarketPreview.tsx';
 import { LanternJournalPreview } from './components/LanternJournalPreview.tsx';
@@ -27,6 +34,6 @@ function GameRouter() {
     window.addEventListener('chapter-cover', cover);
     return () => {window.removeEventListener('hashchange', route);window.removeEventListener('chapter-cover', cover);};
   }, []);
-  return <Fragment key={coverRevision}>{routeHash === '#temple-fair' || routeHash === '#examination' || routeHash === '#examination-street-life-preview' ? <ExaminationStreetLifeGame/> : routeHash === '#kangqu-listening' ? <KangquGame/> : routeHash === '#market-preview' ? <LanternMarketPreview/> : routeHash === '#acrobat-preview' ? <LanternAcrobatPreview/> : routeHash === '#journal-preview' ? <LanternJournalPreview/> : routeHash === '#dialogue-preview' ? <LanternDialoguePreview/> : routeHash === '#legacy-practice' ? <App/> : <LanternGame/>}</Fragment>;
+  return <Fragment key={coverRevision}>{routeHash === '#temple-fair' || routeHash === '#examination' || routeHash === '#examination-street-life-preview' ? <ExaminationStreetLifeGame/> : routeHash === '#kangqu-listening' ? <KangquGame/> : routeHash === '#market-preview' ? <LanternMarketPreview/> : routeHash === '#monk-preview' ? <LanternMonkPreview/> : routeHash === '#zhongkui-preview' ? <LanternZhongKuiPreview/> : routeHash === '#theatre-preview' ? <LanternTheatrePreview/> : routeHash === '#stove-preview' ? <LanternStovePreview/> : routeHash === '#emperor-preview' ? <LanternEmperorPreview/> : routeHash === '#fireworks-preview' ? <LanternFireworksPreview/> : routeHash === '#drummer-preview' ? <LanternDrummerPreview/> : routeHash === '#acrobat-preview' ? <LanternAcrobatPreview/> : routeHash === '#journal-preview' ? <LanternJournalPreview/> : routeHash === '#dialogue-preview' ? <LanternDialoguePreview/> : routeHash === '#legacy-practice' ? <App/> : <LanternGame/>}</Fragment>;
 }
 createRoot(document.getElementById('root')!).render(<StrictMode><GameRouter/></StrictMode>);
