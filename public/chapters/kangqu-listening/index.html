@@ -219,7 +219,9 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 .intro-play-note {display: block; margin-top: 15px; font-size: 10px; letter-spacing: .15em; color: #74745d;}
 .intro-footer {position: absolute; bottom: clamp(28px,6vh,65px); left: clamp(28px,6vw,100px); margin: 0; font-size: 11px; letter-spacing: .16em; color: #75755f;}
 .intro-footer p {margin: 0;}
-.chapter-links {display: flex; gap: 20px; margin-top: 15px; font-size: 11px; letter-spacing: .08em;}
+.chapter-links {display: flex; flex-wrap: nowrap; gap: 18px; width: max-content; max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; margin-top: 15px; font-size: 11px; letter-spacing: .08em;}
+.chapter-links::-webkit-scrollbar {display: none;}
+.chapter-links > * {flex: 0 0 auto; white-space: nowrap;}
 .chapter-links a {display: inline-flex; align-items: center; gap: 7px; color: inherit; text-decoration: none; padding: 6px 0; border-bottom: 1px solid transparent;}
 .chapter-links a[aria-current] {color: var(--ink); border-color: #82785c88;}
 .chapter-links a:hover {color: var(--red);}
@@ -433,7 +435,7 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 }
 
 .lantern-game .intro-story {white-space: pre-line;}
-.introduction .chapter-links {flex-wrap: wrap; gap: 6px 18px; max-width: calc(100vw - 56px);}
+.introduction .chapter-links {gap: 6px 18px; max-width: calc(100vw - clamp(28px,6vw,100px) * 2);}
 
 /* Observation stays on the original scroll; notes have no panel or paper surface. */
 .lantern-game.is-near-view .lantern-hud, .lantern-game.is-near-view .lantern-footer {visibility: hidden;}
@@ -1077,18 +1079,6 @@ html:not(.chapter-motion-ready)::after{content:'';position:fixed;inset:0;z-index
 .kangqu-game #painting{opacity:0;transition:opacity 220ms ease-out}
 .kangqu-game #painting.is-decoded{opacity:1}
 .kangqu-game #layout[data-mode="intro"] #painting{opacity:0;transition:none}
-
-/* Keep the reference's single row and inherit shared navigation typography. */
-.kangqu-game .introduction .chapter-links {
-  flex-wrap:nowrap;
-  width:max-content;
-  max-width:calc(100vw - clamp(28px,6vw,100px) * 2);
-  overflow-x:auto;
-}
-.kangqu-game .introduction .chapter-links a {
-  flex:0 0 auto;
-  white-space:nowrap;
-}
 
 </style></head><body class="lantern-game kangqu-game"><main id="layout" class="immersive-game lantern-game kangqu-game" data-mode="intro">
   <section class="painting-area" aria-label="原畫觀看區"><div id="scene" class="scene scroll-viewport focused" tabindex="0" aria-label="拖曳看畫，雙指或滾輪縮放；點人物與細節">
@@ -16580,7 +16570,7 @@ function installMap(){
   async function presentationReady(token) {
     const deadline = performance.now() + 8000;
     while (token === generation) {
-      const cover = document.querySelector('.introduction:not([hidden])');
+      const cover = document.querySelector('.introduction:not([hidden]), [data-chapter-preview]');
       const scene = document.querySelector('.scroll-frame');
       const preview = document.querySelector('#painting-preview');
       if (document.querySelector('.scene-status button, #loading:not([hidden]) button')) return;

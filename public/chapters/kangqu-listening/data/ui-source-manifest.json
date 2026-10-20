@@ -3,11 +3,11 @@
   "sources": [
     {
       "path": "src/styles.css",
-      "sha256": "ce9c9cf4fcc879805dcd3169d01eed89c7facc1b1670055c5a0d469a246763ec"
+      "sha256": "00542482d8bab09f4a55fa9cc639d7bf8af825b9fd8c276661591e17bcc8c1e2"
     },
     {
       "path": "src/lantern.css",
-      "sha256": "b9e22cad10b8a9a490aef88277bfeb87fb1cf8dc40b6cca83e1c1f01543b0bd9"
+      "sha256": "a0da9ad0317e1a8cf45bcb1f1201f78983c62f03fc5367be52a2f6b6b3535e02"
     },
     {
       "path": "src/lantern-journal.css",

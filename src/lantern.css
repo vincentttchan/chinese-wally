@@ -70,7 +70,7 @@
 }
 
 .lantern-game .intro-story {white-space: pre-line;}
-.introduction .chapter-links {flex-wrap: wrap; gap: 6px 18px; max-width: calc(100vw - 56px);}
+.introduction .chapter-links {gap: 6px 18px; max-width: calc(100vw - clamp(28px,6vw,100px) * 2);}
 
 /* Observation stays on the original scroll; notes have no panel or paper surface. */
 .lantern-game.is-near-view .lantern-hud, .lantern-game.is-near-view .lantern-footer {visibility: hidden;}

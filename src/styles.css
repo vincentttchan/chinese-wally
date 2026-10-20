@@ -218,7 +218,9 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 .intro-play-note {display: block; margin-top: 15px; font-size: 10px; letter-spacing: .15em; color: #74745d;}
 .intro-footer {position: absolute; bottom: clamp(28px,6vh,65px); left: clamp(28px,6vw,100px); margin: 0; font-size: 11px; letter-spacing: .16em; color: #75755f;}
 .intro-footer p {margin: 0;}
-.chapter-links {display: flex; gap: 20px; margin-top: 15px; font-size: 11px; letter-spacing: .08em;}
+.chapter-links {display: flex; flex-wrap: nowrap; gap: 18px; width: max-content; max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; margin-top: 15px; font-size: 11px; letter-spacing: .08em;}
+.chapter-links::-webkit-scrollbar {display: none;}
+.chapter-links > * {flex: 0 0 auto; white-space: nowrap;}
 .chapter-links a {display: inline-flex; align-items: center; gap: 7px; color: inherit; text-decoration: none; padding: 6px 0; border-bottom: 1px solid transparent;}
 .chapter-links a[aria-current] {color: var(--ink); border-color: #82785c88;}
 .chapter-links a:hover {color: var(--red);}
