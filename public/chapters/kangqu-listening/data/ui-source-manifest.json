@@ -46,6 +46,10 @@
       "sha256": "b8659e89bd8b446b52a6ff87ae3fad6f487b810a4406a20af5049592c1600d74"
     },
     {
+      "path": "src/chapterNavigation.js",
+      "sha256": "11d36f34144836b2bc28f823df89921420ae9f33760e5d11d4771d27f574bda3"
+    },
+    {
       "path": "src/audio/chapterMusic.js",
       "sha256": "e5bdb981f6bf817ba38f19663faa850dcea4400db92c4299f865c32ed70730b9"
     },
