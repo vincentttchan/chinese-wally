@@ -42,12 +42,16 @@
       "sha256": "67e6d6329ae6c95016ef805392800d6ad566799b1555846fc62a651c946fb5b9"
     },
     {
+      "path": "src/game/historicalChapters.ts",
+      "sha256": "b8659e89bd8b446b52a6ff87ae3fad6f487b810a4406a20af5049592c1600d74"
+    },
+    {
       "path": "src/audio/chapterMusic.js",
       "sha256": "e5bdb981f6bf817ba38f19663faa850dcea4400db92c4299f865c32ed70730b9"
     },
     {
       "path": "src/audio/chapterMusicTracks.js",
-      "sha256": "45ca939918a4358a5ec29a93d41752c5f7ecbc53a76d6a4863ed60637e7af9fb"
+      "sha256": "5d429f4422b53de45ddb9e9ef545253c7e869e95673f662da878b177234ccf89"
     }
   ],
   "chapterAdaptations": [

@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-15",
+  "tool": "built-in image_gen",
+  "use": "UI face identification only; generated background-extraction redraw, not unchanged source pixels; original JPEG crops and painting remain available.",
+  "transparent_background": true,
+  "prompt": "Use case: background-extraction. Edit this original Chinese painting head crop for a game's face identification hint. Remove the brown silk background, landscape, props, adjacent people and all surrounding objects. Retain ONLY the central person's entire head, hair, headdress/crown including tall loops, ears, face, beard if present, and a very small collar/neck base. Preserve the original ink strokes, muted colors, facial identity, aged painting style and proportions as faithfully as possible. No invented face detail, no beautification, no modernization, no extra outlines, no shadows. Isolate on actual transparent alpha background with generous transparent padding, a single centered head at readable scale. Asset identifier {id}.",
+  "assets": [
+    {
+      "id": "C1",
+      "input": "head-C1.jpg",
+      "output": "head-C1-cutout.png",
+      "generated_source": "/Users/vincentttchan99/.codex/generated_images/01a13e42-403b-7b33-b340-93db6aef98e5/exec-501b8481-8ab5-49a0-b706-960f9073f5dd.png"
+    },
+    {
+      "id": "L1",
+      "input": "head-L1.jpg",
+      "output": "head-L1-cutout.png",
+      "generated_source": "/Users/vincentttchan99/.codex/generated_images/01a13e42-403b-7b33-b340-93db6aef98e5/exec-c364d363-e060-4b2d-88ea-b0ed13ca4733.png"
+    },
+    {
+      "id": "C2",
+      "input": "head-C2.jpg",
+      "output": "head-C2-cutout.png",
+      "generated_source": "/Users/vincentttchan99/.codex/generated_images/01a13e42-403b-7b33-b340-93db6aef98e5/exec-2476f14b-93f4-47ce-8094-5baa6d6da26c.png"
+    },
+    {
+      "id": "L8",
+      "input": "head-L8.jpg",
+      "output": "head-L8-cutout.png",
+      "generated_source": "/Users/vincentttchan99/.codex/generated_images/01a13e42-403b-7b33-b340-93db6aef98e5/exec-db1f0692-d61f-4070-8fd3-ee66a8e73571.png"
+    },
+    {
+      "id": "L9",
+      "input": "head-L9.jpg",
+      "output": "head-L9-cutout.png",
+      "generated_source": "/Users/vincentttchan99/.codex/generated_images/01a13e42-403b-7b33-b340-93db6aef98e5/exec-b0cc3d34-c5f0-414a-beec-4a67ce3651f7.png"
+    },
+    {
+      "id": "C4",
+      "input": "head-C4.jpg",
+      "output": "head-C4-cutout.png",
+      "generated_source": "/Users/vincentttchan99/.codex/generated_images/01a13e42-403b-7b33-b340-93db6aef98e5/exec-365aa111-df65-454f-b31c-2429ddd6bd3c.png"
+    }
+  ]
+}

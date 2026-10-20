@@ -3,15 +3,17 @@ import type {Ref} from 'react';
 import type {PaintingRegion} from '../game/lanternStudy.ts';
 import {lanternSize} from '../game/lanternFestival.ts';
 import type {SceneViewport} from './ScrollScene.tsx';
+import type {Size} from '../game/geometry.ts';
 
 /** An invisible, keyboard-accessible action registered to the original painting. */
-export function LanternPaintingTarget({region,viewport,label,onClick,monochrome=false,pressed,buttonRef,hint}: {
+export function LanternPaintingTarget({region,viewport,label,onClick,monochrome=false,pressed,buttonRef,hint,artworkSize=lanternSize}: {
   region:PaintingRegion;viewport:SceneViewport;label:string;onClick:()=>void;
   monochrome?:boolean;pressed?:boolean;buttonRef?:Ref<HTMLButtonElement>;hint?:string;
+  artworkSize?:Size;
 }) {
   const [showHint,setShowHint]=useState(false);
   useEffect(()=>{setShowHint(false);const timer=window.setTimeout(()=>setShowHint(true),7000);return()=>window.clearTimeout(timer);},[label]);
-  const points=region.points.map(point=>({x:viewport.view.x+point.x*lanternSize.width*viewport.view.scale,y:viewport.view.y+point.y*lanternSize.height*viewport.view.scale}));
+  const points=region.points.map(point=>({x:viewport.view.x+point.x*artworkSize.width*viewport.view.scale,y:viewport.view.y+point.y*artworkSize.height*viewport.view.scale}));
   const left=Math.min(...points.map(p=>p.x)),top=Math.min(...points.map(p=>p.y));
   const width=Math.max(1,Math.max(...points.map(p=>p.x))-left),height=Math.max(1,Math.max(...points.map(p=>p.y))-top);
   const clipPath=`polygon(${points.map(p=>`${(p.x-left)/width*100}% ${(p.y-top)/height*100}%`).join(',')})`;

@@ -1,0 +1,33 @@
+.luoshen-ribbon-animation{position:absolute;inset:0;z-index:24;overflow:hidden;pointer-events:none;}
+.luoshen-ribbon-world{position:absolute;left:0;top:0;transform-origin:0 0;}
+.luoshen-ribbon-patch{position:absolute;filter:var(--painting-grade);}
+.luoshen-ribbon-hit{position:absolute;transform:translate(-50%,-50%);z-index:25;background:transparent;padding:0;cursor:pointer;}
+.luoshen-ribbon-preview .lantern-observation-note{z-index:27;}
+.luoshen-ribbon-preview .lantern-market-preview-header{z-index:28;}
+.luoshen-ribbon-hit:focus-visible{outline:2px dashed #8e5d3e;outline-offset:6px;}
+@media(max-width:699px){.luoshen-ribbon-preview .lantern-market-preview-header{gap:12px;font-size:12px;}.luoshen-ribbon-animation .lantern-market-caption{bottom:16px;max-width:calc(100vw - 32px);white-space:nowrap;}}
+
+.luoshen-ribbon-preview .luoshen-ribbon-animation .lantern-market-caption{bottom:24px;}
+
+.luoshen-game:not(.luoshen-ribbon-preview) .luoshen-ribbon-animation .lantern-market-caption{bottom:100px;}
+.luoshen-game.has-observation-note:not(.luoshen-ribbon-preview) .luoshen-ribbon-animation .lantern-market-caption{display:none;}
+/* This optional animation reserves its paper using the actual clamped camera. */
+.luoshen-game.is-figure-context .lantern-footer{visibility:hidden;}
+.luoshen-game.is-figure-context .luoshen-ribbon-animation .lantern-market-caption{display:none;}
+.luoshen-game.is-figure-context .luoshen-note-compact,
+.luoshen-game.is-figure-context .luoshen-note-compact.is-above-detail{left:auto;right:24px;top:78px;bottom:auto;max-height:var(--figure-note-height);}
+.luoshen-game.is-figure-stacked .luoshen-note-compact,
+.luoshen-game.is-figure-stacked .luoshen-note-compact.is-above-detail{left:auto;right:16px;top:auto;bottom:max(16px,env(safe-area-inset-bottom));max-height:calc(var(--figure-note-height) - env(safe-area-inset-bottom));}
+.luoshen-figure-action-row{display:flex;align-items:center;gap:12px;}
+.luoshen-game .luoshen-figure-action-row .lantern-note-next{flex:1;width:auto;}
+.luoshen-game .luoshen-figure-action-row .lantern-note-secondary{flex:none;white-space:nowrap;}
+.is-figure-context .luoshen-note-primary .lantern-note-tabs{margin:0;}
+.luoshen-dragon-preview .lantern-observation-note{z-index:27;}
+.luoshen-dragon-preview .lantern-market-preview-header{z-index:28;}
+.luoshen-dragon-preview-nav{position:absolute;z-index:28;left:28px;top:24px;}
+.luoshen-dragon-preview-nav .round-control{width:44px;height:44px;}
+.luoshen-dragon-preview-nav .art-icon{transform:rotate(180deg);}
+@media(max-width:699px){.luoshen-dragon-preview-nav{left:16px;top:16px;}}
+
+/* The full toolbar would cover the birds above the dragon. The paper retains all actions. */
+.luoshen-game.is-dragon-context .lantern-hud{visibility:hidden;}

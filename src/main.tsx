@@ -18,6 +18,11 @@ import {LanternAcrobatPreview} from './components/LanternAcrobatPreview.tsx';
 import {LanternMarketPreview} from './components/LanternMarketPreview.tsx';
 import { LanternJournalPreview } from './components/LanternJournalPreview.tsx';
 import { KangquGame } from './components/KangquGame.tsx';
+import { QingmingGame } from './components/QingmingGame.tsx';
+import { LuoshenGame } from './components/LuoshenGame.tsx';
+import {LuoshenDragonPreview} from './components/LuoshenDragonPreview.tsx';
+import {LuoshenRibbonPreview} from './components/LuoshenRibbonPreview.tsx';
+import {LuoshenBirdPreview} from './components/LuoshenBirdPreview.tsx';
 
 function GameRouter() {
   const [routeHash, setRouteHash] = useState(window.location.hash);
@@ -34,6 +39,6 @@ function GameRouter() {
     window.addEventListener('chapter-cover', cover);
     return () => {window.removeEventListener('hashchange', route);window.removeEventListener('chapter-cover', cover);};
   }, []);
-  return <Fragment key={coverRevision}>{routeHash === '#temple-fair' || routeHash === '#examination' || routeHash === '#examination-street-life-preview' ? <ExaminationStreetLifeGame/> : routeHash === '#kangqu-listening' ? <KangquGame/> : routeHash === '#market-preview' ? <LanternMarketPreview/> : routeHash === '#monk-preview' ? <LanternMonkPreview/> : routeHash === '#zhongkui-preview' ? <LanternZhongKuiPreview/> : routeHash === '#theatre-preview' ? <LanternTheatrePreview/> : routeHash === '#stove-preview' ? <LanternStovePreview/> : routeHash === '#emperor-preview' ? <LanternEmperorPreview/> : routeHash === '#fireworks-preview' ? <LanternFireworksPreview/> : routeHash === '#drummer-preview' ? <LanternDrummerPreview/> : routeHash === '#acrobat-preview' ? <LanternAcrobatPreview/> : routeHash === '#journal-preview' ? <LanternJournalPreview/> : routeHash === '#dialogue-preview' ? <LanternDialoguePreview/> : routeHash === '#legacy-practice' ? <App/> : <LanternGame/>}</Fragment>;
+  return <Fragment key={coverRevision}>{routeHash === '#luoshen-dragon-playtest' ? <LuoshenGame key="dragon-trial" dragonTrial/> : routeHash === '#luoshen-dragon-preview' ? <LuoshenDragonPreview/> : routeHash === '#luoshen-ribbon-playtest' ? <LuoshenGame key="ribbon-trial" ribbonTrial/> : routeHash === '#luoshen-ribbon-preview' ? <LuoshenRibbonPreview/> : routeHash === '#luoshen-birds-playtest' ? <LuoshenGame key="birds-trial" birdTrial/> : routeHash === '#luoshen-birds-preview' ? <LuoshenBirdPreview/> : routeHash === '#luoshen' ? <LuoshenGame key="luoshen"/> : routeHash === '#qingming-shanghe' ? <QingmingGame/> : routeHash === '#temple-fair' || routeHash === '#examination' || routeHash === '#examination-street-life-preview' ? <ExaminationStreetLifeGame/> : routeHash === '#kangqu-listening' ? <KangquGame/> : routeHash === '#market-preview' ? <LanternMarketPreview/> : routeHash === '#monk-preview' ? <LanternMonkPreview/> : routeHash === '#zhongkui-preview' ? <LanternZhongKuiPreview/> : routeHash === '#theatre-preview' ? <LanternTheatrePreview/> : routeHash === '#stove-preview' ? <LanternStovePreview/> : routeHash === '#emperor-preview' ? <LanternEmperorPreview/> : routeHash === '#fireworks-preview' ? <LanternFireworksPreview/> : routeHash === '#drummer-preview' ? <LanternDrummerPreview/> : routeHash === '#acrobat-preview' ? <LanternAcrobatPreview/> : routeHash === '#journal-preview' ? <LanternJournalPreview/> : routeHash === '#dialogue-preview' ? <LanternDialoguePreview/> : routeHash === '#legacy-practice' ? <App/> : <LanternGame/>}</Fragment>;
 }
 createRoot(document.getElementById('root')!).render(<StrictMode><GameRouter/></StrictMode>);

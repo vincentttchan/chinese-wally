@@ -1,0 +1,23 @@
+2026-10-20 / Built-in imagegen / game interpretation, not restoration
+Reference: detail-8.jpg x1045 y165 width340 height280, enlarged to 850x700.
+
+PARTS V1
+Use case: historical-scene. Transparent game animation sprite atlas. Reference is a SINGLE dragon-like mythical beast from an ancient Chinese silk handscroll, not a generic modern dragon. Redraw this precise creature and pose as FOUR disconnected matching parts in a spacious 2x2 arrangement, no labels or lines. All parts fully within the image with clear transparent gaps.
+UPPER LEFT: main sinuous scaled BODY including its small S-curving neck BUT WITHOUT THE HEAD, three bent legs with small claws and soft olive tufts, a raised rump, tapering to a short rounded tail-root at lower right. Pose closely matches reference: upright curved neck at upper left; a diagonal narrow torso descending toward a broad rump at lower right. NO raised left foreleg (that is a separate part below). Leave rounded neck stump for head and rounded shoulder attachment for raised foreleg.
+UPPER RIGHT: small horned HEAD only with a short curved neck attachment, open small mouth looking toward upper LEFT, two slender whiskers and small curved ears/horns like the reference; NOT a giant antler crown, no flames. Keep the expression ancient and lightly drawn.
+LOWER LEFT: the ONE raised left FORELEG with three small slender hooked claws, shaped like the reference leftmost raised hand, bent elbow, a short rounded upper-arm attachment and small olive tuft. No other parts.
+LOWER RIGHT: a long thin tapering TAIL only, a gentle curve extending right then curling up at its tip, matching the reference, broad rounded root at its LEFT edge for overlap.
+Medium/style: ancient flat Chinese brush painting, warm subdued ochre body, sparse scale clusters rather than dense hundreds of scales, small soft olive tufts, muted dark sepia contours, slight uneven soft line, no modern vector sharpness, no glossy shading, no paper rectangle. Opaque painted interior with true transparent exterior. Simplify scales/feathers to match the simplified Luoshen figure and birds already used in game. The assembled creature should remain close to the reference's sparse sinuous silhouette and modest proportions. Avoid western wings, thick muscular fantasy dragon, fish, modern cartoon eyes, text, scenery, background, shadows or additional heads. Game interpretation, not restoration.
+
+TEMPORARY SILK PLATE
+Use case: precise-object-edit. Temporary animation background plate for ancient handscroll. Edit the reference crop to remove ONLY the single dragon-like creature completely: head, whiskers, curved neck, scaled torso, all four clawed limbs, olive tufts and curled tail. Replace removed marks with the same warm aged ochre silk weave and fine natural grain. Preserve exact crop composition and overall brown colour. Keep the tall fine vertical dark tree/trunk line on the far left, faint water/land texture below, all outer border pixels and source cracks/aging outside creature unchanged. No new animals, motifs, cloud, water ripple or blur. Do not draw paper edges or rectangular patches. This is generated temporary game fill, not historical conservation restoration.
+
+PARTS V2 ATTACHMENT REFINEMENT
+Use case: precise-object-edit. Edit ONLY the attachment end faces in this transparent animation atlas. Preserve the exact image dimensions, alpha background, every part's position, scale, silhouette, all claws, head, horns, whiskers, tail curve and all other drawing. The pale elliptical cross-section faces at six connection stumps look like cut wooden branches: replace those flat pale oval cut faces and their dark oval rings with continuous matching ochre scaled skin. Each attachment should be a softly rounded, solid coloured overlapping skin nub, no visible circular end-grain or severed cross-section. Do not add or move any part. Simplify only the darkest scale marks very slightly if necessary to match adjacent skin. Keep four disconnected matching parts, no text, no scene, genuine transparent background. This is a game rigging asset, not an anatomical cutaway.
+
+Outputs:
+V1: exec-7c9048d5-5910-4f37-b339-8b8feea1ab1c.png
+V2: exec-682c545f-8cce-4f78-981a-a95159ad0a3e.png
+Plate: exec-ec11d9e3-3b88-43d8-ad52-9976eaf93db6.png
+All 1382x1138. Generation originals copied unchanged into this folder.
+

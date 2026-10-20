@@ -1,0 +1,11 @@
+2026-10-20 / Built-in imagegen / dedicated lowered hind leg
+
+Use case: historical-scene. Production transparent cutout animation part. Image 1 is the original ancient Chinese dragon pose; image 2 is our existing redraw palette and thin sepia-line style. Create ONE INDEPENDENT RIGHT HIND LEG for that same small ancient dragon, NOT an upside-down copy of its raised front claw.
+Pose: upper thigh attachment at UPPER LEFT, thigh bends diagonally down/right into a modest knee with a small subdued olive tuft, narrow shin bends down/left, ankle near bottom center, THREE fine hooked toes extending mainly down and right. This is the LOWERED hind leg near the tail in original reference, with an intelligible knee-ankle-toe chain. Short compact leg, not a human leg or a walking dinosaur. Rounded scaled-skin attachment at top left to overlap under rump, no cut face/circular cross-section. Entire complete part visible with a generous transparent margin. Draw no other body, no tail, no torso, no foreleg, no backdrop.
+Ancient Chinese silk handscroll style: warm muted ochre, sparse small scale clusters, soft dark sepia outlines, small olive tuft, opaque painted interior, no modern vector crispness or glossy rendering. Match the original fine claw proportions; reduce the oversized claw/knuckle look of our front-limb redraw. True transparent background. No text, shadow, paper rectangle or labels. This is a game interpretation of a painted mythical creature, not an anatomical reconstruction.
+
+Reference 1: original detail-8.jpg crop x1045 y165 w340 h280.
+Reference 2: dragon-parts-v2.png, existing generated style.
+Output: exec-1087bd7d-ad21-47c9-a74b-5f83f7361f36.png, 1383x1137 RGBA. Copied unchanged as hindleg-v3.png.
+Upper/lower neck parts are decoded separately from the existing atlas, with overlapping trims and chained joints; no new neck raster was generated.
+

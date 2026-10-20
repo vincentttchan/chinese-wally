@@ -1,0 +1,8093 @@
+{
+  "range": [
+    12000,
+    24000
+  ],
+  "people": [
+    {
+      "id": "extra-person-river-001",
+      "bounds": [
+        12004,
+        713,
+        12055,
+        874
+      ],
+      "name": "屋前站立人物",
+      "evidence": "站在桌旁，身體朝前",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12030,
+        743
+      ]
+    },
+    {
+      "id": "extra-person-river-002",
+      "bounds": [
+        12049,
+        689,
+        12094,
+        804
+      ],
+      "name": "屋前後排人物",
+      "evidence": "站在另一人後方",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12072,
+        712
+      ]
+    },
+    {
+      "id": "extra-person-river-003",
+      "bounds": [
+        12051,
+        724,
+        12116,
+        901
+      ],
+      "name": "屋前背向人物",
+      "evidence": "背朝畫外，站在凳旁",
+      "replies": [
+        "我背着身子，先看衣紋吧。",
+        "肩頭和腳步也能辨認人。",
+        "看看我正面向哪一邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12084,
+        754
+      ]
+    },
+    {
+      "id": "extra-person-river-004",
+      "bounds": [
+        12109,
+        727,
+        12201,
+        845
+      ],
+      "name": "桌旁坐姿人物",
+      "evidence": "側坐在桌邊",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12155,
+        751
+      ]
+    },
+    {
+      "id": "extra-person-river-005",
+      "bounds": [
+        12342,
+        745,
+        12392,
+        820
+      ],
+      "name": "樹旁半身人物",
+      "evidence": "下身被樹石遮住",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12367,
+        760
+      ]
+    },
+    {
+      "id": "extra-person-river-006",
+      "bounds": [
+        12460,
+        867,
+        12582,
+        976
+      ],
+      "name": "屋旁坐地人物",
+      "evidence": "坐在地上，腿向外伸",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12495,
+        904
+      ]
+    },
+    {
+      "id": "extra-person-river-007",
+      "bounds": [
+        12704,
+        857,
+        12775,
+        959
+      ],
+      "name": "棚內坐姿人物",
+      "evidence": "在桌旁坐着",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12740,
+        877
+      ]
+    },
+    {
+      "id": "extra-person-river-008",
+      "bounds": [
+        12827,
+        885,
+        12895,
+        969
+      ],
+      "name": "棚前坐姿人物",
+      "evidence": "側身坐在棚下",
+      "replies": [
+        "在這裏坐一會兒。",
+        "你看，我的腿朝着這邊。",
+        "從我身旁再找些小細節吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12861,
+        902
+      ]
+    },
+    {
+      "id": "extra-person-river-009",
+      "bounds": [
+        12919,
+        865,
+        12977,
+        943
+      ],
+      "name": "棚內俯身人物",
+      "evidence": "身子向桌前傾",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12948,
+        881
+      ]
+    },
+    {
+      "id": "extra-person-river-010",
+      "bounds": [
+        12977,
+        940,
+        13031,
+        1003
+      ],
+      "name": "車棚後半身人物",
+      "evidence": "頭肩露在棚後",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13004,
+        953
+      ]
+    },
+    {
+      "id": "extra-person-river-011",
+      "bounds": [
+        12121,
+        1043,
+        12216,
+        1144
+      ],
+      "name": "傘下半身人物",
+      "evidence": "身子被前方屋頂遮住",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12168,
+        1063
+      ]
+    },
+    {
+      "id": "extra-person-river-012",
+      "bounds": [
+        12554,
+        1592,
+        12617,
+        1710
+      ],
+      "name": "屋角站立人物",
+      "evidence": "站在屋柱旁",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12586,
+        1616
+      ]
+    },
+    {
+      "id": "extra-person-river-013",
+      "bounds": [
+        12734,
+        1597,
+        12808,
+        1770
+      ],
+      "name": "牲畜旁人物",
+      "evidence": "站在牲畜旁，手臂向前",
+      "replies": [
+        "牠就在我身旁，慢些走。",
+        "留意我與牠隔着多遠。",
+        "人和牲畜都佔着這段路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12771,
+        1627
+      ]
+    },
+    {
+      "id": "extra-person-river-014",
+      "bounds": [
+        12870,
+        1514,
+        12926,
+        1617
+      ],
+      "name": "屋棚前人物",
+      "evidence": "站在棚子前",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12898,
+        1535
+      ]
+    },
+    {
+      "id": "extra-person-river-015",
+      "bounds": [
+        12955,
+        1572,
+        13029,
+        1682
+      ],
+      "name": "屋棚下半身人物",
+      "evidence": "下身被牲畜遮住",
+      "replies": [
+        "牠就在我身旁，慢些走。",
+        "留意我與牠隔着多遠。",
+        "人和牲畜都佔着這段路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12988,
+        1620
+      ]
+    },
+    {
+      "id": "extra-person-river-017",
+      "bounds": [
+        13191,
+        372,
+        13250,
+        485
+      ],
+      "name": "棚旁後排人物",
+      "evidence": "站在棚柱後",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13220,
+        395
+      ]
+    },
+    {
+      "id": "extra-person-river-018",
+      "bounds": [
+        13134,
+        450,
+        13183,
+        531
+      ],
+      "name": "屋簷旁人物",
+      "evidence": "身子被屋簷遮住",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13158,
+        466
+      ]
+    },
+    {
+      "id": "extra-person-river-019",
+      "bounds": [
+        13177,
+        442,
+        13240,
+        559
+      ],
+      "name": "人群左人物",
+      "evidence": "手收在身前",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13208,
+        465
+      ]
+    },
+    {
+      "id": "extra-person-river-020",
+      "bounds": [
+        13234,
+        454,
+        13274,
+        554
+      ],
+      "name": "人群中小人物",
+      "evidence": "站在兩人之間",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13254,
+        474
+      ]
+    },
+    {
+      "id": "extra-person-river-021",
+      "bounds": [
+        13267,
+        421,
+        13320,
+        553
+      ],
+      "name": "白衣站姿人物",
+      "evidence": "雙手收在腰前",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13294,
+        447
+      ]
+    },
+    {
+      "id": "extra-person-river-022",
+      "bounds": [
+        13323,
+        438,
+        13378,
+        579
+      ],
+      "name": "拱手人物",
+      "evidence": "雙臂收在胸前",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13350,
+        466
+      ]
+    },
+    {
+      "id": "extra-person-river-023",
+      "bounds": [
+        13368,
+        443,
+        13408,
+        532
+      ],
+      "name": "人群後方人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13388,
+        461
+      ]
+    },
+    {
+      "id": "extra-person-river-024",
+      "bounds": [
+        13395,
+        457,
+        13435,
+        555
+      ],
+      "name": "人群後排人物",
+      "evidence": "站在長袍人後",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13415,
+        477
+      ]
+    },
+    {
+      "id": "extra-person-river-025",
+      "bounds": [
+        13212,
+        514,
+        13274,
+        581
+      ],
+      "name": "屋簷前半身人物",
+      "evidence": "下身被屋簷遮住",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13227,
+        541
+      ]
+    },
+    {
+      "id": "extra-person-river-026",
+      "bounds": [
+        13289,
+        510,
+        13367,
+        662
+      ],
+      "name": "背向短衣人物",
+      "evidence": "背朝畫外，手臂放低",
+      "replies": [
+        "我背着身子，先看衣紋吧。",
+        "肩頭和腳步也能辨認人。",
+        "看看我正面向哪一邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13328,
+        540
+      ]
+    },
+    {
+      "id": "extra-person-river-027",
+      "bounds": [
+        13361,
+        500,
+        13413,
+        652
+      ],
+      "name": "側身長袍人物",
+      "evidence": "側身朝向同伴",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13388,
+        515
+      ]
+    },
+    {
+      "id": "extra-person-river-028",
+      "bounds": [
+        13399,
+        494,
+        13450,
+        645
+      ],
+      "name": "長袍站姿人物",
+      "evidence": "站在同伴右邊",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13425,
+        507
+      ]
+    },
+    {
+      "id": "extra-person-river-029",
+      "bounds": [
+        13370,
+        349,
+        13413,
+        438
+      ],
+      "name": "棚內人物",
+      "evidence": "站在柱旁",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13392,
+        367
+      ]
+    },
+    {
+      "id": "extra-person-river-030",
+      "bounds": [
+        13400,
+        300,
+        13443,
+        390
+      ],
+      "name": "棚內後方人物",
+      "evidence": "露出頭肩和上身",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13422,
+        318
+      ]
+    },
+    {
+      "id": "extra-person-river-031",
+      "bounds": [
+        13444,
+        322,
+        13474,
+        375
+      ],
+      "name": "桌後不明人形候選",
+      "evidence": "桌後墨線、掛物與棚架交疊，未能分辨獨立頭部與身體；不據此補畫人形。",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "excluded",
+      "reason": "桌後墨線、掛物與棚架交疊，未能分辨獨立頭部與身體；不據此補畫人形。"
+    },
+    {
+      "id": "extra-person-river-032",
+      "bounds": [
+        13471,
+        533,
+        13563,
+        690
+      ],
+      "name": "肩擔行人",
+      "evidence": "肩上橫着一根長擔",
+      "replies": [
+        "擔子在肩，借過一下。",
+        "看看擔子兩端的東西。",
+        "走路時也得顧着肩頭。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13517,
+        563
+      ]
+    },
+    {
+      "id": "extra-person-river-033",
+      "bounds": [
+        13527,
+        393,
+        13585,
+        496
+      ],
+      "name": "牲畜前人物",
+      "evidence": "手臂向前伸",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13556,
+        414
+      ]
+    },
+    {
+      "id": "extra-person-river-034",
+      "bounds": [
+        13824,
+        266,
+        13874,
+        350
+      ],
+      "name": "樹後人物",
+      "evidence": "身子被樹枝遮住",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13849,
+        283
+      ]
+    },
+    {
+      "id": "extra-person-river-035",
+      "bounds": [
+        13577,
+        640,
+        13673,
+        758
+      ],
+      "name": "圓器旁俯身人物",
+      "evidence": "彎腰面向地上圓器",
+      "replies": [
+        "我正彎着身子呢。",
+        "看看我身前的東西。",
+        "從我的站姿再看周圍吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13600,
+        651
+      ]
+    },
+    {
+      "id": "extra-person-river-036",
+      "bounds": [
+        13697,
+        639,
+        13751,
+        749
+      ],
+      "name": "棚旁蹲姿人物",
+      "evidence": "蹲在俯身人旁",
+      "replies": [
+        "我正彎着身子呢。",
+        "看看我身前的東西。",
+        "從我的站姿再看周圍吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13724,
+        661
+      ]
+    },
+    {
+      "id": "extra-person-river-037",
+      "bounds": [
+        13729,
+        640,
+        13778,
+        717
+      ],
+      "name": "棚後坐姿人物",
+      "evidence": "坐在棚子後方",
+      "replies": [
+        "在這裏坐一會兒。",
+        "你看，我的腿朝着這邊。",
+        "從我身旁再找些小細節吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13754,
+        655
+      ]
+    },
+    {
+      "id": "extra-person-river-038",
+      "bounds": [
+        13346,
+        668,
+        13409,
+        857
+      ],
+      "name": "頂物行人",
+      "evidence": "頭上頂着一件方物",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13378,
+        698
+      ]
+    },
+    {
+      "id": "extra-person-river-039",
+      "bounds": [
+        13236,
+        834,
+        13286,
+        897
+      ],
+      "name": "店內半身人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13261,
+        847
+      ]
+    },
+    {
+      "id": "extra-person-river-040",
+      "bounds": [
+        13293,
+        872,
+        13348,
+        951
+      ],
+      "name": "店門坐姿人物",
+      "evidence": "側坐在門內",
+      "replies": [
+        "在這裏坐一會兒。",
+        "你看，我的腿朝着這邊。",
+        "從我身旁再找些小細節吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13320,
+        888
+      ]
+    },
+    {
+      "id": "extra-person-river-041",
+      "bounds": [
+        13126,
+        963,
+        13184,
+        1064
+      ],
+      "name": "桌邊坐姿人物",
+      "evidence": "坐在桌角",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13155,
+        983
+      ]
+    },
+    {
+      "id": "extra-person-river-042",
+      "bounds": [
+        13315,
+        928,
+        13392,
+        1095
+      ],
+      "name": "桌前站立人物",
+      "evidence": "站在桌前，面向同伴",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13354,
+        958
+      ]
+    },
+    {
+      "id": "extra-person-river-043",
+      "bounds": [
+        13394,
+        890,
+        13453,
+        981
+      ],
+      "name": "桌後站立人物",
+      "evidence": "站在椅後",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13445,
+        910
+      ]
+    },
+    {
+      "id": "extra-person-river-044",
+      "bounds": [
+        13408,
+        960,
+        13503,
+        1127
+      ],
+      "name": "牲畜左人物",
+      "evidence": "手臂伸向前方",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13425,
+        973
+      ]
+    },
+    {
+      "id": "extra-person-river-045",
+      "bounds": [
+        13491,
+        958,
+        13556,
+        1022
+      ],
+      "name": "牲畜旁半身人物",
+      "evidence": "下身被牲畜遮住",
+      "replies": [
+        "牠就在我身旁，慢些走。",
+        "留意我與牠隔着多遠。",
+        "人和牲畜都佔着這段路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13524,
+        971
+      ]
+    },
+    {
+      "id": "extra-person-river-046",
+      "bounds": [
+        13550,
+        970,
+        13637,
+        1090
+      ],
+      "name": "彎腰人物",
+      "evidence": "低頭彎腰向同伴",
+      "replies": [
+        "我正彎着身子呢。",
+        "看看我身前的東西。",
+        "從我的站姿再看周圍吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13561,
+        980
+      ]
+    },
+    {
+      "id": "extra-person-river-047",
+      "bounds": [
+        13726,
+        1160,
+        13787,
+        1254
+      ],
+      "name": "屋頂後人物",
+      "evidence": "頭肩露在屋頂後",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13756,
+        1179
+      ]
+    },
+    {
+      "id": "extra-person-river-048",
+      "bounds": [
+        13266,
+        1229,
+        13343,
+        1398
+      ],
+      "name": "牽牲畜人物",
+      "evidence": "面向牲畜，手臂前伸",
+      "replies": [
+        "牠就在我身旁，慢些走。",
+        "留意我與牠隔着多遠。",
+        "人和牲畜都佔着這段路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13304,
+        1259
+      ]
+    },
+    {
+      "id": "extra-person-river-049",
+      "bounds": [
+        13410,
+        1332,
+        13470,
+        1440
+      ],
+      "name": "牲畜前小人物",
+      "evidence": "身子被牲畜和車轅遮住",
+      "replies": [
+        "牠就在我身旁，慢些走。",
+        "留意我與牠隔着多遠。",
+        "人和牲畜都佔着這段路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13440,
+        1354
+      ]
+    },
+    {
+      "id": "extra-person-river-050",
+      "bounds": [
+        13197,
+        1515,
+        13277,
+        1660
+      ],
+      "name": "車輪旁人物",
+      "evidence": "站在大車輪旁",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13237,
+        1544
+      ]
+    },
+    {
+      "id": "extra-person-river-051",
+      "bounds": [
+        13034,
+        1581,
+        13129,
+        1728
+      ],
+      "name": "車棚前背向人物",
+      "evidence": "背朝畫外",
+      "replies": [
+        "我背着身子，先看衣紋吧。",
+        "肩頭和腳步也能辨認人。",
+        "看看我正面向哪一邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13082,
+        1610
+      ]
+    },
+    {
+      "id": "extra-person-river-052",
+      "bounds": [
+        13372,
+        1534,
+        13410,
+        1574
+      ],
+      "name": "屋頂後頭肩人物",
+      "evidence": "只有頭肩露出",
+      "replies": [
+        "只露出頭肩，也看得到我。",
+        "別把旁邊的物件當成衣裳。",
+        "看看我和身旁的人隔着多遠。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13391,
+        1542
+      ]
+    },
+    {
+      "id": "extra-person-river-053",
+      "bounds": [
+        14642,
+        344,
+        14677,
+        400
+      ],
+      "name": "岸邊小人物",
+      "evidence": "站在同伴左側",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        14660,
+        355
+      ]
+    },
+    {
+      "id": "extra-person-river-054",
+      "bounds": [
+        14673,
+        335,
+        14708,
+        410
+      ],
+      "name": "岸邊長衣人物",
+      "evidence": "站在河岸",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        14690,
+        350
+      ]
+    },
+    {
+      "id": "extra-person-river-055",
+      "bounds": [
+        14763,
+        346,
+        14810,
+        412
+      ],
+      "name": "挑擔人物",
+      "evidence": "肩上橫着擔子",
+      "replies": [
+        "擔子在肩，借過一下。",
+        "看看擔子兩端的東西。",
+        "走路時也得顧着肩頭。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        14786,
+        359
+      ]
+    },
+    {
+      "id": "extra-person-river-056",
+      "bounds": [
+        14499,
+        609,
+        14560,
+        688
+      ],
+      "name": "屋後人物",
+      "evidence": "身子被屋頂遮住",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        14530,
+        625
+      ]
+    },
+    {
+      "id": "extra-person-river-057",
+      "bounds": [
+        14570,
+        633,
+        14607,
+        676
+      ],
+      "name": "屋頂後頭肩人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "只露出頭肩，也看得到我。",
+        "別把旁邊的物件當成衣裳。",
+        "看看我和身旁的人隔着多遠。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        14588,
+        642
+      ]
+    },
+    {
+      "id": "extra-person-river-058",
+      "bounds": [
+        14911,
+        803,
+        14974,
+        842
+      ],
+      "name": "棚頂後半身人物",
+      "evidence": "露出頭肩和手臂",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        14920,
+        825
+      ]
+    },
+    {
+      "id": "extra-person-river-059",
+      "bounds": [
+        14390,
+        1044,
+        14439,
+        1167
+      ],
+      "name": "店門站立人物",
+      "evidence": "站在門柱旁",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        14415,
+        1069
+      ]
+    },
+    {
+      "id": "extra-person-river-060",
+      "bounds": [
+        14443,
+        1060,
+        14491,
+        1189
+      ],
+      "name": "桌左坐姿人物",
+      "evidence": "側坐在桌邊",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        14467,
+        1086
+      ]
+    },
+    {
+      "id": "extra-person-river-061",
+      "bounds": [
+        14526,
+        1057,
+        14574,
+        1110
+      ],
+      "name": "桌後人物",
+      "evidence": "伏在桌後",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        14550,
+        1068
+      ]
+    },
+    {
+      "id": "extra-person-river-062",
+      "bounds": [
+        14556,
+        1065,
+        14619,
+        1178
+      ],
+      "name": "桌右坐姿人物",
+      "evidence": "側坐在桌右",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        14560,
+        1073
+      ]
+    },
+    {
+      "id": "extra-person-river-063",
+      "bounds": [
+        14735,
+        1172,
+        14818,
+        1251
+      ],
+      "name": "屋頂後人物",
+      "evidence": "手臂向前，身子被屋頂遮住",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        14776,
+        1188
+      ]
+    },
+    {
+      "id": "extra-person-river-064",
+      "bounds": [
+        15033,
+        1132,
+        15100,
+        1251
+      ],
+      "name": "岸邊背向人物",
+      "evidence": "背朝畫外站在河岸",
+      "replies": [
+        "我背着身子，先看衣紋吧。",
+        "肩頭和腳步也能辨認人。",
+        "看看我正面向哪一邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15066,
+        1156
+      ]
+    },
+    {
+      "id": "extra-person-river-065",
+      "bounds": [
+        14882,
+        352,
+        14917,
+        405
+      ],
+      "name": "舟旁立姿人物",
+      "evidence": "站在船身邊",
+      "replies": [
+        "船篷遮着身子，我還在這裏。",
+        "我的帽子露在篷架旁。",
+        "沿着船舷再看身旁的人吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        14900,
+        363
+      ]
+    },
+    {
+      "id": "extra-person-river-067",
+      "bounds": [
+        15207,
+        77,
+        15228,
+        94
+      ],
+      "name": "遠舟細小人形候選",
+      "evidence": "僅見船篷上方短墨線，無法確定是頭部或船篷構件；不設猜測熱區。",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "excluded",
+      "reason": "僅見船篷上方短墨線，無法確定是頭部或船篷構件；不設猜測熱區。"
+    },
+    {
+      "id": "extra-person-river-068",
+      "bounds": [
+        15628,
+        230,
+        15650,
+        294
+      ],
+      "name": "船尾左人物",
+      "evidence": "站在船尾，面向同伴",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15639,
+        243
+      ]
+    },
+    {
+      "id": "extra-person-river-069",
+      "bounds": [
+        15647,
+        239,
+        15674,
+        308
+      ],
+      "name": "船尾中人物",
+      "evidence": "站在兩人之間",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15660,
+        253
+      ]
+    },
+    {
+      "id": "extra-person-river-070",
+      "bounds": [
+        15674,
+        244,
+        15702,
+        308
+      ],
+      "name": "船尾右人物",
+      "evidence": "手放在船尾橫杆旁",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15688,
+        257
+      ]
+    },
+    {
+      "id": "extra-person-river-071",
+      "bounds": [
+        15810,
+        393,
+        15859,
+        464
+      ],
+      "name": "船頭左俯身人物",
+      "evidence": "彎腰靠近船頭",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15834,
+        407
+      ]
+    },
+    {
+      "id": "extra-person-river-072",
+      "bounds": [
+        15842,
+        384,
+        15881,
+        458
+      ],
+      "name": "船頭後排人物",
+      "evidence": "頭肩露在同伴後方",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15862,
+        399
+      ]
+    },
+    {
+      "id": "extra-person-river-073",
+      "bounds": [
+        15866,
+        404,
+        15906,
+        476
+      ],
+      "name": "船頭前排人物",
+      "evidence": "彎腰伸手向船頭",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15886,
+        418
+      ]
+    },
+    {
+      "id": "extra-person-river-074",
+      "bounds": [
+        15898,
+        396,
+        15935,
+        470
+      ],
+      "name": "船頭右人物",
+      "evidence": "站在斜長杆旁",
+      "replies": [
+        "長杆在手，先站穩些。",
+        "留意杆子伸向哪一邊。",
+        "我的手正靠近這根杆。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15916,
+        411
+      ]
+    },
+    {
+      "id": "extra-person-river-075",
+      "bounds": [
+        15037,
+        367,
+        15075,
+        400
+      ],
+      "name": "停泊舟半身人物",
+      "evidence": "上身露在船篷外",
+      "replies": [
+        "船篷遮着身子，我還在這裏。",
+        "我的帽子露在篷架旁。",
+        "沿着船舷再看身旁的人吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15056,
+        374
+      ]
+    },
+    {
+      "id": "extra-person-river-076",
+      "bounds": [
+        14974,
+        521,
+        15044,
+        578
+      ],
+      "name": "小舟坐姿人物",
+      "evidence": "坐在船篷前",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        14990,
+        535
+      ]
+    },
+    {
+      "id": "extra-person-river-077",
+      "bounds": [
+        15006,
+        493,
+        15051,
+        556
+      ],
+      "name": "小舟後方人物",
+      "evidence": "上身露在坐姿同伴後",
+      "replies": [
+        "在這裏坐一會兒。",
+        "你看，我的腿朝着這邊。",
+        "從我身旁再找些小細節吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15028,
+        506
+      ]
+    },
+    {
+      "id": "extra-person-river-078",
+      "bounds": [
+        15310,
+        558,
+        15351,
+        609
+      ],
+      "name": "小舟船尾人物",
+      "evidence": "坐在船尾",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15330,
+        568
+      ]
+    },
+    {
+      "id": "extra-person-river-079",
+      "bounds": [
+        15210,
+        1436,
+        15238,
+        1486
+      ],
+      "name": "屋頂後半身人物",
+      "evidence": "身子被前方屋頂遮住",
+      "replies": [
+        "只露出頭肩，也看得到我。",
+        "別把旁邊的物件當成衣裳。",
+        "看看我和身旁的人隔着多遠。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15224,
+        1446
+      ]
+    },
+    {
+      "id": "extra-person-river-080",
+      "bounds": [
+        15207,
+        1232,
+        15268,
+        1330
+      ],
+      "name": "岸邊樹旁人物",
+      "evidence": "站在屋頂與樹幹之間",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15217,
+        1240
+      ]
+    },
+    {
+      "id": "extra-person-river-081",
+      "bounds": [
+        16322,
+        99,
+        16349,
+        136
+      ],
+      "name": "牽纜末排人物",
+      "evidence": "彎身沿岸向前",
+      "replies": [
+        "纜繩沿着岸邊伸過來。",
+        "我的身子正向前傾。",
+        "看看腳步與纜繩的方向。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        16336,
+        106
+      ]
+    },
+    {
+      "id": "extra-person-river-082",
+      "bounds": [
+        16347,
+        86,
+        16374,
+        123
+      ],
+      "name": "牽纜後排人物",
+      "evidence": "彎腰向岸上走",
+      "replies": [
+        "纜繩沿着岸邊伸過來。",
+        "我的身子正向前傾。",
+        "看看腳步與纜繩的方向。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        16360,
+        93
+      ]
+    },
+    {
+      "id": "extra-person-river-083",
+      "bounds": [
+        16373,
+        72,
+        16399,
+        107
+      ],
+      "name": "牽纜中排人物",
+      "evidence": "身子向前傾",
+      "replies": [
+        "纜繩沿着岸邊伸過來。",
+        "我的身子正向前傾。",
+        "看看腳步與纜繩的方向。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        16386,
+        79
+      ]
+    },
+    {
+      "id": "extra-person-river-084",
+      "bounds": [
+        16397,
+        55,
+        16426,
+        92
+      ],
+      "name": "牽纜前排人物",
+      "evidence": "彎身跟在同伴後",
+      "replies": [
+        "纜繩沿着岸邊伸過來。",
+        "我的身子正向前傾。",
+        "看看腳步與纜繩的方向。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        16412,
+        62
+      ]
+    },
+    {
+      "id": "extra-person-river-085",
+      "bounds": [
+        16420,
+        43,
+        16440,
+        76
+      ],
+      "name": "牽纜領前人物",
+      "evidence": "走在岸上隊列前方",
+      "replies": [
+        "纜繩沿着岸邊伸過來。",
+        "我的身子正向前傾。",
+        "看看腳步與纜繩的方向。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        16430,
+        50
+      ]
+    },
+    {
+      "id": "extra-person-river-086",
+      "bounds": [
+        16031,
+        146,
+        16051,
+        171
+      ],
+      "name": "桅杆船尾人物",
+      "evidence": "上身露在船尾",
+      "replies": [
+        "船篷遮着身子，我還在這裏。",
+        "我的帽子露在篷架旁。",
+        "沿着船舷再看身旁的人吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        16041,
+        151
+      ]
+    },
+    {
+      "id": "extra-person-river-087",
+      "bounds": [
+        16047,
+        137,
+        16072,
+        167
+      ],
+      "name": "船尾站立人物",
+      "evidence": "站在桅杆旁",
+      "replies": [
+        "船篷遮着身子，我還在這裏。",
+        "我的帽子露在篷架旁。",
+        "沿着船舷再看身旁的人吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        16060,
+        143
+      ]
+    },
+    {
+      "id": "extra-person-river-088",
+      "bounds": [
+        16181,
+        210,
+        16213,
+        245
+      ],
+      "name": "船頭半身人物",
+      "evidence": "手臂靠近斜長杆",
+      "replies": [
+        "船篷遮着身子，我還在這裏。",
+        "我的帽子露在篷架旁。",
+        "沿着船舷再看身旁的人吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        16197,
+        217
+      ]
+    },
+    {
+      "id": "extra-person-river-089",
+      "bounds": [
+        16021,
+        1357,
+        16065,
+        1428
+      ],
+      "name": "樓上欄杆前人物",
+      "evidence": "上身露在欄杆後",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        16043,
+        1371
+      ]
+    },
+    {
+      "id": "extra-person-river-090",
+      "bounds": [
+        16061,
+        1318,
+        16098,
+        1394
+      ],
+      "name": "樓上坐姿人物",
+      "evidence": "坐在欄杆旁",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        16080,
+        1333
+      ]
+    },
+    {
+      "id": "extra-person-river-091",
+      "bounds": [
+        16151,
+        1280,
+        16197,
+        1358
+      ],
+      "name": "樓內立姿人物",
+      "evidence": "站在樓內",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        16174,
+        1296
+      ]
+    },
+    {
+      "id": "extra-person-river-092",
+      "bounds": [
+        16344,
+        1270,
+        16395,
+        1350
+      ],
+      "name": "樓側坐姿人物",
+      "evidence": "坐在側面欄杆後",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        16370,
+        1286
+      ]
+    },
+    {
+      "id": "extra-person-river-093",
+      "bounds": [
+        17257,
+        100,
+        17297,
+        144
+      ],
+      "name": "岸上桌左坐客",
+      "evidence": "坐在桌左",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17277,
+        109
+      ]
+    },
+    {
+      "id": "extra-person-river-094",
+      "bounds": [
+        17315,
+        100,
+        17341,
+        129
+      ],
+      "name": "岸上桌中坐客",
+      "evidence": "坐在桌後",
+      "replies": [
+        "我在桌旁，露着半個身子。",
+        "桌面和柱子擋住了一些。",
+        "先看我的頭肩，再看桌邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17328,
+        106
+      ]
+    },
+    {
+      "id": "extra-person-river-095",
+      "bounds": [
+        17349,
+        90,
+        17383,
+        123
+      ],
+      "name": "岸上桌右坐客",
+      "evidence": "坐在桌右",
+      "replies": [
+        "我在桌旁，露着半個身子。",
+        "桌面和柱子擋住了一些。",
+        "先看我的頭肩，再看桌邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17366,
+        97
+      ]
+    },
+    {
+      "id": "extra-person-river-096",
+      "bounds": [
+        17688,
+        130,
+        17721,
+        163
+      ],
+      "name": "岸上屋前人物",
+      "evidence": "坐在屋前",
+      "replies": [
+        "只露出頭肩，也看得到我。",
+        "別把旁邊的物件當成衣裳。",
+        "看看我和身旁的人隔着多遠。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17704,
+        137
+      ]
+    },
+    {
+      "id": "extra-person-river-097",
+      "bounds": [
+        17898,
+        111,
+        17919,
+        136
+      ],
+      "name": "屋內左半身人物",
+      "evidence": "上身露在窗前",
+      "replies": [
+        "我在桌旁，露着半個身子。",
+        "桌面和柱子擋住了一些。",
+        "先看我的頭肩，再看桌邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17908,
+        116
+      ]
+    },
+    {
+      "id": "extra-person-river-098",
+      "bounds": [
+        17929,
+        116,
+        17955,
+        139
+      ],
+      "name": "屋內右半身人物",
+      "evidence": "上身露在窗前",
+      "replies": [
+        "我在桌旁，露着半個身子。",
+        "桌面和柱子擋住了一些。",
+        "先看我的頭肩，再看桌邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17942,
+        121
+      ]
+    },
+    {
+      "id": "extra-person-river-099",
+      "bounds": [
+        17753,
+        681,
+        17825,
+        753
+      ],
+      "name": "船頭後排左人物",
+      "evidence": "身子向前俯",
+      "replies": [
+        "我正彎着身子呢。",
+        "看看我身前的東西。",
+        "從我的站姿再看周圍吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17789,
+        695
+      ]
+    },
+    {
+      "id": "extra-person-river-100",
+      "bounds": [
+        17845,
+        672,
+        17881,
+        735
+      ],
+      "name": "船頭後排中人物",
+      "evidence": "站在同伴後方",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17863,
+        685
+      ]
+    },
+    {
+      "id": "extra-person-river-101",
+      "bounds": [
+        17903,
+        680,
+        17952,
+        790
+      ],
+      "name": "船頭後排右人物",
+      "evidence": "手握船邊長杆",
+      "replies": [
+        "長杆在手，先站穩些。",
+        "留意杆子伸向哪一邊。",
+        "我的手正靠近這根杆。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17928,
+        702
+      ]
+    },
+    {
+      "id": "extra-person-river-102",
+      "bounds": [
+        17730,
+        727,
+        17803,
+        806
+      ],
+      "name": "船頭前排左人物",
+      "evidence": "彎身靠近船頭",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17734,
+        745
+      ]
+    },
+    {
+      "id": "extra-person-river-103",
+      "bounds": [
+        17811,
+        695,
+        17870,
+        808
+      ],
+      "name": "船頭中排人物",
+      "evidence": "站在船頭中央",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17840,
+        718
+      ]
+    },
+    {
+      "id": "extra-person-river-104",
+      "bounds": [
+        17873,
+        713,
+        17920,
+        821
+      ],
+      "name": "船頭前排右人物",
+      "evidence": "站在長杆旁",
+      "replies": [
+        "長杆在手，先站穩些。",
+        "留意杆子伸向哪一邊。",
+        "我的手正靠近這根杆。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17896,
+        735
+      ]
+    },
+    {
+      "id": "extra-person-river-105",
+      "bounds": [
+        17731,
+        1097,
+        17787,
+        1177
+      ],
+      "name": "攤後左人物",
+      "evidence": "站在攤位後",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17759,
+        1113
+      ]
+    },
+    {
+      "id": "extra-person-river-106",
+      "bounds": [
+        17791,
+        1116,
+        17836,
+        1184
+      ],
+      "name": "攤後中人物",
+      "evidence": "側身坐在攤後",
+      "replies": [
+        "在這裏坐一會兒。",
+        "你看，我的腿朝着這邊。",
+        "從我身旁再找些小細節吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17814,
+        1130
+      ]
+    },
+    {
+      "id": "extra-person-river-107",
+      "bounds": [
+        17852,
+        1106,
+        17907,
+        1214
+      ],
+      "name": "攤後右人物",
+      "evidence": "坐在攤邊",
+      "replies": [
+        "在這裏坐一會兒。",
+        "你看，我的腿朝着這邊。",
+        "從我身旁再找些小細節吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17880,
+        1128
+      ]
+    },
+    {
+      "id": "extra-person-river-108",
+      "bounds": [
+        17903,
+        1114,
+        17975,
+        1309
+      ],
+      "name": "深衣長袍人物",
+      "evidence": "站在攤旁",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17939,
+        1144
+      ]
+    },
+    {
+      "id": "extra-person-river-109",
+      "bounds": [
+        17988,
+        1103,
+        18039,
+        1205
+      ],
+      "name": "攤右後排人物",
+      "evidence": "站在屋棚後",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18014,
+        1123
+      ]
+    },
+    {
+      "id": "extra-person-river-110",
+      "bounds": [
+        18039,
+        1091,
+        18099,
+        1189
+      ],
+      "name": "攤右伸手人物",
+      "evidence": "手臂伸向攤位",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18069,
+        1111
+      ]
+    },
+    {
+      "id": "extra-person-river-111",
+      "bounds": [
+        17847,
+        1205,
+        17931,
+        1407
+      ],
+      "name": "攤前側身行人",
+      "evidence": "手收在胸前，跨步前行",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17889,
+        1235
+      ]
+    },
+    {
+      "id": "extra-person-river-112",
+      "bounds": [
+        17646,
+        1227,
+        17714,
+        1314
+      ],
+      "name": "攤旗後人物",
+      "evidence": "上身被攤旗和器物遮住",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17680,
+        1244
+      ]
+    },
+    {
+      "id": "extra-person-river-113",
+      "bounds": [
+        17586,
+        1186,
+        17621,
+        1263
+      ],
+      "name": "旗杆後小人物",
+      "evidence": "身子被旗杆遮住",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17604,
+        1201
+      ]
+    },
+    {
+      "id": "extra-person-river-114",
+      "bounds": [
+        17524,
+        1324,
+        17565,
+        1373
+      ],
+      "name": "轎後半身人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17544,
+        1334
+      ]
+    },
+    {
+      "id": "extra-person-river-115",
+      "bounds": [
+        17452,
+        1331,
+        17519,
+        1455
+      ],
+      "name": "轎左人物",
+      "evidence": "手臂向前伸",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17486,
+        1356
+      ]
+    },
+    {
+      "id": "extra-person-river-116",
+      "bounds": [
+        17332,
+        1387,
+        17431,
+        1565
+      ],
+      "name": "轎旁行人",
+      "evidence": "側身走在轎旁",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17382,
+        1417
+      ]
+    },
+    {
+      "id": "extra-person-river-117",
+      "bounds": [
+        17416,
+        1571,
+        17486,
+        1735
+      ],
+      "name": "伸手行人",
+      "evidence": "手臂伸向同伴",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17451,
+        1601
+      ]
+    },
+    {
+      "id": "extra-person-river-118",
+      "bounds": [
+        17536,
+        1590,
+        17623,
+        1770
+      ],
+      "name": "背向長衣人物",
+      "evidence": "背朝畫外，手臂伸出",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17563,
+        1613
+      ]
+    },
+    {
+      "id": "extra-person-river-119",
+      "bounds": [
+        17501,
+        1674,
+        17540,
+        1776
+      ],
+      "name": "長衣人旁小人物",
+      "evidence": "站在長衣人身旁",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17520,
+        1694
+      ]
+    },
+    {
+      "id": "extra-person-river-120",
+      "bounds": [
+        17714,
+        1545,
+        17813,
+        1729
+      ],
+      "name": "扁擔行人",
+      "evidence": "肩上擔子兩端垂着物件",
+      "replies": [
+        "擔子在肩，借過一下。",
+        "看看擔子兩端的東西。",
+        "走路時也得顧着肩頭。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17763,
+        1555
+      ]
+    },
+    {
+      "id": "extra-person-river-121",
+      "bounds": [
+        18042,
+        1288,
+        18100,
+        1486
+      ],
+      "name": "牽車前行人物",
+      "evidence": "手握長杆，跨步向前",
+      "replies": [
+        "長杆在手，先站穩些。",
+        "留意杆子伸向哪一邊。",
+        "我的手正靠近這根杆。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18071,
+        1318
+      ]
+    },
+    {
+      "id": "extra-person-river-122",
+      "bounds": [
+        18202,
+        747,
+        18246,
+        797
+      ],
+      "name": "船篷旁半身人物",
+      "evidence": "上身露在船篷旁",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18224,
+        757
+      ]
+    },
+    {
+      "id": "extra-person-river-123",
+      "bounds": [
+        18282,
+        739,
+        18326,
+        800
+      ],
+      "name": "船篷前人物",
+      "evidence": "坐在船篷前",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18304,
+        751
+      ]
+    },
+    {
+      "id": "extra-person-river-124",
+      "bounds": [
+        18277,
+        672,
+        18328,
+        752
+      ],
+      "name": "攤左人物",
+      "evidence": "身子靠近桌子",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18302,
+        688
+      ]
+    },
+    {
+      "id": "extra-person-river-125",
+      "bounds": [
+        18322,
+        677,
+        18372,
+        773
+      ],
+      "name": "攤前站立人物",
+      "evidence": "站在桌子旁",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18347,
+        696
+      ]
+    },
+    {
+      "id": "extra-person-river-126",
+      "bounds": [
+        18341,
+        604,
+        18403,
+        701
+      ],
+      "name": "攤後人物",
+      "evidence": "站在竹棚後",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18372,
+        623
+      ]
+    },
+    {
+      "id": "extra-person-river-127",
+      "bounds": [
+        18397,
+        624,
+        18451,
+        701
+      ],
+      "name": "攤內坐姿人物",
+      "evidence": "坐在棚下",
+      "replies": [
+        "在這裏坐一會兒。",
+        "你看，我的腿朝着這邊。",
+        "從我身旁再找些小細節吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18424,
+        639
+      ]
+    },
+    {
+      "id": "extra-person-river-128",
+      "bounds": [
+        18574,
+        442,
+        18629,
+        547
+      ],
+      "name": "船篷旁行人",
+      "evidence": "站在傘邊",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18602,
+        463
+      ]
+    },
+    {
+      "id": "extra-person-river-129",
+      "bounds": [
+        18547,
+        392,
+        18610,
+        452
+      ],
+      "name": "棚上方人物",
+      "evidence": "彎腰靠近欄杆",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18578,
+        404
+      ]
+    },
+    {
+      "id": "extra-person-river-130",
+      "bounds": [
+        18610,
+        367,
+        18675,
+        475
+      ],
+      "name": "路旁伸手人物",
+      "evidence": "手臂伸向左方",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18642,
+        389
+      ]
+    },
+    {
+      "id": "extra-person-river-131",
+      "bounds": [
+        18625,
+        320,
+        18690,
+        409
+      ],
+      "name": "牲畜前人物",
+      "evidence": "身體側向牲畜",
+      "replies": [
+        "牠就在我身旁，慢些走。",
+        "留意我與牠隔着多遠。",
+        "人和牲畜都佔着這段路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18658,
+        338
+      ]
+    },
+    {
+      "id": "extra-person-river-132",
+      "bounds": [
+        18672,
+        287,
+        18727,
+        354
+      ],
+      "name": "岸上後排人物",
+      "evidence": "站在牲畜後",
+      "replies": [
+        "牠就在我身旁，慢些走。",
+        "留意我與牠隔着多遠。",
+        "人和牲畜都佔着這段路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18700,
+        300
+      ]
+    },
+    {
+      "id": "extra-person-river-133",
+      "bounds": [
+        18709,
+        274,
+        18755,
+        346
+      ],
+      "name": "岸上中排人物",
+      "evidence": "站在同伴後方",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18716,
+        286
+      ]
+    },
+    {
+      "id": "extra-person-river-134",
+      "bounds": [
+        18743,
+        268,
+        18789,
+        338
+      ],
+      "name": "岸上長衣人物",
+      "evidence": "手收在胸前",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18766,
+        282
+      ]
+    },
+    {
+      "id": "extra-person-river-135",
+      "bounds": [
+        18791,
+        263,
+        18845,
+        360
+      ],
+      "name": "持長物人物",
+      "evidence": "手中長物橫向左方",
+      "replies": [
+        "長杆在手，先站穩些。",
+        "留意杆子伸向哪一邊。",
+        "我的手正靠近這根杆。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18818,
+        282
+      ]
+    },
+    {
+      "id": "extra-person-river-136",
+      "bounds": [
+        18846,
+        237,
+        18891,
+        332
+      ],
+      "name": "長袍背向人物",
+      "evidence": "背朝畫外",
+      "replies": [
+        "我背着身子，先看衣紋吧。",
+        "肩頭和腳步也能辨認人。",
+        "看看我正面向哪一邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18868,
+        256
+      ]
+    },
+    {
+      "id": "extra-person-river-137",
+      "bounds": [
+        18822,
+        222,
+        18854,
+        274
+      ],
+      "name": "人群後頭肩人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "只露出頭肩，也看得到我。",
+        "別把旁邊的物件當成衣裳。",
+        "看看我和身旁的人隔着多遠。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18838,
+        232
+      ]
+    },
+    {
+      "id": "extra-person-river-138",
+      "bounds": [
+        18886,
+        194,
+        18941,
+        315
+      ],
+      "name": "路上前伸臂人物",
+      "evidence": "手臂向同伴伸出",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18914,
+        218
+      ]
+    },
+    {
+      "id": "extra-person-river-139",
+      "bounds": [
+        18938,
+        197,
+        18997,
+        324
+      ],
+      "name": "挑包人物",
+      "evidence": "肩旁垂着一個包形物",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18968,
+        222
+      ]
+    },
+    {
+      "id": "extra-person-river-140",
+      "bounds": [
+        18965,
+        269,
+        19018,
+        340
+      ],
+      "name": "屋前小人物",
+      "evidence": "站在兩人之間",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18980,
+        274
+      ]
+    },
+    {
+      "id": "extra-person-river-141",
+      "bounds": [
+        19006,
+        230,
+        19056,
+        323
+      ],
+      "name": "右側背向人物",
+      "evidence": "背朝畫外",
+      "replies": [
+        "我背着身子，先看衣紋吧。",
+        "肩頭和腳步也能辨認人。",
+        "看看我正面向哪一邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19031,
+        249
+      ]
+    },
+    {
+      "id": "extra-person-river-142",
+      "bounds": [
+        19042,
+        249,
+        19100,
+        348
+      ],
+      "name": "右側持物人物",
+      "evidence": "手臂向前，物件靠近肩頭",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19071,
+        269
+      ]
+    },
+    {
+      "id": "extra-person-river-143",
+      "bounds": [
+        18985,
+        328,
+        19033,
+        383
+      ],
+      "name": "橋側半身人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19009,
+        339
+      ]
+    },
+    {
+      "id": "extra-person-river-144",
+      "bounds": [
+        19019,
+        348,
+        19068,
+        403
+      ],
+      "name": "橋側站立人物",
+      "evidence": "站在欄杆旁",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19044,
+        359
+      ]
+    },
+    {
+      "id": "extra-person-river-145",
+      "bounds": [
+        19064,
+        332,
+        19100,
+        404
+      ],
+      "name": "橋側右半身人物",
+      "evidence": "上身露在欄杆旁",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19082,
+        346
+      ]
+    },
+    {
+      "id": "extra-person-river-146",
+      "bounds": [
+        18921,
+        377,
+        19001,
+        498
+      ],
+      "name": "欄旁伸手人物",
+      "evidence": "手臂伸向右方",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18961,
+        401
+      ]
+    },
+    {
+      "id": "extra-person-river-147",
+      "bounds": [
+        18820,
+        393,
+        18882,
+        498
+      ],
+      "name": "轎旁長袍人物",
+      "evidence": "站在篷轎旁",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18851,
+        414
+      ]
+    },
+    {
+      "id": "extra-person-river-148",
+      "bounds": [
+        18997,
+        403,
+        19078,
+        492
+      ],
+      "name": "欄旁俯身人物",
+      "evidence": "身子向前靠在欄杆邊",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19038,
+        421
+      ]
+    },
+    {
+      "id": "extra-person-river-149",
+      "bounds": [
+        19062,
+        432,
+        19100,
+        520
+      ],
+      "name": "欄旁右人物",
+      "evidence": "靠近欄杆，身體前傾",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19081,
+        450
+      ]
+    },
+    {
+      "id": "extra-person-river-150",
+      "bounds": [
+        18908,
+        509,
+        18955,
+        570
+      ],
+      "name": "橋下半身人物",
+      "evidence": "身子被欄杆遮住",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18932,
+        521
+      ]
+    },
+    {
+      "id": "extra-person-river-151",
+      "bounds": [
+        18954,
+        557,
+        18995,
+        610
+      ],
+      "name": "橋下右半身人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18974,
+        568
+      ]
+    },
+    {
+      "id": "extra-person-river-152",
+      "bounds": [
+        18878,
+        593,
+        18920,
+        630
+      ],
+      "name": "竹棚後人物",
+      "evidence": "上身露在棚頂後",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18899,
+        600
+      ]
+    },
+    {
+      "id": "extra-person-river-153",
+      "bounds": [
+        18794,
+        553,
+        18839,
+        619
+      ],
+      "name": "路上後排人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18816,
+        566
+      ]
+    },
+    {
+      "id": "extra-person-river-154",
+      "bounds": [
+        18668,
+        501,
+        18729,
+        661
+      ],
+      "name": "篷轎前行人",
+      "evidence": "跨步走在篷轎前",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18698,
+        531
+      ]
+    },
+    {
+      "id": "extra-person-river-155",
+      "bounds": [
+        18710,
+        617,
+        18770,
+        735
+      ],
+      "name": "攤後紅衣人物",
+      "evidence": "側身站在竹棚旁",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18740,
+        641
+      ]
+    },
+    {
+      "id": "extra-person-river-156",
+      "bounds": [
+        18593,
+        662,
+        18686,
+        780
+      ],
+      "name": "牲畜旁背向人物",
+      "evidence": "站在牲畜前",
+      "replies": [
+        "牠就在我身旁，慢些走。",
+        "留意我與牠隔着多遠。",
+        "人和牲畜都佔着這段路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18640,
+        686
+      ]
+    },
+    {
+      "id": "extra-person-river-157",
+      "bounds": [
+        18650,
+        742,
+        18730,
+        860
+      ],
+      "name": "牲畜右人物",
+      "evidence": "手臂靠近牲畜",
+      "replies": [
+        "牠就在我身旁，慢些走。",
+        "留意我與牠隔着多遠。",
+        "人和牲畜都佔着這段路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18690,
+        766
+      ]
+    },
+    {
+      "id": "extra-person-river-158",
+      "bounds": [
+        18724,
+        757,
+        18784,
+        846
+      ],
+      "name": "棚內後排人物",
+      "evidence": "背朝畫外",
+      "replies": [
+        "我背着身子，先看衣紋吧。",
+        "肩頭和腳步也能辨認人。",
+        "看看我正面向哪一邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18754,
+        775
+      ]
+    },
+    {
+      "id": "extra-person-river-159",
+      "bounds": [
+        18754,
+        814,
+        18842,
+        885
+      ],
+      "name": "棚內伸手人物",
+      "evidence": "手臂伸向攤桌",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18798,
+        828
+      ]
+    },
+    {
+      "id": "extra-person-river-160",
+      "bounds": [
+        18791,
+        766,
+        18837,
+        814
+      ],
+      "name": "棚內頭肩人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18814,
+        776
+      ]
+    },
+    {
+      "id": "extra-person-river-161",
+      "bounds": [
+        18550,
+        830,
+        18628,
+        1011
+      ],
+      "name": "街中長衣人物",
+      "evidence": "站在街路上",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18589,
+        860
+      ]
+    },
+    {
+      "id": "extra-person-river-162",
+      "bounds": [
+        18442,
+        787,
+        18493,
+        881
+      ],
+      "name": "肩擔人物",
+      "evidence": "肩上橫着長擔",
+      "replies": [
+        "擔子在肩，借過一下。",
+        "看看擔子兩端的東西。",
+        "走路時也得顧着肩頭。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18468,
+        806
+      ]
+    },
+    {
+      "id": "extra-person-river-163",
+      "bounds": [
+        18379,
+        840,
+        18452,
+        1031
+      ],
+      "name": "擔旁行人",
+      "evidence": "側身向前走",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18416,
+        870
+      ]
+    },
+    {
+      "id": "extra-person-river-164",
+      "bounds": [
+        18351,
+        785,
+        18390,
+        878
+      ],
+      "name": "傘後半身人物",
+      "evidence": "身子被傘遮住",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18370,
+        804
+      ]
+    },
+    {
+      "id": "extra-person-river-165",
+      "bounds": [
+        18297,
+        862,
+        18337,
+        940
+      ],
+      "name": "傘旁俯身人物",
+      "evidence": "彎腰向攤桌",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18317,
+        878
+      ]
+    },
+    {
+      "id": "extra-person-river-167",
+      "bounds": [
+        18305,
+        996,
+        18376,
+        1147
+      ],
+      "name": "攤前伸臂人物",
+      "evidence": "手臂伸向左方",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18340,
+        1026
+      ]
+    },
+    {
+      "id": "extra-person-river-168",
+      "bounds": [
+        18357,
+        1023,
+        18434,
+        1194
+      ],
+      "name": "深衣背向人物",
+      "evidence": "背朝畫外",
+      "replies": [
+        "我背着身子，先看衣紋吧。",
+        "肩頭和腳步也能辨認人。",
+        "看看我正面向哪一邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18396,
+        1053
+      ]
+    },
+    {
+      "id": "extra-person-river-169",
+      "bounds": [
+        18448,
+        974,
+        18525,
+        1145
+      ],
+      "name": "挑擔長衣人物",
+      "evidence": "肩擔向兩旁伸出",
+      "replies": [
+        "擔子在肩，借過一下。",
+        "看看擔子兩端的東西。",
+        "走路時也得顧着肩頭。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18473,
+        987
+      ]
+    },
+    {
+      "id": "extra-person-river-170",
+      "bounds": [
+        18606,
+        968,
+        18643,
+        1040
+      ],
+      "name": "攤後頭肩人物",
+      "evidence": "頭肩露在桌後",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18624,
+        982
+      ]
+    },
+    {
+      "id": "extra-person-river-171",
+      "bounds": [
+        18641,
+        1009,
+        18695,
+        1097
+      ],
+      "name": "桌邊側身人物",
+      "evidence": "坐在桌子旁",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18668,
+        1027
+      ]
+    },
+    {
+      "id": "extra-person-river-172",
+      "bounds": [
+        18678,
+        1034,
+        18733,
+        1112
+      ],
+      "name": "桌邊後排人物",
+      "evidence": "身子被同伴遮住",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18706,
+        1050
+      ]
+    },
+    {
+      "id": "extra-person-river-173",
+      "bounds": [
+        18616,
+        1078,
+        18722,
+        1229
+      ],
+      "name": "伸手長袍人物",
+      "evidence": "手臂伸向左方",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18669,
+        1095
+      ]
+    },
+    {
+      "id": "extra-person-river-174",
+      "bounds": [
+        18721,
+        1074,
+        18768,
+        1247
+      ],
+      "name": "桌前長衣人物",
+      "evidence": "站在桌前",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18744,
+        1104
+      ]
+    },
+    {
+      "id": "extra-person-river-175",
+      "bounds": [
+        18798,
+        1115,
+        18850,
+        1288
+      ],
+      "name": "桌右背向人物",
+      "evidence": "背朝畫外",
+      "replies": [
+        "我背着身子，先看衣紋吧。",
+        "肩頭和腳步也能辨認人。",
+        "看看我正面向哪一邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18824,
+        1145
+      ]
+    },
+    {
+      "id": "extra-person-river-176",
+      "bounds": [
+        18851,
+        1050,
+        18903,
+        1115
+      ],
+      "name": "桌右後人物",
+      "evidence": "頭肩露在桌後",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18877,
+        1063
+      ]
+    },
+    {
+      "id": "extra-person-river-177",
+      "bounds": [
+        18904,
+        1058,
+        18975,
+        1170
+      ],
+      "name": "桌後右人物",
+      "evidence": "站在桌後",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18940,
+        1080
+      ]
+    },
+    {
+      "id": "extra-person-river-178",
+      "bounds": [
+        18851,
+        1098,
+        18934,
+        1293
+      ],
+      "name": "桌邊前人物",
+      "evidence": "手臂靠近桌沿",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18892,
+        1128
+      ]
+    },
+    {
+      "id": "extra-person-river-179",
+      "bounds": [
+        18934,
+        1090,
+        18987,
+        1260
+      ],
+      "name": "右側深帽人物",
+      "evidence": "站在同伴右側",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18949,
+        1110
+      ]
+    },
+    {
+      "id": "extra-person-river-180",
+      "bounds": [
+        18951,
+        1217,
+        18994,
+        1298
+      ],
+      "name": "右側小人物",
+      "evidence": "站在長衣人身旁",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18972,
+        1233
+      ]
+    },
+    {
+      "id": "extra-person-river-181",
+      "bounds": [
+        18257,
+        1130,
+        18356,
+        1324
+      ],
+      "name": "手持長物行人",
+      "evidence": "手中長物向左下伸出",
+      "replies": [
+        "長杆在手，先站穩些。",
+        "留意杆子伸向哪一邊。",
+        "我的手正靠近這根杆。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18280,
+        1154
+      ]
+    },
+    {
+      "id": "extra-person-river-182",
+      "bounds": [
+        18424,
+        1150,
+        18523,
+        1321
+      ],
+      "name": "短衣行人",
+      "evidence": "側身向前跨步",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18474,
+        1180
+      ]
+    },
+    {
+      "id": "extra-person-river-183",
+      "bounds": [
+        18139,
+        1550,
+        18238,
+        1693
+      ],
+      "name": "籃旁俯身人物",
+      "evidence": "彎身靠近籃子",
+      "replies": [
+        "我正彎着身子呢。",
+        "看看我身前的東西。",
+        "從我的站姿再看周圍吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18168,
+        1570
+      ]
+    },
+    {
+      "id": "extra-person-river-184",
+      "bounds": [
+        18303,
+        1515,
+        18391,
+        1626
+      ],
+      "name": "屋前前伸臂人物",
+      "evidence": "手臂伸向右方",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18347,
+        1537
+      ]
+    },
+    {
+      "id": "extra-person-river-185",
+      "bounds": [
+        18303,
+        1578,
+        18373,
+        1739
+      ],
+      "name": "屋前背向人物",
+      "evidence": "背朝畫外",
+      "replies": [
+        "我背着身子，先看衣紋吧。",
+        "肩頭和腳步也能辨認人。",
+        "看看我正面向哪一邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18330,
+        1597
+      ]
+    },
+    {
+      "id": "extra-person-river-186",
+      "bounds": [
+        18481,
+        1524,
+        18531,
+        1552
+      ],
+      "name": "傘下半身人物",
+      "evidence": "頭肩露在傘下",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18506,
+        1530
+      ]
+    },
+    {
+      "id": "extra-person-river-187",
+      "bounds": [
+        18599,
+        1503,
+        18636,
+        1536
+      ],
+      "name": "屋頂後人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "只露出頭肩，也看得到我。",
+        "別把旁邊的物件當成衣裳。",
+        "看看我和身旁的人隔着多遠。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18618,
+        1510
+      ]
+    },
+    {
+      "id": "extra-person-river-188",
+      "bounds": [
+        18826,
+        1730,
+        18856,
+        1771
+      ],
+      "name": "屋內小人物",
+      "evidence": "頭肩露在屋門內",
+      "replies": [
+        "我在桌旁，露着半個身子。",
+        "桌面和柱子擋住了一些。",
+        "先看我的頭肩，再看桌邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        18841,
+        1738
+      ]
+    },
+    {
+      "id": "extra-person-river-189",
+      "bounds": [
+        17206,
+        243,
+        17232,
+        290
+      ],
+      "name": "舟艙不明人形候選",
+      "evidence": "舟艙內短墨線與框架交疊，未能分離確認獨立頭肩；保留候選供再核對。",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "excluded",
+      "reason": "舟艙內短墨線與框架交疊，未能分離確認獨立頭肩；保留候選供再核對。"
+    },
+    {
+      "id": "extra-person-river-190",
+      "bounds": [
+        19020,
+        191,
+        19062,
+        274
+      ],
+      "name": "橋頭戴帽人物",
+      "evidence": "頭戴深帽，站在同伴旁",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19041,
+        208
+      ]
+    },
+    {
+      "id": "extra-person-river-191",
+      "bounds": [
+        19074,
+        169,
+        19139,
+        261
+      ],
+      "name": "橋頭張臂人物",
+      "evidence": "兩臂向旁伸出",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19106,
+        187
+      ]
+    },
+    {
+      "id": "extra-person-river-192",
+      "bounds": [
+        19142,
+        194,
+        19185,
+        275
+      ],
+      "name": "橋頭長衣人物",
+      "evidence": "手收在胸前",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19164,
+        210
+      ]
+    },
+    {
+      "id": "extra-person-river-193",
+      "bounds": [
+        19154,
+        181,
+        19180,
+        212
+      ],
+      "name": "橋頭後頭肩人物",
+      "evidence": "頭肩露在同伴後",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19167,
+        187
+      ]
+    },
+    {
+      "id": "extra-person-river-194",
+      "bounds": [
+        19243,
+        156,
+        19291,
+        232
+      ],
+      "name": "橋上背向人物",
+      "evidence": "背朝畫外",
+      "replies": [
+        "我背着身子，先看衣紋吧。",
+        "肩頭和腳步也能辨認人。",
+        "看看我正面向哪一邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19267,
+        171
+      ]
+    },
+    {
+      "id": "extra-person-river-195",
+      "bounds": [
+        19213,
+        218,
+        19261,
+        277
+      ],
+      "name": "橋上中排人物",
+      "evidence": "上身被前排人物遮住",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19237,
+        230
+      ]
+    },
+    {
+      "id": "extra-person-river-196",
+      "bounds": [
+        19250,
+        214,
+        19285,
+        266
+      ],
+      "name": "橋上後排人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19268,
+        224
+      ]
+    },
+    {
+      "id": "extra-person-river-197",
+      "bounds": [
+        19184,
+        270,
+        19232,
+        336
+      ],
+      "name": "桥欄旁人物",
+      "evidence": "上身靠近欄杆",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19208,
+        283
+      ]
+    },
+    {
+      "id": "extra-person-river-198",
+      "bounds": [
+        19248,
+        265,
+        19309,
+        388
+      ],
+      "name": "橋欄前背向人物",
+      "evidence": "站在橋欄旁，背朝畫外",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19278,
+        290
+      ]
+    },
+    {
+      "id": "extra-person-river-199",
+      "bounds": [
+        19323,
+        202,
+        19363,
+        284
+      ],
+      "name": "橋上左探看人物",
+      "evidence": "身子向欄杆前傾",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19343,
+        218
+      ]
+    },
+    {
+      "id": "extra-person-river-200",
+      "bounds": [
+        19308,
+        218,
+        19339,
+        283
+      ],
+      "name": "橋上後半身人物",
+      "evidence": "上身露在同伴後",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19324,
+        231
+      ]
+    },
+    {
+      "id": "extra-person-river-201",
+      "bounds": [
+        19362,
+        231,
+        19390,
+        280
+      ],
+      "name": "橋欄中半身人物",
+      "evidence": "頭肩露在欄杆後",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19376,
+        241
+      ]
+    },
+    {
+      "id": "extra-person-river-202",
+      "bounds": [
+        19349,
+        271,
+        19391,
+        351
+      ],
+      "name": "橋欄前探看人物",
+      "evidence": "伏身向橋下看",
+      "replies": [
+        "我正彎着身子呢。",
+        "看看我身前的東西。",
+        "從我的站姿再看周圍吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19370,
+        287
+      ]
+    },
+    {
+      "id": "extra-person-river-203",
+      "bounds": [
+        19387,
+        266,
+        19423,
+        320
+      ],
+      "name": "橋欄旁蹲身人物",
+      "evidence": "身子靠近欄杆",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19405,
+        277
+      ]
+    },
+    {
+      "id": "extra-person-river-204",
+      "bounds": [
+        19418,
+        221,
+        19457,
+        306
+      ],
+      "name": "橋上伸臂人物",
+      "evidence": "手臂伸向橋欄",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19438,
+        238
+      ]
+    },
+    {
+      "id": "extra-person-river-205",
+      "bounds": [
+        19436,
+        187,
+        19459,
+        217
+      ],
+      "name": "橋上左後頭肩人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19448,
+        193
+      ]
+    },
+    {
+      "id": "extra-person-river-206",
+      "bounds": [
+        19457,
+        182,
+        19493,
+        218
+      ],
+      "name": "橋上右後頭肩人物",
+      "evidence": "頭肩靠近同伴",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19475,
+        189
+      ]
+    },
+    {
+      "id": "extra-person-river-207",
+      "bounds": [
+        19508,
+        201,
+        19547,
+        284
+      ],
+      "name": "橋上中段人物",
+      "evidence": "站在橋欄旁",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19528,
+        218
+      ]
+    },
+    {
+      "id": "extra-person-river-208",
+      "bounds": [
+        19547,
+        172,
+        19603,
+        276
+      ],
+      "name": "橋上前傾人物",
+      "evidence": "身子向橋下傾",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19575,
+        193
+      ]
+    },
+    {
+      "id": "extra-person-river-209",
+      "bounds": [
+        19598,
+        173,
+        19650,
+        273
+      ],
+      "name": "橋上靠欄人物",
+      "evidence": "手臂靠着欄杆",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19624,
+        193
+      ]
+    },
+    {
+      "id": "extra-person-river-210",
+      "bounds": [
+        19652,
+        183,
+        19687,
+        225
+      ],
+      "name": "橋上右段半身人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19670,
+        191
+      ]
+    },
+    {
+      "id": "extra-person-river-211",
+      "bounds": [
+        19695,
+        189,
+        19732,
+        235
+      ],
+      "name": "橋上右後人物",
+      "evidence": "站在同伴旁",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19714,
+        198
+      ]
+    },
+    {
+      "id": "extra-person-river-212",
+      "bounds": [
+        19735,
+        208,
+        19772,
+        237
+      ],
+      "name": "橋欄伏身人物",
+      "evidence": "上身低伏在欄杆旁",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19754,
+        214
+      ]
+    },
+    {
+      "id": "extra-person-river-213",
+      "bounds": [
+        19795,
+        181,
+        19846,
+        258
+      ],
+      "name": "橋上東側人物",
+      "evidence": "手臂伸向岸上",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19820,
+        196
+      ]
+    },
+    {
+      "id": "extra-person-river-214",
+      "bounds": [
+        19866,
+        122,
+        19904,
+        186
+      ],
+      "name": "橋東挑擔人物",
+      "evidence": "肩旁有垂吊物件",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19885,
+        135
+      ]
+    },
+    {
+      "id": "extra-person-river-215",
+      "bounds": [
+        19911,
+        116,
+        19960,
+        166
+      ],
+      "name": "橋東伸臂人物",
+      "evidence": "手臂向旁伸出",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19936,
+        126
+      ]
+    },
+    {
+      "id": "extra-person-river-216",
+      "bounds": [
+        19849,
+        163,
+        19887,
+        194
+      ],
+      "name": "橋東後排人物",
+      "evidence": "頭肩露在同伴後",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19868,
+        169
+      ]
+    },
+    {
+      "id": "extra-person-river-217",
+      "bounds": [
+        19846,
+        241,
+        19887,
+        288
+      ],
+      "name": "橋東靠欄人物",
+      "evidence": "上身靠近欄杆",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19866,
+        250
+      ]
+    },
+    {
+      "id": "extra-person-river-218",
+      "bounds": [
+        19875,
+        254,
+        19913,
+        308
+      ],
+      "name": "橋東下坡人物",
+      "evidence": "站在橋欄後",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19894,
+        265
+      ]
+    },
+    {
+      "id": "extra-person-river-219",
+      "bounds": [
+        19915,
+        273,
+        19940,
+        321
+      ],
+      "name": "橋東小人物",
+      "evidence": "頭肩露在欄杆後",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19928,
+        283
+      ]
+    },
+    {
+      "id": "extra-person-river-220",
+      "bounds": [
+        19350,
+        443,
+        19379,
+        485
+      ],
+      "name": "橋下左小舟人物",
+      "evidence": "上身露在橋梁下",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19364,
+        451
+      ]
+    },
+    {
+      "id": "extra-person-river-221",
+      "bounds": [
+        19389,
+        432,
+        19425,
+        479
+      ],
+      "name": "橋下中小舟人物",
+      "evidence": "站在船篷前",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19407,
+        441
+      ]
+    },
+    {
+      "id": "extra-person-river-222",
+      "bounds": [
+        19434,
+        442,
+        19474,
+        488
+      ],
+      "name": "橋下右小舟人物",
+      "evidence": "手臂伸向船旁",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19454,
+        451
+      ]
+    },
+    {
+      "id": "extra-person-river-223",
+      "bounds": [
+        19635,
+        510,
+        19675,
+        577
+      ],
+      "name": "大舟後排人物",
+      "evidence": "站在船篷前",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19655,
+        523
+      ]
+    },
+    {
+      "id": "extra-person-river-224",
+      "bounds": [
+        19666,
+        517,
+        19713,
+        589
+      ],
+      "name": "大舟伸臂人物",
+      "evidence": "手臂向右方伸出",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19690,
+        531
+      ]
+    },
+    {
+      "id": "extra-person-river-225",
+      "bounds": [
+        19587,
+        565,
+        19651,
+        616
+      ],
+      "name": "大舟俯身人物",
+      "evidence": "彎腰靠近長杆",
+      "replies": [
+        "長杆在手，先站穩些。",
+        "留意杆子伸向哪一邊。",
+        "我的手正靠近這根杆。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19619,
+        575
+      ]
+    },
+    {
+      "id": "extra-person-river-226",
+      "bounds": [
+        19759,
+        497,
+        19805,
+        569
+      ],
+      "name": "大舟中排人物",
+      "evidence": "站在船艙旁",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19782,
+        511
+      ]
+    },
+    {
+      "id": "extra-person-river-227",
+      "bounds": [
+        19787,
+        516,
+        19836,
+        622
+      ],
+      "name": "大舟站立人物",
+      "evidence": "手放在船杆旁",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19797,
+        535
+      ]
+    },
+    {
+      "id": "extra-person-river-228",
+      "bounds": [
+        19830,
+        475,
+        19882,
+        584
+      ],
+      "name": "大舟背向人物",
+      "evidence": "背朝畫外，身子前傾",
+      "replies": [
+        "我背着身子，先看衣紋吧。",
+        "肩頭和腳步也能辨認人。",
+        "看看我正面向哪一邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19856,
+        497
+      ]
+    },
+    {
+      "id": "extra-person-river-229",
+      "bounds": [
+        19875,
+        494,
+        19927,
+        572
+      ],
+      "name": "大舟右排人物",
+      "evidence": "手臂向船頭伸出",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19901,
+        510
+      ]
+    },
+    {
+      "id": "extra-person-river-230",
+      "bounds": [
+        19957,
+        465,
+        20000,
+        557
+      ],
+      "name": "大舟船頭人物",
+      "evidence": "靠近船頭和長杆",
+      "replies": [
+        "長杆在手，先站穩些。",
+        "留意杆子伸向哪一邊。",
+        "我的手正靠近這根杆。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19978,
+        483
+      ]
+    },
+    {
+      "id": "extra-person-river-231",
+      "bounds": [
+        19524,
+        600,
+        19578,
+        700
+      ],
+      "name": "船尾左人物",
+      "evidence": "手臂伸向左方",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19551,
+        620
+      ]
+    },
+    {
+      "id": "extra-person-river-232",
+      "bounds": [
+        19573,
+        616,
+        19632,
+        711
+      ],
+      "name": "船尾右人物",
+      "evidence": "手臂靠近斜長杆",
+      "replies": [
+        "長杆在手，先站穩些。",
+        "留意杆子伸向哪一邊。",
+        "我的手正靠近這根杆。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19602,
+        635
+      ]
+    },
+    {
+      "id": "extra-person-river-233",
+      "bounds": [
+        19700,
+        641,
+        19766,
+        721
+      ],
+      "name": "船尾中央俯身人物",
+      "evidence": "彎腰靠近船尾",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19733,
+        657
+      ]
+    },
+    {
+      "id": "extra-person-river-234",
+      "bounds": [
+        19780,
+        638,
+        19853,
+        753
+      ],
+      "name": "船尾右俯身人物",
+      "evidence": "身子向前低伏",
+      "replies": [
+        "我正彎着身子呢。",
+        "看看我身前的東西。",
+        "從我的站姿再看周圍吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19816,
+        661
+      ]
+    },
+    {
+      "id": "extra-person-river-235",
+      "bounds": [
+        19862,
+        595,
+        19921,
+        722
+      ],
+      "name": "船中前排人物",
+      "evidence": "側身向長杆俯",
+      "replies": [
+        "長杆在手，先站穩些。",
+        "留意杆子伸向哪一邊。",
+        "我的手正靠近這根杆。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19892,
+        620
+      ]
+    },
+    {
+      "id": "extra-person-river-236",
+      "bounds": [
+        19934,
+        655,
+        19981,
+        711
+      ],
+      "name": "船尾半身人物",
+      "evidence": "上身露在船尾後",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19958,
+        666
+      ]
+    },
+    {
+      "id": "extra-person-river-237",
+      "bounds": [
+        19881,
+        943,
+        19985,
+        1110
+      ],
+      "name": "下方小舟立姿人物",
+      "evidence": "兩手伸向前方",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19920,
+        967
+      ]
+    },
+    {
+      "id": "extra-person-river-238",
+      "bounds": [
+        19601,
+        1079,
+        19664,
+        1146
+      ],
+      "name": "下方舟船伸臂人物",
+      "evidence": "手臂向右上方伸出",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19632,
+        1092
+      ]
+    },
+    {
+      "id": "extra-person-river-239",
+      "bounds": [
+        19655,
+        1108,
+        19696,
+        1160
+      ],
+      "name": "下方舟船半身人物",
+      "evidence": "上身露在船篷後",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19676,
+        1118
+      ]
+    },
+    {
+      "id": "extra-person-river-240",
+      "bounds": [
+        19084,
+        1141,
+        19121,
+        1189
+      ],
+      "name": "岸邊棚左人物",
+      "evidence": "身子被棚屋遮住",
+      "replies": [
+        "只露出頭肩，也看得到我。",
+        "別把旁邊的物件當成衣裳。",
+        "看看我和身旁的人隔着多遠。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19102,
+        1151
+      ]
+    },
+    {
+      "id": "extra-person-river-241",
+      "bounds": [
+        19145,
+        1143,
+        19182,
+        1200
+      ],
+      "name": "岸邊棚中人物",
+      "evidence": "坐在棚下",
+      "replies": [
+        "在這裏坐一會兒。",
+        "你看，我的腿朝着這邊。",
+        "從我身旁再找些小細節吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19164,
+        1154
+      ]
+    },
+    {
+      "id": "extra-person-river-242",
+      "bounds": [
+        19186,
+        1147,
+        19248,
+        1237
+      ],
+      "name": "岸邊棚右人物",
+      "evidence": "上身露在棚下",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19199,
+        1170
+      ]
+    },
+    {
+      "id": "extra-person-river-243",
+      "bounds": [
+        19351,
+        1116,
+        19415,
+        1225
+      ],
+      "name": "岸邊傘下人物",
+      "evidence": "坐在傘棚下",
+      "replies": [
+        "在這裏坐一會兒。",
+        "你看，我的腿朝着這邊。",
+        "從我身旁再找些小細節吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19383,
+        1138
+      ]
+    },
+    {
+      "id": "extra-person-river-244",
+      "bounds": [
+        19649,
+        1223,
+        19692,
+        1272
+      ],
+      "name": "岸邊船篷後人物",
+      "evidence": "上身露在篷後",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19650,
+        1233
+      ]
+    },
+    {
+      "id": "extra-person-river-245",
+      "bounds": [
+        19671,
+        1436,
+        19729,
+        1508
+      ],
+      "name": "屋頂下左半身人物",
+      "evidence": "坐在屋內",
+      "replies": [
+        "在這裏坐一會兒。",
+        "你看，我的腿朝着這邊。",
+        "從我身旁再找些小細節吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19700,
+        1450
+      ]
+    },
+    {
+      "id": "extra-person-river-246",
+      "bounds": [
+        19851,
+        1436,
+        19908,
+        1512
+      ],
+      "name": "屋頂下右半身人物",
+      "evidence": "坐在屋內",
+      "replies": [
+        "在這裏坐一會兒。",
+        "你看，我的腿朝着這邊。",
+        "從我身旁再找些小細節吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19880,
+        1451
+      ]
+    },
+    {
+      "id": "extra-person-river-247",
+      "bounds": [
+        20172,
+        315,
+        20245,
+        426
+      ],
+      "name": "船頭左立姿人物",
+      "evidence": "手臂伸向長杆",
+      "replies": [
+        "長杆在手，先站穩些。",
+        "留意杆子伸向哪一邊。",
+        "我的手正靠近這根杆。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20208,
+        337
+      ]
+    },
+    {
+      "id": "extra-person-river-248",
+      "bounds": [
+        20256,
+        304,
+        20322,
+        425
+      ],
+      "name": "船頭中人物",
+      "evidence": "身子低伏，靠近長杆",
+      "replies": [
+        "長杆在手，先站穩些。",
+        "留意杆子伸向哪一邊。",
+        "我的手正靠近這根杆。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20289,
+        328
+      ]
+    },
+    {
+      "id": "extra-person-river-249",
+      "bounds": [
+        20270,
+        282,
+        20320,
+        320
+      ],
+      "name": "船頭後頭肩人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20295,
+        290
+      ]
+    },
+    {
+      "id": "extra-person-river-250",
+      "bounds": [
+        20336,
+        272,
+        20383,
+        337
+      ],
+      "name": "船頭右人物",
+      "evidence": "手臂伸向纜繩",
+      "replies": [
+        "這條纜繩，沿岸拖着走。",
+        "看我身子向前傾着。",
+        "船與岸，靠這條繩相連。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20360,
+        285
+      ]
+    },
+    {
+      "id": "extra-person-river-251",
+      "bounds": [
+        20368,
+        318,
+        20423,
+        372
+      ],
+      "name": "船頭後排人物",
+      "evidence": "上身露在船篷後",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20396,
+        329
+      ]
+    },
+    {
+      "id": "extra-person-river-252",
+      "bounds": [
+        20113,
+        441,
+        20155,
+        495
+      ],
+      "name": "船舷後半身人物",
+      "evidence": "上身露在船舷上",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20134,
+        452
+      ]
+    },
+    {
+      "id": "extra-person-river-253",
+      "bounds": [
+        20118,
+        496,
+        20162,
+        541
+      ],
+      "name": "船舷前人物",
+      "evidence": "身子靠近船沿",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20140,
+        505
+      ]
+    },
+    {
+      "id": "extra-person-river-254",
+      "bounds": [
+        20264,
+        501,
+        20333,
+        596
+      ],
+      "name": "船舷伸臂人物",
+      "evidence": "手臂伸向左方",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20286,
+        505
+      ]
+    },
+    {
+      "id": "extra-person-river-255",
+      "bounds": [
+        20614,
+        251,
+        20679,
+        285
+      ],
+      "name": "岸上長杆旁人物",
+      "evidence": "上身伏在長杆旁",
+      "replies": [
+        "長杆在手，先站穩些。",
+        "留意杆子伸向哪一邊。",
+        "我的手正靠近這根杆。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20646,
+        258
+      ]
+    },
+    {
+      "id": "extra-person-river-256",
+      "bounds": [
+        20667,
+        262,
+        20712,
+        301
+      ],
+      "name": "岸上同伴人物",
+      "evidence": "身子向前彎",
+      "replies": [
+        "我正彎着身子呢。",
+        "看看我身前的東西。",
+        "從我的站姿再看周圍吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20690,
+        270
+      ]
+    },
+    {
+      "id": "extra-person-river-257",
+      "bounds": [
+        20588,
+        324,
+        20635,
+        407
+      ],
+      "name": "篷舟後排人物",
+      "evidence": "手臂收在身前",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20612,
+        341
+      ]
+    },
+    {
+      "id": "extra-person-river-258",
+      "bounds": [
+        20545,
+        366,
+        20591,
+        417
+      ],
+      "name": "篷舟前排人物",
+      "evidence": "上身露在船篷外",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20568,
+        376
+      ]
+    },
+    {
+      "id": "extra-person-river-259",
+      "bounds": [
+        20864,
+        376,
+        20889,
+        409
+      ],
+      "name": "篷舟船艙人物",
+      "evidence": "上身露在艙口",
+      "replies": [
+        "船篷遮着身子，我還在這裏。",
+        "我的帽子露在篷架旁。",
+        "沿着船舷再看身旁的人吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20876,
+        383
+      ]
+    },
+    {
+      "id": "extra-person-river-260",
+      "bounds": [
+        20957,
+        621,
+        21016,
+        698
+      ],
+      "name": "右岸樹旁人物",
+      "evidence": "坐在樹枝後方",
+      "replies": [
+        "在這裏坐一會兒。",
+        "你看，我的腿朝着這邊。",
+        "從我身旁再找些小細節吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20986,
+        636
+      ]
+    },
+    {
+      "id": "extra-person-river-261",
+      "bounds": [
+        20026,
+        1014,
+        20077,
+        1103
+      ],
+      "name": "下舟伸臂人物",
+      "evidence": "手臂向上伸出",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20052,
+        1032
+      ]
+    },
+    {
+      "id": "extra-person-river-262",
+      "bounds": [
+        20139,
+        1052,
+        20186,
+        1118
+      ],
+      "name": "下舟坐姿人物",
+      "evidence": "坐在船篷前",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20162,
+        1065
+      ]
+    },
+    {
+      "id": "extra-person-river-263",
+      "bounds": [
+        20103,
+        1072,
+        20137,
+        1110
+      ],
+      "name": "下舟後頭肩人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "船篷遮着身子，我還在這裏。",
+        "我的帽子露在篷架旁。",
+        "沿着船舷再看身旁的人吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20120,
+        1080
+      ]
+    },
+    {
+      "id": "extra-person-river-265",
+      "bounds": [
+        21022,
+        1246,
+        21086,
+        1363
+      ],
+      "name": "岸上牽纜人物",
+      "evidence": "身體向前傾",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        21022,
+        1260
+      ]
+    },
+    {
+      "id": "extra-person-river-266",
+      "bounds": [
+        20113,
+        1543,
+        20160,
+        1600
+      ],
+      "name": "傘下左坐客",
+      "evidence": "坐在桌邊",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20136,
+        1554
+      ]
+    },
+    {
+      "id": "extra-person-river-267",
+      "bounds": [
+        20164,
+        1544,
+        20209,
+        1614
+      ],
+      "name": "傘下右坐客",
+      "evidence": "坐在同伴旁",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20186,
+        1558
+      ]
+    },
+    {
+      "id": "extra-person-river-268",
+      "bounds": [
+        20440,
+        1653,
+        20471,
+        1759
+      ],
+      "name": "樹下人物",
+      "evidence": "身子被樹幹遮住",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20456,
+        1674
+      ]
+    },
+    {
+      "id": "extra-person-river-269",
+      "bounds": [
+        21512,
+        73,
+        21547,
+        145
+      ],
+      "name": "岸上長衣人物",
+      "evidence": "站在屋門外",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        21530,
+        87
+      ]
+    },
+    {
+      "id": "extra-person-river-270",
+      "bounds": [
+        21487,
+        129,
+        21517,
+        165
+      ],
+      "name": "大舟左頭肩人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "船篷遮着身子，我還在這裏。",
+        "我的帽子露在篷架旁。",
+        "沿着船舷再看身旁的人吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        21502,
+        136
+      ]
+    },
+    {
+      "id": "extra-person-river-271",
+      "bounds": [
+        21664,
+        133,
+        21692,
+        167
+      ],
+      "name": "大舟右頭肩人物",
+      "evidence": "上身露在船篷後",
+      "replies": [
+        "船篷遮着身子，我還在這裏。",
+        "我的帽子露在篷架旁。",
+        "沿着船舷再看身旁的人吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        21678,
+        140
+      ]
+    },
+    {
+      "id": "extra-person-river-272",
+      "bounds": [
+        21833,
+        152,
+        21889,
+        242
+      ],
+      "name": "牽纜第一人物",
+      "evidence": "向前彎腰，腳步張開",
+      "replies": [
+        "我正彎着身子呢。",
+        "看看我身前的東西。",
+        "從我的站姿再看周圍吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        21861,
+        170
+      ]
+    },
+    {
+      "id": "extra-person-river-273",
+      "bounds": [
+        21905,
+        179,
+        21960,
+        264
+      ],
+      "name": "牽纜第二人物",
+      "evidence": "身子向前傾，沿岸而行",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        21932,
+        196
+      ]
+    },
+    {
+      "id": "extra-person-river-274",
+      "bounds": [
+        21963,
+        208,
+        22016,
+        286
+      ],
+      "name": "牽纜第三人物",
+      "evidence": "彎腰拖着長纜",
+      "replies": [
+        "這條纜繩，沿岸拖着走。",
+        "看我身子向前傾着。",
+        "船與岸，靠這條繩相連。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        21968,
+        225
+      ]
+    },
+    {
+      "id": "extra-person-river-275",
+      "bounds": [
+        22022,
+        235,
+        22088,
+        327
+      ],
+      "name": "牽纜第四人物",
+      "evidence": "雙手靠近纜繩",
+      "replies": [
+        "這條纜繩，沿岸拖着走。",
+        "看我身子向前傾着。",
+        "船與岸，靠這條繩相連。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22055,
+        253
+      ]
+    },
+    {
+      "id": "extra-person-river-276",
+      "bounds": [
+        21164,
+        831,
+        21224,
+        910
+      ],
+      "name": "樹後小舟人物",
+      "evidence": "上身被樹枝遮住",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        21194,
+        847
+      ]
+    },
+    {
+      "id": "extra-person-river-277",
+      "bounds": [
+        21062,
+        1138,
+        21110,
+        1200
+      ],
+      "name": "小舟棚內人物",
+      "evidence": "坐在船篷前",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        21086,
+        1150
+      ]
+    },
+    {
+      "id": "extra-person-river-278",
+      "bounds": [
+        21047,
+        1242,
+        21134,
+        1370
+      ],
+      "name": "樹旁坐地人物",
+      "evidence": "坐在地上",
+      "replies": [
+        "在這裏坐一會兒。",
+        "你看，我的腿朝着這邊。",
+        "從我身旁再找些小細節吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        21090,
+        1268
+      ]
+    },
+    {
+      "id": "extra-person-river-279",
+      "bounds": [
+        21162,
+        1234,
+        21237,
+        1426
+      ],
+      "name": "樹旁站立人物",
+      "evidence": "雙手收在胸前",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        21200,
+        1264
+      ]
+    },
+    {
+      "id": "extra-person-river-280",
+      "bounds": [
+        21226,
+        1268,
+        21281,
+        1409
+      ],
+      "name": "樹後半身人物",
+      "evidence": "身子被樹幹遮住",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        21254,
+        1296
+      ]
+    },
+    {
+      "id": "extra-person-river-281",
+      "bounds": [
+        21965,
+        1575,
+        22093,
+        1718
+      ],
+      "name": "岸邊背向坐客",
+      "evidence": "背朝畫外，坐在岸邊",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22029,
+        1604
+      ]
+    },
+    {
+      "id": "extra-person-river-282",
+      "bounds": [
+        22138,
+        292,
+        22202,
+        398
+      ],
+      "name": "牽纜第五人物",
+      "evidence": "俯身沿岸拖着纜繩",
+      "replies": [
+        "這條纜繩，沿岸拖着走。",
+        "看我身子向前傾着。",
+        "船與岸，靠這條繩相連。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22170,
+        313
+      ]
+    },
+    {
+      "id": "extra-person-river-283",
+      "bounds": [
+        22400,
+        474,
+        22439,
+        524
+      ],
+      "name": "大舟纜旁人物",
+      "evidence": "彎身靠近船尾纜繩",
+      "replies": [
+        "船篷遮着身子，我還在這裏。",
+        "我的帽子露在篷架旁。",
+        "沿着船舷再看身旁的人吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22420,
+        484
+      ]
+    },
+    {
+      "id": "extra-person-river-284",
+      "bounds": [
+        22848,
+        505,
+        22891,
+        561
+      ],
+      "name": "大舟上層人物",
+      "evidence": "坐在船篷上層旁",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22870,
+        516
+      ]
+    },
+    {
+      "id": "extra-person-river-285",
+      "bounds": [
+        22059,
+        835,
+        22105,
+        898
+      ],
+      "name": "前船後排左人物",
+      "evidence": "站在同伴後",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22082,
+        848
+      ]
+    },
+    {
+      "id": "extra-person-river-286",
+      "bounds": [
+        22087,
+        846,
+        22134,
+        930
+      ],
+      "name": "前船左立姿人物",
+      "evidence": "身子向前傾",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22110,
+        863
+      ]
+    },
+    {
+      "id": "extra-person-river-287",
+      "bounds": [
+        22132,
+        814,
+        22173,
+        872
+      ],
+      "name": "前船後排中人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "擋住了身子，還看得見我。",
+        "先看看露出的帽子和肩頭。",
+        "別把前面的東西當成我的衣裳。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22152,
+        826
+      ]
+    },
+    {
+      "id": "extra-person-river-288",
+      "bounds": [
+        22130,
+        867,
+        22183,
+        970
+      ],
+      "name": "前船中立姿人物",
+      "evidence": "手放在長杆旁",
+      "replies": [
+        "長杆在手，先站穩些。",
+        "留意杆子伸向哪一邊。",
+        "我的手正靠近這根杆。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22136,
+        880
+      ]
+    },
+    {
+      "id": "extra-person-river-289",
+      "bounds": [
+        22168,
+        828,
+        22207,
+        876
+      ],
+      "name": "前船後排右人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "船篷遮着身子，我還在這裏。",
+        "我的帽子露在篷架旁。",
+        "沿着船舷再看身旁的人吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22188,
+        838
+      ]
+    },
+    {
+      "id": "extra-person-river-290",
+      "bounds": [
+        22195,
+        842,
+        22245,
+        923
+      ],
+      "name": "前船右立姿人物",
+      "evidence": "手臂向長杆伸出",
+      "replies": [
+        "長杆在手，先站穩些。",
+        "留意杆子伸向哪一邊。",
+        "我的手正靠近這根杆。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22220,
+        858
+      ]
+    },
+    {
+      "id": "extra-person-river-291",
+      "bounds": [
+        22244,
+        850,
+        22307,
+        981
+      ],
+      "name": "前船前排右人物",
+      "evidence": "彎身靠近船頭",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22255,
+        863
+      ]
+    },
+    {
+      "id": "extra-person-river-292",
+      "bounds": [
+        22041,
+        1435,
+        22079,
+        1471
+      ],
+      "name": "下方舟船左人物",
+      "evidence": "上身露在船尾",
+      "replies": [
+        "船篷遮着身子，我還在這裏。",
+        "我的帽子露在篷架旁。",
+        "沿着船舷再看身旁的人吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22060,
+        1442
+      ]
+    },
+    {
+      "id": "extra-person-river-293",
+      "bounds": [
+        22081,
+        1431,
+        22108,
+        1476
+      ],
+      "name": "下方舟船右人物",
+      "evidence": "坐在船尾旁",
+      "replies": [
+        "船篷遮着身子，我還在這裏。",
+        "我的帽子露在篷架旁。",
+        "沿着船舷再看身旁的人吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22094,
+        1440
+      ]
+    },
+    {
+      "id": "extra-person-river-294",
+      "bounds": [
+        22588,
+        1547,
+        22696,
+        1635
+      ],
+      "name": "下方船篷俯身人物",
+      "evidence": "彎腰伏在船篷前",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22590,
+        1558
+      ]
+    },
+    {
+      "id": "extra-person-river-295",
+      "bounds": [
+        23059,
+        318,
+        23104,
+        365
+      ],
+      "name": "樓上左坐客",
+      "evidence": "坐在欄杆後",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23082,
+        327
+      ]
+    },
+    {
+      "id": "extra-person-river-296",
+      "bounds": [
+        23102,
+        318,
+        23141,
+        368
+      ],
+      "name": "樓上中坐客",
+      "evidence": "坐在同伴旁",
+      "replies": [
+        "我在桌旁，露着半個身子。",
+        "桌面和柱子擋住了一些。",
+        "先看我的頭肩，再看桌邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23122,
+        328
+      ]
+    },
+    {
+      "id": "extra-person-river-297",
+      "bounds": [
+        23139,
+        337,
+        23179,
+        372
+      ],
+      "name": "樓上右坐客",
+      "evidence": "上身靠近欄杆",
+      "replies": [
+        "站在欄邊，眼前真熱鬧。",
+        "看看我的身子朝哪一邊。",
+        "欄外的動靜，你看到了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23159,
+        344
+      ]
+    },
+    {
+      "id": "extra-person-river-298",
+      "bounds": [
+        23210,
+        329,
+        23271,
+        382
+      ],
+      "name": "樓上側身坐客",
+      "evidence": "坐在桌邊",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23220,
+        335
+      ]
+    },
+    {
+      "id": "extra-person-river-299",
+      "bounds": [
+        23377,
+        326,
+        23409,
+        369
+      ],
+      "name": "樓角半身人物",
+      "evidence": "身子被屋柱遮住",
+      "replies": [
+        "只露出頭肩，也看得到我。",
+        "別把旁邊的物件當成衣裳。",
+        "看看我和身旁的人隔着多遠。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23393,
+        335
+      ]
+    },
+    {
+      "id": "extra-person-river-300",
+      "bounds": [
+        23630,
+        319,
+        23670,
+        402
+      ],
+      "name": "屋前坐姿人物",
+      "evidence": "坐在桌椅旁",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23650,
+        336
+      ]
+    },
+    {
+      "id": "extra-person-river-301",
+      "bounds": [
+        23894,
+        201,
+        23949,
+        311
+      ],
+      "name": "棚柱後站立人物",
+      "evidence": "站在棚柱後，頭與身體部分被柱和桌棚遮住",
+      "replies": [
+        "棚柱擋着我一邊身子。",
+        "站在桌凳間，也得看好腳步。",
+        "我的帽子露在棚沿下。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23922,
+        223
+      ]
+    },
+    {
+      "id": "extra-person-river-303",
+      "bounds": [
+        23453,
+        534,
+        23497,
+        583
+      ],
+      "name": "大舟上層坐客",
+      "evidence": "坐在篷頂前",
+      "replies": [
+        "桌就在身旁，坐定再看。",
+        "看看桌邊還有哪些人。",
+        "桌面上的東西也值得留意。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23475,
+        544
+      ]
+    },
+    {
+      "id": "extra-person-river-304",
+      "bounds": [
+        23263,
+        625,
+        23300,
+        665
+      ],
+      "name": "大舟船篷左人物",
+      "evidence": "露出頭肩",
+      "replies": [
+        "船篷遮着身子，我還在這裏。",
+        "我的帽子露在篷架旁。",
+        "沿着船舷再看身旁的人吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23282,
+        633
+      ]
+    },
+    {
+      "id": "extra-person-river-305",
+      "bounds": [
+        23449,
+        631,
+        23474,
+        687
+      ],
+      "name": "大舟船篷右人物",
+      "evidence": "上身露在棚外",
+      "replies": [
+        "我就在這裏站着。",
+        "看看我雙手放在哪裏。",
+        "旁邊的人和我姿勢不同吧？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23462,
+        642
+      ]
+    },
+    {
+      "id": "extra-person-river-306",
+      "bounds": [
+        23165,
+        692,
+        23222,
+        844
+      ],
+      "name": "大舟船舷人物",
+      "evidence": "站在船舷邊",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23194,
+        722
+      ]
+    },
+    {
+      "id": "extra-person-river-307",
+      "bounds": [
+        23123,
+        471,
+        23194,
+        538
+      ],
+      "name": "岸上牽纜人物",
+      "evidence": "彎腰面向長纜",
+      "replies": [
+        "這條纜繩，沿岸拖着走。",
+        "看我身子向前傾着。",
+        "船與岸，靠這條繩相連。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23158,
+        484
+      ]
+    },
+    {
+      "id": "extra-person-river-308",
+      "bounds": [
+        23777,
+        510,
+        23821,
+        573
+      ],
+      "name": "後排舟尾人物",
+      "evidence": "坐在船尾",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23799,
+        523
+      ]
+    },
+    {
+      "id": "extra-person-river-309",
+      "bounds": [
+        23638,
+        754,
+        23718,
+        892
+      ],
+      "name": "小舟後排人物",
+      "evidence": "站在船上",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23678,
+        782
+      ]
+    },
+    {
+      "id": "extra-person-river-310",
+      "bounds": [
+        23908,
+        835,
+        23964,
+        942
+      ],
+      "name": "小舟船頭人物",
+      "evidence": "手臂向杆前伸",
+      "replies": [
+        "看，我的手正伸向那邊。",
+        "別只看臉，也看看手勢。",
+        "手臂的方向，你看清了嗎？"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23936,
+        856
+      ]
+    },
+    {
+      "id": "extra-person-river-311",
+      "bounds": [
+        23629,
+        925,
+        23713,
+        1058
+      ],
+      "name": "小舟船尾人物",
+      "evidence": "手臂伸向船篷前",
+      "replies": [
+        "我在船邊，河面就在旁。",
+        "看看船篷遮住了甚麼。",
+        "船沿與我的姿勢，都可細看。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23645,
+        941
+      ]
+    },
+    {
+      "id": "extra-person-river-312",
+      "bounds": [
+        19426,
+        69,
+        19452,
+        120
+      ],
+      "name": "橋後傘棚人物",
+      "evidence": "上身露在圓傘棚下",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19439,
+        79
+      ]
+    },
+    {
+      "id": "extra-person-river-313",
+      "bounds": [
+        19534,
+        67,
+        19577,
+        138
+      ],
+      "name": "橋後負物人物",
+      "evidence": "肩背靠近成束物件",
+      "replies": [
+        "我背着身子，先看衣紋吧。",
+        "肩頭和腳步也能辨認人。",
+        "看看我正面向哪一邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19556,
+        81
+      ]
+    },
+    {
+      "id": "extra-person-river-314",
+      "bounds": [
+        19597,
+        91,
+        19636,
+        121
+      ],
+      "name": "橋後坐地人物",
+      "evidence": "坐在地上，手臂向旁伸",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19616,
+        97
+      ]
+    },
+    {
+      "id": "extra-person-river-315",
+      "bounds": [
+        19684,
+        51,
+        19730,
+        132
+      ],
+      "name": "橋後挑籃人物",
+      "evidence": "肩擔兩端垂着籃子",
+      "replies": [
+        "擔子在肩，借過一下。",
+        "看看擔子兩端的東西。",
+        "走路時也得顧着肩頭。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19707,
+        67
+      ]
+    },
+    {
+      "id": "extra-person-river-316",
+      "bounds": [
+        19859,
+        34,
+        19893,
+        82
+      ],
+      "name": "橋後遠處人物",
+      "evidence": "身子部分被背景物遮住",
+      "replies": [
+        "欄杆擋着我半個身子。",
+        "先看露出的帽子與肩頭。",
+        "我在這邊，橋下也有人忙着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        19876,
+        44
+      ]
+    },
+    {
+      "id": "extra-person-river-317",
+      "bounds": [
+        20916,
+        370,
+        20944,
+        406
+      ],
+      "name": "停泊舟艙口人物",
+      "evidence": "頭肩露在船艙口",
+      "replies": [
+        "船篷遮着身子，我還在這裏。",
+        "我的帽子露在篷架旁。",
+        "沿着船舷再看身旁的人吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        20930,
+        377
+      ]
+    },
+    {
+      "id": "extra-person-river-318",
+      "bounds": [
+        23945,
+        117,
+        24003,
+        204
+      ],
+      "name": "屋內桌邊坐姿人物",
+      "evidence": "在屋內桌邊坐着，側身面向右方，手臂靠近桌面",
+      "replies": [
+        "我坐在屋內桌旁。",
+        "桌子隔着我和門外的路。",
+        "看看我的手臂靠近哪一邊。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23974,
+        134
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "extra-object-river-001",
+      "bounds": [
+        12080,
+        535,
+        12444,
+        851
+      ],
+      "name": "桌椅屋前店面",
+      "evidence": "屋簷、桌椅與懸掛小牌",
+      "replies": [
+        "這裏可見桌椅屋前店面。",
+        "近看：屋簷、桌椅與懸掛小牌。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12243.8,
+        693
+      ]
+    },
+    {
+      "id": "extra-object-river-002",
+      "bounds": [
+        12187,
+        683,
+        12226,
+        733
+      ],
+      "name": "屋前左掛牌",
+      "evidence": "牌上細字不宜直接釋讀",
+      "replies": [
+        "這裏可見屋前左掛牌。",
+        "近看：牌上細字不宜直接釋讀。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12206.5,
+        708
+      ]
+    },
+    {
+      "id": "extra-object-river-003",
+      "bounds": [
+        12250,
+        683,
+        12292,
+        735
+      ],
+      "name": "屋前中掛牌",
+      "evidence": "牌上細字不宜直接釋讀",
+      "replies": [
+        "這裏可見屋前中掛牌。",
+        "近看：牌上細字不宜直接釋讀。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12271,
+        709
+      ]
+    },
+    {
+      "id": "extra-object-river-004",
+      "bounds": [
+        12322,
+        693,
+        12345,
+        746
+      ],
+      "name": "屋前右掛牌",
+      "evidence": "牌上細字不宜直接釋讀",
+      "replies": [
+        "這裏可見屋前右掛牌。",
+        "近看：牌上細字不宜直接釋讀。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12333.5,
+        719.5
+      ]
+    },
+    {
+      "id": "extra-object-river-005",
+      "bounds": [
+        12586,
+        748,
+        13100,
+        966
+      ],
+      "name": "棚下桌椅店面",
+      "evidence": "桌子與凳子排在棚下",
+      "replies": [
+        "這裏可見棚下桌椅店面。",
+        "近看：桌子與凳子排在棚下。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12843,
+        857
+      ]
+    },
+    {
+      "id": "extra-object-river-006",
+      "bounds": [
+        12674,
+        959,
+        13075,
+        1223
+      ],
+      "name": "篷頂輪車",
+      "evidence": "篷頂、車輪與車轅",
+      "replies": [
+        "這裏可見篷頂輪車。",
+        "近看：篷頂、車輪與車轅。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12874.5,
+        1091
+      ]
+    },
+    {
+      "id": "extra-object-river-007",
+      "bounds": [
+        12414,
+        980,
+        12649,
+        1094
+      ],
+      "name": "斜放長篷物",
+      "evidence": "竹編長篷形物放在地上",
+      "replies": [
+        "這裏可見斜放長篷物。",
+        "近看：竹編長篷形物放在地上。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        12531.5,
+        1037
+      ]
+    },
+    {
+      "id": "extra-object-river-008",
+      "bounds": [
+        13096,
+        302,
+        13545,
+        452
+      ],
+      "name": "上排棚下店面",
+      "evidence": "桌椅沿着棚排開",
+      "replies": [
+        "這裏可見上排棚下店面。",
+        "近看：桌椅沿着棚排開。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13320.5,
+        377
+      ]
+    },
+    {
+      "id": "extra-object-river-009",
+      "bounds": [
+        13584,
+        294,
+        13820,
+        410
+      ],
+      "name": "載物牲畜隊",
+      "evidence": "牲畜背上放着長篷物",
+      "replies": [
+        "這裏可見載物牲畜隊。",
+        "近看：牲畜背上放着長篷物。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13702,
+        352
+      ]
+    },
+    {
+      "id": "extra-object-river-010",
+      "bounds": [
+        13664,
+        493,
+        13880,
+        879
+      ],
+      "name": "棚邊地攤器物",
+      "evidence": "圓器、編篷與木架",
+      "replies": [
+        "這裏可見棚邊地攤器物。",
+        "近看：圓器、編篷與木架。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13788.2,
+        686
+      ]
+    },
+    {
+      "id": "extra-object-river-011",
+      "bounds": [
+        12932,
+        861,
+        13303,
+        1041
+      ],
+      "name": "下排桌椅店面",
+      "evidence": "桌椅與門邊掛牌",
+      "replies": [
+        "這裏可見下排桌椅店面。",
+        "近看：桌椅與門邊掛牌。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13117.5,
+        951
+      ]
+    },
+    {
+      "id": "extra-object-river-012",
+      "bounds": [
+        13034,
+        846,
+        13076,
+        898
+      ],
+      "name": "店門掛牌",
+      "evidence": "牌上細字不作確定釋讀",
+      "replies": [
+        "這裏可見店門掛牌。",
+        "近看：牌上細字不作確定釋讀。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13055,
+        872
+      ]
+    },
+    {
+      "id": "extra-object-river-013",
+      "bounds": [
+        12911,
+        1265,
+        13231,
+        1661
+      ],
+      "name": "篷頂輪車",
+      "evidence": "大車輪、篷頂和牽引牲畜",
+      "replies": [
+        "這裏可見篷頂輪車。",
+        "近看：大車輪、篷頂和牽引牲畜。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        13071,
+        1463
+      ]
+    },
+    {
+      "id": "extra-object-river-014",
+      "bounds": [
+        14367,
+        967,
+        14910,
+        1210
+      ],
+      "name": "河岸敞開店面",
+      "evidence": "桌椅置於屋簷之下",
+      "replies": [
+        "這裏可見河岸敞開店面。",
+        "近看：桌椅置於屋簷之下。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        14638.5,
+        1088.5
+      ]
+    },
+    {
+      "id": "extra-object-river-015",
+      "bounds": [
+        14824,
+        243,
+        15029,
+        497
+      ],
+      "name": "上游小舟",
+      "evidence": "細長船身與船內物件",
+      "replies": [
+        "這裏可見上游小舟。",
+        "近看：細長船身與船內物件。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        14926.5,
+        370
+      ]
+    },
+    {
+      "id": "extra-object-river-016",
+      "bounds": [
+        14893,
+        398,
+        15807,
+        829
+      ],
+      "name": "岸邊長篷舟",
+      "evidence": "船篷、繫岸的纜繩",
+      "replies": [
+        "這裏可見岸邊長篷舟。",
+        "近看：船篷、繫岸的纜繩。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15350,
+        627.867
+      ]
+    },
+    {
+      "id": "extra-object-river-017",
+      "bounds": [
+        15003,
+        157,
+        15100,
+        357
+      ],
+      "name": "遠處舟船",
+      "evidence": "船身向畫面右方延伸",
+      "replies": [
+        "這裏可見遠處舟船。",
+        "近看：船身向畫面右方延伸。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15051.5,
+        282
+      ]
+    },
+    {
+      "id": "extra-object-river-018",
+      "bounds": [
+        15008,
+        160,
+        15255,
+        317
+      ],
+      "name": "岸邊空舟",
+      "evidence": "船頭朝岸並有纜繩",
+      "replies": [
+        "這裏可見岸邊空舟。",
+        "近看：船頭朝岸並有纜繩。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15131.5,
+        238.5
+      ]
+    },
+    {
+      "id": "extra-object-river-019",
+      "bounds": [
+        15182,
+        64,
+        15463,
+        162
+      ],
+      "name": "遠處篷舟",
+      "evidence": "扁平船篷與船尾",
+      "replies": [
+        "這裏可見遠處篷舟。",
+        "近看：扁平船篷與船尾。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15322.5,
+        113
+      ]
+    },
+    {
+      "id": "extra-object-river-020",
+      "bounds": [
+        14984,
+        299,
+        15394,
+        474
+      ],
+      "name": "岸邊中層篷舟",
+      "evidence": "弧形船篷與船舷",
+      "replies": [
+        "這裏可見岸邊中層篷舟。",
+        "近看：弧形船篷與船舷。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15189,
+        386.5
+      ]
+    },
+    {
+      "id": "extra-object-river-021",
+      "bounds": [
+        14927,
+        452,
+        15413,
+        621
+      ],
+      "name": "岸邊小篷舟",
+      "evidence": "船篷與伸出的船尾",
+      "replies": [
+        "這裏可見岸邊小篷舟。",
+        "近看：船篷與伸出的船尾。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15170,
+        536.5
+      ]
+    },
+    {
+      "id": "extra-object-river-022",
+      "bounds": [
+        15571,
+        278,
+        15985,
+        535
+      ],
+      "name": "行進中的篷舟",
+      "evidence": "兩端人物與伸出的長杆",
+      "replies": [
+        "這裏可見行進中的篷舟。",
+        "近看：兩端人物與伸出的長杆。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15778,
+        406.5
+      ]
+    },
+    {
+      "id": "extra-object-river-023",
+      "bounds": [
+        15034,
+        122,
+        15115,
+        271
+      ],
+      "name": "岸邊兩根斜杆",
+      "evidence": "細杆跨過船頭",
+      "replies": [
+        "這裏可見岸邊兩根斜杆。",
+        "近看：細杆跨過船頭。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        15074.5,
+        196.5
+      ]
+    },
+    {
+      "id": "extra-object-river-024",
+      "bounds": [
+        15958,
+        134,
+        16232,
+        345
+      ],
+      "name": "立桅篷舟",
+      "evidence": "高桅杆、纜繩與船篷",
+      "replies": [
+        "這裏可見立桅篷舟。",
+        "近看：高桅杆、纜繩與船篷。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        16095,
+        239.5
+      ]
+    },
+    {
+      "id": "extra-object-river-025",
+      "bounds": [
+        16391,
+        212,
+        18100,
+        408
+      ],
+      "name": "岸邊長船",
+      "evidence": "多段方形船艙和竹篷",
+      "replies": [
+        "這裏可見岸邊長船。",
+        "近看：多段方形船艙和竹篷。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17245.5,
+        310
+      ]
+    },
+    {
+      "id": "extra-object-river-026",
+      "bounds": [
+        17018,
+        1553,
+        17088,
+        1702
+      ],
+      "name": "高掛字牌",
+      "evidence": "可見墨字，完整字義不作釋讀",
+      "replies": [
+        "這裏可見高掛字牌。",
+        "近看：可見墨字，完整字義不作釋讀。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17053,
+        1627.5
+      ]
+    },
+    {
+      "id": "extra-object-river-027",
+      "bounds": [
+        16810,
+        530,
+        17100,
+        1369
+      ],
+      "name": "高架杆索裝置",
+      "evidence": "豎杆、橫梁、繩索與棚架",
+      "replies": [
+        "這裏可見高架杆索裝置。",
+        "近看：豎杆、橫梁、繩索與棚架。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        16955,
+        949.5
+      ]
+    },
+    {
+      "id": "extra-object-river-028",
+      "bounds": [
+        17663,
+        939,
+        18099,
+        1200
+      ],
+      "name": "橋西攤位",
+      "evidence": "竹棚下排列器物與人物",
+      "replies": [
+        "這裏可見橋西攤位。",
+        "近看：竹棚下排列器物與人物。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17881,
+        1069.5
+      ]
+    },
+    {
+      "id": "extra-object-river-029",
+      "bounds": [
+        17583,
+        909,
+        17672,
+        1234
+      ],
+      "name": "攤旁旗幡",
+      "evidence": "三幅長布垂在橫杆下",
+      "replies": [
+        "這裏可見攤旁旗幡。",
+        "近看：三幅長布垂在橫杆下。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17627.5,
+        1071.5
+      ]
+    },
+    {
+      "id": "extra-object-river-030",
+      "bounds": [
+        17459,
+        1304,
+        17791,
+        1546
+      ],
+      "name": "編篷轎輿",
+      "evidence": "弧形編篷、承杆和旁邊人物",
+      "replies": [
+        "這裏可見編篷轎輿。",
+        "近看：弧形編篷、承杆和旁邊人物。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17625,
+        1425
+      ]
+    },
+    {
+      "id": "extra-object-river-031",
+      "bounds": [
+        16998,
+        1426,
+        17336,
+        1772
+      ],
+      "name": "高棚下店面",
+      "evidence": "屋柱、門面與高掛招牌",
+      "replies": [
+        "這裏可見高棚下店面。",
+        "近看：屋柱、門面與高掛招牌。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        17167,
+        1599
+      ]
+    },
+    {
+      "id": "extra-object-river-032",
+      "bounds": [
+        18421,
+        501,
+        18640,
+        714
+      ],
+      "name": "橋西左攤位",
+      "evidence": "竹編棚下有盤碗和桌面",
+      "replies": [
+        "這裏可見橋西左攤位。",
+        "近看：竹編棚下有盤碗和桌面。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        18530.5,
+        607.5
+      ]
+    },
+    {
+      "id": "extra-object-river-033",
+      "bounds": [
+        18779,
+        621,
+        18973,
+        896
+      ],
+      "name": "橋西右攤位",
+      "evidence": "斜竹棚下排列桌凳",
+      "replies": [
+        "這裏可見橋西右攤位。",
+        "近看：斜竹棚下排列桌凳。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        18876,
+        758.5
+      ]
+    },
+    {
+      "id": "extra-object-river-034",
+      "bounds": [
+        18084,
+        803,
+        18333,
+        951
+      ],
+      "name": "篷棚攤位",
+      "evidence": "人物與器物位於篷下",
+      "replies": [
+        "這裏可見篷棚攤位。",
+        "近看：人物與器物位於篷下。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        18208.5,
+        877
+      ]
+    },
+    {
+      "id": "extra-object-river-035",
+      "bounds": [
+        18380,
+        655,
+        18516,
+        835
+      ],
+      "name": "盤碗攤桌",
+      "evidence": "圓盤與淺碗排在長桌上",
+      "replies": [
+        "這裏可見盤碗攤桌。",
+        "近看：圓盤與淺碗排在長桌上。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        18448,
+        745
+      ]
+    },
+    {
+      "id": "extra-object-river-036",
+      "bounds": [
+        18272,
+        950,
+        18454,
+        1057
+      ],
+      "name": "長器物攤桌",
+      "evidence": "長條器物排在桌面",
+      "replies": [
+        "這裏可見長器物攤桌。",
+        "近看：長條器物排在桌面。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        18363,
+        987.45
+      ]
+    },
+    {
+      "id": "extra-object-river-037",
+      "bounds": [
+        18565,
+        1000,
+        18806,
+        1132
+      ],
+      "name": "河邊桌攤",
+      "evidence": "桌上圓器與傘棚",
+      "replies": [
+        "這裏可見河邊桌攤。",
+        "近看：桌上圓器與傘棚。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        18631.275,
+        1066
+      ]
+    },
+    {
+      "id": "extra-object-river-038",
+      "bounds": [
+        18675,
+        851,
+        18907,
+        1007
+      ],
+      "name": "大傘棚",
+      "evidence": "大圓傘罩在桌攤上",
+      "replies": [
+        "這裏可見大傘棚。",
+        "近看：大圓傘罩在桌攤上。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        18791,
+        929
+      ]
+    },
+    {
+      "id": "extra-object-river-039",
+      "bounds": [
+        18765,
+        427,
+        18837,
+        591
+      ],
+      "name": "方篷轎輿",
+      "evidence": "方形篷頂與抬杆",
+      "replies": [
+        "這裏可見方篷轎輿。",
+        "近看：方形篷頂與抬杆。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        18801,
+        509
+      ]
+    },
+    {
+      "id": "extra-object-river-040",
+      "bounds": [
+        18010,
+        1270,
+        18307,
+        1462
+      ],
+      "name": "載物輪車",
+      "evidence": "車輪、車架與盛載的器物",
+      "replies": [
+        "這裏可見載物輪車。",
+        "近看：車輪、車架與盛載的器物。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        18158.5,
+        1366
+      ]
+    },
+    {
+      "id": "extra-object-river-041",
+      "bounds": [
+        18141,
+        1648,
+        18265,
+        1764
+      ],
+      "name": "竹籃器物",
+      "evidence": "數只竹編籃放在屋旁",
+      "replies": [
+        "這裏可見竹籃器物。",
+        "近看：數只竹編籃放在屋旁。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        18203,
+        1706
+      ]
+    },
+    {
+      "id": "extra-object-river-042",
+      "bounds": [
+        18681,
+        1250,
+        18803,
+        1385
+      ],
+      "name": "掛串器物架",
+      "evidence": "串連器物懸在支架上",
+      "replies": [
+        "這裏可見掛串器物架。",
+        "近看：串連器物懸在支架上。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        18742,
+        1317.5
+      ]
+    },
+    {
+      "id": "extra-object-river-043",
+      "bounds": [
+        18870,
+        146,
+        20155,
+        570
+      ],
+      "name": "大木橋",
+      "evidence": "弧形木橋、木欄與橋梁",
+      "replies": [
+        "這裏可見大木橋。",
+        "近看：弧形木橋、木欄與橋梁。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "existingId": "landmark-bridge",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        19255.5,
+        400.4
+      ]
+    },
+    {
+      "id": "extra-object-river-044",
+      "bounds": [
+        19272,
+        319,
+        19892,
+        592
+      ],
+      "name": "橋下小篷船",
+      "evidence": "小船身與船篷在橋梁下",
+      "replies": [
+        "這裏可見橋下小篷船。",
+        "近看：小船身與船篷在橋梁下。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        19582,
+        455.5
+      ]
+    },
+    {
+      "id": "extra-object-river-045",
+      "bounds": [
+        19518,
+        269,
+        20487,
+        809
+      ],
+      "name": "橋下大篷船",
+      "evidence": "船上密集人物、長杆與纜索",
+      "replies": [
+        "這裏可見橋下大篷船。",
+        "近看：船上密集人物、長杆與纜索。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        20002.5,
+        413
+      ]
+    },
+    {
+      "id": "extra-object-river-046",
+      "bounds": [
+        19826,
+        1070,
+        21226,
+        1336
+      ],
+      "name": "橋旁岸邊長舟",
+      "evidence": "同一長舟的船舷由橋旁延續到岸樹後；中段被前景屋頂遮住，右端為帶棚船頭",
+      "replies": [
+        "沿船舷看，這是一艘長舟。",
+        "中段被屋頂與樹枝遮住了。",
+        "右端船棚仍與這船身相連。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        20526,
+        1203
+      ]
+    },
+    {
+      "id": "extra-object-river-047",
+      "bounds": [
+        19377,
+        1136,
+        19798,
+        1409
+      ],
+      "name": "岸邊長篷舟",
+      "evidence": "多段船篷與編籃",
+      "replies": [
+        "這裏可見岸邊長篷舟。",
+        "近看：多段船篷與編籃。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        19587.5,
+        1272.5
+      ]
+    },
+    {
+      "id": "extra-object-river-048",
+      "bounds": [
+        19035,
+        1018,
+        19419,
+        1258
+      ],
+      "name": "岸邊敞棚攤位",
+      "evidence": "桌面、屋棚及棚內人物",
+      "replies": [
+        "這裏可見岸邊敞棚攤位。",
+        "近看：桌面、屋棚及棚內人物。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        19227,
+        1138
+      ]
+    },
+    {
+      "id": "extra-object-river-049",
+      "bounds": [
+        20393,
+        269,
+        21004,
+        475
+      ],
+      "name": "橋旁停泊篷舟",
+      "evidence": "船篷、船舷和岸邊纜繩",
+      "replies": [
+        "這裏可見橋旁停泊篷舟。",
+        "近看：船篷、船舷和岸邊纜繩。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        20698.5,
+        372
+      ]
+    },
+    {
+      "id": "extra-object-river-050",
+      "bounds": [
+        20803,
+        152,
+        21788,
+        404
+      ],
+      "name": "高船身停泊篷舟",
+      "evidence": "舟內編籃與貨形物",
+      "replies": [
+        "這裏可見高船身停泊篷舟。",
+        "近看：舟內編籃與貨形物。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        21295.5,
+        278
+      ]
+    },
+    {
+      "id": "extra-object-river-052",
+      "bounds": [
+        20110,
+        1512,
+        20350,
+        1699
+      ],
+      "name": "傘下桌攤",
+      "evidence": "桌椅置於大圓傘下",
+      "replies": [
+        "這裏可見傘下桌攤。",
+        "近看：桌椅置於大圓傘下。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        20230,
+        1605.5
+      ]
+    },
+    {
+      "id": "extra-object-river-053",
+      "bounds": [
+        21166,
+        817,
+        22942,
+        1167
+      ],
+      "name": "樹後划杆長舟",
+      "evidence": "舟身中段被岸樹遮住，右端可見多人與長杆",
+      "replies": [
+        "長舟中段被樹枝遮住。",
+        "右端的人靠近長杆。",
+        "沿着船舷再看兩端吧。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22054,
+        992
+      ]
+    },
+    {
+      "id": "extra-object-river-055",
+      "bounds": [
+        22429,
+        487,
+        23836,
+        914
+      ],
+      "name": "載物大篷舟",
+      "evidence": "多段篷頂、編籃與長船舷",
+      "replies": [
+        "這裏可見載物大篷舟。",
+        "近看：多段篷頂、編籃與長船舷。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23132.5,
+        700.5
+      ]
+    },
+    {
+      "id": "extra-object-river-057",
+      "bounds": [
+        21966,
+        1433,
+        23092,
+        1680
+      ],
+      "name": "岸邊散布衣物篷舟",
+      "evidence": "布形物搭在篷上",
+      "replies": [
+        "這裏可見岸邊散布衣物篷舟。",
+        "近看：布形物搭在篷上。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        22529,
+        1556.5
+      ]
+    },
+    {
+      "id": "extra-object-river-058",
+      "bounds": [
+        23553,
+        310,
+        25288,
+        1243
+      ],
+      "name": "前排立桅大船",
+      "evidence": "跨 x24000 的同一前景大船；船身、船艙、立桅與索具連續，合併原 outskirts011。",
+      "replies": [
+        "前排大船有高桅與密集索具。",
+        "船艙和船舷連成長長的船身。",
+        "船上的人物各有自己的姿勢。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24420.5,
+        776.5
+      ]
+    },
+    {
+      "id": "extra-object-river-059",
+      "bounds": [
+        23568,
+        478,
+        24604,
+        744
+      ],
+      "name": "桅船後方帶篷船",
+      "evidence": "前排桅船後另一艘帶篷船；低船舷與船篷跨 x24000 相連，部分被前船遮住，合併原 outskirts009。",
+      "replies": [
+        "桅船後還有另一艘帶篷船。",
+        "它的船身有一部分被前船擋住。",
+        "同一河段，船隻靠得很近。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24034.2,
+        611
+      ]
+    },
+    {
+      "id": "extra-object-river-060",
+      "bounds": [
+        23029,
+        262,
+        23566,
+        457
+      ],
+      "name": "欄杆樓上店面",
+      "evidence": "桌椅與樓上欄杆",
+      "replies": [
+        "這裏可見欄杆樓上店面。",
+        "近看：桌椅與樓上欄杆。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23297.5,
+        359.5
+      ]
+    },
+    {
+      "id": "extra-object-river-061",
+      "bounds": [
+        23585,
+        211,
+        24000,
+        410
+      ],
+      "name": "岸邊棚下桌凳區",
+      "evidence": "相連岸邊建築的棚下桌凳部分，與 outskirts001 屋內桌旁區為同一建築不同可見細節，不推定為兩家店。",
+      "replies": [
+        "棚下擺着多張桌凳。",
+        "桌凳排在敞面屋前。",
+        "屋內和屋前連在一起。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        23792.5,
+        310.5
+      ]
+    },
+    {
+      "id": "extra-object-river-062",
+      "bounds": [
+        19385,
+        71,
+        19507,
+        127
+      ],
+      "name": "橋後圓傘桌攤",
+      "evidence": "傘下桌面與器物",
+      "replies": [
+        "這裏可見橋後圓傘桌攤。",
+        "近看：傘下桌面與器物。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        19458.2,
+        99
+      ]
+    },
+    {
+      "id": "extra-object-river-063",
+      "bounds": [
+        19239,
+        31,
+        19359,
+        94
+      ],
+      "name": "橋後棚下桌攤",
+      "evidence": "桌凳沿棚排列",
+      "replies": [
+        "這裏可見橋後棚下桌攤。",
+        "近看：桌凳沿棚排列。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        19299,
+        62.5
+      ]
+    },
+    {
+      "id": "extra-object-river-064",
+      "bounds": [
+        19670,
+        72,
+        19749,
+        123
+      ],
+      "name": "橋後擔籃",
+      "evidence": "扁擔兩端的兩只籃子",
+      "replies": [
+        "這裏可見橋後擔籃。",
+        "近看：扁擔兩端的兩只籃子。",
+        "看看它與旁邊人物的位置。"
+      ],
+      "status": "interactive",
+      "collectionId": "rainbow-bridge",
+      "hitPoint": [
+        19737.15,
+        97.5
+      ]
+    },
+    {
+      "id": "extra-object-river-065",
+      "bounds": [
+        19460,
+        420,
+        20435,
+        822
+      ],
+      "name": "橋下船工觀察區",
+      "evidence": "必經主線觀察區；同區船上人物另逐人登記",
+      "replies": [
+        "看看這裏的人與器物。",
+        "各人的姿勢並不相同。",
+        "橋、船和岸邊在這裏相遇。"
+      ],
+      "existingId": "bridge-boat",
+      "collectionId": "rainbow-bridge",
+      "status": "interactive",
+      "hitPoint": [
+        19947.5,
+        621
+      ]
+    },
+    {
+      "id": "extra-object-river-066",
+      "bounds": [
+        19150,
+        125,
+        19875,
+        305
+      ],
+      "name": "橋上觀看人群觀察區",
+      "evidence": "必經主線觀察區；不是單人熱區，個別人物另登記",
+      "replies": [
+        "看看這裏的人與器物。",
+        "各人的姿勢並不相同。",
+        "橋、船和岸邊在這裏相遇。"
+      ],
+      "existingId": "bridge-people",
+      "collectionId": "rainbow-bridge",
+      "status": "interactive",
+      "hitPoint": [
+        19494.375,
+        228.5
+      ]
+    },
+    {
+      "id": "extra-object-river-067",
+      "bounds": [
+        18250,
+        390,
+        18640,
+        750
+      ],
+      "name": "橋西端攤販觀察區",
+      "evidence": "既有攤販觀察區；桌攤和人物另各自登記",
+      "replies": [
+        "看看這裏的人與器物。",
+        "各人的姿勢並不相同。",
+        "橋、船和岸邊在這裏相遇。"
+      ],
+      "existingId": "bridge-stalls",
+      "collectionId": "rainbow-bridge",
+      "status": "interactive",
+      "hitPoint": [
+        18406,
+        570
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "river-t4-0",
+      "bounds": [
+        12000,
+        0,
+        13000,
+        1800
+      ],
+      "peopleCount": 14,
+      "notes": "已觀看原畫1000px段及左右接縫重疊裁圖；矩形按單人可見部分手動記錄。",
+      "reviewImage": "river/river-t4-0.svg"
+    },
+    {
+      "id": "river-t4-1",
+      "bounds": [
+        13000,
+        0,
+        14000,
+        1800
+      ],
+      "peopleCount": 37,
+      "notes": "已觀看原畫1000px段及左右接縫重疊裁圖；矩形按單人可見部分手動記錄。",
+      "reviewImage": "river/river-t4-1.svg"
+    },
+    {
+      "id": "river-t4-2",
+      "bounds": [
+        14000,
+        0,
+        15000,
+        1800
+      ],
+      "peopleCount": 12,
+      "notes": "已觀看原畫1000px段及左右接縫重疊裁圖；矩形按單人可見部分手動記錄。",
+      "reviewImage": "river/river-t4-2.svg"
+    },
+    {
+      "id": "river-t4-3",
+      "bounds": [
+        15000,
+        0,
+        16000,
+        1800
+      ],
+      "peopleCount": 15,
+      "notes": "已觀看原畫1000px段及左右接縫重疊裁圖；矩形按單人可見部分手動記錄。",
+      "reviewImage": "river/river-t4-3.svg"
+    },
+    {
+      "id": "river-t5-0",
+      "bounds": [
+        16000,
+        0,
+        17000,
+        1800
+      ],
+      "peopleCount": 12,
+      "notes": "已觀看原畫1000px段及左右接縫重疊裁圖；矩形按單人可見部分手動記錄。",
+      "reviewImage": "river/river-t5-0.svg"
+    },
+    {
+      "id": "river-t5-1",
+      "bounds": [
+        17000,
+        0,
+        18000,
+        1800
+      ],
+      "peopleCount": 27,
+      "notes": "已觀看原畫1000px段及左右接縫重疊裁圖；矩形按單人可見部分手動記錄。",
+      "reviewImage": "river/river-t5-1.svg"
+    },
+    {
+      "id": "river-t5-2",
+      "bounds": [
+        18000,
+        0,
+        19000,
+        1800
+      ],
+      "peopleCount": 63,
+      "notes": "已觀看原畫1000px段及左右接縫重疊裁圖；矩形按單人可見部分手動記錄。",
+      "reviewImage": "river/river-t5-2.svg"
+    },
+    {
+      "id": "river-t5-3",
+      "bounds": [
+        19000,
+        0,
+        20000,
+        1800
+      ],
+      "peopleCount": 69,
+      "notes": "已觀看原畫1000px段及左右接縫重疊裁圖；矩形按單人可見部分手動記錄。",
+      "reviewImage": "river/river-t5-3.svg"
+    },
+    {
+      "id": "river-t6-0",
+      "bounds": [
+        20000,
+        0,
+        21000,
+        1800
+      ],
+      "peopleCount": 21,
+      "notes": "已觀看原畫1000px段及左右接縫重疊裁圖；矩形按單人可見部分手動記錄。",
+      "reviewImage": "river/river-t6-0.svg"
+    },
+    {
+      "id": "river-t6-1",
+      "bounds": [
+        21000,
+        0,
+        22000,
+        1800
+      ],
+      "peopleCount": 12,
+      "notes": "已觀看原畫1000px段及左右接縫重疊裁圖；矩形按單人可見部分手動記錄。",
+      "reviewImage": "river/river-t6-1.svg"
+    },
+    {
+      "id": "river-t6-2",
+      "bounds": [
+        22000,
+        0,
+        23000,
+        1800
+      ],
+      "peopleCount": 15,
+      "notes": "已觀看原畫1000px段及左右接縫重疊裁圖；矩形按單人可見部分手動記錄。",
+      "reviewImage": "river/river-t6-2.svg"
+    },
+    {
+      "id": "river-t6-3",
+      "bounds": [
+        23000,
+        0,
+        24000,
+        1800
+      ],
+      "peopleCount": 17,
+      "notes": "已觀看原畫1000px段及左右接縫重疊裁圖；矩形按單人可見部分手動記錄。",
+      "reviewImage": "river/river-t6-3.svg"
+    }
+  ]
+}

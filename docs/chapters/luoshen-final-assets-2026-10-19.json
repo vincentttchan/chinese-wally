@@ -1,0 +1,402 @@
+{
+  "date": "2026-10-19",
+  "scope": "Chapter image and audio files; shared UI and fonts referenced in source document, not re-audited here.",
+  "assets": [
+    {
+      "file": "public/art/luoshen/collection-bird-cutout.png",
+      "kind": "generated-illustration",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 1517447,
+      "sha256": "3e64c1fde0f8b86ecb3af8c4c16e02d6bd31eb2ca258329e6a9a9244e8847c39",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/collection-boat-cutout.png",
+      "kind": "generated-illustration",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 1898051,
+      "sha256": "63d7b042f63e6b0f81a2ee353e807dc4750e819f8e50a4fb14f5237b4feae3ea",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/collection-boat.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        1200,
+        840
+      ],
+      "mode": "RGB",
+      "bytes": 390772,
+      "sha256": "9c6b157bfda5911832f5c8a988667979c24eb8879c11cfb40d038523b4846dbf",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/collection-canopy-cutout.png",
+      "kind": "generated-illustration",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 617443,
+      "sha256": "5937a650a5e2c4e1598742832eb53d00700852e75324348194209d44fd0ffe9f",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/collection-canopy.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        500,
+        500
+      ],
+      "mode": "RGB",
+      "bytes": 105197,
+      "sha256": "73dd13ff0fe383c393a05b36fee4bbdf47d8c87ab6ddd918da64025cc59e0588",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/collection-dragon-cutout.png",
+      "kind": "generated-illustration",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 1085281,
+      "sha256": "8e2ce236b397b1002125cc60079ef26a7ad4680842d872f64e76529c666a0eb9",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/collection-dragon.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        380,
+        380
+      ],
+      "mode": "RGB",
+      "bytes": 48706,
+      "sha256": "00f74cda90a6e7c34f3730d3e43d5b63d62ca6244750296d1bfb4bda09dcab2e",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/collection-ribbon-cutout.png",
+      "kind": "generated-illustration",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 796196,
+      "sha256": "8902a716feb0205fdbb25ea53685a5c41d9c31b658eb04b495303aec1e165c97",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/cover.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        1100,
+        371
+      ],
+      "mode": "RGB",
+      "bytes": 158563,
+      "sha256": "b3eaa16d5171d0ca1fb206d3ea71a49e824b50b3ed9baf34d768f1d5bd7679a1",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/detail-0.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        1995,
+        943
+      ],
+      "mode": "RGB",
+      "bytes": 782545,
+      "sha256": "ea172eaf3eff06900a04bf3aadbbdf8c88030f3f0194d75493dec80907a60d98",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/detail-1.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        1995,
+        943
+      ],
+      "mode": "RGB",
+      "bytes": 795996,
+      "sha256": "1e3cd3079958cbe53d530964ddf71d6251284c935b9c0f468a97ab5d0c9fd1df",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/detail-2.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        1995,
+        943
+      ],
+      "mode": "RGB",
+      "bytes": 768996,
+      "sha256": "fb032891e4a760c424bbb81fa0ec6e2b4a9f9ef1d625a271ec9ed5f1937864fe",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/detail-3.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        1995,
+        943
+      ],
+      "mode": "RGB",
+      "bytes": 776338,
+      "sha256": "e483a2b95bdf35dc2562b8fb64c64fe02eb552063f800911c561ab7d3b8a327b",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/detail-4.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        1995,
+        943
+      ],
+      "mode": "RGB",
+      "bytes": 784199,
+      "sha256": "70472244245b609b6825c4b4aa5edbcb23686a6703ffcb0b172c943b3131f060",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/detail-5.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        1995,
+        943
+      ],
+      "mode": "RGB",
+      "bytes": 819214,
+      "sha256": "4dd1928e8b72cfff3e86b87e8512e1e568ddfad70b10dab0ac5131fe29bef78c",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/detail-6.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        1995,
+        943
+      ],
+      "mode": "RGB",
+      "bytes": 850269,
+      "sha256": "2f086ad752f883d71a6aa5bcc3c61c47b718c7eba955352c105fabd2753f7133",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/detail-7.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        1995,
+        943
+      ],
+      "mode": "RGB",
+      "bytes": 791496,
+      "sha256": "5d791d90115bfbbd3aa8374c77b4c09aed507d8dc2f88a2a3e78d00cf9df5514",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/detail-8.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        1995,
+        943
+      ],
+      "mode": "RGB",
+      "bytes": 748989,
+      "sha256": "43477766fbf1c727e2e94faf5eed2f98f688f97bf4c50de98c38a17eff9c5a1f",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/detail-9.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        1995,
+        943
+      ],
+      "mode": "RGB",
+      "bytes": 750102,
+      "sha256": "41c004d511eaa93c93bfaadd8a237cc03a82a4b44684eea3c9fea489f8091ebe",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/full-scroll.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        11970,
+        566
+      ],
+      "mode": "RGB",
+      "bytes": 2114118,
+      "sha256": "059ee254ab7451e4a60a8c6de5b5faef975d383f7c21ffaa97de66c92e2c1cea",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/head-C1-cutout.png",
+      "kind": "generated-illustration",
+      "size": [
+        1145,
+        1374
+      ],
+      "mode": "RGBA",
+      "bytes": 1096215,
+      "sha256": "4fc06f7438fbae2ea687ba587541f7fac401da8be7d7ec574c4c230eb89110bb",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/head-C1.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        85,
+        160
+      ],
+      "mode": "RGB",
+      "bytes": 9897,
+      "sha256": "ed85894b002fb99d79535e5c3ea019013d720b33634c1d3fbfc70825f99b4903",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/head-C2-cutout.png",
+      "kind": "generated-illustration",
+      "size": [
+        1216,
+        1293
+      ],
+      "mode": "RGBA",
+      "bytes": 1020015,
+      "sha256": "6e763bb726d8cf56859f559d349e8aed17707b99cf3c2fce1b40533f556894f7",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/head-C2.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        110,
+        160
+      ],
+      "mode": "RGB",
+      "bytes": 12956,
+      "sha256": "313b3a2f179f19908c1fea8281119b10657a26cb9ea86b405c36252a4e885824",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/head-C4-cutout.png",
+      "kind": "generated-illustration",
+      "size": [
+        1001,
+        1572
+      ],
+      "mode": "RGBA",
+      "bytes": 1402923,
+      "sha256": "33655acdd97a1f2dc1576a570753f88389864289c891e081bd4adba065dea196",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/head-C4.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        105,
+        165
+      ],
+      "mode": "RGB",
+      "bytes": 12307,
+      "sha256": "84fd79c58f3b5c64d8af40cc0916fe16a10a09fe0ca61fa375b4dba1a45d35a8",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/head-L1-cutout.png",
+      "kind": "generated-illustration",
+      "size": [
+        1230,
+        1278
+      ],
+      "mode": "RGBA",
+      "bytes": 928542,
+      "sha256": "d0cb1a03d4a3c65cc7e5b218106ea3877a9a9ba5dba9ceb26dfbc0f5afb1bd92",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/head-L1.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        105,
+        185
+      ],
+      "mode": "RGB",
+      "bytes": 12920,
+      "sha256": "7ea46bbedc75601e6c6997618010d875b1b61e2b220efa093b5b7ebe1e05d20f",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/head-L8-cutout.png",
+      "kind": "generated-illustration",
+      "size": [
+        1148,
+        1370
+      ],
+      "mode": "RGBA",
+      "bytes": 1192750,
+      "sha256": "3dc3d43064e779ad02892e41d13d7c2cd87a7be2a527c4884f4c4ce19db0938d",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/head-L8.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        75,
+        125
+      ],
+      "mode": "RGB",
+      "bytes": 7067,
+      "sha256": "54bf6173f32b344c4d652b48d8f9360f7533d80387dedc46a9208bf90a2ab184",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/head-L9-cutout.png",
+      "kind": "generated-illustration",
+      "size": [
+        977,
+        1610
+      ],
+      "mode": "RGBA",
+      "bytes": 1451078,
+      "sha256": "aabcbb0f1ca4f1a81430a18fbfa4958c306787063de2b04f5ab0be2e711d3efd",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/art/luoshen/head-L9.jpg",
+      "kind": "painting-source-derived",
+      "size": [
+        85,
+        140
+      ],
+      "mode": "RGB",
+      "bytes": 9363,
+      "sha256": "fdb7ca99d8a01889ae16b38621f0ee58eb4db0b362d4fec837d67eb7fcf689e2",
+      "rightsStatus": "scope-unconfirmed; see luoshen-release-sources-2026-10-19.md"
+    },
+    {
+      "file": "public/audio/luoshen-music.wav",
+      "kind": "project-programmatic-music",
+      "audio": {
+        "channels": 1,
+        "sampleRate": 24000,
+        "seconds": 48.0
+      },
+      "bytes": 2304044,
+      "sha256": "d53baadf544cfb61ed020ffdafa354ff17544c3b201a9146be7468dd407ab8b7",
+      "credits": "public/audio/CREDITS.md"
+    }
+  ]
+}

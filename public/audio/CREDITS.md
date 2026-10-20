@@ -1,5 +1,11 @@
 # 畫中尋人：各章配樂與環境聲來源
 
+## 洛神賦圖獨立配樂 · 2026-10-15
+
+- 曲目：《洛水微波》；本地檔案：`luoshen-music.wav`，48秒、24kHz、單聲道PCM。
+- 作者及來源：本專案原創程式合成，生成方法保存於 `scripts/generate-luoshen-audio.py`；沒有外部採樣或改編既有曲目，無第三方音源署名義務。
+- 現代五聲音階背景配樂，不是魏晉或宋代音樂復原。沿用 `chapterMusic.js` 及手繪音樂開關，由玩家開啟，閱讀時降音量，離開章節停止。
+
 ## 2026-10-13：每章獨立配樂
 
 | 章節 | 曲目／作者 | 本地音檔 | 來源 |
@@ -46,3 +52,12 @@ Original downloads:
 - https://upload.wikimedia.org/wikipedia/commons/6/69/Boiling_water_being_poured_into_a_mug_for_tea.ogg
 
 The previous implementation generated footsteps using decaying filtered noise and a low-frequency impact tone. That playback code has been replaced by the instrumental music engine.
+
+## 清明上河圖獨立配樂 · 2026-10-13
+
+- 曲目：Chinese Restaurant Background 5；作者：Sascha Ende。
+- 本地音檔：`qingming-music.mp3`。
+- [曲目與署名](https://ende.app/en/song/12394-chinese-restaurant-background-5)；[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。
+- 曲目頁公開音源：`https://ende.app/storage/mp3low/d8019484-8519-4ac5-92cd-ec933fabe8bb.mp3`。
+- SHA-256：`f323097c1727128076e95da70212465ee69d9d7a8af9834ecebf4c52be4abd72`。
+- 音檔未修改；本章沿用共用音樂引擎與手繪開關，由玩家自行開啟。現代背景配樂，不是北宋曲目復原。

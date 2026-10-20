@@ -1,0 +1,4109 @@
+{
+  "range": [
+    24000,
+    38414
+  ],
+  "people": [
+    {
+      "id": "extra-person-outskirts-001",
+      "bounds": [
+        23972,
+        263,
+        24034,
+        380
+      ],
+      "name": "左緣草帽行人",
+      "evidence": "接縫完整局部可見寬草帽、短衣、向前跨步的雙腿與手中橫物。",
+      "replies": [
+        "草帽遮住了頭上的光。",
+        "我正往路上走。",
+        "一步一步走穩便好。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24003,
+        286
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-002",
+      "bounds": [
+        24068,
+        120,
+        24108,
+        193
+      ],
+      "name": "左端棚內人物",
+      "evidence": "棚柱旁有頭部、上身和垂下的手臂。",
+      "replies": [
+        "棚柱在我身旁。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24088,
+        135
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-003",
+      "bounds": [
+        24196,
+        139,
+        24234,
+        204
+      ],
+      "name": "車後棚內人物",
+      "evidence": "車後門邊有側向頭部及上身，下面受車身遮擋。",
+      "replies": [
+        "車子遮住了我的衣角。",
+        "我的身子被擋住一截。",
+        "換個角度看看我的輪廓。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24215,
+        152
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-004",
+      "bounds": [
+        24320,
+        77,
+        24378,
+        188
+      ],
+      "name": "車旁淺衣人物",
+      "evidence": "淺衣人物站在車輪後上方，手臂朝向貨物。",
+      "replies": [
+        "這些東西堆得挺高。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24320,
+        96
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-005",
+      "bounds": [
+        24177,
+        223,
+        24235,
+        301
+      ],
+      "name": "牲口前短衣人物",
+      "evidence": "車前可見短衣人物，雙腿分開，身旁有牲口。",
+      "replies": [
+        "車前這一段要走穩。",
+        "我沿着這條路走。",
+        "走路時也要留意身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24206,
+        239
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-006",
+      "bounds": [
+        24314,
+        198,
+        24351,
+        273
+      ],
+      "name": "車輪旁人物",
+      "evidence": "車輪左方可見一名下半身站立、上身受車篷遮擋的人。",
+      "replies": [
+        "車輪就在我旁邊。",
+        "我的身子被擋住一截。",
+        "換個角度看看我的輪廓。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24321,
+        202
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-007",
+      "bounds": [
+        24394,
+        48,
+        24429,
+        119
+      ],
+      "name": "貨車後上方人物",
+      "evidence": "貨車後方可見頭部和淺色上衣，下身被貨物擋住。",
+      "replies": [
+        "貨物擋住了半個身子。",
+        "我的身子被擋住一截。",
+        "換個角度看看我的輪廓。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24412,
+        62
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-008",
+      "bounds": [
+        24435,
+        73,
+        24473,
+        174
+      ],
+      "name": "貨車右邊人物",
+      "evidence": "車尾右側人物頭戴深帽，站在另一人左邊。",
+      "replies": [
+        "我站在車尾這一側。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24454,
+        93
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-009",
+      "bounds": [
+        24476,
+        89,
+        24518,
+        174
+      ],
+      "name": "貨車右邊淺衣人物",
+      "evidence": "前一人右側有獨立頭部、軀幹及兩腿。",
+      "replies": [
+        "車邊還有另一個人。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24497,
+        106
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-010",
+      "bounds": [
+        24551,
+        50,
+        24584,
+        172
+      ],
+      "name": "深帽路人",
+      "evidence": "深帽短衣人物站在貨車右方空地。",
+      "replies": [
+        "這頂帽子壓得低低的。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24568,
+        74
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-011",
+      "bounds": [
+        24597,
+        78,
+        24637,
+        178
+      ],
+      "name": "側身路人",
+      "evidence": "側身人物在深帽路人右方，腳部和衣擺分明。",
+      "replies": [
+        "我側着身子看這邊。",
+        "我沿着這條路走。",
+        "走路時也要留意身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24617,
+        98
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-012",
+      "bounds": [
+        24756,
+        28,
+        24798,
+        116
+      ],
+      "name": "遠處左挑擔人",
+      "evidence": "上沿左方人物肩上橫擔，左端懸有籃筐。",
+      "replies": [
+        "擔子橫在肩頭上。",
+        "肩上的擔要放穩。",
+        "兩邊的東西可別碰着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24777,
+        46
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-013",
+      "bounds": [
+        24791,
+        29,
+        24833,
+        121
+      ],
+      "name": "遠處右挑擔人",
+      "evidence": "上沿右方人物與左人分開，肩旁有另一只籃子。",
+      "replies": [
+        "我也挑着一副擔。",
+        "肩上的擔要放穩。",
+        "兩邊的東西可別碰着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24812,
+        47
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-014",
+      "bounds": [
+        24285,
+        320,
+        24343,
+        422
+      ],
+      "name": "第一名背包者",
+      "evidence": "背上大包，身子前傾，兩腿在包下可見。",
+      "replies": [
+        "包袱壓得我低下頭。",
+        "背上這包可不輕。",
+        "彎着身子才好使力。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24314,
+        340
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-015",
+      "bounds": [
+        24419,
+        340,
+        24488,
+        438
+      ],
+      "name": "第二名背包者",
+      "evidence": "第二只大包下有獨立頭身與雙腿。",
+      "replies": [
+        "這一包得背牢些。",
+        "背上這包可不輕。",
+        "彎着身子才好使力。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24454,
+        360
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-016",
+      "bounds": [
+        24500,
+        365,
+        24567,
+        472
+      ],
+      "name": "第三名背包者",
+      "evidence": "前傾人物背着鼓起的大包，右腿向後分開。",
+      "replies": [
+        "我正挪着步子走。",
+        "背上這包可不輕。",
+        "彎着身子才好使力。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24534,
+        386
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-017",
+      "bounds": [
+        24438,
+        451,
+        24511,
+        500
+      ],
+      "name": "船後背包上身",
+      "evidence": "船篷後露出背上的包與低下的頭部，下身受遮擋。",
+      "replies": [
+        "船篷遮了我半截。",
+        "我的身子被擋住一截。",
+        "換個角度看看我的輪廓。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24474,
+        461
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-018",
+      "bounds": [
+        24374,
+        465,
+        24413,
+        496
+      ],
+      "name": "船篷後露頭者",
+      "evidence": "前一背包者左方露出獨立頭部、頸及肩。 根覆核原尺寸局部：可見部分可獨立定位，毋須補出被遮身體。",
+      "replies": [
+        "船篷後也有人呢。",
+        "你能看見我的頭肩。",
+        "我的身子被篷頂擋住了。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24394,
+        471
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-019",
+      "bounds": [
+        24644,
+        412,
+        24723,
+        501
+      ],
+      "name": "屋角坐姿人物",
+      "evidence": "屋角棚下人物坐着，頭在左方，腿向右方伸出。",
+      "replies": [
+        "我坐在屋角這裏。",
+        "我坐在這裏歇一會。",
+        "坐着也能看看周圍。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24684,
+        430
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-020",
+      "bounds": [
+        24360,
+        530,
+        24410,
+        608
+      ],
+      "name": "小船左坐者",
+      "evidence": "船篷下左方有獨立頭部及俯身衣紋。",
+      "replies": [
+        "我在小船篷下坐着。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24385,
+        546
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-021",
+      "bounds": [
+        24428,
+        516,
+        24469,
+        572
+      ],
+      "name": "小船右坐者",
+      "evidence": "船篷下右方有側向頭部與前伸的手臂。",
+      "replies": [
+        "篷下位置剛好夠坐。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24448,
+        527
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-022",
+      "bounds": [
+        24601,
+        545,
+        24643,
+        616
+      ],
+      "name": "船尾左人物",
+      "evidence": "小船後方左人物頭部、軀幹與手臂可辨。",
+      "replies": [
+        "我在兩船相近的地方。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24605,
+        554
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-023",
+      "bounds": [
+        24671,
+        538,
+        24716,
+        611
+      ],
+      "name": "船尾右人物",
+      "evidence": "小船後方右人物靠近繩索，雙臂在身前。",
+      "replies": [
+        "船邊的繩子很多。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24694,
+        553
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-024",
+      "bounds": [
+        24730,
+        600,
+        24801,
+        682
+      ],
+      "name": "船上彎腰人物",
+      "evidence": "長船甲板上淺衣人物彎腰，衣擺朝右。",
+      "replies": [
+        "我彎下身子看看。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24766,
+        604
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-025",
+      "bounds": [
+        24025,
+        522,
+        24082,
+        592
+      ],
+      "name": "桅杆後露頭人物",
+      "evidence": "竹木與繩索後露出頭及肩部。 根覆核原尺寸局部：可見部分可獨立定位，毋須補出被遮身體。",
+      "replies": [
+        "桅杆和繩索就在前面。",
+        "我從杆索後露出頭來。",
+        "近看，線條要分清。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24054,
+        536
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-026",
+      "bounds": [
+        24042,
+        575,
+        24116,
+        681
+      ],
+      "name": "桅杆左側坐者",
+      "evidence": "淺衣坐者位於桅杆左邊，腿和手臂可辨。",
+      "replies": [
+        "桅杆高高在我旁邊。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24078,
+        575
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-027",
+      "bounds": [
+        24119,
+        818,
+        24184,
+        933
+      ],
+      "name": "船上拉繩人物",
+      "evidence": "雙臂朝左，身子前傾，腿分開。",
+      "replies": [
+        "這條繩子要拿穩。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24152,
+        841
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-028",
+      "bounds": [
+        24352,
+        786,
+        24402,
+        904
+      ],
+      "name": "甲板深衣坐者",
+      "evidence": "深色頭帽，盤坐於甲板，繩索穿過前方。",
+      "replies": [
+        "我坐在繩子旁邊。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24377,
+        810
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-029",
+      "bounds": [
+        24386,
+        943,
+        24437,
+        995
+      ],
+      "name": "船舷左坐者",
+      "evidence": "船舷後左人物戴尖頂帽，露頭和淺衣上身。",
+      "replies": [
+        "船舷擋住了我的腿。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24412,
+        953
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-030",
+      "bounds": [
+        24433,
+        928,
+        24487,
+        993
+      ],
+      "name": "船舷中坐者",
+      "evidence": "中間人物正面頭部與上身位於欄杆後。",
+      "replies": [
+        "我在欄杆後坐着。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24460,
+        941
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-031",
+      "bounds": [
+        24480,
+        906,
+        24530,
+        985
+      ],
+      "name": "船舷右坐者",
+      "evidence": "右人物戴深帽，上半身向左，位於中間人右後。",
+      "replies": [
+        "這裏坐得稍高一些。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24505,
+        922
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-032",
+      "bounds": [
+        24632,
+        801,
+        24678,
+        945
+      ],
+      "name": "船篷左站者",
+      "evidence": "長袍人物站在大船上，身體部分被繩索遮住。",
+      "replies": [
+        "站在篷旁也要小心。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24655,
+        830
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-033",
+      "bounds": [
+        24708,
+        1067,
+        24756,
+        1142
+      ],
+      "name": "船舷前人物",
+      "evidence": "前船舷欄杆間可見頭、肩和一段斜向手臂。",
+      "replies": [
+        "欄杆前還有我呢。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24732,
+        1082
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-034",
+      "bounds": [
+        24000,
+        1074,
+        24039,
+        1134
+      ],
+      "name": "船窗左坐者",
+      "evidence": "最左船窗內有深帽頭部和淺衣肩臂。",
+      "replies": [
+        "窗裏這邊有我。",
+        "我坐在這裏歇一會。",
+        "坐着也能看看周圍。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24020,
+        1086
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-035",
+      "bounds": [
+        24035,
+        1080,
+        24066,
+        1131
+      ],
+      "name": "船窗右坐者",
+      "evidence": "同一窗右側有分開的頭部和肩線。",
+      "replies": [
+        "我坐在另一人的右邊。",
+        "我坐在這裏歇一會。",
+        "坐着也能看看周圍。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24050,
+        1090
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-036",
+      "bounds": [
+        24830,
+        247,
+        24854,
+        279
+      ],
+      "name": "屋脊後左頭肩",
+      "evidence": "屋脊上沿左方只露出頭肩輪廓。 根覆核原尺寸局部：可見部分可獨立定位，毋須補出被遮身體。",
+      "replies": [
+        "屋脊遮住了我的身子。",
+        "我就在瓦屋後面。",
+        "別只留意街上行人。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24842,
+        253
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-037",
+      "bounds": [
+        24854,
+        237,
+        24878,
+        272
+      ],
+      "name": "屋脊後右頭肩",
+      "evidence": "屋脊上沿右方有另一個獨立頭部。 根覆核原尺寸局部：可見部分可獨立定位，毋須補出被遮身體。",
+      "replies": [
+        "我也在這屋頂後面。",
+        "旁邊還露着另一個頭。",
+        "我們的身子被瓦屋擋住了。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24866,
+        244
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-038",
+      "bounds": [
+        25510,
+        28,
+        25554,
+        84
+      ],
+      "name": "上沿搬物人物",
+      "evidence": "遠處人物彎身靠近成排籃筐，頭和手臂可見。",
+      "replies": [
+        "這些筐擺成一排。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        25532,
+        39
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-039",
+      "bounds": [
+        25712,
+        77,
+        25743,
+        145
+      ],
+      "name": "棚中左站者",
+      "evidence": "後街棚柱左邊人物露頭和長衣輪廓。",
+      "replies": [
+        "我站在棚子的左邊。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        25728,
+        91
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-040",
+      "bounds": [
+        25732,
+        98,
+        25778,
+        148
+      ],
+      "name": "棚中坐者",
+      "evidence": "棚內中央人物坐在矮處，頭向左。",
+      "replies": [
+        "小棚裏也能歇腳。",
+        "我坐在這裏歇一會。",
+        "坐着也能看看周圍。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        25755,
+        108
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-041",
+      "bounds": [
+        25789,
+        54,
+        25824,
+        127
+      ],
+      "name": "棚中右站者",
+      "evidence": "棚後方獨立長衣人物站在坐者右後。",
+      "replies": [
+        "我就在棚內後方。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        25806,
+        69
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-042",
+      "bounds": [
+        25309,
+        450,
+        25353,
+        588
+      ],
+      "name": "岸屋前左人物",
+      "evidence": "岸邊屋前左人頭朝右，上身淺色，双腿分明。",
+      "replies": [
+        "岸邊的屋子緊挨着。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        25315,
+        474
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-043",
+      "bounds": [
+        25344,
+        466,
+        25399,
+        597
+      ],
+      "name": "岸屋前右人物",
+      "evidence": "右人戴深帽，長衣垂下，面朝左人。",
+      "replies": [
+        "我正朝這邊說話。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        25372,
+        492
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-044",
+      "bounds": [
+        25625,
+        531,
+        25684,
+        605
+      ],
+      "name": "船篷後俯坐者",
+      "evidence": "船篷後人物彎身，淺色背部及頭可辨。",
+      "replies": [
+        "我在篷頂後面坐着。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        25654,
+        546
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-045",
+      "bounds": [
+        25753,
+        618,
+        25805,
+        708
+      ],
+      "name": "船艙旁站者",
+      "evidence": "深帽人物直身位於篷間，衣襟向下。",
+      "replies": [
+        "船艙就在我身旁。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        25764,
+        633
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-046",
+      "bounds": [
+        25890,
+        719,
+        25944,
+        779
+      ],
+      "name": "右船篷下露身者",
+      "evidence": "右側篷下可見小頭部及淺衣上身。 根覆核原尺寸局部：可見部分可獨立定位，毋須補出被遮身體。",
+      "replies": [
+        "我坐在船篷底下。",
+        "篷頂擋着一部分身子。",
+        "船篷內外都有人。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        25910,
+        743
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-047",
+      "bounds": [
+        25994,
+        87,
+        26043,
+        148
+      ],
+      "name": "遠棚左坐者",
+      "evidence": "左棚內淺衣人物俯向前方，頭與背清楚。",
+      "replies": [
+        "我在遠處棚下坐着。",
+        "我坐在這裏歇一會。",
+        "坐着也能看看周圍。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        26018,
+        99
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-048",
+      "bounds": [
+        26079,
+        65,
+        26112,
+        141
+      ],
+      "name": "遠棚門邊站者",
+      "evidence": "門柱旁深帽人物直立，頭與衣身可分。",
+      "replies": [
+        "門口這裏站得住。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        26096,
+        80
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-049",
+      "bounds": [
+        26317,
+        88,
+        26347,
+        145
+      ],
+      "name": "遠棚右坐者",
+      "evidence": "右側棚內人物坐向右方桌子，衣背略弓。",
+      "replies": [
+        "桌子在我的右手邊。",
+        "我坐在這裏歇一會。",
+        "坐着也能看看周圍。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        26332,
+        99
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-050",
+      "bounds": [
+        26410,
+        78,
+        26446,
+        135
+      ],
+      "name": "遠棚右站者",
+      "evidence": "棚內桌右方有深帽人物，肩頸與衣身獨立。",
+      "replies": [
+        "我站在桌子的另一邊。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        26428,
+        89
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-051",
+      "bounds": [
+        26250,
+        129,
+        26278,
+        165
+      ],
+      "name": "瓦屋後左半身",
+      "evidence": "近屋脊後有深帽頭部和兩肩。 根覆核原尺寸局部：可見部分可獨立定位，毋須補出被遮身體。",
+      "replies": [
+        "屋後也有來往的人。",
+        "瓦屋擋住了我的下身。",
+        "留意屋脊後的頭肩。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        26264,
+        136
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-052",
+      "bounds": [
+        26358,
+        137,
+        26380,
+        158
+      ],
+      "name": "瓦屋後右露頭",
+      "evidence": "另一頭部只露在瓦屋上沿。 根覆核原尺寸局部：可見部分可獨立定位，毋須補出被遮身體。",
+      "replies": [
+        "我從屋後露出頭來。",
+        "只有頭部在這裏看得見。",
+        "別把我當成屋頂上的裝飾。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        26369,
+        141
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-053",
+      "bounds": [
+        26964,
+        41,
+        26995,
+        109
+      ],
+      "name": "紙馬鋪左旁遠人",
+      "evidence": "店舖左上旁有短衣人物的頭身輪廓。",
+      "replies": [
+        "鋪子就在我旁邊。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        26980,
+        55
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-054",
+      "bounds": [
+        27170,
+        278,
+        27218,
+        326
+      ],
+      "name": "屋頂後的挑擔人",
+      "evidence": "深帽頭、雙肩和向右延伸的扁擔露於近屋脊後。",
+      "replies": [
+        "屋頂擋住了我，擔子還在。",
+        "肩上的擔要放穩。",
+        "兩邊的東西可別碰着。"
+      ],
+      "status": "interactive",
+      "existingId": "neighbour-paper-pole",
+      "hitPoint": [
+        27194,
+        290
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-055",
+      "bounds": [
+        27622,
+        343,
+        27681,
+        446
+      ],
+      "name": "挑着兩籃的行人",
+      "evidence": "低深帽，肩上橫擔，籃子垂在兩側；人的雙腿在中央。",
+      "replies": [
+        "我肩上挑着兩只籃。",
+        "肩上的擔要放穩。",
+        "兩邊的東西可別碰着。"
+      ],
+      "status": "interactive",
+      "existingId": "person-paper",
+      "hitPoint": [
+        27651,
+        363
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-056",
+      "bounds": [
+        27753,
+        317,
+        27796,
+        421
+      ],
+      "name": "籃子旁站着的人",
+      "evidence": "左向頭部，淺色長衣，站在挑擔人的右邊。",
+      "replies": [
+        "籃子就在我旁邊。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "existingId": "neighbour-paper-right",
+      "hitPoint": [
+        27775,
+        337
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-057",
+      "bounds": [
+        27746,
+        508,
+        27789,
+        552
+      ],
+      "name": "屋後挑擔上身",
+      "evidence": "較低屋脊後有頭肩與橫擔，右端垂下小籃。",
+      "replies": [
+        "屋後還有一副擔。",
+        "肩上的擔要放穩。",
+        "兩邊的東西可別碰着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        27768,
+        517
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-058",
+      "bounds": [
+        27677,
+        670,
+        27713,
+        749
+      ],
+      "name": "敞棚內坐者",
+      "evidence": "敞棚左柱邊人物坐着，頭、手臂及腿部可辨。",
+      "replies": [
+        "這裏的棚子是敞開的。",
+        "我坐在這裏歇一會。",
+        "坐着也能看看周圍。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        27695,
+        686
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-059",
+      "bounds": [
+        27773,
+        766,
+        27838,
+        914
+      ],
+      "name": "棚前長衣行人",
+      "evidence": "深帽淺色長衣人物在桌凳前，手收身前。",
+      "replies": [
+        "桌凳都在我的後面。",
+        "我沿着這條路走。",
+        "走路時也要留意身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        27806,
+        796
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-061",
+      "bounds": [
+        27711,
+        1258,
+        27775,
+        1406
+      ],
+      "name": "河灣船上坐者",
+      "evidence": "最右河灣船上人物坐在篷邊，手伸向斜繩。",
+      "replies": [
+        "河灣這艘船也有人。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        27743,
+        1288
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-062",
+      "bounds": [
+        28054,
+        610,
+        28123,
+        764
+      ],
+      "name": "淺衣深帽站者",
+      "evidence": "短淺衣深帽人物在左側空地直立。",
+      "replies": [
+        "我站在這堆貨物前。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28088,
+        640
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-063",
+      "bounds": [
+        28128,
+        658,
+        28217,
+        797
+      ],
+      "name": "向右伸手者",
+      "evidence": "短衣人物伸右手朝另一人，雙腿分開。",
+      "replies": [
+        "我的手朝那邊伸着。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28172,
+        686
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-064",
+      "bounds": [
+        28234,
+        637,
+        28294,
+        785
+      ],
+      "name": "背包旁深衣者",
+      "evidence": "深色衣人物站在大包前，頭朝左。",
+      "replies": [
+        "這個大包就在肩邊。",
+        "背上這包可不輕。",
+        "彎着身子才好使力。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28264,
+        667
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-065",
+      "bounds": [
+        28013,
+        790,
+        28108,
+        921
+      ],
+      "name": "貨包旁坐者",
+      "evidence": "淺衣人物坐在成排包裹左邊，伸手向前。",
+      "replies": [
+        "一排包裹擺在眼前。",
+        "我坐在這裏歇一會。",
+        "坐着也能看看周圍。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28060,
+        816
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-066",
+      "bounds": [
+        28187,
+        768,
+        28239,
+        856
+      ],
+      "name": "貨包後短衣者",
+      "evidence": "包裹後有獨立頭身及兩條手臂。",
+      "replies": [
+        "我站在貨包後面。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28213,
+        786
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-067",
+      "bounds": [
+        28219,
+        813,
+        28309,
+        970
+      ],
+      "name": "貨包前背向者",
+      "evidence": "背向人物雙手張開，前方是大包，雙腿外分。",
+      "replies": [
+        "搬這一包要靠近些。",
+        "背上這包可不輕。",
+        "彎着身子才好使力。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28264,
+        843
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-068",
+      "bounds": [
+        28304,
+        808,
+        28374,
+        945
+      ],
+      "name": "大包下彎腰者",
+      "evidence": "大包下人物的腰帶、衣擺及雙腿可辨。",
+      "replies": [
+        "包壓着背，得彎腰走。",
+        "背上這包可不輕。",
+        "彎着身子才好使力。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28325,
+        881
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-069",
+      "bounds": [
+        28384,
+        787,
+        28445,
+        899
+      ],
+      "name": "右端俯身者",
+      "evidence": "右端人物頭部低下，背弓起，腿部向後。",
+      "replies": [
+        "我也彎身照看這邊。",
+        "背上這包可不輕。",
+        "彎着身子才好使力。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28414,
+        809
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-070",
+      "bounds": [
+        28438,
+        565,
+        28493,
+        688
+      ],
+      "name": "茅棚左站者",
+      "evidence": "棚左前方人物頭戴深帽，短衣站在籬旁。",
+      "replies": [
+        "我在茅棚的左手邊。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28466,
+        590
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-071",
+      "bounds": [
+        28516,
+        540,
+        28558,
+        650
+      ],
+      "name": "茅棚內左人物",
+      "evidence": "桌左方淺衣人物立於棚柱之間。",
+      "replies": [
+        "桌子和棚柱都在身旁。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28537,
+        562
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-072",
+      "bounds": [
+        28674,
+        536,
+        28711,
+        592
+      ],
+      "name": "茅棚後方站者",
+      "evidence": "後排人物獨立頭身，腰以下被前景擋住。",
+      "replies": [
+        "我站在棚內後排。",
+        "我的身子被擋住一截。",
+        "換個角度看看我的輪廓。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28692,
+        547
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-073",
+      "bounds": [
+        28654,
+        575,
+        28693,
+        660
+      ],
+      "name": "茅棚柱旁人物",
+      "evidence": "左向頭部和低下的衣身可見，前方有柱子。",
+      "replies": [
+        "棚柱在我面前。",
+        "我的身子被擋住一截。",
+        "換個角度看看我的輪廓。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28683,
+        610
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-074",
+      "bounds": [
+        28721,
+        556,
+        28785,
+        656
+      ],
+      "name": "茅棚桌邊坐者",
+      "evidence": "頭戴深帽，坐在桌前，背部向外。",
+      "replies": [
+        "桌邊這個位子是我的。",
+        "我坐在這裏歇一會。",
+        "坐着也能看看周圍。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28753,
+        576
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-075",
+      "bounds": [
+        28816,
+        523,
+        28876,
+        647
+      ],
+      "name": "茅棚右坐者",
+      "evidence": "棚右人物坐在長凳上，手向身前伸出。",
+      "replies": [
+        "長凳剛好讓我坐下。",
+        "我坐在這裏歇一會。",
+        "坐着也能看看周圍。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28846,
+        548
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-076",
+      "bounds": [
+        28971,
+        526,
+        29016,
+        641
+      ],
+      "name": "茅棚右門人物",
+      "evidence": "右門邊有頭、長衣上身及收在身前的手。",
+      "replies": [
+        "我在右邊門口看着。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28994,
+        549
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-077",
+      "bounds": [
+        28308,
+        1079,
+        28394,
+        1247
+      ],
+      "name": "河岸抱籃者",
+      "evidence": "河岸人物雙臂抱着大籃，頭戴深帽，雙腿可辨。",
+      "replies": [
+        "這只籃子得抱穩。",
+        "背上這包可不輕。",
+        "彎着身子才好使力。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28374,
+        1115
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-078",
+      "bounds": [
+        28487,
+        1237,
+        28566,
+        1458
+      ],
+      "name": "船上盤繩人物",
+      "evidence": "靠樹的小船上人物低身靠着多圈繩索，頭向右。",
+      "replies": [
+        "繩子盤在船上。",
+        "腳下的船板要站穩。",
+        "繩索和船篷都在身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28526,
+        1267
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-079",
+      "bounds": [
+        29315,
+        548,
+        29369,
+        657
+      ],
+      "name": "樹後籬邊人物",
+      "evidence": "樹幹左側人物的頭、背部和腿在籬邊露出。",
+      "replies": [
+        "樹幹擋着一邊衣角。",
+        "我的身子被擋住一截。",
+        "換個角度看看我的輪廓。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        29342,
+        570
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-080",
+      "bounds": [
+        29166,
+        954,
+        29247,
+        1084
+      ],
+      "name": "樹枝後持杖者",
+      "evidence": "長杖直立於肩旁，人物頭身被細樹枝部分遮住。",
+      "replies": [
+        "我的長杖立在肩旁。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        29206,
+        980
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-081",
+      "bounds": [
+        29654,
+        993,
+        29694,
+        1073
+      ],
+      "name": "土岸上小人物",
+      "evidence": "土岸上小人物直立，有獨立頭部和衣擺。",
+      "replies": [
+        "我站在高一點的路上。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        29674,
+        1009
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-082",
+      "bounds": [
+        29801,
+        968,
+        29856,
+        1124
+      ],
+      "name": "土岸邊坐姿者",
+      "evidence": "岸邊人物坐姿，頭在樹右，腿朝左下方。",
+      "replies": [
+        "岸邊這處能坐一會。",
+        "我坐在這裏歇一會。",
+        "坐着也能看看周圍。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        29828,
+        998
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-083",
+      "bounds": [
+        29047,
+        68,
+        29089,
+        151
+      ],
+      "name": "遠樹旁長衣人物",
+      "evidence": "遠樹左旁有頭部、長衣身與腿的細線。",
+      "replies": [
+        "遠處樹旁也有人走。",
+        "我沿着這條路走。",
+        "走路時也要留意身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        29068,
+        85
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-084",
+      "bounds": [
+        29303,
+        65,
+        29336,
+        145
+      ],
+      "name": "遠路樹後人物",
+      "evidence": "遠路人物輪廓被树幹遮住，仍見頭部及一侧衣摆。",
+      "replies": [
+        "樹擋住了半個身子。",
+        "我的身子被擋住一截。",
+        "換個角度看看我的輪廓。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        29320,
+        81
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-085",
+      "bounds": [
+        29390,
+        138,
+        29426,
+        180
+      ],
+      "name": "遠路低處小上身",
+      "evidence": "地形上沿露出小頭及弓起的上身。",
+      "replies": [
+        "路面高低遮住了我。",
+        "我的身子被擋住一截。",
+        "換個角度看看我的輪廓。"
+      ],
+      "status": "excluded",
+      "reason": "遠小低對比，頭身界線不穩定。"
+    },
+    {
+      "id": "extra-person-outskirts-086",
+      "bounds": [
+        30296,
+        679,
+        30373,
+        783
+      ],
+      "name": "路邊持扁擔者",
+      "evidence": "帽下人物微彎腰，肩上橫杆，右側有圓形包物。",
+      "replies": [
+        "扁擔橫在我的肩上。",
+        "肩上的擔要放穩。",
+        "兩邊的東西可別碰着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        30323,
+        689
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-087",
+      "bounds": [
+        30464,
+        692,
+        30534,
+        792
+      ],
+      "name": "樹後伸手者",
+      "evidence": "樹枝後露出頭肩及向左伸出的手。",
+      "replies": [
+        "我的手正伸向路邊。",
+        "我的身子被擋住一截。",
+        "換個角度看看我的輪廓。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        30499,
+        712
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-088",
+      "bounds": [
+        30639,
+        574,
+        30706,
+        691
+      ],
+      "name": "牲口上騎者",
+      "evidence": "人物上身坐在小牲口上，頭戴帽，腰部與鞍相接。",
+      "replies": [
+        "我坐在牲口背上。",
+        "坐穩了再往前走。",
+        "前面還有一段路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        30672,
+        597
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-089",
+      "bounds": [
+        30804,
+        529,
+        30858,
+        636
+      ],
+      "name": "轎前扛杆者",
+      "evidence": "轎子左前人物肩旁有長杆，雙腿在樹枝後可見。",
+      "replies": [
+        "長杆壓在肩旁。",
+        "肩上的擔要放穩。",
+        "兩邊的東西可別碰着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        30831,
+        550
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-090",
+      "bounds": [
+        30936,
+        460,
+        31022,
+        592
+      ],
+      "name": "轎後扛杆者",
+      "evidence": "轎右後人物戴帽，肩上杆子穿過轎身上方。",
+      "replies": [
+        "跟着前面的杆子走。",
+        "肩上的擔要放穩。",
+        "兩邊的東西可別碰着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        30979,
+        486
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-091",
+      "bounds": [
+        30969,
+        233,
+        31008,
+        329
+      ],
+      "name": "遠路斗笠騎者",
+      "evidence": "斗笠人物坐於牲口背上，衣身向下。",
+      "replies": [
+        "斗笠遮着我的頭。",
+        "坐穩了再往前走。",
+        "前面還有一段路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        30988,
+        252
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-092",
+      "bounds": [
+        29958,
+        1278,
+        30028,
+        1488
+      ],
+      "name": "驢後短衣隨行者",
+      "evidence": "左邊短衣人物跟在乘騎者後，雙腿分開。",
+      "replies": [
+        "我在驢後慢慢跟着。",
+        "我沿着這條路走。",
+        "走路時也要留意身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        29993,
+        1308
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-093",
+      "bounds": [
+        30104,
+        1268,
+        30205,
+        1469
+      ],
+      "name": "左側深衣騎者",
+      "evidence": "戴兜帽深衣人物坐在左牲口上，雙手收在身前。",
+      "replies": [
+        "深色衣服垂在鞍旁。",
+        "坐穩了再往前走。",
+        "前面還有一段路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        30154,
+        1298
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-094",
+      "bounds": [
+        30297,
+        1380,
+        30397,
+        1556
+      ],
+      "name": "中間扛物者",
+      "evidence": "中間人物扛着長杆，背有扁平大物，短衣腿分明。",
+      "replies": [
+        "這一件得扛在肩上。",
+        "肩上的擔要放穩。",
+        "兩邊的東西可別碰着。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        30347,
+        1410
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-095",
+      "bounds": [
+        30430,
+        1361,
+        30558,
+        1597
+      ],
+      "name": "右側兜帽騎者",
+      "evidence": "淺衣兜帽人物坐於右牲口，衣擺覆在鞍邊。",
+      "replies": [
+        "衣擺垂到鞍子兩旁。",
+        "坐穩了再往前走。",
+        "前面還有一段路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        30494,
+        1391
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-096",
+      "bounds": [
+        30597,
+        1443,
+        30695,
+        1637
+      ],
+      "name": "右端牽牲口者",
+      "evidence": "右端人物雙手握着前方細線，面向牲口，長衣及腿可辨。",
+      "replies": [
+        "這條牽繩要慢慢帶。",
+        "慢慢走，別扯得太急。",
+        "我跟着牲口往前行。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        30646,
+        1473
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-097",
+      "bounds": [
+        31048,
+        312,
+        31097,
+        410
+      ],
+      "name": "遠路前短衣者",
+      "evidence": "短衣人物在斗笠騎者右下方，雙腿分開。",
+      "replies": [
+        "我在騎者旁邊走着。",
+        "我沿着這條路走。",
+        "走路時也要留意身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        31072,
+        332
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-098",
+      "bounds": [
+        31106,
+        353,
+        31157,
+        455
+      ],
+      "name": "遠路後持杖者",
+      "evidence": "另一人手旁有長杖，雙腿分開，位於前人右下。",
+      "replies": [
+        "手裏的杖陪我走路。",
+        "我沿着這條路走。",
+        "走路時也要留意身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        31132,
+        373
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-099",
+      "bounds": [
+        31032,
+        429,
+        31117,
+        548
+      ],
+      "name": "轎旁邁步者",
+      "evidence": "轎旁人物頭戴深帽，手向左，右腿向後抬。",
+      "replies": [
+        "我正邁出這一步。",
+        "我沿着這條路走。",
+        "走路時也要留意身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        31074,
+        453
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-100",
+      "bounds": [
+        34458,
+        761,
+        34498,
+        858
+      ],
+      "name": "林間屋門人物",
+      "evidence": "林間茅屋左門前有深帽頭部、長衣輪廓與手臂。",
+      "replies": [
+        "林間的屋門在我旁邊。",
+        "我正站在這一邊。",
+        "這裏也有我的一席位置。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        34478,
+        780
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-101",
+      "bounds": [
+        36225,
+        699,
+        36263,
+        772
+      ],
+      "name": "馱隊左端人物",
+      "evidence": "馱隊最左人物頭戴帽，衣身與兩腿在第一頭牲口前可辨。",
+      "replies": [
+        "我走在馱隊這頭。",
+        "我沿着這條路走。",
+        "走路時也要留意身旁。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        36244,
+        714
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-102",
+      "bounds": [
+        36526,
+        779,
+        36564,
+        853
+      ],
+      "name": "樹後馱隊人物",
+      "evidence": "樹枝後露出帽頭、肩及一段衣身，下部被牲口和樹遮擋。 根覆核原尺寸局部：可見部分可獨立定位，毋須補出被遮身體。",
+      "replies": [
+        "枝葉遮住了一部分身子。",
+        "我就在馱獸與樹旁。",
+        "近看，人物和牲口要分清。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        36540,
+        810
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-103",
+      "bounds": [
+        36773,
+        829,
+        36846,
+        934
+      ],
+      "name": "馱隊右端牽行者",
+      "evidence": "右端短衣人物向左伸手，旁邊馱獸有成對箱籠，兩腿可辨。",
+      "replies": [
+        "馱獸的箱籠要避開樹枝。",
+        "慢慢走，別扯得太急。",
+        "我跟着牲口往前行。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        36810,
+        850
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-104",
+      "bounds": [
+        24778,
+        879,
+        24816,
+        954
+      ],
+      "name": "大船艙棚左人物",
+      "evidence": "大船艙棚左柱內有低下的頭、俯身衣紋和腿；柱遮住左側。",
+      "replies": [
+        "艙棚的柱子擋住一邊。",
+        "我在小棚裏低着身子。",
+        "腳下就是船板。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24797,
+        894
+      ]
+    },
+    {
+      "id": "extra-person-outskirts-105",
+      "bounds": [
+        24857,
+        869,
+        24900,
+        958
+      ],
+      "name": "大船艙棚右人物",
+      "evidence": "同一艙棚右側有独立頭部、兩臂及直立長衣，與左人分開。",
+      "replies": [
+        "我站在艙棚的右邊。",
+        "身旁盤着一大圈繩。",
+        "船板上的位置要站穩。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24878,
+        887
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "extra-object-outskirts-001",
+      "bounds": [
+        24000,
+        27,
+        24175,
+        263
+      ],
+      "name": "岸邊屋內桌旁區",
+      "evidence": "相連岸邊建築的屋內桌旁部分；與 river061 棚下桌凳區同屬一處建築的不同可見細節，不推定為不同店舖。",
+      "replies": [
+        "棚子沿着街邊敞開。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24061.25,
+        145
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-002",
+      "bounds": [
+        24152,
+        44,
+        24468,
+        225
+      ],
+      "name": "車後敞面屋舖",
+      "evidence": "敞面屋內有長台、人物與堆放物件；不據此命名店種。",
+      "replies": [
+        "車後的屋面是敞開的。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24238.9,
+        129.975
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-003",
+      "bounds": [
+        24245,
+        94,
+        24489,
+        277
+      ],
+      "name": "雙輪篷車",
+      "evidence": "斜向車架、圓輪和屋形車篷可見，篷頂有成排貨物。",
+      "replies": [
+        "車輪在貨物下面。",
+        "輪子與車架連在一起。",
+        "運東西也要留出路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24367,
+        194.65
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-004",
+      "bounds": [
+        24157,
+        166,
+        24292,
+        273
+      ],
+      "name": "車前牲口",
+      "evidence": "車前牲口頭向左，頸部連有系物；與前方人物分開登記。",
+      "replies": [
+        "牠站在車子的前面。",
+        "牲口身旁還有別的東西。",
+        "仔細看看背上與腳下。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24224.5,
+        216.825
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-005",
+      "bounds": [
+        24376,
+        99,
+        24474,
+        156
+      ],
+      "name": "車上成排物件",
+      "evidence": "車頂長條面上有一排小圓、方形物件；品類不能從圖像確定。",
+      "replies": [
+        "小物在車上排成一列。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24425,
+        127.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-006",
+      "bounds": [
+        24461,
+        13,
+        24747,
+        196
+      ],
+      "name": "車右後街棚",
+      "evidence": "車右方後街棚有堆物及掛物，柱內有小人物。",
+      "replies": [
+        "後街棚下也擺了物件。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24646.9,
+        104.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-007",
+      "bounds": [
+        24752,
+        179,
+        24817,
+        272
+      ],
+      "name": "岸屋左側長條幡",
+      "evidence": "細長直立杆旁有分條垂掛的長布；文字不可辨。",
+      "replies": [
+        "長條布垂在屋旁。",
+        "先看它懸掛的位置。",
+        "字看不清時，先看形狀。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24784.5,
+        225.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-008",
+      "bounds": [
+        24615,
+        229,
+        25001,
+        526
+      ],
+      "name": "左岸屋角開棚",
+      "evidence": "岸屋左角開棚有坐者與擺設，主體被瓦屋頂遮住。",
+      "replies": [
+        "屋角留了一個敞面棚。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24808,
+        377.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-010",
+      "bounds": [
+        24624,
+        532,
+        25163,
+        823
+      ],
+      "name": "上排右小篷船",
+      "evidence": "小船斜向右，船篷和外露船板可辨，甲板有彎腰者。",
+      "replies": [
+        "船篷旁留着外露甲板。",
+        "船篷、船身與水面靠在一起。",
+        "這裏也有一艘船。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        24893.5,
+        677.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-012",
+      "bounds": [
+        25150,
+        534,
+        26122,
+        1023
+      ],
+      "name": "中排左長船",
+      "evidence": "長船側板橫向鋪開，船篷上方可見坐者，船尾有舵。",
+      "replies": [
+        "長長的船身靠在岸邊。",
+        "船篷、船身與水面靠在一起。",
+        "這裏也有一艘船。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        25636,
+        778.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-013",
+      "bounds": [
+        26035,
+        611,
+        26846,
+        1046
+      ],
+      "name": "中排右長船",
+      "evidence": "右長船有直板艙、圓篷和右端舵板，和左船分開。",
+      "replies": [
+        "右邊另有一艘長船。",
+        "船篷、船身與水面靠在一起。",
+        "這裏也有一艘船。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        26440.5,
+        828.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-014",
+      "bounds": [
+        25442,
+        21,
+        25621,
+        99
+      ],
+      "name": "遠街筐列",
+      "evidence": "遠街左端四方筐和圓筐排成斜列，旁有搬物人物。",
+      "replies": [
+        "筐子在路邊排着。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        25500.175,
+        60
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-015",
+      "bounds": [
+        25572,
+        15,
+        25915,
+        171
+      ],
+      "name": "遠街左棚",
+      "evidence": "遠街左棚有深棚頂、桌和坐站人物。",
+      "replies": [
+        "遠處小棚也有桌子。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        25752.075,
+        89.1
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-016",
+      "bounds": [
+        25961,
+        45,
+        26184,
+        159
+      ],
+      "name": "遠街中央棚",
+      "evidence": "中央棚敞面，內有桌凳與兩個人物。",
+      "replies": [
+        "中央棚面向街道。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        26072.5,
+        102
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-017",
+      "bounds": [
+        26192,
+        54,
+        26594,
+        174
+      ],
+      "name": "遠街右棚",
+      "evidence": "右棚有兩名人物、桌子及圍欄，沒有可辨店名。",
+      "replies": [
+        "圍欄裏擺着一張桌。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        26393,
+        114
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-018",
+      "bounds": [
+        25120,
+        361,
+        25383,
+        518
+      ],
+      "name": "岸屋左門階",
+      "evidence": "主瓦屋左門敞開，門前有台階及兩個人物。",
+      "replies": [
+        "台階通到岸邊的門。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        25251.5,
+        439.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-019",
+      "bounds": [
+        25480,
+        395,
+        25837,
+        573
+      ],
+      "name": "岸屋左窗台",
+      "evidence": "大屋左敞窗有桌台、籠狀陳列及欄杆。",
+      "replies": [
+        "敞窗前擺了許多小格。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        25658.5,
+        484
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-020",
+      "bounds": [
+        25847,
+        395,
+        25998,
+        575
+      ],
+      "name": "岸屋右窗台",
+      "evidence": "右窗可見獨立桌台和小物排列，與左窗分開。",
+      "replies": [
+        "另一扇窗也有擺設。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        25922.5,
+        485
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-021",
+      "bounds": [
+        26130,
+        43,
+        26223,
+        124
+      ],
+      "name": "遠棚前桌凳",
+      "evidence": "遠棚中央有小桌與前方長凳。",
+      "replies": [
+        "桌子前留了一條凳。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        26176.5,
+        83.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-022",
+      "bounds": [
+        26780,
+        119,
+        26903,
+        186
+      ],
+      "name": "遠路馱牲口",
+      "evidence": "遠路動物背上有箱形物，頭向右，腿在下方。",
+      "replies": [
+        "背上的物件是方方的。",
+        "牲口身旁還有別的東西。",
+        "仔細看看背上與腳下。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        26841.5,
+        152.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-023",
+      "bounds": [
+        26683,
+        68,
+        26908,
+        261
+      ],
+      "name": "紙馬鋪場景",
+      "evidence": "敞面屋舖前有高立店招和成排板狀、掛狀陳列；店種依既有章節来源指認，視覺紀錄不另猜字。 此處同屬紙馬鋪門前陳列場景，接入相同見聞，與店招／右側陳列去重。",
+      "replies": [
+        "店前高低排着不同形狀。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "collectionId": "paper-shop",
+      "hitPoint": [
+        26773,
+        164.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-024",
+      "bounds": [
+        26882,
+        49,
+        26936,
+        240
+      ],
+      "name": "紙馬鋪店招",
+      "evidence": "細長店招豎立於紙馬鋪左邊；沿用既有原畫定位及來源指認。",
+      "replies": [
+        "這塊長店招立在鋪旁。",
+        "先看它懸掛的位置。",
+        "字看不清時，先看形狀。"
+      ],
+      "status": "interactive",
+      "existingId": "paper-sign",
+      "collectionId": "paper-shop",
+      "hitPoint": [
+        26910.35,
+        144.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-025",
+      "bounds": [
+        26952,
+        66,
+        27142,
+        240
+      ],
+      "name": "紙馬鋪前陳列",
+      "evidence": "紙馬鋪前可見成排板狀、立架和懸掛物；沿用既有定位。",
+      "replies": [
+        "這裏的陳列高低不一。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "existingId": "paper-display",
+      "collectionId": "paper-shop",
+      "hitPoint": [
+        27047,
+        153
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-026",
+      "bounds": [
+        27163,
+        167,
+        27286,
+        297
+      ],
+      "name": "紙馬鋪右側小棚台",
+      "evidence": "紙馬鋪右方另一個小敞棚，台前有獨立凳；沒有可辨商品。",
+      "replies": [
+        "小棚台就在隔壁。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        27224.5,
+        232
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-027",
+      "bounds": [
+        27286,
+        193,
+        27589,
+        380
+      ],
+      "name": "遠街右方敞棚",
+      "evidence": "遠街右方敞棚有屋頂、檯面、台階和掛物。",
+      "replies": [
+        "敞棚沿着街道排開。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        27407.2,
+        286.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-028",
+      "bounds": [
+        27639,
+        220,
+        27924,
+        444
+      ],
+      "name": "挑籃者後方屋舖",
+      "evidence": "挑籃人物後方有敞面屋、圓桶及高凳。",
+      "replies": [
+        "屋前有圓桶和高凳。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        27802.875,
+        332
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-029",
+      "bounds": [
+        27768,
+        368,
+        27849,
+        450
+      ],
+      "name": "挑籃者右圓桶",
+      "evidence": "獨立圓桶有重疊圓邊，放在矮架上。",
+      "replies": [
+        "圓桶放在小架上。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        27808.5,
+        409
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-030",
+      "bounds": [
+        27418,
+        277,
+        27592,
+        323
+      ],
+      "name": "上街成列凳台",
+      "evidence": "上街右方棚內排列多個矮凳與桌台；同一連續擺設作一物件。",
+      "replies": [
+        "幾張小凳在棚下排着。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        27505,
+        300
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-031",
+      "bounds": [
+        27505,
+        641,
+        28000,
+        889
+      ],
+      "name": "近岸敞棚",
+      "evidence": "近岸低棚有幔布、桌凳及一名坐者，右邊延至接縫。",
+      "replies": [
+        "這個棚子四面透着風。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        27764.875,
+        765
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-032",
+      "bounds": [
+        27506,
+        735,
+        27584,
+        813
+      ],
+      "name": "近岸左圓筐",
+      "evidence": "敞棚左前有圓筐置於架上，口緣及斜紋可見。",
+      "replies": [
+        "圓筐的口向上開着。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        27545,
+        774
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-033",
+      "bounds": [
+        27628,
+        751,
+        27752,
+        846
+      ],
+      "name": "近岸左桌凳",
+      "evidence": "敞棚前方左邊獨立桌及凳腳。",
+      "replies": [
+        "桌腳和凳腳都看得見。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        27690,
+        798.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-034",
+      "bounds": [
+        27838,
+        756,
+        27976,
+        846
+      ],
+      "name": "近岸右桌凳",
+      "evidence": "敞棚前右邊另一組桌凳，與左組分開。",
+      "replies": [
+        "右邊也有一組桌凳。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        27907,
+        801
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-035",
+      "bounds": [
+        27250,
+        943,
+        28090,
+        1611
+      ],
+      "name": "河灣左船",
+      "evidence": "河灣左船船頭向左，有長篷、短艙及右下舵，跨 tile07/08 接縫。",
+      "replies": [
+        "船篷沿着彎曲船身蓋着。",
+        "船篷、船身與水面靠在一起。",
+        "這裏也有一艘船。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        27670,
+        1277
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-036",
+      "bounds": [
+        27835,
+        489,
+        27959,
+        688
+      ],
+      "name": "岸棚上方懸線幡",
+      "evidence": "一根高細杆與斜線相連，線上垂下多條短布；不讀成具体店名。",
+      "replies": [
+        "短布沿着斜線垂下。",
+        "先看它懸掛的位置。",
+        "字看不清時，先看形狀。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        27897,
+        588.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-037",
+      "bounds": [
+        28009,
+        1133,
+        29466,
+        1744
+      ],
+      "name": "河灣右船",
+      "evidence": "右船長船身向右延伸，竹枝遮住部分甲板，桅杆繩圈可辨。",
+      "replies": [
+        "樹枝遮住了一段船身。",
+        "船篷、船身與水面靠在一起。",
+        "這裏也有一艘船。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28737.5,
+        1438.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-038",
+      "bounds": [
+        28000,
+        385,
+        28278,
+        544
+      ],
+      "name": "岸路左端敞棚",
+      "evidence": "岸路左端棚內及棚前多張桌凳，店種不可辨。",
+      "replies": [
+        "棚下桌凳沿路排開。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28139,
+        464.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-039",
+      "bounds": [
+        28000,
+        707,
+        28066,
+        791
+      ],
+      "name": "左端桌凳",
+      "evidence": "畫面左端空地有獨立矮桌凳，與後方棚分開。",
+      "replies": [
+        "桌凳擺到了棚前。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28033,
+        749
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-040",
+      "bounds": [
+        28080,
+        843,
+        28201,
+        949
+      ],
+      "name": "岸路左堆包",
+      "evidence": "左段包物呈成列鼓起矩形，帶捆紮線。",
+      "replies": [
+        "包物一件件挨着。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28140.5,
+        896
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-041",
+      "bounds": [
+        28224,
+        853,
+        28318,
+        924
+      ],
+      "name": "岸路中堆包",
+      "evidence": "中段有兩個扁矩形包物，旁有搬運人物。",
+      "replies": [
+        "這些包放得扁扁的。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28271,
+        888.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-042",
+      "bounds": [
+        28441,
+        660,
+        28553,
+        709
+      ],
+      "name": "岸路右捆物",
+      "evidence": "棚左入口前地面有繩束長物與小包，不猜商品。",
+      "replies": [
+        "繩子把長物束在一起。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28497,
+        684.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-043",
+      "bounds": [
+        28284,
+        365,
+        29053,
+        680
+      ],
+      "name": "路旁茅棚",
+      "evidence": "茅棚向路敞開，內有坐站人物、桌凳與右側牲口。",
+      "replies": [
+        "茅棚裏外都有細節。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28668.5,
+        522.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-044",
+      "bounds": [
+        28331,
+        484,
+        28418,
+        589
+      ],
+      "name": "茅棚左籠架",
+      "evidence": "左棚口有一組細框格籠及下方長條台。",
+      "replies": [
+        "細格框架排在棚口。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28374.5,
+        536.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-045",
+      "bounds": [
+        28558,
+        550,
+        28634,
+        658
+      ],
+      "name": "茅棚中桌凳",
+      "evidence": "中央棚下有方桌、細腿和前後凳。",
+      "replies": [
+        "方桌擺在棚子中央。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28596,
+        604
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-046",
+      "bounds": [
+        28733,
+        577,
+        28822,
+        649
+      ],
+      "name": "茅棚右桌凳",
+      "evidence": "坐者前有另一组桌凳，桌面斜向。",
+      "replies": [
+        "右邊桌面斜着排開。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28793.075,
+        613
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-047",
+      "bounds": [
+        28915,
+        593,
+        28989,
+        693
+      ],
+      "name": "茅棚旁小牲口",
+      "evidence": "小牲口站在棚右，頭低，背上無清楚貨箱。",
+      "replies": [
+        "牠低着頭站在棚旁。",
+        "牲口身旁還有別的東西。",
+        "仔細看看背上與腳下。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        28952,
+        643
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-048",
+      "bounds": [
+        29201,
+        637,
+        29398,
+        791
+      ],
+      "name": "籬外伏臥牛",
+      "evidence": "牛伏臥於籬外，頭向左，角和背可辨；不算人物。",
+      "replies": [
+        "牠正伏在路邊。",
+        "牲口身旁還有別的東西。",
+        "仔細看看背上與腳下。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        29299.5,
+        714
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-049",
+      "bounds": [
+        29459,
+        598,
+        29560,
+        718
+      ],
+      "name": "籬外站牛",
+      "evidence": "站牛在伏牛右後，四腿和弓背可辨。",
+      "replies": [
+        "另一頭牛還站着。",
+        "牲口身旁還有別的東西。",
+        "仔細看看背上與腳下。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        29509.5,
+        658
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-050",
+      "bounds": [
+        29649,
+        628,
+        29800,
+        708
+      ],
+      "name": "路邊單輪小車",
+      "evidence": "斜長車身、單一大輪及伸出的把手。",
+      "replies": [
+        "車輪旁伸出兩根把手。",
+        "輪子與車架連在一起。",
+        "運東西也要留出路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        29724.5,
+        668
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-051",
+      "bounds": [
+        29105,
+        39,
+        29214,
+        148
+      ],
+      "name": "遠路屋角棚",
+      "evidence": "上沿靠左屋角有小台與掛物，部分被樹遮住。",
+      "replies": [
+        "遠處屋角也有小台。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        29159.5,
+        93.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-052",
+      "bounds": [
+        29420,
+        76,
+        29571,
+        168
+      ],
+      "name": "遠路低輪車",
+      "evidence": "遠樹後可見一輪車架及平扁載物，沒有另认人物。",
+      "replies": [
+        "遠路上有低低的車架。",
+        "輪子與車架連在一起。",
+        "運東西也要留出路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        29495.5,
+        122
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-053",
+      "bounds": [
+        30090,
+        780,
+        30237,
+        861
+      ],
+      "name": "路邊雙輪車",
+      "evidence": "車身低、輪在下方，前後伸杆；上方人物分開登記。",
+      "replies": [
+        "低車身旁有一對輪。",
+        "輪子與車架連在一起。",
+        "運東西也要留出路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        30163.5,
+        820.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-054",
+      "bounds": [
+        30651,
+        647,
+        30789,
+        705
+      ],
+      "name": "中路小牲口",
+      "evidence": "中路騎者腳下的小牲口，頭向右，背與腿清楚。",
+      "replies": [
+        "小牲口沿着路往前。",
+        "牲口身旁還有別的東西。",
+        "仔細看看背上與腳下。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        30720,
+        676
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-055",
+      "bounds": [
+        30800,
+        416,
+        30938,
+        589
+      ],
+      "name": "路上轎子",
+      "evidence": "高直轎身、頂端框架及前後長杆；兩名轎旁人物單獨登記。",
+      "replies": [
+        "長杆從轎身兩邊伸出。",
+        "輪子與車架連在一起。",
+        "運東西也要留出路。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        30869,
+        502.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-056",
+      "bounds": [
+        31010,
+        270,
+        31108,
+        366
+      ],
+      "name": "遠路騎乘牲口",
+      "evidence": "斗笠騎者下方動物，頭向右，腿呈迈步狀。",
+      "replies": [
+        "牠載着斗笠騎者走。",
+        "牲口身旁還有別的東西。",
+        "仔細看看背上與腳下。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        31059,
+        303.6
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-057",
+      "bounds": [
+        30118,
+        1397,
+        30304,
+        1518
+      ],
+      "name": "近路左騎乘驢",
+      "evidence": "深衣騎者下方有長耳牲口，頭向右，四腿分開。",
+      "replies": [
+        "長耳牲口走在左邊。",
+        "牲口身旁還有別的東西。",
+        "仔細看看背上與腳下。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        30215.65,
+        1457.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-058",
+      "bounds": [
+        30421,
+        1524,
+        30660,
+        1638
+      ],
+      "name": "近路右騎乘驢",
+      "evidence": "兜帽騎者下方牲口，後方衣擺遮背，四腿可辨。",
+      "replies": [
+        "另一頭牲口跟着走。",
+        "牲口身旁還有別的東西。",
+        "仔細看看背上與腳下。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        30540.5,
+        1581
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-059",
+      "bounds": [
+        31266,
+        1100,
+        31498,
+        1238
+      ],
+      "name": "院內井架及桶",
+      "evidence": "院內有懸杆、桶狀物和圓井口，不是人物；未据此推定商業用途。",
+      "replies": [
+        "桶和圓口就在院裏。",
+        "它有自己的形狀。",
+        "再近看一點就更清楚。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        31382,
+        1169
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-060",
+      "bounds": [
+        31127,
+        1116,
+        31231,
+        1209
+      ],
+      "name": "院門敞架",
+      "evidence": "籬門旁有小棚架與長条框，無可辨商品。",
+      "replies": [
+        "籬門旁有細長的架子。",
+        "它有自己的形狀。",
+        "再近看一點就更清楚。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        31179,
+        1162.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-061",
+      "bounds": [
+        33336,
+        686,
+        33726,
+        924
+      ],
+      "name": "林間左茅屋",
+      "evidence": "左茅屋閉合外觀，部分被樹擋住；無可見店招商品，不確定為商舖。",
+      "replies": [
+        "茅屋藏在林間。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "excluded",
+      "reason": "未見商業擺設或店招；保留位置，不作商業互動。"
+    },
+    {
+      "id": "extra-object-outskirts-062",
+      "bounds": [
+        33991,
+        777,
+        34174,
+        916
+      ],
+      "name": "林間堆物和低台",
+      "evidence": "屋間低台周圍有筐與堆物，部分被枝幹遮住，商品不可辨。",
+      "replies": [
+        "低台旁堆着幾件物。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        34082.5,
+        846.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-063",
+      "bounds": [
+        34440,
+        708,
+        34606,
+        885
+      ],
+      "name": "林間左門屋",
+      "evidence": "小茅屋門前有独立人物，但沒有可辨店招。",
+      "replies": [
+        "小門藏在樹後。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "excluded",
+      "reason": "未見商業擺設或店招；保留位置，不作商業互動。"
+    },
+    {
+      "id": "extra-object-outskirts-064",
+      "bounds": [
+        34677,
+        601,
+        34971,
+        913
+      ],
+      "name": "林間敞面屋",
+      "evidence": "敞面屋有桌、圓器及長条擺設；不猜定店種。",
+      "replies": [
+        "屋面敞開，桌子看得見。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        34824,
+        757
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-065",
+      "bounds": [
+        34759,
+        818,
+        34832,
+        861
+      ],
+      "name": "林間敞面屋桌",
+      "evidence": "屋内左侧有方桌與橫向桌面。",
+      "replies": [
+        "方桌就在屋內左邊。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        34795.5,
+        839.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-066",
+      "bounds": [
+        34854,
+        806,
+        34921,
+        861
+      ],
+      "name": "林間敞面屋圓器",
+      "evidence": "屋内右侧有一组圓形器物与框架；不猜商品。",
+      "replies": [
+        "圓形物放在屋內右邊。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        34887.5,
+        833.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-067",
+      "bounds": [
+        34944,
+        751,
+        35102,
+        906
+      ],
+      "name": "林間右小棚",
+      "evidence": "右端小棚有台與二條細腿；後面被茅屋及樹遮住。",
+      "replies": [
+        "小棚靠在大屋旁。",
+        "屋前擺設值得近看。",
+        "屋內與門前各有細節。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        35023,
+        828.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-068",
+      "bounds": [
+        36280,
+        733,
+        36346,
+        805
+      ],
+      "name": "馱隊第一頭馱獸",
+      "evidence": "第一頭馱獸背上有大籠包物，細腿在下方。",
+      "replies": [
+        "大籠搭在牠背上。",
+        "牲口身旁還有別的東西。",
+        "仔細看看背上與腳下。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        36313,
+        788.8
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-069",
+      "bounds": [
+        36337,
+        758,
+        36433,
+        850
+      ],
+      "name": "馱隊第二頭馱獸",
+      "evidence": "第二頭馱獸背上成對方形箱筐，头向右。",
+      "replies": [
+        "成對箱筐掛在背上。",
+        "牲口身旁還有別的東西。",
+        "仔細看看背上與腳下。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        36385,
+        820.1
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-070",
+      "bounds": [
+        36431,
+        813,
+        36539,
+        894
+      ],
+      "name": "馱隊第三頭馱獸",
+      "evidence": "第三頭馱獸身軀淺色，背有長物，樹遮右端。",
+      "replies": [
+        "這一頭靠近樹幹。",
+        "牲口身旁還有別的東西。",
+        "仔細看看背上與腳下。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        36485,
+        853.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-071",
+      "bounds": [
+        36622,
+        816,
+        36699,
+        917
+      ],
+      "name": "馱隊第四頭馱獸",
+      "evidence": "樹幹右方动物頭向右，背部与腿可辨；樹遮其左半。",
+      "replies": [
+        "牠從樹後露了出來。",
+        "牲口身旁還有別的東西。",
+        "仔細看看背上與腳下。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        36660.5,
+        866.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-072",
+      "bounds": [
+        36699,
+        852,
+        36772,
+        945
+      ],
+      "name": "馱隊第五頭馱獸",
+      "evidence": "最右馱獸背上有成對箱籠，前方有牽行者。",
+      "replies": [
+        "這頭背着兩邊箱籠。",
+        "牲口身旁還有別的東西。",
+        "仔細看看背上與腳下。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        36735.5,
+        907.8
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-073",
+      "bounds": [
+        36279,
+        733,
+        36337,
+        782
+      ],
+      "name": "第一馱獸背籠",
+      "evidence": "獨立可辨的高籠与圓包物附在第一头背上。",
+      "replies": [
+        "高籠穩穩放在背上。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        36308,
+        757.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-074",
+      "bounds": [
+        36341,
+        759,
+        36423,
+        813
+      ],
+      "name": "第二馱獸箱筐",
+      "evidence": "第二头背上的成對方格箱筐，不猜货品。",
+      "replies": [
+        "箱筐上畫着細細格線。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        36382,
+        786
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-075",
+      "bounds": [
+        36701,
+        855,
+        36770,
+        900
+      ],
+      "name": "第五馱獸箱筐",
+      "evidence": "最右馱獸背上两邊箱筐及繫線可辨。",
+      "replies": [
+        "兩邊箱筐掛得相稱。",
+        "物件排在眼前。",
+        "同樣的擺法，這裏也看得見。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        36735.5,
+        877.5
+      ]
+    },
+    {
+      "id": "extra-object-outskirts-076",
+      "bounds": [
+        36228,
+        1142,
+        36439,
+        1212
+      ],
+      "name": "溪岸空舟",
+      "evidence": "溪岸下方細長空舟有船頭、舷邊和船板，無人。",
+      "replies": [
+        "這條小舟裏沒有坐者。",
+        "船篷、船身與水面靠在一起。",
+        "這裏也有一艘船。"
+      ],
+      "status": "interactive",
+      "hitPoint": [
+        36333.5,
+        1177
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "outskirts-07-top-0",
+      "bounds": [
+        24000,
+        0,
+        25060,
+        1000
+      ],
+      "peopleCount": 34,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-07-top-0.svg"
+    },
+    {
+      "id": "outskirts-07-bottom-0",
+      "bounds": [
+        24000,
+        900,
+        25060,
+        1800
+      ],
+      "peopleCount": 5,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-07-bottom-0.svg"
+    },
+    {
+      "id": "outskirts-07-top-1",
+      "bounds": [
+        24940,
+        0,
+        26060,
+        1000
+      ],
+      "peopleCount": 9,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-07-top-1.svg"
+    },
+    {
+      "id": "outskirts-07-bottom-1",
+      "bounds": [
+        24940,
+        900,
+        26060,
+        1800
+      ],
+      "peopleCount": 0,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-07-bottom-1.svg"
+    },
+    {
+      "id": "outskirts-07-top-2",
+      "bounds": [
+        25940,
+        0,
+        27060,
+        1000
+      ],
+      "peopleCount": 7,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-07-top-2.svg"
+    },
+    {
+      "id": "outskirts-07-bottom-2",
+      "bounds": [
+        25940,
+        900,
+        27060,
+        1800
+      ],
+      "peopleCount": 0,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-07-bottom-2.svg"
+    },
+    {
+      "id": "outskirts-07-top-3",
+      "bounds": [
+        26940,
+        0,
+        28000,
+        1000
+      ],
+      "peopleCount": 6,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-07-top-3.svg"
+    },
+    {
+      "id": "outskirts-07-bottom-3",
+      "bounds": [
+        26940,
+        900,
+        28000,
+        1800
+      ],
+      "peopleCount": 1,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-07-bottom-3.svg"
+    },
+    {
+      "id": "outskirts-08-top-0",
+      "bounds": [
+        28000,
+        0,
+        29060,
+        1000
+      ],
+      "peopleCount": 15,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-08-top-0.svg"
+    },
+    {
+      "id": "outskirts-08-bottom-0",
+      "bounds": [
+        28000,
+        900,
+        29060,
+        1800
+      ],
+      "peopleCount": 2,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-08-bottom-0.svg"
+    },
+    {
+      "id": "outskirts-08-top-1",
+      "bounds": [
+        28940,
+        0,
+        30060,
+        1000
+      ],
+      "peopleCount": 4,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-08-top-1.svg"
+    },
+    {
+      "id": "outskirts-08-bottom-1",
+      "bounds": [
+        28940,
+        900,
+        30060,
+        1800
+      ],
+      "peopleCount": 4,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-08-bottom-1.svg"
+    },
+    {
+      "id": "outskirts-08-top-2",
+      "bounds": [
+        29940,
+        0,
+        31060,
+        1000
+      ],
+      "peopleCount": 6,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-08-top-2.svg"
+    },
+    {
+      "id": "outskirts-08-bottom-2",
+      "bounds": [
+        29940,
+        900,
+        31060,
+        1800
+      ],
+      "peopleCount": 4,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-08-bottom-2.svg"
+    },
+    {
+      "id": "outskirts-08-top-3",
+      "bounds": [
+        30940,
+        0,
+        32000,
+        1000
+      ],
+      "peopleCount": 3,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-08-top-3.svg"
+    },
+    {
+      "id": "outskirts-08-bottom-3",
+      "bounds": [
+        30940,
+        900,
+        32000,
+        1800
+      ],
+      "peopleCount": 0,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-08-bottom-3.svg"
+    },
+    {
+      "id": "outskirts-09-top-0",
+      "bounds": [
+        32000,
+        0,
+        33060,
+        1000
+      ],
+      "peopleCount": 0,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-09-top-0.svg"
+    },
+    {
+      "id": "outskirts-09-bottom-0",
+      "bounds": [
+        32000,
+        900,
+        33060,
+        1800
+      ],
+      "peopleCount": 0,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-09-bottom-0.svg"
+    },
+    {
+      "id": "outskirts-09-top-1",
+      "bounds": [
+        32940,
+        0,
+        34060,
+        1000
+      ],
+      "peopleCount": 0,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-09-top-1.svg"
+    },
+    {
+      "id": "outskirts-09-bottom-1",
+      "bounds": [
+        32940,
+        900,
+        34060,
+        1800
+      ],
+      "peopleCount": 0,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-09-bottom-1.svg"
+    },
+    {
+      "id": "outskirts-09-top-2",
+      "bounds": [
+        33940,
+        0,
+        35060,
+        1000
+      ],
+      "peopleCount": 1,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-09-top-2.svg"
+    },
+    {
+      "id": "outskirts-09-bottom-2",
+      "bounds": [
+        33940,
+        900,
+        35060,
+        1800
+      ],
+      "peopleCount": 0,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-09-bottom-2.svg"
+    },
+    {
+      "id": "outskirts-09-top-3",
+      "bounds": [
+        34940,
+        0,
+        36000,
+        1000
+      ],
+      "peopleCount": 0,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-09-top-3.svg"
+    },
+    {
+      "id": "outskirts-09-bottom-3",
+      "bounds": [
+        34940,
+        900,
+        36000,
+        1800
+      ],
+      "peopleCount": 0,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-09-bottom-3.svg"
+    },
+    {
+      "id": "outskirts-10-top-0",
+      "bounds": [
+        36000,
+        0,
+        37060,
+        1000
+      ],
+      "peopleCount": 3,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-10-top-0.svg"
+    },
+    {
+      "id": "outskirts-10-bottom-0",
+      "bounds": [
+        36000,
+        900,
+        37060,
+        1800
+      ],
+      "peopleCount": 0,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-10-bottom-0.svg"
+    },
+    {
+      "id": "outskirts-10-top-1",
+      "bounds": [
+        36940,
+        0,
+        38060,
+        1000
+      ],
+      "peopleCount": 0,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-10-top-1.svg"
+    },
+    {
+      "id": "outskirts-10-bottom-1",
+      "bounds": [
+        36940,
+        900,
+        38060,
+        1800
+      ],
+      "peopleCount": 0,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-10-bottom-1.svg"
+    },
+    {
+      "id": "outskirts-10-top-2",
+      "bounds": [
+        37940,
+        0,
+        38414,
+        1000
+      ],
+      "peopleCount": 0,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-10-top-2.svg"
+    },
+    {
+      "id": "outskirts-10-bottom-2",
+      "bounds": [
+        37940,
+        900,
+        38414,
+        1800
+      ],
+      "peopleCount": 0,
+      "notes": "原尺寸重疊裁圖逐一視讀。P為人物、O為物件、灰為排除；框以原畫像素登記。peopleCount 按不重疊中心歸屬計數。",
+      "reviewImage": "docs/art/qingming/inventory/outskirts/outskirts-10-bottom-2.svg"
+    }
+  ]
+}

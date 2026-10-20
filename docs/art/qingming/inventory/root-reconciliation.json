@@ -1,0 +1,121 @@
+[
+  {
+    "id": "extra-person-city-276",
+    "action": "activate-visible-body",
+    "basis": "exclusions-city-outskirts.png"
+  },
+  {
+    "id": "extra-person-city-279",
+    "action": "tighten",
+    "bounds": [
+      1541,
+      756,
+      1575,
+      876
+    ],
+    "basis": "medicine-person-check.png"
+  },
+  {
+    "id": "extra-person-outskirts-018",
+    "action": "activate-visible-fragment",
+    "basis": "exclusions-city-outskirts.png"
+  },
+  {
+    "id": "extra-person-outskirts-025",
+    "action": "activate-visible-fragment",
+    "basis": "exclusions-city-outskirts.png"
+  },
+  {
+    "id": "extra-person-outskirts-036",
+    "action": "activate-visible-fragment",
+    "basis": "exclusions-city-outskirts.png"
+  },
+  {
+    "id": "extra-person-outskirts-037",
+    "action": "activate-visible-fragment",
+    "basis": "exclusions-city-outskirts.png"
+  },
+  {
+    "id": "extra-person-outskirts-046",
+    "action": "activate-visible-fragment",
+    "basis": "exclusions-city-outskirts.png"
+  },
+  {
+    "id": "extra-person-outskirts-051",
+    "action": "activate-visible-fragment",
+    "basis": "exclusions-city-outskirts.png"
+  },
+  {
+    "id": "extra-person-outskirts-052",
+    "action": "activate-visible-fragment",
+    "basis": "exclusions-city-outskirts.png"
+  },
+  {
+    "id": "extra-person-outskirts-102",
+    "action": "activate-visible-fragment",
+    "basis": "exclusions-city-outskirts.png"
+  },
+  {
+    "id": "extra-object-river-058",
+    "action": "merge",
+    "absorbed": "extra-object-outskirts-011",
+    "bounds": [
+      23553,
+      310,
+      25288,
+      1243
+    ],
+    "basis": "24000-wide.jpg"
+  },
+  {
+    "id": "extra-object-river-059",
+    "action": "merge",
+    "absorbed": "extra-object-outskirts-009",
+    "bounds": [
+      23568,
+      478,
+      24604,
+      744
+    ],
+    "basis": "24000-wide.jpg"
+  },
+  {
+    "ids": [
+      "extra-object-river-061",
+      "extra-object-outskirts-001"
+    ],
+    "action": "retain-separate-details-of-one-building",
+    "basis": "24000-wide.jpg"
+  },
+  {
+    "id": "extra-object-outskirts-023",
+    "action": "same-confirmed-paper-shop-scene-collection",
+    "collectionId": "paper-shop",
+    "basis": "原畫已指認紙馬鋪場景，與店招及陳列同類，不另增類別"
+  },
+  {
+    "revision": "v0.5-pointer-review",
+    "removedDuplicate": {
+      "id": "extra-person-river-166",
+      "samePersonAs": "extra-person-river-181",
+      "evidence": "橋頭下方同一挑擔背向者的頭肩與全身，已按原尺寸裁圖核對；保留全身ID。"
+    },
+    "boundsUnifiedExistingIds": [
+      "person-paper",
+      "neighbour-paper-pole",
+      "neighbour-paper-right"
+    ],
+    "narrowedBounds": [
+      "extra-person-city-007",
+      "extra-person-city-213",
+      "extra-person-city-202"
+    ],
+    "currentCounts": {
+      "registeredPeople": 697,
+      "interactivePeople": 692,
+      "interactiveObjects": 222,
+      "pendingPeople": 5
+    },
+    "hitPoint": "全部互動位置均有目視核對點；人物以臉、頭肩或可見身體，物件以可見細節，邊界重疊以遊戲命中器檢查。"
+  }
+]

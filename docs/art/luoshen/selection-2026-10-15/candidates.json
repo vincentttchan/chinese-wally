@@ -1,0 +1,395 @@
+{
+  "coordinate_base": "painting-level16.jpg; global origin x15300 y0; level16 from official viewer",
+  "candidates": [
+    {
+      "id": "C1",
+      "file": "C1-opening.jpg",
+      "role": "main",
+      "crop_level16_local": [
+        17970,
+        460,
+        18350,
+        950
+      ],
+      "crop_level16_global": [
+        33270,
+        460,
+        33650,
+        950
+      ],
+      "raw_crop": true,
+      "name": "岸上初見",
+      "context_file": "C1-context.jpg",
+      "context_crop_level16_local": [
+        17450,
+        230,
+        18800,
+        1030
+      ]
+    },
+    {
+      "id": "C2",
+      "file": "C2-seated.jpg",
+      "role": "main",
+      "crop_level16_local": [
+        12180,
+        470,
+        12560,
+        850
+      ],
+      "crop_level16_global": [
+        27480,
+        470,
+        27860,
+        850
+      ],
+      "raw_crop": true,
+      "name": "坐榻凝望",
+      "context_file": "C2-context.jpg",
+      "context_crop_level16_local": [
+        11600,
+        300,
+        12950,
+        1000
+      ]
+    },
+    {
+      "id": "C3",
+      "file": "C3-farewell.jpg",
+      "role": "observe",
+      "crop_level16_local": [
+        8740,
+        500,
+        9120,
+        970
+      ],
+      "crop_level16_global": [
+        24040,
+        500,
+        24420,
+        970
+      ],
+      "raw_crop": true,
+      "name": "岸邊送別",
+      "context_file": "C3-context.jpg",
+      "context_crop_level16_local": [
+        8100,
+        300,
+        9450,
+        1010
+      ]
+    },
+    {
+      "id": "C4",
+      "file": "C4-boat.jpg",
+      "role": "main",
+      "crop_level16_local": [
+        4170,
+        410,
+        4470,
+        730
+      ],
+      "crop_level16_global": [
+        19470,
+        410,
+        19770,
+        730
+      ],
+      "raw_crop": true,
+      "name": "樓船之中",
+      "context_file": "C4-context.jpg",
+      "context_crop_level16_local": [
+        3850,
+        180,
+        5350,
+        1040
+      ]
+    },
+    {
+      "id": "C5",
+      "file": "C5-shore.jpg",
+      "role": "ending",
+      "crop_level16_local": [
+        2950,
+        590,
+        3270,
+        1000
+      ],
+      "crop_level16_global": [
+        18250,
+        590,
+        18570,
+        1000
+      ],
+      "raw_crop": true,
+      "name": "岸邊坐候",
+      "context_file": "C5-context.jpg",
+      "context_crop_level16_local": [
+        2600,
+        380,
+        3900,
+        1040
+      ]
+    },
+    {
+      "id": "C6",
+      "file": "C6-carriage.jpg",
+      "role": "ending",
+      "crop_level16_local": [
+        880,
+        530,
+        1190,
+        900
+      ],
+      "crop_level16_global": [
+        16180,
+        530,
+        16490,
+        900
+      ],
+      "raw_crop": true,
+      "name": "車中回望",
+      "context_file": "C6-context.jpg",
+      "context_crop_level16_local": [
+        250,
+        200,
+        2000,
+        1040
+      ]
+    },
+    {
+      "id": "L1",
+      "file": "L1-first-sight.jpg",
+      "role": "main",
+      "crop_level16_local": [
+        16780,
+        420,
+        17420,
+        940
+      ],
+      "crop_level16_global": [
+        32080,
+        420,
+        32720,
+        940
+      ],
+      "raw_crop": true,
+      "name": "初見的洛神",
+      "context_file": "L1-context.jpg",
+      "context_crop_level16_local": [
+        16100,
+        100,
+        17950,
+        1010
+      ]
+    },
+    {
+      "id": "L2",
+      "file": "L2-turning.jpg",
+      "role": "compare",
+      "crop_level16_local": [
+        15570,
+        530,
+        16180,
+        1010
+      ],
+      "crop_level16_global": [
+        30870,
+        530,
+        31480,
+        1010
+      ],
+      "raw_crop": true,
+      "name": "俯身回轉",
+      "context_file": "L2-context.jpg",
+      "context_crop_level16_local": [
+        15000,
+        300,
+        16550,
+        1020
+      ]
+    },
+    {
+      "id": "L3",
+      "file": "L3-pair-lower.jpg",
+      "role": "compare",
+      "crop_level16_local": [
+        14320,
+        530,
+        14950,
+        1000
+      ],
+      "crop_level16_global": [
+        29620,
+        530,
+        30250,
+        1000
+      ],
+      "raw_crop": true,
+      "name": "下方雙人場面",
+      "context_file": "L3-context.jpg",
+      "context_crop_level16_local": [
+        14000,
+        100,
+        15300,
+        1030
+      ]
+    },
+    {
+      "id": "L4",
+      "file": "L4-pair-upper.jpg",
+      "role": "compare",
+      "crop_level16_local": [
+        13870,
+        100,
+        14470,
+        550
+      ],
+      "crop_level16_global": [
+        29170,
+        100,
+        29770,
+        550
+      ],
+      "raw_crop": true,
+      "name": "上方雙人場面",
+      "context_file": "L4-context.jpg",
+      "context_crop_level16_local": [
+        13800,
+        100,
+        15300,
+        1030
+      ]
+    },
+    {
+      "id": "L5",
+      "file": "L5-willow.jpg",
+      "role": "compare",
+      "crop_level16_local": [
+        13220,
+        450,
+        13830,
+        980
+      ],
+      "crop_level16_global": [
+        28520,
+        450,
+        29130,
+        980
+      ],
+      "raw_crop": true,
+      "name": "柳旁回身",
+      "context_file": "L5-context.jpg",
+      "context_crop_level16_local": [
+        12800,
+        200,
+        14350,
+        1030
+      ]
+    },
+    {
+      "id": "L6",
+      "file": "L6-pair-left.jpg",
+      "role": "compare",
+      "crop_level16_local": [
+        12750,
+        380,
+        13270,
+        880
+      ],
+      "crop_level16_global": [
+        28050,
+        380,
+        28570,
+        880
+      ],
+      "raw_crop": true,
+      "name": "左側雙人場面",
+      "context_file": "L6-context.jpg",
+      "context_crop_level16_local": [
+        12200,
+        250,
+        13700,
+        1020
+      ]
+    },
+    {
+      "id": "L7",
+      "file": "L7-before-seated.jpg",
+      "role": "observe",
+      "crop_level16_local": [
+        11700,
+        330,
+        12350,
+        900
+      ],
+      "crop_level16_global": [
+        27000,
+        330,
+        27650,
+        900
+      ],
+      "raw_crop": true,
+      "name": "坐榻前的身影",
+      "context_file": "L7-context.jpg",
+      "context_crop_level16_local": [
+        11200,
+        200,
+        12950,
+        1020
+      ]
+    },
+    {
+      "id": "L8",
+      "file": "L8-farewell.jpg",
+      "role": "main",
+      "crop_level16_local": [
+        8150,
+        560,
+        8720,
+        940
+      ],
+      "crop_level16_global": [
+        23450,
+        560,
+        24020,
+        940
+      ],
+      "raw_crop": true,
+      "name": "長頸鳥形旁的身影",
+      "context_file": "L8-context.jpg",
+      "context_crop_level16_local": [
+        8100,
+        300,
+        9450,
+        1010
+      ]
+    },
+    {
+      "id": "L9",
+      "file": "L9-cloud-car.jpg",
+      "role": "main",
+      "crop_level16_local": [
+        6350,
+        360,
+        6740,
+        780
+      ],
+      "crop_level16_global": [
+        21650,
+        360,
+        22040,
+        780
+      ],
+      "raw_crop": true,
+      "name": "雲車中的身影",
+      "context_file": "L9-context.jpg",
+      "context_crop_level16_local": [
+        5400,
+        100,
+        7600,
+        1030
+      ]
+    }
+  ]
+}

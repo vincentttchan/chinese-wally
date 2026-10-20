@@ -1,0 +1,52 @@
+{
+  "source": "https://www.dpm.org.cn/bigimg/737/0",
+  "crop_global_level16": [
+    15600,
+    92,
+    35550,
+    1035
+  ],
+  "size": [
+    19950,
+    943
+  ],
+  "head_rects_old_origin": {
+    "C1": [
+      18105,
+      475,
+      18190,
+      635
+    ],
+    "L1": [
+      16975,
+      420,
+      17080,
+      605
+    ],
+    "C2": [
+      12240,
+      500,
+      12350,
+      660
+    ],
+    "L8": [
+      8350,
+      630,
+      8425,
+      755
+    ],
+    "L9": [
+      6560,
+      445,
+      6645,
+      585
+    ],
+    "C4": [
+      4250,
+      425,
+      4355,
+      590
+    ]
+  },
+  "treatment": "crop, JPEG encoding, overview downsampling only; no generated or repainted pixels"
+}

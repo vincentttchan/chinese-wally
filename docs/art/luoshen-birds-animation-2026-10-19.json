@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-19",
+  "status": "archived first demonstration asset; generated restoration plate is no longer referenced by runtime",
+  "source": "https://www.dpm.org.cn/bigimg/737/0",
+  "sourceRights": "See docs/chapters/luoshen-release-sources-2026-10-19.md; no new permission established",
+  "tool": "image_gen.imagegen",
+  "prompt": "Edit the referenced historical Chinese silk handscroll tile for a very small, explicitly labeled game animation restoration plate. Preserve the reference's full landscape 1995 x 943 canvas, same framing, scale and placement. Remove ONLY the TWO small flying birds at the upper centre-right, approximately x1125..1325 y55..146 in the 1995x943 image. Fill their exact silhouettes with unobtrusive continuation of the surrounding aged ochre silk texture, matching local brightness, stains and fine vertical weave. Keep the dragon below the birds, goddess, all people, landscape, seals, ink lines and entire rest of the image unchanged. DO NOT remove the dragon or the red seal. No new birds, no new objects, no lettering. Do not crop, zoom, recompose, sharpen, modernize or recolor the picture. The animation renderer will reveal only a tiny feathered patch where those two birds were removed; no other generated pixels will be used. This plate is an interpretation aid, never a replacement for original art.",
+  "sourcePixelsUsedFor": "bird body and wing layers",
+  "generatedPixelsUsedFor": "briefly conceal resting birds behind moving source layers; not evidence of the original painting",
+  "generatedOriginalPath": "/Users/vincentttchan99/.codex/generated_images/01a13e42-403b-7b33-b340-93db6aef98e5/exec-3b2e22d4-56b5-43cf-89b9-7f4dd28241e7.png",
+  "runtime": "Normalized to source tile dimensions; SVG silhouette masks feather the restoration edge; local green/blue correction; overlay removed when stopped or finished",
+  "files": [
+    {
+      "path": "public/art/luoshen/detail-8.jpg",
+      "role": "unchanged source painting",
+      "sha256": "43477766fbf1c727e2e94faf5eed2f98f688f97bf4c50de98c38a17eff9c5a1f",
+      "sizeBytes": 748989,
+      "dimensions": [
+        1995,
+        943
+      ]
+    },
+    {
+      "path": "public/art/animations/luoshen-birds/silk-plate-v1.png",
+      "role": "generated restoration plate; visible only inside local bird masks during interpretation",
+      "sha256": "6a9282388a4529dc0c29a9e0c1ec5d3ed5448f71bad2824b201395da58833be6",
+      "sizeBytes": 2473811,
+      "dimensions": [
+        1821,
+        864
+      ]
+    }
+  ],
+  "supersededBy": "docs/chapters/luoshen-birds-integration-2026-10-19.md"
+}

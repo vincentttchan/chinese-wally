@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-16",
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "reference_images": [
+    "detail-8.jpg",
+    "collection-dragon-cutout.png"
+  ],
+  "purpose": "Derived collectible illustrations; unchanged original painting is authoritative.",
+  "assets": [
+    {
+      "id": "bird",
+      "file": "collection-bird-cutout.png",
+      "prompt": "Create one transparent cutout collectible illustration of a pair of slender flying birds, derived from the two flying birds above the dragon in reference image 1 (historical Luoshen painting). Match the fine ink outline, muted ochre/olive/cream pigments and aged hand-painted texture of the existing dragon collectible in reference image 2. Show only the two flying birds in graceful sideways flight, entire wings and tails visible, centered with clean transparent surrounding negative space. This is a museum-game collectible illustration derived from the painting, not a replica scene. No background, no rectangular silk patch, no landscape, no dragon, no humans, no shadow, no frame, no lettering. Actual alpha transparency.",
+      "output_hint": "Generated images are saved to /Users/vincentttchan99/.codex/generated_images/01a13e42-403b-7b33-b340-93db6aef98e5 as /Users/vincentttchan99/.codex/generated_images/01a13e42-403b-7b33-b340-93db6aef98e5/exec-57ee0cc8-271e-4f1d-8313-f8ba72047eea.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "status": "rejected draft: surrounding haze; final asset documented in collection-bird-final-2026-10-16.json"
+    },
+    {
+      "id": "ribbon",
+      "file": "collection-ribbon-cutout.png",
+      "prompt": "Create one transparent cutout collectible illustration of a flowing garment sash inspired by the thin looping crimson and cream clothing ribbons beside the goddess in reference image 1 (historical Luoshen painting). Match fine ink outlines, muted ochre, faded cinnabar, cream, olive accents and aged hand-painted texture of reference image 2, the existing dragon collectible. Depict two attached narrow cloth strands with gentle S-curves and a loose loop, wide enough to read clearly as textile; free ends visible; a single coherent collectible centered in square composition with generous clear alpha space. Only the cloth sash, no person or body parts, no bird, no dragon, no background or rectangular silk patch, no shadow, frame, text or knot invented as ornament. Actual transparent background.",
+      "output_hint": "Generated images are saved to /Users/vincentttchan99/.codex/generated_images/01a13e42-403b-7b33-b340-93db6aef98e5 as /Users/vincentttchan99/.codex/generated_images/01a13e42-403b-7b33-b340-93db6aef98e5/exec-2bcd0a4c-a293-4859-ba38-e0c4763c6652.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ]
+}

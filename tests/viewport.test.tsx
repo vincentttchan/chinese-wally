@@ -6,13 +6,14 @@ import { createRoot } from 'react-dom/client';
 import { ScrollScene } from '../src/components/ScrollScene.tsx';
 import type { SceneHint } from '../src/components/ScrollScene.tsx';
 import type { SceneActor } from '../src/game/level.ts';
+import type { Point } from '../src/game/geometry.ts';
 
 const actors: SceneActor[] = [
   {id: 'copyist', name: '抄榜人', kind: 'witness', x: .15, y: .7, width: .03, height: .15},
   {id: 'target', name: '考生', kind: 'target', x: .9, y: .7, width: .03, height: .15},
 ];
 
-async function setup(initialHint: SceneHint | null, frame = {width: 900, height: 400}, active = true) {
+async function setup(initialHint: SceneHint | null, frame = {width: 900, height: 400}, active = true, initialRegion?: Point) {
   const window = new Window();
   for (const [key, value] of Object.entries({window, document: window.document, navigator: window.navigator, HTMLElement: window.HTMLElement, IS_REACT_ACT_ENVIRONMENT: true})) {
     Object.defineProperty(globalThis, key, {value, configurable: true, writable: true});
@@ -29,7 +30,7 @@ async function setup(initialHint: SceneHint | null, frame = {width: 900, height:
   window.document.body.appendChild(container);
   const root = createRoot(container as unknown as HTMLElement);
   const render = async (hint: SceneHint | null) => {
-    await act(async () => root.render(<ScrollScene image="/test-scroll.png" actors={actors} active={active} blocked={false} resetKey={1} hint={hint} motion={false} onInspect={() => {}} onReady={() => {}}/>));
+    await act(async () => root.render(<ScrollScene image="/test-scroll.png" actors={actors} active={active} blocked={false} resetKey={1} hint={hint} initialRegion={initialRegion} motion={false} onInspect={() => {}} onReady={() => {}}/>));
   };
   await render(initialHint);
   const image = container.querySelector('img')!;
@@ -56,6 +57,18 @@ test('phone introduction shows a readable painting instead of a hidden narrow ba
     const world = app.container.querySelector('.painting-world')! as unknown as HTMLElement;
     const scale = Number(world.style.transform.match(/scale\(([-\d.]+)\)/)![1]);
     assert.ok(scale * 1000 >= 440, 'painting must fill the phone introduction vertically');
+  } finally {await app.cleanup();}
+});
+
+test('the opening district fills the viewport without marking a target', async () => {
+  const app = await setup(null, {width: 900, height: 400}, true, {x: .7, y: .5});
+  try {
+    const world = app.container.querySelector('.painting-world')! as unknown as HTMLElement;
+    const match = world.style.transform.match(/translate\(([-\d.]+)px, ([-\d.]+)px\) scale\(([-\d.]+)\)/)!;
+    const x = Number(match[1]), scale = Number(match[3]);
+    assert.ok(x < 0, 'opening focuses on a district further along the scroll');
+    assert.ok(x + 3000 * scale >= 900, 'painting still covers the whole viewport');
+    assert.equal(app.container.querySelectorAll('.hint-ring, .character-mark').length, 0);
   } finally {await app.cleanup();}
 });
 

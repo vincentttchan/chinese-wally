@@ -1,14 +1,17 @@
 import type {CSSProperties,ReactNode,Ref} from 'react';
 import {lanternActors,lanternSize,lanternTargets} from '../game/lanternFestival.ts';
 import type {SceneViewport} from './ScrollScene.tsx';
+import type {SceneActor} from '../game/level.ts';
+import type {Size} from '../game/geometry.ts';
 
-export function LanternPaintingNote({index,viewport,label,title,children,busy=false,noteRef}: {
+export function LanternPaintingNote({index,viewport,label,title,children,busy=false,noteRef,anchor,artworkSize=lanternSize}: {
   index:number;viewport:SceneViewport;label:string;title:string;children:ReactNode;busy?:boolean;noteRef?:Ref<HTMLElement>;
+  anchor?:SceneActor;artworkSize?:Size;
 }) {
-  const actor=lanternActors.find(item=>item.id===lanternTargets[index].id)!;
+  const actor=anchor??lanternActors.find(item=>item.id===lanternTargets[index].id)!;
   const {view,frame}=viewport;
-  const x=view.x+actor.x*lanternSize.width*view.scale,y=view.y+actor.y*lanternSize.height*view.scale;
-  const width=Math.min(frame.width>=1000?400:350,frame.width-32),gap=Math.max(28,actor.width*lanternSize.width*view.scale*.65);
+  const x=view.x+actor.x*artworkSize.width*view.scale,y=view.y+actor.y*artworkSize.height*view.scale;
+  const width=Math.min(frame.width>=1000?400:350,frame.width-32),gap=Math.max(28,actor.width*artworkSize.width*view.scale*.65);
   const rightFits=x+gap+width<frame.width-20;
   const leftFits=x-gap-width>20;
   const desiredLeft=x<0||x>frame.width?24:leftFits?x-gap-width:rightFits?x+gap:x-width/2;

@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-13",
+  "method": "Production build and file comparison only; no browser or gameplay execution",
+  "route": "#kangqu-listening",
+  "build": "npm run build: tsc --noEmit and vite build succeeded",
+  "assets": [
+    {
+      "path": "chapters/kangqu-listening/index.html",
+      "bytes": 460185,
+      "matchesPackagedPublicAsset": true
+    },
+    {
+      "path": "chapters/kangqu-listening/data/dialogue-evidence.json",
+      "bytes": 156012,
+      "matchesPackagedPublicAsset": true
+    },
+    {
+      "path": "chapters/kangqu-listening/data/content-sources.json",
+      "bytes": 5121,
+      "matchesPackagedPublicAsset": true
+    },
+    {
+      "path": "chapters/kangqu-listening/art/native-segment.png",
+      "bytes": 15450097,
+      "matchesPackagedPublicAsset": true
+    }
+  ],
+  "published": false
+}

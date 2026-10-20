@@ -27,7 +27,7 @@ export function KangquGame() {
   const retry=()=>{setStatus('loading');setRevision(value=>value+1);};
   if(localFile)return <main className="kangqu-chapter-host lantern-game"><section className="scene-status"><p>在人群中聽樂</p><a className="lantern-text-button" href={kangquChapterDocument}>回到本章封面</a></section></main>;
   return <main className="kangqu-chapter-host lantern-game" aria-label="在人群中聽樂歷史畫作章節">
-    <iframe ref={frame} key={revision} src={kangquChapterDocument} className="kangqu-chapter-frame" title="在人群中聽樂：尋人、原畫觀察與街衢見聞冊" tabIndex={status==='ready'?0:-1} onLoad={()=>frame.current?.contentWindow?.postMessage({type:'kangqu-host-ping'},window.location.origin==='null'?'*':window.location.origin)} onError={()=>setStatus('error')}/>
+    <iframe ref={frame} key={revision} src={`${kangquChapterDocument}?v=chapter-nav-reference-20261016`} className="kangqu-chapter-frame" title="在人群中聽樂：尋人、原畫觀察與街衢見聞冊" tabIndex={status==='ready'?0:-1} onLoad={()=>frame.current?.contentWindow?.postMessage({type:'kangqu-host-ping'},window.location.origin==='null'?'*':window.location.origin)} onError={()=>setStatus('error')}/>
     {status!=='ready'&&<section className="scene-status" role="status" aria-live="polite">
       <p>{status==='loading'?'正在展開畫卷…':'畫卷仍未展開，可以重新載入。'}</p>
       {status==='error'&&<button className="small-button" onClick={retry}>重新展開</button>}

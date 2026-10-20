@@ -28,16 +28,18 @@ type Props = {
   focusing?: boolean;
   artworkSize?: Size;
   requireTiles?: boolean;
+  keyboardNavigation?: boolean;
   onMiss?: () => void;
   onViewChange?: (window: {left: number; width: number}) => void;
   initialFocus?: Point;
   study?: {region: Point; monochrome: boolean; height: number} | null;
   studyCommand?: StudyCommand | null;
+  zoomStops?: readonly number[];
   onViewportChange?: (viewport: SceneViewport) => void;
 };
-const zoomStops = [1, 1.1, 1.25, 1.5, 1.75];
+const defaultZoomStops = [1, 1.1, 1.25, 1.5, 1.75];
 
-export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hint, selection, command, onInspect, onExplore, onReady, motion = true, title = '科舉放榜日', description = '原創科舉放榜日全景古畫，左側榜牆、中央茶攤、右側橋頭與人群', steam, initialRegion, focusing = true, artworkSize, requireTiles = false, hitResolver, onMiss, onViewChange, initialFocus, study, studyCommand, onViewportChange}: Props) {
+export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hint, selection, command, onInspect, onExplore, onReady, motion = true, title = '科舉放榜日', description = '原創科舉放榜日全景古畫，左側榜牆、中央茶攤、右側橋頭與人群', steam, initialRegion, focusing = true, artworkSize, requireTiles = false, hitResolver, onMiss, onViewChange, initialFocus, study, studyCommand, onViewportChange,zoomStops=defaultZoomStops,keyboardNavigation=false}: Props) {
   const root = useRef<HTMLDivElement>(null);
   const frame = useRef<Size>({width: 1280, height: 800});
   const picture = useRef<Size>({width: 2172, height: 724});
@@ -67,7 +69,7 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
   const reduced = () => !motion || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const stopAnimation = () => {if (animation.current !== null) cancelAnimationFrame(animation.current); animation.current = null;};
   const baseScale = () => coverView(frame.current, picture.current).scale;
-  const limits = () => ({min: baseScale(), max: baseScale() * 1.75});
+  const limits = () => ({min: baseScale(), max: baseScale() * zoomStops[zoomStops.length-1]});
   const applyView = (next: View) => {
     const range = limits();
     const scale = Math.max(range.min, Math.min(range.max, next.scale));
@@ -104,7 +106,7 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
   const zoomStep = (direction: number, anchor = {x: frame.current.width / 2, y: frame.current.height / 2}) => {
     onExploreRef.current?.();
     const ratio = current.current.scale / baseScale();
-    const next = direction > 0 ? zoomStops.find(stop => stop > ratio + .02) ?? 1.75 : [...zoomStops].reverse().find(stop => stop < ratio - .02) ?? 1;
+    const next = direction > 0 ? zoomStops.find(stop => stop > ratio + .02) ?? zoomStops[zoomStops.length-1] : [...zoomStops].reverse().find(stop => stop < ratio - .02) ?? 1;
     animateView(zoomAt(current.current, baseScale() * next / current.current.scale, anchor, limits()), 180);
   };
 
@@ -306,6 +308,7 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
         event.preventDefault(); const opening = coverView(frame.current, picture.current);
         animateView(initialRegion ? {...opening, x: frame.current.width / 2 - initialRegion.x * picture.current.width * opening.scale, y: frame.current.height / 2 - initialRegion.y * picture.current.height * opening.scale} : opening);
       }
+      if(keyboardNavigation&&!focusing&&active&&!blocked&&(event.key==='ArrowLeft'||event.key==='ArrowRight')){event.preventDefault();onExploreRef.current?.();applyView({...current.current,x:current.current.x+(event.key==='ArrowLeft'?100:-100)});}
     }} aria-label={`可拖曳與放大的${title}長卷`} tabIndex={active ? 0 : -1}>
       <div className="painting-world" style={{width: dimensions.width, height: dimensions.height, transform: `translate(${view.x}px, ${view.y}px) scale(${view.scale})`}}>
         <img className="painting" src={`${image}${attempt ? `?retry=${attempt}` : ''}`} alt={description} draggable={false} onLoad={event => {

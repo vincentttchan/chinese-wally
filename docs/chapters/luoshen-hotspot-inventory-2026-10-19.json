@@ -1,0 +1,1501 @@
+{
+  "date": "2026-10-19",
+  "coordinates": "Unchanged painting world 19950x943; tile index left to right, each 1995x943",
+  "people": 51,
+  "collectionSites": 30,
+  "requiredObservations": 14,
+  "endingObservations": 3,
+  "rows": [
+    {
+      "id": "C1",
+      "name": "岸上初見的曹植",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        17755,
+        410,
+        17900,
+        790
+      ],
+      "face": {
+        "x": 17835,
+        "y": 480
+      },
+      "replies": [
+        "我剛在岸上停下腳步。",
+        "同行的人還在我身後。",
+        "先看我展開的衣袖吧。"
+      ]
+    },
+    {
+      "id": "C2",
+      "name": "坐榻凝望的曹植",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        11910,
+        418,
+        12100,
+        668
+      ],
+      "face": {
+        "x": 11965,
+        "y": 470
+      },
+      "replies": [
+        "這一刻，我已坐在榻上。",
+        "面前又有神女的身影。",
+        "坐下來，目光仍向著她。"
+      ]
+    },
+    {
+      "id": "C3",
+      "name": "岸邊送別的曹植",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        8475,
+        480,
+        8585,
+        840
+      ],
+      "face": {
+        "x": 8545,
+        "y": 545
+      },
+      "replies": [
+        "我在岸上與她相對。",
+        "身後的隊伍仍在這裡。",
+        "看看我與她之間的水岸。"
+      ]
+    },
+    {
+      "id": "C4",
+      "name": "樓船上的曹植",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        3935,
+        345,
+        4040,
+        555
+      ],
+      "face": {
+        "x": 4000,
+        "y": 400
+      },
+      "replies": [
+        "我站在樓船的上層。",
+        "下面的人正在操船。",
+        "離開水岸，我仍在尋望。"
+      ]
+    },
+    {
+      "id": "C5",
+      "name": "岸邊坐候的曹植",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        2700,
+        558,
+        2910,
+        828
+      ],
+      "face": {
+        "x": 2850,
+        "y": 590
+      },
+      "replies": [
+        "我又在岸邊坐下了。",
+        "認得我的冠與鬚髮嗎？",
+        "船上之後，畫中又有我。"
+      ]
+    },
+    {
+      "id": "C6",
+      "name": "車中回望的曹植",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        680,
+        493,
+        830,
+        748
+      ],
+      "face": {
+        "x": 700,
+        "y": 555
+      },
+      "replies": [
+        "這一刻，我在車中。",
+        "車輪與隊伍將一同上路。",
+        "人已啟程，心還在洛水。"
+      ]
+    },
+    {
+      "id": "L1",
+      "name": "初見的洛神",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        16640,
+        358,
+        17000,
+        808
+      ],
+      "face": {
+        "x": 16725,
+        "y": 430
+      },
+      "replies": [
+        "這是水邊初見的一刻。",
+        "留意我身旁延展的衣帶。",
+        "上方還有飛鳥與龍形。"
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "俯身回轉的洛神身影",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        15400,
+        488,
+        15630,
+        858
+      ],
+      "face": {
+        "x": 15495,
+        "y": 540
+      },
+      "replies": [
+        "看看這裡回轉的姿態。",
+        "衣帶隨著身形轉向。",
+        "和初見時的站姿比一比。"
+      ]
+    },
+    {
+      "id": "L3",
+      "name": "下方雙人場面的主角候選",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        14120,
+        498,
+        14350,
+        808
+      ],
+      "face": {
+        "x": 14205,
+        "y": 550
+      },
+      "replies": [
+        "這裡的神女不止一位。",
+        "先認髮式，再比衣帶。",
+        "不要只靠人物的站位。"
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "上方雙人場面的主角候選",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        13700,
+        68,
+        13960,
+        378
+      ],
+      "face": {
+        "x": 13710,
+        "y": 140
+      },
+      "replies": [
+        "上方也有相伴的身影。",
+        "兩人的姿勢並不相同。",
+        "留意髮式與衣帶的輪廓。"
+      ]
+    },
+    {
+      "id": "L5",
+      "name": "柳旁回身的主角候選",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        13080,
+        388,
+        13350,
+        828
+      ],
+      "face": {
+        "x": 13180,
+        "y": 500
+      },
+      "replies": [
+        "柳旁還藏著回身的一刻。",
+        "看看頭與衣帶朝向哪裡。",
+        "同卷的姿態正在改變。"
+      ]
+    },
+    {
+      "id": "L6",
+      "name": "雙人場面的主角候選",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        12570,
+        338,
+        12810,
+        708
+      ],
+      "face": {
+        "x": 12680,
+        "y": 425
+      },
+      "replies": [
+        "相近的身影站在一起。",
+        "認人時，別只看一件衣服。",
+        "把髮式與場面一起比對。"
+      ]
+    },
+    {
+      "id": "L7",
+      "name": "坐榻前的洛神身影",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        11580,
+        298,
+        11830,
+        708
+      ],
+      "face": {
+        "x": 11635,
+        "y": 380
+      },
+      "replies": [
+        "我在坐榻前又現身了。",
+        "和初見時的姿態比一比。",
+        "岸上的人也仍在這裡。"
+      ]
+    },
+    {
+      "id": "L8",
+      "name": "長頸鳥形旁的洛神身影",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        8010,
+        563,
+        8115,
+        723
+      ],
+      "face": {
+        "x": 8070,
+        "y": 610
+      },
+      "replies": [
+        "這一次，我低下身來。",
+        "身旁有長頸的鳥形。",
+        "再看看與我相對的岸上人。"
+      ]
+    },
+    {
+      "id": "L9",
+      "name": "雲車中的洛神",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        6260,
+        355,
+        6375,
+        610
+      ],
+      "face": {
+        "x": 6310,
+        "y": 405
+      },
+      "replies": [
+        "這是雲車中的一刻。",
+        "同行者就在我的身旁。",
+        "車前的龍形帶著行列前進。"
+      ]
+    },
+    {
+      "id": "attendant-opening-left",
+      "name": "岸上同行者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        17715,
+        385,
+        17795,
+        760
+      ],
+      "face": {
+        "x": 17760,
+        "y": 455
+      },
+      "replies": [
+        "我在展袖的人身旁。",
+        "我們的衣袖姿態不同。",
+        "沿著人群找找這個分別。"
+      ]
+    },
+    {
+      "id": "attendant-opening-rear",
+      "name": "持傘同行者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        17880,
+        365,
+        17940,
+        585
+      ],
+      "face": {
+        "x": 17900,
+        "y": 425
+      },
+      "replies": [
+        "看看頭頂那片傘蓋。",
+        "長柄就在隊伍之中。",
+        "抬頭看，也能發現線索。"
+      ]
+    },
+    {
+      "id": "attendant-opening-beard",
+      "name": "長髯同行者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        17955,
+        440,
+        18030,
+        790
+      ],
+      "face": {
+        "x": 17975,
+        "y": 490
+      },
+      "replies": [
+        "先看我的長鬚與收袖。",
+        "我的姿態與展袖者不同。",
+        "不只面孔，動作也能認人。"
+      ]
+    },
+    {
+      "id": "attendant-opening-middle",
+      "name": "岸邊同行者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        18000,
+        398,
+        18095,
+        668
+      ],
+      "face": {
+        "x": 18045,
+        "y": 450
+      },
+      "replies": [
+        "我站在同行的人群裡。",
+        "前後的人物互相遮擋。",
+        "慢慢分清各人的輪廓。"
+      ]
+    },
+    {
+      "id": "attendant-opening-green",
+      "name": "綠衣同行者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        18065,
+        410,
+        18160,
+        785
+      ],
+      "face": {
+        "x": 18110,
+        "y": 475
+      },
+      "replies": [
+        "綠色衣袍也是一條線索。",
+        "別漏看衣襟與袖口。",
+        "同一隊人，衣色各有不同。"
+      ]
+    },
+    {
+      "id": "attendant-opening-box",
+      "name": "捧物同行者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        18175,
+        400,
+        18280,
+        790
+      ],
+      "face": {
+        "x": 18215,
+        "y": 465
+      },
+      "replies": [
+        "先看看我捧在身前的物件。",
+        "它和衣袖的輪廓不同。",
+        "隊伍裡不只有空手的人。"
+      ]
+    },
+    {
+      "id": "horse-keeper",
+      "name": "馬旁的同行者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        19300,
+        148,
+        19480,
+        508
+      ],
+      "face": {
+        "x": 19410,
+        "y": 180
+      },
+      "replies": [
+        "馬匹就在我的身旁。",
+        "人與馬也佔著岸上一角。",
+        "離開主角，畫面還很熱鬧。"
+      ]
+    },
+    {
+      "id": "sitting-keeper",
+      "name": "岸邊蹲坐者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        19300,
+        548,
+        19480,
+        918
+      ],
+      "face": {
+        "x": 19435,
+        "y": 580
+      },
+      "replies": [
+        "這裡有人蹲坐在岸邊。",
+        "高低不同，輪廓便不同。",
+        "別只找站著的人。"
+      ]
+    },
+    {
+      "id": "companion-L3",
+      "name": "水邊同行神女",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        14375,
+        590,
+        14575,
+        835
+      ],
+      "face": {
+        "x": 14445,
+        "y": 625
+      },
+      "replies": [
+        "我與另一位神女相伴。",
+        "看看我們兩人的衣帶。",
+        "相似之中，也有差別。"
+      ]
+    },
+    {
+      "id": "companion-L4",
+      "name": "上方同行神女",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        13790,
+        140,
+        13965,
+        445
+      ],
+      "face": {
+        "x": 13855,
+        "y": 190
+      },
+      "replies": [
+        "這組身影在畫面上方。",
+        "和下方的場面分開看。",
+        "位置不同，未必是同一刻。"
+      ]
+    },
+    {
+      "id": "companion-L6",
+      "name": "雙人場面的同行神女",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        12700,
+        388,
+        12950,
+        708
+      ],
+      "face": {
+        "x": 12760,
+        "y": 475
+      },
+      "replies": [
+        "旁邊還有相近的身影。",
+        "把兩個髮式仔細比一比。",
+        "同伴不能直接當成主角。"
+      ]
+    },
+    {
+      "id": "attendant-seat-fan",
+      "name": "持扇同行者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        12070,
+        395,
+        12120,
+        630
+      ],
+      "face": {
+        "x": 12095,
+        "y": 455
+      },
+      "replies": [
+        "坐榻旁有一柄扇形儀物。",
+        "看看扇面和長柄。",
+        "高處的器物也能指路。"
+      ]
+    },
+    {
+      "id": "attendant-seat-front",
+      "name": "榻旁長髯者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        12120,
+        435,
+        12185,
+        735
+      ],
+      "face": {
+        "x": 12135,
+        "y": 500
+      },
+      "replies": [
+        "我在坐榻旁垂著長鬚。",
+        "坐著與站著的人相互映襯。",
+        "看看我的袖子怎樣收攏。"
+      ]
+    },
+    {
+      "id": "attendant-seat-green",
+      "name": "榻旁綠衣者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        12185,
+        425,
+        12265,
+        720
+      ],
+      "face": {
+        "x": 12220,
+        "y": 495
+      },
+      "replies": [
+        "這裡也有一件綠衣。",
+        "衣色相近，場面卻變了。",
+        "認人還要連著周圍看。"
+      ]
+    },
+    {
+      "id": "attendant-farewell-back",
+      "name": "送別隊伍持傘者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        8590,
+        480,
+        8645,
+        735
+      ],
+      "face": {
+        "x": 8615,
+        "y": 535
+      },
+      "replies": [
+        "傘蓋隨著岸上的隊伍。",
+        "看看它在眾人上方的位置。",
+        "和初見時的傘蓋比一比。"
+      ]
+    },
+    {
+      "id": "attendant-farewell-beard",
+      "name": "送別隊伍長髯者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        8645,
+        500,
+        8710,
+        830
+      ],
+      "face": {
+        "x": 8675,
+        "y": 560
+      },
+      "replies": [
+        "這段隊伍也有長鬚者。",
+        "先分清前後幾個人。",
+        "髮鬚相似，仍要看姿態。"
+      ]
+    },
+    {
+      "id": "attendant-farewell-box",
+      "name": "送別隊伍捧物者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        8715,
+        495,
+        8815,
+        820
+      ],
+      "face": {
+        "x": 8760,
+        "y": 550
+      },
+      "replies": [
+        "我在送別隊伍裡捧著物件。",
+        "手邊的形狀別漏看。",
+        "隊伍前進，器物也相隨。"
+      ]
+    },
+    {
+      "id": "cloud-companion",
+      "name": "雲車同行神女",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        6160,
+        340,
+        6250,
+        555
+      ],
+      "face": {
+        "x": 6210,
+        "y": 390
+      },
+      "replies": [
+        "我是雲車中的同行者。",
+        "別把同乘的人混在一起。",
+        "再仔細比對我們的面形。"
+      ]
+    },
+    {
+      "id": "cloud-driver",
+      "name": "龍形之前的神靈",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        5750,
+        288,
+        6040,
+        568
+      ],
+      "face": {
+        "x": 5940,
+        "y": 350
+      },
+      "replies": [
+        "我在龍形與雲車之間。",
+        "順著龍身看行列的方向。",
+        "雲上的旅程也有前後。"
+      ]
+    },
+    {
+      "id": "boat-companion-one",
+      "name": "樓船上層同行者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        4045,
+        345,
+        4100,
+        555
+      ],
+      "face": {
+        "x": 4070,
+        "y": 390
+      },
+      "replies": [
+        "我也站在樓船的上層。",
+        "曹植身旁不止一人。",
+        "先比冠髮，再看位置。"
+      ]
+    },
+    {
+      "id": "boat-companion-two",
+      "name": "樓船上層另一同行者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        4105,
+        345,
+        4165,
+        555
+      ],
+      "face": {
+        "x": 4130,
+        "y": 395
+      },
+      "replies": [
+        "上層靠旁還有我的身影。",
+        "人物之間隔著船柱。",
+        "別把欄柱看成衣帶。"
+      ]
+    },
+    {
+      "id": "boatman-left",
+      "name": "左側操船人",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        3790,
+        568,
+        3940,
+        798
+      ],
+      "face": {
+        "x": 3915,
+        "y": 640
+      },
+      "replies": [
+        "我在船邊握著長桿。",
+        "看看長桿怎樣伸向水面。",
+        "樓上的人與我各有位置。"
+      ]
+    },
+    {
+      "id": "boatman-right",
+      "name": "右側操船人",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        4255,
+        600,
+        4355,
+        825
+      ],
+      "face": {
+        "x": 4310,
+        "y": 650
+      },
+      "replies": [
+        "另一邊也有人操船。",
+        "沿著船身找我的動作。",
+        "一艘船裡有不同的角色。"
+      ]
+    },
+    {
+      "id": "shore-attendant",
+      "name": "岸邊坐榻後的同行者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        2890,
+        428,
+        3030,
+        758
+      ],
+      "face": {
+        "x": 2920,
+        "y": 500
+      },
+      "replies": [
+        "我站在岸邊坐榻之後。",
+        "人物與傘柄交錯在一起。",
+        "先找頭部，再順著衣袍看。"
+      ]
+    },
+    {
+      "id": "shore-standing",
+      "name": "岸邊站立的同行者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        2510,
+        428,
+        2650,
+        788
+      ],
+      "face": {
+        "x": 2605,
+        "y": 480
+      },
+      "replies": [
+        "坐候的人旁邊也有人站著。",
+        "一坐一立，位置便清楚了。",
+        "這是岸上另一刻的隊伍。"
+      ]
+    },
+    {
+      "id": "carriage-front",
+      "name": "車前同行者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        615,
+        475,
+        680,
+        690
+      ],
+      "face": {
+        "x": 650,
+        "y": 520
+      },
+      "replies": [
+        "我在車駕前方相伴。",
+        "車輪與人群連成歸途。",
+        "看看隊伍朝哪一邊延展。"
+      ]
+    },
+    {
+      "id": "carriage-horse-left",
+      "name": "左側騎者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        180,
+        338,
+        360,
+        658
+      ],
+      "face": {
+        "x": 235,
+        "y": 410
+      },
+      "replies": [
+        "馬上的身影在這一側。",
+        "人與坐騎要一起看。",
+        "車駕旁還有騎行的人。"
+      ]
+    },
+    {
+      "id": "carriage-horse-right",
+      "name": "右側騎者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        980,
+        558,
+        1130,
+        858
+      ],
+      "face": {
+        "x": 1100,
+        "y": 610
+      },
+      "replies": [
+        "另一側也有騎者相隨。",
+        "看看坐騎與車駕的距離。",
+        "歸途不只有車中的一人。"
+      ]
+    },
+    {
+      "id": "carriage-driver",
+      "name": "駕車者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        535,
+        555,
+        615,
+        835
+      ],
+      "face": {
+        "x": 590,
+        "y": 605
+      },
+      "replies": [
+        "我在車馬之間。",
+        "長柄、車輪與馬身交錯。",
+        "分清器物，再看人的動作。"
+      ]
+    },
+    {
+      "id": "carriage-rear",
+      "name": "車後騎者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        530,
+        338,
+        650,
+        478
+      ],
+      "face": {
+        "x": 595,
+        "y": 412
+      },
+      "replies": [
+        "車後還有相伴的身影。",
+        "別只盯著車中的面孔。",
+        "隊伍一直延伸到這裡。"
+      ]
+    },
+    {
+      "id": "held-object-goddess",
+      "name": "上方持物神女",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        15135,
+        140,
+        15395,
+        470
+      ],
+      "face": {
+        "x": 15225,
+        "y": 180
+      },
+      "replies": [
+        "我在上方持物而立。",
+        "長長的衣帶繞在身旁。",
+        "同卷上下，各有相伴的身影。"
+      ]
+    },
+    {
+      "id": "cloud-spirit-right",
+      "name": "雲車旁的神靈",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        6635,
+        490,
+        7125,
+        750
+      ],
+      "face": {
+        "x": 6735,
+        "y": 530
+      },
+      "replies": [
+        "我隨雲車出現在水上。",
+        "身形與雲氣交錯在一起。",
+        "看看車旁還有哪些神靈。"
+      ]
+    },
+    {
+      "id": "drummer",
+      "name": "鼓旁奏樂者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        9940,
+        268,
+        10110,
+        568
+      ],
+      "face": {
+        "x": 10065,
+        "y": 315
+      },
+      "replies": [
+        "大鼓就在我的身旁。",
+        "先看鼓面，再看奏樂的人。",
+        "水上的行列也有樂聲想像。"
+      ]
+    },
+    {
+      "id": "wind-spirit",
+      "name": "雲上的神靈",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        11225,
+        25,
+        11400,
+        285
+      ],
+      "face": {
+        "x": 11325,
+        "y": 110
+      },
+      "replies": [
+        "我的身影出現在雲上。",
+        "看看雲氣怎樣圍著身形。",
+        "這段畫面充滿神話想像。"
+      ]
+    },
+    {
+      "id": "water-attendant",
+      "name": "水畔俯身者",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        10900,
+        598,
+        11100,
+        908
+      ],
+      "face": {
+        "x": 11035,
+        "y": 640
+      },
+      "replies": [
+        "我在水畔俯下身來。",
+        "姿態與站立的人不同。",
+        "看看手與水面的距離。"
+      ]
+    },
+    {
+      "id": "floating-woman",
+      "name": "水上同行神女",
+      "kind": "witness",
+      "category": null,
+      "bounds": [
+        10620,
+        288,
+        10900,
+        648
+      ],
+      "face": {
+        "x": 10725,
+        "y": 340
+      },
+      "replies": [
+        "水上還有隨行的神女。",
+        "衣帶在身旁伸展。",
+        "主角以外，行列仍在繼續。"
+      ]
+    },
+    {
+      "id": "bird-0",
+      "name": "開首左側飛鳥",
+      "kind": "object",
+      "category": "bird",
+      "bounds": [
+        17085,
+        55,
+        17182,
+        124
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "bird-1",
+      "name": "開首右側飛鳥",
+      "kind": "object",
+      "category": "bird",
+      "bounds": [
+        17180,
+        86,
+        17285,
+        146
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "bird-2",
+      "name": "送別場面的長頸鳥形",
+      "kind": "object",
+      "category": "bird",
+      "bounds": [
+        8120,
+        635,
+        8260,
+        755
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "ribbon-0",
+      "name": "初見神女身旁衣帶",
+      "kind": "object",
+      "category": "ribbon",
+      "bounds": [
+        16770,
+        480,
+        16945,
+        550
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "ribbon-1",
+      "name": "回身神女身旁衣帶",
+      "kind": "object",
+      "category": "ribbon",
+      "bounds": [
+        15535,
+        540,
+        15660,
+        591
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "ribbon-2",
+      "name": "下方同行神女衣帶",
+      "kind": "object",
+      "category": "ribbon",
+      "bounds": [
+        14251,
+        536,
+        14355,
+        591
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "ribbon-3",
+      "name": "下方回身神女衣帶",
+      "kind": "object",
+      "category": "ribbon",
+      "bounds": [
+        14430,
+        611,
+        14575,
+        651
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "ribbon-4",
+      "name": "上方持物神女衣帶",
+      "kind": "object",
+      "category": "ribbon",
+      "bounds": [
+        15245,
+        243,
+        15370,
+        317
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "ribbon-5",
+      "name": "柳旁神女衣帶",
+      "kind": "object",
+      "category": "ribbon",
+      "bounds": [
+        13205,
+        548,
+        13325,
+        593
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "ribbon-6",
+      "name": "雙人場面後方衣帶",
+      "kind": "object",
+      "category": "ribbon",
+      "bounds": [
+        12731,
+        389,
+        12842,
+        431
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "ribbon-7",
+      "name": "雙人場面前方衣帶",
+      "kind": "object",
+      "category": "ribbon",
+      "bounds": [
+        12783,
+        468,
+        12933,
+        515
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "ribbon-8",
+      "name": "上方雙人場面後方衣帶",
+      "kind": "object",
+      "category": "ribbon",
+      "bounds": [
+        13730,
+        240,
+        13820,
+        280
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "ribbon-9",
+      "name": "上方雙人場面前方衣帶",
+      "kind": "object",
+      "category": "ribbon",
+      "bounds": [
+        13850,
+        273,
+        13964,
+        316
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "ribbon-10",
+      "name": "水上神女肩後衣帶",
+      "kind": "object",
+      "category": "ribbon",
+      "bounds": [
+        10737,
+        343,
+        10865,
+        385
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "ribbon-11",
+      "name": "坐榻前神女衣帶",
+      "kind": "object",
+      "category": "ribbon",
+      "bounds": [
+        11730,
+        460,
+        11880,
+        520
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "ribbon-12",
+      "name": "俯身者腰側衣帶",
+      "kind": "object",
+      "category": "ribbon",
+      "bounds": [
+        11040,
+        682,
+        11140,
+        735
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "ribbon-13",
+      "name": "低身神女下方衣帶",
+      "kind": "object",
+      "category": "ribbon",
+      "bounds": [
+        7960,
+        758,
+        8180,
+        792
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "dragon-0",
+      "name": "龍形",
+      "kind": "object",
+      "category": "dragon",
+      "bounds": [
+        16940,
+        168,
+        17320,
+        388
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "dragon-1",
+      "name": "龍形",
+      "kind": "object",
+      "category": "dragon",
+      "bounds": [
+        5550,
+        420,
+        5660,
+        500
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "dragon-2",
+      "name": "龍形",
+      "kind": "object",
+      "category": "dragon",
+      "bounds": [
+        5610,
+        475,
+        5730,
+        555
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "dragon-3",
+      "name": "龍形",
+      "kind": "object",
+      "category": "dragon",
+      "bounds": [
+        5695,
+        515,
+        5810,
+        595
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "dragon-4",
+      "name": "龍形",
+      "kind": "object",
+      "category": "dragon",
+      "bounds": [
+        5770,
+        550,
+        5885,
+        635
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "dragon-5",
+      "name": "龍形",
+      "kind": "object",
+      "category": "dragon",
+      "bounds": [
+        5835,
+        595,
+        5940,
+        680
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "dragon-6",
+      "name": "龍形",
+      "kind": "object",
+      "category": "dragon",
+      "bounds": [
+        5900,
+        640,
+        6015,
+        730
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "boat-0",
+      "name": "樓船",
+      "kind": "object",
+      "category": "boat",
+      "bounds": [
+        3600,
+        158,
+        4850,
+        938
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "canopy-0",
+      "name": "華蓋",
+      "kind": "object",
+      "category": "canopy",
+      "bounds": [
+        17800,
+        218,
+        18280,
+        388
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "canopy-1",
+      "name": "華蓋",
+      "kind": "object",
+      "category": "canopy",
+      "bounds": [
+        8400,
+        358,
+        8770,
+        488
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "canopy-2",
+      "name": "華蓋",
+      "kind": "object",
+      "category": "canopy",
+      "bounds": [
+        2740,
+        348,
+        3040,
+        468
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "canopy-3",
+      "name": "華蓋",
+      "kind": "object",
+      "category": "canopy",
+      "bounds": [
+        6100,
+        158,
+        6340,
+        323
+      ],
+      "face": null,
+      "replies": null
+    },
+    {
+      "id": "canopy-4",
+      "name": "華蓋",
+      "kind": "object",
+      "category": "canopy",
+      "bounds": [
+        600,
+        338,
+        860,
+        478
+      ],
+      "face": null,
+      "replies": null
+    }
+  ]
+}

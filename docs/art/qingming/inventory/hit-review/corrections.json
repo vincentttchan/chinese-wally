@@ -1,0 +1,346 @@
+{
+  "person-paper": [
+    27651,
+    363
+  ],
+  "neighbour-paper-pole": [
+    27194,
+    290
+  ],
+  "neighbour-paper-right": [
+    27775,
+    337
+  ],
+  "extra-person-city-021": [
+    2167,
+    793
+  ],
+  "extra-person-city-059": [
+    2520,
+    1410
+  ],
+  "extra-person-city-060": [
+    2620,
+    1415
+  ],
+  "extra-person-city-070": [
+    3490,
+    27
+  ],
+  "extra-person-city-077": [
+    3355,
+    409
+  ],
+  "extra-person-city-081": [
+    3830,
+    375
+  ],
+  "extra-person-city-106": [
+    3240,
+    969
+  ],
+  "extra-person-city-109": [
+    3503,
+    1055
+  ],
+  "extra-person-city-110": [
+    3451,
+    1085
+  ],
+  "extra-person-city-115": [
+    3900,
+    1120
+  ],
+  "extra-person-city-118": [
+    3906,
+    1634
+  ],
+  "extra-person-city-147": [
+    4110,
+    1175
+  ],
+  "extra-person-city-155": [
+    4912,
+    1163
+  ],
+  "extra-person-city-158": [
+    5468,
+    710
+  ],
+  "extra-person-city-159": [
+    5644,
+    744
+  ],
+  "extra-person-city-160": [
+    5740,
+    711
+  ],
+  "extra-person-city-162": [
+    5370,
+    875
+  ],
+  "extra-person-city-170": [
+    6030,
+    1075
+  ],
+  "extra-person-city-176": [
+    6330,
+    766
+  ],
+  "extra-person-city-178": [
+    6405,
+    842
+  ],
+  "extra-person-city-180": [
+    5565,
+    1340
+  ],
+  "extra-person-city-181": [
+    5694,
+    1305
+  ],
+  "extra-person-city-182": [
+    5890,
+    1370
+  ],
+  "extra-person-city-189": [
+    7730,
+    1000
+  ],
+  "extra-person-city-213": [
+    8830,
+    1088
+  ],
+  "extra-person-city-218": [
+    8330,
+    1310
+  ],
+  "extra-person-city-235": [
+    9797,
+    1205
+  ],
+  "extra-person-city-237": [
+    10020,
+    1255
+  ],
+  "extra-person-city-250": [
+    10588,
+    683
+  ],
+  "extra-person-city-265": [
+    10603,
+    1015
+  ],
+  "extra-person-city-266": [
+    10417,
+    1220
+  ],
+  "extra-person-city-273": [
+    11845,
+    632
+  ],
+  "extra-person-city-276": [
+    9714,
+    1570
+  ],
+  "extra-person-river-006": [
+    12495,
+    904
+  ],
+  "extra-person-river-015": [
+    12988,
+    1620
+  ],
+  "extra-person-river-025": [
+    13227,
+    541
+  ],
+  "extra-person-river-027": [
+    13388,
+    515
+  ],
+  "extra-person-river-028": [
+    13425,
+    507
+  ],
+  "extra-person-river-035": [
+    13600,
+    651
+  ],
+  "extra-person-river-043": [
+    13445,
+    910
+  ],
+  "extra-person-river-044": [
+    13425,
+    973
+  ],
+  "extra-person-river-046": [
+    13561,
+    980
+  ],
+  "extra-person-river-058": [
+    14920,
+    825
+  ],
+  "extra-person-river-062": [
+    14560,
+    1073
+  ],
+  "extra-person-river-076": [
+    14990,
+    535
+  ],
+  "extra-person-river-080": [
+    15217,
+    1240
+  ],
+  "extra-person-river-102": [
+    17734,
+    745
+  ],
+  "extra-person-river-118": [
+    17563,
+    1613
+  ],
+  "extra-person-river-120": [
+    17763,
+    1555
+  ],
+  "extra-person-river-133": [
+    18716,
+    286
+  ],
+  "extra-person-river-140": [
+    18980,
+    274
+  ],
+  "extra-person-river-166": [
+    18278,
+    1145
+  ],
+  "extra-person-river-169": [
+    18473,
+    987
+  ],
+  "extra-person-river-173": [
+    18669,
+    1095
+  ],
+  "extra-person-river-179": [
+    18949,
+    1110
+  ],
+  "extra-person-river-181": [
+    18280,
+    1154
+  ],
+  "extra-person-river-183": [
+    18168,
+    1570
+  ],
+  "extra-person-river-185": [
+    18330,
+    1597
+  ],
+  "extra-person-river-227": [
+    19797,
+    535
+  ],
+  "extra-person-river-237": [
+    19920,
+    967
+  ],
+  "extra-person-river-242": [
+    19199,
+    1170
+  ],
+  "extra-person-river-244": [
+    19650,
+    1233
+  ],
+  "extra-person-river-254": [
+    20286,
+    505
+  ],
+  "extra-person-river-265": [
+    21022,
+    1260
+  ],
+  "extra-person-river-274": [
+    21968,
+    225
+  ],
+  "extra-person-river-288": [
+    22136,
+    880
+  ],
+  "extra-person-river-291": [
+    22255,
+    863
+  ],
+  "extra-person-river-294": [
+    22590,
+    1558
+  ],
+  "extra-person-river-298": [
+    23220,
+    335
+  ],
+  "extra-person-river-311": [
+    23645,
+    941
+  ],
+  "extra-person-outskirts-004": [
+    24320,
+    96
+  ],
+  "extra-person-outskirts-006": [
+    24321,
+    202
+  ],
+  "extra-person-outskirts-022": [
+    24605,
+    554
+  ],
+  "extra-person-outskirts-024": [
+    24766,
+    604
+  ],
+  "extra-person-outskirts-026": [
+    24078,
+    575
+  ],
+  "extra-person-outskirts-042": [
+    25315,
+    474
+  ],
+  "extra-person-outskirts-045": [
+    25764,
+    633
+  ],
+  "extra-person-outskirts-046": [
+    25910,
+    743
+  ],
+  "extra-person-outskirts-068": [
+    28325,
+    881
+  ],
+  "extra-person-outskirts-073": [
+    28683,
+    610
+  ],
+  "extra-person-outskirts-077": [
+    28374,
+    1115
+  ],
+  "extra-person-outskirts-086": [
+    30323,
+    689
+  ],
+  "extra-person-outskirts-102": [
+    36540,
+    810
+  ]
+}

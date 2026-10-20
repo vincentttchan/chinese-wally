@@ -1,0 +1,14 @@
+2026-10-20 / Built-in imagegen / four transparent animation parts
+
+Use case: historical-scene. Transparent production sprite sheet for a Chinese handscroll game. Image1 is original ancient painting style and pose reference; Image2 is our previous redraw to simplify, NOT to reproduce its modern crisp face or excessive ribbons. Create a 2 by 2 atlas of FOUR DISCONNECTED ANIMATION PARTS of the SAME Luoshen woman. Equal square cells with wide transparent gutters. No grid lines, text, labels or background.
+TOP LEFT: ONLY the BODY from base of neck to hem, no head, no raised right forearm or fan, NO long trailing ribbons. Include complete opaque ochre torso with dusty brick-red inner garment, broad left hanging sleeve and a simple modest skirt, sparse folds. A little rounded neck socket/collar at top must cover an overlapping head's neck. Plain right shoulder to attach the separate arm. This body is a single coherent cutout with no holes exposing missing parts.
+TOP RIGHT: ONLY her COMPLETE HEAD WITH SHORT NECK: high BLACK DOUBLE-LOOP hair ornament, small pale aged-ochre oval face looking gently right and slightly down, simple thin eyebrow/eye/mouth marks with sparse ancient brush expression, NOT anime portrait. Include a longer narrow neck extension so it can overlap inside collar.
+BOTTOM LEFT: ONLY raised right forearm, small hand holding the reference's round olive disc with two brown feather-like leaves rising right behind it, with an ochre sleeve cuff and short rounded upper sleeve attachment. Pose exactly like reference, hand below disc. Complete fan and hand move as a single rigid part. Nothing else.
+BOTTOM RIGHT: ONLY TWO slender gently looping ochre/olive silk ribbons trailing right, joined at a short rounded connection at their LEFT edge. Simple sparse thin sepia outlines, do not make a mass of ribbons, no body/head/hand.
+Palette: substantial warm ochre, dusty muted cinnabar, subdued olive, aged dark sepia contours. Opaque painted interiors. Keep original ancient flat silk-painting brush style, slightly soft uneven thin lines; simplified low-contrast facial details and folds, no modern smooth vector contours, no dense texture dots, no glossy shading. Same scale of brush strokes in all cells. Full parts entirely within their cells. Transparent background (real alpha). These are matching parts to assemble ONE figure, not four complete women. This is a game interpretation, not restoration.
+
+Reference 1: original detail-8.jpg crop x675 y345 width335 height390, enlarged 2x.
+Reference 2: figure-v1.png, previous generated redraw; simplify rather than copy.
+Generated source: exec-36ecf26d-6b06-4ef9-bda3-928a3d3aef19.png, 1254 by 1254 RGBA.
+Saved unchanged as figure-parts-v2.png. Crop/rig metadata and runtime colour/contour grading are in src/game/luoshenFigureParts.ts.
+

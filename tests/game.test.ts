@@ -8,11 +8,11 @@ test('start enters exploration with no clues', () => {
   assert.deepEqual(state.clues, []);
 });
 
-test('both clue orders produce the same collected evidence', () => {
-  for (const ids of [['copyist', 'tea-keeper'], ['tea-keeper', 'copyist']]) {
+test('optional witness visits may be made in either order', () => {
+  for (const ids of [['copyist', 'board-observer'], ['board-observer', 'copyist']]) {
     let state = reduceGame(createGame(), { type: 'start' });
     for (const id of ids) state = reduceGame(state, { type: 'inspect', id });
-    assert.deepEqual([...state.clues].sort(), ['copyist', 'tea-keeper']);
+    assert.deepEqual([...state.clues].sort(), ['board-observer', 'copyist']);
     assert.equal(state.phase, 'exploring');
   }
 });
@@ -24,40 +24,56 @@ test('repeated witness visits preserve one copy of each clue', () => {
   assert.deepEqual(state.clues, ['copyist']);
 });
 
-test('target cannot complete before all three clues are collected', () => {
-  let state = reduceGame(createGame(), { type: 'start' });
-  state = reduceGame(state, { type: 'inspect', id: 'copyist' });
-  state = reduceGame(state, { type: 'inspect', id: 'tea-keeper' });
-  state = reduceGame(state, { type: 'inspect', id: 'scholar-target' });
-  assert.equal(state.phase, 'exploring');
-  assert.equal(state.feedback, 'need-clues');
+test('finding the pictured target succeeds with zero or partial clues', () => {
+  for (const ids of [[], ['copyist'], ['copyist', 'board-observer']]) {
+    let state = reduceGame(createGame(), { type: 'start' });
+    for (const id of ids) state = reduceGame(state, {type: 'inspect', id});
+    state = reduceGame(state, { type: 'inspect', id: 'scholar-target' });
+    assert.equal(state.phase, 'complete');
+    assert.equal(state.feedback, null);
+    assert.deepEqual(state.clues, ids);
+  }
 });
 
 test('wrong candidates retain evidence and never complete the case', () => {
   let state = reduceGame(createGame(), { type: 'start' });
-  for (const id of ['copyist', 'tea-keeper', 'board-observer', 'scholar-scroll', 'scholar-brown']) {
+  for (const id of ['copyist', 'board-observer', 'scholar-scroll', 'scholar-brown']) {
     state = reduceGame(state, { type: 'inspect', id });
   }
   assert.equal(state.phase, 'exploring');
   assert.equal(state.feedback, 'mismatch');
-  assert.equal(state.clues.length, 3);
+  assert.deepEqual(state.clues, ['copyist', 'board-observer']);
 });
 
-test('correct target completes only after all three witnesses', () => {
+test('wrong candidates give mismatch feedback before any clue is collected', () => {
   let state = reduceGame(createGame(), { type: 'start' });
-  for (const id of ['copyist', 'tea-keeper', 'board-observer', 'scholar-target']) {
-    state = reduceGame(state, { type: 'inspect', id });
-  }
+  state = reduceGame(state, {type: 'inspect', id: 'scholar-scroll'});
+  assert.equal(state.phase, 'exploring');
+  assert.equal(state.feedback, 'mismatch');
+  assert.deepEqual(state.clues, []);
+});
+
+test('the optional tea witness records evidence directly and repeated visits do not duplicate it', () => {
+  let state = reduceGame(createGame(), {type: 'start'});
+  state = reduceGame(state, {type: 'inspect', id: 'tea-keeper'});
+  assert.deepEqual(state.clues, ['tea-keeper']);
+  assert.equal(state.phase, 'exploring');
+  state = reduceGame(state, {type: 'inspect', id: 'tea-keeper'});
+  assert.deepEqual(state.clues, ['tea-keeper']);
+  state = reduceGame(state, {type: 'inspect', id: 'scholar-target'});
   assert.equal(state.phase, 'complete');
 });
 
-test('restart clears clues, feedback and returns to exploration', () => {
+test('restart clears progress and returns to the pre-game portrait', () => {
   let state = reduceGame(createGame(), { type: 'start' });
   for (const id of ['copyist', 'tea-keeper', 'board-observer', 'scholar-target']) {
     state = reduceGame(state, { type: 'inspect', id });
   }
   state = reduceGame(state, { type: 'restart' });
-  assert.deepEqual(state, { phase: 'exploring', clues: [], feedback: null });
+  assert.deepEqual(state, { phase: 'intro', clues: [], feedback: null });
+  assert.deepEqual(reduceGame(state, {type: 'inspect', id: 'scholar-target'}), state);
+  state = reduceGame(state, {type: 'start'});
+  assert.equal(state.phase, 'exploring');
 });
 
 test('unknown IDs and inactive-scene clicks cannot alter progress', () => {

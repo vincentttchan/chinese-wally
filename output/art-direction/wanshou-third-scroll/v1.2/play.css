@@ -60,3 +60,15 @@
 .kangqu-game #painting{opacity:0;transition:opacity 220ms ease-out}
 .kangqu-game #painting.is-decoded{opacity:1}
 .kangqu-game #layout[data-mode="intro"] #painting{opacity:0;transition:none}
+
+/* Keep the reference's single row and inherit shared navigation typography. */
+.kangqu-game .introduction .chapter-links {
+  flex-wrap:nowrap;
+  width:max-content;
+  max-width:calc(100vw - clamp(28px,6vw,100px) * 2);
+  overflow-x:auto;
+}
+.kangqu-game .introduction .chapter-links a {
+  flex:0 0 auto;
+  white-space:nowrap;
+}

@@ -1,0 +1,17 @@
+.luoshen-bird-animation{position:absolute;inset:0;z-index:24;overflow:hidden;pointer-events:none;}
+.luoshen-bird-world{position:absolute;left:0;top:0;transform-origin:0 0;}
+.luoshen-bird-patch{position:absolute;filter:var(--painting-grade);mask-image:radial-gradient(ellipse closest-side,#000 85%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse closest-side,#000 85%,transparent 100%);}
+.luoshen-bird-hit{position:absolute;transform:translate(-50%,-50%);z-index:25;background:transparent;padding:0;cursor:pointer;}
+.luoshen-birds-preview .lantern-observation-note{z-index:27;}
+.luoshen-birds-preview .lantern-market-preview-header{z-index:28;}
+.luoshen-bird-hit:focus-visible{outline:2px dashed #8e5d3e;outline-offset:6px;}
+@media(max-width:699px){.luoshen-birds-preview .lantern-market-preview-header{gap:12px;font-size:12px;}.luoshen-bird-animation .lantern-market-caption{bottom:16px;max-width:calc(100vw - 32px);white-space:nowrap;}}
+
+.luoshen-game:not(.luoshen-birds-preview) .luoshen-bird-animation .lantern-market-caption{bottom:100px;}
+.luoshen-game.has-observation-note:not(.luoshen-birds-preview) .luoshen-bird-animation .lantern-market-caption{display:none;}
+
+/* Redrawn birds share the original painting transform. No separate page or paper. */
+.luoshen-redrawn-stage{position:absolute;inset:0;z-index:24;overflow:hidden;pointer-events:none;}
+.luoshen-redrawn-patch{position:absolute;filter:var(--painting-grade);}
+.luoshen-redrawn-stage .luoshen-bird-world{transition:opacity 220ms ease;will-change:opacity;}
+@media(prefers-reduced-motion:reduce){.luoshen-redrawn-stage .luoshen-bird-world{transition:none;}}

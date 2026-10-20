@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-13",
+  "source": "../source/alongtheriver-qingming.jpg",
+  "sourceSha256": "ad9ccd836874141c985c8db89589d7f6960719eda8281966646eb41a6ed02950",
+  "sourceSize": [
+    38414,
+    1800
+  ],
+  "status": "observation-region candidates, not final click hitboxes",
+  "coordinates": "source top-left pixels; bounds [left,top,right,bottom]",
+  "regions": [
+    {
+      "id": "paper-sign",
+      "label": "紙馬鋪店招",
+      "bounds": [
+        26882,
+        49,
+        26936,
+        240
+      ]
+    },
+    {
+      "id": "paper-display",
+      "label": "紙馬鋪前陳列",
+      "bounds": [
+        26952,
+        66,
+        27142,
+        240
+      ]
+    },
+    {
+      "id": "bridge-boat",
+      "label": "橋下船與船工",
+      "bounds": [
+        19460,
+        420,
+        20435,
+        822
+      ]
+    },
+    {
+      "id": "bridge-arch",
+      "label": "虹橋木構",
+      "bounds": [
+        18870,
+        146,
+        20155,
+        570
+      ]
+    },
+    {
+      "id": "bridge-stalls",
+      "label": "橋西端攤販",
+      "bounds": [
+        18250,
+        390,
+        18640,
+        750
+      ]
+    },
+    {
+      "id": "city-gate",
+      "label": "城門通道",
+      "bounds": [
+        7240,
+        450,
+        7490,
+        1100
+      ]
+    },
+    {
+      "id": "wine-sign",
+      "label": "正店牌",
+      "bounds": [
+        4475,
+        779,
+        4555,
+        923
+      ]
+    },
+    {
+      "id": "wine-decoration",
+      "label": "酒樓入口裝飾",
+      "bounds": [
+        4395,
+        275,
+        4925,
+        777
+      ]
+    },
+    {
+      "id": "lodging-sign",
+      "label": "久住王員外家招牌",
+      "bounds": [
+        3235,
+        1300,
+        3320,
+        1520
+      ]
+    },
+    {
+      "id": "incense-sign",
+      "label": "香鋪高立招牌",
+      "bounds": [
+        3102,
+        339,
+        3164,
+        580
+      ]
+    },
+    {
+      "id": "medicine-name",
+      "label": "趙太丞家店名",
+      "bounds": [
+        1455,
+        596,
+        1670,
+        653
+      ]
+    },
+    {
+      "id": "medicine-advertisement",
+      "label": "醫藥鋪宣傳字樣",
+      "bounds": [
+        1440,
+        659,
+        1488,
+        910
+      ]
+    }
+  ]
+}

@@ -21,7 +21,7 @@
   async function presentationReady(token) {
     const deadline = performance.now() + 8000;
     while (token === generation) {
-      const cover = document.querySelector('.introduction:not([hidden])');
+      const cover = document.querySelector('.introduction:not([hidden]), [data-chapter-preview]');
       const scene = document.querySelector('.scroll-frame');
       const preview = document.querySelector('#painting-preview');
       if (document.querySelector('.scene-status button, #loading:not([hidden]) button')) return;

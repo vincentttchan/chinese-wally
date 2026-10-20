@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-15",
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "usage": "Collectible illustrations derived from the original painting; not unchanged historical source pixels. Original crops retained only for comparison.",
+  "style_reference": "public/art/collectibles/lantern-journal-atlas-v1.png",
+  "assets": [
+    {
+      "id": "dragon",
+      "input": "collection-dragon.jpg",
+      "output": "collection-dragon-cutout.png",
+      "generated_source": "/Users/vincentttchan99/.codex/generated_images/01a13e42-403b-7b33-b340-93db6aef98e5/exec-4c27202f-51d2-444b-b1c6-81ce101ef2d8.png",
+      "prompt": "Use case: background-extraction. Asset: Chinese historical painting game journal collectible illustration. Image 1 is the source subject to edit. Image 2 is style reference ONLY, showing the game's approved Palace Lantern Festival collectible artwork. Isolate the single sinuous dragon from Image 1. Preserve its narrow curling body, lifted head, tiny limbs and delicate scale pattern. Remove ALL brown silk and landscape around and inside the curled body. Keep the whole dragon, with no added fire, clouds, wings or scenery. Match Image 2's carefully outlined, hand-painted traditional Chinese illustration treatment and clear isolated readable silhouette. Retain Image 1's actual object shape, proportions and muted ochre, faded red and moss-green colors; do not copy Image 2's subjects or ornaments. This is a collectible illustration derived from the painting, not historical evidence. Center ONE subject on a genuinely transparent alpha background; use a square canvas, fit full subject within 80% of canvas with even clear padding. No paper rectangle, no tinted background, no glow, no shadow, no frame, no labels, no text. The holes and gaps within the object must be transparent too."
+    },
+    {
+      "id": "boat",
+      "input": "collection-boat.jpg",
+      "output": "collection-boat-cutout.png",
+      "generated_source": "/Users/vincentttchan99/.codex/generated_images/01a13e42-403b-7b33-b340-93db6aef98e5/exec-9f05068f-8670-4618-be64-7fd90ec35556.png",
+      "prompt": "Use case: background-extraction. Asset: Chinese historical painting game journal collectible illustration. Image 1 is the source subject to edit. Image 2 is style reference ONLY, showing the game's approved Palace Lantern Festival collectible artwork. Isolate the central complete two-storey boat from Image 1, retaining its hull, curved bow, upper canopy, railings, poles and the small people aboard. Exclude the partial neighboring boat at the left, all water, waves, brown silk background and white bottom border. Keep the subject complete, without adding architecture or decorations. Match Image 2's carefully outlined, hand-painted traditional Chinese illustration treatment and clear isolated readable silhouette. Retain Image 1's actual object shape, proportions and muted ochre, faded red and moss-green colors; do not copy Image 2's subjects or ornaments. This is a collectible illustration derived from the painting, not historical evidence. Center ONE subject on a genuinely transparent alpha background; use a square canvas, fit full subject within 80% of canvas with even clear padding. No paper rectangle, no tinted background, no glow, no shadow, no frame, no labels, no text. The holes and gaps within the object must be transparent too."
+    },
+    {
+      "id": "canopy",
+      "input": "collection-canopy.jpg",
+      "output": "collection-canopy-cutout.png",
+      "generated_source": "/Users/vincentttchan99/.codex/generated_images/01a13e42-403b-7b33-b340-93db6aef98e5/exec-87e56ca3-6365-46d1-9aef-741d2a517a21.png",
+      "prompt": "Use case: background-extraction. Asset: Chinese historical painting game journal collectible illustration. Image 1 is the source subject to edit. Image 2 is style reference ONLY, showing the game's approved Palace Lantern Festival collectible artwork. Isolate ONLY the umbrella-shaped brown canopy at the upper left of Image 1 and its long supporting pole. Remove the crowd, all people, leaves, trees, brown silk and scenery. Preserve its asymmetrical curved fabric, central peak and hanging edge from the source. Do not include the bearer or invent a ceremonial round parasol. Match Image 2's carefully outlined, hand-painted traditional Chinese illustration treatment and clear isolated readable silhouette. Retain Image 1's actual object shape, proportions and muted ochre, faded red and moss-green colors; do not copy Image 2's subjects or ornaments. This is a collectible illustration derived from the painting, not historical evidence. Center ONE subject on a genuinely transparent alpha background; use a square canvas, fit full subject within 80% of canvas with even clear padding. No paper rectangle, no tinted background, no glow, no shadow, no frame, no labels, no text. The holes and gaps within the object must be transparent too."
+    }
+  ]
+}

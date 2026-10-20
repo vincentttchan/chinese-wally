@@ -1,0 +1,173 @@
+{
+  "date": "2026-10-13",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Alongtheriver_QingMing.jpg",
+  "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/8/86/Alongtheriver_QingMing.jpg",
+  "size": [
+    38414,
+    1800
+  ],
+  "sha256": "ad9ccd836874141c985c8db89589d7f6960719eda8281966646eb41a6ed02950",
+  "coordinateConvention": "top-left origin, pixels, [left,top,right,bottom], source bitmap including blank ends",
+  "processing": "Original-pixel crops; review copies add A/B rectangles only; no recolouring, enhancement, generation or upscaling.",
+  "candidates": [
+    {
+      "id": "wine",
+      "name": "酒樓／正店",
+      "context": [
+        4270,
+        590,
+        5150,
+        1200
+      ],
+      "A": [
+        4410,
+        883,
+        4515,
+        1057
+      ],
+      "B": [
+        4727,
+        832,
+        4823,
+        1110
+      ],
+      "headA": [
+        4434,
+        887,
+        4490,
+        943
+      ],
+      "headB": [
+        4749,
+        849,
+        4810,
+        911
+      ]
+    },
+    {
+      "id": "incense",
+      "name": "香鋪",
+      "context": [
+        2830,
+        290,
+        3400,
+        1040
+      ],
+      "A": [
+        2961,
+        585,
+        3045,
+        816
+      ],
+      "B": [
+        2911,
+        603,
+        2973,
+        800
+      ],
+      "headA": [
+        2965,
+        593,
+        3016,
+        647
+      ],
+      "headB": [
+        2912,
+        611,
+        2959,
+        665
+      ]
+    },
+    {
+      "id": "medicine",
+      "name": "醫藥鋪",
+      "context": [
+        1220,
+        560,
+        1850,
+        1050
+      ],
+      "A": [
+        1488,
+        730,
+        1590,
+        913
+      ],
+      "B": [
+        1590,
+        741,
+        1668,
+        923
+      ],
+      "headA": [
+        1497,
+        738,
+        1555,
+        790
+      ],
+      "headB": [
+        1605,
+        745,
+        1661,
+        799
+      ]
+    },
+    {
+      "id": "lodging",
+      "name": "客店",
+      "context": [
+        3150,
+        1110,
+        3900,
+        1510
+      ],
+      "A": [
+        3340,
+        1260,
+        3465,
+        1420
+      ],
+      "B": null,
+      "headA": [
+        3372,
+        1284,
+        3438,
+        1345
+      ]
+    },
+    {
+      "id": "paper",
+      "name": "紙馬鋪",
+      "context": [
+        26770,
+        0,
+        27920,
+        610
+      ],
+      "A": [
+        27161,
+        264,
+        27262,
+        338
+      ],
+      "B": [
+        27609,
+        327,
+        27734,
+        467
+      ],
+      "headA": [
+        27179,
+        268,
+        27230,
+        315
+      ],
+      "headB": [
+        27641,
+        338,
+        27698,
+        390
+      ]
+    }
+  ]
+}

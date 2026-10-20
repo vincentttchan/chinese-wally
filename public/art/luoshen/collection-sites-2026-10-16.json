@@ -1,0 +1,244 @@
+{
+  "date": "2026-10-16",
+  "coordinate_system": "local pixel rectangles in unchanged 1995x943 tiles, indexed left to right; negatives cross a tile seam",
+  "sites": [
+    {
+      "id": "bird-0",
+      "name": "開首左側飛鳥",
+      "tile": 8,
+      "rect": [
+        1125,
+        55,
+        1222,
+        124
+      ],
+      "category": "bird"
+    },
+    {
+      "id": "bird-1",
+      "name": "開首右側飛鳥",
+      "tile": 8,
+      "rect": [
+        1220,
+        86,
+        1325,
+        146
+      ],
+      "category": "bird"
+    },
+    {
+      "id": "bird-2",
+      "name": "送別場面的長頸鳥形",
+      "tile": 4,
+      "rect": [
+        140,
+        635,
+        280,
+        755
+      ],
+      "category": "bird"
+    },
+    {
+      "id": "ribbon-0",
+      "name": "初見神女身旁衣帶",
+      "tile": 8,
+      "rect": [
+        810,
+        480,
+        985,
+        550
+      ],
+      "category": "ribbon"
+    },
+    {
+      "id": "ribbon-1",
+      "name": "回身神女身旁衣帶",
+      "tile": 7,
+      "rect": [
+        1570,
+        540,
+        1695,
+        591
+      ],
+      "category": "ribbon"
+    },
+    {
+      "id": "ribbon-2",
+      "name": "下方同行神女衣帶",
+      "tile": 7,
+      "rect": [
+        286,
+        536,
+        390,
+        591
+      ],
+      "category": "ribbon"
+    },
+    {
+      "id": "ribbon-3",
+      "name": "下方回身神女衣帶",
+      "tile": 7,
+      "rect": [
+        465,
+        611,
+        610,
+        651
+      ],
+      "category": "ribbon"
+    },
+    {
+      "id": "ribbon-4",
+      "name": "上方持物神女衣帶",
+      "tile": 7,
+      "rect": [
+        1280,
+        243,
+        1405,
+        317
+      ],
+      "category": "ribbon"
+    },
+    {
+      "id": "ribbon-5",
+      "name": "柳旁神女衣帶",
+      "tile": 6,
+      "rect": [
+        1235,
+        548,
+        1355,
+        593
+      ],
+      "category": "ribbon"
+    },
+    {
+      "id": "ribbon-6",
+      "name": "雙人場面後方衣帶",
+      "tile": 6,
+      "rect": [
+        761,
+        389,
+        872,
+        431
+      ],
+      "category": "ribbon"
+    },
+    {
+      "id": "ribbon-7",
+      "name": "雙人場面前方衣帶",
+      "tile": 6,
+      "rect": [
+        813,
+        468,
+        963,
+        515
+      ],
+      "category": "ribbon"
+    },
+    {
+      "id": "ribbon-8",
+      "name": "上方雙人場面後方衣帶",
+      "tile": 6,
+      "rect": [
+        1760,
+        240,
+        1850,
+        280
+      ],
+      "category": "ribbon"
+    },
+    {
+      "id": "ribbon-9",
+      "name": "上方雙人場面前方衣帶",
+      "tile": 6,
+      "rect": [
+        1880,
+        273,
+        1994,
+        316
+      ],
+      "category": "ribbon"
+    },
+    {
+      "id": "ribbon-10",
+      "name": "水上神女肩後衣帶",
+      "tile": 5,
+      "rect": [
+        762,
+        343,
+        890,
+        385
+      ],
+      "category": "ribbon"
+    },
+    {
+      "id": "ribbon-11",
+      "name": "坐榻前神女衣帶",
+      "tile": 5,
+      "rect": [
+        1755,
+        460,
+        1905,
+        520
+      ],
+      "category": "ribbon"
+    },
+    {
+      "id": "ribbon-12",
+      "name": "俯身者腰側衣帶",
+      "tile": 5,
+      "rect": [
+        1065,
+        682,
+        1165,
+        735
+      ],
+      "category": "ribbon"
+    },
+    {
+      "id": "ribbon-13",
+      "name": "低身神女下方衣帶",
+      "tile": 4,
+      "rect": [
+        -20,
+        758,
+        200,
+        792
+      ],
+      "category": "ribbon"
+    }
+  ],
+  "assets": [
+    {
+      "id": "bird",
+      "file": "collection-bird-cutout.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "ribbon",
+      "file": "collection-ribbon-cutout.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    }
+  ],
+  "exclusions": [
+    "Chariot streamers are not garment sashes.",
+    "Cloud-car mythical companions are not counted as ordinary bird silhouettes.",
+    "The collection symbols are derived illustrations, not original painting crops."
+  ],
+  "last_calibrated": "2026-10-19"
+}

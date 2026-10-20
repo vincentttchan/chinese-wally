@@ -1,0 +1,16 @@
+{
+  "actors": 914,
+  "people": 692,
+  "objects": 222,
+  "scales": [
+    0.22,
+    0.4,
+    0.62,
+    1,
+    1.55,
+    2.5
+  ],
+  "pointChecks": 5484,
+  "failures": 0,
+  "basis": "每個已核對點使用正式resolveQingmingHit檢查；不是瀏覽器操作。"
+}
