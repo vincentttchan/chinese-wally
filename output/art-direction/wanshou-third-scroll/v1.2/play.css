@@ -64,3 +64,13 @@
 .kangqu-game #layout[data-mode="intro"] #painting{opacity:0;transition:none}
 
 .is-ensemble-playing #navigator{visibility:hidden;pointer-events:none}
+
+/* A short golden edge confirms a successful hit; it never reveals undiscovered locations. */
+.chapter-hit-feedback{position:absolute;left:0;top:0;overflow:visible;pointer-events:none;z-index:9;animation:chapter-hit-confirm 1.9s ease-out both}
+.chapter-hit-feedback>*{fill:none;stroke-linejoin:round;stroke-linecap:round}
+.chapter-hit-feedback .hit-glow{stroke:#e9c65c;stroke-width:7px;opacity:.28;filter:blur(1.4px)}
+.chapter-hit-feedback .hit-edge{stroke:#ffe8a0;stroke-width:1.8px;filter:drop-shadow(0 0 3px #d9ad37)}
+@keyframes chapter-hit-confirm{0%{opacity:.25}10%,65%{opacity:1}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.chapter-hit-feedback{animation:none}}
+
+.has-hit-feedback #navigator{visibility:hidden;pointer-events:none}

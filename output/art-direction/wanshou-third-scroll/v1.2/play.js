@@ -110,6 +110,7 @@ async function closeJournal(){
 async function beginObservation(){if(state.busy||state.mode!=='found')return;state.step=0;setMode('observe');const p=current().comparison[0];await moveTo(p.center||current().center,p.scale||1);}
 async function replay(){if(state.busy)return;if(state.source!=='native'&&!await setSource('native'))return;state.round=0;state.completed=0;state.hint=0;state.step=0;state.ending=0;state.reviewComplete=false;state.reviewReturn=null;state.reviewStage="arrival";state.reviewIndex=0;state.reviewSeen=[];state.visits={};setMode('seek');centerAt(chapterViewport.initialPoint,startScale(),[.5,.5]);announce('重新尋人，見聞冊收藏已保留。');}
 function inspectPerson(p){
+ showHitFeedback(hitShapeForPerson(p));
  if(state.mode==='seek'&&p.id===current().id){setMode('found');speak(p,current().greeting,true);return;}
  if(audiencePeople.includes(p.id)){void playAudience();return;}
  if(ensemblePeople.includes(p.id)){void playEnsemble();return;}
@@ -118,6 +119,7 @@ function inspectPerson(p){
 async function observePoint(){
  if(state.mode!=='observe'||state.step>=2||state.busy)return;
  if(state.view.scale<.65){announce('請先放大，再點眼前的細節。');return;}
+ showHitFeedback(feedbackForDetail(current().comparison[state.step]));
  state.step++;state.noteHidden=false;state.noteManual=false;drawPanel();drawPoints();render();
  if(state.step===1){const p=current().comparison[1];if(p.center)await moveTo(p.center,p.scale||1);announce(p.label);}
  else announce('已完成兩處原畫比較。');
@@ -129,6 +131,7 @@ function receiveCollection(message){
  announce(message);
 }
 function collect(o,point=midpoint(objectBox(o))){
+ showHitFeedback(hitShapeForObject(o));
  const motif=chapter.motifs.find(m=>m.object===o.id);if(motif)point=[...motif.anchor];let newDetail=false;
  if(motif&&!state.details[motif.id]){state.details[motif.id]={instance:o.id,point:[...point]};newDetail=true;}
  const c=chapter.collections.find(c=>c.id===o.category),fresh=!state.collections[c.id];

@@ -38,6 +38,7 @@ async function playAudience(playbackRate=1){
   context.imageSmoothingEnabled=paint.imageSmoothingEnabled=true;context.imageSmoothingQuality=paint.imageSmoothingQuality='high';
   context.globalAlpha=1;context.clearRect(0,0,crop.width,crop.height);context.drawImage(images[0],0,0,crop.width,crop.height);
   let frame=8,end=lead;for(let i=0;i<durations.length;i++){end+=durations[i];if(t<end){frame=i;break;}}
+  if(frame>0)clearHitFeedback();
   if(!reduced.matches){
    paint.clearRect(0,0,crop.width,crop.height);paint.drawImage(images[1],0,0,crop.width,crop.height);paint.drawImage(images[frame+2],0,0,crop.width,crop.height);
    paint.save();paint.beginPath();for(const polygon of foreground){polygon.forEach(([x,y],i)=>i?paint.lineTo(x,y):paint.moveTo(x,y));paint.closePath();}paint.clip();paint.drawImage(images[0],0,0,crop.width,crop.height);paint.restore();

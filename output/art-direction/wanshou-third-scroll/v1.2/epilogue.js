@@ -31,6 +31,7 @@ async function reviewLook(index){
 }
 function reviewTap(){
  if(state.busy)return;
+ if(state.reviewStage==='performance')showHitFeedback(hitShapeForPerson(chapter.people.find(p=>p.id==='seated-drum')));
  if(state.reviewStage==='performance'){void playEnsemble();return;}
  if(state.reviewStage!=='review')return;
  if(!state.reviewSeen.includes(state.reviewIndex))state.reviewSeen.push(state.reviewIndex);
@@ -117,6 +118,7 @@ async function playEnsemble(){
   if(t>=(reduced.matches?850:duration)){stopEnsemble(true);return;}
   context.globalAlpha=1;context.drawImage(images[0],0,0);
   let frame=8,end=lead;for(let i=0;i<durations.length;i++){end+=durations[i];if(t<end){frame=i;break;}}
+  if(frame>0)clearHitFeedback();
   if(!reduced.matches){
    paint.clearRect(0,0,crop.width,crop.height);paint.drawImage(images[1],0,0);
    const group=images[frame+2];paint.drawImage(group,placement.x,placement.y,group.width*placement.scale,group.height*placement.scale);

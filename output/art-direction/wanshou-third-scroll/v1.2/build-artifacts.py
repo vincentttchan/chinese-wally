@@ -29,7 +29,8 @@ music_sources=['src/audio/chapterMusic.js','src/audio/chapterMusicTracks.js']
 shared_music='\n'.join((root/name).read_text().replace('export function ','function ').replace('export const ','const ') for name in music_sources)
 js+='\nconst ensemblePlayback='+json.dumps(json.loads((root/'src/game/kangquEnsemblePlayback.json').read_text()))+';\n'
 js+='\nconst audiencePlayback='+json.dumps(json.loads((root/'src/game/kangquAudiencePlayback.json').read_text()))+';\n'
-js+='\n'+icon_js+shared_music+'\n'+(folder/'music.js').read_text()+'\n'+(folder/'epilogue.js').read_text()+'\n'+(folder/'audience-animation.js').read_text()+'\n'+(folder/'play.js').read_text()+'\n'+(folder/'interface.js').read_text()+'\n'+(folder/'map.js').read_text()
+js+='\nconst hitContourPaths='+json.dumps(json.loads((folder/'hit-contours.json').read_text()))+';\n'
+js+='\n'+icon_js+shared_music+'\n'+(folder/'music.js').read_text()+'\n'+(folder/'epilogue.js').read_text()+'\n'+(folder/'audience-animation.js').read_text()+'\n'+(folder/'hit-feedback.js').read_text()+'\n'+(folder/'play.js').read_text()+'\n'+(folder/'interface.js').read_text()+'\n'+(folder/'map.js').read_text()
 js+='\n'+(root/'src/chapterNavigation.js').read_text().replace('export function ','function ')
 js+='\ndocument.querySelectorAll(\".chapter-links\").forEach(keepCurrentChapterVisible);\n'
 js+='\n'+(root/'src/page-motion.js').read_text()
