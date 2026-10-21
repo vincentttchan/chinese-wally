@@ -177,7 +177,7 @@
   ],
   "notes": [
     "All v0.2/v0.3/v0.5 preview style layers remain excluded. The site and current Lantern CSS are read directly by the source builder.",
-    "v1.2 integrates spatial observation, mandatory celebration background, evidence judgement, original-pixel motion, collection hit tolerance and journal navigation.",
+    "v1.2 integrates spatial observation, mandatory celebration background, evidence judgement, approved whole-group v7 animation, collection hit tolerance and journal navigation.",
     "Observation conclusions now connect the visible instruments, procession and auspicious wall motifs to the historical meaning of 康衢駢慶.",
     "The wall motif is identified as 暗八仙 from visible native pixels and the Palace Museum motif definition; source scope is recorded in content-sources.json."
   ]

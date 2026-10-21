@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-13",
+  "method": "CSS transforms of native painting pixels, feathered hand-region masks and protected original faces",
+  "runtimeRevision": "v1.2: no generated plate or generated pose frames in runtime. Native source remains fixed beneath two small, feathered hand patches; maximum translation 2.2 native pixels, rotation 2.5 degrees. Drum and faces remain fixed. This is an illustrative gesture, not a reconstruction of actual rhythm or performance.",
+  "nativeRegion": [
+    880,
+    2290,
+    1085,
+    2560
+  ],
+  "durationMs": 4200,
+  "frames": null,
+  "sequence": "continuous small hand motion with zero-motion start/end",
+  "prompts": {
+    "poses": "Create a four-frame animation sprite sheet for this exact Qing painting ensemble. Reference is sole visual identity source. A SINGLE horizontal strip of FOUR EQUAL SQUARE SLOTS, transparent background, 4:1 canvas. Each slot contains the same seated ochre-clad drummer with drum AND the same standing blue-clad cymbal player behind him, preserve relative positions and shared bottom baseline, same silhouette/palette/scale. Remove grey-clad man, pillars, curtain, floor, instruments not held by these two, other scenery. Frame1 source idle drummer sticks near drum and cymbals apart; frame2 drummer lifts hands subtly and cymbals approach; frame3 sticks tap drum and cymbals meet; frame4 hands return and cymbals separate. Heads, hats, faces, legs and drum stay identical in all frames. Very small plausible hand motion, no jumping. Muted silk watercolor, delicate ink exactly source style, do not modernize. Even generous clear margins in every equal slot. No labels text borders shadows or diagrams. Entire pair acts as one stable sprite group.",
+    "background": "Edit the reference crop in its same exact portrait aspect ratio and composition to produce an unobtrusive background repair plate for animation. Remove ONLY the seated ochre-clad drummer, his drum and the standing blue-clad cymbal player immediately behind him. Retain grey-clad man and his object, pillars, pink curtain, architectural floor and rail exactly unchanged. Reconstruct only the occluded silk painting wall/floor matching original modest hand-painted lines and faded colors. No new objects. No text. This is an explicitly generated interpretation background, not original artwork.",
+    "watcherPortrait": "Use case: identity-preserve. Asset type: historical-painting game recognition portrait. Reference image: the supplied native painting head crop, sole identity evidence. Create a conservative watercolor and fine ink tracing of ONLY this person's head, hat/headdress and beard if visible, isolated on transparent background. Preserve EXACT head turn, hat silhouette, facial hair silhouette and face proportions from reference. Do not infer sharp eyes or new facial marks from blurred pixels. No shoulders, garment, pole, props, wall or surroundings. Muted Qing painting colors, flat hand-painted appearance, not modern portrait, not photoreal. Leave generous transparent margin. This is explicitly an interpretive tracing, not a restored original. Save project asset; no text."
+  },
+  "outputs": {
+    "runtimeSource": "../stage-and-crowd-native.png",
+    "runtimeCode": "../epilogue.js",
+    "historicalGeneratedAssets": "archivedGeneration; not used in runtime"
+  },
+  "inspection": "Original stage crop and source implementation inspected. No browser playback, seam, alignment, device or reduced-motion execution performed.",
+  "normalization": "sprite-pipeline normalize_sprite_strip.py: 4 frames, shared scale, 384px square, shared bottom-center anchor.",
+  "limits": "No authentic audio or historical score reconstruction. Faces and repaired background are generated interpretations; original pixels return after playback.",
+  "archivedGeneration": {
+    "method": "built-in image_gen",
+    "frames": 4,
+    "sequence": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2,
+      3,
+      0
+    ],
+    "prompts": {
+      "poses": "Create a four-frame animation sprite sheet for this exact Qing painting ensemble. Reference is sole visual identity source. A SINGLE horizontal strip of FOUR EQUAL SQUARE SLOTS, transparent background, 4:1 canvas. Each slot contains the same seated ochre-clad drummer with drum AND the same standing blue-clad cymbal player behind him, preserve relative positions and shared bottom baseline, same silhouette/palette/scale. Remove grey-clad man, pillars, curtain, floor, instruments not held by these two, other scenery. Frame1 source idle drummer sticks near drum and cymbals apart; frame2 drummer lifts hands subtly and cymbals approach; frame3 sticks tap drum and cymbals meet; frame4 hands return and cymbals separate. Heads, hats, faces, legs and drum stay identical in all frames. Very small plausible hand motion, no jumping. Muted silk watercolor, delicate ink exactly source style, do not modernize. Even generous clear margins in every equal slot. No labels text borders shadows or diagrams. Entire pair acts as one stable sprite group.",
+      "background": "Edit the reference crop in its same exact portrait aspect ratio and composition to produce an unobtrusive background repair plate for animation. Remove ONLY the seated ochre-clad drummer, his drum and the standing blue-clad cymbal player immediately behind him. Retain grey-clad man and his object, pillars, pink curtain, architectural floor and rail exactly unchanged. Reconstruct only the occluded silk painting wall/floor matching original modest hand-painted lines and faded colors. No new objects. No text. This is an explicitly generated interpretation background, not original artwork.",
+      "watcherPortrait": "Use case: identity-preserve. Asset type: historical-painting game recognition portrait. Reference image: the supplied native painting head crop, sole identity evidence. Create a conservative watercolor and fine ink tracing of ONLY this person's head, hat/headdress and beard if visible, isolated on transparent background. Preserve EXACT head turn, hat silhouette, facial hair silhouette and face proportions from reference. Do not infer sharp eyes or new facial marks from blurred pixels. No shoulders, garment, pole, props, wall or surroundings. Muted Qing painting colors, flat hand-painted appearance, not modern portrait, not photoreal. Leave generous transparent margin. This is explicitly an interpretive tracing, not a restored original. Save project asset; no text."
+    },
+    "outputs": {
+      "poses": "poses-raw.png",
+      "plate": "plate.png",
+      "frames": "frames/01.png .. frames/04.png",
+      "preview": "preview.png"
+    },
+    "inspection": "Generated strip, repair plate, spectator portrait and normalized static preview inspected. Assets depict interpretive small hand motions; no actual browser playback, alignment or device validation performed."
+  }
+}

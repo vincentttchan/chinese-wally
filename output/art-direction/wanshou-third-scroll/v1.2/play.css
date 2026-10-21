@@ -29,8 +29,10 @@
 .kangqu-game .chapter-field-layer>section,.kangqu-game .chapter-end-layer>section{overflow-y:auto;overscroll-behavior:contain}
 .kangqu-game .moving{opacity:0;pointer-events:none}
 .collection-flight{position:fixed;object-fit:contain;z-index:40;pointer-events:none}
-.ensemble-animation{position:absolute;left:880px;top:2290px;width:205px;height:270px;pointer-events:none;z-index:5;opacity:0;mask-repeat:no-repeat;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;-webkit-mask-size:100% 100%}
-.ensemble-native-motion{position:absolute;inset:0;background-size:4500px 2843px;background-position:-880px -2290px;background-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-repeat:no-repeat;filter:var(--painting-grade);will-change:transform}
+.ensemble-animation{position:absolute;left:875px;top:2275px;width:240px;height:295px;pointer-events:none;z-index:5;filter:var(--painting-grade)}
+.ensemble-controls{position:fixed;bottom:max(24px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:80;margin:0;padding:10px 18px;background:#eee4cded;color:var(--ink);font-family:var(--font-body);white-space:nowrap}
+.ensemble-controls button{margin-left:12px}
+
 .chapter-motif-entries{font-size:14px;line-height:1.8;border-top:1px solid var(--line);margin-top:22px;padding-top:16px}
 .chapter-motif-entries h3{font:inherit;font-size:17px}
 .chapter-motif-entries span{display:block}
@@ -60,3 +62,5 @@
 .kangqu-game #painting{opacity:0;transition:opacity 220ms ease-out}
 .kangqu-game #painting.is-decoded{opacity:1}
 .kangqu-game #layout[data-mode="intro"] #painting{opacity:0;transition:none}
+
+.is-ensemble-playing #navigator{visibility:hidden;pointer-events:none}

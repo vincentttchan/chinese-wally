@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-21",
+  "method": "built-in image_gen, followed by whole-sprite normalization",
+  "master": "public/art/animations/kangqu-ensemble-master-v7/group-master.png",
+  "editCanvas": "animation-edit-canvas.png",
+  "animationPrompt": "Use case: precise-object-edit. Asset: ONE coherent nine-frame animation sprite sheet of the unified three-person group.\nImage1 is a prepared 3 by 3 edit canvas with the SAME group repeated in exactly 9 slots. Image2 is the detailed master drawing. Keep the EXACT 3 COLUMNS × 3 ROWS layout, nine FULL equal cells, original portrait cell aspect, no cropped cells. Edit the supplied slots in place; do not redesign the sheet or rearrange the group. TRUE ALPHA transparency everywhere outside the group and in gaps, just like the reference; no background, paper rectangles, floor, checkerboard, shadow, labels or borders.\n\nKeep the exact same three characters, faces, hats, body proportions, clothing, faded painted linework and pigment texture from image2. Every cell is the complete group, including all three people, drum, cymbals, gong and stool, with consistent front-to-back occlusion. The large DRUM, STOOL, seated hips and standing feet are FIXED ANCHORS with identical size/position in ALL nine cells. The group does not walk, slide or change camera. Only head/shoulder/upper torso/arms/instruments perform ONE coordinated phrase, with believable neck, elbow, wrist and cloth folds.\nOne thin straight drumstick in EACH drummer hand, cymbal player holds TWO same-size cymbals, gong player holds the SAME small gong and beater; no extra or disappearing instruments.\n\nReading left-to-right then next row:\n1 exact master resting pose.\n2 all three prepare: drummer begins lifting sticks and straightening upper torso, blue player opens elbows/cymbals a little with shoulders following, grey player draws the beater back. Small linked head/shoulder movements.\n3 drummer high preparation, elbows naturally bent and sticks pointing diagonally upward; blue shoulders tilt forward ready to close cymbals; grey beater poised. Fixed hips/feet/drum.\n4 drummer HALF-WAY DOWN, one stick becomes almost horizontal above the drumhead, shoulders/head start forward nod; blue cymbals approach, grey starts toward gong.\n5 ONE drumstick tip CONTACTS the fixed drumhead, drummer torso/head nod forward gently; blue cymbals almost meet, grey beater nearly contacts gong.\n6 drummer makes SMALL low rebound; blue cymbals MEET with shoulders/head nod; grey beater CONTACTS the fixed-size gong and his upper body responds.\n7 all three make small coordinated recoil, below preparation height: drummer hands remain low, blue cymbals begin opening, grey beater relaxes.\n8 three people settle toward original positions with different slight shoulder/head responses.\n9 EXACT master resting pose, matching frame1.\n\nCritical: change whole upper-body postures coherently, not isolated floating hands; keep identity and SAME brush/texture across frames. Small purposeful movement, not exaggerated dancing or repeated rocking. The people remain a single cohesive group asset in every frame. No smearing, rubber deformation, detached cutouts, modern cartoon, large new faces, ghost crossfades or motion lines. Keep the rest pose exact at first and last cell.",
+  "emptyBackgroundPrompt": "Use case: precise-object-edit. Make an empty static background plate.\nIn this supplied image the three musicians have already been removed. Remove ONLY the remaining large barrel drum and small wooden stool. Fill their former areas with the same simple floor and wall/threshold continuation. Keep all existing wall, curtain, pillars, window, hanging decorations, floor edges, partial red guard at left and partial horn player at right EXACTLY unchanged and at the same coordinates. Do not move any architecture or change framing, texture, palette or lighting. Original 240:295 portrait aspect, opaque image. No new objects, people, shadows or text. A local conservative object-removal edit, not a redesigned room.",
+  "rawAnimation": "animation-raw.png",
+  "rawBackground": "empty-background-raw.png",
+  "normalization": "normalize-animation.py",
+  "runtime": {
+    "frames": "public/art/animations/kangqu-ensemble-master-v7/frames/group-*.png",
+    "background": "public/art/animations/kangqu-ensemble-master-v7/fixed-background.png",
+    "frameSize": [
+      377,
+      464
+    ],
+    "wholeGroupPlacement": {
+      "x": 12,
+      "y": 28,
+      "scale": 0.534
+    },
+    "notes": "One complete RGBA group per frame. No runtime head/body extraction, no articulated source patches, no pixel deformation. Background bitmap and position remain identical across all animation frames. One drum-based translation registration per whole frame, constant group scale; final rest locked to first frame."
+  },
+  "limitations": [
+    "Nine drawn poses form a short sample; not a finished film or historical reconstruction.",
+    "Repainting changes fine faces/linework; source remains separately available and labeled.",
+    "Original painting returns after playback; no formal chapter/journal integration or GitHub push."
+  ]
+}

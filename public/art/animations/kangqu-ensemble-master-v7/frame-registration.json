@@ -1,0 +1,94 @@
+{
+  "frameSize": [
+    377,
+    464
+  ],
+  "sharedGroupScale": 0.534,
+  "placement": [
+    12,
+    28
+  ],
+  "frames": [
+    {
+      "frame": 1,
+      "translation": [
+        0,
+        0
+      ],
+      "drumSimilarity": 0.928,
+      "restLocked": false
+    },
+    {
+      "frame": 2,
+      "translation": [
+        -1,
+        -1
+      ],
+      "drumSimilarity": 0.87,
+      "restLocked": false
+    },
+    {
+      "frame": 3,
+      "translation": [
+        -3,
+        -1
+      ],
+      "drumSimilarity": 0.869,
+      "restLocked": false
+    },
+    {
+      "frame": 4,
+      "translation": [
+        0,
+        0
+      ],
+      "drumSimilarity": 0.881,
+      "restLocked": false
+    },
+    {
+      "frame": 5,
+      "translation": [
+        -2,
+        -1
+      ],
+      "drumSimilarity": 0.879,
+      "restLocked": false
+    },
+    {
+      "frame": 6,
+      "translation": [
+        -3,
+        -1
+      ],
+      "drumSimilarity": 0.864,
+      "restLocked": false
+    },
+    {
+      "frame": 7,
+      "translation": [
+        0,
+        -1
+      ],
+      "drumSimilarity": 0.868,
+      "restLocked": false
+    },
+    {
+      "frame": 8,
+      "translation": [
+        -1,
+        -1
+      ],
+      "drumSimilarity": 0.89,
+      "restLocked": false
+    },
+    {
+      "frame": 9,
+      "translation": [
+        -1,
+        -1
+      ],
+      "drumSimilarity": 0.854,
+      "restLocked": true
+    }
+  ]
+}

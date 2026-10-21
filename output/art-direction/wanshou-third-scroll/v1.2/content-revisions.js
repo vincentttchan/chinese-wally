@@ -172,3 +172,9 @@ chapter.version='1.2';
 chapter.native='art/native-segment-lossless.webp';
 chapter.nativeFallback='../stage-and-crowd-native.png';
 chapter.overview='../stage-and-crowd-overview.jpg';
+
+// Approved whole-group repaint is an interpretation; the native painting remains the evidence.
+chapter.collections.push({id:'ensemble',name:'亭內合奏',art:'../../../../public/art/animations/kangqu-ensemble-master-v7/group-master.png',hint:'找到亭內的坐姿鼓手、藍衣持鈸者或灰衣鑼手，點中觀看合奏。',observation:'鼓手、持鈸者與持鑼者聚在亭內，樂器與雙手提示各自的演奏動作。',explanation:'鼓、鈸與鑼以不同方式擊奏，構成亭內樂隊的一部分。動畫以三人為一組摹繪，演示動作呼應；節奏與動作時序為遊戲演繹，並非歷史演奏的復原。',evidence:'原畫可見三位樂手、鼓、鈸與懸持的鑼；動畫摹繪不作額外史料。',source:chapter.sources.painting,next:'再沿亭內樂器看看吹奏的號角，並比較亭外觀看的人群。'});
+
+// Seven-person whole-group interpretation, collected once after playback completes.
+chapter.collections.push({id:'audience',name:'表演與觀看',art:'../../../../public/art/animations/kangqu-audience-v2-seven/group-master.png',hint:'在亭前找到彩衣人物、身旁觀看者與後方人群，點中觀看七人呼應。',observation:'彩衣人物手邊有持物，身旁及後方人物的面貌朝向、站位與前後遮擋，把不同人物連在同一場景。',explanation:'動畫以七人為一組摹繪，演繹示意、轉頭、微傾與轉肩的前後呼應。這些動作與先後時序為遊戲演繹，並非原畫記錄的歷史表演。',evidence:'人物、裝束、持物與相對位置以原畫為觀察依據；摹繪及動畫不作新增史料，也不推定彩衣人物的具名角色。',source:chapter.sources.painting,next:'再看亭內樂隊，留意演奏空間與亭外觀看人群的位置。'});

@@ -30,7 +30,7 @@ function applyFocus(){const p=screenAt(state.focusPoint),light=$('focus-light');
 function announce(text){clearTimeout(noticeTimer);$('notice-text').textContent=text;$('notice').hidden=false;noticeTimer=setTimeout(()=>{$('notice').hidden=true;$('notice-text').textContent='';},3600);}
 function bind(id,fn){const b=$(id);if(b)b.onclick=fn;}
 function save(){try{localStorage.setItem(key,JSON.stringify({version:1,chapter:chapter.id,items:state.collections,pending:state.pending,details:state.details}));}catch{$('storage-note').textContent='目前無法保存；本次收藏仍可繼續。';}}
-function load(){try{const data=JSON.parse(localStorage.getItem(key)||'null');if(!data||data.version!==1||data.chapter!==chapter.id)return;for(const motif of chapter.motifs){const record=data.details?.[motif.id],object=chapter.objects.find(o=>o.id===motif.object);if(object&&record?.instance===object.id&&Array.isArray(record.point)&&record.point.length===2&&record.point.every(Number.isFinite)&&inside(record.point,objectBox(object)))state.details[motif.id]={instance:object.id,point:[...motif.anchor]};}for(const c of chapter.collections){const record=data.items?.[c.id],o=chapter.objects.find(o=>o.category===c.id&&o.id===record?.instance);if(o){const point=record.point;state.collections[c.id]={instance:o.id,point:Array.isArray(point)&&point.length===2&&point.every(Number.isFinite)&&inside(point,objectBox(o))?point:midpoint(objectBox(o))};}else if(c.id==='discs'&&record?.instance==='discs-grotto'){state.pending.discs={instance:'discs-grotto',point:[3699.5,1090]};}}const wall=state.collections['painted-wall'],known=chapter.motifs.find(m=>m.object===wall?.instance);if(known&&!state.details[known.id])state.details[known.id]={instance:wall.instance,point:[...known.anchor]};if(data.pending?.discs?.instance==='discs-grotto')state.pending.discs={instance:'discs-grotto',point:[3699.5,1090]};if(state.pending.discs)$('storage-note').textContent='小亭的原有圓片紀錄已保留待核，暫不計入成對圓盤收藏。';}catch{$('storage-note').textContent='收藏將在本次遊玩中記錄。';}displayCount=Object.keys(state.collections).length;}
+function load(){try{const data=JSON.parse(localStorage.getItem(key)||'null');if(!data||data.version!==1||data.chapter!==chapter.id)return;for(const motif of chapter.motifs){const record=data.details?.[motif.id],object=chapter.objects.find(o=>o.id===motif.object);if(object&&record?.instance===object.id&&Array.isArray(record.point)&&record.point.length===2&&record.point.every(Number.isFinite)&&inside(record.point,objectBox(object)))state.details[motif.id]={instance:object.id,point:[...motif.anchor]};}for(const c of chapter.collections){const record=data.items?.[c.id],o=chapter.objects.find(o=>o.category===c.id&&o.id===record?.instance);if(c.id==='audience'&&record?.instance==='street-audience'){state.collections.audience={instance:'street-audience',point:[512.5,2557.5]};}else if(c.id==='ensemble'&&record?.instance==='pavilion-ensemble'){state.collections.ensemble={instance:'pavilion-ensemble',point:[1000,2410]};}else if(o){const point=record.point;state.collections[c.id]={instance:o.id,point:Array.isArray(point)&&point.length===2&&point.every(Number.isFinite)&&inside(point,objectBox(o))?point:midpoint(objectBox(o))};}else if(c.id==='discs'&&record?.instance==='discs-grotto'){state.pending.discs={instance:'discs-grotto',point:[3699.5,1090]};}}const wall=state.collections['painted-wall'],known=chapter.motifs.find(m=>m.object===wall?.instance);if(known&&!state.details[known.id])state.details[known.id]={instance:wall.instance,point:[...known.anchor]};if(data.pending?.discs?.instance==='discs-grotto')state.pending.discs={instance:'discs-grotto',point:[3699.5,1090]};if(state.pending.discs)$('storage-note').textContent='小亭的原有圓片紀錄已保留待核，暫不計入成對圓盤收藏。';}catch{$('storage-note').textContent='收藏將在本次遊玩中記錄。';}displayCount=Object.keys(state.collections).length;}
 function count(){ $('book-count').textContent=`${displayCount}／${chapter.collections.length}`;}
 function render(){
  updateChapterSound();
@@ -111,6 +111,8 @@ async function beginObservation(){if(state.busy||state.mode!=='found')return;sta
 async function replay(){if(state.busy)return;if(state.source!=='native'&&!await setSource('native'))return;state.round=0;state.completed=0;state.hint=0;state.step=0;state.ending=0;state.reviewComplete=false;state.reviewReturn=null;state.reviewStage="arrival";state.reviewIndex=0;state.reviewSeen=[];state.visits={};setMode('seek');centerAt(chapterViewport.initialPoint,startScale(),[.5,.5]);announce('重新尋人，見聞冊收藏已保留。');}
 function inspectPerson(p){
  if(state.mode==='seek'&&p.id===current().id){setMode('found');speak(p,current().greeting,true);return;}
+ if(audiencePeople.includes(p.id)){void playAudience();return;}
+ if(ensemblePeople.includes(p.id)){void playEnsemble();return;}
  const visits=state.visits[p.id]||0;state.visits[p.id]=visits+1;speak(p,p.lines[Math.min(visits,2)]);
 }
 async function observePoint(){
@@ -184,7 +186,7 @@ function drawPoints(){
  }
  if(state.mode==='observe'){if(state.step<2){const c=current().comparison[state.step];addPoint(c.label,c.box,observePoint);}return;}
  // Keyboard access follows visible figures/objects, never a target-only answer list.
- for(const p of chapter.people)addPoint('聽聽'+p.name+'的話',p.box,()=>inspectPerson(p));
+ for(const p of chapter.people)addPoint(audiencePeople.includes(p.id)&&!(state.mode==='seek'&&p.id===current().id)?'觀看表演與觀看七人群像：'+p.name:ensemblePeople.includes(p.id)&&!(state.mode==='seek'&&p.id===current().id)?'觀看亭內三人合奏：'+p.name:'聽聽'+p.name+'的話',p.box,()=>inspectPerson(p));
  for(const o of chapter.objects)addPoint('看看'+chapter.collections.find(c=>c.id===o.category).name,objectBox(o),()=>collect(o));
 }
 const imageCache=new Map();
@@ -215,6 +217,7 @@ function release(e,cancelled=false){if(!pointers.has(e.pointerId))return;const c
 scene.addEventListener('pointerup',e=>release(e));scene.addEventListener('pointercancel',e=>release(e,true));
 scene.addEventListener('keydown',e=>{if(state.busy||!state.ready||e.target!==scene)return;const d=e.shiftKey?160:70,arrows={ArrowLeft:[d,0],ArrowRight:[-d,0],ArrowUp:[0,d],ArrowDown:[0,-d]};if(arrows[e.key]){e.preventDefault();state.view.x+=arrows[e.key][0];state.view.y+=arrows[e.key][1];render();}else if(['+','='].includes(e.key)){e.preventDefault();zoomBy(1.25);}else if(e.key==='-'){e.preventDefault();zoomBy(.8);}});
 document.addEventListener('keydown',e=>{
+ if(e.key==='Escape'&&audienceReturn){e.preventDefault();stopAudience();return;}
  if(e.key==='Escape'&&state.reviewStage==='playing'){e.preventDefault();stopEnsemble();return;}
  if(e.key==='Escape'){if(state.mode==='journal'){if(state.journalLooking)resumeJournal();else closeJournal();}else if(state.menuOpen)toggleMenu(false);else if(state.hintOpen)closeHint();else if(state.mode!=='found'){state.speaker=null;render();}return;}
  if(e.key!=='Tab')return;

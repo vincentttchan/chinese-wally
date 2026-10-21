@@ -21,14 +21,7 @@ function reviewRegion(){
  return ['performance','playing','reveal'].includes(state.reviewStage)?chapter.review[0]:chapter.review[state.reviewIndex];
 }
 function reviewHitBoxes(){
- return state.reviewStage==='performance'?['seated-drum','ensemble-discs-left'].map(id=>chapter.people.find(person=>person.id===id).box):[reviewRegion().box];
-}
-function ensembleMotionMask(){
- // White exposes only the moving hands/instruments; original faces are protected.
- const exclusions=chapter.people.map(person=>person.head).filter(b=>b[0]<1085&&b[2]>880&&b[1]<2560&&b[3]>2290);
- const holes=exclusions.map(b=>`<rect x="${b[0]-880-3}" y="${b[1]-2290-3}" width="${b[2]-b[0]+6}" height="${b[3]-b[1]+6}" rx="3" fill="black"/>`).join('');
- const svg='<svg xmlns="http://www.w3.org/2000/svg" width="205" height="270" viewBox="0 0 205 270"><defs><filter id="edge"><feGaussianBlur stdDeviation="1.5"/></filter></defs><g fill="white" filter="url(#edge)"><ellipse cx="44" cy="78" rx="34" ry="39"/><ellipse cx="120" cy="164" rx="52" ry="30"/></g>'+holes+'</svg>';
- return 'url("data:image/svg+xml,'+encodeURIComponent(svg)+'")';
+ return state.reviewStage==='performance'?['seated-drum','ensemble-discs-left','ensemble-grey'].map(id=>chapter.people.find(person=>person.id===id).box):[reviewRegion().box];
 }
 async function reviewLook(index){
  if(state.busy)return;
@@ -61,14 +54,14 @@ function drawEpilogue(){
   title=chapter.history[state.historyIndex].title;body=chapter.history[state.historyIndex].text;
   buttons=action('history-next',state.historyIndex===0?'再看「駢慶」的意思':'看看樂手怎樣配合')+'<details class="collection-source"><summary>歷史解讀的來源</summary><p>慶典背景、路線與雙慶解讀依據劉潞的卷名研究；1751 是所述事件年份。</p><a href="'+chapter.sources.procession.url+'" target="_blank" rel="noopener noreferrer">'+chapter.sources.procession.label+'</a></details>';
  }else if(stage==='performance'){
-  title='讓亭內的合奏動起來';body='輕點亭內鼓手或持鈸的人，觀看一段合奏演繹。';
+  title='讓亭內的合奏動起來';body='輕點亭內鼓手、持鈸者或鑼手，觀看三人合奏；播完收入見聞冊。';
  }else if(stage==='reveal'){
-  title='樂聲，也構成慶典';body='手部的小幅動作示意鼓、鈸的配合。這是遊戲演繹；原畫沒有記錄實際旋律或演奏時序。';
+  title='樂聲，也構成慶典';body='鼓手領拍，持鈸者與鑼手相應。動作是依原畫摹繪的遊戲演繹；原畫沒有記錄實際旋律或演奏時序。';
   buttons='<button id="review-replay" class="lantern-note-secondary">再看一次演繹</button>'+action('review-summary','收下這條街的發現');
  }else if(stage==='summary'){
   title='從街道，讀出皇家慶典';body='樂隊、隊列與吉祥彩牆，把沿途街道安排成皇太后的祝壽場景。研究再從儀仗讀出南巡禮成的雙慶意涵。這幅畫讓我們看見皇家如何呈現慶典。';
-  buttons=action('free','留在畫中，自由探索')+'<button id="ending-book" class="lantern-note-secondary">回看街衢見聞冊</button><button id="replay" class="lantern-note-secondary">再尋一次</button><details class="collection-source"><summary>回看活動與演繹</summary><button id="review-again" class="lantern-note-secondary">回看三處活動</button><button id="review-replay" class="lantern-note-secondary">重播鼓鈸演繹</button></details>';
- }else{title='畫中情景演繹';body='正在播放鼓與鈸的配合。';buttons='<button id="animation-skip" class="lantern-note-secondary">略過演繹，回到原畫</button>';}
+  buttons=action('free','留在畫中，自由探索')+'<button id="ending-book" class="lantern-note-secondary">回看街衢見聞冊</button><button id="replay" class="lantern-note-secondary">再尋一次</button><details class="collection-source"><summary>回看活動與演繹</summary><button id="review-again" class="lantern-note-secondary">回看三處活動</button><button id="review-replay" class="lantern-note-secondary">重播三人合奏</button></details>';
+ }else{title='畫中情景演繹';body='正在播放鼓、鈸與鑼的配合。';buttons='<button id="animation-skip" class="lantern-note-secondary">略過演繹，回到原畫</button>';}
  panel.innerHTML='<p class="lantern-observation-eyebrow">長卷中的最後探索</p><h2>'+title+'</h2><p class="lantern-note-body">'+body+'</p>'+buttons+(state.animationIssue?'<p class="lantern-note-caption">演繹素材暫未載入，可重試或繼續觀察原畫。</p>':'');
  bind('review-begin',()=>reviewLook(0));
  panel.querySelectorAll('[data-review]').forEach(b=>b.onclick=()=>reviewLook(Number(b.dataset.review)));
@@ -85,33 +78,50 @@ async function showHistory(index){
  state.historyIndex=index;state.reviewStage='history';state.noteHidden=false;state.noteManual=false;drawPanel();drawPoints();
  await moveTo(chapter.history[index].center,chapter.history[index].scale);panel.focus({preventScroll:true});
 }
-let ensembleRAF=0,ensembleToken=0;
-function stopEnsemble(){ensembleToken++;cancelAnimationFrame(ensembleRAF);$('ensemble-animation')?.remove();state.busy=false;state.reviewStage='reveal';state.noteHidden=false;state.noteManual=false;drawPanel();drawPoints();render();}
+const ensembleAsset=name=>'../../../../public/art/animations/kangqu-ensemble-master-v7/'+name+'.png';
+const ensemblePeople=['seated-drum','ensemble-discs-left','ensemble-grey'];
+let ensembleRAF=0,ensembleToken=0,ensembleReturn=null;
+function stopEnsemble(completed=false){
+ ensembleToken++;cancelAnimationFrame(ensembleRAF);$('ensemble-animation')?.remove();$('ensemble-controls')?.remove();$('layout').classList.remove('is-ensemble-playing');
+ const previous=ensembleReturn;ensembleReturn=null;state.busy=false;
+ if(previous){state.reviewStage=previous.stage==='playing'?'performance':previous.stage;state.noteHidden=previous.noteHidden;state.speaker=previous.speaker;}
+ if(state.mode==='ending')state.reviewStage=completed?'reveal':state.animationIssue?'performance':previous?.stage==='summary'?'summary':'performance';
+ drawPanel();drawPoints();render();
+ if(completed&&!state.collections.ensemble){state.collections.ensemble={instance:'pavilion-ensemble',point:[1000,2410]};save();receiveCollection('已收藏：亭內合奏');}
+ scene.focus({preventScroll:true});
+}
 async function playEnsemble(){
  if(state.busy)return;
  if(state.source!=='native'&&!await setSource('native'))return;
- state.animationIssue=false;state.reviewIndex=0;await moveTo(chapter.review[0].center,1);
+ ensembleReturn={stage:state.reviewStage,noteHidden:state.noteHidden,speaker:state.speaker};
+ state.animationIssue=false;state.speaker=null;state.reviewIndex=0;
+ await moveTo([1000,2410],1);
  const token=++ensembleToken;
- state.busy=true;state.reviewStage='playing';drawPanel();drawPoints();render();
- // Animate native pixels in small feathered patches; the original faces,
- // drum, pavilion and background stay fixed. No generated repair plate.
- try{await Promise.race([preload(chapter.native),new Promise((_,reject)=>setTimeout(()=>reject(new Error('timeout')),8000))]);}
- catch{if(token!==ensembleToken)return;state.animationIssue=true;stopEnsemble();return;}
+ state.busy=true;state.reviewStage='playing';state.noteHidden=true;$('layout').classList.add('is-ensemble-playing');drawPanel();drawPoints();render();
+ const controls=document.createElement('p');controls.id='ensemble-controls';controls.className='ensemble-controls';controls.setAttribute('role','status');
+ controls.append('鼓手領拍，鈸、鑼相應 ');const skip=document.createElement('button');skip.className='lantern-text-button';skip.textContent='略過';skip.onclick=()=>stopEnsemble();controls.append(skip);document.body.append(controls);
+ const names=['original-reference','fixed-background',...Array.from({length:9},(_,i)=>'frames/group-'+String(i+1).padStart(2,'0'))];
+ let images,timeout;
+ try{images=await Promise.race([Promise.all(names.map(name=>preload(ensembleAsset(name)))),new Promise((_,reject)=>{timeout=setTimeout(()=>reject(new Error('timeout')),8000);})]);}
+ catch{if(token!==ensembleToken)return;state.animationIssue=true;stopEnsemble();announce('演繹素材暫未載入，請再點樂隊重試。');return;}
+ finally{clearTimeout(timeout);}
  if(token!==ensembleToken)return;
- const layer=document.createElement('div');layer.id='ensemble-animation';layer.className='ensemble-animation';layer.setAttribute('aria-label','畫中情景演繹：鼓手與持鈸者的局部手部動作');
- const mask=ensembleMotionMask();layer.style.maskImage=mask;layer.style.webkitMaskImage=mask;
- const patches=[
-  {id:'cymbal',x:45,y:80,rx:32,ry:36,origin:'45px 80px'},
-  {id:'drum',x:120,y:164,rx:50,ry:28,origin:'120px 164px'}
- ];
- const moving=patches.map(p=>{const node=document.createElement('div');node.className='ensemble-native-motion';node.style.backgroundImage=`url("${chapter.native}")`;node.style.transformOrigin=p.origin;const m=`radial-gradient(ellipse ${p.rx}px ${p.ry}px at ${p.x}px ${p.y}px, #000 65%, transparent 100%)`;node.style.maskImage=m;node.style.webkitMaskImage=m;layer.append(node);return node;});world.append(layer);
- let start;
- const tick=now=>{start??=now;const elapsed=now-start,duration=reduced.matches?1200:4200;
-  if(elapsed>=duration){stopEnsemble();return;}
-  layer.style.opacity=String(Math.min(1,elapsed/220,(duration-elapsed)/220));
-  const envelope=Math.min(1,elapsed/450,(duration-elapsed)/450),beat=Math.sin(elapsed/420*Math.PI);
-  moving[0].style.transform=reduced.matches?'none':`translateX(${beat*1.8*envelope}px) rotate(${beat*2.5*envelope}deg)`;
-  moving[1].style.transform=reduced.matches?'none':`translateY(${-Math.abs(beat)*2.2*envelope}px) rotate(${beat*1.2*envelope}deg)`;
-  ensembleRAF=requestAnimationFrame(tick);
+ const {crop,placement,lead,fade,durations,tail}=ensemblePlayback,motion=durations.reduce((n,t)=>n+t,0),duration=lead+motion+fade+tail;
+ const layer=document.createElement('canvas');layer.id='ensemble-animation';layer.className='ensemble-animation';layer.width=crop.width;layer.height=crop.height;
+ layer.setAttribute('aria-label','畫中情景演繹：整組摹繪的鼓手、持鈸者與鑼手，背景固定');
+ const context=layer.getContext('2d'),plate=document.createElement('canvas');plate.width=crop.width;plate.height=crop.height;const paint=plate.getContext('2d');
+ if(!context||!paint){state.animationIssue=true;stopEnsemble();return;}
+ world.append(layer);let start;
+ const tick=now=>{
+  if(token!==ensembleToken)return;start??=now;const t=now-start;
+  if(t>=(reduced.matches?850:duration)){stopEnsemble(true);return;}
+  context.globalAlpha=1;context.drawImage(images[0],0,0);
+  let frame=8,end=lead;for(let i=0;i<durations.length;i++){end+=durations[i];if(t<end){frame=i;break;}}
+  if(!reduced.matches){
+   paint.clearRect(0,0,crop.width,crop.height);paint.drawImage(images[1],0,0);
+   const group=images[frame+2];paint.drawImage(group,placement.x,placement.y,group.width*placement.scale,group.height*placement.scale);
+   context.globalAlpha=Math.max(0,Math.min(1,t/lead,(lead+motion+fade-t)/fade));context.drawImage(plate,0,0);context.globalAlpha=1;
+  }
+  layer.dataset.groupFrame=String(frame+1);ensembleRAF=requestAnimationFrame(tick);
  };ensembleRAF=requestAnimationFrame(tick);
 }

@@ -1048,8 +1048,10 @@ html:not(.chapter-motion-ready)::after{content:'';position:fixed;inset:0;z-index
 .kangqu-game .chapter-field-layer>section,.kangqu-game .chapter-end-layer>section{overflow-y:auto;overscroll-behavior:contain}
 .kangqu-game .moving{opacity:0;pointer-events:none}
 .collection-flight{position:fixed;object-fit:contain;z-index:40;pointer-events:none}
-.ensemble-animation{position:absolute;left:880px;top:2290px;width:205px;height:270px;pointer-events:none;z-index:5;opacity:0;mask-repeat:no-repeat;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;-webkit-mask-size:100% 100%}
-.ensemble-native-motion{position:absolute;inset:0;background-size:4500px 2843px;background-position:-880px -2290px;background-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-repeat:no-repeat;filter:var(--painting-grade);will-change:transform}
+.ensemble-animation{position:absolute;left:875px;top:2275px;width:240px;height:295px;pointer-events:none;z-index:5;filter:var(--painting-grade)}
+.ensemble-controls{position:fixed;bottom:max(24px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:80;margin:0;padding:10px 18px;background:#eee4cded;color:var(--ink);font-family:var(--font-body);white-space:nowrap}
+.ensemble-controls button{margin-left:12px}
+
 .chapter-motif-entries{font-size:14px;line-height:1.8;border-top:1px solid var(--line);margin-top:22px;padding-top:16px}
 .chapter-motif-entries h3{font:inherit;font-size:17px}
 .chapter-motif-entries span{display:block}
@@ -1079,6 +1081,8 @@ html:not(.chapter-motion-ready)::after{content:'';position:fixed;inset:0;z-index
 .kangqu-game #painting{opacity:0;transition:opacity 220ms ease-out}
 .kangqu-game #painting.is-decoded{opacity:1}
 .kangqu-game #layout[data-mode="intro"] #painting{opacity:0;transition:none}
+
+.is-ensemble-playing #navigator{visibility:hidden;pointer-events:none}
 
 </style></head><body class="lantern-game kangqu-game"><main id="layout" class="immersive-game lantern-game kangqu-game" data-mode="intro">
   <section class="painting-area" aria-label="原畫觀看區"><div id="scene" class="scene scroll-viewport focused" tabindex="0" aria-label="拖曳看畫，雙指或滾輪縮放；點人物與細節">
@@ -14857,6 +14861,12 @@ chapter.native='art/native-segment-lossless.webp';
 chapter.nativeFallback='art/native-segment.png';
 chapter.overview='art/overview.jpg';
 
+// Approved whole-group repaint is an interpretation; the native painting remains the evidence.
+chapter.collections.push({id:'ensemble',name:'亭內合奏',art:'../../art/animations/kangqu-ensemble-master-v7/group-master.png',hint:'找到亭內的坐姿鼓手、藍衣持鈸者或灰衣鑼手，點中觀看合奏。',observation:'鼓手、持鈸者與持鑼者聚在亭內，樂器與雙手提示各自的演奏動作。',explanation:'鼓、鈸與鑼以不同方式擊奏，構成亭內樂隊的一部分。動畫以三人為一組摹繪，演示動作呼應；節奏與動作時序為遊戲演繹，並非歷史演奏的復原。',evidence:'原畫可見三位樂手、鼓、鈸與懸持的鑼；動畫摹繪不作額外史料。',source:chapter.sources.painting,next:'再沿亭內樂器看看吹奏的號角，並比較亭外觀看的人群。'});
+
+// Seven-person whole-group interpretation, collected once after playback completes.
+chapter.collections.push({id:'audience',name:'表演與觀看',art:'../../art/animations/kangqu-audience-v2-seven/group-master.png',hint:'在亭前找到彩衣人物、身旁觀看者與後方人群，點中觀看七人呼應。',observation:'彩衣人物手邊有持物，身旁及後方人物的面貌朝向、站位與前後遮擋，把不同人物連在同一場景。',explanation:'動畫以七人為一組摹繪，演繹示意、轉頭、微傾與轉肩的前後呼應。這些動作與先後時序為遊戲演繹，並非原畫記錄的歷史表演。',evidence:'人物、裝束、持物與相對位置以原畫為觀察依據；摹繪及動畫不作新增史料，也不推定彩衣人物的具名角色。',source:chapter.sources.painting,next:'再看亭內樂隊，留意演奏空間與亭外觀看人群的位置。'});
+
 // Individually authored fictional dialogue; evidence in dialogue/dialogue-evidence.json.
 const chapterDialogue={
   "far-west-01": [
@@ -15891,6 +15901,10 @@ const KangquViewport=(()=>{
  return {coverScale,maxScale,constrain,mapWindow,mapPoint};
 })();
 
+const ensemblePlayback={"crop": {"x": 875, "y": 2275, "width": 240, "height": 295}, "placement": {"x": 12, "y": 28, "scale": 0.534}, "lead": 360, "fade": 360, "durations": [440, 180, 220, 160, 140, 220, 220, 260, 440], "tail": 240};
+
+const audiencePlayback={"crop": {"x": 240, "y": 2420, "width": 545, "height": 275}, "lead": 240, "fade": 260, "tail": 160, "durations": [420, 300, 360, 380, 400, 380, 360, 320, 440], "foreground": [[[56, 275], [213, 162], [225, 140], [245, 135], [251, 139], [247, 145], [238, 147], [231, 162], [227, 172], [385, 275]], [[390, 275], [425, 239], [457, 217], [485, 200], [515, 193], [545, 192], [545, 275]], [[0, 153], [66, 151], [69, 212], [0, 254]]]};
+
 const canonicalIcons={"Volume2": 0, "VolumeX": 1, "Maximize": 2, "Minimize": 2, "MoreHorizontal": 3, "BookOpen": 4, "CircleHelp": 5, "ArrowRight": 8, "ChevronDown": 9, "ChevronUp": 10, "X": 11, "RotateCcw": 12, "Check": 13, "Waves": 14};
 function icon(name,size=18){const cell=canonicalIcons[name];return `<span class="art-icon" aria-hidden="true" style="width:${size}px;height:${size}px;background-position:${cell%4*100/3}% ${Math.floor(cell/4)*100/3}%"></span>`;}
 /** Shared by React chapters and the packaged, standalone Kangqu document. */
@@ -16034,14 +16048,7 @@ function reviewRegion(){
  return ['performance','playing','reveal'].includes(state.reviewStage)?chapter.review[0]:chapter.review[state.reviewIndex];
 }
 function reviewHitBoxes(){
- return state.reviewStage==='performance'?['seated-drum','ensemble-discs-left'].map(id=>chapter.people.find(person=>person.id===id).box):[reviewRegion().box];
-}
-function ensembleMotionMask(){
- // White exposes only the moving hands/instruments; original faces are protected.
- const exclusions=chapter.people.map(person=>person.head).filter(b=>b[0]<1085&&b[2]>880&&b[1]<2560&&b[3]>2290);
- const holes=exclusions.map(b=>`<rect x="${b[0]-880-3}" y="${b[1]-2290-3}" width="${b[2]-b[0]+6}" height="${b[3]-b[1]+6}" rx="3" fill="black"/>`).join('');
- const svg='<svg xmlns="http://www.w3.org/2000/svg" width="205" height="270" viewBox="0 0 205 270"><defs><filter id="edge"><feGaussianBlur stdDeviation="1.5"/></filter></defs><g fill="white" filter="url(#edge)"><ellipse cx="44" cy="78" rx="34" ry="39"/><ellipse cx="120" cy="164" rx="52" ry="30"/></g>'+holes+'</svg>';
- return 'url("data:image/svg+xml,'+encodeURIComponent(svg)+'")';
+ return state.reviewStage==='performance'?['seated-drum','ensemble-discs-left','ensemble-grey'].map(id=>chapter.people.find(person=>person.id===id).box):[reviewRegion().box];
 }
 async function reviewLook(index){
  if(state.busy)return;
@@ -16074,14 +16081,14 @@ function drawEpilogue(){
   title=chapter.history[state.historyIndex].title;body=chapter.history[state.historyIndex].text;
   buttons=action('history-next',state.historyIndex===0?'再看「駢慶」的意思':'看看樂手怎樣配合')+'<details class="collection-source"><summary>歷史解讀的來源</summary><p>慶典背景、路線與雙慶解讀依據劉潞的卷名研究；1751 是所述事件年份。</p><a href="'+chapter.sources.procession.url+'" target="_blank" rel="noopener noreferrer">'+chapter.sources.procession.label+'</a></details>';
  }else if(stage==='performance'){
-  title='讓亭內的合奏動起來';body='輕點亭內鼓手或持鈸的人，觀看一段合奏演繹。';
+  title='讓亭內的合奏動起來';body='輕點亭內鼓手、持鈸者或鑼手，觀看三人合奏；播完收入見聞冊。';
  }else if(stage==='reveal'){
-  title='樂聲，也構成慶典';body='手部的小幅動作示意鼓、鈸的配合。這是遊戲演繹；原畫沒有記錄實際旋律或演奏時序。';
+  title='樂聲，也構成慶典';body='鼓手領拍，持鈸者與鑼手相應。動作是依原畫摹繪的遊戲演繹；原畫沒有記錄實際旋律或演奏時序。';
   buttons='<button id="review-replay" class="lantern-note-secondary">再看一次演繹</button>'+action('review-summary','收下這條街的發現');
  }else if(stage==='summary'){
   title='從街道，讀出皇家慶典';body='樂隊、隊列與吉祥彩牆，把沿途街道安排成皇太后的祝壽場景。研究再從儀仗讀出南巡禮成的雙慶意涵。這幅畫讓我們看見皇家如何呈現慶典。';
-  buttons=action('free','留在畫中，自由探索')+'<button id="ending-book" class="lantern-note-secondary">回看街衢見聞冊</button><button id="replay" class="lantern-note-secondary">再尋一次</button><details class="collection-source"><summary>回看活動與演繹</summary><button id="review-again" class="lantern-note-secondary">回看三處活動</button><button id="review-replay" class="lantern-note-secondary">重播鼓鈸演繹</button></details>';
- }else{title='畫中情景演繹';body='正在播放鼓與鈸的配合。';buttons='<button id="animation-skip" class="lantern-note-secondary">略過演繹，回到原畫</button>';}
+  buttons=action('free','留在畫中，自由探索')+'<button id="ending-book" class="lantern-note-secondary">回看街衢見聞冊</button><button id="replay" class="lantern-note-secondary">再尋一次</button><details class="collection-source"><summary>回看活動與演繹</summary><button id="review-again" class="lantern-note-secondary">回看三處活動</button><button id="review-replay" class="lantern-note-secondary">重播三人合奏</button></details>';
+ }else{title='畫中情景演繹';body='正在播放鼓、鈸與鑼的配合。';buttons='<button id="animation-skip" class="lantern-note-secondary">略過演繹，回到原畫</button>';}
  panel.innerHTML='<p class="lantern-observation-eyebrow">長卷中的最後探索</p><h2>'+title+'</h2><p class="lantern-note-body">'+body+'</p>'+buttons+(state.animationIssue?'<p class="lantern-note-caption">演繹素材暫未載入，可重試或繼續觀察原畫。</p>':'');
  bind('review-begin',()=>reviewLook(0));
  panel.querySelectorAll('[data-review]').forEach(b=>b.onclick=()=>reviewLook(Number(b.dataset.review)));
@@ -16098,35 +16105,101 @@ async function showHistory(index){
  state.historyIndex=index;state.reviewStage='history';state.noteHidden=false;state.noteManual=false;drawPanel();drawPoints();
  await moveTo(chapter.history[index].center,chapter.history[index].scale);panel.focus({preventScroll:true});
 }
-let ensembleRAF=0,ensembleToken=0;
-function stopEnsemble(){ensembleToken++;cancelAnimationFrame(ensembleRAF);$('ensemble-animation')?.remove();state.busy=false;state.reviewStage='reveal';state.noteHidden=false;state.noteManual=false;drawPanel();drawPoints();render();}
+const ensembleAsset=name=>'../../art/animations/kangqu-ensemble-master-v7/'+name+'.png';
+const ensemblePeople=['seated-drum','ensemble-discs-left','ensemble-grey'];
+let ensembleRAF=0,ensembleToken=0,ensembleReturn=null;
+function stopEnsemble(completed=false){
+ ensembleToken++;cancelAnimationFrame(ensembleRAF);$('ensemble-animation')?.remove();$('ensemble-controls')?.remove();$('layout').classList.remove('is-ensemble-playing');
+ const previous=ensembleReturn;ensembleReturn=null;state.busy=false;
+ if(previous){state.reviewStage=previous.stage==='playing'?'performance':previous.stage;state.noteHidden=previous.noteHidden;state.speaker=previous.speaker;}
+ if(state.mode==='ending')state.reviewStage=completed?'reveal':state.animationIssue?'performance':previous?.stage==='summary'?'summary':'performance';
+ drawPanel();drawPoints();render();
+ if(completed&&!state.collections.ensemble){state.collections.ensemble={instance:'pavilion-ensemble',point:[1000,2410]};save();receiveCollection('已收藏：亭內合奏');}
+ scene.focus({preventScroll:true});
+}
 async function playEnsemble(){
  if(state.busy)return;
  if(state.source!=='native'&&!await setSource('native'))return;
- state.animationIssue=false;state.reviewIndex=0;await moveTo(chapter.review[0].center,1);
+ ensembleReturn={stage:state.reviewStage,noteHidden:state.noteHidden,speaker:state.speaker};
+ state.animationIssue=false;state.speaker=null;state.reviewIndex=0;
+ await moveTo([1000,2410],1);
  const token=++ensembleToken;
- state.busy=true;state.reviewStage='playing';drawPanel();drawPoints();render();
- // Animate native pixels in small feathered patches; the original faces,
- // drum, pavilion and background stay fixed. No generated repair plate.
- try{await Promise.race([preload(chapter.native),new Promise((_,reject)=>setTimeout(()=>reject(new Error('timeout')),8000))]);}
- catch{if(token!==ensembleToken)return;state.animationIssue=true;stopEnsemble();return;}
+ state.busy=true;state.reviewStage='playing';state.noteHidden=true;$('layout').classList.add('is-ensemble-playing');drawPanel();drawPoints();render();
+ const controls=document.createElement('p');controls.id='ensemble-controls';controls.className='ensemble-controls';controls.setAttribute('role','status');
+ controls.append('鼓手領拍，鈸、鑼相應 ');const skip=document.createElement('button');skip.className='lantern-text-button';skip.textContent='略過';skip.onclick=()=>stopEnsemble();controls.append(skip);document.body.append(controls);
+ const names=['original-reference','fixed-background',...Array.from({length:9},(_,i)=>'frames/group-'+String(i+1).padStart(2,'0'))];
+ let images,timeout;
+ try{images=await Promise.race([Promise.all(names.map(name=>preload(ensembleAsset(name)))),new Promise((_,reject)=>{timeout=setTimeout(()=>reject(new Error('timeout')),8000);})]);}
+ catch{if(token!==ensembleToken)return;state.animationIssue=true;stopEnsemble();announce('演繹素材暫未載入，請再點樂隊重試。');return;}
+ finally{clearTimeout(timeout);}
  if(token!==ensembleToken)return;
- const layer=document.createElement('div');layer.id='ensemble-animation';layer.className='ensemble-animation';layer.setAttribute('aria-label','畫中情景演繹：鼓手與持鈸者的局部手部動作');
- const mask=ensembleMotionMask();layer.style.maskImage=mask;layer.style.webkitMaskImage=mask;
- const patches=[
-  {id:'cymbal',x:45,y:80,rx:32,ry:36,origin:'45px 80px'},
-  {id:'drum',x:120,y:164,rx:50,ry:28,origin:'120px 164px'}
- ];
- const moving=patches.map(p=>{const node=document.createElement('div');node.className='ensemble-native-motion';node.style.backgroundImage=`url("${chapter.native}")`;node.style.transformOrigin=p.origin;const m=`radial-gradient(ellipse ${p.rx}px ${p.ry}px at ${p.x}px ${p.y}px, #000 65%, transparent 100%)`;node.style.maskImage=m;node.style.webkitMaskImage=m;layer.append(node);return node;});world.append(layer);
- let start;
- const tick=now=>{start??=now;const elapsed=now-start,duration=reduced.matches?1200:4200;
-  if(elapsed>=duration){stopEnsemble();return;}
-  layer.style.opacity=String(Math.min(1,elapsed/220,(duration-elapsed)/220));
-  const envelope=Math.min(1,elapsed/450,(duration-elapsed)/450),beat=Math.sin(elapsed/420*Math.PI);
-  moving[0].style.transform=reduced.matches?'none':`translateX(${beat*1.8*envelope}px) rotate(${beat*2.5*envelope}deg)`;
-  moving[1].style.transform=reduced.matches?'none':`translateY(${-Math.abs(beat)*2.2*envelope}px) rotate(${beat*1.2*envelope}deg)`;
-  ensembleRAF=requestAnimationFrame(tick);
+ const {crop,placement,lead,fade,durations,tail}=ensemblePlayback,motion=durations.reduce((n,t)=>n+t,0),duration=lead+motion+fade+tail;
+ const layer=document.createElement('canvas');layer.id='ensemble-animation';layer.className='ensemble-animation';layer.width=crop.width;layer.height=crop.height;
+ layer.setAttribute('aria-label','畫中情景演繹：整組摹繪的鼓手、持鈸者與鑼手，背景固定');
+ const context=layer.getContext('2d'),plate=document.createElement('canvas');plate.width=crop.width;plate.height=crop.height;const paint=plate.getContext('2d');
+ if(!context||!paint){state.animationIssue=true;stopEnsemble();return;}
+ world.append(layer);let start;
+ const tick=now=>{
+  if(token!==ensembleToken)return;start??=now;const t=now-start;
+  if(t>=(reduced.matches?850:duration)){stopEnsemble(true);return;}
+  context.globalAlpha=1;context.drawImage(images[0],0,0);
+  let frame=8,end=lead;for(let i=0;i<durations.length;i++){end+=durations[i];if(t<end){frame=i;break;}}
+  if(!reduced.matches){
+   paint.clearRect(0,0,crop.width,crop.height);paint.drawImage(images[1],0,0);
+   const group=images[frame+2];paint.drawImage(group,placement.x,placement.y,group.width*placement.scale,group.height*placement.scale);
+   context.globalAlpha=Math.max(0,Math.min(1,t/lead,(lead+motion+fade-t)/fade));context.drawImage(plate,0,0);context.globalAlpha=1;
+  }
+  layer.dataset.groupFrame=String(frame+1);ensembleRAF=requestAnimationFrame(tick);
  };ensembleRAF=requestAnimationFrame(tick);
+}
+
+// Approved seven-person painting interpretation; the original observation remains mandatory.
+const audiencePeople=['watcher-blue','watcher-pink','watcher-pale','watcher-white','watcher-brown','watcher-pattern','watcher-yellow'];
+const audienceAsset=name=>'../../art/animations/kangqu-audience-v2-seven/'+name+'.png';
+let audienceRAF=0,audienceToken=0,audienceReturn=null;
+function stopAudience(completed=false){
+ audienceToken++;cancelAnimationFrame(audienceRAF);$('audience-animation')?.remove();$('audience-controls')?.remove();$('layout').classList.remove('is-ensemble-playing');
+ const previous=audienceReturn;audienceReturn=null;state.busy=false;
+ if(previous){state.noteHidden=previous.noteHidden;state.speaker=previous.speaker;}
+ drawPanel();drawPoints();render();
+ if(completed&&!state.collections.audience){state.collections.audience={instance:'street-audience',point:[512.5,2557.5]};save();receiveCollection('已收藏：表演與觀看');}
+ scene.focus({preventScroll:true});
+}
+async function playAudience(playbackRate=1){
+ if(state.busy)return;
+ if(state.source!=='native'&&!await setSource('native'))return;
+ audienceReturn={noteHidden:state.noteHidden,speaker:state.speaker};state.speaker=null;
+ await moveTo([512.5,2557.5],Math.min(1.35,(scene.clientWidth-48)/545,(scene.clientHeight-100)/275));
+ const token=++audienceToken;state.busy=true;state.noteHidden=true;$('layout').classList.add('is-ensemble-playing');drawPanel();drawPoints();render();
+ const controls=document.createElement('p');controls.id='audience-controls';controls.className='ensemble-controls';controls.setAttribute('role','status');controls.append('前方示意，後方四人回應 ');
+ const skip=document.createElement('button');skip.className='lantern-text-button';skip.textContent='略過';skip.onclick=()=>stopAudience();controls.append(skip);document.body.append(controls);
+ let images,timeout;
+ try{images=await Promise.race([Promise.all(['original-reference','fixed-background',...Array.from({length:9},(_,i)=>'frames/group-'+String(i+1).padStart(2,'0'))].map(name=>preload(audienceAsset(name)))),new Promise((_,reject)=>{timeout=setTimeout(()=>reject(new Error('timeout')),8000);})]);}
+ catch{if(token===audienceToken){stopAudience();announce('演繹素材暫未載入，請再點人物重試。');}return;}
+ finally{clearTimeout(timeout);}
+ if(token!==audienceToken)return;
+ const {crop,lead,fade,durations,tail,foreground}=audiencePlayback,motion=durations.reduce((n,t)=>n+t,0),duration=lead+motion+fade+tail;
+ const layer=document.createElement('canvas');layer.id='audience-animation';layer.className='ensemble-animation';Object.assign(layer.style,{left:crop.x+'px',top:crop.y+'px',width:crop.width+'px',height:crop.height+'px'});
+ layer.setAttribute('aria-label','畫中情景演繹：七人整組摹繪，前後人物呼應，背景固定');
+ const context=layer.getContext('2d'),plate=document.createElement('canvas'),paint=plate.getContext('2d');
+ if(!context||!paint){stopAudience();announce('演繹暫未能播放，請再試一次。');return;}
+ world.append(layer);let start;
+ const tick=now=>{
+  if(token!==audienceToken)return;start??=now;const t=(now-start)*(reduced.matches?1:playbackRate);
+  if(t>=(reduced.matches?850:duration)){stopAudience(true);return;}
+  const density=Math.min(4,Math.max(1,state.view.scale*window.devicePixelRatio)),w=Math.ceil(crop.width*density),h=Math.ceil(crop.height*density);
+  if(layer.width!==w||layer.height!==h){layer.width=plate.width=w;layer.height=plate.height=h;}
+  context.setTransform(w/crop.width,0,0,h/crop.height,0,0);paint.setTransform(w/crop.width,0,0,h/crop.height,0,0);
+  context.imageSmoothingEnabled=paint.imageSmoothingEnabled=true;context.imageSmoothingQuality=paint.imageSmoothingQuality='high';
+  context.globalAlpha=1;context.clearRect(0,0,crop.width,crop.height);context.drawImage(images[0],0,0,crop.width,crop.height);
+  let frame=8,end=lead;for(let i=0;i<durations.length;i++){end+=durations[i];if(t<end){frame=i;break;}}
+  if(!reduced.matches){
+   paint.clearRect(0,0,crop.width,crop.height);paint.drawImage(images[1],0,0,crop.width,crop.height);paint.drawImage(images[frame+2],0,0,crop.width,crop.height);
+   paint.save();paint.beginPath();for(const polygon of foreground){polygon.forEach(([x,y],i)=>i?paint.lineTo(x,y):paint.moveTo(x,y));paint.closePath();}paint.clip();paint.drawImage(images[0],0,0,crop.width,crop.height);paint.restore();
+   context.globalAlpha=Math.max(0,Math.min(1,t/lead,(lead+motion+fade-t)/fade));context.drawImage(plate,0,0,crop.width,crop.height);context.globalAlpha=1;
+  }
+  layer.dataset.groupFrame=String(frame+1);layer.dataset.sourceWidth=String(images[frame+2].width);audienceRAF=requestAnimationFrame(tick);
+ };audienceRAF=requestAnimationFrame(tick);
 }
 
 'use strict';
@@ -16161,7 +16234,7 @@ function applyFocus(){const p=screenAt(state.focusPoint),light=$('focus-light');
 function announce(text){clearTimeout(noticeTimer);$('notice-text').textContent=text;$('notice').hidden=false;noticeTimer=setTimeout(()=>{$('notice').hidden=true;$('notice-text').textContent='';},3600);}
 function bind(id,fn){const b=$(id);if(b)b.onclick=fn;}
 function save(){try{localStorage.setItem(key,JSON.stringify({version:1,chapter:chapter.id,items:state.collections,pending:state.pending,details:state.details}));}catch{$('storage-note').textContent='目前無法保存；本次收藏仍可繼續。';}}
-function load(){try{const data=JSON.parse(localStorage.getItem(key)||'null');if(!data||data.version!==1||data.chapter!==chapter.id)return;for(const motif of chapter.motifs){const record=data.details?.[motif.id],object=chapter.objects.find(o=>o.id===motif.object);if(object&&record?.instance===object.id&&Array.isArray(record.point)&&record.point.length===2&&record.point.every(Number.isFinite)&&inside(record.point,objectBox(object)))state.details[motif.id]={instance:object.id,point:[...motif.anchor]};}for(const c of chapter.collections){const record=data.items?.[c.id],o=chapter.objects.find(o=>o.category===c.id&&o.id===record?.instance);if(o){const point=record.point;state.collections[c.id]={instance:o.id,point:Array.isArray(point)&&point.length===2&&point.every(Number.isFinite)&&inside(point,objectBox(o))?point:midpoint(objectBox(o))};}else if(c.id==='discs'&&record?.instance==='discs-grotto'){state.pending.discs={instance:'discs-grotto',point:[3699.5,1090]};}}const wall=state.collections['painted-wall'],known=chapter.motifs.find(m=>m.object===wall?.instance);if(known&&!state.details[known.id])state.details[known.id]={instance:wall.instance,point:[...known.anchor]};if(data.pending?.discs?.instance==='discs-grotto')state.pending.discs={instance:'discs-grotto',point:[3699.5,1090]};if(state.pending.discs)$('storage-note').textContent='小亭的原有圓片紀錄已保留待核，暫不計入成對圓盤收藏。';}catch{$('storage-note').textContent='收藏將在本次遊玩中記錄。';}displayCount=Object.keys(state.collections).length;}
+function load(){try{const data=JSON.parse(localStorage.getItem(key)||'null');if(!data||data.version!==1||data.chapter!==chapter.id)return;for(const motif of chapter.motifs){const record=data.details?.[motif.id],object=chapter.objects.find(o=>o.id===motif.object);if(object&&record?.instance===object.id&&Array.isArray(record.point)&&record.point.length===2&&record.point.every(Number.isFinite)&&inside(record.point,objectBox(object)))state.details[motif.id]={instance:object.id,point:[...motif.anchor]};}for(const c of chapter.collections){const record=data.items?.[c.id],o=chapter.objects.find(o=>o.category===c.id&&o.id===record?.instance);if(c.id==='audience'&&record?.instance==='street-audience'){state.collections.audience={instance:'street-audience',point:[512.5,2557.5]};}else if(c.id==='ensemble'&&record?.instance==='pavilion-ensemble'){state.collections.ensemble={instance:'pavilion-ensemble',point:[1000,2410]};}else if(o){const point=record.point;state.collections[c.id]={instance:o.id,point:Array.isArray(point)&&point.length===2&&point.every(Number.isFinite)&&inside(point,objectBox(o))?point:midpoint(objectBox(o))};}else if(c.id==='discs'&&record?.instance==='discs-grotto'){state.pending.discs={instance:'discs-grotto',point:[3699.5,1090]};}}const wall=state.collections['painted-wall'],known=chapter.motifs.find(m=>m.object===wall?.instance);if(known&&!state.details[known.id])state.details[known.id]={instance:wall.instance,point:[...known.anchor]};if(data.pending?.discs?.instance==='discs-grotto')state.pending.discs={instance:'discs-grotto',point:[3699.5,1090]};if(state.pending.discs)$('storage-note').textContent='小亭的原有圓片紀錄已保留待核，暫不計入成對圓盤收藏。';}catch{$('storage-note').textContent='收藏將在本次遊玩中記錄。';}displayCount=Object.keys(state.collections).length;}
 function count(){ $('book-count').textContent=`${displayCount}／${chapter.collections.length}`;}
 function render(){
  updateChapterSound();
@@ -16242,6 +16315,8 @@ async function beginObservation(){if(state.busy||state.mode!=='found')return;sta
 async function replay(){if(state.busy)return;if(state.source!=='native'&&!await setSource('native'))return;state.round=0;state.completed=0;state.hint=0;state.step=0;state.ending=0;state.reviewComplete=false;state.reviewReturn=null;state.reviewStage="arrival";state.reviewIndex=0;state.reviewSeen=[];state.visits={};setMode('seek');centerAt(chapterViewport.initialPoint,startScale(),[.5,.5]);announce('重新尋人，見聞冊收藏已保留。');}
 function inspectPerson(p){
  if(state.mode==='seek'&&p.id===current().id){setMode('found');speak(p,current().greeting,true);return;}
+ if(audiencePeople.includes(p.id)){void playAudience();return;}
+ if(ensemblePeople.includes(p.id)){void playEnsemble();return;}
  const visits=state.visits[p.id]||0;state.visits[p.id]=visits+1;speak(p,p.lines[Math.min(visits,2)]);
 }
 async function observePoint(){
@@ -16315,7 +16390,7 @@ function drawPoints(){
  }
  if(state.mode==='observe'){if(state.step<2){const c=current().comparison[state.step];addPoint(c.label,c.box,observePoint);}return;}
  // Keyboard access follows visible figures/objects, never a target-only answer list.
- for(const p of chapter.people)addPoint('聽聽'+p.name+'的話',p.box,()=>inspectPerson(p));
+ for(const p of chapter.people)addPoint(audiencePeople.includes(p.id)&&!(state.mode==='seek'&&p.id===current().id)?'觀看表演與觀看七人群像：'+p.name:ensemblePeople.includes(p.id)&&!(state.mode==='seek'&&p.id===current().id)?'觀看亭內三人合奏：'+p.name:'聽聽'+p.name+'的話',p.box,()=>inspectPerson(p));
  for(const o of chapter.objects)addPoint('看看'+chapter.collections.find(c=>c.id===o.category).name,objectBox(o),()=>collect(o));
 }
 const imageCache=new Map();
@@ -16346,6 +16421,7 @@ function release(e,cancelled=false){if(!pointers.has(e.pointerId))return;const c
 scene.addEventListener('pointerup',e=>release(e));scene.addEventListener('pointercancel',e=>release(e,true));
 scene.addEventListener('keydown',e=>{if(state.busy||!state.ready||e.target!==scene)return;const d=e.shiftKey?160:70,arrows={ArrowLeft:[d,0],ArrowRight:[-d,0],ArrowUp:[0,d],ArrowDown:[0,-d]};if(arrows[e.key]){e.preventDefault();state.view.x+=arrows[e.key][0];state.view.y+=arrows[e.key][1];render();}else if(['+','='].includes(e.key)){e.preventDefault();zoomBy(1.25);}else if(e.key==='-'){e.preventDefault();zoomBy(.8);}});
 document.addEventListener('keydown',e=>{
+ if(e.key==='Escape'&&audienceReturn){e.preventDefault();stopAudience();return;}
  if(e.key==='Escape'&&state.reviewStage==='playing'){e.preventDefault();stopEnsemble();return;}
  if(e.key==='Escape'){if(state.mode==='journal'){if(state.journalLooking)resumeJournal();else closeJournal();}else if(state.menuOpen)toggleMenu(false);else if(state.hintOpen)closeHint();else if(state.mode!=='found'){state.speaker=null;render();}return;}
  if(e.key!=='Tab')return;
@@ -16459,6 +16535,8 @@ function drawPanel(){
  }else if(state.mode==='observe'){
   const done=state.step===2;
   panel.innerHTML=`<p class="lantern-observation-eyebrow">原畫觀察 · ${done?'已完成比較':`${state.step+1}／2 處細節`}</p><h2>${done?r.observationTitle:['看看合奏的樂器','看看持旗與隊列','看看裝束與彩牆','看看亭內與亭外'][state.round]}</h2><p class="lantern-note-body">${done?r.answer:r.comparison[state.step].label}</p>`+(done?action('next-round',state.round<chapter.rounds.length-1?'尋找下一位':'看看街衢'):'<p class="lantern-note-caption">在原畫上點選；細節太小時，先放大。</p>');
+  if(done&&r.id==='seated-drum'){panel.insertAdjacentHTML('beforeend','<button id="observation-ensemble" class="lantern-note-secondary">點看三人合奏</button>');bind('observation-ensemble',()=>playEnsemble());}
+  if(done&&audiencePeople.includes(r.id)){panel.insertAdjacentHTML('beforeend','<button id="observation-audience" class="lantern-note-secondary">點看七人前後呼應</button>');bind('observation-audience',()=>playAudience());}
   bind('next-round',()=>{state.completed=state.round+1;if(state.round<chapter.rounds.length-1){const line=r.next;state.round++;state.hint=0;state.step=0;setMode('seek');announce(line);}else{state.ending=0;state.reviewStage='arrival';state.reviewSeen=[];state.reviewIndex=0;setMode('ending');announce('最後，回看慶典的聲音與觀看。');}});
  }else if(state.mode==='ending'){
   drawEpilogue();
@@ -16486,7 +16564,7 @@ function drawJournal(){
  journal.className='lantern-journal-layer lantern-field-journal '+(c&&state.collections[c.id]?'is-detail':'is-overview')+(state.journalLooking?' is-looking':'');
  let content;
  if(c&&state.collections[c.id]){
-  content=`<article class="collection-detail"><button id="journal-back" class="collection-back">← 全部收藏</button><div class="collection-detail-heading"><p>畫中拾趣</p><h2>${c.name}</h2></div><figure class="collection-detail-art">${collectionArt(c)}<figcaption>依原畫創作的收藏圖樣</figcaption></figure><p class="collection-observe">${c.observation}</p><p class="collection-body">${c.explanation}</p>${motifEntries(c)}<button id="return-location" class="collection-look">看看畫中位置 <span aria-hidden="true">↗</span></button><p class="collection-next"><span>再留意一處</span>${c.next}</p><details class="collection-source"><summary>判讀依據</summary><p>${c.evidence}</p><a href="${chapter.sources.painting.url}" target="_blank" rel="noopener noreferrer">${chapter.sources.painting.label}</a> · ${collectionSources(c)} · <a href="data/source-note.json" target="_blank" rel="noopener noreferrer">原畫影像來源</a></details>${available.length>1?`<nav class="collection-detail-nav" aria-label="已收藏見聞"><button id="entry-prev" aria-label="上一則已收藏見聞">←</button><span>${available.findIndex(a=>a.id===c.id)+1}／${available.length}</span><button id="entry-next" aria-label="下一則已收藏見聞">→</button></nav>`:''}</article>`;
+  content=`<article class="collection-detail"><button id="journal-back" class="collection-back">← 全部收藏</button><div class="collection-detail-heading"><p>畫中拾趣</p><h2>${c.name}</h2></div><figure class="collection-detail-art">${collectionArt(c)}<figcaption>依原畫創作的收藏圖樣</figcaption></figure><p class="collection-observe">${c.observation}</p><p class="collection-body">${c.explanation}</p>${motifEntries(c)}${c.id==='audience'?'<button id="journal-audience" class="collection-look">回到畫中重播七人群像 ↗</button><button id="journal-audience-slow" class="collection-look">慢速細看七人群像 ↗</button>':''}${c.id==='ensemble'?'<button id="journal-ensemble" class="collection-look">回到畫中重播合奏 ↗</button>':''}<button id="return-location" class="collection-look">看看畫中位置 <span aria-hidden="true">↗</span></button><p class="collection-next"><span>再留意一處</span>${c.next}</p><details class="collection-source"><summary>判讀依據</summary><p>${c.evidence}</p><a href="${chapter.sources.painting.url}" target="_blank" rel="noopener noreferrer">${chapter.sources.painting.label}</a> · ${collectionSources(c)} · <a href="data/source-note.json" target="_blank" rel="noopener noreferrer">原畫影像來源</a></details>${available.length>1?`<nav class="collection-detail-nav" aria-label="已收藏見聞"><button id="entry-prev" aria-label="上一則已收藏見聞">←</button><span>${available.findIndex(a=>a.id===c.id)+1}／${available.length}</span><button id="entry-next" aria-label="下一則已收藏見聞">→</button></nav>`:''}</article>`;
  }else{
   content='<div class="collection-overview"><p class="collection-introduction">把偶然看見的細節，收成自己的街衢見聞。</p><div class="collection-grid">'+chapter.collections.map(c=>{const found=!!state.collections[c.id];return `<button class="collection-item ${found?'is-collected':'is-undiscovered'}" data-entry="${c.id}" aria-label="${c.name}，${found?'已收下，開啟詳情':'未收下，看看提示'}">${collectionArt(c,!found)}<span class="collection-item-name">${c.name}</span><span class="collection-item-state">${found?'已收下':'未收下'}</span></button>`;}).join('')+'</div>'+motifOverview()+'</div>';
  }
@@ -16498,6 +16576,9 @@ function drawJournal(){
  bind('journal-back',()=>{state.entry=null;drawJournal();journal.focus({preventScroll:true});});
  journal.querySelectorAll('[data-entry]').forEach(b=>b.onclick=()=>{const c=chapter.collections.find(c=>c.id===b.dataset.entry);if(state.collections[c.id]){state.entry=c.id;drawJournal();journal.focus({preventScroll:true});}else $('journal-hint').textContent=c.hint;});
  bind('return-location',()=>lookFromJournal(state.collections[c.id]));
+ const replayAudience=async rate=>{await closeJournal();if(state.mode!=='journal')await playAudience(rate);};
+ bind('journal-audience',()=>replayAudience(1));bind('journal-audience-slow',()=>replayAudience(.5));
+ bind('journal-ensemble',async()=>{await closeJournal();await playEnsemble();});
  bind('journal-resume',resumeJournal);
  journal.querySelectorAll('[data-motif]').forEach(button=>button.onclick=()=>lookFromJournal(state.details[button.dataset.motif]));
 }

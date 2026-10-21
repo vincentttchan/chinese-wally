@@ -1,0 +1,51 @@
+{
+  "size": [
+    2180,
+    1100
+  ],
+  "logicalCrop": [
+    240,
+    2420,
+    785,
+    2695
+  ],
+  "partExtraction": false,
+  "registration": [
+    {
+      "phase": "gesture",
+      "pose": 1,
+      "wholeGroupTranslation": [
+        -12,
+        -32
+      ],
+      "lowerRobeSimilarity": 0.612
+    },
+    {
+      "phase": "gesture",
+      "pose": 2,
+      "wholeGroupTranslation": [
+        -16,
+        36
+      ],
+      "lowerRobeSimilarity": 0.566
+    },
+    {
+      "phase": "response",
+      "pose": 1,
+      "wholeGroupTranslation": [
+        -20,
+        0
+      ],
+      "lowerRobeSimilarity": 0.674
+    },
+    {
+      "phase": "response",
+      "pose": 2,
+      "wholeGroupTranslation": [
+        -24,
+        4
+      ],
+      "lowerRobeSimilarity": 0.649
+    }
+  ]
+}

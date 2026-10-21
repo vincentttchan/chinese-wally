@@ -38,7 +38,7 @@ for name in ['seated-drum','hand-at-hat','brown-green-hem']:
 for name in ['red-front-east-05','watcher-pattern']:
  for suffix in ['-head-source.png','-head-tracing-v2.png']:copies[version/'recognition'/(name+suffix)]='recognition/'+name+suffix
 for suffix in ['-head-source.png','-head-tracing-v2.png']:copies[version/'recognition'/('watcher-blue'+suffix)]='recognition/watcher-blue'+suffix
-# v1.2 runtime animates native pixels; generated frames remain in archived source.
+# Runtime shares the approved whole-group v7 art with the React sample.
 if args.runtime_only:
  records=json.loads((root/'docs/chapters/kangqu-listening-application-assets.json').read_text())['assets']
 else:
@@ -96,7 +96,7 @@ window.addEventListener('message',event=>{
 html=html.replace('</script></body>',bridge+'</script></body>')
 (destination/'index.html').write_text(html)
 
-manifest={'date':'2026-10-13','version':'1.2','sourceVersion':'1.2','route':'#kangqu-listening','homeRoute':'#lantern-festival','method':'research-backed content assembly; no test, app build or browser execution','assets':records,'notes':['All v0.2/v0.3/v0.5 preview style layers remain excluded. The site and current Lantern CSS are read directly by the source builder.','v1.2 integrates spatial observation, mandatory celebration background, evidence judgement, original-pixel motion, collection hit tolerance and journal navigation.','Observation conclusions now connect the visible instruments, procession and auspicious wall motifs to the historical meaning of 康衢駢慶.','The wall motif is identified as 暗八仙 from visible native pixels and the Palace Museum motif definition; source scope is recorded in content-sources.json.']}
+manifest={'date':'2026-10-13','version':'1.2','sourceVersion':'1.2','route':'#kangqu-listening','homeRoute':'#lantern-festival','method':'research-backed content assembly; no test, app build or browser execution','assets':records,'notes':['All v0.2/v0.3/v0.5 preview style layers remain excluded. The site and current Lantern CSS are read directly by the source builder.','v1.2 integrates spatial observation, mandatory celebration background, evidence judgement, approved whole-group v7 animation, collection hit tolerance and journal navigation.','Observation conclusions now connect the visible instruments, procession and auspicious wall motifs to the historical meaning of 康衢駢慶.','The wall motif is identified as 暗八仙 from visible native pixels and the Palace Museum motif definition; source scope is recorded in content-sources.json.']}
 doc=root/'docs/chapters/kangqu-listening-application-assets.json';doc.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 shutil.copy2(version/'ui-source-manifest.json',destination/'data/ui-source-manifest.json')
 shutil.copy2(version/'viewport-config.json',destination/'data/viewport-config.json')
