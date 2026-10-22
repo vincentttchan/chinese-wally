@@ -1,0 +1,91 @@
+{
+  "commit": "c9e99bfbc13322269c29d5d0d12071c739c3b828",
+  "workflow": "https://github.com/vincentttchan/chinese-wally/actions/runs/39796696844",
+  "status": "deployment success; live verification completed 2026-10-23",
+  "files": [
+    {
+      "path": "release.json",
+      "sha256": "189c62c7f18d470d0e6b8a142a7fcc75167090a429d53ad7630e472b22f1df94"
+    },
+    {
+      "path": "index.html",
+      "sha256": "667a18021031d21e9d10692b45367135848abbb2c5966181c261da027cfdac4f"
+    },
+    {
+      "path": "chapters/kangqu-listening/index.html",
+      "sha256": "c4e93bf7983617607a4a74b17b99faadc6c7a5f4c5c194d589d4d91e31c4572e"
+    },
+    {
+      "path": "audio/CREDITS.md",
+      "sha256": "ca813344f015a36fce3575aea301303c8c9a1ab8b8eb088f93ffe0cc656d0ed4"
+    },
+    {
+      "path": "art/zanhua/seal/scholar-stone-v1.png",
+      "sha256": "66c3b148925e9abe163fc1eccf49921b38485bb708590f0d17b83b1cdacfc78c"
+    },
+    {
+      "path": "art/zanhua/seal/viewing-impression-v2.png",
+      "sha256": "93bf5e951850f86d6c00d2e90a83cb377ad1dcb85a5dee1267a7c577852b1470"
+    },
+    {
+      "path": "zanhua-preview.html",
+      "sha256": "4637862ea958432a1b0f8fe90926dd3bb5a13a70c7581e24a2be75cd9515c4d9"
+    },
+    {
+      "path": "audio/zanhua-music.mp3",
+      "sha256": "c16be78cb00ea97f236af1f9a50b1aaa1f94f67f9cabc86c170b1393f1d2c8bf"
+    },
+    {
+      "path": "audio/luoshen-music.wav",
+      "sha256": "d53baadf544cfb61ed020ffdafa354ff17544c3b201a9146be7468dd407ab8b7"
+    },
+    {
+      "path": "audio/scroll-music.mp3",
+      "sha256": "46caeb57f1068d6a780913cd1ec9e00c3d337a2815bb5c355e46bb88c90a3123"
+    },
+    {
+      "path": "audio/kangqu-music.mp3",
+      "sha256": "6482317dfc38cc81cc0ffc96180197b5e065e38bba088442074beedb17ca4292"
+    },
+    {
+      "path": "audio/qingming-music.mp3",
+      "sha256": "f323097c1727128076e95da70212465ee69d9d7a8af9834ecebf4c52be4abd72"
+    },
+    {
+      "path": "audio/examination-music.mp3",
+      "sha256": "0fc1757554a51d3359a5e8f483e609b43387cbff014b4a4fe6e590e43c72ebe8"
+    },
+    {
+      "path": "assets/index-DmxTvyau.css",
+      "sha256": "ae53274b07ed3a1e06757202718eb5ef980a83e23c0cfe1e947ee5bcdef3c99c"
+    },
+    {
+      "path": "assets/index-Dn722hlC.js",
+      "sha256": "c98c99e2896715643ee0f3728ac8d7c4e12239ac9567ea3fcbd75a1e87f1a596"
+    },
+    {
+      "path": "art/zanhua/full-scroll.jpg",
+      "sha256": "cc8956b101f60880d1c0736d56e0f988667ba08983d5b526940da56d198de909"
+    },
+    {
+      "path": "art/luoshen/cover.jpg",
+      "sha256": "b3eaa16d5171d0ca1fb206d3ea71a49e824b50b3ed9baf34d768f1d5bd7679a1"
+    },
+    {
+      "path": "art/lantern-festival/detail-9.jpg",
+      "sha256": "e671f40fc799888dd5ad1045dbf8f0748760988ce3787e6a8b8c48c7d8a5fe37"
+    },
+    {
+      "path": "chapters/kangqu-listening/art/overview.jpg",
+      "sha256": "7446ac67efa0a688ef9f3b166d031649260d4955229eb6521750be08f45be9d5"
+    },
+    {
+      "path": "art/qingming/cover.jpg",
+      "sha256": "b21ca6512bc0bef59fc7387e70478c12f58b2e7c4e4637c45be7aaec90388f48"
+    },
+    {
+      "path": "art/examination-dense-scroll-v3.png",
+      "sha256": "447b29f613d5023cb6050d8d2bddcc0d653c72669dc895b840556509c29764b4"
+    }
+  ]
+}

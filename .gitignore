@@ -4,3 +4,4 @@ dist/
 .DS_Store
 *.log
 output/screenshots/
+output/releases/site-2026-10-23/*.zip

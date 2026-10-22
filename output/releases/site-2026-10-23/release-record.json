@@ -1,0 +1,91 @@
+{
+  "archiveId": "site-2026-10-23",
+  "freezeDate": "2026-10-23",
+  "timezone": "Asia/Hong_Kong",
+  "gitTag": "site-2026-10-23",
+  "deployedCommit": "c9e99bfbc13322269c29d5d0d12071c739c3b828",
+  "sourceTree": "c2266525846d7db70cf29011a727b6608b631e88",
+  "website": "https://vincentttchan.github.io/chinese-wally/",
+  "releaseUrl": "https://github.com/vincentttchan/chinese-wally/releases/tag/site-2026-10-23",
+  "workflowRun": 39796696844,
+  "workflowUrl": "https://github.com/vincentttchan/chinese-wally/actions/runs/39796696844",
+  "deploymentConclusion": "success",
+  "artifact": {
+    "id": 12437518218,
+    "name": "github-pages",
+    "file": "github-pages-artifact.zip",
+    "bytes": 529135957,
+    "sha256": "1da3677df4e3153809ec42d9cf8151ce53229fdc214871f0267c1adf36376dc5",
+    "officialDigestMatched": true,
+    "archivedFiles": 481,
+    "matchedExpectedFiles": 481
+  },
+  "sourceDigest": "bb1a9a35fc613bc471a8f5aac0af1dde3b8f1fe972050e8d66654984c9959d0f",
+  "chapters": [
+    {
+      "id": "zanhua",
+      "title": "簪花仕女圖",
+      "route": "#zanhua",
+      "music": "zanhua-music.mp3"
+    },
+    {
+      "id": "luoshen",
+      "title": "洛水之間",
+      "route": "#luoshen",
+      "music": "luoshen-music.wav"
+    },
+    {
+      "id": "lantern-festival",
+      "title": "宮中鬧元宵",
+      "route": "#lantern-festival",
+      "music": "scroll-music.mp3"
+    },
+    {
+      "id": "kangqu-listening",
+      "title": "在人群中聽樂",
+      "route": "#kangqu-listening",
+      "music": "kangqu-music.mp3"
+    },
+    {
+      "id": "qingming-shanghe",
+      "title": "清明上河圖",
+      "route": "#qingming-shanghe",
+      "music": "qingming-music.mp3"
+    },
+    {
+      "id": "examination",
+      "title": "榜下尋人",
+      "route": "#examination",
+      "music": "examination-music.mp3"
+    }
+  ],
+  "music": [
+    {
+      "path": "audio/zanhua-music.mp3",
+      "sha256": "c16be78cb00ea97f236af1f9a50b1aaa1f94f67f9cabc86c170b1393f1d2c8bf"
+    },
+    {
+      "path": "audio/luoshen-music.wav",
+      "sha256": "d53baadf544cfb61ed020ffdafa354ff17544c3b201a9146be7468dd407ab8b7"
+    },
+    {
+      "path": "audio/scroll-music.mp3",
+      "sha256": "46caeb57f1068d6a780913cd1ec9e00c3d337a2815bb5c355e46bb88c90a3123"
+    },
+    {
+      "path": "audio/kangqu-music.mp3",
+      "sha256": "6482317dfc38cc81cc0ffc96180197b5e065e38bba088442074beedb17ca4292"
+    },
+    {
+      "path": "audio/qingming-music.mp3",
+      "sha256": "f323097c1727128076e95da70212465ee69d9d7a8af9834ecebf4c52be4abd72"
+    },
+    {
+      "path": "audio/examination-music.mp3",
+      "sha256": "0fc1757554a51d3359a5e8f483e609b43387cbff014b4a4fe6e590e43c72ebe8"
+    }
+  ],
+  "freezePolicy": "沒有使用者明確的新修改指示，不改動本封存版六章的畫面、流程及背景音樂；日後修改另存新版本，保留此封存。",
+  "verificationRecord": "docs/chapters/site-verification-2026-10-23.md",
+  "limits": "沿用既有檢視紀錄及限制；本次只檢查封存檔案完整性，沒有重建或重新通關。"
+}
