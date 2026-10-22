@@ -128,3 +128,180 @@
 .luoshen-skip-controls:focus{transform:none;}
 /* A failed painting must remain retryable above the chapter cover. */
 .luoshen-game .scene-status:has(button){z-index:35;}
+
+/* Reuse Qingming's physical book and art leaf; keep the closed prop away from the compact note. */
+.luoshen-poem-book{position:absolute;inset:0;z-index:29;pointer-events:none;}
+.luoshen-poem-book button{pointer-events:auto;}
+.luoshen-poem-book .luoshen-book-object{left:28px;right:auto;bottom:96px;width:92px;}
+.luoshen-poem-book .luoshen-book-object svg{height:140px;}
+@media(max-height:499px){.luoshen-poem-book .luoshen-book-object{left:20px;bottom:76px;width:68px;}.luoshen-poem-book .luoshen-book-object svg{height:100px;}}
+
+/* Luoshen keeps one scrollable leaf at every width; the return action never scrolls away. */
+@media(max-width:699px) and (min-height:500px){
+ .luoshen-poem-book .luoshen-book-object{left:16px;right:auto;top:78px;bottom:auto;width:64px;}
+ .luoshen-poem-book .luoshen-book-object svg{height:96px;}
+}
+.luoshen-poem-book .qingming-book-layer{display:flex;justify-content:flex-end;align-items:center;padding:max(12px,env(safe-area-inset-top)) 16px max(12px,env(safe-area-inset-bottom));overflow:hidden;box-sizing:border-box;}
+.luoshen-poem-book .qingming-art-leaf{position:relative;inset:auto;margin:0;width:min(680px,100%);height:min(840px,calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom)));max-height:100%;aspect-ratio:auto;box-sizing:border-box;display:flex;flex-direction:column;gap:12px;padding:clamp(48px,8dvh,72px) clamp(26px,6vw,48px) clamp(46px,8dvh,76px);}
+.luoshen-poem-book .qingming-page-art{position:absolute;inset:0;z-index:-1;width:100%;height:100%;}
+.luoshen-poem-book .qingming-book-reading{display:flex;flex:1 1 auto;flex-direction:column;gap:20px;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:0 4px 12px;}
+.luoshen-poem-book .qingming-book-heading{position:static;width:auto;padding-right:32px;}
+.luoshen-poem-book .qingming-book-heading h2{font-size:32px;line-height:1.35;margin:4px 0 6px;}
+.luoshen-poem-book .qingming-book-heading .qingming-book-instruction{margin-top:12px;}
+.luoshen-poem-book .qingming-book-original{position:relative;inset:auto;width:100%;height:auto;min-height:0;flex:0 0 auto;justify-content:center;align-items:flex-start;gap:12px;padding:6px 12px 30px;box-sizing:border-box;}
+.luoshen-poem-book .qingming-book-original button{flex:0 1 auto!important;min-width:44px;padding:0 8px;gap:8px;}
+.luoshen-poem-book .qingming-quote-column{font-size:clamp(21px,4cqw,27px);line-height:1.6;padding:0;letter-spacing:.12em;}
+.luoshen-poem-book .qingming-book-readmark{bottom:-24px;}
+.luoshen-poem-book .qingming-book-annotation{position:static;width:auto;max-height:none;overflow:visible;padding:16px 0 0;border-top:1px solid #93513d35;}
+.luoshen-poem-book .qingming-book-annotation:empty{display:none;}
+.luoshen-poem-book .qingming-book-annotation h3{font-size:13px;line-height:1.6;font-weight:400;color:#93513d;margin:0 0 10px;white-space:nowrap;}
+.luoshen-poem-book .qingming-book-annotation p{font-size:18px;line-height:1.85;margin:0;}
+.luoshen-poem-book .qingming-book-status{position:static;width:auto;line-height:1.7;flex:0 0 auto;}
+.luoshen-poem-book .qingming-book-close{top:clamp(44px,6.5dvh,64px);right:clamp(24px,4vw,40px);z-index:2;}
+.luoshen-poem-book .qingming-book-return{position:static;flex:0 0 auto;width:100%;height:auto;min-height:48px;padding:8px 0 0;border:0;font-size:18px;}
+@media(min-width:1100px) and (min-height:600px){
+ .luoshen-poem-book .qingming-art-leaf{width:min(940px,100%);height:min(740px,calc(100dvh - 24px));}
+ .luoshen-poem-book .qingming-book-reading{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,.65fr);align-content:start;column-gap:40px;row-gap:24px;}
+ .luoshen-poem-book .qingming-book-heading,.luoshen-poem-book .qingming-book-status{grid-column:1/-1;}
+ .luoshen-poem-book .qingming-book-original{grid-column:2;grid-row:2;padding-top:12px;}
+ .luoshen-poem-book .qingming-book-annotation{grid-column:1;grid-row:2;padding-top:12px;border-top:0;}
+ .luoshen-poem-book .qingming-book-reading:not(:has(.qingming-book-annotation p)) .qingming-book-original{grid-column:1/-1;}
+}
+@media(max-width:359px){.luoshen-poem-book .qingming-art-leaf{padding-left:22px;padding-right:22px;}.luoshen-poem-book .qingming-book-annotation p{font-size:17px;}}
+
+/* In the narrow bird study the top toolbar would lie across the upper wing. */
+@media(max-width:699px){.luoshen-game.is-bird-context .lantern-hud{visibility:hidden;}}
+
+/* Keep the shared paper compact while both original people remain in view. */
+.luoshen-game.is-relation-context .lantern-hud{visibility:hidden;}
+.luoshen-game.is-relation-context .luoshen-note-content{padding:12px 24px;}
+.luoshen-game.is-relation-context .luoshen-note-heading{margin-bottom:4px;}
+.luoshen-game.is-relation-context .lantern-note-body{margin-bottom:4px;}
+.luoshen-game.is-relation-context .luoshen-note-primary{padding-bottom:16px;}
+@media(max-width:699px) and (min-height:500px){.luoshen-game.is-relation-context .luoshen-book-object{left:50%;transform:translateX(-50%);top:78px;}}
+
+@media(max-width:699px){.luoshen-game.is-relation-context .luoshen-note-reopen{top:auto;bottom:max(16px,env(safe-area-inset-bottom));}}
+
+.luoshen-game.is-relation-context .scroll-frame{background-image:none!important;background-color:#c6b18a;}
+
+/* Hair studies use independent painted assets; the original remains unmarked. */
+.luoshen-game.is-hair-context .luoshen-note-compact{left:auto;right:var(--hair-note-right);top:var(--hair-note-top);bottom:var(--hair-note-bottom);max-height:var(--hair-note-height)}
+.luoshen-game.is-hair-context .luoshen-note-reopen{top:auto;right:16px;bottom:90px}
+.luoshen-game.is-hair-context .luoshen-note-content{padding:10px 24px 4px}
+.luoshen-game.is-hair-context .luoshen-note-heading{margin-bottom:4px}
+.luoshen-game.is-hair-context .lantern-note-body{font-size:16px;line-height:1.5;margin-bottom:4px}
+.luoshen-game.is-hair-context .luoshen-note-primary{padding-bottom:10px}
+.luoshen-hair-studies{margin:2px 0 0;color:#4b4937}
+.luoshen-hair-studies>div{display:flex;justify-content:space-evenly;gap:18px}
+.luoshen-hair-studies>div>div{display:grid;justify-items:center;gap:1px;font-size:12px;line-height:1.4}
+.luoshen-hair-studies>div>div{animation:luoshen-hair-art-in 220ms ease-out both}
+.luoshen-hair-studies .luoshen-hair-art{display:block;width:80px;height:76px}
+.luoshen-hair-studies small{font-size:10px;color:#777260}
+.luoshen-hair-studies figcaption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.luoshen-hair-art-fallback{display:grid;place-items:center;width:80px;height:58px;font-size:11px;color:#777260}
+@keyframes luoshen-hair-art-in{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:699px),(max-height:499px){.luoshen-hair-studies .luoshen-hair-art{height:58px}}
+@media(prefers-reduced-motion:reduce){.luoshen-hair-studies>div>div{animation:none}}
+
+/* Farewell: source-facing pose studies first, then the two figures in the same original view. */
+.luoshen-game.is-farewell-context .luoshen-note-compact,
+.luoshen-game.is-farewell-context .luoshen-note-compact.is-above-detail{left:auto;right:var(--farewell-note-right);top:78px;bottom:auto;max-height:var(--farewell-note-height)}
+.luoshen-game.is-farewell-context .luoshen-note-content{padding:10px 24px 4px}
+.luoshen-game.is-farewell-context .luoshen-note-heading{margin-bottom:4px}
+.luoshen-game.is-farewell-context .lantern-note-body{font-size:16px;line-height:1.5;margin-bottom:4px}
+.luoshen-game.is-farewell-context .luoshen-note-primary{padding-bottom:10px}
+.luoshen-game.is-farewell-context .luoshen-note-reopen{right:16px;top:78px;bottom:auto}
+.luoshen-farewell-studies{margin:2px 0 0;color:#4b4937}
+.luoshen-farewell-studies>div{display:flex;justify-content:space-evenly;gap:18px}
+.luoshen-farewell-studies>div>div{display:grid;justify-items:center;gap:1px;font-size:12px;line-height:1.4;animation:luoshen-hair-art-in 220ms ease-out both}
+.luoshen-farewell-studies .luoshen-farewell-art{display:block;width:90px;height:var(--farewell-art-height)}
+.luoshen-farewell-studies small{font-size:10px;color:#777260}
+.luoshen-farewell-studies figcaption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.luoshen-farewell-art-fallback{display:grid;place-items:center;width:90px;height:var(--farewell-art-height);font-size:11px;color:#777260}
+.luoshen-game.is-farewell-pair-context .lantern-hud,.luoshen-game.is-farewell-pair-context .lantern-footer{visibility:hidden}
+.luoshen-game.is-farewell-pair-context .scroll-frame{background-image:none!important;background-color:#c6b18a}
+.luoshen-game.is-farewell-pair-context .luoshen-book-object{left:16px;right:auto;top:78px;bottom:auto;width:64px}
+.luoshen-game.is-farewell-pair-context .luoshen-book-object svg{height:72px}
+.luoshen-game.is-farewell-pair-context .luoshen-book-object>span{font-size:11px;line-height:1.4;white-space:nowrap;max-width:none;padding:2px 4px;margin-top:4px}
+@media(max-width:699px) and (max-aspect-ratio:1/1){.luoshen-game.is-farewell-pair-context .luoshen-book-object{top:auto;bottom:16px}}
+@media(prefers-reduced-motion:reduce){.luoshen-farewell-studies>div>div{animation:none}}
+
+.luoshen-farewell-animation{position:absolute;inset:0;z-index:24;overflow:hidden;pointer-events:none}
+.luoshen-farewell-world{position:absolute;left:0;top:0;transform-origin:0 0;pointer-events:none}
+.luoshen-farewell-world canvas{position:absolute;filter:var(--painting-grade)}
+.luoshen-farewell-return-hit{position:absolute;z-index:25;transform:translate(-50%,-50%);width:52px;height:60px;background:transparent;border:0;padding:0;pointer-events:auto;cursor:pointer}
+.luoshen-farewell-return-hit:focus-visible{outline:2px dashed #8e5d3e;outline-offset:4px}
+
+/* Cloud car uses the shared compact note, with the painting below on portrait phones. */
+.luoshen-game.is-cloudcar-context .luoshen-note-compact,
+.luoshen-game.is-cloudcar-context .luoshen-note-compact.is-above-detail{left:auto;right:16px;top:78px;bottom:auto;max-height:var(--cloudcar-note-height);width:min(288px,calc(100vw - 32px))}
+.luoshen-game.is-cloudcar-context .luoshen-note-content{padding:10px 24px 4px}
+.luoshen-game.is-cloudcar-context .lantern-note-body{font-size:16px;line-height:1.5;margin-bottom:4px}
+.luoshen-game.is-cloudcar-context .luoshen-note-primary{padding-bottom:10px}
+.luoshen-game.is-cloudcar-context .luoshen-note-reopen{right:16px;top:78px;bottom:auto}
+.luoshen-game.is-cloudcar-context .scroll-frame{background-image:none!important;background-color:#c6b18a}
+.luoshen-game.is-cloudcar-context .luoshen-book-object{left:16px;right:auto;top:auto;bottom:16px;width:64px}
+.luoshen-game.is-cloudcar-context .luoshen-book-object svg{height:72px}
+.luoshen-game.is-cloudcar-context .luoshen-book-object>span{font-size:11px}
+
+/* All ordinary clues share the direct-art, compact-note composition. */
+.luoshen-game.is-detail-context .luoshen-note-compact,.luoshen-game.is-detail-context .luoshen-note-compact.is-above-detail{left:auto;right:16px;top:78px;bottom:auto;max-height:164px;width:min(288px,calc(100vw - 32px))}
+.luoshen-game.is-detail-context .luoshen-note-content{padding:10px 24px 4px}
+.luoshen-game.is-detail-context .lantern-note-body{font-size:16px;line-height:1.5;margin-bottom:4px}
+.luoshen-game.is-detail-context .luoshen-note-primary{padding-bottom:10px}
+.luoshen-game.is-detail-context .luoshen-note-reopen{right:16px;top:78px;bottom:auto}
+.luoshen-detail-feedback{position:absolute;inset:0;z-index:23;pointer-events:none;animation:luoshen-detail-light 900ms ease-out both}
+@keyframes luoshen-detail-light{0%,100%{opacity:0}22%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.luoshen-detail-feedback{display:none}}
+
+/* Small ancient-book prop: leave the painting visible beside / above it. */
+.luoshen-poem-book .qingming-art-leaf{width:var(--poem-width);height:auto;min-height:0;max-height:var(--poem-height);gap:8px;padding:36px 28px 38px}
+.luoshen-poem-book .qingming-book-reading{display:flex;flex-direction:column;gap:12px;padding:0 2px 8px}
+.luoshen-poem-book .qingming-book-heading h2{font-size:26px;margin:2px 0 4px}
+.luoshen-poem-book .qingming-book-heading p{font-size:13px;line-height:1.5;margin:0}
+.luoshen-poem-book .qingming-book-heading .qingming-book-instruction{margin-top:6px}
+.luoshen-poem-book .qingming-book-original{padding:4px 8px 24px;gap:8px}
+.luoshen-poem-book .qingming-quote-column{font-size:22px;line-height:1.35;letter-spacing:.08em}
+.luoshen-poem-book .qingming-book-annotation{padding-top:10px}
+.luoshen-poem-book .qingming-book-annotation p{font-size:17px;line-height:1.7}
+.luoshen-poem-book .qingming-book-status{font-size:12px;line-height:1.5;margin:0}
+.luoshen-poem-book .qingming-book-close{top:26px;right:20px;width:44px;height:44px}
+.luoshen-poem-book .qingming-book-return{font-size:16px;min-height:44px}
+@media(min-width:900px) and (min-height:600px){
+ .luoshen-poem-book .qingming-book-reading{display:grid;grid-template-columns:minmax(0,1fr) 96px;column-gap:18px;row-gap:12px;align-content:start}
+ .luoshen-poem-book .qingming-book-heading,.luoshen-poem-book .qingming-book-status{grid-column:1/-1}
+ .luoshen-poem-book .qingming-book-original{grid-column:2;grid-row:2}
+ .luoshen-poem-book .qingming-book-annotation{grid-column:1;grid-row:2;border-top:0}
+ .luoshen-poem-book .qingming-book-reading:not(:has(.qingming-book-annotation p)) .qingming-book-original{grid-column:1/-1}
+}
+@media(max-width:699px){.luoshen-poem-book .qingming-book-layer{align-items:flex-end;padding:12px}.luoshen-poem-book .qingming-art-leaf{padding:30px 24px 32px}}
+
+/* Gold traces appear only after a painted clue is found; source pixels never deform. */
+.luoshen-gold-feedback{position:absolute;inset:0;z-index:26;pointer-events:none;overflow:hidden;animation:luoshen-gold-out 2300ms ease-out both}
+.luoshen-gold-feedback>svg{position:absolute;left:0;top:0;transform-origin:0 0;overflow:visible}
+.luoshen-gold-feedback path{fill:none;stroke-linejoin:round;stroke-linecap:round}
+.luoshen-gold-halo{stroke:#eac35c;stroke-width:6;opacity:.45;filter:blur(2px)}
+.luoshen-gold-line{stroke:#ffe39a;stroke-width:1.8;stroke-dasharray:1;animation:luoshen-gold-draw 650ms ease-out both}
+@keyframes luoshen-gold-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes luoshen-gold-out{0%,70%{opacity:1}100%{opacity:.8}}
+@media(prefers-reduced-motion:reduce){.luoshen-gold-feedback{animation:none}.luoshen-gold-line{animation:none}}
+.luoshen-poem-book .qingming-book-status{position:absolute;width:1px;height:1px;padding:0;margin:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+
+/* Clue discoveries use real cutout silhouettes, with the original kept in view. */
+.luoshen-game.is-sleeve-context .luoshen-note-compact,.luoshen-game.is-sleeve-context .luoshen-note-compact.is-above-detail{max-height:min(280px,calc(100dvh - 180px))}
+.luoshen-sleeve-studies{display:flex;justify-content:center;gap:18px;margin:4px 0 6px}
+.luoshen-sleeve-studies figure{margin:0;flex:1;max-width:106px;text-align:center}
+.luoshen-sleeve-art{height:104px;padding:3px 5px;box-sizing:border-box}
+.luoshen-sleeve-art>span[role=status]{font-size:13px;line-height:1.5}
+.luoshen-sleeve-studies figcaption{font-size:13px;line-height:1.4;color:#59624e}
+@media(prefers-reduced-motion:no-preference){.luoshen-sleeve-studies{animation:luoshen-sleeve-discover .5s ease-out both}}
+@keyframes luoshen-sleeve-discover{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.luoshen-sleeve-art{position:relative}
+.luoshen-sleeve-art>span:not([role=status]){display:block;width:100%;height:100%}
+.luoshen-sleeve-art canvas{position:absolute;inset:3px 5px;width:calc(100% - 10px);height:calc(100% - 6px);object-fit:contain}
+.luoshen-sleeve-art.is-lit{filter:drop-shadow(1px 0 0 #f5d477) drop-shadow(-1px 0 0 #f5d477) drop-shadow(0 1px 0 #f5d477) drop-shadow(0 -1px 0 #f5d477) drop-shadow(0 0 3px #e8bd53)}
+.luoshen-opening-sleeve-animation{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:12}
+.luoshen-opening-sleeve-world{position:absolute;left:0;top:0;transform-origin:0 0;pointer-events:none}
+.luoshen-opening-sleeve-world canvas{position:absolute}
+.luoshen-opening-sleeve-return{position:absolute;border:0;background:transparent;padding:0;pointer-events:auto;cursor:pointer}
+.luoshen-opening-sleeve-return:focus-visible{outline:2px solid #d9b761;outline-offset:4px}

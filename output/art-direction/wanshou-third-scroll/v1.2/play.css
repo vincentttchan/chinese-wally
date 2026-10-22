@@ -74,3 +74,36 @@
 @media(prefers-reduced-motion:reduce){.chapter-hit-feedback{animation:none}}
 
 .has-hit-feedback #navigator{visibility:hidden;pointer-events:none}
+
+/* Detail reading borrows the chapter's paper, typography and existing controls. */
+.inquiry-detail-layer{position:fixed;inset:0;z-index:95;display:flex;align-items:center;justify-content:center;padding:20px}
+.inquiry-detail-layer .inquiry-detail-paper{position:relative;width:min(100%,1040px);max-height:calc(100dvh - 40px);padding:28px 36px;animation:none;overflow-y:auto;overscroll-behavior:contain}
+.inquiry-detail-layer .lantern-paper>.lantern-eyebrow{position:static;margin:0 0 6px}
+.inquiry-detail-layer .lantern-paper h2{font-size:22px;margin:0 44px 12px 0}
+.inquiry-detail-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:12px}
+.inquiry-detail-pair figure{margin:0;min-width:0;touch-action:none;cursor:grab}
+.inquiry-detail-pair svg{display:block;width:100%;height:clamp(180px,36dvh,340px);background:#d9ceb32e}
+.inquiry-detail-pair figcaption{font-size:14px;text-align:center;margin-top:6px;color:var(--ink)}
+.inquiry-detail-tools{display:flex;align-items:center;justify-content:center;gap:24px;margin:8px 0}
+.inquiry-detail-tools span{font-size:14px;min-width:42px;text-align:center}
+.inquiry-detail-layer .lantern-note-caption{font-size:14px;line-height:1.6;margin:8px 0;color:var(--ink)}
+.inquiry-detail-layer button{min-height:44px}
+.inquiry-handoff{font-size:16px;line-height:1.7;margin:16px 0 2px;padding-top:12px;border-top:1px solid var(--line)}
+.inquiry-handoff span{display:block;font-size:12px;color:var(--soft-ink,#777960);margin-bottom:5px}
+.collection-illustration>svg,.collection-flight>svg,.collection-flight>img{display:block;width:100%;height:100%;object-fit:contain}
+.is-ensemble-playing #hud,.is-ensemble-playing #controls,.is-ensemble-playing #speech{visibility:hidden;pointer-events:none}
+@media(max-width:600px){
+ .inquiry-detail-layer{padding:10px}
+ .inquiry-detail-layer .inquiry-detail-paper{padding:24px 18px;max-height:calc(100dvh - 20px)}
+ .inquiry-detail-pair{gap:12px}
+ .inquiry-detail-pair svg{height:clamp(170px,32dvh,260px)}
+ .inquiry-detail-tools{gap:14px}
+}
+
+.inquiry-detail-layer button{font-family:inherit;background:transparent;border:0;color:var(--ink);cursor:pointer}
+.inquiry-detail-layer .lantern-note-tabs{display:flex;gap:18px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.inquiry-detail-layer .lantern-note-tabs button{font-size:15px;padding:6px 0;border-bottom:1px solid transparent}
+.inquiry-detail-layer .lantern-note-tabs button[aria-pressed="true"]{border-bottom-color:var(--ink)}
+.inquiry-detail-layer .lantern-note-next{display:flex;align-items:center;justify-content:space-between;width:100%;font-size:16px;padding:12px 0;border-top:1px solid var(--line);margin-top:12px}
+.inquiry-detail-layer button:disabled{opacity:.45;cursor:default}
+.inquiry-detail-layer button:focus-visible{outline:2px solid #8d6847;outline-offset:3px}

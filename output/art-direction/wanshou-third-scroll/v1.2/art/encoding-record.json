@@ -1,0 +1,12 @@
+{
+  "method": "lossless WebP encoding, unchanged source dimensions and RGB pixels",
+  "dimensions": [
+    4500,
+    2843
+  ],
+  "originalBytes": 15450097,
+  "runtimeBytes": 10300464,
+  "originalPixelSHA256": "d66a9d170253e7128c3508ad84a141260b7b48d3695e7fbd4a1817b5cb7ed173",
+  "runtimePixelSHA256": "d66a9d170253e7128c3508ad84a141260b7b48d3695e7fbd4a1817b5cb7ed173",
+  "encodingSeconds": 14.29
+}

@@ -1,0 +1,7 @@
+Tool: built-in image_gen.imagegen
+Date: 2026-10-20
+Reference: public/art/qingming/book-closed.png
+transparent_background: true
+Output: exec-fe57920f-68e4-4f0f-8ed3-22f3a6642005.png
+
+Edit this exact transparent cutout ancient Chinese book game prop. Keep the same composition, book geometry, parchment colors, ink outlines, cloth binding, red ribbon bookmark, size and clean transparent background. Change ONLY the vertical paper title label: erase the old text 東京夢華錄 and replace it with exactly three large traditional Chinese ink characters 洛神賦, arranged vertically top to bottom, elegantly spaced within the same existing paper label. The title must read 洛神賦 exactly. No new objects, no shadow rectangle, no backdrop. Preserve the source illustration style and transparent alpha. This is a game prop matching the established interface, not an authentic historical edition.

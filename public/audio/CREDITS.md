@@ -1,5 +1,16 @@
 # 畫中尋人：各章配樂與環境聲來源
 
+## 簪花仕女圖獨立配樂 · 2026-10-22
+
+- 曲目：**Chinese Restaurant Background 3**；作者：**Sascha Ende**。
+- 本地檔案：`zanhua-music.mp3`；原音檔未修改，約 131.16 秒，雙聲道、48kHz、128kbps MP3。
+- [作者曲目頁](https://ende.app/en/song/12392-chinese-restaurant-background-3)；[作者授權頁](https://ende.app/en/standard-license)；[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。2026-10-22 查閱曲目頁標示可用於私人及商業專案；本專案保留完整署名。
+- 曲目頁介紹為慢速古箏純音樂，適用於靜觀、庭園與文化場景。本章作為現代背景配樂使用，不是唐代音樂或畫中演奏的歷史復原。
+- 曲目頁公開音源：`https://ende.app/storage/mp3low/6ba5f034-2504-4fe0-98ed-02fe452b33af.mp3`。
+- SHA-256：`c16be78cb00ea97f236af1f9a50b1aaa1f94f67f9cabc86c170b1393f1d2c8bf`。
+- 署名：Chinese Restaurant Background 3 by Sascha Ende — ende.app. License: CC BY 4.0.
+- 沒有製作、合成或改編音樂。沿用 `useAmbience`、`chapterMusic.js` 及共用手繪音樂開關；由玩家開啟，閱讀時降音量，背景頁靜音，離開章節釋放播放資源。本地檔案循環播放；網頁版沿用共用引擎曲末交疊。遊戲從本地資產播放，不向作者網站傳送玩家資料。
+
 ## 洛神賦圖獨立配樂 · 2026-10-15
 
 - 曲目：《洛水微波》；本地檔案：`luoshen-music.wav`，48秒、24kHz、單聲道PCM。

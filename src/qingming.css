@@ -200,3 +200,6 @@
  .qingming-collection-grid .collection-illustration {height:140px;}
 }
 @media(prefers-reduced-motion:reduce){.qingming-guided-focus,.qingming-art-leaf {animation:none!important;}.qingming-book-object svg {transition:none!important;}}
+
+/* The reading wrapper is neutral for the existing Qingming leaf. */
+.qingming-book-reading{display:contents;}

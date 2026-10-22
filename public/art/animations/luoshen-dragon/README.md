@@ -5,7 +5,9 @@
 - 新增 `hindleg-v3.png`：內建 imagegen 獨立繪製的下垂後肢，不再翻轉前爪重用；提示與來源見 `PROMPT-HINDLEG-V3.txt`。
 - 繼續使用 `dragon-parts-v2.png`，執行時真正拆出軀幹、下頸、上頸，與頭、前肢、尾及新後肢組成七件。上下頸用父子關節串接並縮短曲線安排，頭爪保持剛性，原畫絹底不變。
 - 鏡頭納入完整雙鳥；標題移入題箋，上方使用現有手繪返回按鈕。重播及返回原畫保留於固定操作區。
-- `#luoshen-dragon-preview` 仍為獨立試看，沒有接入正式流程。
+- 已接入 `#luoshen` 找到洛神後的第二項原畫觀察；玩家點看龍形後自行選擇演繹，可直接繼續圖文對讀。與飛鳥及洛神共用互斥播放控制，觀察／重播不新增收藏。
+- `#luoshen-dragon-playtest` 由第二次尋找起試玩，不讀寫正式進度；`#luoshen-dragon-preview` 保留獨立試看。
+- 接入驗證見 `docs/chapters/luoshen-dragon-integration-2026-10-20.md`。
 - 當前驗證與限制見 `docs/chapters/luoshen-dragon-review-fix-2026-10-20.md`；下列 V2 說明保留為歷程。
 
 ## V2 初次示範（歷程）

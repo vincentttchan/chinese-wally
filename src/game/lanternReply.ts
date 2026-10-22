@@ -3,11 +3,32 @@ import type { Size, View } from './geometry.ts';
 import { lanternSize } from './lanternFestival.ts';
 
 type Rect = {left:number;top:number;width:number;height:number};
+export type SpeechGeometry={maxWidth?:number;anchor:{x:number;y:number};faces:readonly {x:number;y:number}[];heads?:readonly {x:number;y:number;width:number;height:number}[];measured?:Size;reservedRects?:readonly Rect[];openSpaceCandidates?:boolean};
 const overlap = (a:Rect,b:Rect) => Math.max(0,Math.min(a.left+a.width,b.left+b.width)-Math.max(a.left,b.left))
   * Math.max(0,Math.min(a.top+a.height,b.top+b.height)-Math.max(a.top,b.top));
 
 /** Prefer nearby open space, rather than covering the speaker or their neighbours. */
-export function placeLanternReply(actor:SceneActor,actors:SceneActor[],view:View,frame:Size,text:string,actionWidth=0,fontSize=16,extraHeight=0,artworkSize:Size=lanternSize,reservedRects:readonly Rect[]=[]) {
+export function placeLanternReply(actor:SceneActor,actors:SceneActor[],view:View,frame:Size,text:string,actionWidth=0,fontSize=16,extraHeight=0,artworkSize:Size=lanternSize,reservedRects:readonly Rect[]=[],speech?:SpeechGeometry) {
+  // Chapters with measured portrait anchors must not infer a face from a body box.
+  if(speech){
+    const x=view.x+speech.anchor.x*artworkSize.width*view.scale,y=view.y+speech.anchor.y*artworkSize.height*view.scale;
+    const width=Math.min(speech.maxWidth??410,frame.width-32,Math.max(230,Array.from(text).length*18+32));
+    const height=speech.measured?.height??(Math.ceil(Array.from(text).length/Math.floor((width-32)/18))*26+24+extraHeight);
+    const faces=speech.heads?speech.heads.map(p=>({left:view.x+p.x*artworkSize.width*view.scale,top:view.y+p.y*artworkSize.height*view.scale,width:p.width*artworkSize.width*view.scale,height:p.height*artworkSize.height*view.scale})):speech.faces.map(p=>({left:view.x+p.x*artworkSize.width*view.scale-68*view.scale,top:view.y+p.y*artworkSize.height*view.scale-125*view.scale,width:136*view.scale,height:155*view.scale}));
+    const face=faces[speech.faces.indexOf(speech.anchor)]??{left:x-60,top:y-110,width:120,height:145};
+    const candidates=[{left:face.left+face.width+24,top:y-30},{left:face.left-width-24,top:y-30},{left:x-width/2,top:face.top+face.height+28},{left:x-width/2,top:face.top-height-24}];
+    const body=speech.reservedRects?.find(r=>x>=r.left&&x<=r.left+r.width&&y>=r.top&&y<=r.top+r.height);
+    if(body)candidates.push({left:body.left-width-24,top:y-30},{left:body.left+body.width+24,top:y-30});
+    // Opt-in for a long scroll: nearby candidates may all overlap a skirt or fan.
+    if(speech.openSpaceCandidates)for(const left of [16,(frame.width-width)/2,frame.width-width-16])for(const top of [24,frame.height-height-86])candidates.push({left,top});
+    const rect=candidates.map((p,i)=>{
+      const r={left:Math.max(16,Math.min(frame.width-width-16,p.left)),top:Math.max(24,Math.min(frame.height-height-86,p.top)),width,height};
+      const distance=Math.hypot(Math.max(r.left-x,0,x-r.left-width),Math.max(r.top-y,0,y-r.top-height));
+      return {...r,score:faces.reduce((sum,f)=>sum+overlap(r,f)*30,0)+[...reservedRects,...(speech.reservedRects??[])].reduce((sum,f)=>sum+overlap(r,f)*20,0)+distance*4+i*10};
+    }).sort((a,b)=>a.score-b.score)[0];
+    const tailSide=x<rect.left?'left':x>rect.left+width?'right':y>rect.top+height?'bottom':'top';
+    return {...rect,tailSide,tailX:Math.max(14,Math.min(width-14,x-rect.left)),tailY:Math.max(14,Math.min(height-14,y-rect.top))};
+  }
   const project=(person:SceneActor):Rect=>({
     left:view.x+(person.x-person.width/2)*artworkSize.width*view.scale,
     top:view.y+(person.y-person.height/2)*artworkSize.height*view.scale,

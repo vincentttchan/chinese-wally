@@ -3,6 +3,7 @@ import type {LuoshenState} from './luoshenState.ts';
 export type LuoshenLookStop={id:string;label:string;text:string};
 export function luoshenJournalActor(id:string){return [...luoshenPeople,...luoshenCollectibles,...luoshenSteps.flatMap(s=>s.observations.map(o=>o.actor)),...luoshenEnding.map(e=>e.observation.actor)].find(a=>a.id===id);}
 const collectionStops:Record<string,LuoshenLookStop[]>={
+ beast:[{id:'beast-0',label:'上方長角神獸',text:'先看頭上的長角，再沿前肢與身形看牠伸展的姿態。'},{id:'beast-1',label:'下方長角神獸',text:'兩隻淺色神獸相伴，長線與雲水交錯；與車前的龍形比較。'}],
  bird:[{id:'bird-0',label:'開首飛鳥',text:'看飛起的雙翼，再與送別場面的長頸鳥形比較。'},{id:'bird-2',label:'送別鳥形',text:'長頸鳥形伴在低身神女旁，留意牠們的位置。'}],
  ribbon:[{id:'ribbon-0',label:'初見衣帶',text:'衣帶在神女身旁延展，先記住這一處的輪廓。'},{id:'ribbon-1',label:'回身衣帶',text:'順著回轉的身形，看衣帶彎出的長線。'},{id:'ribbon-11',label:'榻前衣帶',text:'神女來到坐榻前，連著她的姿態看衣帶。'},{id:'ribbon-13',label:'低身處衣帶',text:'看人物下方延伸的長線，與初見的輪廓比較。'}],
  dragon:[{id:'dragon-0',label:'開首龍形',text:'這處龍形在神女附近，沒有連著雲車。'},{id:'dragon-1',label:'車前龍形',text:'龍形在雲車前相連，重點是牽引車駕的關係。'}],

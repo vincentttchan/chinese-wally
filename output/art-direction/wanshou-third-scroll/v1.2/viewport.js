@@ -3,7 +3,7 @@
 const KangquViewport=(()=>{
  const limit=(value,low,high)=>Math.min(high,Math.max(low,value));
  function coverScale(bounds,frame,gutter=1){return Math.max((frame[0]+gutter*2)/(bounds[2]-bounds[0]),(frame[1]+gutter*2)/(bounds[3]-bounds[1]));}
- function maxScale(bounds,frame,config){return Math.max(1,coverScale(bounds,frame,config.gutter)*config.initialZoomRatio);}
+ function maxScale(bounds,frame,config){return Math.max(bounds[2]-bounds[0]<=4500?(config.maxNativeScale||1):1,coverScale(bounds,frame,config.gutter)*config.initialZoomRatio);}
  function constrain(view,bounds,frame,config){
   const min=coverScale(bounds,frame,config.gutter),max=maxScale(bounds,frame,config),scale=limit(view.scale,min,max),g=config.gutter;
   return {scale,x:limit(view.x,frame[0]+g-bounds[2]*scale,-g-bounds[0]*scale),y:limit(view.y,frame[1]+g-bounds[3]*scale,-g-bounds[1]*scale)};

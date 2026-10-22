@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-21",
+  "originalUnchanged": true,
+  "cropConfiguration": "output/art-direction/wanshou-third-scroll/v1.2/branch-content.js:inquiryAids",
+  "viewer": "output/art-direction/wanshou-third-scroll/v1.2/inquiry-details.js",
+  "assets": [
+    {
+      "path": "public/art/animations/kangqu-ensemble-master-v7/group-master.png",
+      "sha256": "b6b196a5b5b50a25be71561d348c804ac2c8a14124a1b006ae0f4b15aefdf3df",
+      "role": "existing approved group illustration; optional detail and recognition aid, not original evidence"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v2-detail/frames/group-01.png",
+      "sha256": "b092aafa66bf873a27c5f1df92fe44926bce389410500a7450ed932b7664ce89",
+      "role": "existing approved group illustration; optional detail and recognition aid, not original evidence"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v2-seven/group-master.png",
+      "sha256": "2fe8ae492a0a4ae553f8f3bc3f0e45dd5279f9ca553f4ff1ddbe9ff2365a74b0",
+      "role": "existing approved group illustration; optional detail and recognition aid, not original evidence"
+    }
+  ]
+}

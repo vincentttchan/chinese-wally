@@ -1,0 +1,96 @@
+{
+  "frameSize": [
+    430,
+    470
+  ],
+  "sharedCanvas": true,
+  "sharedSourceWindow": [
+    56,
+    43,
+    377,
+    394
+  ],
+  "referenceCellSize": [
+    418,
+    418
+  ],
+  "individualPartTransforms": false,
+  "restLock": {
+    "frame": 9,
+    "sourceFrame": 1
+  },
+  "frames": [
+    {
+      "frame": 1,
+      "wholeGroupTranslation": [
+        0,
+        0
+      ],
+      "shoeSimilarity": 0.971
+    },
+    {
+      "frame": 2,
+      "wholeGroupTranslation": [
+        1,
+        0
+      ],
+      "shoeSimilarity": 0.824
+    },
+    {
+      "frame": 3,
+      "wholeGroupTranslation": [
+        17,
+        0
+      ],
+      "shoeSimilarity": 0.862
+    },
+    {
+      "frame": 4,
+      "wholeGroupTranslation": [
+        1,
+        11
+      ],
+      "shoeSimilarity": 0.93
+    },
+    {
+      "frame": 5,
+      "wholeGroupTranslation": [
+        5,
+        11
+      ],
+      "shoeSimilarity": 0.812
+    },
+    {
+      "frame": 6,
+      "wholeGroupTranslation": [
+        18,
+        11
+      ],
+      "shoeSimilarity": 0.86
+    },
+    {
+      "frame": 7,
+      "wholeGroupTranslation": [
+        1,
+        16
+      ],
+      "shoeSimilarity": 0.93
+    },
+    {
+      "frame": 8,
+      "wholeGroupTranslation": [
+        2,
+        16
+      ],
+      "shoeSimilarity": 0.84
+    },
+    {
+      "frame": 9,
+      "wholeGroupTranslation": [
+        17,
+        16
+      ],
+      "shoeSimilarity": 0.86
+    }
+  ]
+}

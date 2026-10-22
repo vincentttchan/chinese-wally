@@ -1,0 +1,176 @@
+{
+  "frameSize": [
+    205,
+    270
+  ],
+  "columns": 4,
+  "rows": 3,
+  "colorGain": [
+    0.85,
+    0.85,
+    0.85
+  ],
+  "colorBias": [
+    18.97500000000001,
+    22.0,
+    20.10000000000001
+  ],
+  "frames": [
+    {
+      "frame": 1,
+      "blue": {
+        "dx": -6,
+        "dy": -2,
+        "similarity": 0.853
+      },
+      "drummer": {
+        "dx": -5,
+        "dy": -4,
+        "similarity": 0.843
+      }
+    },
+    {
+      "frame": 2,
+      "blue": {
+        "dx": -5,
+        "dy": -2,
+        "similarity": 0.842
+      },
+      "drummer": {
+        "dx": -5,
+        "dy": -4,
+        "similarity": 0.844
+      }
+    },
+    {
+      "frame": 3,
+      "blue": {
+        "dx": -6,
+        "dy": -2,
+        "similarity": 0.845
+      },
+      "drummer": {
+        "dx": -5,
+        "dy": -5,
+        "similarity": 0.78
+      }
+    },
+    {
+      "frame": 4,
+      "blue": {
+        "dx": -6,
+        "dy": -2,
+        "similarity": 0.861
+      },
+      "drummer": {
+        "dx": -5,
+        "dy": -4,
+        "similarity": 0.827
+      }
+    },
+    {
+      "frame": 5,
+      "blue": {
+        "dx": -6,
+        "dy": -1,
+        "similarity": 0.858
+      },
+      "drummer": {
+        "dx": -5,
+        "dy": -3,
+        "similarity": 0.827
+      }
+    },
+    {
+      "frame": 6,
+      "blue": {
+        "dx": -6,
+        "dy": -1,
+        "similarity": 0.851
+      },
+      "drummer": {
+        "dx": -5,
+        "dy": -3,
+        "similarity": 0.798
+      }
+    },
+    {
+      "frame": 7,
+      "blue": {
+        "dx": -6,
+        "dy": -1,
+        "similarity": 0.853
+      },
+      "drummer": {
+        "dx": -5,
+        "dy": -3,
+        "similarity": 0.794
+      }
+    },
+    {
+      "frame": 8,
+      "blue": {
+        "dx": -6,
+        "dy": -1,
+        "similarity": 0.808
+      },
+      "drummer": {
+        "dx": -5,
+        "dy": -3,
+        "similarity": 0.766
+      }
+    },
+    {
+      "frame": 9,
+      "blue": {
+        "dx": -6,
+        "dy": -1,
+        "similarity": 0.851
+      },
+      "drummer": {
+        "dx": -5,
+        "dy": -3,
+        "similarity": 0.796
+      }
+    },
+    {
+      "frame": 10,
+      "blue": {
+        "dx": -6,
+        "dy": -1,
+        "similarity": 0.852
+      },
+      "drummer": {
+        "dx": -5,
+        "dy": -3,
+        "similarity": 0.846
+      }
+    },
+    {
+      "frame": 11,
+      "blue": {
+        "dx": -6,
+        "dy": -1,
+        "similarity": 0.854
+      },
+      "drummer": {
+        "dx": -5,
+        "dy": -3,
+        "similarity": 0.846
+      }
+    },
+    {
+      "frame": 12,
+      "blue": {
+        "dx": -6,
+        "dy": -1,
+        "similarity": 0.864
+      },
+      "drummer": {
+        "dx": -5,
+        "dy": -3,
+        "similarity": 0.848
+      }
+    }
+  ]
+}

@@ -173,11 +173,6 @@ const tilePoints:Record<string,readonly [number,number,number]>={
   1950,
   350
  ],
- "cloud-spirit-right": [
-  3,
-  750,
-  530
- ],
  "boat-companion-one": [
   2,
   80,

@@ -22,15 +22,16 @@ icon_js='const canonicalIcons='+json.dumps(icons)+';\n'
 icon_js+="function icon(name,size=18){const cell=canonicalIcons[name];return `<span class=\"art-icon\" aria-hidden=\"true\" style=\"width:${size}px;height:${size}px;background-position:${cell%4*100/3}% ${Math.floor(cell/4)*100/3}%\"></span>`;}\n"
 js='\n'.join((data/name).read_text() for name in ['chapter-data.js','inventory.js','collection-revisions.js','diagnostic-revisions.js','geometry.js'])
 js+='\n'+(folder/'content-revisions.js').read_text()
-js+='\n'+(folder/'dialogue-revisions.js').read_text()
+js+='\n'+(folder/'dialogue-revisions.js').read_text()+'\n'+(folder/'branch-content.js').read_text()
 config=json.loads((folder/'viewport-config.json').read_text())
 js+='\nconst chapterViewport='+json.dumps(config,ensure_ascii=False)+';\n'+(folder/'viewport.js').read_text()
 music_sources=['src/audio/chapterMusic.js','src/audio/chapterMusicTracks.js']
 shared_music='\n'.join((root/name).read_text().replace('export function ','function ').replace('export const ','const ') for name in music_sources)
 js+='\nconst ensemblePlayback='+json.dumps(json.loads((root/'src/game/kangquEnsemblePlayback.json').read_text()))+';\n'
 js+='\nconst audiencePlayback='+json.dumps(json.loads((root/'src/game/kangquAudiencePlayback.json').read_text()))+';\n'
+js+='\nconst flagPlayback='+json.dumps(json.loads((root/'src/game/kangquFlagsPlayback.json').read_text()))+';\n'
 js+='\nconst hitContourPaths='+json.dumps(json.loads((folder/'hit-contours.json').read_text()))+';\n'
-js+='\n'+icon_js+shared_music+'\n'+(folder/'music.js').read_text()+'\n'+(folder/'epilogue.js').read_text()+'\n'+(folder/'audience-animation.js').read_text()+'\n'+(folder/'hit-feedback.js').read_text()+'\n'+(folder/'play.js').read_text()+'\n'+(folder/'interface.js').read_text()+'\n'+(folder/'map.js').read_text()
+js+='\n'+icon_js+shared_music+'\n'+(folder/'music.js').read_text()+'\n'+(folder/'epilogue.js').read_text()+'\n'+(folder/'audience-animation.js').read_text()+'\n'+(folder/'hit-feedback.js').read_text()+'\n'+(folder/'inquiry-details.js').read_text()+'\n'+(folder/'inquiry-flow.js').read_text()+'\n'+(folder/'inquiry-playback.js').read_text()+'\n'+(folder/'flags-animation.js').read_text()+'\n'+(folder/'play.js').read_text()+'\n'+(folder/'interface.js').read_text()+'\n'+(folder/'map.js').read_text()
 js+='\n'+(root/'src/chapterNavigation.js').read_text().replace('export function ','function ')
 js+='\ndocument.querySelectorAll(\".chapter-links\").forEach(keepCurrentChapterVisible);\n'
 js+='\n'+(root/'src/page-motion.js').read_text()
@@ -58,8 +59,8 @@ def painted(match):
     name=match.group(1);cell=icons[name];size=int(match.group(2) or 18)
     return f'<span class="art-icon" aria-hidden="true" style="width:{size}px;height:{size}px;background-position:{cell%4*100/3}% {cell//4*100/3}%"></span>'
 shell=re.sub(r'\{\{icon:(\w+)(?::(\d+))?\}\}',painted,shell)
-page='<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>在人群中聽樂 · 畫中有案</title><style>\n'+css+'\n</style></head><body class="lantern-game kangqu-game">'+shell+'<script>\n'+js+'\n</script></body></html>\n'
+page='<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>在人群中聽樂 · 畫中尋人</title><style>\n'+css+'\n</style></head><body class="lantern-game kangqu-game">'+shell+'<script>\n'+js+'\n</script></body></html>\n'
 (folder/'play.html').write_text(page)
 records=[{'path':name,'sha256':hashlib.sha256((root/name).read_bytes()).hexdigest()} for name in styles+['src/components/ArtIcons.tsx','src/game/historicalChapters.ts','src/chapterNavigation.js']+music_sources]
-(folder/'ui-source-manifest.json').write_text(json.dumps({'standard':'宮中鬧元宵現行介面','sources':records,'chapterAdaptations':['source-coordinate display bounds and cover camera','initial view at 1.5 times cover minimum','undistorted native-content map with viewport rectangle','four target portraits','202 people with individually authored three-line fictional dialogue and native evidence records','eight collection illustrations in two columns, plus visible motif progress','four characters, spatial observation, evidence judgement, two historical interpretations and approved v7 ensemble and seven-person audience group animations with stationary backgrounds'],'retiredStyles':['v0.2/common.css','v0.2/effects.css','v0.2/art-ui.css','v0.2/journal-ui.css','v0.3.2/play.css','v0.5/play.css']},ensure_ascii=False,indent=2)+'\n')
+(folder/'ui-source-manifest.json').write_text(json.dumps({'standard':'宮中鬧元宵現行介面','sources':records,'chapterAdaptations':['source-coordinate display bounds and cover camera','initial view at 1.5 times cover minimum','undistorted native-content map with viewport rectangle','three target portraits','202 people with individually authored three-line fictional dialogue and native evidence records','eight collection categories in two columns, black flag study and visible motif progress','three characters, free musician observation with nearby fictional dialogue, optional in-painting interpretation and historical reading, single evidence ending and approved v7 whole-group repainted ensemble animation with a stationary background'],'retiredStyles':['v0.2/common.css','v0.2/effects.css','v0.2/art-ui.css','v0.2/journal-ui.css','v0.3.2/play.css','v0.5/play.css']},ensure_ascii=False,indent=2)+'\n')
 print('Saved v1.2 chapter with research-backed observations and collection names.')

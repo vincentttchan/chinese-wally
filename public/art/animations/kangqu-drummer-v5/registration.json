@@ -1,0 +1,146 @@
+{
+  "frameSize": [
+    205,
+    270
+  ],
+  "panelBounds": [
+    286,
+    360
+  ],
+  "sharedColorGain": 0.88,
+  "sharedColorBias": [
+    19.36,
+    21.599999999999994,
+    22.439999999999998
+  ],
+  "frames": [
+    {
+      "frame": 1,
+      "offset": [
+        -2,
+        -5
+      ],
+      "headSimilarity": 0.783
+    },
+    {
+      "frame": 2,
+      "offset": [
+        0,
+        -6
+      ],
+      "headSimilarity": 0.795
+    },
+    {
+      "frame": 3,
+      "offset": [
+        3,
+        -5
+      ],
+      "headSimilarity": 0.789
+    },
+    {
+      "frame": 4,
+      "offset": [
+        4,
+        -5
+      ],
+      "headSimilarity": 0.78
+    },
+    {
+      "frame": 5,
+      "offset": [
+        -2,
+        -7
+      ],
+      "headSimilarity": 0.765
+    },
+    {
+      "frame": 6,
+      "offset": [
+        -1,
+        -8
+      ],
+      "headSimilarity": 0.763
+    },
+    {
+      "frame": 7,
+      "offset": [
+        2,
+        -8
+      ],
+      "headSimilarity": 0.757
+    },
+    {
+      "frame": 8,
+      "offset": [
+        3,
+        -7
+      ],
+      "headSimilarity": 0.736
+    },
+    {
+      "frame": 9,
+      "offset": [
+        -2,
+        -6
+      ],
+      "headSimilarity": 0.773
+    },
+    {
+      "frame": 10,
+      "offset": [
+        -1,
+        -5
+      ],
+      "headSimilarity": 0.807
+    },
+    {
+      "frame": 11,
+      "offset": [
+        2,
+        -6
+      ],
+      "headSimilarity": 0.773
+    },
+    {
+      "frame": 12,
+      "offset": [
+        4,
+        -6
+      ],
+      "headSimilarity": 0.764
+    },
+    {
+      "frame": 13,
+      "offset": [
+        -2,
+        -6
+      ],
+      "headSimilarity": 0.802
+    },
+    {
+      "frame": 14,
+      "offset": [
+        -1,
+        -7
+      ],
+      "headSimilarity": 0.765
+    },
+    {
+      "frame": 15,
+      "offset": [
+        2,
+        -8
+      ],
+      "headSimilarity": 0.766
+    },
+    {
+      "frame": 16,
+      "offset": [
+        3,
+        -7
+      ],
+      "headSimilarity": 0.755
+    }
+  ]
+}

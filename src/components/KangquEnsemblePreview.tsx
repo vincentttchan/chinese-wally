@@ -1,0 +1,44 @@
+import {useEffect,useMemo,useState} from 'react';
+import {ScrollScene} from './ScrollScene.tsx';
+import type {SceneViewport,StudyCommand} from './ScrollScene.tsx';
+import {LanternPaintingNote} from './LanternPaintingNote.tsx';
+import {LanternPaintingTarget} from './LanternPaintingTarget.tsx';
+import {KangquEnsembleAnimation} from './KangquEnsembleAnimation.tsx';
+import {kangquEnsembleSize as size,kangquEnsemblePainting as painting,kangquEnsembleFocus as focus} from '../game/kangquEnsemble.ts';
+import {KangquEnsembleMasterReview} from './KangquEnsembleMasterReview.tsx';
+import '../lantern.css';
+import '../lantern-observation.css';
+import '../lantern-acrobat.css';
+import '../kangqu-ensemble.css';
+
+const zooms=[1,2,3,4,5,6,7];
+const anchor={id:'ensemble',kind:'observation' as const,name:'亭內樂隊',...focus,width:.04,height:.095};
+const region={points:[[900,2310],[1040,2310],[1090,2390],[1100,2440],[1040,2490],[1000,2535],[925,2535],[914,2400]].map(([x,y])=>({x:x/size.width,y:y/size.height}))};
+/** An isolated sample; it never changes chapter progress or collection saves. */
+export function KangquEnsemblePreview(){
+ const [ready,setReady]=useState(false),[playing,setPlaying]=useState(false),[seen,setSeen]=useState(false),[failed,setFailed]=useState(false);
+ const [showMaster,setShowMaster]=useState(false);
+ const [playbackRate,setPlaybackRate]=useState(1);
+ const [viewport,setViewport]=useState<SceneViewport>({view:{x:0,y:0,scale:1},frame:{width:1280,height:720}});
+ useEffect(()=>{const title=document.title;document.title='亭內樂隊 · 整組摹繪動畫';return()=>{document.title=title;};},[]);
+ const compact=viewport.frame.width<700;
+ const look=useMemo<StudyCommand>(()=>({region:focus,scaleRatio:compact?4.2:5.4,screenAnchor:{x:compact?.5:viewport.frame.width<1000?.59:.70,y:compact?.30:.50},transition:'pan',token:compact?2:1}),[compact,viewport.frame.width]);
+ const play=(rate=1)=>{if(!ready||playing)return;setPlaybackRate(rate);setFailed(false);setPlaying(true);};
+ const finish=()=>{setPlaying(false);setSeen(true);};
+ if(showMaster)return <KangquEnsembleMasterReview onBack={()=>setShowMaster(false)}/>;
+ return <main className="immersive-game lantern-game kangqu-ensemble-preview is-near-view is-reviewing">
+  <ScrollScene image={painting} artworkSize={size} actors={[]} active blocked resetKey={0} hint={null} onInspect={()=>{}} onReady={setReady} motion={false} focusing={false} studyCommand={look} onViewportChange={setViewport} zoomStops={zooms} title="亭內三人合奏樣段" description="康衢駢慶原畫亭內：坐姿鼓手、藍衣持鈸者與灰衣鑼手"/>
+  <header data-chapter-preview className="lantern-acrobat-preview-header">亭內樂隊 · 整組摹繪動畫 <a className="chapter-back" href="#kangqu-listening">回到章節</a></header>
+  {ready&&!playing&&<LanternPaintingTarget region={region} viewport={viewport} artworkSize={size} label="播放亭內三人合奏" onClick={()=>play()} hint="輕點亭內樂隊"/>}
+  {playing&&<KangquEnsembleAnimation playbackRate={playbackRate} viewport={viewport} onDone={finish} onError={()=>{setPlaying(false);setFailed(true);}}/>}
+  <LanternPaintingNote index={0} anchor={anchor} artworkSize={size} viewport={viewport} label="群像摹繪 · 動畫樣段" title={seen?'鼓聲起，鈸鑼應':'看亭內三人合奏'} busy={playing}>
+   <p className="lantern-note-body">{seen?'鼓手起拍，持鈸者接上，\n敲鑼者再作回應。':'輕點亭內樂隊，\n看三人合奏與動作呼應。'}</p>
+   {!compact&&<p className="lantern-note-caption">動作為遊戲演繹，原畫為觀察依據。</p>}
+   {failed&&<p className="lantern-note-caption" role="status">素材暫未載入，請再試一次。</p>}
+   <button className="lantern-note-material" onClick={()=>setShowMaster(true)}>看整組摹繪稿與原畫對照</button>
+   <button className="lantern-note-next" disabled={!ready||playing} onClick={()=>play()}>{ready?seen?'再看一次':'播放樣段':'正在展卷'} <span aria-hidden="true">→</span></button>
+   <button className="lantern-note-material" disabled={!ready||playing} onClick={()=>play(.5)}>慢速細看</button>
+  </LanternPaintingNote>
+  {playing&&<p className="lantern-acrobat-caption" role="status">鼓手領拍，鈸、鑼相應 <button className="lantern-text-button" onClick={finish}>略過</button></p>}
+ </main>;
+}

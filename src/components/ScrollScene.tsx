@@ -10,8 +10,10 @@ export type SceneHint = {region: Point; token: number};
 export type SceneSelection = {actorId: string; kind: 'wrong' | 'found' | 'clue'; token: number};
 export type StudyCommand = {
   region: Point; scaleRatio?: number; token: number;
+  allowHorizontalMargin?: boolean;
+  allowVerticalMargin?: boolean;
   screenAnchor?: Point;
-  transition?: 'pan' | 'crossfade';
+  transition?: 'pan' | 'crossfade' | 'instant';
   onSettled?: () => void;
 };
 export type SceneViewport = {view: View; frame: Size};
@@ -29,17 +31,23 @@ type Props = {
   artworkSize?: Size;
   requireTiles?: boolean;
   keyboardNavigation?: boolean;
+  /** Continuous wheel/pinch input and frame-coalesced rendering; opt in per chapter. */
+  smoothNavigation?: boolean;
   onMiss?: () => void;
+  /** Return true when a chapter consumes a stationary tap before actor hit testing. */
+  onPaintingTap?: (world:Point) => boolean;
   onViewChange?: (window: {left: number; width: number}) => void;
   initialFocus?: Point;
   study?: {region: Point; monochrome: boolean; height: number} | null;
   studyCommand?: StudyCommand | null;
   zoomStops?: readonly number[];
+  minimumScaleRatio?: number;
+  showBackdrop?: boolean;
   onViewportChange?: (viewport: SceneViewport) => void;
 };
 const defaultZoomStops = [1, 1.1, 1.25, 1.5, 1.75];
 
-export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hint, selection, command, onInspect, onExplore, onReady, motion = true, title = '科舉放榜日', description = '原創科舉放榜日全景古畫，左側榜牆、中央茶攤、右側橋頭與人群', steam, initialRegion, focusing = true, artworkSize, requireTiles = false, hitResolver, onMiss, onViewChange, initialFocus, study, studyCommand, onViewportChange,zoomStops=defaultZoomStops,keyboardNavigation=false}: Props) {
+export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hint, selection, command, onInspect, onExplore, onReady, motion = true, title = '科舉放榜日', description = '原創科舉放榜日全景古畫，左側榜牆、中央茶攤、右側橋頭與人群', steam, initialRegion, focusing = true, artworkSize, requireTiles = false, hitResolver, onMiss, onViewChange, initialFocus, study, studyCommand, onViewportChange,zoomStops=defaultZoomStops,minimumScaleRatio=1,keyboardNavigation=false,showBackdrop=true,smoothNavigation=false,onPaintingTap}: Props) {
   const root = useRef<HTMLDivElement>(null);
   const frame = useRef<Size>({width: 1280, height: 800});
   const picture = useRef<Size>({width: 2172, height: 724});
@@ -64,24 +72,49 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
   const animation = useRef<number | null>(null);
   const velocity = useRef({x: 0, y: 0, time: 0});
   const wheelSum = useRef(0);
+  const publishFrame = useRef<number|null>(null);
+  const viewCallbacks = useRef({onViewportChange,onViewChange});
+  viewCallbacks.current = {onViewportChange,onViewChange};
   const lastLayout = useRef<{frame: Size; picture: Size; resetKey: number} | null>(null);
   const onExploreRef = useRef(onExplore); onExploreRef.current = onExplore;
   const reduced = () => !motion || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const stopAnimation = () => {if (animation.current !== null) cancelAnimationFrame(animation.current); animation.current = null;};
   const baseScale = () => coverView(frame.current, picture.current).scale;
-  const limits = () => ({min: baseScale(), max: baseScale() * zoomStops[zoomStops.length-1]});
-  const applyView = (next: View) => {
+  const limits = () => ({min: baseScale()*minimumScaleRatio, max: baseScale() * zoomStops[zoomStops.length-1]});
+  // An explicitly composed study shot may show the matte beyond a scroll end.
+  const boundView = (next: View) => {
+    const bounded=clampView(next, frame.current, picture.current);
+    const anchor=studyCommand?.screenAnchor??{x:.5,y:.5};
+    if(studyCommand?.allowHorizontalMargin){
+      const composed=frame.current.width*anchor.x-studyCommand.region.x*picture.current.width*next.scale;
+      bounded.x=Math.max(Math.min(bounded.x,composed),Math.min(Math.max(bounded.x,composed),next.x));
+    }
+    if(studyCommand?.allowVerticalMargin){
+      const composed=frame.current.height*anchor.y-studyCommand.region.y*picture.current.height*next.scale;
+      bounded.y=Math.max(Math.min(bounded.y,composed),Math.min(Math.max(bounded.y,composed),next.y));
+    }
+    return bounded;
+  };
+  const applyView = (next: View, coalesce = false) => {
     const range = limits();
     const scale = Math.max(range.min, Math.min(range.max, next.scale));
     const covered = zoomAt(next, scale / next.scale, {x: frame.current.width / 2, y: frame.current.height / 2}, range);
-    const bounded = clampView(covered, frame.current, picture.current);
-    current.current = bounded; setView(bounded);
-    onViewportChange?.({view: bounded, frame: {...frame.current}});
-    onViewChange?.({left: -bounded.x / (picture.current.width * scale), width: Math.min(1, frame.current.width / (picture.current.width * scale))});
+    const bounded = boundView(covered);
+    current.current = bounded;
+    const publish = () => {
+      publishFrame.current = null;
+      const latest = current.current;
+      setView(latest);
+      viewCallbacks.current.onViewportChange?.({view: latest, frame: {...frame.current}});
+      viewCallbacks.current.onViewChange?.({left: -latest.x / (picture.current.width * latest.scale), width: Math.min(1, frame.current.width / (picture.current.width * latest.scale))});
+    };
+    // Preserve all input deltas immediately, but render only the latest view per frame.
+    if(coalesce){if(publishFrame.current===null)publishFrame.current=requestAnimationFrame(publish);}
+    else {if(publishFrame.current!==null)cancelAnimationFrame(publishFrame.current);publish();}
   };
   const animateView = (next: View, duration = 550, onSettled?: () => void, review = false) => {
     stopAnimation();
-    const target = clampView(next, frame.current, picture.current);
+    const target = boundView(next);
     if (review ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : reduced()) {applyView(target); onSettled?.(); return;}
     const from = {...current.current}; const started = performance.now();
     const tick = (now: number) => {
@@ -93,6 +126,8 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
     };
     animation.current = requestAnimationFrame(tick);
   };
+  // A chapter may briefly fit a wider relationship; leaving restores normal cover limits.
+  useEffect(()=>{if(loaded)applyView({...current.current});},[minimumScaleRatio]);
   // The observation position belongs to the player and uses viewport coordinates.
   const moveFocus = (p: Point) => setFocusPoint({x: Math.max(0, Math.min(1, p.x / frame.current.width)), y: Math.max(0, Math.min(1, p.y / frame.current.height))});
   useEffect(() => {
@@ -103,6 +138,8 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
     root.current?.focus({preventScroll: true});
   }, [focusing, active, blocked, loaded]);
   const point = (x: number, y: number): Point => {const bounds = root.current!.getBoundingClientRect(); return {x: x - bounds.left, y: y - bounds.top};};
+  const liveNavigation=useRef({applyView,point,limits});
+  liveNavigation.current={applyView,point,limits};
   const zoomStep = (direction: number, anchor = {x: frame.current.width / 2, y: frame.current.height / 2}) => {
     onExploreRef.current?.();
     const ratio = current.current.scale / baseScale();
@@ -121,7 +158,7 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
       if (!size.width || !size.height) return;
       frame.current = size; setFrameSize(size);
     });
-    observer.observe(node); return () => {observer.disconnect(); stopAnimation();};
+    observer.observe(node); return () => {observer.disconnect(); stopAnimation(); if(publishFrame.current!==null)cancelAnimationFrame(publishFrame.current);};
   }, []);
   useLayoutEffect(() => {
     if (!loaded) return;
@@ -165,7 +202,9 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
     let fade: Animation | undefined;
     let raf: number | undefined;
     const settled = () => {if (!cancelled) studyCommand.onSettled?.();};
-    if (studyCommand.transition === 'crossfade' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (studyCommand.transition === 'instant') {
+      stopAnimation();applyView(target);settled();
+    } else if (studyCommand.transition === 'crossfade' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       stopAnimation();
       setDepartingView({...current.current});
       applyView(target);
@@ -205,14 +244,24 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
     const node = root.current; if (!node) return;
     const wheel = (event: WheelEvent) => {
       if (!loaded || blocked) return;
-      event.preventDefault(); wheelSum.current += event.deltaY;
+      event.preventDefault();
+      if(smoothNavigation){
+        stopAnimation();
+        const navigation=liveNavigation.current;
+        const unit=event.deltaMode===1?16:event.deltaMode===2?frame.current.height:1;
+        const delta=Math.max(-240,Math.min(240,event.deltaY*unit));
+        navigation.applyView(zoomAt(current.current,Math.exp(-delta*.0018),navigation.point(event.clientX,event.clientY),navigation.limits()),true);
+        onExploreRef.current?.();
+        return;
+      }
+      wheelSum.current += event.deltaY;
       if (Math.abs(wheelSum.current) < 35) return;
       const direction = wheelSum.current < 0 ? 1 : -1; wheelSum.current = 0;
       zoomStep(direction, point(event.clientX, event.clientY));
     };
     node.addEventListener('wheel', wheel, {passive: false});
     return () => node.removeEventListener('wheel', wheel);
-  }, [loaded, blocked, motion]);
+  }, [loaded, blocked, motion, smoothNavigation]);
 
   const down = (event: ReactPointerEvent<HTMLDivElement>) => {
     if (blocked || !loaded || event.button !== 0) return;
@@ -229,21 +278,21 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
     if (focusing && (event.pointerType === 'mouse' || pointers.current.size <= 1)) moveFocus(position);
     if (!pointers.current.has(event.pointerId)) return;
     const before = [...pointers.current.values()]; const old = pointers.current.get(event.pointerId)!;
-    const p = point(event.clientX, event.clientY); pointers.current.set(event.pointerId, p);
+    const p = position; pointers.current.set(event.pointerId, p);
     if (start.current && Math.hypot(p.x - start.current.x, p.y - start.current.y) > 7) {moved.current = true; onExploreRef.current?.();}
     if (pointers.current.size === 1) {
       // Touch observation moves the light; two fingers retain canvas navigation.
       if (focusing && event.pointerType !== 'mouse') return;
       const now = performance.now(); const elapsed = Math.max(8, now - velocity.current.time);
       velocity.current = {x: (p.x - old.x) / elapsed, y: (p.y - old.y) / elapsed, time: now};
-      applyView({...current.current, x: current.current.x + p.x - old.x, y: current.current.y + p.y - old.y});
+      applyView({...current.current, x: current.current.x + p.x - old.x, y: current.current.y + p.y - old.y},smoothNavigation);
     } else {
       const after = [...pointers.current.values()];
       const distance = (ps: Point[]) => Math.hypot(ps[0].x - ps[1].x, ps[0].y - ps[1].y);
       const middle = (ps: Point[]) => ({x: (ps[0].x + ps[1].x) / 2, y: (ps[0].y + ps[1].y) / 2});
       const a = middle(before), b = middle(after); pinchMiddle.current = b;
       const next = zoomAt(current.current, distance(before) > 0 ? distance(after) / distance(before) : 1, a, limits());
-      applyView({...next, x: next.x + b.x - a.x, y: next.y + b.y - a.y});
+      applyView({...next, x: next.x + b.x - a.x, y: next.y + b.y - a.y},smoothNavigation);
       onExploreRef.current?.();
     }
   };
@@ -262,6 +311,7 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
     if (!isTap) {
       if (focusing && event.pointerType !== 'mouse' && !pinched.current) return;
       if (!pointers.current.size && pinched.current) {
+        if(smoothNavigation)return; // Keep the player’s exact pinch scale; no snap-back.
         const ratio = current.current.scale / baseScale();
         const nearest = zoomStops.reduce((a, b) => Math.abs(a - ratio) < Math.abs(b - ratio) ? a : b);
         animateView(zoomAt(current.current, baseScale() * nearest / current.current.scale, pinchMiddle.current ?? p, limits()), 180);
@@ -275,6 +325,7 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
     }
     if (!active) return;
     const world = {x: (p.x - current.current.x) / current.current.scale, y: (p.y - current.current.y) / current.current.scale};
+    if(onPaintingTap?.(world))return;
     // Resolve the painted bounds before touch padding, so an adjacent small
     // child cannot lose a direct tap to an adult's expanded touch rectangle.
     const contains = (a: SceneActor, padded: boolean) =>
@@ -294,7 +345,7 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
     '--focus-radius': `${Math.max(100, study.height * dimensions.height * view.scale * .85)}px`} as React.CSSProperties : undefined;
   const focusStyle = {'--focus-x': `${focusPoint.x * 100}%`, '--focus-y': `${focusPoint.y * 100}%`, '--focus-radius': `${Math.min(210, Math.min(frameSize.width, frameSize.height) * .31)}px`} as React.CSSProperties;
   const marked = mark && actors.find(a => a.id === mark.actorId);
-  return <div className={`scroll-frame ${loaded ? 'is-ready' : ''}`} data-assets-ready={loaded && tilesReady ? 'true' : 'false'} style={{backgroundImage: `url("${image}")`}}>
+  return <div className={`scroll-frame ${loaded ? 'is-ready' : ''}`} data-assets-ready={loaded && tilesReady ? 'true' : 'false'} style={{backgroundImage: showBackdrop?`url("${image}")`:"none"}}>
     <div className={`scroll-viewport ${dragging ? 'is-dragging' : ''} ${observing ? 'is-focusing' : ''}`} ref={root} onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up} onKeyDown={event => {
       if (blocked || !loaded) return;
       if (observing && ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) {

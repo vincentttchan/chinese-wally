@@ -1,5 +1,5 @@
 import {useEffect,useRef,useState} from 'react';
-export type LuoshenAnimationKind='bird'|'ribbon'|'dragon';
+export type LuoshenAnimationKind='bird'|'ribbon'|'dragon'|'farewell'|'cloudcar'|'opening-sleeve';
 export type LuoshenPlaybackMode='idle'|'offered'|'preparing'|'playing'|'still'|'failed';
 type Playback={scope:string|null;kind:LuoshenAnimationKind|null;mode:LuoshenPlaybackMode;ticket:number};
 /** A single transient owner: switching animations invalidates callbacks from its predecessor. */

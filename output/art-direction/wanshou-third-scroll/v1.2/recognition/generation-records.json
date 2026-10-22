@@ -1,0 +1,9 @@
+{
+ "method":"built-in image_gen, transparent background",
+ "date":"2026-10-12",
+ "assets":["red-front-east-05-head-tracing-v2.png","watcher-pattern-head-tracing-v2.png"],
+ "referenceFiles":["red-front-east-05-head-source.png","watcher-pattern-head-source.png"],
+ "prompt":"Use case: identity-preserve. Asset type: historical-painting game recognition portrait. Reference image: the supplied native painting head crop, sole identity evidence. Create a conservative watercolor and fine ink tracing of ONLY this person's head, hat/headdress and beard if visible, isolated on transparent background. Preserve EXACT head turn, hat silhouette, facial hair silhouette and face proportions from reference. Do not infer sharp eyes or new facial marks from blurred pixels. No shoulders, garment, pole, props, wall or surroundings. Muted Qing painting colors, flat hand-painted appearance, not modern portrait, not photoreal. Leave generous transparent margin. This is explicitly an interpretive tracing, not a restored original. Save project asset; no text.",
+ "inspection":"Both generated assets inspected. Generated facial strokes are interpretive and must not be treated as original evidence. Native reference can be opened in the hint.",
+ "applicationUsage":"Only appearance hints; no generated content is placed in the original painting."
+}

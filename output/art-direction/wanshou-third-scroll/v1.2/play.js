@@ -2,7 +2,7 @@
 const $=id=>document.getElementById(id),scene=$('scene'),world=$('world'),panel=$('panel');
 const key='chinese-wally:kangqu-listening:journal:v1';
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-const state={mode:'intro',intro:0,round:0,step:0,hint:0,ending:0,ready:false,source:'native',focus:true,focusPoint:[2250,1700],view:{x:0,y:0,scale:.32},busy:false,reviewComplete:false,reviewReturn:null,reviewStage:"arrival",reviewIndex:0,reviewSeen:[],historyIndex:0,connectionHint:false,noteHidden:false,noteManual:false,animationIssue:false,details:{},collections:{},pending:{},visits:{},journalReturn:null,entry:null,journalLooking:false,speaker:null,completed:0,hintOpen:false,menuOpen:false};
+const state={mode:'intro',intro:0,round:0,step:0,hint:0,ending:0,ready:false,source:'native',focus:true,focusPoint:[2250,1700],view:{x:0,y:0,scale:.32},busy:false,reviewComplete:false,reviewReturn:null,reviewStage:"arrival",reviewIndex:0,reviewSeen:[],historyIndex:0,connectionHint:false,noteHidden:false,noteManual:false,animationIssue:false,details:{},collections:{},pending:{},visits:{},journalReturn:null,entry:null,journalLooking:false,speaker:null,completed:0,hintOpen:false,menuOpen:false,completedStations:[],observedPlayers:[],lastDetail:null};
 let noticeTimer,drag=null,pinched=false,pinch=null,cameraToken=0,displayCount=0;
 const pointers=new Map(),flights=new Set();
 const current=()=>chapter.rounds[state.round];
@@ -50,10 +50,11 @@ function render(){
 function centerAt(p,scale=.9,anchor=[.5,.56]){state.view={scale,x:scene.clientWidth*anchor[0]-p[0]*scale,y:scene.clientHeight*anchor[1]-p[1]*scale};render();focusAt(screenAt(p));}
 function zoomBy(factor,at=[scene.clientWidth/2,scene.clientHeight/2]){if(!state.ready||state.busy)return;const p=nativeAt(at),scale=Math.min(maxScale(),Math.max(minScale(),state.view.scale*factor));state.view={scale,x:at[0]-p[0]*scale,y:at[1]-p[1]*scale};render();focusAt(at);}
 async function moveTo(p,scale=.95){
- if(state.busy)return;state.busy=true;const token=++cameraToken;panel.classList.add('moving');render();
- const anchor=state.mode==='observe'?[scene.clientWidth<700?.5:.72,.46]:[.5,.56];
+ if(state.busy)return;scale=Math.min(maxScale(),Math.max(minScale(),scale));state.busy=true;const token=++cameraToken;panel.classList.add('moving');render();
+ const anchor=state.mode==='observe'?[scene.clientWidth<700?.5:.72,.46]:state.mode==='ending'&&state.reviewStage==='summary'?[scene.clientWidth<700?.5:.76,scene.clientWidth<700?.75:.60]:[.5,.56];
  const start={...state.view},end={scale,x:scene.clientWidth*anchor[0]-p[0]*scale,y:scene.clientHeight*anchor[1]-p[1]*scale};
  await new Promise(resolve=>{let first;const tick=now=>{if(token!==cameraToken){resolve();return;}first??=now;const t=reduced.matches?1:Math.min(1,(now-first)/500),q=t*t*(3-2*t);state.view={scale:start.scale+(end.scale-start.scale)*q,x:start.x+(end.x-start.x)*q,y:start.y+(end.y-start.y)*q};render();if(t<1)requestAnimationFrame(tick);else resolve();};requestAnimationFrame(tick);});
+ if(token!==cameraToken)return;
  state.busy=false;panel.classList.remove('moving');focusAt(screenAt(p));render();
 }
 function setMode(mode){state.mode=mode;state.noteHidden=false;state.noteManual=false;state.speaker=null;state.hintOpen=false;state.menuOpen=false;state.journalLooking=false;$('layout').classList.toggle('book-open',mode==='journal');drawPanel();drawPoints();render();}
@@ -77,26 +78,48 @@ function placeChapterSpeech(params){
 function placeSpeech(){
  const s=$('speech');s.hidden=true;if(!state.speaker||state.source!=='native'||state.busy||state.mode==='journal'||state.hintOpen||state.menuOpen)return;
  const person=chapter.people.find(p=>p.id===state.speaker.id),r=chapter.rounds.find(r=>r.id===person.id),head=midpoint(person.head||r?.head||[person.box[0],person.box[1],person.box[2],person.box[1]+40]);
+ const handoff=state.speaker.action==='handoff',found=state.speaker.action==='observe';
+ $('speech-text').textContent=state.speaker.text;
+ $('look').innerHTML=(handoff?(state.completedStations.length===2?'回到街道':'看看下一張樣貌'):found?'近看原畫':'繼續看畫')+'<span aria-hidden="true"> →</span>';
+ $('look').onclick=handoff?finishInquiryStation:found?beginObservation:()=>{state.speaker=null;drawPanel();render();};
  s.hidden=false;
  // Same 18px speech text as LanternEmperorSpeech; allow one desktop line and
  // natural wrapping when the available viewport is narrower.
- s.style.width=Math.min(scene.clientWidth-32,Math.max(140,[...state.speaker.text].length*18+32))+'px';
- const boxes=[person.box,...chapter.people.map(p=>p.head),...chapter.objects.map(objectBox),...(r?.comparison||[]).map(p=>p.box),...(r?.recognitionFeatures||[])];
+ s.style.width=Math.min(320,scene.clientWidth-32,Math.max(140,[...state.speaker.text].length*18+32))+'px';
+ const boxes=[person.box,...chapter.people.map(p=>p.head),...(freeEnsembleObservation()||handoff?[]:chapter.objects.map(objectBox)),...(r?.comparison||[]).map(p=>p.box),...(r?.recognitionFeatures||[])];
  const sceneRect=scene.getBoundingClientRect();
  for(const id of ['mission','colour','fullscreen','menu-toggle','book','navigator','hint-toggle']){
   const element=$(id);if(!element||!element.getClientRects().length)continue;
   const b=element.getBoundingClientRect();boxes.push([(b.left-sceneRect.left-state.view.x)/state.view.scale,(b.top-sceneRect.top-state.view.y)/state.view.scale,(b.right-sceneRect.left-state.view.x)/state.view.scale,(b.bottom-sceneRect.top-state.view.y)/state.view.scale]);
  }
- const placement=placeChapterSpeech({anchor:head,subjectBox:person.box,safeBottom:r?.safeY||person.box[1]-56,view:state.view,viewport:[scene.clientWidth,scene.clientHeight],frame:[s.offsetWidth,s.offsetHeight],protectedBoxes:boxes});
+ let placement;
+ const preferredWidth=parseFloat(s.style.width);
+ for(const width of [...new Set([preferredWidth,280,240,200].filter(width=>width<=preferredWidth))]){
+  s.style.width=width+'px';
+  placement=placeChapterSpeech({anchor:head,subjectBox:person.box,safeBottom:r?.safeY||person.box[1]-56,view:state.view,viewport:[scene.clientWidth,scene.clientHeight],frame:[s.offsetWidth,s.offsetHeight],protectedBoxes:boxes});
+  if(placement)break;
+ }
  if(state.mode==='found')$('panel-layer').hidden=!!placement;
- if(!placement){s.hidden=true;return;}
+ if(!placement){
+  s.hidden=true;
+  if(state.mode==='observe'){
+   // Keep the character's words beside their figure. An explicit camera action
+   // remains available if the speaker is offscreen or the current view is crowded.
+   $('panel-layer').hidden=false;
+   panel.dataset.speechFallback='true';panel.innerHTML=action('return-speaker','回到人物身旁');
+   bind('return-speaker',async()=>{if(state.busy)return;await moveTo(head,1);$('look').focus({preventScroll:true});});
+  }
+  return;
+ }
+ if(panel.dataset.speechFallback){delete panel.dataset.speechFallback;drawPanel();}
+ if(state.mode==='observe')$('panel-layer').hidden=true;
  s.style.left=placement.left+'px';s.style.top=placement.top+'px';
  $('speech-bubble').className='lantern-character-reply has-finding emperor-speech-bubble tail-'+placement.side;
  $('speech-bubble').style.setProperty('--reply-tail-x',placement.pointerX+'px');
  $('speech-bubble').style.setProperty('--reply-tail-y',placement.pointerY+'px');
 }
-function speak(person,text,found=false){state.speaker={id:person.id,text};$('speech-text').textContent=text;$('look').innerHTML=(found?'近看原畫':'繼續看畫')+'<span aria-hidden="true"> →</span>';$('look').onclick=found?beginObservation:()=>{state.speaker=null;render();};render();if(found)announce(`尋得第 ${state.round+1} 位畫中人`);else if($('speech').hidden)announce(text);}
-function openJournal(){if(state.busy||state.mode==='intro'||state.mode==='journal')return;state.journalReturn={mode:state.mode,view:{...state.view},sceneSize:[scene.clientWidth,scene.clientHeight],source:state.source,focus:state.focus,focusPoint:[...state.focusPoint]};state.entry=null;setMode('journal');$('journal').focus({preventScroll:true});}
+function speak(person,text,found=false,action=null){state.speaker={id:person.id,text,action:found?'observe':action};drawChrome();render();if(found)announce(`尋得第 ${state.completed+1} 位畫中人`);else if($('speech').hidden)announce(text);}
+function openJournal(){if(state.busy||state.mode==='intro'||state.mode==='journal')return;state.journalReturn={mode:state.mode,speaker:state.speaker,noteHidden:state.noteHidden,view:{...state.view},sceneSize:[scene.clientWidth,scene.clientHeight],source:state.source,focus:state.focus,focusPoint:[...state.focusPoint]};state.entry=null;setMode('journal');$('journal').focus({preventScroll:true});}
 async function closeJournal(){
  if(state.busy)return;
  const saved=state.journalReturn;if(!saved)return;
@@ -104,25 +127,28 @@ async function closeJournal(){
  if(saved.source!==state.source&&!await setSource(saved.source)){announce('原來的畫面暫未載入，見聞冊仍保留，可稍後再合冊。');return;}
  state.journalReturn=null;setMode(saved.mode);size=frame();
  state.view=KangquGeometry.restoreView(saved.view,saved.sceneSize,size);
- state.focus=saved.focus;state.focusPoint=[...saved.focusPoint];render();$('book').focus({preventScroll:true});
+ state.focus=saved.focus;state.focusPoint=[...saved.focusPoint];state.speaker=saved.speaker;state.noteHidden=saved.noteHidden;drawChrome();render();$('book').focus({preventScroll:true});
 }
 
-async function beginObservation(){if(state.busy||state.mode!=='found')return;state.step=0;setMode('observe');const p=current().comparison[0];await moveTo(p.center||current().center,p.scale||1);}
-async function replay(){if(state.busy)return;if(state.source!=='native'&&!await setSource('native'))return;state.round=0;state.completed=0;state.hint=0;state.step=0;state.ending=0;state.reviewComplete=false;state.reviewReturn=null;state.reviewStage="arrival";state.reviewIndex=0;state.reviewSeen=[];state.visits={};setMode('seek');centerAt(chapterViewport.initialPoint,startScale(),[.5,.5]);announce('重新尋人，見聞冊收藏已保留。');}
+async function beginObservation(){if(state.busy||state.mode!=='found')return;state.step=0;setMode('observe');if(freeEnsembleObservation()){await moveTo([1080,2410],1);return;}const p=current().comparison[0];await moveTo(p.center||current().center,p.scale||1);}
+async function replay(){if(state.busy)return;if(state.source!=='native'&&!await setSource('native'))return;state.round=0;state.completed=0;state.completedStations=[];state.observedPlayers=[];state.animationIssue=false;state.lastDetail=null;state.hint=0;state.step=0;state.ending=0;state.reviewComplete=false;state.reviewReturn=null;state.reviewStage="arrival";state.reviewIndex=0;state.reviewSeen=[];state.visits={};setMode('seek');centerAt(chapterViewport.initialPoint,startScale(),[.5,.5]);announce('重新尋人，見聞冊收藏已保留。');}
 function inspectPerson(p){
  showHitFeedback(hitShapeForPerson(p));
  if(state.mode==='seek'&&p.id===current().id){setMode('found');speak(p,current().greeting,true);return;}
- if(audiencePeople.includes(p.id)){void playAudience();return;}
- if(ensemblePeople.includes(p.id)){void playEnsemble();return;}
+ if(isEnsemblePlayer(p)){
+  noteEnsemblePlayer(p);const visits=state.visits[p.id]||0;state.visits[p.id]=visits+1;speak(p,p.lines[Math.min(visits,2)]);return;
+ }
+ if(audiencePeople.includes(p.id)&&inquiryCanAnimate('audience')){void playAudience();return;}
+ if(flagPeople.includes(p.id)&&inquiryCanAnimate('flags')){void playFlags();return;}
  const visits=state.visits[p.id]||0;state.visits[p.id]=visits+1;speak(p,p.lines[Math.min(visits,2)]);
 }
 async function observePoint(){
- if(state.mode!=='observe'||state.step>=2||state.busy)return;
+ if(state.mode!=='observe'||freeEnsembleObservation()||state.step>=2||state.busy)return;
  if(state.view.scale<.65){announce('請先放大，再點眼前的細節。');return;}
- showHitFeedback(feedbackForDetail(current().comparison[state.step]));
+ const detail=current().comparison[state.step];collectInquiryDetail(detail);showHitFeedback(feedbackForDetail(detail));state.lastDetail={...detail};
  state.step++;state.noteHidden=false;state.noteManual=false;drawPanel();drawPoints();render();
  if(state.step===1){const p=current().comparison[1];if(p.center)await moveTo(p.center,p.scale||1);announce(p.label);}
- else announce('已完成兩處原畫比較。');
+ else if(!detail.collection||!state.collections[detail.collection])announce(state.step===2?'已完成原畫比較，可觀看演繹。':'在原畫點看另一件樂器。');
 }
 function receiveCollection(message){
  displayCount=Object.keys(state.collections).length;count();
@@ -140,9 +166,9 @@ function collect(o,point=midpoint(objectBox(o))){
  if(fresh||newDetail)save();
  const message=fresh?'已收藏：'+c.name:newDetail?`見聞冊添上：${motif.name}。${motif.meaning}`:`這裡也有${c.name}，已記在冊中。`;
  if(reduced.matches||typeof requestAnimationFrame!=='function'){receiveCollection(message);return;}
- const rect=scene.getBoundingClientRect(),start=screenAt(point),art=document.createElement('img');art.src=c.art;art.alt='';art.className='collection-flight';document.body.append(art);flights.add(art);
+ const rect=scene.getBoundingClientRect(),start=screenAt(point),art=document.createElement('span');art.className='collection-flight';art.innerHTML=c.artCrop?inquiryCrop(c.artCrop,c.art,...c.artSize,''):('<img src="'+c.art+'" alt="">');document.body.append(art);flights.add(art);
  let first;const finish=()=>{if(!flights.has(art))return;flights.delete(art);art.remove();receiveCollection(message);};
- art.onerror=finish;
+ art.querySelector('img')?.addEventListener('error',finish);
  const tick=now=>{if(!flights.has(art))return;first??=now;const t=Math.min(1,(now-first)/(fresh?1350:900)),q=t*t*(3-2*t),target=$('book').getBoundingClientRect(),size=(fresh?84:52)- (fresh?56:24)*q;
   art.style.width=size+'px';art.style.height=size+'px';art.style.left=(rect.left+start[0]+(target.left+target.width/2-rect.left-start[0])*q-size/2)+'px';art.style.top=(rect.top+start[1]+(target.top+target.height/2-rect.top-start[1])*q-Math.sin(Math.PI*q)*65-size/2)+'px';art.style.opacity=String(t>.85?1-(t-.85)/.15:1);
   if(t<1)requestAnimationFrame(tick);else finish();};requestAnimationFrame(tick);
@@ -153,16 +179,15 @@ function interact(p){
  if(state.source!=='native'){announce('全卷用於看構圖；按「回到清晰段落」再點人物與細節。');return;}
  const at=nativeAt(p);
  if(state.mode==='ending'){
-  if(['review','performance'].includes(state.reviewStage)&&reviewHitBoxes().some(box=>inside(at,box)))reviewTap();
-  else announce(['review','performance'].includes(state.reviewStage)?'輕點題箋所說的原畫活動。':'按題箋繼續回看長卷。');
+  const index=reviewHitBoxes().findIndex(box=>inside(at,box));if(state.reviewStage==='arrival'&&index>=0)void reviewTap(index);else announce(state.reviewStage==='arrival'?'點看樂隊、旗列或戲班，選一處作證據。':'可以留在畫中，繼續自由探索。');
   return;
  }
- if(state.mode==='observe'&&state.step<2){if(state.view.scale<.65){announce('請先放大，再點眼前的細節。');return;}const point=current().comparison[state.step];if(KangquGeometry.observationContains(at,{...point,box:observationTapBox(point)}))observePoint();else announce(point.label);return;}
- if(state.mode==='observe'){announce('看完解讀後，按題箋中的按鈕繼續。');return;}
+ if(state.mode==='observe'&&!freeEnsembleObservation()&&state.step<2){if(state.view.scale<.65){announce('請先放大，再點眼前的細節。');return;}const point=current().comparison[state.step];if(KangquGeometry.observationContains(at,{...point,box:observationTapBox(point)}))observePoint();else announce(point.label);return;}
+ if(state.mode==='observe'&&!freeEnsembleObservation()){announce('看完解讀後，按題箋中的按鈕繼續。');return;}
  if(state.view.scale<.45){announce('請先放大，再點人物或細節。');return;}
  const hit=resolveTap(at);
  if(hit?.kind==='person')inspectPerson(chapter.people.find(p=>p.id===hit.id));
- else if(hit?.kind==='object')collect(chapter.objects.find(o=>o.id===hit.id));
+ else if(hit?.kind==='object')inspectEnsembleObject(chapter.objects.find(o=>o.id===hit.id));
 }
 function resolveTap(at){
  // Exact artwork wins. A nearby object may override a body hit, never a face.
@@ -184,13 +209,13 @@ function addPoint(label,box,action){const b=document.createElement('button');b.t
 function drawPoints(){
  $('points').replaceChildren();if(state.source!=='native'||['intro','journal','found'].includes(state.mode))return;
  if(state.mode==='ending'){
-  if(['review','performance'].includes(state.reviewStage))for(const box of reviewHitBoxes())addPoint(state.reviewStage==='performance'?'觀看這位樂手的演繹':'觀察'+reviewRegion().label,box,reviewTap);
+  if(state.reviewStage==='arrival')chapter.review.forEach((r,i)=>addPoint('選擇'+r.label+'作證據',r.box,()=>reviewTap(i)));
   return;
  }
- if(state.mode==='observe'){if(state.step<2){const c=current().comparison[state.step];addPoint(c.label,c.box,observePoint);}return;}
+ if(state.mode==='observe'&&!freeEnsembleObservation()){if(state.step<2){const c=current().comparison[state.step];addPoint(c.label,c.box,observePoint);}return;}
  // Keyboard access follows visible figures/objects, never a target-only answer list.
- for(const p of chapter.people)addPoint(audiencePeople.includes(p.id)&&!(state.mode==='seek'&&p.id===current().id)?'觀看表演與觀看七人群像：'+p.name:ensemblePeople.includes(p.id)&&!(state.mode==='seek'&&p.id===current().id)?'觀看亭內三人合奏：'+p.name:'聽聽'+p.name+'的話',p.box,()=>inspectPerson(p));
- for(const o of chapter.objects)addPoint('看看'+chapter.collections.find(c=>c.id===o.category).name,objectBox(o),()=>collect(o));
+ for(const p of chapter.people)addPoint(audiencePeople.includes(p.id)&&!(state.mode==='seek'&&p.id===current().id)?'觀看表演與觀看七人群像：'+p.name:'聽聽'+p.name+'的話',p.box,()=>inspectPerson(p));
+ for(const o of chapter.objects)addPoint('看看'+chapter.collections.find(c=>c.id===o.category).name,objectBox(o),()=>inspectEnsembleObject(o));
 }
 const imageCache=new Map();
 function preload(src){if(imageCache.has(src))return imageCache.get(src);const promise=new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=()=>{imageCache.delete(src);reject(new Error('load'));};im.src=src;});imageCache.set(src,promise);return promise;}
@@ -213,6 +238,8 @@ $('menu-layer').onclick=e=>{if(e.target===$('menu-layer'))toggleMenu(false);};
 $('panel-layer').onclick=e=>{if(e.target===$('panel-layer')&&state.hintOpen)closeHint();};
 chapter.regions.forEach((r,i)=>{const o=document.createElement('option');o.value=i;o.textContent=i===0?'回到入畫視角':r.name;$('regions').append(o);});
 $('regions').onchange=async e=>{if(state.busy)return;const index=Number(e.target.value),r=chapter.regions[index];toggleMenu(false);if(state.source!=='native'&&!await setSource('native'))return;if(index===0)centerAt(chapterViewport.initialPoint,startScale(),[.5,.5]);else await moveTo(r.center,r.scale);};
+// Focused hotspots must not scroll the clipped source-coordinate scene.
+scene.addEventListener('scroll',()=>{if(scene.scrollLeft||scene.scrollTop){scene.scrollLeft=0;scene.scrollTop=0;}});
 scene.addEventListener('wheel',e=>{e.preventDefault();zoomBy(Math.exp(-Math.max(-100,Math.min(100,e.deltaY))*.003),eventPoint(e));},{passive:false});
 scene.addEventListener('pointerdown',e=>{if(!state.ready||state.busy||e.button>0||e.target.closest('.lantern-emperor-speech'))return;e.preventDefault();const p=eventPoint(e);pointers.set(e.pointerId,p);scene.setPointerCapture(e.pointerId);focusAt(p);if(pointers.size===1){pinched=false;drag={id:e.pointerId,start:p,last:p,moved:false};scene.classList.add('dragging');}else{pinched=true;const [a,b]=[...pointers.values()];pinch={distance:Math.hypot(a[0]-b[0],a[1]-b[1]),center:[(a[0]+b[0])/2,(a[1]+b[1])/2]};}});
 scene.addEventListener('pointermove',e=>{const p=eventPoint(e);if(state.ready&&!state.busy&&!e.target.closest('.lantern-emperor-speech'))focusAt(p);if(!pointers.has(e.pointerId))return;pointers.set(e.pointerId,p);if(pointers.size>=2){const [a,b]=[...pointers.values()],distance=Math.hypot(a[0]-b[0],a[1]-b[1]),center=[(a[0]+b[0])/2,(a[1]+b[1])/2];if(pinch){zoomBy(distance/Math.max(1,pinch.distance),pinch.center);state.view.x+=center[0]-pinch.center[0];state.view.y+=center[1]-pinch.center[1];render();}pinch={distance,center};return;}if(drag?.id!==e.pointerId||state.busy)return;if(Math.hypot(p[0]-drag.start[0],p[1]-drag.start[1])>7)drag.moved=true;if(drag.moved){state.view.x+=p[0]-drag.last[0];state.view.y+=p[1]-drag.last[1];render();}drag.last=p;});
@@ -220,9 +247,10 @@ function release(e,cancelled=false){if(!pointers.has(e.pointerId))return;const c
 scene.addEventListener('pointerup',e=>release(e));scene.addEventListener('pointercancel',e=>release(e,true));
 scene.addEventListener('keydown',e=>{if(state.busy||!state.ready||e.target!==scene)return;const d=e.shiftKey?160:70,arrows={ArrowLeft:[d,0],ArrowRight:[-d,0],ArrowUp:[0,d],ArrowDown:[0,-d]};if(arrows[e.key]){e.preventDefault();state.view.x+=arrows[e.key][0];state.view.y+=arrows[e.key][1];render();}else if(['+','='].includes(e.key)){e.preventDefault();zoomBy(1.25);}else if(e.key==='-'){e.preventDefault();zoomBy(.8);}});
 document.addEventListener('keydown',e=>{
+ if(e.key==='Escape'&&flagReturn){e.preventDefault();stopFlags();return;}
  if(e.key==='Escape'&&audienceReturn){e.preventDefault();stopAudience();return;}
- if(e.key==='Escape'&&state.reviewStage==='playing'){e.preventDefault();stopEnsemble();return;}
- if(e.key==='Escape'){if(state.mode==='journal'){if(state.journalLooking)resumeJournal();else closeJournal();}else if(state.menuOpen)toggleMenu(false);else if(state.hintOpen)closeHint();else if(state.mode!=='found'){state.speaker=null;render();}return;}
+ if(e.key==='Escape'&&ensembleReturn){e.preventDefault();stopEnsemble();return;}
+ if(e.key==='Escape'){if(state.mode==='journal'){if(state.journalLooking)resumeJournal();else closeJournal();}else if(state.menuOpen)toggleMenu(false);else if(state.hintOpen)closeHint();else if(state.mode!=='found'){state.speaker=null;state.noteHidden=false;drawPanel();render();}return;}
  if(e.key!=='Tab')return;
  const overlay=state.menuOpen?$('chapter-menu'):state.hintOpen?panel:state.mode==='journal'?$('journal'):null;
  if(!overlay)return;

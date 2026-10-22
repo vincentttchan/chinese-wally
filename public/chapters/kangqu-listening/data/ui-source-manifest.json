@@ -43,7 +43,7 @@
     },
     {
       "path": "src/game/historicalChapters.ts",
-      "sha256": "b8659e89bd8b446b52a6ff87ae3fad6f487b810a4406a20af5049592c1600d74"
+      "sha256": "b58b82dedc87a9e59001dd5dce0912b1c02164e64b7cad7911d72b918bf9cbcf"
     },
     {
       "path": "src/chapterNavigation.js",
@@ -55,17 +55,17 @@
     },
     {
       "path": "src/audio/chapterMusicTracks.js",
-      "sha256": "5d429f4422b53de45ddb9e9ef545253c7e869e95673f662da878b177234ccf89"
+      "sha256": "9c78ca261d3e981a47712a0bcf61e93a2d9b6c194d0471f49a6df388b163e7eb"
     }
   ],
   "chapterAdaptations": [
     "source-coordinate display bounds and cover camera",
     "initial view at 1.5 times cover minimum",
     "undistorted native-content map with viewport rectangle",
-    "four target portraits",
+    "three target portraits",
     "202 people with individually authored three-line fictional dialogue and native evidence records",
-    "eight collection illustrations in two columns, plus visible motif progress",
-    "four characters, spatial observation, evidence judgement, two historical interpretations and approved v7 ensemble and seven-person audience group animations with stationary backgrounds"
+    "eight collection categories in two columns, black flag study and visible motif progress",
+    "three characters, free musician observation with nearby fictional dialogue, optional in-painting interpretation and historical reading, single evidence ending and approved v7 whole-group repainted ensemble animation with a stationary background"
   ],
   "retiredStyles": [
     "v0.2/common.css",

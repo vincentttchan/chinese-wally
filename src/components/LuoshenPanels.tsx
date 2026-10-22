@@ -83,7 +83,7 @@ export function LuoshenJournal({state,view,onView,onClose,onLook}:{state:Luoshen
   <header className="collection-header"><p className="collection-kicker">畫中拾趣</p><div className="collection-title-row"><h1>洛水見聞冊</h1><span>已收下 {Object.keys(state.origins).length}／{luoshenFindings.length}</span></div><button className="collection-close" onClick={closeBook} aria-label="合上見聞冊">×</button></header>
   <nav className="luoshen-journal-tabs" aria-label="見聞冊篇目"><button aria-pressed={page==='collection'} onClick={()=>{onView({...view,page:'collection',selected:null,scrollTop:0});}}>畫中收藏</button><button aria-pressed={page==='story'} onClick={()=>{onView({...view,page:'story',selected:null,scrollTop:0});}}>故事回看 · {completed.length}／6</button></nav>
   <div ref={pages} className="collection-pages">
-   {page==='collection'&&!finding&&<div className="collection-overview"><p className="collection-introduction">從鳥形、衣帶到舟船，收藏一件，也多讀懂一點原畫。</p><div className="collection-grid">{luoshenFindings.map(item=>{
+   {page==='collection'&&!finding&&<div className="collection-overview"><p className="collection-introduction">從鳥形、衣帶到神獸與舟船，收藏一件，也多讀懂一點原畫。</p><div className="collection-grid">{luoshenFindings.map(item=>{
     const found=Boolean(state.origins[item.id]);
     return <button className={`collection-item ${found?'is-collected':'is-undiscovered'}`} key={item.id} disabled={!found} aria-label={found?`翻閱${item.name}`:`未發現：${item.name}`} onClick={()=>setSelected(item.id)}><LuoshenCollectionIllustration id={item.id} name={item.name} locked={!found}/><span className="collection-item-name">{item.name}</span><span className="collection-item-state">{found?'已收下':'未發現'}</span></button>;
    })}</div><p className="collection-footer">在原畫中點看這些細節，便會記入冊中。收藏不影響主線完成。</p></div>}

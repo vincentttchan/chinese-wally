@@ -1,0 +1,267 @@
+{
+  "method": "Pure source-coordinate evaluation only; no browser, DOM, file URL or gameplay execution.",
+  "date": "2026-10-13",
+  "objectChecks": [
+    {
+      "scale": 0.45,
+      "id": "gong-pavilion-small",
+      "point": [
+        1065,
+        2410
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "gong-pavilion-small"
+      },
+      "pass": true
+    },
+    {
+      "scale": 0.45,
+      "id": "gong-pavilion-small",
+      "point": [
+        1085,
+        2410
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "gong-pavilion-small"
+      },
+      "pass": true
+    },
+    {
+      "scale": 0.45,
+      "id": "horn-pavilion",
+      "point": [
+        1090,
+        2315
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "horn-pavilion"
+      },
+      "pass": true
+    },
+    {
+      "scale": 0.45,
+      "id": "horn-pavilion",
+      "point": [
+        1090,
+        2305
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "horn-pavilion"
+      },
+      "pass": true
+    },
+    {
+      "scale": 0.65,
+      "id": "gong-pavilion-small",
+      "point": [
+        1065,
+        2410
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "gong-pavilion-small"
+      },
+      "pass": true
+    },
+    {
+      "scale": 0.65,
+      "id": "gong-pavilion-small",
+      "point": [
+        1085,
+        2410
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "gong-pavilion-small"
+      },
+      "pass": true
+    },
+    {
+      "scale": 0.65,
+      "id": "horn-pavilion",
+      "point": [
+        1090,
+        2315
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "horn-pavilion"
+      },
+      "pass": true
+    },
+    {
+      "scale": 0.65,
+      "id": "horn-pavilion",
+      "point": [
+        1090,
+        2305
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "horn-pavilion"
+      },
+      "pass": true
+    },
+    {
+      "scale": 1,
+      "id": "gong-pavilion-small",
+      "point": [
+        1065,
+        2410
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "gong-pavilion-small"
+      },
+      "pass": true
+    },
+    {
+      "scale": 1,
+      "id": "gong-pavilion-small",
+      "point": [
+        1085,
+        2410
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "gong-pavilion-small"
+      },
+      "pass": true
+    },
+    {
+      "scale": 1,
+      "id": "horn-pavilion",
+      "point": [
+        1090,
+        2315
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "horn-pavilion"
+      },
+      "pass": true
+    },
+    {
+      "scale": 1,
+      "id": "horn-pavilion",
+      "point": [
+        1090,
+        2305
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "horn-pavilion"
+      },
+      "pass": true
+    }
+  ],
+  "headChecks": {
+    "total": 606,
+    "failures": []
+  },
+  "restoreChecks": [
+    {
+      "oldSize": [
+        1440,
+        900
+      ],
+      "newSize": [
+        1440,
+        900
+      ],
+      "pass": true
+    },
+    {
+      "oldSize": [
+        1440,
+        900
+      ],
+      "newSize": [
+        390,
+        844
+      ],
+      "pass": true
+    },
+    {
+      "oldSize": [
+        1440,
+        900
+      ],
+      "newSize": [
+        844,
+        390
+      ],
+      "pass": true
+    },
+    {
+      "oldSize": [
+        390,
+        844
+      ],
+      "newSize": [
+        1440,
+        900
+      ],
+      "pass": true
+    },
+    {
+      "oldSize": [
+        390,
+        844
+      ],
+      "newSize": [
+        390,
+        844
+      ],
+      "pass": true
+    },
+    {
+      "oldSize": [
+        390,
+        844
+      ],
+      "newSize": [
+        844,
+        390
+      ],
+      "pass": true
+    },
+    {
+      "oldSize": [
+        844,
+        390
+      ],
+      "newSize": [
+        1440,
+        900
+      ],
+      "pass": true
+    },
+    {
+      "oldSize": [
+        844,
+        390
+      ],
+      "newSize": [
+        390,
+        844
+      ],
+      "pass": true
+    },
+    {
+      "oldSize": [
+        844,
+        390
+      ],
+      "newSize": [
+        844,
+        390
+      ],
+      "pass": true
+    }
+  ]
+}

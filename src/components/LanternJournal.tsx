@@ -1,4 +1,5 @@
 import {LanternCollectionImage} from './LanternCollectionImage.tsx';
+import type {CollectionArtwork} from './LanternCollectionImage.tsx';
 import type { CSSProperties } from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { ArtCrop } from './ArtCrop.tsx';
@@ -11,20 +12,24 @@ import '../lantern-field-journal.css';
 
 const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const courts = ['爆竹庭院','宮中街市','表演庭院'];
+export type JournalEdition={title:string;introduction:string;emptyHint:string;courts:string[];items:Record<string,CollectionArtwork>;sourceUrl:string;sourceLabel:string;sourceNote?:string;illustrationCaption:string;souvenirTitle:string;souvenirBody:string;souvenirObserve:string;souvenirSource:string};
+const defaultEdition:JournalEdition={title:'元宵見聞冊',introduction:'把偶然看見的細節，收成自己的元宵。',emptyHint:'回到長卷，點一盞燈、問一位畫中人。',courts,items:lanternJournalItems,sourceUrl:'https://www.chnmuseum.cn/portals/0/web/zt/202102yuaxiao/',sourceLabel:'中國國家博物館 · 畫作與節俗資料',illustrationCaption:'依原畫創作的收藏圖樣',souvenirTitle:'我的宮廷元宵見聞',souvenirBody:'從一點火光、一盞花燈，到貨郎擔與表演者，你已看見皇帝身邊的元宵。',souvenirObserve:'人物的動作、器物的細線、節慶的祝願，都藏在這一卷裡。',souvenirSource:'《憲宗元宵行樂圖》 · 中國國家博物館藏'};
 
-function CollectionIllustration({finding,locked=false}:{finding:LanternFinding;locked?:boolean}) {
-  const item=lanternJournalItems[finding.id];
+function CollectionIllustration({finding,locked=false,artwork}:{finding:LanternFinding;locked?:boolean;artwork?:CollectionArtwork}) {
+  const item=artwork??lanternJournalItems[finding.id];
   return <span className={`collection-illustration ${locked?'is-locked':''}`} role="img"
     aria-label={locked?'尚未收下的收藏輪廓':`${item.title} · 依原畫創作的收藏插畫`}
     style={{'--atlas-left':`${-(item.index%3)*100}%`,'--atlas-top':`${-Math.floor(item.index/3)*100}%`} as CSSProperties}>
-    <LanternCollectionImage findingId={finding.id}/>
+    <LanternCollectionImage findingId={finding.id} artwork={item}/>
   </span>;
 }
 
-export function LanternJournal({collected,onClose,onLook,compact,findings=lanternFindings,sessionOnly=false}: {
+export function LanternJournal({collected,onClose,onLook,compact,findings=lanternFindings,sessionOnly=false,edition:customEdition}: {
   collected: string[]; findings?: LanternFinding[]; sessionOnly?:boolean; onClose: () => void;
   onLook: (finding: LanternFinding, onSettled: () => void) => void; compact: boolean;
+  edition?:Partial<JournalEdition>;
 }) {
+  const edition={...defaultEdition,...customEdition};
   const [selected,setSelected] = useState<string | null>(null);
   const [souvenir,setSouvenir] = useState(false);
   const [moving,setMoving] = useState(false);
@@ -92,7 +97,7 @@ export function LanternJournal({collected,onClose,onLook,compact,findings=lanter
     const token=++request.current;setMoving(true);
     look.current(finding,()=>{if(token===request.current){setLooking(true);setMoving(false);}});
   };
-  return <section ref={ref} tabIndex={-1} role="dialog" aria-modal="true" aria-label="元宵見聞冊"
+  return <section ref={ref} tabIndex={-1} role="dialog" aria-modal="true" aria-label={edition.title}
     className={`lantern-journal-layer lantern-field-journal ${selected&&!souvenir?'is-detail':'is-overview'} ${moving?'is-moving':''} ${looking?'is-looking':''} ${closing?'is-closing':''}`}
     style={{'--journal-texture':`url("${assetPath('art/ui/reading-paper.png')}")`} as CSSProperties}
     onKeyDown={event=>{
@@ -108,44 +113,44 @@ export function LanternJournal({collected,onClose,onLook,compact,findings=lanter
     <div className="collection-reading" inert={looking}>
       <header className="collection-header">
         <p className="collection-kicker">畫中拾趣</p>
-        <div className="collection-title-row"><h1>元宵見聞冊</h1><span>已收下 {count}／{findings.length}</span></div>
+        <div className="collection-title-row"><h1>{edition.title}</h1><span>已收下 {count}／{findings.length}</span></div>
         <button className="collection-close" onClick={close} aria-label="合上見聞冊">×</button>
       </header>
       <div ref={pages} className="collection-pages" inert={moving||closing} aria-busy={moving}>
         {!selected&&!souvenir&&<div className="collection-overview">
-          <p className="collection-introduction">把偶然看見的細節，收成自己的元宵。</p>
+          <p className="collection-introduction">{edition.introduction}</p>
           <div className="collection-grid">{findings.map(item=>{
             const found=collected.includes(item.id);
-            const art=lanternJournalItems[item.id];
+            const art=edition.items[item.id];
             return <button className={`collection-item ${found?'is-collected':'is-undiscovered'}`} key={item.id} disabled={!found} onClick={()=>select(item.id)} aria-label={found?`翻閱${art.title}`:`未發現：${art.mystery}`}>
-              <CollectionIllustration finding={item} locked={!found}/>
+              <CollectionIllustration finding={item} locked={!found} artwork={art}/>
               <span className="collection-item-name">{found?art.title:art.mystery}</span>
               <span className="collection-item-state" aria-hidden="true">{found?'已收下':''}</span>
             </button>;
           })}</div>
-          {count===findings.length&&<button className="collection-souvenir-link" onClick={()=>overview(true)}>翻開我的宮廷元宵見聞 <span aria-hidden="true">→</span></button>}
+          {count===findings.length&&<button className="collection-souvenir-link" onClick={()=>overview(true)}>翻開{edition.souvenirTitle} <span aria-hidden="true">→</span></button>}
         </div>}
         {finding&&!souvenir&&<article className="collection-detail" key={finding.id}>
           <button className="collection-back" onClick={()=>overview()}>← 全部收藏</button>
-          <div className="collection-detail-heading"><p>{courts[finding.court]}</p><h2>{lanternJournalItems[finding.id].title}</h2></div>
-          <figure className="collection-detail-art"><CollectionIllustration finding={finding}/><figcaption>依原畫創作的收藏圖樣</figcaption></figure>
+          <div className="collection-detail-heading"><p>{edition.courts[finding.court]}</p><h2>{edition.items[finding.id].title}</h2></div>
+          <figure className="collection-detail-art"><CollectionIllustration finding={finding} artwork={edition.items[finding.id]}/><figcaption>{edition.illustrationCaption}</figcaption></figure>
           <p className="collection-observe">{finding.observe}</p>
           <p className="collection-body">{finding.note}</p>
           <button className="collection-look" onClick={lookInPainting}>看看畫中位置 <span aria-hidden="true">↗</span></button>
           <p className="collection-next"><span>再留意一處</span>{finding.next}</p>
-          <details className="collection-source"><summary>畫作資料</summary><p>{finding.id==='costume'?'左側為原畫；收藏圖樣沿用動畫的創作姿勢，完整衣袍含補繪部分，不作為原畫被遮擋處的依據。':'左側為原畫，收藏圖樣為依畫中細節製作的插畫。'}</p><a href="https://www.chnmuseum.cn/portals/0/web/zt/202102yuaxiao/" target="_blank" rel="noreferrer">中國國家博物館 · 畫作與節俗資料</a><p>{sessionOnly?'樣段收藏只在本次預覽保留。':'收藏保存在此瀏覽器，重新尋人仍保留。'}</p></details>
+          <details className="collection-source"><summary>畫作資料</summary><p>{edition.sourceNote??(finding.id==='costume'?'左側為原畫；收藏圖樣沿用動畫的創作姿勢，完整衣袍含補繪部分，不作為原畫被遮擋處的依據。':'左側為原畫，收藏圖樣為依畫中細節製作的插畫。')}</p><a href={edition.sourceUrl} target="_blank" rel="noreferrer">{edition.sourceLabel}</a><p>{sessionOnly?'樣段收藏只在本次預覽保留。':'收藏保存在此瀏覽器，重新尋人仍保留。'}</p></details>
           {available.length>1&&<nav className="collection-detail-nav" aria-label="已收藏見聞"><button aria-label="上一則已收藏見聞" onClick={()=>step(-1)}>←</button><span>{available.findIndex(item=>item.id===selected)+1}／{available.length}</span><button aria-label="下一則已收藏見聞" onClick={()=>step(1)}>→</button></nav>}
         </article>}
         {souvenir&&<article className="collection-souvenir">
           <button className="collection-back" onClick={()=>overview()}>← 全部收藏</button>
-          <h2>我的宮廷元宵見聞</h2>
-          <div className="collection-souvenir-art">{findings.map(item=><CollectionIllustration key={item.id} finding={item}/>)}</div>
-          <p className="collection-body">從一點火光、一盞花燈，到貨郎擔與表演者，你已看見皇帝身邊的元宵。</p>
-          <p className="collection-observe">人物的動作、器物的細線、節慶的祝願，都藏在這一卷裡。</p>
-          <p className="collection-source">《憲宗元宵行樂圖》 · 中國國家博物館藏</p>
+          <h2>{edition.souvenirTitle}</h2>
+          <div className="collection-souvenir-art">{findings.map(item=><CollectionIllustration key={item.id} finding={item} artwork={edition.items[item.id]}/>)}</div>
+          <p className="collection-body">{edition.souvenirBody}</p>
+          <p className="collection-observe">{edition.souvenirObserve}</p>
+          <p className="collection-source">{edition.souvenirSource}</p>
         </article>}
       </div>
-      {!selected&&!souvenir&&<footer className="collection-footer">{count?'點選已收下的圖樣，回看畫中的發現。':'回到長卷，點一盞燈、問一位畫中人。'}</footer>}
+      {!selected&&!souvenir&&<footer className="collection-footer">{count?'點選已收下的圖樣，回看畫中的發現。':edition.emptyHint}</footer>}
     </div>
     <button className="collection-return" onClick={close}>← 回到長卷</button>
     {looking&&<button className="collection-resume" onClick={()=>setLooking(false)}>繼續閱讀 →</button>}

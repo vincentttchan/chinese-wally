@@ -1,0 +1,322 @@
+{
+  "size": [
+    240,
+    295
+  ],
+  "panelsX": [
+    0,
+    312,
+    659,
+    973
+  ],
+  "panelsY": [
+    0,
+    348,
+    696,
+    1044,
+    1391
+  ],
+  "frames": [
+    {
+      "player": "blue",
+      "drawing": 1,
+      "offset": [
+        -5,
+        -7
+      ],
+      "similarity": 0.818,
+      "gain": 0.86,
+      "bias": [
+        24.0,
+        18.0,
+        11.0
+      ]
+    },
+    {
+      "player": "grey",
+      "drawing": 1,
+      "offset": [
+        -6,
+        -10
+      ],
+      "similarity": 0.821,
+      "gain": 0.86,
+      "bias": [
+        14.0,
+        14.0,
+        14.0
+      ]
+    },
+    {
+      "player": "blue",
+      "drawing": 2,
+      "offset": [
+        12,
+        -7
+      ],
+      "similarity": 0.817,
+      "gain": 0.86,
+      "bias": [
+        24.0,
+        18.0,
+        11.0
+      ]
+    },
+    {
+      "player": "grey",
+      "drawing": 2,
+      "offset": [
+        10,
+        -9
+      ],
+      "similarity": 0.767,
+      "gain": 0.86,
+      "bias": [
+        14.0,
+        14.0,
+        14.0
+      ]
+    },
+    {
+      "player": "blue",
+      "drawing": 3,
+      "offset": [
+        3,
+        -5
+      ],
+      "similarity": 0.766,
+      "gain": 0.86,
+      "bias": [
+        24.0,
+        18.0,
+        11.0
+      ]
+    },
+    {
+      "player": "grey",
+      "drawing": 3,
+      "offset": [
+        -8,
+        -9
+      ],
+      "similarity": 0.748,
+      "gain": 0.86,
+      "bias": [
+        14.0,
+        14.0,
+        14.0
+      ]
+    },
+    {
+      "player": "blue",
+      "drawing": 5,
+      "offset": [
+        -5,
+        -6
+      ],
+      "similarity": 0.761,
+      "gain": 0.86,
+      "bias": [
+        24.0,
+        18.0,
+        11.0
+      ]
+    },
+    {
+      "player": "grey",
+      "drawing": 5,
+      "offset": [
+        -9,
+        -6
+      ],
+      "similarity": 0.744,
+      "gain": 0.86,
+      "bias": [
+        14.0,
+        14.0,
+        14.0
+      ]
+    },
+    {
+      "player": "blue",
+      "drawing": 6,
+      "offset": [
+        12,
+        -6
+      ],
+      "similarity": 0.649,
+      "gain": 0.86,
+      "bias": [
+        24.0,
+        18.0,
+        11.0
+      ]
+    },
+    {
+      "player": "grey",
+      "drawing": 6,
+      "offset": [
+        6,
+        -17
+      ],
+      "similarity": 0.765,
+      "gain": 0.86,
+      "bias": [
+        14.0,
+        14.0,
+        14.0
+      ]
+    },
+    {
+      "player": "blue",
+      "drawing": 7,
+      "offset": [
+        4,
+        -3
+      ],
+      "similarity": 0.724,
+      "gain": 0.86,
+      "bias": [
+        24.0,
+        18.0,
+        11.0
+      ]
+    },
+    {
+      "player": "grey",
+      "drawing": 7,
+      "offset": [
+        -9,
+        -11
+      ],
+      "similarity": 0.744,
+      "gain": 0.86,
+      "bias": [
+        14.0,
+        14.0,
+        14.0
+      ]
+    },
+    {
+      "player": "blue",
+      "drawing": 9,
+      "offset": [
+        -5,
+        -6
+      ],
+      "similarity": 0.736,
+      "gain": 0.86,
+      "bias": [
+        24.0,
+        18.0,
+        11.0
+      ]
+    },
+    {
+      "player": "grey",
+      "drawing": 9,
+      "offset": [
+        -7,
+        -9
+      ],
+      "similarity": 0.796,
+      "gain": 0.86,
+      "bias": [
+        14.0,
+        14.0,
+        14.0
+      ]
+    },
+    {
+      "player": "blue",
+      "drawing": 10,
+      "offset": [
+        15,
+        -7
+      ],
+      "similarity": 0.637,
+      "gain": 0.86,
+      "bias": [
+        24.0,
+        18.0,
+        11.0
+      ]
+    },
+    {
+      "player": "grey",
+      "drawing": 10,
+      "offset": [
+        12,
+        -7
+      ],
+      "similarity": 0.78,
+      "gain": 0.86,
+      "bias": [
+        14.0,
+        14.0,
+        14.0
+      ]
+    },
+    {
+      "player": "blue",
+      "drawing": 11,
+      "offset": [
+        4,
+        -4
+      ],
+      "similarity": 0.756,
+      "gain": 0.86,
+      "bias": [
+        24.0,
+        18.0,
+        11.0
+      ]
+    },
+    {
+      "player": "grey",
+      "drawing": 11,
+      "offset": [
+        -5,
+        -9
+      ],
+      "similarity": 0.759,
+      "gain": 0.86,
+      "bias": [
+        14.0,
+        14.0,
+        14.0
+      ]
+    },
+    {
+      "player": "blue",
+      "drawing": 13,
+      "offset": [
+        -6,
+        -6
+      ],
+      "similarity": 0.831,
+      "gain": 0.86,
+      "bias": [
+        24.0,
+        18.0,
+        11.0
+      ]
+    },
+    {
+      "player": "grey",
+      "drawing": 13,
+      "offset": [
+        -7,
+        -10
+      ],
+      "similarity": 0.815,
+      "gain": 0.86,
+      "bias": [
+        14.0,
+        14.0,
+        14.0
+      ]
+    }
+  ],
+  "display": "Original heads/torso with generated arm drawings; layered full upper-body and neck articulation."
+}

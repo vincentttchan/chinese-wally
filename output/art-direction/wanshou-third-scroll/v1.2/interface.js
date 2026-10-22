@@ -3,31 +3,31 @@ function action(id,label,style='lantern-note-next'){return `<button id="${id}" c
 function portraitPath(round,suffix){return (round.id==='seated-drum'?'../v0.3.2/recognition/':'recognition/')+round.id+suffix;}
 function drawChrome(){
  updateChapterSound();
- const intro=state.mode==='intro',journal=state.mode==='journal',seeking=state.mode==='seek';
+ const intro=state.mode==='intro',journal=state.mode==='journal',seeking=state.mode==='seek',playing=inquiryPlaybackActive();
  $('layout').dataset.mode=state.mode;
  $('layout').classList.toggle('is-journal-open',journal);
  $('layout').classList.toggle('is-near-view',['observe','ending'].includes(state.mode));
- $('introduction').hidden=!intro;$('hud').hidden=intro;$('controls').hidden=intro;
+ $('introduction').hidden=!intro;$('hud').hidden=intro||playing;$('controls').hidden=intro||playing;
  $('menu-layer').hidden=!state.menuOpen;
  $('menu-toggle').setAttribute('aria-expanded',String(state.menuOpen));
  $('journal').hidden=!journal;
  const help=seeking&&state.hintOpen,review=state.mode==='free'&&state.hintOpen;
- const blocked=state.menuOpen||help||review;
+ const blocked=state.menuOpen||help||review||playing;
  $('hud').inert=blocked;$('controls').inert=blocked;
- $('panel-layer').hidden=state.noteHidden||!(help||review||state.mode==='observe'||state.mode==='ending'||(state.mode==='found'&&!state.speaker));
+ $('panel-layer').hidden=playing||state.noteHidden||(state.mode==='observe'&&!!state.speaker)||!(help||review||state.mode==='observe'||state.mode==='ending'||(state.mode==='found'&&!state.speaker));
  $('panel-layer').className=help?'lantern-dialog-layer lantern-appearance-help':review?'lantern-dialog-layer':['observe','found'].includes(state.mode)?'lantern-dialog-layer chapter-field-layer':'lantern-dialog-layer chapter-end-layer';
  panel.className=help||review?'lantern-paper':'lantern-observation-note';
  if(!['observe','found'].includes(state.mode)){panel.style.removeProperty('top');panel.style.removeProperty('bottom');panel.style.removeProperty('max-height');}
  panel.setAttribute('role',help||review?'dialog':'region');
  panel.setAttribute('aria-modal',String(help||review));
- scene.inert=intro||state.menuOpen||help||review||(journal&&!state.journalLooking);
+ scene.inert=playing||intro||state.menuOpen||help||review||(journal&&!state.journalLooking);
  $('hint-toggle').setAttribute('aria-expanded',String(state.hintOpen));
  $('hint-toggle').innerHTML=icon('CircleHelp')+(['observe','ending'].includes(state.mode)?state.noteHidden?'查看題箋':'暫收題箋':seeking?'給我提示':'街衢的發現');
  $('hint-toggle').disabled=!['seek','free','observe','ending'].includes(state.mode)||state.busy;
  $('mission').hidden=!seeking;
  if(seeking){
   const r=current();
-  $('mission').innerHTML=`<button id="face-help" class="lantern-face-reference" aria-label="放大人物樣貌" aria-controls="panel-layer" aria-expanded="${state.hintOpen}"><img class="lantern-face-illustration" src="${portraitPath(r,'-head-tracing-v2.png')}" alt="第${state.round+1}位人物的樣貌摹繪，原畫為準" draggable="false"></button><div><p class="lantern-eyebrow">在人群中聽樂</p><h1>尋找第 ${state.round+1} 位畫中人</h1><p class="lantern-trail">比對帽形與臉部朝向。</p><p class="lantern-progress">已完成 ${state.completed}／${chapter.rounds.length} 次觀察</p></div>`;
+  $('mission').innerHTML=`<button id="face-help" class="lantern-face-reference" aria-label="放大人物樣貌" aria-controls="panel-layer" aria-expanded="${state.hintOpen}"><img class="lantern-face-illustration" src="${portraitPath(r,'-head-tracing-v2.png')}" alt="第${state.completed+1}位人物的樣貌摹繪，原畫為準" draggable="false"></button><div><p class="lantern-eyebrow">在人群中聽樂</p><h1>尋找第 ${state.completed+1} 位畫中人</h1><p class="lantern-trail">比對帽形與臉部朝向。</p><p class="lantern-progress">已完成 ${state.completed}／${chapter.rounds.length} 位畫中人</p></div>`;
   bind('face-help',toggleHint);
  }
 }
@@ -37,9 +37,11 @@ function toggleMenu(open=!state.menuOpen){state.menuOpen=open;state.hintOpen=fal
 function placeFieldNote(){
  if(state.busy||$('panel-layer').hidden||!['observe','found','ending'].includes(state.mode))return;
  const r=state.mode==='ending'?{head:reviewRegion().box}:current();
- const interactiveEnding=state.mode==='ending'&&['review','performance'].includes(state.reviewStage);
- const detail=state.mode==='observe'&&state.step<2?r.comparison[state.step]:interactiveEnding?reviewRegion():null;
- const b=detail?observationTapBox(detail):state.mode==='ending'?(['connection','summary'].includes(state.reviewStage)?chapter.review[0].box:reviewRegion().box):r.head;
+ const interactiveEnding=false;
+ const detail=state.mode==='observe'&&state.step<2&&!freeEnsembleObservation()?r.comparison[state.step]:interactiveEnding?reviewRegion():null;
+ let b=detail?observationTapBox(detail):state.mode==='ending'?reviewRegion().box:r.head;
+ if(freeEnsembleObservation())b=[875,2250,1300,2580];
+ if(state.mode==='ending'&&state.reviewStage==='arrival'){panel.style.setProperty('--note-width',Math.min(350,scene.clientWidth-32)+'px');panel.style.setProperty('--note-x','16px');panel.style.setProperty('--note-y','16px');panel.style.maxHeight='36dvh';return;}
  const a=screenAt([b[0],b[1]]),z=screenAt([b[2],b[3]]),vw=scene.clientWidth,vh=scene.clientHeight;
  const width=Math.min(vw>=1000?400:350,vw-32);
  panel.style.setProperty('--note-width',width+'px');
@@ -74,7 +76,7 @@ function placeFieldNote(){
 function drawPanel(){
  drawChrome();const r=current();
  if(state.mode==='intro'){
-  const steps=[['清代 · 康衢駢慶','1751 年，乾隆的母親崇慶皇太后\n迎來六旬萬壽慶典。\n《康衢駢慶》畫出北京沿途街景。','看看任務'],['尋人，也讀慶典','依次找到四位畫中人。\n連起樂隊、隊列與祝壽布景，\n看看街衢怎樣成為慶典。','記住第一位'],['先看他的樣子','先記住樣貌，再入畫比對。\n需要時才打開下一個提示。','入畫尋人']][state.intro];
+  const steps=[['清代 · 康衢駢慶','1751 年，乾隆的母親崇慶皇太后\n迎來六旬萬壽慶典。\n《康衢駢慶》畫出北京沿途街景。','看看任務'],['尋人，也讀慶典','從一張樣貌開始，在人群中尋人。\n看清他的動作與持物，\n再循下一張樣貌，逐步讀出慶典。','記住第一位'],['先看他的樣子','先記住樣貌，再入畫比對。\n需要時才打開下一個提示。','入畫尋人']][state.intro];
   panel.replaceChildren();
   $('intro-narrative').innerHTML=`<p class="intro-chapter">${steps[0]}</p><p class="intro-story">${steps[1]}</p>`+(state.intro===2?`<div class="intro-reference"><img src="${portraitPath(r,'-head-tracing-v2.png')}" alt="第一位人物的樣貌摹繪"><p>記住他的樣子。<br>樣貌摹繪，原畫為準。</p></div>`:'');
   const waiting=state.intro===2&&!state.ready;
@@ -84,24 +86,20 @@ function drawPanel(){
   bind('intro-back',()=>{state.intro=Math.max(0,state.intro-1);drawPanel();});
   bind('intro-next',()=>{if(state.intro<2){state.intro++;drawPanel();}else if(state.ready){setMode('seek');scene.focus({preventScroll:true});}});
  }else if(state.mode==='seek'){
-  panel.innerHTML=`<button id="hint-close" class="paper-close" aria-label="關閉">${icon('X')}</button><p class="lantern-eyebrow">尋人 · 提示 ${state.hint}／2</p><h2>${state.hint?'再看一個細節':'可曾見過此人？'}</h2><div class="lantern-appearance-body"><figure class="lantern-appearance-figure"><img class="chapter-face-art" src="${portraitPath(r,'-head-tracing-v2.png')}" alt="第${state.round+1}位人物的樣貌摹繪"><figcaption>樣貌摹繪，原畫為準</figcaption></figure><div class="lantern-appearance-copy"><p>${state.hint===2?r.region:state.hint===1?r.clothes:'看看帽形與臉部朝向，\n再回畫中比對。'}</p>${action('return-search','回畫中尋人','lantern-return-link')}</div></div><div class="lantern-appearance-footer"><span>需要時才打開下一個提示</span><button id="more-hint" class="lantern-text-button">${state.hint===0?'看看衣着與姿勢':state.hint===1?'看看大致區域':'帶我到大致位置'}</button></div><details class="chapter-face-source"><summary>對照原畫樣貌</summary><img src="${portraitPath(r,'-head-source.png')}" width="${r.head[2]-r.head[0]}" height="${r.head[3]-r.head[1]}" alt="原畫頭部原生裁切"><p>原生大小；摹繪的細線與色塊不作額外辨認線索。</p></details>`;
+  panel.innerHTML=`<button id="hint-close" class="paper-close" aria-label="關閉">${icon('X')}</button><p class="lantern-eyebrow">尋人 · 提示 ${state.hint}／2</p><h2>${state.hint?'再看一個細節':'可曾見過此人？'}</h2><div class="lantern-appearance-body"><figure class="lantern-appearance-figure"><img class="chapter-face-art" src="${portraitPath(r,'-head-tracing-v2.png')}" alt="第${state.completed+1}位人物的樣貌摹繪"><figcaption>樣貌摹繪，原畫為準</figcaption></figure><div class="lantern-appearance-copy"><p>${state.hint===2?r.region:state.hint===1?r.clothes:'看看帽形與臉部朝向，\n再回畫中比對。'}</p>${action('return-search','回畫中尋人','lantern-return-link')}</div></div><div class="lantern-appearance-footer"><span>需要時才打開下一個提示</span><button id="more-hint" class="lantern-text-button">${state.hint===0?'看看衣着與姿勢':state.hint===1?'看看大致區域':'帶我到大致位置'}</button></div><details class="chapter-face-source"><summary>對照原畫樣貌</summary><img src="${portraitPath(r,'-head-source.png')}" width="${r.head[2]-r.head[0]}" height="${r.head[3]-r.head[1]}" alt="原畫頭部原生裁切"><p>原生大小；摹繪的細線與色塊不作額外辨認線索。</p></details>`;
   bind('hint-close',closeHint);bind('return-search',closeHint);bind('more-hint',async()=>{if(state.hint<2){state.hint++;drawPanel();panel.focus({preventScroll:true});return;}closeHint();if(state.source!=='native'&&!await setSource('native'))return;await moveTo(r.near,.55);});
  }else if(state.mode==='found'){
   // Only shown when no safe on-painting speech placement is available.
   panel.innerHTML=`<p class="lantern-observation-eyebrow">尋得畫中人 · 遊戲虛構對白</p><h2>接着看原畫</h2><p class="lantern-note-body">${r.greeting}</p>${action('begin-observe','近看原畫')}`;bind('begin-observe',beginObservation);
  }else if(state.mode==='observe'){
-  const done=state.step===2;
-  panel.innerHTML=`<p class="lantern-observation-eyebrow">原畫觀察 · ${done?'已完成比較':`${state.step+1}／2 處細節`}</p><h2>${done?r.observationTitle:['看看合奏的樂器','看看持旗與隊列','看看裝束與彩牆','看看亭內與亭外'][state.round]}</h2><p class="lantern-note-body">${done?r.answer:r.comparison[state.step].label}</p>`+(done?action('next-round',state.round<chapter.rounds.length-1?'尋找下一位':'看看街衢'):'<p class="lantern-note-caption">在原畫上點選；細節太小時，先放大。</p>');
-  if(done&&r.id==='seated-drum'){panel.insertAdjacentHTML('beforeend','<button id="observation-ensemble" class="lantern-note-secondary">點看三人合奏</button>');bind('observation-ensemble',()=>playEnsemble());}
-  if(done&&audiencePeople.includes(r.id)){panel.insertAdjacentHTML('beforeend','<button id="observation-audience" class="lantern-note-secondary">點看七人前後呼應</button>');bind('observation-audience',()=>playAudience());}
-  bind('next-round',()=>{state.completed=state.round+1;if(state.round<chapter.rounds.length-1){const line=r.next;state.round++;state.hint=0;state.step=0;setMode('seek');announce(line);}else{state.ending=0;state.reviewStage='arrival';state.reviewSeen=[];state.reviewIndex=0;setMode('ending');announce('最後，回看慶典的聲音與觀看。');}});
+  drawInquiryObservation();
  }else if(state.mode==='ending'){
   drawEpilogue();
  }else if(state.mode==='free'){
   panel.innerHTML=`<button id="hint-close" class="paper-close" aria-label="關閉">${icon('X')}</button><p class="lantern-eyebrow">留在畫中</p><h2>街衢成為慶典</h2><p>樂器、儀仗與祝壽紋樣，把人物放回「駢慶」的歷史場面。</p><p>還可以點人物聽短句，或將細節收進冊中。</p><div class="lantern-paper-actions"><button id="free-review" class="lantern-text-button">回看長卷與演繹</button><button id="free-book" class="lantern-text-button">回看見聞冊</button><button id="replay" class="lantern-text-button">再尋一次</button></div>`;bind('hint-close',closeHint);bind('free-review',reopenReview);bind('free-book',openJournal);bind('replay',replay);
  }else if(state.mode==='journal')drawJournal();
 }
-function collectionArt(c,locked=false){return `<span class="collection-illustration ${locked?'is-locked':''}"><img class="chapter-collection-art" src="${c.art}" alt="${c.name}的原畫衍生收藏圖樣"></span>`;}
+function collectionArt(c,locked=false){return `<span class="collection-illustration ${locked?'is-locked':''}">${c.artCrop?inquiryCrop(c.artCrop,c.art,...c.artSize,c.name+'的原畫衍生收藏圖樣'):`<img class="chapter-collection-art" src="${c.art}" alt="${c.name}的原畫衍生收藏圖樣">`}</span>`;}
 function motifEntries(c){
  if(c.id!=='painted-wall')return '';
  const found=chapter.motifs.filter(m=>state.details[m.id]);
@@ -121,7 +119,7 @@ function drawJournal(){
  journal.className='lantern-journal-layer lantern-field-journal '+(c&&state.collections[c.id]?'is-detail':'is-overview')+(state.journalLooking?' is-looking':'');
  let content;
  if(c&&state.collections[c.id]){
-  content=`<article class="collection-detail"><button id="journal-back" class="collection-back">← 全部收藏</button><div class="collection-detail-heading"><p>畫中拾趣</p><h2>${c.name}</h2></div><figure class="collection-detail-art">${collectionArt(c)}<figcaption>依原畫創作的收藏圖樣</figcaption></figure><p class="collection-observe">${c.observation}</p><p class="collection-body">${c.explanation}</p>${motifEntries(c)}${c.id==='audience'?'<button id="journal-audience" class="collection-look">回到畫中重播七人群像 ↗</button><button id="journal-audience-slow" class="collection-look">慢速細看七人群像 ↗</button>':''}${c.id==='ensemble'?'<button id="journal-ensemble" class="collection-look">回到畫中重播合奏 ↗</button>':''}<button id="return-location" class="collection-look">看看畫中位置 <span aria-hidden="true">↗</span></button><p class="collection-next"><span>再留意一處</span>${c.next}</p><details class="collection-source"><summary>判讀依據</summary><p>${c.evidence}</p><a href="${chapter.sources.painting.url}" target="_blank" rel="noopener noreferrer">${chapter.sources.painting.label}</a> · ${collectionSources(c)} · <a href="../source-provenance.json" target="_blank" rel="noopener noreferrer">原畫影像來源</a></details>${available.length>1?`<nav class="collection-detail-nav" aria-label="已收藏見聞"><button id="entry-prev" aria-label="上一則已收藏見聞">←</button><span>${available.findIndex(a=>a.id===c.id)+1}／${available.length}</span><button id="entry-next" aria-label="下一則已收藏見聞">→</button></nav>`:''}</article>`;
+  content=`<article class="collection-detail"><button id="journal-back" class="collection-back">← 全部收藏</button><div class="collection-detail-heading"><p>畫中拾趣</p><h2>${c.name}</h2></div><figure class="collection-detail-art">${collectionArt(c)}<figcaption>依原畫創作的收藏圖樣</figcaption></figure><p class="collection-observe">${c.observation}</p><p class="collection-body">${c.explanation}</p>${motifEntries(c)}${c.id==='flag'?'<button id="journal-flags" class="collection-look">回到畫中重播持旗群像 ↗</button>':''}${c.id==='audience'?'<button id="journal-audience" class="collection-look">回到畫中重播七人群像 ↗</button><button id="journal-audience-slow" class="collection-look">慢速細看七人群像 ↗</button>':''}${c.id==='ensemble'?'<button id="journal-ensemble" class="collection-look">回到畫中重播合奏 ↗</button>':''}<button id="return-location" class="collection-look">看看畫中位置 <span aria-hidden="true">↗</span></button><p class="collection-next"><span>再留意一處</span>${c.next}</p><details class="collection-source"><summary>判讀依據</summary><p>${c.evidence}</p><a href="${chapter.sources.painting.url}" target="_blank" rel="noopener noreferrer">${chapter.sources.painting.label}</a> · ${collectionSources(c)} · <a href="../source-provenance.json" target="_blank" rel="noopener noreferrer">原畫影像來源</a></details>${available.length>1?`<nav class="collection-detail-nav" aria-label="已收藏見聞"><button id="entry-prev" aria-label="上一則已收藏見聞">←</button><span>${available.findIndex(a=>a.id===c.id)+1}／${available.length}</span><button id="entry-next" aria-label="下一則已收藏見聞">→</button></nav>`:''}</article>`;
  }else{
   content='<div class="collection-overview"><p class="collection-introduction">把偶然看見的細節，收成自己的街衢見聞。</p><div class="collection-grid">'+chapter.collections.map(c=>{const found=!!state.collections[c.id];return `<button class="collection-item ${found?'is-collected':'is-undiscovered'}" data-entry="${c.id}" aria-label="${c.name}，${found?'已收下，開啟詳情':'未收下，看看提示'}">${collectionArt(c,!found)}<span class="collection-item-name">${c.name}</span><span class="collection-item-state">${found?'已收下':'未收下'}</span></button>`;}).join('')+'</div>'+motifOverview()+'</div>';
  }
@@ -133,9 +131,10 @@ function drawJournal(){
  bind('journal-back',()=>{state.entry=null;drawJournal();journal.focus({preventScroll:true});});
  journal.querySelectorAll('[data-entry]').forEach(b=>b.onclick=()=>{const c=chapter.collections.find(c=>c.id===b.dataset.entry);if(state.collections[c.id]){state.entry=c.id;drawJournal();journal.focus({preventScroll:true});}else $('journal-hint').textContent=c.hint;});
  bind('return-location',()=>lookFromJournal(state.collections[c.id]));
- const replayAudience=async rate=>{await closeJournal();if(state.mode!=='journal')await playAudience(rate);};
+ const replayAudience=async rate=>{await closeJournal();if(state.mode!=='journal')await playAudience(rate,true);};
  bind('journal-audience',()=>replayAudience(1));bind('journal-audience-slow',()=>replayAudience(.5));
- bind('journal-ensemble',async()=>{await closeJournal();await playEnsemble();});
+ bind('journal-flags',async()=>{await closeJournal();if(state.mode!=='journal')await playFlags(1,true);});
+ bind('journal-ensemble',async()=>{await closeJournal();await playEnsemble(true);});
  bind('journal-resume',resumeJournal);
  journal.querySelectorAll('[data-motif]').forEach(button=>button.onclick=()=>lookFromJournal(state.details[button.dataset.motif]));
 }

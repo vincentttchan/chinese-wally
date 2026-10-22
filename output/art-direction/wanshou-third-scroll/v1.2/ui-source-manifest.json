@@ -1,0 +1,78 @@
+{
+  "standard": "宮中鬧元宵現行介面",
+  "sources": [
+    {
+      "path": "src/styles.css",
+      "sha256": "00542482d8bab09f4a55fa9cc639d7bf8af825b9fd8c276661591e17bcc8c1e2"
+    },
+    {
+      "path": "src/lantern.css",
+      "sha256": "a0da9ad0317e1a8cf45bcb1f1201f78983c62f03fc5367be52a2f6b6b3535e02"
+    },
+    {
+      "path": "src/lantern-journal.css",
+      "sha256": "3f5e6f2c9f3f821d9d56a6cc5fca50ab663f8422c4ed59212bdd00c9bc437548"
+    },
+    {
+      "path": "src/lantern-search-hud.css",
+      "sha256": "372794b0ecc33c14262598cd5a4502bd707a5b9bdc7a45b5bf744b8b2f90c6f2"
+    },
+    {
+      "path": "src/lantern-observation.css",
+      "sha256": "6cd1e438a4b25ff4236f187ca4a2e32413c0615e7a111ba33dcd08eb175d1fb0"
+    },
+    {
+      "path": "src/lantern-field-journal.css",
+      "sha256": "7c685228f98257bdd1d32973d22136e28c27d39f27227991271e8fa2d7bf41cf"
+    },
+    {
+      "path": "src/lantern-feedback.css",
+      "sha256": "7e32fbd86f03423b916fa5b54008ca262f331149ac8a33ddf4482c12ad5d1165"
+    },
+    {
+      "path": "src/lantern-spark.css",
+      "sha256": "97cf4eb04d338307cc8d6ff1a3ab210ef52f29af3e1c6e7a43783cfb40c46fc1"
+    },
+    {
+      "path": "src/page-motion.css",
+      "sha256": "347667f247107df48581b47fc4c4fb4d3b3c01eae7265febcb19d700f80cdf43"
+    },
+    {
+      "path": "src/components/ArtIcons.tsx",
+      "sha256": "67e6d6329ae6c95016ef805392800d6ad566799b1555846fc62a651c946fb5b9"
+    },
+    {
+      "path": "src/game/historicalChapters.ts",
+      "sha256": "b58b82dedc87a9e59001dd5dce0912b1c02164e64b7cad7911d72b918bf9cbcf"
+    },
+    {
+      "path": "src/chapterNavigation.js",
+      "sha256": "11d36f34144836b2bc28f823df89921420ae9f33760e5d11d4771d27f574bda3"
+    },
+    {
+      "path": "src/audio/chapterMusic.js",
+      "sha256": "e5bdb981f6bf817ba38f19663faa850dcea4400db92c4299f865c32ed70730b9"
+    },
+    {
+      "path": "src/audio/chapterMusicTracks.js",
+      "sha256": "9c78ca261d3e981a47712a0bcf61e93a2d9b6c194d0471f49a6df388b163e7eb"
+    }
+  ],
+  "chapterAdaptations": [
+    "source-coordinate display bounds and cover camera",
+    "initial view at 1.5 times cover minimum",
+    "undistorted native-content map with viewport rectangle",
+    "three target portraits",
+    "202 people with individually authored three-line fictional dialogue and native evidence records",
+    "eight collection categories in two columns, black flag study and visible motif progress",
+    "three characters, free musician observation with nearby fictional dialogue, optional in-painting interpretation and historical reading, single evidence ending and approved v7 whole-group repainted ensemble animation with a stationary background"
+  ],
+  "retiredStyles": [
+    "v0.2/common.css",
+    "v0.2/effects.css",
+    "v0.2/art-ui.css",
+    "v0.2/journal-ui.css",
+    "v0.3.2/play.css",
+    "v0.5/play.css"
+  ]
+}

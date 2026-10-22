@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-20",
+  "purpose": "獨立亭內樂隊合奏動畫樣段；原位播放後恢復原畫",
+  "originalSource": "public/chapters/kangqu-listening/art/native-segment-lossless.webp",
+  "originalCrop": [
+    880,
+    2290,
+    205,
+    270
+  ],
+  "originalCropCopy": "output/art-direction/wanshou-third-scroll/v1.0.1/animation/source.png",
+  "movingArt": "Original painting pixels clipped to four hand/instrument contours, with original head pixels excluded. No generated poses or faces are used.",
+  "repair": "hand-repair-v1.png generated with built-in image_gen from source.png; displayed only through the original hand/instrument masks.",
+  "repairPrompt": "Remove only the drummer forearms/sticks and blue cymbal-player forearms/cymbals. Preserve exact framing, heads, bodies, drum, third musician, architecture, worn silk and muted palette; reconstruct only exposed robe/background.",
+  "durationMs": 6200,
+  "drumContactsMs": [
+    1400,
+    3000,
+    4500
+  ],
+  "cymbalContactsMs": [
+    1660,
+    3260,
+    4760
+  ],
+  "limits": [
+    "visual game interpretation, not a historical performance reconstruction",
+    "only drummer and cymbal player move in this sample; gong player and horn player remain original",
+    "no added instrument sound or reconstructed score",
+    "original crop is 205 by 270 pixels; close-up retains original softness"
+  ],
+  "route": "#kangqu-ensemble-preview"
+}

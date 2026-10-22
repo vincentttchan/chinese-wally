@@ -2,21 +2,20 @@
 const audiencePeople=['watcher-blue','watcher-pink','watcher-pale','watcher-white','watcher-brown','watcher-pattern','watcher-yellow'];
 const audienceAsset=name=>'../../../../public/art/animations/kangqu-audience-v2-seven/'+name+'.png';
 let audienceRAF=0,audienceToken=0,audienceReturn=null;
-function stopAudience(completed=false){
- audienceToken++;cancelAnimationFrame(audienceRAF);$('audience-animation')?.remove();$('audience-controls')?.remove();$('layout').classList.remove('is-ensemble-playing');
- const previous=audienceReturn;audienceReturn=null;state.busy=false;
- if(previous){state.noteHidden=previous.noteHidden;state.speaker=previous.speaker;}
- drawPanel();drawPoints();render();
+async function stopAudience(completed=false){
+ audienceToken++;cancelAnimationFrame(audienceRAF);$('audience-animation')?.remove();$('audience-controls')?.remove();
+ const previous=audienceReturn;audienceReturn=null;
+ await restoreInquiryPlayback(previous);
  if(completed&&!state.collections.audience){state.collections.audience={instance:'street-audience',point:[512.5,2557.5]};save();receiveCollection('已收藏：表演與觀看');}
- scene.focus({preventScroll:true});
 }
-async function playAudience(playbackRate=1){
+async function playAudience(playbackRate=1,fromJournal=false){
+ if(!fromJournal&&!inquiryCanAnimate('audience')){announce('先看清這組人物的裝束與持物，再看準備表演。');return;}
  if(state.busy)return;
- if(state.source!=='native'&&!await setSource('native'))return;
- audienceReturn={noteHidden:state.noteHidden,speaker:state.speaker};state.speaker=null;
- await moveTo([512.5,2557.5],Math.min(1.35,(scene.clientWidth-48)/545,(scene.clientHeight-100)/275));
- const token=++audienceToken;state.busy=true;state.noteHidden=true;$('layout').classList.add('is-ensemble-playing');drawPanel();drawPoints();render();
- const controls=document.createElement('p');controls.id='audience-controls';controls.className='ensemble-controls';controls.setAttribute('role','status');controls.append('前方示意，後方四人回應 ');
+ const previous=await prepareInquiryPlayback();if(!previous)return;audienceReturn=previous;
+ const token=++audienceToken;
+ await moveTo([512.5,2557.5],Math.min(1.35,(scene.clientWidth-48)/545,(scene.clientHeight-100)/275));if(token!==audienceToken)return;
+ quietInquiryNotice();state.busy=true;state.noteHidden=true;$('layout').classList.add('is-ensemble-playing');drawPanel();drawPoints();render();
+ const controls=document.createElement('p');controls.id='audience-controls';controls.className='ensemble-controls';controls.setAttribute('role','status');controls.append('戲班正在準備表演 ');
  const skip=document.createElement('button');skip.className='lantern-text-button';skip.textContent='略過';skip.onclick=()=>stopAudience();controls.append(skip);document.body.append(controls);
  let images,timeout;
  try{images=await Promise.race([Promise.all(['original-reference','fixed-background',...Array.from({length:9},(_,i)=>'frames/group-'+String(i+1).padStart(2,'0'))].map(name=>preload(audienceAsset(name)))),new Promise((_,reject)=>{timeout=setTimeout(()=>reject(new Error('timeout')),8000);})]);}

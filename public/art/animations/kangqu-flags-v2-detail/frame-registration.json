@@ -1,0 +1,85 @@
+{
+  "frameSize": [
+    1311,
+    1366
+  ],
+  "logicalCrop": [
+    3300,
+    1270,
+    3770,
+    1760
+  ],
+  "masterPlacement": [
+    28,
+    28
+  ],
+  "sharedScaleBySourceHeight": true,
+  "partExtraction": false,
+  "neutral": "exact approved master",
+  "poses": [
+    {
+      "phase": "left",
+      "pose": 1,
+      "sourceRectangle": [
+        0,
+        0,
+        715,
+        757
+      ],
+      "wholeGroupTranslation": [
+        -3,
+        14
+      ],
+      "shoeSimilarity": 0.733,
+      "sourceScale": 1.7331571994715984
+    },
+    {
+      "phase": "left",
+      "pose": 2,
+      "sourceRectangle": [
+        715,
+        0,
+        1450,
+        757
+      ],
+      "wholeGroupTranslation": [
+        20,
+        11
+      ],
+      "shoeSimilarity": 0.713,
+      "sourceScale": 1.7331571994715984
+    },
+    {
+      "phase": "right",
+      "pose": 1,
+      "sourceRectangle": [
+        0,
+        0,
+        715,
+        757
+      ],
+      "wholeGroupTranslation": [
+        6,
+        20
+      ],
+      "shoeSimilarity": 0.75,
+      "sourceScale": 1.7331571994715984
+    },
+    {
+      "phase": "right",
+      "pose": 2,
+      "sourceRectangle": [
+        715,
+        0,
+        1450,
+        757
+      ],
+      "wholeGroupTranslation": [
+        0,
+        20
+      ],
+      "shoeSimilarity": 0.751,
+      "sourceScale": 1.7331571994715984
+    }
+  ]
+}

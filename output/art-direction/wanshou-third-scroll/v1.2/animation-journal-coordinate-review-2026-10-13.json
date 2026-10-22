@@ -1,0 +1,1972 @@
+{
+  "date": "2026-10-13",
+  "method": "Pure camera and motion mathematics only. No browser, DOM, journal event or animation execution.",
+  "sameFrameRestoration": [
+    {
+      "source": "native",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 0.4271111111111111,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 0.4271111111111111,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 0.4271111111111111,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 0.7135555555555555,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 0.7135555555555555,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 0.7135555555555555,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 1,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 1,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 1,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 0.34853168469860896,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 0.34853168469860896,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 0.34853168469860896,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 0.6742658423493044,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 0.6742658423493044,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 0.6742658423493044,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 1,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 1,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 1,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 0.3268933539412674,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 0.3268933539412674,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 0.3268933539412674,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 0.6634466769706338,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 0.6634466769706338,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 0.6634466769706338,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 1,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 1,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "native",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 1,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 1.4199475065616798,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 1.4199475065616798,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 1.4199475065616798,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 1.7749343832020996,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 1.7749343832020996,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 1.7749343832020996,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 2.1299212598425195,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 2.1299212598425195,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1920,
+        1080
+      ],
+      "scale": 2.1299212598425195,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 1.1837270341207349,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 1.1837270341207349,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 1.1837270341207349,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 1.4796587926509186,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 1.4796587926509186,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 1.4796587926509186,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 1.7755905511811023,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 1.7755905511811023,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        1440,
+        900
+      ],
+      "scale": 1.7755905511811023,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 1.110236220472441,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 1.110236220472441,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 1.110236220472441,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 1.3877952755905514,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 1.3877952755905514,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 1.3877952755905514,
+      "fraction": 0.95,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 1.6653543307086616,
+      "fraction": 0.05,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 1.6653543307086616,
+      "fraction": 0.5,
+      "pass": true
+    },
+    {
+      "source": "full",
+      "frame": [
+        390,
+        844
+      ],
+      "scale": 1.6653543307086616,
+      "fraction": 0.95,
+      "pass": true
+    }
+  ],
+  "resizeRestoration": [
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "native",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1920,
+        1080
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        1440,
+        900
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": true
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        1440,
+        900
+      ],
+      "centerAdjusted": true,
+      "scaleAdjusted": false
+    },
+    {
+      "source": "full",
+      "oldFrame": [
+        390,
+        844
+      ],
+      "newFrame": [
+        390,
+        844
+      ],
+      "centerAdjusted": false,
+      "scaleAdjusted": false
+    }
+  ],
+  "motion": {
+    "samples": 253,
+    "maxCymbalTranslation": 1.8,
+    "maxCymbalRotation": 2.5,
+    "maxDrumTranslation": 2.2,
+    "maxDrumRotation": 1.2,
+    "start": {
+      "cymbalX": 0,
+      "cymbalRotation": 0,
+      "drumY": 0,
+      "drumRotation": 0
+    },
+    "end": {
+      "elapsed": 4200,
+      "envelope": 0,
+      "opacity": 0,
+      "poseDisplacement": 0,
+      "runtimeAction": "stopEnsemble removes overlay at duration"
+    }
+  }
+}

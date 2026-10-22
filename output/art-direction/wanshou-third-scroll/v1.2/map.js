@@ -16,7 +16,7 @@ function drawMap(){
 function installMap(){
  const map=$('navigator-map');let grip=null;
  const sourcePoint=e=>KangquViewport.mapPoint([e.clientX,e.clientY],map.getBoundingClientRect(),chapterViewport.nativeBounds);
- const canMove=()=>state.ready&&!state.busy&&state.source==='native'&&['seek','found','free'].includes(state.mode)&&!state.menuOpen&&!state.hintOpen;
+ const canMove=()=>state.ready&&!state.busy&&state.source==='native'&&(['seek','found','free'].includes(state.mode)||freeEnsembleObservation())&&!state.menuOpen&&!state.hintOpen;
  const move=e=>{if(!grip||!canMove())return;if(Math.hypot(e.clientX-grip.start[0],e.clientY-grip.start[1])>3)grip.moved=true;const p=sourcePoint(e);centerAt([p[0]+grip.offset[0],p[1]+grip.offset[1]],state.view.scale,[.5,.5]);};
  map.addEventListener('pointerdown',e=>{
   if(e.button>0||grip||!canMove())return;e.preventDefault();map.focus({preventScroll:true});

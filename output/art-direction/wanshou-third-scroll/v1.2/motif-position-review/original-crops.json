@@ -1,0 +1,66 @@
+[
+  {
+    "id": "jade",
+    "registeredBox": [
+      333,
+      2394,
+      488,
+      2493
+    ],
+    "contextCrop": [
+      253,
+      2314,
+      568,
+      2573
+    ],
+    "method": "unchanged native pixels; no enlargement or generated detail"
+  },
+  {
+    "id": "fan",
+    "registeredBox": [
+      1340,
+      2405,
+      1565,
+      2476
+    ],
+    "contextCrop": [
+      1260,
+      2325,
+      1645,
+      2556
+    ],
+    "method": "unchanged native pixels; no enlargement or generated detail"
+  },
+  {
+    "id": "lotus",
+    "registeredBox": [
+      3410,
+      2306,
+      3577,
+      2390
+    ],
+    "contextCrop": [
+      3330,
+      2226,
+      3657,
+      2470
+    ],
+    "method": "unchanged native pixels; no enlargement or generated detail"
+  },
+  {
+    "id": "basket",
+    "registeredBox": [
+      3620,
+      2308,
+      3778,
+      2420
+    ],
+    "contextCrop": [
+      3540,
+      2228,
+      3858,
+      2500
+    ],
+    "method": "unchanged native pixels; no enlargement or generated detail"
+  }
+]

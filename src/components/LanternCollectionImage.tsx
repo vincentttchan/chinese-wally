@@ -2,8 +2,9 @@ import {useId} from 'react';
 import {lanternJournalAtlas,lanternJournalItems} from '../game/lanternCollection.ts';
 
 /** Supports existing atlas motifs and individual transparent collectible art. */
-export function LanternCollectionImage({findingId}:{findingId:string}){
-  const item=lanternJournalItems[findingId];
+export type CollectionArtwork=(typeof lanternJournalItems)[string];
+export function LanternCollectionImage({findingId,artwork}:{findingId:string;artwork?:CollectionArtwork}){
+  const item=artwork??lanternJournalItems[findingId];
   const filterId=`collection-cutout-${useId().replace(/:/g,'')}`;
   if(item.frame){
     const frame=item.frame;

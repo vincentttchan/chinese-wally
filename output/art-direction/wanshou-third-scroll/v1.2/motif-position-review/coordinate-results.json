@@ -1,0 +1,552 @@
+{
+  "date": "2026-10-13",
+  "method": "Native image inspection plus pure source-coordinate evaluation. No browser, DOM, stored-browser data or gameplay execution.",
+  "motifs": [
+    {
+      "id": "jade",
+      "name": "玉板",
+      "object": "wall-3",
+      "box": [
+        333,
+        2394,
+        488,
+        2493
+      ],
+      "anchor": [
+        410,
+        2446
+      ],
+      "anchorInsideBox": true
+    },
+    {
+      "id": "fan",
+      "name": "扇",
+      "object": "wall-5",
+      "box": [
+        1340,
+        2405,
+        1565,
+        2503
+      ],
+      "anchor": [
+        1450,
+        2470
+      ],
+      "anchorInsideBox": true
+    },
+    {
+      "id": "lotus",
+      "name": "荷花",
+      "object": "wall-13",
+      "box": [
+        3410,
+        2306,
+        3577,
+        2390
+      ],
+      "anchor": [
+        3495,
+        2350
+      ],
+      "anchorInsideBox": true
+    },
+    {
+      "id": "basket",
+      "name": "花籃",
+      "object": "wall-14",
+      "box": [
+        3620,
+        2308,
+        3778,
+        2420
+      ],
+      "anchor": [
+        3690,
+        2350
+      ],
+      "anchorInsideBox": true
+    }
+  ],
+  "tapChecks": [
+    {
+      "motif": "jade",
+      "scale": 0.45,
+      "point": [
+        410,
+        2446
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "wall-3"
+      },
+      "pass": true
+    },
+    {
+      "motif": "jade",
+      "scale": 0.65,
+      "point": [
+        410,
+        2446
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "wall-3"
+      },
+      "pass": true
+    },
+    {
+      "motif": "jade",
+      "scale": 1,
+      "point": [
+        410,
+        2446
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "wall-3"
+      },
+      "pass": true
+    },
+    {
+      "motif": "fan",
+      "scale": 0.45,
+      "point": [
+        1450,
+        2470
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "wall-5"
+      },
+      "pass": true
+    },
+    {
+      "motif": "fan",
+      "scale": 0.65,
+      "point": [
+        1450,
+        2470
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "wall-5"
+      },
+      "pass": true
+    },
+    {
+      "motif": "fan",
+      "scale": 1,
+      "point": [
+        1450,
+        2470
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "wall-5"
+      },
+      "pass": true
+    },
+    {
+      "motif": "lotus",
+      "scale": 0.45,
+      "point": [
+        3495,
+        2350
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "wall-13"
+      },
+      "pass": true
+    },
+    {
+      "motif": "lotus",
+      "scale": 0.65,
+      "point": [
+        3495,
+        2350
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "wall-13"
+      },
+      "pass": true
+    },
+    {
+      "motif": "lotus",
+      "scale": 1,
+      "point": [
+        3495,
+        2350
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "wall-13"
+      },
+      "pass": true
+    },
+    {
+      "motif": "basket",
+      "scale": 0.45,
+      "point": [
+        3690,
+        2350
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "wall-14"
+      },
+      "pass": true
+    },
+    {
+      "motif": "basket",
+      "scale": 0.65,
+      "point": [
+        3690,
+        2350
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "wall-14"
+      },
+      "pass": true
+    },
+    {
+      "motif": "basket",
+      "scale": 1,
+      "point": [
+        3690,
+        2350
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "wall-14"
+      },
+      "pass": true
+    },
+    {
+      "motif": "fan-lower-edge",
+      "scale": 0.45,
+      "point": [
+        1450,
+        2484
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "wall-5"
+      },
+      "pass": true
+    },
+    {
+      "motif": "fan-lower-edge",
+      "scale": 0.65,
+      "point": [
+        1450,
+        2484
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "wall-5"
+      },
+      "pass": true
+    },
+    {
+      "motif": "fan-lower-edge",
+      "scale": 1,
+      "point": [
+        1450,
+        2484
+      ],
+      "hit": {
+        "kind": "object",
+        "id": "wall-5"
+      },
+      "pass": true
+    }
+  ],
+  "cameraChecks": [
+    {
+      "motif": "jade",
+      "frame": [
+        1920,
+        1080
+      ],
+      "screen": [
+        409,
+        819
+      ],
+      "projectedBox": [
+        332,
+        767,
+        487,
+        866
+      ],
+      "pass": true
+    },
+    {
+      "motif": "jade",
+      "frame": [
+        1440,
+        900
+      ],
+      "screen": [
+        409,
+        639
+      ],
+      "projectedBox": [
+        332,
+        587,
+        487,
+        686
+      ],
+      "pass": true
+    },
+    {
+      "motif": "jade",
+      "frame": [
+        390,
+        844
+      ],
+      "screen": [
+        195,
+        583
+      ],
+      "projectedBox": [
+        118,
+        531,
+        273,
+        630
+      ],
+      "pass": true
+    },
+    {
+      "motif": "fan",
+      "frame": [
+        1920,
+        1080
+      ],
+      "screen": [
+        960,
+        843
+      ],
+      "projectedBox": [
+        850,
+        778,
+        1075,
+        876
+      ],
+      "pass": true
+    },
+    {
+      "motif": "fan",
+      "frame": [
+        1440,
+        900
+      ],
+      "screen": [
+        720,
+        663
+      ],
+      "projectedBox": [
+        610,
+        598,
+        835,
+        696
+      ],
+      "pass": true
+    },
+    {
+      "motif": "fan",
+      "frame": [
+        390,
+        844
+      ],
+      "screen": [
+        195,
+        607
+      ],
+      "projectedBox": [
+        85,
+        542,
+        310,
+        640
+      ],
+      "pass": true
+    },
+    {
+      "motif": "lotus",
+      "frame": [
+        1920,
+        1080
+      ],
+      "screen": [
+        960,
+        723
+      ],
+      "projectedBox": [
+        875,
+        679,
+        1042,
+        763
+      ],
+      "pass": true
+    },
+    {
+      "motif": "lotus",
+      "frame": [
+        1440,
+        900
+      ],
+      "screen": [
+        720,
+        543
+      ],
+      "projectedBox": [
+        635,
+        499,
+        802,
+        583
+      ],
+      "pass": true
+    },
+    {
+      "motif": "lotus",
+      "frame": [
+        390,
+        844
+      ],
+      "screen": [
+        195,
+        487
+      ],
+      "projectedBox": [
+        110,
+        443,
+        277,
+        527
+      ],
+      "pass": true
+    },
+    {
+      "motif": "basket",
+      "frame": [
+        1920,
+        1080
+      ],
+      "screen": [
+        1111,
+        723
+      ],
+      "projectedBox": [
+        1041,
+        681,
+        1199,
+        793
+      ],
+      "pass": true
+    },
+    {
+      "motif": "basket",
+      "frame": [
+        1440,
+        900
+      ],
+      "screen": [
+        720,
+        543
+      ],
+      "projectedBox": [
+        650,
+        501,
+        808,
+        613
+      ],
+      "pass": true
+    },
+    {
+      "motif": "basket",
+      "frame": [
+        390,
+        844
+      ],
+      "screen": [
+        195,
+        487
+      ],
+      "projectedBox": [
+        125,
+        445,
+        283,
+        557
+      ],
+      "pass": true
+    }
+  ],
+  "nearbyHeadChecks": [
+    {
+      "motif": "jade",
+      "person": "watcher-blue",
+      "point": [
+        317,
+        2484.5
+      ],
+      "actual": {
+        "kind": "person",
+        "id": "watcher-blue"
+      },
+      "pass": true
+    },
+    {
+      "motif": "jade",
+      "person": "watcher-pink",
+      "point": [
+        411,
+        2521
+      ],
+      "actual": {
+        "kind": "person",
+        "id": "watcher-pink"
+      },
+      "pass": true
+    },
+    {
+      "motif": "jade",
+      "person": "watcher-pale",
+      "point": [
+        458,
+        2488
+      ],
+      "actual": {
+        "kind": "person",
+        "id": "watcher-pale"
+      },
+      "pass": true
+    },
+    {
+      "motif": "basket",
+      "person": "wall-blue",
+      "point": [
+        3680,
+        2401
+      ],
+      "actual": {
+        "kind": "person",
+        "id": "wall-blue"
+      },
+      "pass": true
+    },
+    {
+      "motif": "basket",
+      "person": "brown-green-hem",
+      "point": [
+        3745,
+        2368
+      ],
+      "actual": {
+        "kind": "person",
+        "id": "brown-green-hem"
+      },
+      "pass": true
+    }
+  ]
+}

@@ -6,10 +6,12 @@ import type {SceneViewport} from './ScrollScene.tsx';
 import type {Size} from '../game/geometry.ts';
 
 /** An invisible, keyboard-accessible action registered to the original painting. */
-export function LanternPaintingTarget({region,viewport,label,onClick,monochrome=false,pressed,buttonRef,hint,artworkSize=lanternSize}: {
+export function LanternPaintingTarget({region,viewport,label,onClick,monochrome=false,pressed,buttonRef,hint,artworkSize=lanternSize,pointerThrough=false}: {
   region:PaintingRegion;viewport:SceneViewport;label:string;onClick:()=>void;
   monochrome?:boolean;pressed?:boolean;buttonRef?:Ref<HTMLButtonElement>;hint?:string;
   artworkSize?:Size;
+  /** Keep keyboard activation while a chapter resolves physical taps in its canvas. */
+  pointerThrough?:boolean;
 }) {
   const [showHint,setShowHint]=useState(false);
   useEffect(()=>{setShowHint(false);const timer=window.setTimeout(()=>setShowHint(true),7000);return()=>window.clearTimeout(timer);},[label]);
@@ -19,7 +21,7 @@ export function LanternPaintingTarget({region,viewport,label,onClick,monochrome=
   const clipPath=`polygon(${points.map(p=>`${(p.x-left)/width*100}% ${(p.y-top)/height*100}%`).join(',')})`;
   return <>
     <button ref={buttonRef} type="button" className={`lantern-painting-target ${monochrome?'is-monochrome':''}`} aria-label={label} aria-pressed={pressed}
-      style={{left,top,width,height,clipPath}} onClick={onClick}/>
+      style={{left,top,width,height,clipPath,pointerEvents:pointerThrough?'none':undefined}} onClick={onClick}/>
     {hint&&showHint&&<span className="lantern-painting-hint" aria-hidden="true" style={{left:Math.max(20,Math.min(viewport.frame.width-140,left+width/2-50)),top:Math.min(viewport.frame.height-44,Math.max(20,top+height+10))}}>{hint}</span>}
   </>;
 }

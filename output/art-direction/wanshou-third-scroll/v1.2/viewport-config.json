@@ -1,10 +1,24 @@
 {
-  "nativeBounds": [0, 120, 4500, 2708],
-  "fullBounds": [0, 20, 33949, 782],
-  "initialPoint": [2250, 1700],
+  "nativeBounds": [
+    0,
+    120,
+    4500,
+    2708
+  ],
+  "fullBounds": [
+    0,
+    20,
+    33949,
+    782
+  ],
+  "initialPoint": [
+    2250,
+    1700
+  ],
   "initialZoomRatio": 1.5,
   "gutter": 1,
   "method": "Display bounds only. Original image files, registration and hotspot coordinates are unchanged.",
   "evidence": "Source pixels and original overview inspected. Native registered people extend from y=630 to y=2675; the chosen bounds contain them. Black photograph margins lie outside the display bounds.",
-  "validation": "Source inspection only; no tests, browser or gameplay execution."
+  "validation": "Source inspection only; no tests, browser or gameplay execution.",
+  "maxNativeScale": 2
 }
