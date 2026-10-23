@@ -1,0 +1,91 @@
+{
+  "archiveId": "site-2026-10-23-zanhua-navigation",
+  "freezeDate": "2026-10-23",
+  "timezone": "Asia/Hong_Kong",
+  "gitTag": "site-2026-10-23-zanhua-navigation",
+  "deployedCommit": "222747b2e999e09f666073460a58d80294123c35",
+  "sourceTree": "81a4355974f1eaefc57cc76c5e36b492ef9e2274",
+  "website": "https://vincentttchan.github.io/chinese-wally/#zanhua",
+  "releaseUrl": "https://github.com/vincentttchan/chinese-wally/releases/tag/site-2026-10-23-zanhua-navigation",
+  "workflowRun": 39889538980,
+  "workflowUrl": "https://github.com/vincentttchan/chinese-wally/actions/runs/39889538980",
+  "deploymentConclusion": "success",
+  "artifact": {
+    "id": 12473898024,
+    "name": "github-pages",
+    "file": "github-pages-artifact.zip",
+    "bytes": 541634427,
+    "sha256": "08351b5b830d0828e85abb8fea1aa87116d63d27b38e9422a3f1a077e130d01f",
+    "officialDigestMatched": true,
+    "archivedFiles": 485
+  },
+  "previousArchive": "site-2026-10-23",
+  "chapters": [
+    {
+      "id": "zanhua",
+      "title": "簪花仕女圖",
+      "route": "#zanhua",
+      "music": "zanhua-music.mp3"
+    },
+    {
+      "id": "luoshen",
+      "title": "洛水之間",
+      "route": "#luoshen",
+      "music": "luoshen-music.wav"
+    },
+    {
+      "id": "lantern-festival",
+      "title": "宮中鬧元宵",
+      "route": "#lantern-festival",
+      "music": "scroll-music.mp3"
+    },
+    {
+      "id": "kangqu-listening",
+      "title": "在人群中聽樂",
+      "route": "#kangqu-listening",
+      "music": "kangqu-music.mp3"
+    },
+    {
+      "id": "qingming-shanghe",
+      "title": "清明上河圖",
+      "route": "#qingming-shanghe",
+      "music": "qingming-music.mp3"
+    },
+    {
+      "id": "examination",
+      "title": "榜下尋人",
+      "route": "#examination",
+      "music": "examination-music.mp3"
+    }
+  ],
+  "music": [
+    {
+      "path": "audio/zanhua-music.mp3",
+      "sha256": "c16be78cb00ea97f236af1f9a50b1aaa1f94f67f9cabc86c170b1393f1d2c8bf"
+    },
+    {
+      "path": "audio/luoshen-music.wav",
+      "sha256": "d53baadf544cfb61ed020ffdafa354ff17544c3b201a9146be7468dd407ab8b7"
+    },
+    {
+      "path": "audio/scroll-music.mp3",
+      "sha256": "46caeb57f1068d6a780913cd1ec9e00c3d337a2815bb5c355e46bb88c90a3123"
+    },
+    {
+      "path": "audio/kangqu-music.mp3",
+      "sha256": "6482317dfc38cc81cc0ffc96180197b5e065e38bba088442074beedb17ca4292"
+    },
+    {
+      "path": "audio/qingming-music.mp3",
+      "sha256": "f323097c1727128076e95da70212465ee69d9d7a8af9834ecebf4c52be4abd72"
+    },
+    {
+      "path": "audio/examination-music.mp3",
+      "sha256": "0fc1757554a51d3359a5e8f483e609b43387cbff014b4a4fe6e590e43c72ebe8"
+    }
+  ],
+  "freezePolicy": "目前六章依本版封存；使用者未明確要求時保留定稿。日後修改另存版本，兩份封存均保留。",
+  "newChapterDesign": "沿用此版原畫與淡絹封面、直排題名、現行字體留白、底部章節名稱導航與當前章朱色細線；完成後可回本章封面再選畫。",
+  "verificationRecord": "docs/releases/site-2026-10-23-zanhua-navigation.md",
+  "limits": "本次核對官方部署包 SHA-256、逐檔產生指紋並核對六章音樂；沒有重新建置、重新部署、重新通關或執行測試套件。既有檢視範圍及限制沿用發布紀錄。"
+}
