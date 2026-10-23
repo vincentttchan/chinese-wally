@@ -29,3 +29,10 @@
 ## 已知限制
 
 崇羲字型原檔約 21.8 MB，保留完整授權原檔並在留印流程按需載入；首次進入留印仍受網速影響。缺字按字型實際涵蓋範圍提示，未修改或裁切字型原檔。
+
+## GitHub 與線上發布
+
+- 發布提交：[222747b2e999e09f666073460a58d80294123c35](https://github.com/vincentttchan/chinese-wally/commit/222747b2e999e09f666073460a58d80294123c35)，已推送 main。
+- GitHub Pages 工作流程：[39889538980](https://github.com/vincentttchan/chinese-wally/actions/runs/39889538980)，建置與部署成功。
+- 線上入口：https://vincentttchan.github.io/chinese-wally/#zanhua 。已實際開啟線上簪花封面，確認原畫載入、六章名稱導航及目前章節標記，並實際由底部連結切換至洛水封面；代表畫面為 output/gameplay-preview/zanhua/v0.41-2026-10-23/live-cover-navigation.png。
+- 原 site-2026-10-23 封存標記仍指向原部署提交 c9e99bfbc13322269c29d5d0d12071c739c3b828，未移動。
