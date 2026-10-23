@@ -45,13 +45,14 @@ if not chapter_links:raise RuntimeError('Historical chapter navigation registry 
 nav_match=re.search(r'<nav class="chapter-links"[^>]*>.*?</nav>',shell,re.S)
 if not nav_match:raise RuntimeError('Kangqu chapter navigation container was not found.')
 practice_links=re.findall(r'<a\b[^>]*href="[^"]*#examination"[^>]*>.*?</a>',nav_match.group(),re.S)
+practice_links=[re.sub(r'<span>.*?</span>','',link,flags=re.S).replace('科舉放榜日','榜下尋人') for link in practice_links]
 links=[]
 for chapter_id,title,painting,href in chapter_links:
     current=chapter_id=='kangqu-listening'
     target=href if current else '../../../../public/index.html'+href
     attrs=' aria-current="page"' if current else ' class="chapter-back" target="_top"'
     preload=' data-preload-src="../../../../public/art/lantern-festival/full-scroll.jpg"' if chapter_id=='lantern-festival' else ''
-    links.append(f'<a href="{escape(target,quote=True)}"{attrs}{preload}><span>{escape(painting.split(" · ")[0])}</span>{escape(title)}</a>')
+    links.append(f'<a href="{escape(target,quote=True)}"{attrs}{preload}>{escape(title)}</a>')
 nav='<nav class="chapter-links" aria-label="選擇畫卷">'+''.join(links+practice_links)+'</nav>'
 shell=shell[:nav_match.start()]+nav+shell[nav_match.end():]
 

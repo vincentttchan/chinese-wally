@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { kangquChapterDocument } from '../game/historicalChapters.ts';
 import { returnToChapterCover } from '../game/chapterCover.ts';
 import '../lantern.css';
@@ -10,10 +10,9 @@ export function KangquGame() {
   const frame=useRef<HTMLIFrameElement>(null);
   const [status,setStatus]=useState<'loading'|'ready'|'error'>('loading');
   const [revision,setRevision]=useState(0);
+  useEffect(()=>{const previousTitle=document.title;document.title='在人群中聽樂 · 畫中尋人';return()=>{document.title=previousTitle;};},[]);
   useLayoutEffect(()=>{
     if(localFile){window.location.replace(new URL(kangquChapterDocument,window.location.href).href);return;}
-    const previousTitle=document.title;
-    document.title='在人群中聽樂 · 畫中尋人';
     const receive=(event:MessageEvent)=>{
       if(event.source!==frame.current?.contentWindow||event.origin!==window.location.origin)return;
       if(event.data?.type==='kangqu-chapter-ready')setStatus('ready');
@@ -22,7 +21,7 @@ export function KangquGame() {
     window.addEventListener('message',receive);
     const timer=window.setTimeout(()=>setStatus(value=>value==='ready'?value:'error'),20000);
     const chapterFrame=frame.current;
-    return ()=>{chapterFrame?.contentWindow?.postMessage({type:'kangqu-host-stop'},window.location.origin);window.removeEventListener('message',receive);window.clearTimeout(timer);document.title=previousTitle;};
+    return ()=>{chapterFrame?.contentWindow?.postMessage({type:'kangqu-host-stop'},window.location.origin);window.removeEventListener('message',receive);window.clearTimeout(timer);};
   },[revision,localFile]);
   const retry=()=>{setStatus('loading');setRevision(value=>value+1);};
   if(localFile)return <main className="kangqu-chapter-host lantern-game"><section className="scene-status"><p>在人群中聽樂</p><a className="lantern-text-button" href={kangquChapterDocument}>回到本章封面</a></section></main>;

@@ -34,8 +34,8 @@ export function zanhuaStudyLayout(person:number,current:SceneViewport,_anchor=cu
  const leftRoom=pose.x+35*pose.scale;
  const rightRoom=frame.width-(pose.x+source.width*pose.scale);
  const paperOnLeft=!compact&&rightRoom<paperWidth+32&&leftRoom>=paperWidth+32;
- const paper={left:compact?16:paperOnLeft?24:frame.width-paperWidth-24,top:compact?Math.round(frame.height*.54):Math.max(86,Math.min(150,frame.height*.16)),width:paperWidth,height:compact?Math.max(170,frame.height*.46-112):frame.height-210};
- const art={left:paper.left+20,top:paper.top+42,width:paper.width-40,height:compact?95:Math.min(205,Math.max(130,paper.height*.4))};
+ const paper={left:compact?16:paperOnLeft?24:frame.width-paperWidth-24,top:compact?Math.round(frame.height*.54):Math.max(32,Math.min(100,frame.height*.12)),width:paperWidth,height:compact?frame.height*.46-16:frame.height-Math.max(32,Math.min(100,frame.height*.12))-24};
+ const art={left:paper.left+20,top:paper.top+42,width:paper.width-40,height:compact?95:Math.min(160,Math.max(110,paper.height*.28))};
  return {pose,paper,art,compact};
 }
 

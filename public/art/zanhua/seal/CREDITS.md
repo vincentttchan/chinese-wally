@@ -6,3 +6,11 @@
 - 兩項為當代遊戲新增美術，非原畫鑑藏印、非歷史印章復原；篆刻造型亦未經古文字學考證。
 - 完整提示詞及採用版本記錄：`docs/art/zanhua/seal-ritual/prompts-and-assets.json`。保留生成圖原始 alpha，未另作去背或改色。
 - 預設印文使用完整生成印面；玩家自訂印文沿用此圖的邊框切片，加上即時楷書文字，未宣稱任意文字皆轉為篆書。
+
+## 2026-10-23 · v0.40 修訂
+
+- `collector-frame-v3.png`：使用 OpenAI 內建 ImageGen，以舊 v2 印面及 `original-seals-reference.jpg` 為輸入，去除印文並改為細朱色、缺墨的空白印框。透明 PNG，保留生成原始 alpha；舊版素材完整保留。
+- 完整提示詞：`docs/art/zanhua/seal-ritual/v0.40-2026-10-23/frame-prompt.txt`。採用來源：`exec-9d7b6419-42db-4b6c-befb-3da3504ecd4f.png`。
+- 現行預設與自訂印文均由「崇羲篆體」即時排字，依實際字面配置一至四字；不再使用 v2 生成文字或楷書切片。印框為生成素材，文字為原字型排版，不由 ImageGen 生成。
+- 字型製作：王心怡、莊德明、季旭昇、謝清俊。官方說明及授權：<https://xiaoxue.iis.sinica.edu.tw/chongxi/>；字型原檔、來源及 CC-BY-ND-3.0-TW-or-later 授權保存於 `public/fonts/chongxi/`，未修改或子集化字型。
+- 舊款 v1／v2 記錄留作歷程。新印仍是遊戲紀念，不是原畫鑑藏印或歷史印文復原。

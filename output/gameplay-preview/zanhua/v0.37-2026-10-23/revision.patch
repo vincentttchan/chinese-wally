@@ -1,0 +1,258 @@
+--- sealed/src/components/ZanhuaInPaintingStudy.tsx
++++ src/components/ZanhuaInPaintingStudy.tsx
+@@ -22,7 +22,7 @@
+  const gain=[[1.02,1.119,1.421],[.995,1.048,1.273],[1.009,1.056,1.152]][person];
+  const contour=zanhuaFigureContour(kind),{view,frame}=viewport;
+  const {pose,paper,art,compact}=zanhuaStudyLayout(person,viewport,anchorViewport);
+- const [loaded,setLoaded]=useState(false),[failed,setFailed]=useState(false),[original,setOriginal]=useState(false),[clock,setClock]=useState(0);
++ const [loaded,setLoaded]=useState(false),[failed,setFailed]=useState(false),[original,setOriginal]=useState(false),[clock,setClock]=useState(0),[arrival,setArrival]=useState(0);
+  const [seen,setSeen]=useState<string[]>([]),[focused,setFocused]=useState<string|null>(null);
+  const focusedItem=parts.find(part=>part.id===focused);
+  const banner=useRef<HTMLDivElement>(null),targets=useRef<Record<string,SVGPathElement|null>>({}),close=useRef(onClose),compareChange=useRef(onCompareChange);
+@@ -30,11 +30,20 @@
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const guide=parts.find(p=>!seen.includes(p.id))??parts[0];
+  useEffect(()=>{
+-  let live=true,count=0;setLoaded(false);setFailed(false);
+-  const images=[source.image,backdrop].map(src=>{const im=new Image();im.onload=()=>{if(live&&++count===2)setLoaded(true);};im.onerror=()=>{if(live)setFailed(true);};im.src=assetPath(src);return im;});
+-  const separate=new Image();separate.src=assetPath(atlas);
+-  return()=>{live=false;images.forEach(im=>{im.onload=null;im.onerror=null;});};
++  let live=true;setLoaded(false);setFailed(false);
++  // Decode the complete study, background and separated parts before revealing any replacement pixels.
++  const images=[source.image,backdrop,atlas].map(src=>{const im=new Image();im.src=assetPath(src);return im;});
++  Promise.all(images.map(im=>im.decode())).then(()=>{if(live)setLoaded(true);},()=>{if(live)setFailed(true);});
++  return()=>{live=false;};
+  },[source.image,atlas,backdrop]);
++ useLayoutEffect(()=>{setArrival(reduced?1:0);},[loaded,original,reduced]);
++ useEffect(()=>{
++  if(!loaded||original||reduced)return;
++  let raf=0,start:number|undefined;
++  const tick=(now:number)=>{start??=now;const progress=Math.min(1,(now-start)/1700);setArrival(progress*progress*(3-2*progress));if(progress<1)raf=requestAnimationFrame(tick);};
++  raf=requestAnimationFrame(tick);return()=>cancelAnimationFrame(raf);
++ },[loaded,original,reduced]);
++ const arrived=loaded&&arrival===1;
+  useEffect(()=>{
+   if(!active)return;
+   banner.current?.focus({preventScroll:true});
+@@ -44,11 +53,11 @@
+  useLayoutEffect(()=>{setClock(reduced?1500:0);if(!active){setOriginal(false);compareChange.current(false);}},[selected,original,reduced,active]);
+  useEffect(()=>{if(active&&selected&&!original&&reduced)setSeen(old=>old.includes(selected)?old:[...old,selected]);},[selected,original,reduced,active]);
+  useEffect(()=>{
+-  if(!active||!selected||original||reduced)return;
++  if(!active||!selected||original||reduced||!arrived)return;
+   let raf=0,start:number|undefined,counted=false;
+   const tick=(now:number)=>{start??=now;const elapsed=Math.min(1500,now-start);setClock(elapsed);if(elapsed>=1250&&!counted){counted=true;setSeen(old=>old.includes(selected)?old:[...old,selected]);}if(elapsed<1500)raf=requestAnimationFrame(tick);};
+   raf=requestAnimationFrame(tick);return()=>cancelAnimationFrame(raf);
+- },[selected,original,reduced,active]);
++ },[selected,original,reduced,active,arrived]);
+  function compare(){setOriginal(v=>{compareChange.current(!v);return !v;});}
+  function choose(part:string){setOriginal(false);compareChange.current(false);onSelect(part);}
+  const b=item?.bounds;
+@@ -59,9 +68,8 @@
+  const flight={left:start.left+(end.left-start.left)*ease,top:start.top+(end.top-start.top)*ease,width:start.width+(end.width-start.width)*ease,height:start.height+(end.height-start.height)*ease};
+  const reading=reduced||clock>=1250;
+  const complete=parts.every(part=>seen.includes(part.id));
+- const leftSpace=pose.x-40;
+- const guidance=!compact&&leftSpace>=160?{left:20,top:Math.max(30,Math.min(frame.height-140,pose.y+source.height*pose.scale*.54)),width:Math.min(320,leftSpace)}:{left:20,top:Math.max(20,Math.min(pose.y+source.height*pose.scale+10,compact?paper.top-44:frame.height-82)),width:compact?frame.width-40:Math.min(430,frame.width-48)};
+- const prompt=original?'原畫對照；關閉細看後保留目前位置與倍率。':failed?'摹繪暫未載入，可返回原畫。':!loaded?'摹繪載入中…':item?(!reading?(compact?'看衣飾移向下方，再細讀它的層次。':(paper.left<pose.x?'看衣飾移向左側，再細讀它的層次。':'看衣飾移向右側，再細讀它的層次。')):complete?'這次的細節都看過了，讀完便回到畫中聽她說。':guide.prompt):guide.prompt;
++ const prompt=original?'原畫對照；關閉細看後保留目前位置與倍率。':failed?'摹繪暫未載入，可返回原畫。':!loaded?'摹繪載入中…':!arrived?'沿着原畫，逐步展開完整造型摹繪。':item?(!reading?`看${person===2?'髻飾':'衣飾'}移入題箋，再細讀它的層次。`:complete?'這次的細節都看過了，讀完便回到畫中聽她說。':guide.prompt):guide.prompt;
++ const revealY=pose.y-100+(source.height*pose.scale+200)*arrival;
+  const lurePath=person===0?'M506 576 L510 583 L163 834 L157 830 Z M153 830 L165 836 L145 865 L138 893 L122 906 L113 944 L88 1016 L55 1061 L80 1011 L107 924 L118 886 L132 862 Z':'';
+  return <div className={`zanhua-inplace-study zanhua-guided-study${active?' is-active-study':' is-retained-study'}${item?' has-selected-part':''}${compact?' is-compact':''}`} aria-label="原位完整造型摹繪">
+   {loaded&&!original&&<svg className="zanhua-guided-canvas" width={frame.width} height={frame.height} viewBox={`0 0 ${frame.width} ${frame.height}`}>
+@@ -73,7 +81,10 @@
+     {parts.map(p=><clipPath key={p.id} id={`${id}-focus-${p.id}`}><path d={p.path}/></clipPath>)}
+     {parts.filter(p=>p.focusMask).map(p=><mask key={p.id} id={`${id}-mask-${p.id}`} maskUnits="userSpaceOnUse" x="0" y="0" width={source.width} height={source.height}><image href={assetPath(p.focusMask!)} width={source.width} height={source.height}/></mask>)}
+     <pattern id={`${id}-silk`} width="78" height="1378" patternUnits="userSpaceOnUse"><svg width="78" height="1378" viewBox={`${person===0?5130:person===1?2700:1570} 0 78 1378`} preserveAspectRatio="none"><image href={zanhuaImage} width="6455" height="1378"/></svg></pattern>
++    <linearGradient id={`${id}-arrival-ink`} gradientUnits="userSpaceOnUse" x1="0" x2="0" y1={revealY-90} y2={revealY+90}><stop stopColor="white"/><stop offset="1" stopColor="black"/></linearGradient>
++    <mask id={`${id}-arrival`} maskUnits="userSpaceOnUse" x="0" y="0" width={frame.width} height={frame.height}><rect width={frame.width} height={frame.height} fill={`url(#${id}-arrival-ink)`}/></mask>
+    </defs>
++   <g mask={arrived?undefined:`url(#${id}-arrival)`} opacity={Math.min(1,arrival*4)}>
+    <g transform={`translate(${view.x+r.origin*view.scale} ${view.y}) scale(${view.scale})`} aria-hidden="true">
+     {person===0&&<g clipPath={`url(#${id}-lure)`}><image href={zanhuaImage} x={-r.origin} y="9" width="6455" height="1378"/></g>}
+     <image href={assetPath(backdrop)} width={r.width} height="1378" preserveAspectRatio="none" filter={`url(#${id}-backdrop-color)`} mask={`url(#${id}-clear)`}/>
+@@ -86,24 +97,27 @@
+     {active&&parts.map(p=><path ref={node=>{targets.current[p.id]=node;}} key={p.id} d={p.hitPath??p.path} className={`zanhua-study-hit-target${focused===p.id?' is-keyboard-focused':''}`} role="button" tabIndex={0} aria-label={`細看${p.label}`} aria-pressed={selected===p.id} onClick={()=>choose(p.id)} onFocus={()=>setFocused(p.id)} onBlur={()=>setFocused(null)} onKeyDown={event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();choose(p.id);}}}/>)}
+    </g>
+ 
++   </g>
+   </svg>}
+   {loaded&&!original&&<svg className="zanhua-study-flight-layer" width={frame.width} height={frame.height} aria-hidden="true">
+    {item&&b&&clock>=250&&clock<1400&&!reduced&&<svg className="zanhua-study-travelling-copy" x={flight.left} y={flight.top} width={flight.width} height={flight.height} viewBox={b.join(' ')} style={{opacity:Math.min(1,(clock-250)/100,(1400-clock)/250)}} aria-hidden="true">
+     <image href={assetPath(source.image)} width={source.width} height={source.height} clipPath={item.focusMask?undefined:`url(#${id}-focus-${item.id})`} mask={item.focusMask?`url(#${id}-mask-${item.id})`:undefined}/>
+    </svg>}
+   </svg>}
+-  {active&&<div ref={banner} tabIndex={-1} className="zanhua-guided-caption" style={guidance} aria-label="造型細看提示">
+-   <p className="zanhua-guided-prompt" role="status">{prompt}</p>
+-   <p className="zanhua-guided-credit">{person===0?'逗犬女子':person===1?'持花女子':'斜首女子'} · 造型摹繪（含補繪）</p>
+-  </div>}
+-  {active&&<nav className="zanhua-guided-actions" aria-label="造型細看操作"><button className="lantern-text-button" onClick={compare}>{original?'再看摹繪':'對照原畫'}</button>{(!requireCompletion||complete)&&<button className="lantern-quiet-button" onClick={onClose}>{returnLabel}<ArrowRight size={17}/></button>}</nav>}
+-  {item&&crop&&!original&&<aside className="zanhua-study-part-paper zanhua-guided-paper" style={{left:paper.left,top:paper.top,width:paper.width,maxHeight:paper.height}} aria-label={`${item.label}解說`} key={selected} data-stage={reading?'reading':clock>=250?'travelling':'focusing'}>
+-   {!complete&&<button className="zanhua-study-part-close lantern-text-button" aria-label="收起部件解說" onClick={()=>{onSelect(null);targets.current[selected!]?.focus({preventScroll:true});}}>合回盛裝 ×</button>}
++  {active&&<aside className="zanhua-study-part-paper zanhua-guided-paper" style={{left:paper.left,top:paper.top,width:paper.width,maxHeight:paper.height}} aria-label={item&&!original?`${item.label}解說`:'造型細看解說'} data-stage={reading?'reading':clock>=250?'travelling':'focusing'}>
++   {item&&crop&&!original&&<div className="zanhua-guided-part-content" key={selected}>
++   <button className="zanhua-study-part-close lantern-text-button" aria-label="收起部件解說" onClick={()=>{onSelect(null);targets.current[selected!]?.focus({preventScroll:true});}}>合回盛裝 ×</button>
+    <svg viewBox={crop.join(' ')} className="zanhua-study-separated-art" style={{height:art.height,opacity:reduced?1:Math.max(0,Math.min(1,(clock-1000)/250))}} preserveAspectRatio="xMidYMid meet" role="img" aria-label={`${item.label}獨立美術摹繪`}>
+     <defs><clipPath id={`${id}-crop`}><rect x={crop[0]} y={crop[1]} width={crop[2]} height={crop[3]}/></clipPath>{layer?.atlasPath&&<clipPath id={`${id}-part`}><path d={layer.atlasPath}/></clipPath>}</defs>
+     <g clipPath={`url(#${id}-crop)`}><image href={assetPath(atlas)} width={dress?.atlasWidth??zanhuaCoiffureLayers.width} height={dress?.atlasHeight??zanhuaCoiffureLayers.height} clipPath={layer?.atlasPath?`url(#${id}-part)`:undefined}/><ZanhuaArtEdge asset={`${kind}-${layer?.id??item.id}`}/></g>
+    </svg>
+    {reading?<div className="zanhua-guided-reading" aria-live="polite"><h3>{item.label}</h3><p>{item.body}</p><a href={zanhuaHistorySources[item.source].url} target="_blank" rel="noreferrer">資料依據 ↗</a></div>:<span className="sr-only" role="status">正在展看{item.label}</span>}
++   </div>}
++   <div ref={banner} tabIndex={-1} className="zanhua-guided-caption" aria-label="造型細看提示">
++    <p className="zanhua-guided-prompt" role="status">{prompt}</p>
++    <p className="zanhua-guided-credit">{person===0?'逗犬女子':person===1?'持花女子':'斜首女子'} · 造型摹繪（含補繪）</p>
++   </div>
++   <nav className="zanhua-guided-actions" aria-label="造型細看操作"><button className="lantern-text-button" onClick={compare}>{original?'再看摹繪':'對照原畫'}</button><span className="zanhua-study-progress">已細看 {parts.filter(part=>seen.includes(part.id)).length}／{parts.length}</span>{(!requireCompletion||complete||failed)&&<button className="lantern-note-next" onClick={onClose}>{returnLabel}<ArrowRight size={17}/></button>}</nav>
+   </aside>}
+  </div>;
+ }
+--- sealed/src/components/ZanhuaPreview.tsx
++++ src/components/ZanhuaPreview.tsx
+@@ -44,8 +44,8 @@
+ type Overlay='hint'|'about'|'menu'|'journal'|null;
+ const query=new URLSearchParams(window.location.search);
+ const requested=query.get('scene');
+-const initialPhase:Phase=['intro','search','found','observe','interpret','complete'].includes(requested??'')?requested as Phase:'intro';
+-const initialIndex=Math.max(0,Math.min(2,Number(query.get('person'))||0));
++const initialPhase:Phase=requested==='seal-detail'?'context':['intro','search','found','observe','interpret','complete'].includes(requested??'')?requested as Phase:'intro';
++const initialIndex=requested==='seal-detail'?2:Math.max(0,Math.min(2,Number(query.get('person'))||0));
+ const stops=[{x:.24,label:'卷左'},{x:.50,label:'卷中'},{x:.76,label:'卷右'}];
+ 
+ /** The same approved chapter runtime serves the formal route and the development preview. */
+@@ -58,8 +58,8 @@
+  const [hint,setHint]=useState<SceneHint|null>(null),[command,setCommand]=useState<SceneCommand|null>(null);
+  const [reply,setReply]=useState<{id:string;text:string;token:number}|null>(null),[notice,setNotice]=useState('');
+  const [remembered,setRemembered]=useState(0);
+- const [contextStep,setContextStep]=useState(0),[contextSeen,setContextSeen]=useState(false);
+- const [contextLooking,setContextLooking]=useState(false),[contextTurn,setContextTurn]=useState(0);
++ const [contextStep,setContextStep]=useState(requested==='seal-detail'?1:0),[contextSeen,setContextSeen]=useState(false);
++ const [contextLooking,setContextLooking]=useState(requested==='seal-detail'),[contextTurn,setContextTurn]=useState(0);
+  const [confirmation,setConfirmation]=useState<ZanhuaConfirmation|null>(null),[detail,setDetail]=useState<ZanhuaAnnotation|null>(null);
+  const confirmationToken=useRef(0);
+  const [motionToken,setMotionToken]=useState(0);
+@@ -102,7 +102,7 @@
+  useEffect(()=>{if(!notice)return;const id=setTimeout(()=>setNotice(''),3000);return()=>clearTimeout(id);},[notice]);
+  useEffect(()=>{if((phase==='observe'||phase==='context'&&contextLooking&&!contextSeen)&&!busy)actionRef.current?.focus({preventScroll:true});else if(observing&&!busy)noteRef.current?.focus({preventScroll:true});},[phase,busy,contextSeen,contextStep]);
+  useEffect(()=>{const handle=(event:KeyboardEvent)=>{if(overlay||phase==='intro'||phase==='animate'||phase==='seal'||event.ctrlKey||event.metaKey||event.altKey)return;if(event.key.toLowerCase()==='f'){event.preventDefault();setFocusing(v=>!v);}if(event.key==='Escape')setReply(null);};window.addEventListener('keydown',handle);return()=>window.removeEventListener('keydown',handle);},[overlay,phase]);
+- useEffect(()=>{if(!ready||snapshot.current)return;snapshot.current=true;if(initialPhase==='observe'||initialPhase==='interpret'){setFocusing(false);if(initialPhase==='interpret')frameSpeaker();else frameObservation();}},[ready]);
++ useEffect(()=>{if(!ready||snapshot.current)return;snapshot.current=true;if(requested==='seal-detail'){setFocusing(false);frameContext(1);}else if(initialPhase==='observe'||initialPhase==='interpret'){setFocusing(false);if(initialPhase==='interpret')frameSpeaker();else frameObservation();}},[ready]);
+ 
+  function pan(region:{x:number;y:number},_near=false,onSettled?:()=>void,anchor?:{x:number;y:number},ratio?:number,allowHorizontalMargin=false,allowVerticalMargin=false){
+   if(!ratio){
+@@ -191,15 +191,23 @@
+  function continueStory(){if(busy||phase!=='context'||!contextSeen)return;setDetail(null);setConfirmation(null);setPhase('clue');}
+  function frameContext(which:number){
+   const current=zanhuaContext[index][which];
++  if(index===2&&which===1){
++   const compact=viewport.frame.width<760;
++   const scale=Math.min(2.2,viewport.frame.width/230,viewport.frame.height/360);
++   pan(current.focus,false,undefined,compact?{x:.5,y:.28}:{x:.62,y:.60},scale/coverView(viewport.frame,zanhuaSize).scale,true,true);return;
++  }
+   pan(current.focus);
+  }
+  function dialogueSpace(){
+   const {view}=viewport;
+   const originalRects=[...zanhuaPeople,...zanhuaSpots.map(spot=>spot.actor)].map(person=>({x:(person.x-person.width/2)*6455,y:(person.y-person.height/2)*1378,width:person.width*6455,height:person.height*1378}));
++  // P6 leans over open silk: reserve her actual head separately (speechGeometry.heads),
++  // rather than letting the empty upper-left corner of her body box push speech away.
++  if(index===2){Object.assign(originalRects[5],{x:1160,y:460,width:450,height:900});originalRects.push({x:950,y:850,width:730,height:510});}
+   // The same exclusions cover people, collected details and historical evidence.
+   for(const stops of zanhuaContext)for(const stop of stops){const xs=stop.region.points.map(p=>p.x*6455),ys=stop.region.points.map(p=>p.y*1378);originalRects.push({x:Math.min(...xs),y:Math.min(...ys),width:Math.max(...xs)-Math.min(...xs),height:Math.max(...ys)-Math.min(...ys)});}
+   originalRects.push({x:2800,y:230,width:180,height:190});
+-  if(index===2)originalRects.push({x:600,y:100,width:420,height:1230},...zanhuaMountingSeals);
++  if(index===2)originalRects.push({x:600,y:850,width:420,height:480},...zanhuaMountingSeals);
+   if(index===0)originalRects.push({x:4860,y:980,width:300,height:190},{x:5130,y:550,width:450,height:480});
+   return originalRects.map(rect=>({left:view.x+rect.x*view.scale,top:view.y+rect.y*view.scale,width:rect.width*view.scale,height:rect.height*view.scale}));
+  }
+--- sealed/src/game/zanhuaStudyInteraction.ts
++++ src/game/zanhuaStudyInteraction.ts
+@@ -34,8 +34,8 @@
+  const leftRoom=pose.x+35*pose.scale;
+  const rightRoom=frame.width-(pose.x+source.width*pose.scale);
+  const paperOnLeft=!compact&&rightRoom<paperWidth+32&&leftRoom>=paperWidth+32;
+- const paper={left:compact?16:paperOnLeft?24:frame.width-paperWidth-24,top:compact?Math.round(frame.height*.54):Math.max(86,Math.min(150,frame.height*.16)),width:paperWidth,height:compact?Math.max(170,frame.height*.46-112):frame.height-210};
+- const art={left:paper.left+20,top:paper.top+42,width:paper.width-40,height:compact?95:Math.min(205,Math.max(130,paper.height*.4))};
++ const paper={left:compact?16:paperOnLeft?24:frame.width-paperWidth-24,top:compact?Math.round(frame.height*.54):Math.max(32,Math.min(100,frame.height*.12)),width:paperWidth,height:compact?frame.height*.46-16:frame.height-Math.max(32,Math.min(100,frame.height*.12))-24};
++ const art={left:paper.left+20,top:paper.top+42,width:paper.width-40,height:compact?95:Math.min(160,Math.max(110,paper.height*.28))};
+  return {pose,paper,art,compact};
+ }
+ 
+--- sealed/src/game/zanhuaSeal.ts
++++ src/game/zanhuaSeal.ts
+@@ -1,13 +1,14 @@
+ /** Calibrated against full-scroll.jpg at its native 6455×1378 size, including mounting.
+- * The two connected impressions run from y=1093 to 1171 (not 1078 to 1180).
++ * The single-character 紹 / 興 squares are at the very bottom, y=1275–1371.
++ * The multi-character impression at y=1093–1171 is a different collector's seal.
+  * Observation, click target, leader and confirmation must share these coordinates.
+  */
+ export const zanhuaSeal={
+- at:[552,1132] as [number,number],
++ at:[554,1323] as [number,number],
+  // The leader meets the left edge, leaving the faint red characters unobscured.
+- labelAt:[524,1132] as [number,number],
+- hit:[[523,1090],[581,1090],[581,1174],[523,1174]],
+- path:'M526 1093 L575 1093 L576 1133 L527 1133 Z M527 1133 L576 1133 L578 1171 L528 1171 Z',
++ labelAt:[527,1323] as [number,number],
++ hit:[[525,1271],[582,1271],[582,1375],[525,1375]],
++ path:'M529 1276 L576 1274 L578 1322 L529 1324 Z M529 1327 L578 1326 L579 1370 L530 1371 Z',
+ };
+ 
+ /** Other visible seals on the mounting: excluded from labels/dialogue, not game targets. */
+--- sealed/src/game/zanhuaContext.ts
++++ src/game/zanhuaContext.ts
+@@ -31,14 +31,14 @@
+   [[3200,530],[3250,515],[3270,720],[3245,985],[3265,1105],[3200,1080]], [3250,785],4,1),
+   stop('誰在賞花，誰的手還忙着？',
+   '輕點侍女的扇面，再比較兩人的髮髻與手中物。','點擊侍女手中的扇面',
+-  '五位女子簪花，一位侍女執扇。她用紅帶束髻，手中拿的也不是花。把兩人並看，盛裝遊賞與在旁侍奉的角色便有了區別。',
++  '紅帛用來約束侍女的雙髻，其餘女子則以高髻、簪花與金飾盛裝。較簡的束髮配合執扇的動作，表現她在旁侍奉的角色；不能據此斷定紅色是侍女專用的規定。',
+   [[3855,500],[3890,440],[3980,390],[4075,395],[4155,450],[4160,520],[4130,580],[4050,625],[3960,630],[3875,585]], [3890,580],1,.95,'fan-maid')],
+  [stop('花朵之下，髮髻怎會這樣高？',
+   '花之外，盤起的頭髮也高高聳起。輕點髮髻，看看這份盛裝如何把目光引向頭部。','點擊斜首女子的高髻',
+   '館方介紹以「義髻」解釋這類高髻：用墊髮等方式增加高度。高髻再配簪花與金色髮飾，讓頭部也成為盛裝的一部分。',
+   [[1160,120],[1260,90],[1400,115],[1435,200],[1370,265],[1180,285],[1135,240]], [1300,220],0),
+   stop('畫上的紅印，留下了誰的名字？',
+-  '女子沒有姓名題記，畫卷卻留下收藏痕跡。看褐色畫面左下、樹旁兩方相連的小紅印，輕點看看。','點擊畫心左下的紹興連珠印',
++  '沿着花樹往下，看貼近褐色畫心底邊的兩方紅印：上「紹」、下「興」，每方各一字。輕點這組連珠印。','點擊畫心底邊的紹興連珠印',
+   '「紹興」連珠印記錄了南宋內府的收藏，並非畫家署名。本幅沒有作者落款，後世依著錄與風格繫於周昉；作者與成畫年代仍有討論，所以稱「傳周昉作」。',
+   zanhuaSeal.hit, zanhuaSeal.at,0,1.6)],
+ ];
+@@ -50,7 +50,7 @@
+  [{speaker:'P1',invite:'牠總盯着我的手。你呢？沿着我的外衣往下看，可見裙子露出了甚麼顏色？',reply:['紅裙從外衣底下露出來了。這回分得清裡外了嗎？','衣裳一層層，手卻只動一下。牠已經等不及了。'],history:['這是畫中貴族女子盛裝遊賞的片刻，不能代表所有唐代婦女的日常。']}],
+  [{speaker:'P4',invite:'隔着紗衣，還看得見手臂。再看看胸前的紅色：你猜長裙從哪裡束起？',reply:['紅色長裙束得高，外面還罩着薄紗。你看清那幾道衣線了嗎？','分開看是幾件衣物，合在一起，才是眼前這身盛裝。'],history:[]},
+   {speaker:'P4',invite:'衣袖分清了，肩臂旁這條花紋長帶呢？它也有袖口嗎？',reply:['它是披帛，繞在肩臂間；衣袖則屬於外罩的紗衣。','我的手伸出去拈花，衣袖與披帛便交疊在一起。'],history:['唐初女服多較窄狹，中晚唐的衣袖與裙幅漸寬。畫中這身盛裝，也讓我們看見當時衣飾的審美趣味。']},
+-  {speaker:'P3',invite:'她有花在手，我的手可沒閒着。看看我拿的是甚麼，再看看我的髮髻。',reply:['是扇。我用紅帶束髻，她們卻在髻上簪花。','扇柄這麼長，兩隻手可得一起照應。再看看她們髻上的花吧。'],history:[]}],
++  {speaker:'P3',invite:'她有花在手，我的手可沒閒着。看看我拿的是甚麼，再看看我的髮髻。',reply:['是扇。紅帶束着我的雙髻，她們卻在高髻上簪花。','她們拈花遊賞，我執扇隨侍。同在畫裡，忙的事可不同。'],history:['紅帛用來約束雙髻。較簡的束髮與執扇動作相配，表現隨侍角色；其餘女子則以高髻、簪花與金飾盛裝。','這是畫中的裝束對比，不能據此斷定紅色是侍女專用的規定；現有資料沒有交代她為何選用紅色。']}],
+  [{speaker:'P6',invite:'你認得花，可留意過花下面的頭髮？這髮髻為何能盤得這樣高？先點點看。',reply:['花在上，細飾點在髻邊。現在再看我，可還只留意那朵花？'],history:['館方以「義髻」解釋這類高髻：用墊髮等方式增加高度。盛裝的線索，並不只在衣裳。']},
+   {speaker:'P6',invite:'你已看出我如何妝點。可我的姓名呢？樹旁那兩方小紅印，會有答案嗎？去看看。',reply:['紅印在畫卷上，卻不是我的名字。要問它從何而來，得循着畫卷的流傳去找。'],history:['那是「紹興」連珠印，記錄南宋內府的收藏，並非畫家署名。','本幅沒有作者落款。後世依著錄與風格繫於周昉，但作者與成畫年代仍有討論，所以稱「傳周昉作」。']}],
+ ];
+--- sealed/src/game/zanhuaAnnotations.ts
++++ src/game/zanhuaAnnotations.ts
+@@ -8,7 +8,7 @@
+ const skirt=a('skirt','曳地長裙',[3420,1300],'裙襬延伸到地面，與薄紗外衣疊在一起。寬袖、長裙、披帛共同構成這身盛裝；不能只用一件衣服的名字概括全部。');
+ export const zanhuaAnnotations:ZanhuaAnnotation[][][]=[
+  [[a('red-skirt','紅色裙襬',[5330,1190],'深色外衣之外露出紅裙，裙襬向地面鋪開。先分辨內層裙色，再看外層衣線，便能讀出盛裝的疊穿。'),a('dark-gauze','寬袖外衣',[5850,755],'外衣有寬大的袖部，與內層紅裙並非同一件衣物。畫中女子的遊賞裝束，與侍女的執扇身分還需並看。')]],
+- [[waist,gauze,scarf],[scarf,gauze,skirt],[a('ribbon','紅帶束髻',[3715,460],'侍女以紅帶約束雙髻，與簪花女子的高髻不同。髮式、頭飾及手中器物一起，幫助辨認畫中的侍奉角色。'),a('fan','長柄扇',[4050,510],'扇面與長柄連起雙手的姿勢。比較手中花與手中扇，才能看出遊賞者和侍奉者的差別。')]],
++ [[waist,gauze,scarf],[scarf,gauze,skirt],[a('ribbon','紅帶束髻',[3715,460],'紅帛約束雙髻，與其餘女子的高髻、簪花和金飾不同。較簡的束髮配合執扇動作，表現隨侍角色；紅色本身不能視作侍女專用的制度。',1),a('fan','長柄扇',[4050,510],'扇面與長柄連起雙手的姿勢。比較手中花與手中扇，才能看出遊賞者和侍奉者的差別。')]],
+  [[a('high-hair','高髻',[1215,205],'高髻把頭部輪廓向上延伸。館方介紹指出，這類高髻可能藉「義髻」增加高度；它不只是把全部真髮盤得更高。',0),a('hair-flower','髻上簪花',[1350,66],'大朵花飾位於髻上，與髮髻和細小飾物疊在一起。這裡先辨認簪花的位置，不憑複製圖強定花種。',0),a('hair-ornament','金色髮飾',[1350,160],'高髻旁可見金色細線的裝飾。這是原畫中的顏色線索；單憑畫面，不能確定器物材質或每件飾物的名稱。',0)],
+  [a('seal','紹興連珠印',zanhuaSeal.at,'兩方相連的紅印是後世收藏的線索，不是畫中女子的名字，也不是畫家署名。它把我們帶到南宋內府的收藏歷史。',0)]],
+ ];
+--- sealed/src/zanhua-preview.css
++++ src/zanhua-preview.css
+@@ -292,6 +292,15 @@
+ .zanhua-guided-reading{animation:zanhua-study-arrive 300ms ease-out both}
+ .zanhua-guided-paper h3{font-size:23px;line-height:1.4;margin:12px 0 10px}
+ .zanhua-guided-paper p{font-size:17px;line-height:1.85}
++.zanhua-guided-paper{display:flex;flex-direction:column;overflow:hidden}
++.zanhua-guided-part-content{min-height:0;overflow:auto}
++.zanhua-guided-paper .zanhua-guided-caption,.zanhua-guided-paper .zanhua-guided-actions{flex-shrink:0}
++.zanhua-guided-paper .zanhua-guided-caption{position:static;color:inherit;text-shadow:none;margin-top:16px;padding-top:12px;border-top:1px solid #8b816044}
++.zanhua-guided-paper .zanhua-guided-prompt{font-size:14px;line-height:1.7}
++.zanhua-guided-paper .zanhua-guided-credit{font-size:11px;line-height:1.5;margin-top:7px}
++.zanhua-guided-paper .zanhua-guided-actions{position:static;color:inherit;text-shadow:none;display:flex;flex-wrap:wrap;gap:10px 16px;margin-top:12px}
++.zanhua-guided-paper .zanhua-study-progress{font-size:12px;margin-left:auto;color:#727461}
++.zanhua-guided-paper .lantern-note-next{flex-basis:100%;width:100%;display:flex;align-items:center;justify-content:space-between;margin:4px 0 0;padding:12px 0 0;border-top:1px solid #8b816044;color:inherit}
+ .zanhua-preview:has(.zanhua-guided-study) .lantern-footer{visibility:hidden!important}
+ @keyframes zanhua-part-invitation{0%,100%{opacity:0}50%{opacity:.7}}
+ @media(max-width:900px){.zanhua-guided-prompt{font-size:14px}}

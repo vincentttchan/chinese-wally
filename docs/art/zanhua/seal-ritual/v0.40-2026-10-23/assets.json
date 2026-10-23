@@ -1,0 +1,17 @@
+{
+  "version": "0.40",
+  "date": "2026-10-23",
+  "tool": "OpenAI built-in image_gen.imagegen",
+  "generatedSource": "/Users/vincentttchan99/.codex/generated_images/01a16613-9689-7661-8224-c13932448500/exec-9d7b6419-42db-4b6c-befb-3da3504ecd4f.png",
+  "asset": "public/art/zanhua/seal/collector-frame-v3.png",
+  "prompt": "docs/art/zanhua/seal-ritual/v0.40-2026-10-23/frame-prompt.txt",
+  "references": [
+    "public/art/zanhua/seal/viewing-impression-v2.png",
+    "docs/art/zanhua/seal-ritual/original-seals-reference.jpg"
+  ],
+  "transparency": "Original generated PNG alpha preserved; no raster edits.",
+  "runtimeComposition": "Generated frame, unmodified Chong Xi Small Seal font, SVG typesetting and ink opacity texture.",
+  "frameSHA256": "204c0b0dd085efe83ad6ffcc72be48541dc659aea269a07bdf9296deeb887009",
+  "font": "public/fonts/chongxi/chongxi_seal.otf",
+  "fontSHA256": "b5f52fe62e84b2b18ff4b586d9838d157e05925eca847ecd48c915ba4dcd735a"
+}

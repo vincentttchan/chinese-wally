@@ -1,0 +1,280 @@
+--- v0.38/src/components/ZanhuaDetailOverlay.tsx
++++ v0.39/src/components/ZanhuaDetailOverlay.tsx
+@@ -28,23 +28,24 @@
+  const placed:Rect[]=[];
+  const labels=annotations.map(item=>{
+   const p=point(...(item.id==='seal'?zanhuaSeal.labelAt:coiffure&&studyVisible?zanhuaCoiffurePoint(item.id):item.at));if(p.x<12||p.x>frame.width-12||p.y<12||p.y>frame.height-16)return null;
+-  const width=108,height=item.id==='seal'?28:32;
+-  const positions=[...(item.id==='seal'?[{left:p.x-width-24,top:p.y-height+4},{left:p.x-width-20,top:p.y-height-50},{left:p.x+20,top:p.y-height-50},...(paper?[{left:p.x-width-24,top:paper.top-height-16}]:[])]:[]),{left:p.x+52,top:p.y-16},{left:p.x-width-52,top:p.y-16},{left:frame.width-width-20,top:p.y-58},{left:frame.width-width-20,top:p.y+24},{left:20,top:p.y-58},{left:20,top:p.y+50},...(paper?[{left:paper.left,top:paper.top+paper.height+18+placed.length*44},{left:paper.left-width-24,top:paper.top+placed.length*44},{left:paper.left+paper.width+24,top:paper.top+placed.length*44}]:[]),{left:(frame.width-width)/2,top:frame.height-height-96}];
++  const isSeal=item.id==='seal'||item.id.startsWith('collector-');
++  const width=108,height=isSeal?28:32;
++  const positions=[...(item.id.startsWith('collector-')?[{left:p.x-width-70*view.scale,top:p.y-height-24},{left:p.x+70*view.scale,top:p.y-height-24}]:[]),...(isSeal?[{left:p.x-width-24,top:p.y-height+4},{left:p.x-width-20,top:p.y-height-50},{left:p.x+20,top:p.y-height-50},...(paper?[{left:p.x-width-24,top:paper.top-height-16}]:[])]:[]),{left:p.x+52,top:p.y-16},{left:p.x-width-52,top:p.y-16},{left:frame.width-width-20,top:p.y-58},{left:frame.width-width-20,top:p.y+24},{left:20,top:p.y-58},{left:20,top:p.y+50},...(paper?[{left:paper.left,top:paper.top+paper.height+18+placed.length*44},{left:paper.left-width-24,top:paper.top+placed.length*44},{left:paper.left+paper.width+24,top:paper.top+placed.length*44}]:[]),{left:(frame.width-width)/2,top:frame.height-height-96}];
+   const candidate=positions.map((candidate,n)=>{const r={left:Math.max(16,Math.min(frame.width-width-16,candidate.left)),top:Math.max(16,Math.min(frame.height-height-80,candidate.top)),width,height};return {...r,score:(paper?overlap(r,paper)*1000:0)+reserved.reduce((s,b)=>s+overlap(r,b)*8,0)+placed.reduce((s,b)=>s+overlap(r,b)*50,0)+Math.hypot(r.left-p.x,r.top-p.y)*.1+n};}).sort((a,b)=>a.score-b.score)[0];
+   const column=paper?{left:Math.max(16,Math.min(frame.width-width-16,paper.left-40)),top:paper.top+paper.height+18+placed.length*44,width,height}:null;
+   const columnClear=column&&column.top+height<frame.height-80&&!reserved.some(b=>overlap(column,b)>0)&&!placed.some(b=>overlap(column,b)>0);
+   const sideColumn=paper?{left:paper.left-width-24,top:paper.top+placed.length*44,width,height}:null;
+   const sideClear=sideColumn&&sideColumn.left>=16&&sideColumn.top+height<frame.height-80&&!reserved.some(b=>overlap(sideColumn,b)>0)&&!placed.some(b=>overlap(sideColumn,b)>0);
+-  const r=item.id==='seal'?candidate:sideClear?sideColumn!:columnClear?column!:candidate;placed.push(r);
++  const r=isSeal?candidate:sideClear?sideColumn!:columnClear?column!:candidate;placed.push(r);
+   return {item,p,r};
+  }).filter(Boolean) as {item:ZanhuaAnnotation;p:{x:number;y:number};r:Rect}[];
+  return <div className="zanhua-detail-overlay" aria-label="原畫細節標注">
+   {coiffure&&studyVisible&&<ZanhuaCoiffureStudy viewport={viewport} selected={selected} items={annotations} onSelect={onSelect}/>}
+   <svg className="zanhua-detail-lines" width={frame.width} height={frame.height} aria-hidden="true"><defs><filter id={`detail-glow-${id}`} x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.2"/></filter></defs>
+-   {(!coiffure||studyReady)&&labels.filter(({item})=>!selected||selected===item.id).map(({item,p,r})=>{const endX=p.x<r.left?r.left:p.x>r.left+r.width?r.left+r.width:r.left+r.width/2,endY=r.top+r.height/2;const elbow=paper&&p.x>paper.left+paper.width&&endX<paper.left+paper.width?paper.left+paper.width+14:null;const crossPaper=paper&&endX<paper.left&&endY>paper.top-8&&endY<paper.top+paper.height+8;const detourY=paper?(Math.abs(p.y-paper.top)<Math.abs(p.y-paper.top-paper.height)?paper.top-14:paper.top+paper.height+14):0;const belowRoute=paper&&p.y>paper.top+paper.height&&endX<paper.left;const outerRoute=paper&&p.x>frame.width*.7&&p.y<paper.top-160&&endX<p.x;const line=item.id==='seal'?`M${p.x} ${p.y} Q${endX} ${p.y} ${endX} ${endY}`:belowRoute?`M${p.x} ${p.y} L${paper!.left-14} ${p.y} L${paper!.left-14} ${endY} L${endX} ${endY}`:outerRoute?`M${p.x} ${p.y} L${frame.width-18} ${p.y} L${frame.width-18} ${paper!.top-14} L${endX} ${paper!.top-14} L${endX} ${endY}`:elbow!==null?(crossPaper?`M${p.x} ${p.y} L${elbow} ${p.y} L${elbow} ${detourY} L${paper!.left-14} ${detourY} L${paper!.left-14} ${endY} L${endX} ${endY}`:`M${p.x} ${p.y} L${elbow} ${p.y} L${elbow} ${endY} L${endX} ${endY}`):`M${p.x} ${p.y} Q${endX} ${p.y} ${endX} ${endY}`;return <g key={item.id} className={selected===item.id?'is-selected':''}>{item.id==='seal'?sealLeader(r):<><path className="zanhua-annotation-leader" d={line}/><circle cx={p.x} cy={p.y} r="3" className="zanhua-annotation-dot"/></>}</g>;})}
++   {(!coiffure||studyReady)&&labels.filter(({item})=>!selected||selected===item.id).map(({item,p,r})=>{const endX=p.x<r.left?r.left:p.x>r.left+r.width?r.left+r.width:r.left+r.width/2,endY=r.top+r.height/2;const elbow=paper&&p.x>paper.left+paper.width&&endX<paper.left+paper.width?paper.left+paper.width+14:null;const crossPaper=paper&&endX<paper.left&&endY>paper.top-8&&endY<paper.top+paper.height+8;const detourY=paper?(Math.abs(p.y-paper.top)<Math.abs(p.y-paper.top-paper.height)?paper.top-14:paper.top+paper.height+14):0;const belowRoute=paper&&p.y>paper.top+paper.height&&endX<paper.left;const outerRoute=paper&&p.x>frame.width*.7&&p.y<paper.top-160&&endX<p.x;const line=item.id==='seal'||item.id.startsWith('collector-')?`M${p.x} ${p.y} Q${endX} ${p.y} ${endX} ${endY}`:belowRoute?`M${p.x} ${p.y} L${paper!.left-14} ${p.y} L${paper!.left-14} ${endY} L${endX} ${endY}`:outerRoute?`M${p.x} ${p.y} L${frame.width-18} ${p.y} L${frame.width-18} ${paper!.top-14} L${endX} ${paper!.top-14} L${endX} ${endY}`:elbow!==null?(crossPaper?`M${p.x} ${p.y} L${elbow} ${p.y} L${elbow} ${detourY} L${paper!.left-14} ${detourY} L${paper!.left-14} ${endY} L${endX} ${endY}`:`M${p.x} ${p.y} L${elbow} ${p.y} L${elbow} ${endY} L${endX} ${endY}`):`M${p.x} ${p.y} Q${endX} ${p.y} ${endX} ${endY}`;return <g key={item.id} className={selected===item.id?'is-selected':''}>{item.id==='seal'?sealLeader(r):<><path className="zanhua-annotation-leader" d={line}/><circle cx={p.x} cy={p.y} r="3" className="zanhua-annotation-dot"/></>}</g>;})}
+   </svg>
+   {confirmation&&<span className="sr-only" role="status">已找到：{confirmation.label}</span>}
+-  {(!coiffure||studyReady)&&labels.map(({item,r})=><button key={item.id} className={`zanhua-annotation-label${item.id==='seal'?' is-seal-label':''}`} style={{left:r.left,top:r.top,width:r.width,height:r.height}} aria-label={`細看${item.label}`} aria-pressed={selected===item.id} onClick={()=>onSelect(item)}>{item.label}<span aria-hidden="true"> ＋</span></button>)}
++  {(!coiffure||studyReady)&&labels.map(({item,r})=><button key={item.id} className={`zanhua-annotation-label${item.id==='seal'||item.id.startsWith('collector-')?' is-seal-label':''}`} style={{left:r.left,top:r.top,width:r.width,height:r.height}} aria-label={`細看${item.label}`} aria-pressed={selected===item.id} onClick={()=>onSelect(item)}>{item.label}<span aria-hidden="true"> ＋</span></button>)}
+   {coiffure&&studyReady&&onToggleStudy&&<button className="zanhua-annotation-label zanhua-coiffure-toggle" style={{left:labels[0]?.r.left??16,top:Math.min(frame.height-120,Math.max(24,...labels.map(label=>label.r.top+label.r.height))+12),width:108,height:32}} onClick={onToggleStudy}>{studyVisible?'切回原畫':'再看摹繪'}</button>}
+  </div>;
+ }
+--- v0.38/src/components/ZanhuaPreview.tsx
++++ v0.39/src/components/ZanhuaPreview.tsx
+@@ -1,4 +1,4 @@
+-import {zanhuaMountingSeals,zanhuaPlayerSeal} from '../game/zanhuaSeal.ts';
++import {zanhuaMountingSeals,zanhuaPlayerSeal,zanhuaCollectorSeals,resolveZanhuaCollectorSeal} from '../game/zanhuaSeal.ts';
+ import {zanhuaSelectionHref} from '../game/zanhuaNavigation.ts';
+ import {useAmbience} from '../audio/useAmbience.ts';
+ import {chapterMusicTracks} from '../audio/chapterMusicTracks.js';
+@@ -27,7 +27,7 @@
+ import {zanhuaDetailContours} from '../game/zanhuaDetailContours.ts';
+ import {ZanhuaDetailOverlay} from './ZanhuaDetailOverlay.tsx';
+ import type {ZanhuaConfirmation} from './ZanhuaDetailOverlay.tsx';
+-import {zanhuaAnnotations,zanhuaDressComparison} from '../game/zanhuaAnnotations.ts';
++import {zanhuaAnnotations,zanhuaDressComparison,zanhuaEarlierSealNote} from '../game/zanhuaAnnotations.ts';
+ import type {ZanhuaAnnotation} from '../game/zanhuaAnnotations.ts';
+ import type {PaintingRegion} from '../game/lanternStudy.ts';
+ import {coverView} from '../game/geometry.ts';
+@@ -44,8 +44,9 @@
+ type Overlay='hint'|'about'|'menu'|'journal'|null;
+ const query=new URLSearchParams(window.location.search);
+ const requested=query.get('scene');
+-const initialPhase:Phase=requested==='seal-detail'?'context':['intro','search','found','observe','interpret','complete'].includes(requested??'')?requested as Phase:'intro';
+-const initialIndex=requested==='seal-detail'?2:Math.max(0,Math.min(2,Number(query.get('person'))||0));
++const collectorEntry=requested==='seal-detail'||requested==='collector-seals';
++const initialPhase:Phase=collectorEntry?'context':['intro','search','found','observe','interpret','complete'].includes(requested??'')?requested as Phase:'intro';
++const initialIndex=collectorEntry?2:Math.max(0,Math.min(2,Number(query.get('person'))||0));
+ const stops=[{x:.24,label:'卷左'},{x:.50,label:'卷中'},{x:.76,label:'卷右'}];
+ 
+ /** The same approved chapter runtime serves the formal route and the development preview. */
+@@ -58,8 +59,9 @@
+  const [hint,setHint]=useState<SceneHint|null>(null),[command,setCommand]=useState<SceneCommand|null>(null);
+  const [reply,setReply]=useState<{id:string;text:string;token:number}|null>(null),[notice,setNotice]=useState('');
+  const [remembered,setRemembered]=useState(0);
+- const [contextStep,setContextStep]=useState(requested==='seal-detail'?1:0),[contextSeen,setContextSeen]=useState(false);
+- const [contextLooking,setContextLooking]=useState(requested==='seal-detail'),[contextTurn,setContextTurn]=useState(0);
++ const [contextStep,setContextStep]=useState(collectorEntry?1:0),[contextSeen,setContextSeen]=useState(false);
++ const [contextLooking,setContextLooking]=useState(collectorEntry),[contextTurn,setContextTurn]=useState(0);
++ const [collectorSealId,setCollectorSealId]=useState(zanhuaCollectorSeals[0].id);
+  const [confirmation,setConfirmation]=useState<ZanhuaConfirmation|null>(null),[detail,setDetail]=useState<ZanhuaAnnotation|null>(null);
+  const confirmationToken=useRef(0);
+  const [motionToken,setMotionToken]=useState(0);
+@@ -82,6 +84,8 @@
+  const conversation=zanhuaContextDialogue[index][contextStep]??zanhuaContextDialogue[index][0];
+  const contextSpeaker=zanhuaPeople.find(person=>person.id===conversation.speaker)!;
+  const historicalTurn=contextSeen&&contextTurn>=conversation.reply.length;
++ const collectorContext=phase==='context'&&index===2&&contextStep===1;
++ const collectionDetail=detail?.id==='seal'||detail?.id.startsWith('collector-');
+  const dialogueText=contextSeen?[...conversation.reply,...conversation.history][contextTurn]:conversation.invite;
+  const observing=phase==='observe'||phase==='interpret'||phase==='context'||phase==='compare'||phase==='animate'||phase==='ending'||phase==='recall'||phase==='complete';
+  const blocked=!ready||busy||phase==='intro'||phase==='found'||phase==='clue'||phase==='compare'||phase==='animate'||Boolean(overlay)||maidPlaying||phase==='complete'||phase==='seal';
+@@ -102,7 +106,7 @@
+  useEffect(()=>{if(!notice)return;const id=setTimeout(()=>setNotice(''),3000);return()=>clearTimeout(id);},[notice]);
+  useEffect(()=>{if((phase==='observe'||phase==='context'&&contextLooking&&!contextSeen)&&!busy)actionRef.current?.focus({preventScroll:true});else if(observing&&!busy)noteRef.current?.focus({preventScroll:true});},[phase,busy,contextSeen,contextStep]);
+  useEffect(()=>{const handle=(event:KeyboardEvent)=>{if(overlay||phase==='intro'||phase==='animate'||phase==='seal'||event.ctrlKey||event.metaKey||event.altKey)return;if(event.key.toLowerCase()==='f'){event.preventDefault();setFocusing(v=>!v);}if(event.key==='Escape')setReply(null);};window.addEventListener('keydown',handle);return()=>window.removeEventListener('keydown',handle);},[overlay,phase]);
+- useEffect(()=>{if(!ready||snapshot.current)return;snapshot.current=true;if(requested==='seal-detail'){setFocusing(false);frameContext(1);}else if(initialPhase==='observe'||initialPhase==='interpret'){setFocusing(false);if(initialPhase==='interpret')frameSpeaker();else frameObservation();}},[ready]);
++ useEffect(()=>{if(!ready||snapshot.current)return;snapshot.current=true;if(collectorEntry){setFocusing(false);frameContext(1);}else if(initialPhase==='observe'||initialPhase==='interpret'){setFocusing(false);if(initialPhase==='interpret')frameSpeaker();else frameObservation();}},[ready]);
+ 
+  function pan(region:{x:number;y:number},_near=false,onSettled?:()=>void,anchor?:{x:number;y:number},ratio?:number,allowHorizontalMargin=false,allowVerticalMargin=false){
+   if(!ratio){
+@@ -120,6 +124,8 @@
+  function confirmRegion(region:PaintingRegion,label:string){const item=(zanhuaAnnotations[index][contextStep]??[]).find(item=>item.label===label);const traced=item?zanhuaDetailContours[item.id]:index===2&&label===step.label?zanhuaDetailContours['hair-flower']:undefined;setConfirmation({...traced,region,label,token:++confirmationToken.current});setNotice(`已找到：${label}`);}
+  function selectAnnotation(item:ZanhuaAnnotation){
+   setDetail(item);setNotice('');
++  const collectorSeal=zanhuaCollectorSeals.find(seal=>seal.id===item.id);
++  if(collectorSeal){setCollectorSealId(collectorSeal.id);setConfirmation({region:collectorSeal.region,path:collectorSeal.path,origin:0,label:collectorSeal.label,token:++confirmationToken.current});return;}
+   const regions:Record<string,PaintingRegion>={'gauze':zanhuaSteps[1].region,'waist':zanhuaContext[1][0].region,'scarf':zanhuaContext[1][1].region,'red-skirt':zanhuaContext[0][0].region,'high-hair':zanhuaContext[2][0].region,'hair-flower':zanhuaSteps[2].region,'fan':zanhuaContext[1][2].region,'seal':zanhuaContext[2][1].region};
+   const radius=item.id==='skirt'?70:item.id==='dark-gauze'?120:32;
+   const region=regions[item.id]??{points:Array.from({length:16},(_,n)=>({x:(item.at[0]+Math.cos(n*Math.PI/8)*radius)/6455,y:(item.at[1]+Math.sin(n*Math.PI/8)*radius)/1378}))};
+@@ -155,6 +161,12 @@
+   if(figureStudy){if(studyComparing.current)return true;const part=resolveZanhuaStudyHit(index,world,viewport,studyAnchor??viewport,studyScope);if(part)setStudyPart(part);return true;}
+   if(phase==='free'){
+    for(const which of [0,1,2])if(resolveZanhuaStudyHit(which,world)){setIndex(which);setStudy(null);setStudyAnchor(viewport);studyComparing.current=false;setStudyPart(null);setFigureStudy(true);setReply(null);setFocusing(false);return true;}
++  }
++  if(collectorContext&&contextLooking){
++   const seal=resolveZanhuaCollectorSeal(world,viewport.view.scale);
++   if(!seal)return false;
++   if(contextSeen)selectAnnotation(zanhuaAnnotations[2][1].find(item=>item.id===seal.id)!);else revealContext(seal.id);
++   return true;
+   }
+   const region=phase==='observe'?step.region:phase==='context'&&contextLooking&&!contextSeen?context.region:null;
+   if(!region)return false;
+@@ -193,8 +205,8 @@
+   const current=zanhuaContext[index][which];
+   if(index===2&&which===1){
+    const compact=viewport.frame.width<760;
+-   const scale=Math.min(2.2,viewport.frame.width/230,viewport.frame.height/360);
+-   pan(current.focus,false,undefined,compact?{x:.5,y:.28}:{x:.62,y:.60},scale/coverView(viewport.frame,zanhuaSize).scale,true,true);return;
++   const scale=Math.min(1.35,viewport.frame.width/240,(viewport.frame.height*(compact?.46:.70)-40)/333);
++   pan(current.focus,false,undefined,compact?{x:.5,y:.24}:{x:.62,y:.50},scale/coverView(viewport.frame,zanhuaSize).scale,true,true);return;
+   }
+   pan(current.focus);
+  }
+@@ -216,11 +228,12 @@
+  function lookContext(){if(busy||phase!=='context')return;setDetail(null);setConfirmation(null);setContextLooking(true);frameContext(contextStep);}
+  function openFigureStudy(){setStudy(null);setStudyAnchor(viewport);studyComparing.current=false;setStudyPart(null);setFigureStudy(true);if(phase==='context'&&index===1&&contextStep<2)setRetainedStudy(true);setReply(null);setFocusing(false);}
+  function closeFigureStudy(){setFigureStudy(false);setStudyPart(null);studyComparing.current=false;if(index!==1||phase!=='context'||contextStep!==0)setRetainedStudy(false);}
+- function revealContext(){
++ function revealContext(sealId?:string){
+   if(busy||phase!=='context'||contextSeen||!contextLooking)return;
+   setContextSeen(true);setContextTurn(0);setDetail(null);
+   if(context.collect)collect(context.collect);
+-  confirmRegion(context.region,context.collect?'長柄扇':zanhuaAnnotations[index][contextStep][0].label);
++  if(collectorContext){const seal=zanhuaCollectorSeals.find(item=>item.id===sealId)??zanhuaCollectorSeals[0];setCollectorSealId(seal.id);confirmRegion(seal.region,seal.label);}
++  else confirmRegion(context.region,context.collect?'長柄扇':zanhuaAnnotations[index][contextStep][0].label);
+   if(context.collect==='fan-maid')setMaidPlaying(true);
+   else if(index<2||contextStep===0)openFigureStudy();
+  }
+@@ -301,8 +314,8 @@
+     <button className="lantern-text-button zanhua-dialogue-replay" onClick={playMotion}>重看{zanhuaMotionLabels[index]}演繹</button>
+   </LanternEmperorSpeech>}
+   {phase==='context'&&!busy&&!overlay&&!figureStudy&&!maidPlaying&&(!contextLooking||contextSeen)&&<LanternEmperorSpeech stablePlacement trapFocus={false} actor={contextSpeaker} people={zanhuaPeople} artworkSize={zanhuaSize} viewport={viewport}
+-   speakerLabel={detail?(detail.id==='seal'?'原畫流傳小注':'衣飾與髮型小注'):historicalTurn?'畫外解說：歷史資料':`${contextSpeaker.id==='P3'?'執扇侍女':'畫中女子'}的遊戲虛構對白`}
+-   caption={detail?(detail.id==='seal'?'原畫小注 · 流傳線索':index===2&&contextStep===0?'衣飾小注 · 原畫細節':'衣飾小注 · 原畫細看'):historicalTurn?'畫外解說 · 史料':`${contextSpeaker.name} · 遊戲對白`} narration={Boolean(detail)||historicalTurn||!mouthVisible(conversation.speaker)}
++   speakerLabel={detail?(collectionDetail?'原畫流傳小注':'衣飾與髮型小注'):historicalTurn?'畫外解說：歷史資料':`${contextSpeaker.id==='P3'?'執扇侍女':'畫中女子'}的遊戲虛構對白`}
++   caption={detail?(collectionDetail?'原畫小注 · 流傳線索':index===2&&contextStep===0?'衣飾小注 · 原畫細節':'衣飾小注 · 原畫細看'):historicalTurn?'畫外解說 · 史料':`${contextSpeaker.name} · 遊戲對白`} narration={Boolean(detail)||historicalTurn||!mouthVisible(conversation.speaker)}
+    text={detail?.body??dialogueText} speechGeometry={{openSpaceCandidates:true,maxWidth:310,reservedRects:dialogueSpace(),anchor:speakingAnchor(conversation.speaker),faces:Object.values(zanhuaMouths),heads:zanhuaHeads}}
+    actionLabel={detail?'返回人物對話':!contextSeen?'讓我看看':contextTurn+1<conversation.reply.length+conversation.history.length?'聽下去':contextStep+1===zanhuaContext[index].length?'循她的線索走':'再看下一處'}
+    onContinue={contextSeen?nextContext:lookContext}>
+@@ -310,13 +323,15 @@
+     {!detail&&contextSeen&&(index===0||(index===1&&contextStep<2))&&<button className="lantern-text-button zanhua-more-dress" onClick={openFigureStudy}>再看衣飾圖解</button>}
+     {!detail&&contextSeen&&index===2&&contextStep===0&&<button className="lantern-text-button zanhua-more-dress" onClick={openFigureStudy}>再看髮型圖解</button>}
+     {!detail&&contextSeen&&index===1&&contextStep===2&&<button className="lantern-text-button zanhua-more-dress" onClick={()=>setMaidPlaying(true)}>重看執扇演繹</button>}
++    {!detail&&contextSeen&&collectorContext&&<button className="lantern-text-button zanhua-more-dress" onClick={()=>setDetail(zanhuaEarlierSealNote)}>更早的收藏線索</button>}
+     {detail&&<div className="zanhua-detail-links"><a href={zanhuaHistorySources[detail.source].url} target="_blank" rel="noreferrer">資料依據 ↗</a></div>}
+     {!detail&&contextSeen&&contextTurn+1===conversation.reply.length+conversation.history.length&&<details className="zanhua-dialogue-source"><summary>這段的資料依據</summary><a href={zanhuaHistorySources[context.source].url} target="_blank" rel="noreferrer">{zanhuaHistorySources[context.source].label} ↗</a></details>}
+   </LanternEmperorSpeech>}
+   {phase==='compare'&&!busy&&!overlay&&!figureStudy&&!maidPlaying&&<LanternEmperorSpeech stablePlacement trapFocus={false} actor={zanhuaPeople[2]} people={zanhuaPeople} artworkSize={zanhuaSize} viewport={viewport} speakerLabel="執扇侍女的遊戲虛構對白" speechGeometry={{openSpaceCandidates:true,maxWidth:310,reservedRects:dialogueSpace(),anchor:zanhuaMouths.P3,faces:Object.values(zanhuaMouths),heads:zanhuaHeads}} text="她們逗犬賞花，我手裡還有扇呢。" actionLabel="回看女子的薄衣" onContinue={()=>{setPhase('interpret');frameObservation();}}/>}
+   {observing&&!figureStudy&&!maidPlaying&&phase!=='complete'&&<>
+    {phase==='observe'&&!busy&&<LanternPaintingTarget pointerThrough region={step.region} artworkSize={zanhuaSize} viewport={viewport} label={step.action} buttonRef={actionRef} onClick={observe}/>}
+-   {phase==='context'&&contextLooking&&!busy&&!contextSeen&&<LanternPaintingTarget pointerThrough region={context.region} artworkSize={zanhuaSize} viewport={viewport} label={context.action} buttonRef={actionRef} onClick={revealContext}/>}
++   {phase==='context'&&contextLooking&&!busy&&!contextSeen&&!collectorContext&&<LanternPaintingTarget pointerThrough region={context.region} artworkSize={zanhuaSize} viewport={viewport} label={context.action} buttonRef={actionRef} onClick={()=>revealContext()}/>}
++   {collectorContext&&contextLooking&&!busy&&zanhuaCollectorSeals.map((seal,n)=><LanternPaintingTarget key={seal.id} pointerThrough region={seal.region} artworkSize={zanhuaSize} viewport={viewport} label={`${contextSeen?'細看':'點擊'}${seal.label}`} buttonRef={n===0?actionRef:undefined} onClick={()=>{if(contextSeen)selectAnnotation(zanhuaAnnotations[2][1].find(item=>item.id===seal.id)!);else revealContext(seal.id);}}/>)}
+    {phase!=='animate'&&phase!=='compare'&&phase!=='interpret'&&(phase!=='context'||contextLooking&&!contextSeen)&&<LanternPaintingNote index={index} anchor={observationAnchor} artworkSize={zanhuaSize} viewport={viewport} label={phase==='ending'||phase==='recall'?'畫中回望':phase==='context'?`循着細節讀畫 · ${contextStep+1} / ${zanhuaContext[index].length}`:`原畫觀察 · ${index+1} / 3`} title={phase==='ending'?zanhuaEnding.title:heading} busy={busy} noteRef={noteRef}>
+     {phase==='observe'?<p className="lantern-note-body">{step.prompt}</p>:phase==='context'?<p className="lantern-note-body">{context.prompt}</p>:phase==='ending'?<>
+      <p className="lantern-note-body">{zanhuaEnding.body}</p><p className="lantern-note-caption">{zanhuaEnding.invitation}</p>
+@@ -333,7 +348,7 @@
+   </>}
+   {reply&&!blocked&&<LanternEmperorSpeech stablePlacement trapFocus={false} key={reply.token} actor={zanhuaPeople.find(p=>p.id===reply.id)!} people={zanhuaPeople} artworkSize={zanhuaSize} viewport={viewport} text={reply.text} speakerLabel="畫中人物的遊戲虛構對白" speechGeometry={{openSpaceCandidates:true,maxWidth:310,anchor:zanhuaMouths[reply.id],faces:Object.values(zanhuaMouths),heads:zanhuaHeads,reservedRects:[...dialogueSpace(),...(observing?(noteBounds?[noteBounds]:[]):[{left:0,top:0,width:355,height:150},{left:viewport.frame.width-270,top:0,width:270,height:95}])]}}/>}
+   {phase==='animate'&&!busy&&<><ZanhuaFigureAnimation key={motionToken} kind={index===0?'P1':index===1?'P4':'P6'} viewport={viewport} onDone={finishMotion} onError={()=>{setNotice('演繹暫未載入，可繼續看原畫或重播。');finishMotion();}}/><button className="lantern-quiet-button zanhua-skip-animation" onClick={finishMotion}>略過演繹 →</button></>}
+-  {!overlay&&!figureStudy&&!maidPlaying&&phase!=='animate'&&confirmation&&<ZanhuaDetailOverlay viewport={viewport} confirmation={confirmation} annotations={phase==='context'&&contextSeen&&!(index===2&&contextStep===0)&&!(index===0||(index===1&&contextStep<2))?(zanhuaAnnotations[index][contextStep]??[]):[]} selected={detail?.id} onSelect={selectAnnotation} reserved={dialogueSpace()} paper={noteBounds??undefined}/>}
++  {!overlay&&!figureStudy&&!maidPlaying&&phase!=='animate'&&confirmation&&<ZanhuaDetailOverlay viewport={viewport} confirmation={confirmation} annotations={phase==='context'&&contextSeen&&!(index===2&&contextStep===0)&&!(index===0||(index===1&&contextStep<2))?(zanhuaAnnotations[index][contextStep]??[]).filter(item=>!collectorContext||item.id===collectorSealId):[]} selected={detail?.id} onSelect={selectAnnotation} reserved={dialogueSpace()} paper={noteBounds??undefined}/>}
+   {(figureStudy||showRetainedStudy)&&<ZanhuaInPaintingStudy key={index} active={figureStudy} scope={studyScope} requireCompletion={phase!=='free'} anchorViewport={studyAnchor??viewport} onCompareChange={value=>{studyComparing.current=value;}} returnLabel={phase==='free'?'回到原畫':undefined} person={index} viewport={viewport} selected={studyPart} onSelect={setStudyPart} onClose={closeFigureStudy}/>}
+   {maidPlaying&&<><ZanhuaMaidAnimation viewport={viewport} onDone={()=>setMaidPlaying(false)}/><button className="lantern-quiet-button zanhua-skip-animation" onClick={()=>setMaidPlaying(false)}>略過演繹 →</button></>}
+   {phase==='complete'&&<ZanhuaLifeSummary collected={Object.keys(origins).length} onSeal={beginSeal}/>}
+--- v0.38/src/game/zanhuaAnnotations.ts
++++ v0.39/src/game/zanhuaAnnotations.ts
+@@ -1,4 +1,4 @@
+-import {zanhuaSeal} from './zanhuaSeal.ts';
++import {zanhuaSeal,zanhuaCollectorSeals} from './zanhuaSeal.ts';
+ /** Native reproduction coordinates; labels describe visible evidence, not recovered identities. */
+ export type ZanhuaAnnotation={id:string;label:string;at:[number,number];body:string;source:number};
+ const a=(id:string,label:string,at:[number,number],body:string,source=1):ZanhuaAnnotation=>({id,label,at,body,source});
+@@ -10,7 +10,9 @@
+  [[a('red-skirt','紅色裙襬',[5330,1190],'深色外衣之外露出紅裙，裙襬向地面鋪開。先分辨內層裙色，再看外層衣線，便能讀出盛裝的疊穿。'),a('dark-gauze','寬袖外衣',[5850,755],'外衣有寬大的袖部，與內層紅裙並非同一件衣物。畫中女子的遊賞裝束，與侍女的執扇身分還需並看。')]],
+  [[waist,gauze,scarf],[scarf,gauze,skirt],[a('ribbon','紅帶束髻',[3715,460],'紅帛約束雙髻，與其餘女子的高髻、簪花和金飾不同。較簡的束髮配合執扇動作，表現隨侍角色；紅色本身不能視作侍女專用的制度。',1),a('fan','長柄扇',[4050,510],'扇面與長柄連起雙手的姿勢。比較手中花與手中扇，才能看出遊賞者和侍奉者的差別。')]],
+  [[a('high-hair','高髻',[1215,205],'高髻把頭部輪廓向上延伸。館方介紹指出，這類高髻可能藉「義髻」增加高度；它不只是把全部真髮盤得更高。',0),a('hair-flower','髻上簪花',[1350,66],'大朵花飾位於髻上，與髮髻和細小飾物疊在一起。這裡先辨認簪花的位置，不憑複製圖強定花種。',0),a('hair-ornament','金色髮飾',[1350,160],'高髻旁可見金色細線的裝飾。這是原畫中的顏色線索；單憑畫面，不能確定器物材質或每件飾物的名稱。',0)],
+- [a('seal','紹興連珠印',zanhuaSeal.at,'兩方相連的紅印是後世收藏的線索，不是畫中女子的名字，也不是畫家署名。它把我們帶到南宋內府的收藏歷史。',0)]],
++ zanhuaCollectorSeals.map(seal=>a(seal.id,seal.label,seal.at,'印章會留下收藏與鑑賞的痕跡。沿着這類線索與著錄，可追看畫卷先後為梁清標、安岐及清內府收藏的歷史。眼前的紅印不是畫中女子的姓名，也不是畫家落款。',0))],
+ ];
+ 
++export const zanhuaEarlierSealNote=a('seal','更早的收藏線索',zanhuaSeal.at,'畫心左下另有較淡的「紹興」連珠印。館方以它說明畫卷曾入藏南宋高宗內府。它把畫卷的收藏歷史帶到南宋；印記記下的是收藏，並不是女子的姓名。',0);
++
+ export const zanhuaDressComparison:ZanhuaAnnotation={id:'tang-dress',label:'唐代女服的不同面貌',at:[3090,480],body:'唐代女服並非只有寬袖長裙。國博展覽也呈現窄袖襦衫配裙、披帛，以及胡服、男裝等形象。衣着隨身分、場合與時期改變；本幅可作貴族盛裝的線索，不能概括所有唐代婦女。',source:5};
+--- v0.38/src/game/zanhuaContext.ts
++++ v0.39/src/game/zanhuaContext.ts
+@@ -1,4 +1,3 @@
+-import {zanhuaSeal} from './zanhuaSeal.ts';
+ import type {PaintingRegion} from './lanternStudy.ts';
+ 
+ const museum='https://www.neac.gov.cn/seac/xwzx/202606/1191211.shtml';
+@@ -37,10 +36,10 @@
+   '花之外，盤起的頭髮也高高聳起。輕點髮髻，看看這份盛裝如何把目光引向頭部。','點擊斜首女子的高髻',
+   '館方介紹以「義髻」解釋這類高髻：用墊髮等方式增加高度。高髻再配簪花與金色髮飾，讓頭部也成為盛裝的一部分。',
+   [[1160,120],[1260,90],[1400,115],[1435,200],[1370,265],[1180,285],[1135,240]], [1300,220],0),
+-  stop('畫上的紅印，留下了誰的名字？',
+-  '沿着花樹往下，看貼近褐色畫心底邊的兩方紅印：上「紹」、下「興」，每方各一字。輕點這組連珠印。','點擊畫心底邊的紹興連珠印',
+-  '「紹興」連珠印記錄了南宋內府的收藏，並非畫家署名。本幅沒有作者落款，後世依著錄與風格繫於周昉；作者與成畫年代仍有討論，所以稱「傳周昉作」。',
+-  zanhuaSeal.hit, zanhuaSeal.at,0,1.6)],
++  stop('誰曾把這幅畫珍藏起來？',
++  '看畫卷左邊的淺色裝裱，上下排着三枚清楚的紅印。輕點其中一枚，找找昔日收藏者留下的痕跡。','點擊左邊裝裱上的任一枚收藏印',
++  '這些紅印是後來鑑賞、收藏留下的痕跡。館方記載，畫卷曾先後為梁清標、安岐收藏，乾隆年間收入清內府。紅印帶我們認識畫卷的流傳，卻不能代替畫中女子的姓名或畫家落款。',
++  [[319,906],[409,906],[409,1239],[319,1239]], [364,1073],0,1.35)],
+ ];
+ export const zanhuaContextEntry=['沿着衣袖看看她的盛裝','從薄衣看懂這身穿搭','從髻飾追看畫作的來歷'];
+ 
+@@ -52,7 +51,7 @@
+   {speaker:'P4',invite:'衣袖分清了，肩臂旁這條花紋長帶呢？它也有袖口嗎？',reply:['它是披帛，繞在肩臂間；衣袖則屬於外罩的紗衣。','我的手伸出去拈花，衣袖與披帛便交疊在一起。'],history:['唐初女服多較窄狹，中晚唐的衣袖與裙幅漸寬。畫中這身盛裝，也讓我們看見當時衣飾的審美趣味。']},
+   {speaker:'P3',invite:'她有花在手，我的手可沒閒着。看看我拿的是甚麼，再看看我的髮髻。',reply:['是扇。紅帶束着我的雙髻，她們卻在高髻上簪花。','她們拈花遊賞，我執扇隨侍。同在畫裡，忙的事可不同。'],history:['紅帛用來約束雙髻。較簡的束髮與執扇動作相配，表現隨侍角色；其餘女子則以高髻、簪花與金飾盛裝。','這是畫中的裝束對比，不能據此斷定紅色是侍女專用的規定；現有資料沒有交代她為何選用紅色。']}],
+  [{speaker:'P6',invite:'你認得花，可留意過花下面的頭髮？這髮髻為何能盤得這樣高？先點點看。',reply:['花在上，細飾點在髻邊。現在再看我，可還只留意那朵花？'],history:['館方以「義髻」解釋這類高髻：用墊髮等方式增加高度。盛裝的線索，並不只在衣裳。']},
+-  {speaker:'P6',invite:'你已看出我如何妝點。可我的姓名呢？樹旁那兩方小紅印，會有答案嗎？去看看。',reply:['紅印在畫卷上，卻不是我的名字。要問它從何而來，得循着畫卷的流傳去找。'],history:['那是「紹興」連珠印，記錄南宋內府的收藏，並非畫家署名。','本幅沒有作者落款。後世依著錄與風格繫於周昉，但作者與成畫年代仍有討論，所以稱「傳周昉作」。']}],
++  {speaker:'P6',invite:'你看出了我的妝點，卻還不知道我的姓名。看看左邊裝裱上清楚的紅印：會是誰留下的？',reply:['印記留在畫卷上，記下的是後來珍藏、鑑賞它的痕跡。可別把它當成我的名字。'],history:['收藏者會在書畫上留下鑑藏印。依館方記載，這幅畫曾先後為梁清標、安岐收藏，乾隆年間收入清內府。','畫中女子的姓名仍不見記載，本幅也沒有畫家落款。後世依著錄與風格繫於周昉，但作者與成畫年代仍有討論，所以稱「傳周昉作」。']}],
+ ];
+ export const zanhuaInterpretDialogue=[
+  '牠仰頭追着長柄，我也垂眼望牠。畫裡只留下一刻，你卻能猜到下一步，對嗎？',
+--- v0.38/src/game/zanhuaDetailContours.ts
++++ v0.39/src/game/zanhuaDetailContours.ts
+@@ -1,4 +1,4 @@
+-import {zanhuaSeal} from './zanhuaSeal.ts';
++import {zanhuaSeal,zanhuaCollectorSeals} from './zanhuaSeal.ts';
+ /** Display contours traced against the unchanged native image. Hit areas stay separate. */
+ export const zanhuaDetailContours:Record<string,{path:string;origin:number}>={
+  'red-skirt':{origin:5150,path:'M22 1169 Q48 1132 100 1124 Q124 1096 150 1097 Q171 1078 214 1076 L218 1102 L240 1140 L249 1200 Q276 1223 320 1210 L382 1194 L435 1165 Q404 1197 368 1216 Q294 1250 231 1240 Q178 1246 124 1234 Q58 1232 28 1203 Q18 1188 22 1169 Z'},
+@@ -7,4 +7,5 @@
+  'hair-flower':{origin:1080,path:'M190 38 Q190 25 205 29 L221 24 L235 29 L245 21 L260 26 L277 23 L293 32 L310 27 L330 37 L346 43 L358 58 L361 75 L354 89 L337 97 L320 100 L302 106 L280 118 L262 119 Q244 113 227 104 L193 100 L189 75 Z'},
+  'hair-ornament':{origin:1080,path:'M237 108 Q250 107 262 117 L276 120 L285 132 L292 147 L285 162 L280 183 L270 198 L258 189 L249 174 L238 166 L225 151 L231 137 L222 125 Z'},
+  'seal':{origin:0,path:zanhuaSeal.path},
++ ...Object.fromEntries(zanhuaCollectorSeals.map(seal=>[seal.id,{origin:0,path:seal.path}])),
+ };
+--- v0.38/src/game/zanhuaEnding.ts
++++ v0.39/src/game/zanhuaEnding.ts
+@@ -12,5 +12,5 @@
+  {choice:'持花的女子',title:'同樣伸手，手中卻不是同一件事',
+   body:'高束長裙、薄紗外衣與花紋披帛，在她身上交疊；一隻手伸出，拈着小花。\n再看侍女手中的扇與紅帶束髻：衣飾和動作一起，讓遊賞與侍奉的角色有了區別。'},
+  {choice:'斜首的女子',title:'看清妝點，仍未知道她的姓名',
+-  body:'從衣物的疊穿，看到高髻、花葉與細飾的交疊，盛裝原來不只在衣裳。\n樹旁的收藏印留下畫卷流傳的線索，卻沒有補上女子的姓名。認得造型與面孔，是理解她們的開始。'},
++  body:'從衣物的疊穿，看到高髻、花葉與細飾的交疊，盛裝原來不只在衣裳。\n裝裱上的收藏印留下畫卷流傳的線索，卻沒有補上女子的姓名。認得造型與面孔，是理解她們的開始。'},
+ ];
+--- v0.38/src/game/zanhuaSeal.ts
++++ v0.39/src/game/zanhuaSeal.ts
+@@ -12,12 +12,22 @@
+  path:'M529 1277 L576 1274 L579 1326 L529 1328 Z M530 1334 L578 1332 L581 1377 L531 1377 Z',
+ };
+ 
+-/** Other visible seals on the mounting: excluded from labels/dialogue, not game targets. */
+-export const zanhuaMountingSeals=[
+- {x:330,y:906,width:65,height:67},
+- {x:331,y:1026,width:64,height:58},
+- {x:319,y:1143,width:90,height:96},
+-];
++/** Main-story clues: the three clear original impressions on the pale left mounting.
++ * Labels describe visible shapes; individual inscriptions are not assigned without verification.
++ */
++export const zanhuaCollectorSeals=[
++ {id:'collector-round',label:'圓形收藏印',x:330,y:906,width:65,height:67},
++ {id:'collector-square',label:'方形收藏印',x:331,y:1026,width:64,height:58},
++ {id:'collector-large',label:'較大收藏印',x:319,y:1143,width:90,height:96},
++].map(seal=>({...seal,at:[seal.x+seal.width/2,seal.y+seal.height/2] as [number,number],
++ region:{points:[[seal.x,seal.y],[seal.x+seal.width,seal.y],[seal.x+seal.width,seal.y+seal.height],[seal.x,seal.y+seal.height]].map(([x,y])=>({x:x/6455,y:y/1378}))},
++ path:`M${seal.x} ${seal.y} h${seal.width} v${seal.height} h${-seal.width} Z`,
++}));
++export const zanhuaMountingSeals=zanhuaCollectorSeals.map(({x,y,width,height})=>({x,y,width,height}));
++export function resolveZanhuaCollectorSeal(point:{x:number;y:number},scale=1){
++ const padding=6/scale;
++ return zanhuaCollectorSeals.find(s=>point.x>=s.x-padding&&point.x<=s.x+s.width+padding&&point.y>=s.y-padding&&point.y<=s.y+s.height+padding);
++}
+ 
+ /** Player-only game overlay on blank mounting, beside the historical linked seal.
+  * Bounds (422,1097)–(486,1161) avoid the original seals and painting edge at x=500.

@@ -1,4 +1,5 @@
 import {useEffect,useRef,useState} from 'react';
+import {returnToChapterCover} from '../game/chapterCover.ts';
 import type {SceneViewport} from './ScrollScene.tsx';
 import {lanternPersonRegion} from '../game/lanternStudy.ts';
 import {LanternPaintingNote} from './LanternPaintingNote.tsx';
@@ -77,6 +78,7 @@ export function LanternEpilogue({completed,initialScene,viewport,collected,onJou
 
         {historySeen.length<2?next('再看庭院獻藝',()=>void change('history',{index:2,detail:'performance'},()=>setHistoryIndex(1))):<><p className="lantern-note-caption">畫卷呈現的是宮廷安排的節慶；了解百姓生活，仍需結合其他史料。</p>{next('收下這一卷的發現',()=>void change('summary',undefined,onComplete))}</>}</>}
       {stage==='summary'&&<><p className="lantern-note-body">三次身影，連起不同時空；爆竹、街市與表演，留下宮廷元宵的見聞。</p><p className="lantern-note-caption">觀察已完成，畫中仍有更多見聞。</p>{next('留在畫中，自由探索',onClose)}
+        <button className="lantern-note-secondary" onClick={returnToChapterCover}>回到本章封面</button>
         {collected>0&&<button className="lantern-note-secondary" onClick={onJournal}>回看已收藏的 {collected} 則見聞</button>}
         <details className="lantern-note-sources"><summary>畫作資料與來源</summary><p>明代 · 佚名 · 絹本設色<br/>中國國家博物館藏</p><a href="https://www.chnmuseum.cn/zl/zlhg/201812/t20181220_32517.shtml" target="_blank" rel="noreferrer">構圖介紹 · 國博</a><a href="https://www.chnmuseum.cn/portals/0/web/zt/202102yuaxiao/" target="_blank" rel="noreferrer">畫作與節俗 · 國博</a></details><button className="lantern-note-secondary" onClick={onRestart}>再尋一次</button></>}
     </LanternPaintingNote>

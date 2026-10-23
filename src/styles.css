@@ -222,8 +222,9 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 .chapter-links::-webkit-scrollbar {display: none;}
 .chapter-links > * {flex: 0 0 auto; white-space: nowrap;}
 .chapter-links a {display: inline-flex; align-items: center; gap: 7px; color: inherit; text-decoration: none; padding: 6px 0; border-bottom: 1px solid transparent;}
-.chapter-links a[aria-current] {color: var(--ink); border-color: #82785c88;}
+.chapter-links a[aria-current] {color: var(--red); border-color: currentColor;}
 .chapter-links a:hover {color: var(--red);}
+.chapter-links a:focus-visible {outline: 1px solid var(--red); outline-offset: 3px;}
 .chapter-links a span {font-size: 9px; opacity: .65;}
 .chapter-pending {display: inline-flex; align-items: center; gap: 7px; padding: 6px 0; color: #8c856f;}
 .chapter-pending > span {font-size: 9px; opacity: .65;}

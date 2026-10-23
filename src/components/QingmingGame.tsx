@@ -283,6 +283,7 @@ export function QingmingGame({persist=true}:{persist?:boolean}={}){
    {state.cityStep<3&&!cityLooked&&<p className="lantern-note-caption">選一處近看，再點回原畫細節。</p>}
    {(cityLooked||state.cityStep===3)&&<button className="lantern-note-next" onClick={()=>dispatch({type:'city-next'})}>{state.cityStep===3?'繼續漫遊':'回看下一段聯繫'} <span>→</span></button>}
    <button className="lantern-text-button" onClick={()=>state.cityStep===3?openJournal():dispatch({type:'roam'})}>{state.cityStep===3?'翻看見聞冊':'稍後再看'}</button>
+   {state.cityStep===3&&<button className="lantern-text-button" onClick={returnToChapterCover}>回到本章封面</button>}
   </QingmingNote>}
   {state.mode==='roam'&&count===5&&!invited&&!destination&&!overlay&&<div className="qingming-complete"><p className="lantern-operation">五段見聞已記下，可以把它們連起來看。</p><button className="lantern-text-button" onClick={()=>{setCityLooked(false);dispatch({type:'city'});}}>連起來看</button></div>}
   {reply&&!sourceReading&&!overlay&&state.mode!=='conclusion'&&<QingmingSpeech actor={storyActorById(reply.id)} viewport={viewport} text={reply.text} avoidNote={mainNote&&!noteFolded}/>}

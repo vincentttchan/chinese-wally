@@ -1,4 +1,4 @@
-import {zanhuaSeal} from './zanhuaSeal.ts';
+import {zanhuaSeal,zanhuaCollectorSeals} from './zanhuaSeal.ts';
 /** Display contours traced against the unchanged native image. Hit areas stay separate. */
 export const zanhuaDetailContours:Record<string,{path:string;origin:number}>={
  'red-skirt':{origin:5150,path:'M22 1169 Q48 1132 100 1124 Q124 1096 150 1097 Q171 1078 214 1076 L218 1102 L240 1140 L249 1200 Q276 1223 320 1210 L382 1194 L435 1165 Q404 1197 368 1216 Q294 1250 231 1240 Q178 1246 124 1234 Q58 1232 28 1203 Q18 1188 22 1169 Z'},
@@ -7,4 +7,5 @@ export const zanhuaDetailContours:Record<string,{path:string;origin:number}>={
  'hair-flower':{origin:1080,path:'M190 38 Q190 25 205 29 L221 24 L235 29 L245 21 L260 26 L277 23 L293 32 L310 27 L330 37 L346 43 L358 58 L361 75 L354 89 L337 97 L320 100 L302 106 L280 118 L262 119 Q244 113 227 104 L193 100 L189 75 Z'},
  'hair-ornament':{origin:1080,path:'M237 108 Q250 107 262 117 L276 120 L285 132 L292 147 L285 162 L280 183 L270 198 L258 189 L249 174 L238 166 L225 151 L231 137 L222 125 Z'},
  'seal':{origin:0,path:zanhuaSeal.path},
+ ...Object.fromEntries(zanhuaCollectorSeals.map(seal=>[seal.id,{origin:0,path:seal.path}])),
 };
