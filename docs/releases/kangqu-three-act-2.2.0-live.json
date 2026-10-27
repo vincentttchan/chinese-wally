@@ -1,0 +1,67 @@
+{
+  "version": "2.2.0",
+  "date": "2026-10-27",
+  "deploymentCommit": "b150a346bee6cc017de1e1fb36b3e578fde1c9f9",
+  "workflow": {
+    "conclusion": "success",
+    "headSha": "b150a346bee6cc017de1e1fb36b3e578fde1c9f9",
+    "status": "completed",
+    "updatedAt": "2026-10-27T02:49:48Z",
+    "url": "https://github.com/vincentttchan/chinese-wally/actions/runs/40440537045"
+  },
+  "releaseTag": "site-2026-10-27-kangqu-three-act-2.2.0",
+  "releaseUrl": "https://github.com/vincentttchan/chinese-wally/releases/tag/site-2026-10-27-kangqu-three-act-2.2.0",
+  "officialUrl": "https://vincentttchan.github.io/chinese-wally/#kangqu-listening",
+  "archiveUrl": "https://vincentttchan.github.io/chinese-wally/chapters/kangqu-listening-v2-2.1.14/",
+  "httpVerification": [
+    {
+      "path": "chapters/kangqu-listening-v2-2.2.0/index.html",
+      "sha256": "65aafa12fddf785287b4e3424525eb0dee232fcfa5e718e258c79510b9aed022",
+      "bytes": 877616,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.2.0/data/version-manifest.json",
+      "sha256": "5a2b187cea1c366395ef6b7ebf9534ea55fbdaa68b2adef56aa2303c644ae9fe",
+      "bytes": 51815,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.1.14/original-index.html",
+      "sha256": "f654f205b7271baa98473d8912a4f2c42d4ec10a54739e77f927d8ec7e090523",
+      "bytes": 858126,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.1.14/index.html",
+      "sha256": "30ca427d745914794eb853b304c679a0951fc6291a8f9d9ae0e44ba07839acdd",
+      "bytes": 858163,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/lantern-three-act-v1/index.html",
+      "sha256": "4c3dd9209c94f29361e18193b1214b14ec53e7abcf9d049163ecce4553dcf58c",
+      "bytes": 507368,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/kangqu-listening/index.html",
+      "sha256": "65c94ad3686fbaf9c94a821bded6c7c7ce156e23ae02f9253ccf2fb0e951fa62",
+      "bytes": 564,
+      "matchesRelease": true
+    }
+  ],
+  "browserInspection": [
+    "Formal route opens 2.2.0 iframe, native readiness clears host loading, cover opens confirmed vertical three-act entrance.",
+    "Online 2.1.14 archive opens the original introduction.",
+    "Live official-page error/warn logs were empty."
+  ],
+  "preservation": {
+    "existingSourceAndPublicFilesUnchanged": 720,
+    "reviewedAssetsMatched": 166,
+    "previousLanternReleaseTagUnchanged": "568654705eeb02b2fb3ebb8bce51d49fc771450c"
+  },
+  "evidenceDirectory": "output/releases/kangqu-three-act-2.2.0-live-2026-10-27",
+  "limitations": "No complete chapter replay or test suite; targeted release build, entry and archive inspection only.",
+  "staging": "Independent metadata-only fetch and explicit reviewed file staging recreated the identical b150a34 commit outside the original Git object store; no changes to release content."
+}
