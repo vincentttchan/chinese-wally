@@ -1,0 +1,9 @@
+{
+  "chapter": "榜下尋人",
+  "version": "standalone-20261027",
+  "date": "2026-10-27",
+  "entrySHA256": "9d7b269acd0a25a53b437f897bf7c535a684122e1d77f89253bcb950dff3e0f0",
+  "sharedAssets": "Read-only existing public/art, public/audio and public/fonts. Keep this directory within public/chapters.",
+  "source": "src/components/ExaminationStreetLifeGame.tsx",
+  "scope": "Removed from main site navigation and routes; independent playable document retained."
+}

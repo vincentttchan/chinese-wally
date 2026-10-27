@@ -1,0 +1,23 @@
+/** Save a separate playable document; shared original assets stay read-only. */
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {build} from 'vite';
+const root=path.resolve(import.meta.dirname,'..');
+const out=path.join(root,'output/releases/examination-standalone-2026-10-27/build');
+const destination=path.join(root,'public/chapters/examination-standalone-20261027');
+await build({root,publicDir:false,build:{outDir:out,emptyOutDir:true,rollupOptions:{input:path.join(root,'examination-standalone.html')}}});
+let html=fs.readFileSync(path.join(out,'examination-standalone.html'),'utf8');
+const scripts=[...html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"[^>]*><\/script>/g)];
+const styles=[...html.matchAll(/<link\b[^>]*\bhref="([^"]+\.css)"[^>]*>/g)];
+if(scripts.length!==1)throw new Error('Expected one independent bundle');
+const localize=text=>text.replaceAll('/chinese-wally/','../../').replace(/(["'`])\/(art|audio|fonts|chapters)\//g,'$1../../$2/').replace(/url\((["']?)\/(art|audio|fonts|chapters)\//g,'url($1../../$2/');
+const js=localize(fs.readFileSync(path.join(out,'assets',path.basename(scripts[0][1])),'utf8'));
+if(/\bimport\s*\(|\bimport\.meta|\bexport\s*\{/.test(js))throw new Error('Independent bundle needs external modules');
+const css=localize(styles.map(item=>fs.readFileSync(path.join(out,'assets',path.basename(item[1])),'utf8')).join('\n'));
+html=html.replace(scripts[0][0],'');for(const style of styles)html=html.replace(style[0],'');
+html=html.replace('</head>',()=>`<style>${css}</style></head>`).replace('</body>',()=>`<script>${js.replaceAll('</script','<\\/script')}</script></body>`);
+fs.mkdirSync(destination,{recursive:true});
+fs.writeFileSync(path.join(destination,'index.html'),html);
+fs.writeFileSync(path.join(destination,'version.json'),JSON.stringify({chapter:'榜下尋人',version:'standalone-20261027',date:'2026-10-27',entrySHA256:crypto.createHash('sha256').update(html).digest('hex'),sharedAssets:'Read-only existing public/art, public/audio and public/fonts. Keep this directory within public/chapters.',source:'src/components/ExaminationStreetLifeGame.tsx',scope:'Removed from main site navigation and routes; independent playable document retained.'},null,2)+'\n');
+console.log('Saved '+path.relative(root,destination)+'/index.html');

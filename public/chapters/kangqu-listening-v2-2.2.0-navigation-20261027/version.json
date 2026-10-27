@@ -1,0 +1,7 @@
+{
+  "version": "2.2.0-navigation-20261027",
+  "source": "public/chapters/kangqu-listening-v2-2.2.0/index.html",
+  "sourceSHA256": "65aafa12fddf785287b4e3424525eb0dee232fcfa5e718e258c79510b9aed022",
+  "entrySHA256": "2786c4b032613a97c7717fd87107741a36f9ffb1a8f273d10bce2de790984cec",
+  "scope": "Only cover navigation changed: remove Examination and lock Qingming. Approved 2.2.0 document, gameplay, shared assets and storage keys preserved."
+}

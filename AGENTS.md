@@ -2,6 +2,14 @@
 
 使用者已於 2026-10-10 確認「宮中鬧元宵」章節完成，並要求以其作為後續畫作的製作基準。
 
+## 2026-10-27 章節抽離與上鎖正式入口
+
+- 使用者授權將《榜下尋人》從主站移除，另存獨立可玩版本於 `public/chapters/examination-standalone-20261027/index.html`；保留共用素材、來源與存檔。
+- 《清明上河圖》保留名稱並標示「已上鎖」，導航與選畫頁停止入畫，舊主站入口顯示選畫頁。原內容與封存保留。
+- 《在人群中聽樂》正式文件為 `public/chapters/kangqu-listening-v2-2.2.0-navigation-20261027/index.html`，只更新導航；2.2.0 原文件、遊戲、素材及存檔不變。
+- 其他章節以前次正式提交 `efd4e2292c4c9c9c303b2276595baa864e9c966f` 保留，包括洛水三幕 1.0.0 與宮中三幕。原所有封存標記保留。
+- 發布紀錄見 `docs/releases/chapter-access-live-2026-10-27.md`。
+
 ## 2026-10-27《洛水之間》三幕入場 1.0.0 正式入口
 
 - 使用者已確認完整1.0.0並明確授權接到正式入口及上線，取代先前本機候審限制。正式 `#luoshen` 使用 `LuoshenThreeActGameV1.tsx`；獨立完整成品仍在 `public/chapters/luoshen-three-act-v1/`。
