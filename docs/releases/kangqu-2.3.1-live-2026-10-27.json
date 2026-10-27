@@ -1,0 +1,153 @@
+{
+  "date": "2026-10-27",
+  "commit": "65e6497244b970fb2eefd27d3d44818ee8da0d04",
+  "actionsRun": 40475459248,
+  "actionsURL": "https://github.com/vincentttchan/chinese-wally/actions/runs/40475459248",
+  "checkedAtUTC": "2026-10-27T08:45:48.429655+00:00",
+  "documents": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "expectedSHA256": "22894ba148ded1a6fcdf5b87f2a970a0596eae11c39a15bef9b61112d34dd920",
+      "liveSHA256": "22894ba148ded1a6fcdf5b87f2a970a0596eae11c39a15bef9b61112d34dd920",
+      "matches": true
+    },
+    {
+      "path": "chapters/kangqu-listening/index.html",
+      "status": 200,
+      "expectedSHA256": "7dd24fc2e67c84170d9dfd4212836cece1c8ad3e4164a4c17333aa94b231a323",
+      "liveSHA256": "7dd24fc2e67c84170d9dfd4212836cece1c8ad3e4164a4c17333aa94b231a323",
+      "matches": true
+    },
+    {
+      "path": "chapters/kangqu-listening/data/active-release.json",
+      "status": 200,
+      "expectedSHA256": "e027c723b414dc398953afea6c9ef87da9feff952415bf255782cbd7e377b979",
+      "liveSHA256": "e027c723b414dc398953afea6c9ef87da9feff952415bf255782cbd7e377b979",
+      "matches": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1/index.html",
+      "status": 200,
+      "expectedSHA256": "4fca5b692eacff9d381e98f3fa076adf255e5eb388992e7ea367cf0467fd213b",
+      "liveSHA256": "4fca5b692eacff9d381e98f3fa076adf255e5eb388992e7ea367cf0467fd213b",
+      "matches": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1/fresh.html",
+      "status": 200,
+      "expectedSHA256": "cd06a03ffbca48f4b9199509677b6b52bafd5fbdc77d0041b9dcd67aa346e8cc",
+      "liveSHA256": "cd06a03ffbca48f4b9199509677b6b52bafd5fbdc77d0041b9dcd67aa346e8cc",
+      "matches": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1/note.html",
+      "status": 200,
+      "expectedSHA256": "9aab93766233068fc54cbef5f717bfc3a1d0bcf2e37b480638a7caa3b4a13a47",
+      "liveSHA256": "9aab93766233068fc54cbef5f717bfc3a1d0bcf2e37b480638a7caa3b4a13a47",
+      "matches": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1/data/version-manifest.json",
+      "status": 200,
+      "expectedSHA256": "749c98a074e181c2e2433a3e6ecbf311e024c1c090f80ebf3007bc0b86a29ad8",
+      "liveSHA256": "749c98a074e181c2e2433a3e6ecbf311e024c1c090f80ebf3007bc0b86a29ad8",
+      "matches": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1/data/active-release.json",
+      "status": 200,
+      "expectedSHA256": "e027c723b414dc398953afea6c9ef87da9feff952415bf255782cbd7e377b979",
+      "liveSHA256": "e027c723b414dc398953afea6c9ef87da9feff952415bf255782cbd7e377b979",
+      "matches": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1/data/source-note.json",
+      "status": 200,
+      "expectedSHA256": "318ebabddae74d9642acb55a9324ac77a8d26fd3e3f81c8b771162ebe486602a",
+      "liveSHA256": "318ebabddae74d9642acb55a9324ac77a8d26fd3e3f81c8b771162ebe486602a",
+      "matches": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.0-preview-20261027/fresh.html",
+      "status": 200,
+      "expectedSHA256": "03d8cdd098e3a9b3263f0a5159b15dd841431edef5d839f7dc35aa48c8ae0ea4",
+      "liveSHA256": "03d8cdd098e3a9b3263f0a5159b15dd841431edef5d839f7dc35aa48c8ae0ea4",
+      "matches": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1-preview-20261027/fresh.html",
+      "status": 200,
+      "expectedSHA256": "c286a4f3a6ab0e1ac2c940a24fda6d865302c57f945112ec46566f3d47582339",
+      "liveSHA256": "c286a4f3a6ab0e1ac2c940a24fda6d865302c57f945112ec46566f3d47582339",
+      "matches": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.2.0-navigation-20261027/index.html",
+      "status": 200,
+      "expectedSHA256": "2786c4b032613a97c7717fd87107741a36f9ffb1a8f273d10bce2de790984cec",
+      "liveSHA256": "2786c4b032613a97c7717fd87107741a36f9ffb1a8f273d10bce2de790984cec",
+      "matches": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.2.0/index.html",
+      "status": 200,
+      "expectedSHA256": "65aafa12fddf785287b4e3424525eb0dee232fcfa5e718e258c79510b9aed022",
+      "liveSHA256": "65aafa12fddf785287b4e3424525eb0dee232fcfa5e718e258c79510b9aed022",
+      "matches": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.1.14/original-index.html",
+      "status": 200,
+      "expectedSHA256": "f654f205b7271baa98473d8912a4f2c42d4ec10a54739e77f927d8ec7e090523",
+      "liveSHA256": "f654f205b7271baa98473d8912a4f2c42d4ec10a54739e77f927d8ec7e090523",
+      "matches": true
+    },
+    {
+      "path": "chapters/examination-standalone-20261027/index.html",
+      "status": 200,
+      "expectedSHA256": "9d7b269acd0a25a53b437f897bf7c535a684122e1d77f89253bcb950dff3e0f0",
+      "liveSHA256": "9d7b269acd0a25a53b437f897bf7c535a684122e1d77f89253bcb950dff3e0f0",
+      "matches": true
+    },
+    {
+      "path": "chapters/luoshen-three-act-v1/index.html",
+      "status": 200,
+      "expectedSHA256": "f2f5d04835cfbf9e9afbe70ca99c944a9cdc89dcc4a28ea9eed8884cb5fdde65",
+      "liveSHA256": "f2f5d04835cfbf9e9afbe70ca99c944a9cdc89dcc4a28ea9eed8884cb5fdde65",
+      "matches": true
+    },
+    {
+      "path": "chapters/zanhua-three-act-v1/index.html",
+      "status": 200,
+      "expectedSHA256": "b6dc7d62e942b9592546078eae7beceeea8d7c03b8c23f6a7dbb00151e1882b0",
+      "liveSHA256": "b6dc7d62e942b9592546078eae7beceeea8d7c03b8c23f6a7dbb00151e1882b0",
+      "matches": true
+    },
+    {
+      "path": "assets/index-DP2X6jkf.css",
+      "status": 200,
+      "expectedSHA256": "69b011508e5e168c2ea8a282894eb7512a7c912c5b96b1a995620641673dae4e",
+      "liveSHA256": "69b011508e5e168c2ea8a282894eb7512a7c912c5b96b1a995620641673dae4e",
+      "matches": true
+    },
+    {
+      "path": "assets/index-DvsCwDie.js",
+      "status": 200,
+      "expectedSHA256": "49f9ebc44527a3f08099924f65d5f04d5258755be7c6dab4776649b6434450ce",
+      "liveSHA256": "49f9ebc44527a3f08099924f65d5f04d5258755be7c6dab4776649b6434450ce",
+      "matches": true
+    }
+  ],
+  "allMatch": true,
+  "productionEntry": "chapters/kangqu-listening-v2-2.3.1/index.html",
+  "journalKey": "chinese-wally:kangqu-listening-v2:journal:v2",
+  "preservedExistingSourceAndPublicFiles": 933,
+  "scope": "Live file fingerprints, production route and old-version availability; no additional full-game or physical-device test.",
+  "actionsConclusion": "success",
+  "releaseTag": "site-2026-10-27-kangqu-2.3.1",
+  "oldTagReferencesPreserved": true,
+  "oldTagReferenceCount": 12,
+  "browserEntry": "https://vincentttchan.github.io/chinese-wally/#kangqu-listening",
+  "browserIframe": "chapters/kangqu-listening-v2-2.3.1/index.html?v=2.3.1-20261027"
+}

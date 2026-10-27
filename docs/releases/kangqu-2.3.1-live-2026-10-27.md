@@ -23,4 +23,10 @@
 
 ## 線上結果
 
-待本次提交完成 GitHub Actions 發布後，於 `kangqu-2.3.1-live-2026-10-27.json` 登記實際部署提交、run、線上文件指紋及保留標記核對。準備或本機建置不代表線上部署成功。
+部署提交：`65e6497244b970fb2eefd27d3d44818ee8da0d04`。GitHub Actions [40475459248](https://github.com/vincentttchan/chinese-wally/actions/runs/40475459248) 已成功完成建置與 GitHub Pages 部署。正式入口：[《在人群中聽樂》／《康衢駢慶》](https://vincentttchan.github.io/chinese-wally/#kangqu-listening)。
+
+19 份線上入口、章節文件、metadata、JS／CSS、新舊預覽及其他章節文件均回應 HTTP 200，SHA-256 與發布建置完全相同。實際瀏覽器亦已確認主站宿主使用 `kangqu-listening-v2-2.3.1/index.html?v=2.3.1-20261027`，封面及導航呈現，清明仍上鎖，沒有接回榜下主站入口。詳細核對見 `kangqu-2.3.1-live-2026-10-27.json`。
+
+新增版本標記 `site-2026-10-27-kangqu-2.3.1` 指向這次實際部署提交；發布前 12 個遠端標記參照均保持原指向。沒有刪除或改寫先前 Release 或附件；本次沒有重新封裝先前封存。
+
+原工作目錄只同步康衢正式文件、入口及維護記錄；本機既有編譯首頁只替換康衢 URL 與版本號，沒有將其中其他未發布內容帶上線。切換前本機首頁與入口資料保留在 `output/releases/kangqu-before-2.3.1-promotion-20261027/`。
