@@ -1,0 +1,53 @@
+{
+  "checkedAtUTC": "2026-10-27T10:39:38.145730+00:00",
+  "releaseId": 425313404,
+  "url": "https://github.com/vincentttchan/chinese-wally/releases/tag/site-2026-10-27-kangqu-2.3.1",
+  "published": true,
+  "publishedAt": "2026-10-27T10:38:56Z",
+  "tag": "site-2026-10-27-kangqu-2.3.1",
+  "deployedCommit": "65e6497244b970fb2eefd27d3d44818ee8da0d04",
+  "releaseAssetsDigestsMatched": true,
+  "assets": [
+    {
+      "id": 681266882,
+      "name": "archive-records.zip",
+      "size": 173595,
+      "digest": "sha256:ec396a71016b10cec14fe02085b5d28bcd8dbb5078ad7adaaa9cb40a9ad29f25",
+      "browser_download_url": "https://github.com/vincentttchan/chinese-wally/releases/download/site-2026-10-27-kangqu-2.3.1/archive-records.zip"
+    },
+    {
+      "id": 681266886,
+      "name": "github-pages-artifact.zip",
+      "size": 628410942,
+      "digest": "sha256:74ad89269d5a6bf4ce1f25d0c8ece8db2a7a5816cc642d31603a84d9f9e73bab",
+      "browser_download_url": "https://github.com/vincentttchan/chinese-wally/releases/download/site-2026-10-27-kangqu-2.3.1/github-pages-artifact.zip"
+    },
+    {
+      "id": 681266879,
+      "name": "release-record.json",
+      "size": 2747,
+      "digest": "sha256:7074c9844af4dafe7bb7692a7303df2336638494319a53110514573f4651b0b2",
+      "browser_download_url": "https://github.com/vincentttchan/chinese-wally/releases/download/site-2026-10-27-kangqu-2.3.1/release-record.json"
+    },
+    {
+      "id": 681266877,
+      "name": "SHA256SUMS",
+      "size": 357,
+      "digest": "sha256:94e1d6e83790b9180048f7b426285a465654896ba0c5ac27e5c55aa2befa8ed6",
+      "browser_download_url": "https://github.com/vincentttchan/chinese-wally/releases/download/site-2026-10-27-kangqu-2.3.1/SHA256SUMS"
+    },
+    {
+      "id": 681266880,
+      "name": "website-file-manifest.json",
+      "size": 131918,
+      "digest": "sha256:83d681923eac26de2c199abe888a7c3516c1d55b3ad64cd6a9e52ae95ec7a60c",
+      "browser_download_url": "https://github.com/vincentttchan/chinese-wally/releases/download/site-2026-10-27-kangqu-2.3.1/website-file-manifest.json"
+    }
+  ],
+  "previousTagReferencesPreserved": 14,
+  "previousReleasesPreserved": 8,
+  "previousReleaseAssetsPreserved": 15,
+  "runtimeChanges": false,
+  "rebuild": false,
+  "redeployment": false
+}
