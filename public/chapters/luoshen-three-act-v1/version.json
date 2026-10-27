@@ -1,0 +1,34 @@
+{
+  "id": "luoshen-three-act-v1",
+  "version": "1.0.0",
+  "date": "2026-10-27",
+  "status": "local-review-not-deployed",
+  "chapter": "洛水之間",
+  "baseCommit": "65b144abc4080f9fa7931716c01867be504bc8ef",
+  "acceptedSample": "output/design-preview/luoshen-entry-2026-10-27/",
+  "storageKey": "painting-luoshen-v1",
+  "entry": "public/chapters/luoshen-three-act-v1/index.html",
+  "previous": "public/chapters/luoshen-before-three-act-20261027/index.html",
+  "productionRoute": "#luoshen (unchanged)",
+  "sources": {
+    "src/components/LuoshenThreeActGameV1.tsx": "eae8b8a4d5964608bc235045a9e43e65b3bb253da97b677e33cace8a996f292f",
+    "src/components/LuoshenThreeActEntryV1.tsx": "c6fd47c70f4f264d04d277c281bb566b0c945a5c1b75f25a095cab220146c918",
+    "src/components/luoshen-three-act-entry-v1.css": "4016e172ee7e990f787bd4870692ba112e1d0dddaa16aadb0c5a6d0316163381",
+    "src/luoshen-three-act-v1.tsx": "3d1f3ed1a0270e199c2064ea0497c73b6b53e08f0696863cad5d4ff33c7b3904",
+    "src/entries/VersionedLuoshenChapter.tsx": "a2ebeb2c040c9e68e51ab70ba14cb836218a688e5938bd2f198aadce4162d29f"
+  },
+  "entrySHA256": "f2f5d04835cfbf9e9afbe70ca99c944a9cdc89dcc4a28ea9eed8884cb5fdde65",
+  "flow": [
+    "封面",
+    "交疊展卷",
+    "洛水相逢",
+    "一卷藏時",
+    "循賦入畫",
+    "現有樣貌提示",
+    "原畫尋人",
+    "原有觀察、洛神賦對讀、見聞冊與收尾"
+  ],
+  "role": "循賦入畫的年輕書生",
+  "sharedAssets": "Existing public artwork, portraits, fonts, audio and animation files are referenced read-only.",
+  "scope": "Independent full chapter versions only. No promotion, site home build, push or deployment."
+}

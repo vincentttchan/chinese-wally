@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&display=swap');
+:root {
+  font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
+  color: #353c32; background: #c6b18a; font-synthesis: none;
+  --paper: #f5efdf; --ink: #353c32; --green: #485a47; --red: #954c37; --line: #b8a58266;
+  --motion-instant: 120ms; --motion-fast: 180ms; --motion-standard: 260ms; --motion-panel: 380ms; --motion-scene: 550ms; --motion-cinematic: 950ms;
+  --ease-ui: cubic-bezier(.22,1,.36,1); --ease-soft: cubic-bezier(.33,1,.68,1); --ease-scene: cubic-bezier(.16,1,.3,1);
+  --painting-grade: saturate(.68) sepia(.09) contrast(.96) brightness(1.045);
+}
+* {box-sizing: border-box;}
+html, body, #root {margin: 0; width: 100%; height: 100%; overflow: hidden;}
+body {min-width: 320px;}
+button {font: inherit; color: inherit; border: 0; cursor: pointer; -webkit-tap-highlight-color: transparent; touch-action: manipulation;}
+button:disabled {cursor: default;}
+button:focus-visible, a:focus-visible {outline: 2px solid var(--red); outline-offset: 4px;}
+button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-ui), opacity var(--motion-fast) var(--ease-ui);}
+.sr-only {position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;}
+.immersive-game {position: relative; width: 100%; height: 100%; height: 100dvh; isolation: isolate; overflow: clip;}
+.scroll-frame, .scroll-viewport {position: absolute; inset: 0; width: 100%; height: 100%;}
+.scroll-frame {background-color: #c6b18a; background-position: left center; background-size: cover; background-repeat: no-repeat;}
+.scroll-viewport {overflow: clip; cursor: grab; touch-action: none; user-select: none; background: transparent; outline-offset: -4px;}
+.scroll-viewport.is-dragging {cursor: grabbing;}
+.painting-world {position: absolute; inset: 0 auto auto 0; transform-origin: 0 0; will-change: transform;}
+.painting {width: 100%; height: 100%; display: block; pointer-events: none; filter: var(--painting-grade);}
+.painting-detail-tile {position: absolute; top: 0; height: 100%; display: block; pointer-events: none; filter: var(--painting-grade);}
+/* One movable observation area; the original painting stays intact. */
+.observation-light {position: absolute; inset: 0; pointer-events: none;}
+.observation-shade, .observation-warmth {position: absolute; inset: 0; pointer-events: none;}
+.observation-shade {backdrop-filter: grayscale(1); -webkit-backdrop-filter: grayscale(1);}
+.is-focusing .observation-shade {background: #2525251a; backdrop-filter: grayscale(1) brightness(.96); -webkit-backdrop-filter: grayscale(1) brightness(.96); mask-image: radial-gradient(circle at var(--focus-x) var(--focus-y), transparent 0, transparent calc(var(--focus-radius) * .64), #000 calc(var(--focus-radius) * 1.08)); -webkit-mask-image: radial-gradient(circle at var(--focus-x) var(--focus-y), transparent 0, transparent calc(var(--focus-radius) * .64), #000 calc(var(--focus-radius) * 1.08));}
+.observation-warmth {background: radial-gradient(circle at var(--focus-x) var(--focus-y), #f8d68609 0, transparent var(--focus-radius));}
+.focus-control {font-size: 12px; letter-spacing: .06em; white-space: nowrap;}
+.round-control.focus-control.is-on, .round-control.focus-control.is-on:hover {background: #47573c; color: #fff3d7; box-shadow: 0 0 0 1px #f0dfae80;}
+.focus-control:disabled {opacity: .4;}
+.focus-instruction {position: absolute; z-index: 5; pointer-events: none; left: 50%; transform: translateX(-50%); bottom: 86px; margin: 0; font-size: 11px; letter-spacing: .08em; color: #f4ead6; text-shadow: 0 1px 5px #201f19; text-align: center; width: max-content; max-width: calc(100% - 40px);}
+.focus-touch {display: none;}
+@media (pointer: coarse) {.focus-desktop {display: none;}.focus-touch {display: inline;}}
+.is-ready .painting {animation: painting-arrives 400ms var(--ease-soft) both;}
+.scene-vignette {position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg,#2929290c,transparent 120px,transparent 80%,#1f1f1f28); box-shadow: inset 0 0 95px #29292915; transition: background var(--motion-scene);}
+.ending-visible .scene-vignette {background-color: #151a160d;}
+/* Keep failed-load recovery reachable above the introduction. */
+.actor-hitbox {position: absolute; transform: translate(-50%,-50%); padding: 0; background: transparent; cursor: pointer;}
+.actor-hitbox:focus-visible {outline: var(--outline-width,2px) dashed var(--red); outline-offset: 0; background: #f2e7c610;}
+.is-dragging .actor-hitbox {cursor: grabbing;}
+.scene-hud {position: absolute; z-index: 5; top: max(28px,env(safe-area-inset-top)); left: max(32px,env(safe-area-inset-left)); right: max(32px,env(safe-area-inset-right)); display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; pointer-events: none;}
+.mission {width: min(440px,calc(100vw - 225px)); background: #f4ebd4e8; border: 1px solid #ddcba077; border-radius: 7px; box-shadow: 0 4px 22px #46392115; backdrop-filter: blur(3px); pointer-events: auto; opacity: 0; transition: width var(--motion-panel) var(--ease-ui);}
+.scene-loaded .mission {animation: paper-seen var(--motion-panel) var(--ease-ui) 300ms both;}
+.mission-summary {width: 100%; display: flex; align-items: flex-start; gap: 13px; padding: 17px 18px 15px; background: transparent; text-align: left;}
+.mini-seal {color: var(--red); border: 1px solid currentColor; padding: 2px 5px; font-size: 25px; line-height: 1.35; transform: rotate(-4deg); flex-shrink: 0;}
+.mission-heading {flex: 1; min-width: 0;}
+.mission-chapter {display: block; font-size: 11px; letter-spacing: .14em; line-height: 1.4; margin-bottom: 5px;}
+.mission-heading strong {display: block; font-size: 15px; font-weight: 600; letter-spacing: .04em; white-space: nowrap;}
+.mission-objective {display: block; font-size: 10px; line-height: 1.7; margin-top: 6px;}
+.mission-count {font: 18px Georgia,serif; white-space: nowrap; border-left: 1px solid #a6977880; padding-left: 16px; margin: 17px 3px 0 0;}
+.mission-count b {color: var(--red); font-weight: 400;}
+.mission-chevron {margin-top: 4px; flex-shrink: 0; transition: transform var(--motion-panel) var(--ease-ui);}
+.mission-details {padding: 0 19px 16px 69px;}
+.mission-details p {font-size: 11px; line-height: 1.9; color: #666c53; margin: 0 0 12px;}
+.mission-details p:last-child {margin-bottom: 0;}
+.mission-details .primary-button {font-size: 12px; min-height: 42px; padding: 10px 13px;}
+.mission.is-collapsed {width: 210px;}
+.is-collapsed .mission-summary {padding: 12px 15px; align-items: center;}
+.is-collapsed .mini-seal {font-size: 21px;}
+.is-collapsed .mission-chapter {margin: 0; font-size: 12px;}
+.is-collapsed .mission-heading strong, .is-collapsed .mission-objective, .is-collapsed .mission-count {display: none;}
+.is-collapsed .mission-chevron {margin: 0; transform: rotate(-90deg);}
+.scene-settings {display: flex; gap: 14px; pointer-events: auto;}
+.round-control {width: 40px; height: 40px; display: grid; place-items: center; padding: 0; border-radius: 50%; background: #f5eddaed; color: #5b5e49; box-shadow: 0 1px 9px #342b1e10; opacity: 0;}
+.scene-loaded .round-control {animation: soft-arrive var(--motion-fast) var(--ease-ui) 650ms both;}
+.scene-loaded .round-control:nth-child(2) {animation-delay: 700ms;}
+.scene-loaded .round-control:nth-child(3) {animation-delay: 750ms;}
+.round-control:hover {background: #fff5dd;}
+.round-control.is-on {color: #405b36;}
+.settings-paper {position: absolute; z-index: 8; top: 82px; right: max(32px,env(safe-area-inset-right)); width: 210px; background: #f4ebd9f2; border: 1px solid #bcaa8477; border-radius: 5px; box-shadow: 0 8px 25px #39322025; padding: 17px; animation: paper-unfold var(--motion-panel) var(--ease-ui) both;}
+.settings-paper .card-kicker {display: block; margin: 0 5px 8px;}
+.settings-paper button {width: 100%; background: transparent; display: flex; align-items: center; gap: 11px; padding: 11px 5px; font-size: 12px; text-align: left;}
+.settings-paper button:hover {background: #e3dfca88;}
+.bottom-hud {position: absolute; z-index: 5; left: max(32px,env(safe-area-inset-left)); right: max(32px,env(safe-area-inset-right)); bottom: max(28px,env(safe-area-inset-bottom)); display: flex; align-items: center; justify-content: space-between; gap: 16px; pointer-events: none;}
+.bottom-hud button {pointer-events: auto;}
+.notebook-toggle {height: 46px; display: inline-flex; align-items: center; gap: 12px; padding: 0 18px; color: #f7efdb; background: #3c4935ed; border: 1px solid #e4d4ae60; border-radius: 4px; box-shadow: 0 3px 18px #282d2420; font-size: 13px; letter-spacing: .08em; opacity: 0;}
+.scene-loaded .notebook-toggle {animation: soft-arrive var(--motion-panel) var(--ease-ui) 900ms both;}
+.notebook-toggle:disabled {filter: saturate(.5);}
+.notebook-toggle:hover:not(:disabled) {background: #303f29;}
+.notebook-count {display: inline-flex; gap: 6px; font: 18px Georgia,serif; padding-left: 14px; border-left: 1px solid #e8dfcb50; animation: count-fade var(--motion-standard) var(--ease-ui);}
+.notebook-count small {font-size: 13px; opacity: .75; align-self: center;}
+.gesture-note {position: absolute; left: 50%; transform: translateX(-50%); font-size: 11px; letter-spacing: .07em; color: #f7efdc; text-shadow: 0 1px 5px #382f1e; display: flex; align-items: center; gap: 12px; white-space: nowrap; opacity: 0; transition: opacity var(--motion-fast) var(--ease-ui);}
+.scene-loaded .gesture-note:not(.is-dismissed) {animation: soft-arrive var(--motion-panel) var(--ease-ui) 1200ms both;}
+.gesture-note.is-dismissed {opacity: 0;}
+.hint-button {margin-left: auto; height: 46px; display: inline-flex; align-items: center; gap: 10px; padding: 0 17px; border-radius: 24px; border: 1px solid #e8d8b655; background: #5e604cd9; color: #f4ead1; font-size: 12px; letter-spacing: .08em; opacity: .8;}
+.hint-button:hover:not(:disabled) {opacity: 1; background: #565c43f2;}
+.hint-button:disabled {opacity: .4;}
+.character-mark {position: absolute; pointer-events: none; white-space: nowrap; font-size: 12px; padding: 7px 12px; background: #f4ebd9ee; color: #4d5540; border: 1px solid #c9b68d70; box-shadow: 0 3px 12px #39322016;}
+.mark-wrong {animation: wrong-notice 1.4s var(--ease-soft) both;}
+.mark-found, .mark-clue {color: var(--red); border: 1px solid currentColor; background: #f6ecd3e8; font-size: 18px; letter-spacing: .08em; padding: 5px 8px; animation: seal-seen 220ms var(--ease-soft) both;}
+.mark-clue {font-size: 13px;}
+.card-kicker {font-size: 10px; color: #81775e; letter-spacing: .14em;}
+.primary-button {display: flex; align-items: center; justify-content: space-between; background: var(--green); color: #f7f4e9; width: 100%; padding: 13px 16px; font-size: 13px; letter-spacing: .08em; min-height: 46px;}
+.primary-button:hover:not(:disabled) {background: #354b34;}
+.primary-button:disabled {opacity: .5;}
+.notebook-paper, .witness-paper, .reading-paper {border: 1px solid #c6b38e; color: var(--ink); padding: 29px; background: #f7f0dff7; box-shadow: 0 12px 45px #30352230; border-radius: 3px;}
+.notebook-paper {position: absolute; z-index: 8; left: max(32px,env(safe-area-inset-left)); bottom: 87px; width: min(420px,calc(100% - 64px)); max-height: calc(100dvh - 120px); overflow-y: auto; animation: paper-unfold var(--motion-panel) var(--ease-ui) both; transform-origin: left bottom;}
+.paper-close {position: absolute; top: 6px; right: 6px; width: 36px; height: 36px; display: grid; place-items: center; background: transparent; color: #777b69;}
+.notebook-paper h2, .witness-paper h2, .reading-paper h2 {font-size: 24px; font-weight: 500; letter-spacing: .08em; margin: 13px 0 17px;}
+.journal-count {font: 13px Georgia,serif; margin-left: 12px; color: #7a8069; letter-spacing: 0;}
+.clue-list {display: flex; flex-direction: column; margin: 10px 0 18px;}
+.clue-card {padding: 18px 0; border-top: 1px solid var(--line); background: transparent; text-align: left; display: flex; align-items: center; gap: 14px; animation: soft-arrive var(--motion-standard) var(--ease-ui) var(--clue-delay) both;}
+.clue-card:disabled {opacity: .62;}
+.clue-card:hover:not(:disabled) {background: #e9e5d566;}
+.painted-portrait {position: relative; display: block; width: 56px; height: 76px; flex-shrink: 0; overflow: hidden; border-radius: 2px; background: #d7c59f; mask-image: linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);}
+.painted-portrait img {position: absolute; max-width: none; pointer-events: none;}
+.clue-content {flex: 1; min-width: 0;}
+.clue-kicker {font-size: 9px; letter-spacing: .1em; color: #818569;}
+.clue-title {display: block; font-size: 14px; margin: 5px 0; letter-spacing: .05em;}
+.clue-description {display: block; color: #727961; font-size: 11px; line-height: 1.9;}
+.journal-objective {font-size: 11px; color: #646e53; line-height: 1.9; margin: 0;}
+.journal-section-note {font-size: 12px; color: #646e53; line-height: 1.8; margin: 0 0 12px;}
+.supplementary-clues {margin-top: 22px; padding-top: 19px; border-top: 1px solid var(--line);}
+.supplementary-clues h3 {font-size: 16px; font-weight: 500; margin: 0 0 10px; letter-spacing: .05em;}
+.supplementary-clues h3 span {display: block; margin-top: 6px; font-size: 11px; color: #646e53; letter-spacing: .02em;}
+.witness-paper {position: absolute; z-index: 9; width: min(350px,calc(100% - 40px)); left: 50%; top: 50%; transform: translate(-50%,-50%); animation: soft-arrive var(--motion-standard) var(--ease-ui) both;}
+.witness-paper.is-anchored {left: clamp(24px,var(--dialog-x,24px),calc(100vw - 374px)); top: clamp(94px,var(--dialog-y,120px),calc(100dvh - 330px)); transform: none;}
+.witness-quote {font-size: 17px; line-height: 2; color: #626e55; border-left: 2px solid #a8b291; padding-left: 14px; margin: 0 0 24px;}
+.hint-paper {position: absolute; z-index: 7; bottom: 88px; right: max(32px,env(safe-area-inset-right)); width: min(305px,calc(100% - 40px)); padding: 18px 22px; background: #f3ead7ee; border: 1px solid #c6b38e77; border-radius: 6px; box-shadow: 0 6px 25px #3f35221a; animation: paper-unfold var(--motion-panel) var(--ease-ui) both;}
+.hint-paper p {font-size: 12px; color: #666e54; line-height: 1.9; margin: 8px 0 0;}
+.scene-toast {position: absolute; z-index: 10; top: 165px; left: 50%; transform: translateX(-50%); width: max-content; max-width: calc(100% - 32px); padding: 11px 17px; background: #f5efdfeb; color: #4b5540; border: 1px solid var(--line); font-size: 12px; text-align: center; pointer-events: none; animation: soft-arrive var(--motion-fast) var(--ease-ui) both;}
+.skip-ending {position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); color: #f5ebd0; text-shadow: 0 1px 4px #28251c; background: transparent; font-size: 11px; padding: 10px 15px;}
+.ending-card {position: absolute; z-index: 7; top: 50%; left: 50%; transform: translate(-50%,-50%); width: min(355px,calc(100% - 40px)); padding: 34px; background: #f5efdfef; border: 1px solid #d0bd94; text-align: center; box-shadow: 0 15px 60px #342d2430; animation: soft-arrive var(--motion-cinematic) var(--ease-soft) both;}
+.ending-card h2 {font-size: 30px; letter-spacing: .15em; margin: 16px 0; font-weight: 500;}
+.ending-card p {font-size: 12px; line-height: 2; color: #69725b; margin: 0 0 23px;}
+.replay-button {display: flex; align-items: center; justify-content: center; gap: 8px; margin: 18px auto 0; background: transparent; color: #68745d; padding: 7px 12px; font-size: 11px;}
+.reading-paper {width: min(520px,calc(100% - 36px)); max-height: calc(100dvh - 50px); overflow-y: auto; padding: 35px; animation: soft-arrive var(--motion-panel) var(--ease-ui) both;}
+.reading-paper::backdrop {background: #333a2b35;}
+.reading-paper h2 {line-height: 1.7; font-size: 24px;}
+.reading-paper p {font-size: 13px; line-height: 2.1; color: #606b52; margin: 15px 0;}
+.knowledge-scope {font-size: 11px; color: #8b6848; letter-spacing: .07em;}
+.knowledge-note {font-size: 10px; color: #827b64; line-height: 1.9; padding: 14px 0; border-top: 1px solid var(--line); margin-top: 22px;}
+.knowledge-sources {font-size: 10px; color: #67745a; margin: 7px 0 22px;}
+.knowledge-sources > span {display: block; margin-bottom: 8px; color: #8a8067;}
+.knowledge-sources a {color: inherit; display: flex; align-items: center; gap: 7px; line-height: 1.9; padding: 3px 0; text-underline-offset: 3px;}
+.scene-status {position: absolute; inset: 0; z-index: 8; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; font-size: 14px; background: #d7c59f; letter-spacing: .13em;}
+.loading-seal {font-size: 33px; color: var(--red); border: 1px solid currentColor; padding: 8px 12px;}
+.small-button {display: flex; align-items: center; gap: 8px; background: #f6efdf; border: 1px solid var(--line); padding: 10px 15px; font-size: 12px;}
+.living-painting {position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden;}
+.living-painting.is-still {opacity: 0;}
+.living-painting.is-still * {animation-play-state: paused !important;}
+.river-light {mix-blend-mode: soft-light;}
+.river-ripples {animation: river-drift 10s linear infinite; opacity: 0;}
+.ripple-1 {animation-delay: -3.3s;}.ripple-2 {animation-delay: -6.6s;}
+.steam-wisp {opacity: 0; animation: steam-rise 9s var(--ease-soft) infinite;}.wisp-two {animation-delay: -4.5s;}
+@keyframes painting-arrives {from {opacity: 0;} to {opacity: 1;}}
+@keyframes paper-seen {from {opacity: 0; transform: translateY(-6px);} to {opacity: 1; transform: translateY(0);}}
+@keyframes soft-arrive {from {opacity: 0;} to {opacity: 1;}}
+@keyframes paper-unfold {from {opacity: 0; transform: translateY(12px) scale(.985);} to {opacity: 1; transform: translateY(0) scale(1);}}
+@keyframes count-fade {from {opacity: .25;} to {opacity: 1;}}
+@keyframes seal-seen {from {opacity: 0;} to {opacity: 1;}}
+@keyframes wrong-notice {0% {opacity: 0;} 15%,75% {opacity: 1;} 100% {opacity: 0;}}
+@keyframes atmosphere {0%,100% {opacity: 0;} 20%,70% {opacity: 1;}}
+@keyframes river-drift {0% {opacity: 0; transform: translateX(-5px);} 30%,60% {opacity: .38;} 100% {opacity: 0; transform: translateX(8px);}}
+@keyframes steam-rise {0% {opacity: 0; transform: translate(0,3px);} 25% {opacity: .22;} 70% {opacity: .12;} 100% {opacity: 0; transform: translate(6px,-18px);}}
+@media (max-width: 900px) {.gesture-note {font-size: 10px; gap: 8px;}.mission {width: 420px;}.mission-summary {padding: 15px; gap: 10px;}.mission-count {padding-left: 12px;}.scene-settings {gap: 9px;}}
+@media (max-width: 650px) {
+  .scene-hud {top: max(17px,env(safe-area-inset-top)); left: max(18px,env(safe-area-inset-left)); right: max(18px,env(safe-area-inset-right)); gap: 10px; flex-wrap: wrap;}
+  .mission {width: calc(100% - 56px);}.mission-summary {padding: 13px; gap: 10px;}.mini-seal {font-size: 20px;}
+  .mission-chapter {font-size: 9px;}.mission-heading strong {font-size: 12px; white-space: normal; line-height: 1.7;}.mission-objective {font-size: 9px;}.mission-count {display: none;}.mission-chevron {width: 12px;}
+  .mission-details {padding: 0 15px 15px;}.mission-details p {font-size: 10px;}.mission.is-collapsed {width: 190px;}
+  .scene-settings {position: absolute; right: 0; top: 0; flex-direction: column; gap: 7px;}.round-control {width: 36px; height: 36px;}
+  .settings-paper {top: 193px; right: 18px; width: 200px;}
+  .focus-instruction {bottom: 81px; font-size: 10px; line-height: 1.8;}
+  .bottom-hud {left: max(18px,env(safe-area-inset-left)); right: max(18px,env(safe-area-inset-right)); bottom: max(20px,env(safe-area-inset-bottom)); gap: 10px;}
+  .notebook-toggle {height: 44px; gap: 8px; padding: 0 12px; font-size: 11px;}.notebook-count {font-size: 16px; padding-left: 8px;}.notebook-toggle > .art-icon:last-child {display: none;}
+  .hint-button {height: 44px; padding: 0 12px; font-size: 11px; gap: 6px;}.gesture-note {bottom: 61px; font-size: 10px;}
+  .notebook-paper {width: calc(100% - 36px); left: 18px; bottom: 79px; padding: 24px; max-height: calc(100dvh - 160px);}
+  .witness-paper, .witness-paper.is-anchored {width: calc(100% - 36px); left: 18px; right: 18px; top: auto; bottom: 80px; transform: none; padding: 27px 24px; max-height: calc(100dvh - 150px); overflow-y: auto;}
+  .hint-paper {bottom: 80px; right: 18px;}.scene-toast {top: 200px; font-size: 11px;}
+  .reading-paper {padding: 30px 24px;}.reading-paper h2 {font-size: 21px;}.reading-paper p {font-size: 12px;}
+}
+@media (max-height: 500px) {
+  .scene-hud {top: 15px;}.mission-summary {padding: 11px 14px;}.mission-details {padding-bottom: 12px;}.mission-details p {font-size: 10px;}
+  .bottom-hud {bottom: 15px;}.notebook-paper {bottom: 70px; max-height: calc(100dvh - 90px);}.witness-paper.is-anchored {top: 65px; max-height: calc(100dvh - 85px); overflow-y: auto;}
+  .ending-card {padding: 23px 29px;}.ending-card h2 {margin: 8px 0;}.ending-card p {margin-bottom: 16px;}.reading-paper {max-height: calc(100dvh - 25px);}
+}
+.reduced-motion *, .reduced-motion *::before, .reduced-motion *::after {animation-duration: 1ms !important; animation-delay: 0ms !important; transition-duration: 1ms !important;}
+.reduced-motion .living-painting {display: none;}
+@media (prefers-reduced-motion: reduce) {*,*::before,*::after {animation-duration: 1ms !important; animation-delay: 0ms !important; transition-duration: 1ms !important;}.living-painting {display: none;}}
+
+.notebook-paper.is-closing {animation: paper-fold var(--motion-panel) var(--ease-ui) both; pointer-events: none;}
+@keyframes paper-fold {from {opacity: 1; transform: translateY(0) scale(1);} to {opacity: 0; transform: translateY(8px) scale(.985);}}
+
+.phase-exploring .mission-details, .phase-complete .mission-details {display: none;}
+
+/* Generated paper and painted raster icons replace the interface's vector art. */
+.art-icon {display: inline-block; flex-shrink: 0; background-image: url('../../../public/art/ui/painted-icons.png'); background-repeat: no-repeat; background-size: 400% 400%; vertical-align: middle; pointer-events: none;}
+.art-zoom {display: inline-block; position: relative; flex-shrink: 0;}
+.art-zoom b {position: absolute; inset: 0; display: grid; place-items: center; font-size: 12px; font-weight: 400;}
+.round-control .art-icon {width: 32px !important; height: 32px !important;}
+.mission, .settings-paper, .notebook-paper, .witness-paper, .reading-paper, .hint-paper, .ending-card, .notebook-toggle, .hint-button {background: #f4ead3; border: 0 solid transparent; border-image: url('../../../public/art/ui/reading-paper.png') 180 fill / 18px / 0 stretch; backdrop-filter: none; border-radius: 2px;}
+.notebook-toggle, .hint-button {color: var(--ink); opacity: 1;}
+.notebook-toggle:hover:not(:disabled), .hint-button:hover:not(:disabled) {background-color: #f9efd8; filter: brightness(1.04);}
+.notebook-count {border-color: #82785966;}
+.notebook-toggle > .art-icon:first-child, .hint-button > .art-icon {width: 28px !important; height: 28px !important;}
+.primary-button .art-icon {filter: brightness(0) invert(.94) sepia(.35);}
+
+/* A full-page prelude opens the painting; the mission is a small in-scene control. */
+.introduction {position: absolute; inset: 0; z-index: 9; color: #353b30; background: linear-gradient(90deg,#f2ead5fa 0%,#f2ead5f5 21%,#f2ead5d9 35%,#f2ead573 49%,#f2ead50a 68%,transparent 80%); transition: opacity 600ms var(--ease-scene), transform 600ms var(--ease-scene);}
+.introduction.is-leaving {opacity: 0; transform: translateX(-18px); pointer-events: none;}
+.intro-brand {position: absolute; top: clamp(28px,6vh,65px); left: clamp(28px,6vw,100px); display: flex; align-items: center; gap: 16px; font-size: 12px; letter-spacing: .35em; color: #646653;}
+.intro-brand > span {width: 34px; height: 1px; background: currentColor; opacity: .7;}
+.intro-content {position: absolute; left: clamp(28px,6vw,100px); top: 50%; transform: translateY(-50%); width: 365px; display: grid; grid-template-columns: 220px 86px; gap: 42px; align-items: center;}
+.intro-title {display: flex; flex-direction: column; align-items: center; gap: 24px;}
+.intro-title h1 {writing-mode: vertical-rl; text-orientation: upright; font-size: clamp(52px,5.8vw,76px); line-height: 1.05; letter-spacing: .14em; font-weight: 500; margin: 0;}
+.intro-seal {border: 1px solid #9a5039; color: #9a5039; writing-mode: vertical-rl; padding: 6px 5px; font-size: 13px; letter-spacing: .18em; transform: rotate(-3deg);}
+.intro-chapter {font-size: 13px; letter-spacing: .38em; margin: 0 0 32px; color: #775e45;}
+.intro-story, .intro-invitation {font-size: 14px; line-height: 2.25; margin: 0 0 22px; letter-spacing: .025em;}
+.intro-invitation {color: #626853;}
+.intro-enter {margin-top: 24px; padding: 15px 0; display: flex; align-items: center; justify-content: space-between; gap: 25px; width: 100%; background: transparent; border-block: 1px solid #716b4f66; font-size: 19px; letter-spacing: .18em;}
+.intro-enter:hover:not(:disabled) {color: #924b35; background: #fff4d126;}
+.intro-enter:disabled {opacity: .45;}
+.intro-play-note {display: block; margin-top: 15px; font-size: 10px; letter-spacing: .15em; color: #74745d;}
+.intro-footer {position: absolute; bottom: clamp(28px,6vh,65px); left: clamp(28px,6vw,100px); margin: 0; font-size: 11px; letter-spacing: .16em; color: #75755f;}
+.intro-footer p {margin: 0;}
+.chapter-links {display: flex; flex-wrap: nowrap; gap: 18px; width: max-content; max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; margin-top: 15px; font-size: 11px; letter-spacing: .08em;}
+.chapter-links::-webkit-scrollbar {display: none;}
+.chapter-links > * {flex: 0 0 auto; white-space: nowrap;}
+.chapter-links a {display: inline-flex; align-items: center; gap: 7px; color: inherit; text-decoration: none; padding: 6px 0; border-bottom: 1px solid transparent;}
+.chapter-links a[aria-current] {color: var(--red); border-color: currentColor;}
+.chapter-links a:hover {color: var(--red);}
+.chapter-links a:focus-visible {outline: 1px solid var(--red); outline-offset: 3px;}
+.chapter-links a span {font-size: 9px; opacity: .65;}
+.chapter-pending {display: inline-flex; align-items: center; gap: 7px; padding: 6px 0; color: #8c856f;}
+.chapter-pending > span {font-size: 9px; opacity: .65;}
+.settings-paper .other-chapter {display: flex; gap: 10px; align-items: center; padding: 11px 5px; margin-top: 5px; border-top: 1px solid var(--line); color: inherit; text-decoration: none; font-size: 12px;}
+.settings-paper .other-chapter:hover {color: var(--red);}
+.evidence-source {display: block; font-size: 9px; color: #8b6848; margin-bottom: 5px; letter-spacing: .09em;}
+.phase-intro .scroll-viewport {cursor: default;}
+.phase-intro .scroll-viewport:focus {outline: none;}
+.mission, .mission.is-collapsed {width: 224px; background: #f1ead7ed; border: 1px solid #c6bb9970; border-image: none; border-radius: 3px; backdrop-filter: none; box-shadow: 0 2px 15px #322b1812;}
+.mission-summary, .is-collapsed .mission-summary {padding: 12px 14px; align-items: center; gap: 12px;}
+.mission-chapter, .is-collapsed .mission-chapter {display: block; font-size: 13px; letter-spacing: .1em; margin: 0;}
+.mission-objective, .is-collapsed .mission-objective {display: block; font-size: 9px; letter-spacing: .06em; line-height: 1.5; margin-top: 3px;}
+.mission-count, .is-collapsed .mission-count {display: block; margin: 0; padding-left: 12px; font-size: 20px; border-color: #a99c7c66;}
+.mission-count small {font-size: 13px;}
+.mission-chevron, .is-collapsed .mission-chevron {margin: 0;}
+.mission.is-expanded .mission-chevron {transform: rotate(180deg);}
+.phase-exploring .mission-details, .phase-complete .mission-details {display: block; position: absolute; top: calc(100% + 9px); left: 0; width: 292px; padding: 19px 21px; background: #f1ead7f5; border: 1px solid #c6bb9970; border-radius: 3px; box-shadow: 0 3px 20px #322b1818;}
+.mission-details[hidden] {display: none !important;}
+.mission-details strong {display: block; font-size: 13px; font-weight: 500; margin-bottom: 12px;}
+.scene-loaded .mission {animation: soft-arrive 380ms var(--ease-ui) 350ms both;}
+@media (max-width: 700px) {
+  .introduction {background: linear-gradient(90deg,#f2ead5f5,#f2ead5eb 42%,#f2ead5a8 74%,#f2ead558);}
+  .intro-content {left: 7vw; width: 86vw; grid-template-columns: minmax(0,1fr) 65px; gap: 25px; max-width: 365px;}
+  .intro-title h1 {font-size: 55px;}
+  .intro-brand, .intro-footer {left: 7vw;}
+  .intro-story, .intro-invitation {font-size: 13px;}
+  .intro-enter {font-size: 17px;}
+  .mission, .mission.is-collapsed {width: 180px;}
+  .mission-summary, .is-collapsed .mission-summary {padding: 10px 11px; gap: 8px;}
+  .mission-objective, .is-collapsed .mission-objective {font-size: 8px;}
+  .mission-count, .is-collapsed .mission-count {padding-left: 8px; font-size: 18px;}
+  .mission-count small {font-size: 11px;}
+}
+@media (max-height: 580px) {
+  .intro-title h1 {font-size: 44px;}
+  .intro-title {gap: 16px;}
+  .intro-chapter {margin-bottom: 16px;}
+  .intro-story, .intro-invitation {margin-bottom: 10px; font-size: 12px;}
+  .intro-enter {margin-top: 13px; padding-block: 10px;}
+  .intro-play-note {margin-top: 10px;}
+  .intro-brand {top: 19px;}
+  .intro-footer {bottom: 19px;}
+}
+@media (max-width: 380px) {
+  .mission, .mission.is-collapsed {width: 142px;}
+  .mission-chapter, .is-collapsed .mission-chapter {font-size: 11px;}
+  .mission-objective, .is-collapsed .mission-objective {display: none;}
+  .mission-count, .is-collapsed .mission-count {font-size: 16px;}
+  .mission-count small {font-size: 10px;}
+  .scene-settings {gap: 6px;}
+  .round-control {width: 34px; height: 34px;}
+  .scene-hud {gap: 8px;}
+}
+
+/* The story unfolds at the reader's pace, one short scene at a time. */
+.intro-narrative {min-height: 178px;}
+.intro-lines {animation: soft-arrive 260ms var(--ease-ui) both;}
+.intro-story {white-space: pre-line; margin-bottom: 0;}
+.intro-sequence {display: flex; align-items: center; justify-content: space-between; min-height: 36px; margin-top: 10px;}
+.intro-back {padding: 8px 0; background: transparent; font-size: 10px; letter-spacing: .12em; color: #74745d;}
+.intro-back:hover {color: #924b35;}
+.intro-progress {display: flex; gap: 7px;}
+.intro-progress span {width: 16px; height: 1px; background: #82785c45;}
+.intro-progress .is-read {background: #82785cb3;}
+.intro-skip {position: absolute; top: clamp(25px,6vh,62px); right: clamp(28px,5vw,80px); padding: 8px 12px; font-size: 10px; letter-spacing: .15em; color: #5b5949; background: #ede5d1b0; border-radius: 2px;}
+.intro-skip:disabled {opacity: .4;}
+.painted-portrait img {filter: var(--painting-grade);}
+.unrecorded-clue {width: 56px; height: 76px; flex-shrink: 0; display: grid; place-items: center; border-block: 1px solid #82785c45; color: #82785c99; font-size: 21px; letter-spacing: .12em;}
+.hint-stage {font-size: 10px; color: #82785c; margin-left: 12px;}
+@media (max-height: 580px) {
+  .intro-narrative {min-height: 136px;}
+  .intro-sequence {margin-top: 4px;}
+  .intro-skip {top: 14px;}
+}
+
+.reading-paper .music-credit {font-size: 10px; line-height: 1.8; color: #82785c;}
+.music-credit a {color: inherit; text-underline-offset: 3px;}
+
+/* A single reading question, styled as a small annotation on the paper. */
+.knowledge-quiz {margin-top: 25px; padding: 20px 0 5px; border-top: 1px solid var(--line);}
+.knowledge-quiz fieldset {border: 0; padding: 0; margin: 13px 0 16px; min-width: 0;}
+.knowledge-quiz legend {font-size: 15px; line-height: 1.9; margin-bottom: 14px; color: var(--ink);}
+.quiz-option {display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 12px 10px; margin: 7px 0; border: 1px solid #95896b45; background: #fffaf029; cursor: pointer; font-size: 12px; line-height: 1.8;}
+.quiz-option:hover {background: #e9e5d566;}
+.quiz-option.is-selected {border-color: #69745f; background: #e3e6d685;}
+.quiz-option input {accent-color: var(--green); flex-shrink: 0; width: 16px; height: 16px; margin: 0;}
+.quiz-option:has(input:focus-visible) {outline: 2px solid var(--red); outline-offset: 2px;}
+.quiz-letter {color: #897755; flex-shrink: 0;}
+.knowledge-quiz fieldset:disabled .quiz-option {cursor: default;}
+.quiz-feedback {border-left: 2px solid #a27b4d; padding: 10px 14px; margin: 12px 0 18px; background: #d9c59424;}
+.quiz-feedback.is-correct {border-color: #687659; background: #c2cfb229;}
+.quiz-feedback strong {font-size: 12px; font-weight: 500; color: #785f3e;}
+.quiz-feedback.is-correct strong {color: #4c6144;}
+.reading-paper .quiz-feedback p {font-size: 12px; line-height: 1.9; margin: 6px 0 0;}
+.reading-paper .quiz-note {font-size: 10px; color: #827b64; line-height: 1.8; margin: 10px 0 0;}
+
+/* The target portrait appears only before entering the painting. */
+.mission.memory-mission {position: relative; width: 280px; max-width: calc(100vw - 160px);}
+.memory-mission .mission-summary {padding: 13px 15px; gap: 10px; align-items: flex-start;}
+.memory-mission .mission-chapter {font-size: 14px; line-height: 1.6; letter-spacing: .04em;}
+.memory-mission .mission-objective {display: block; font-size: 13px; letter-spacing: 0; line-height: 1.7; margin-top: 5px;}
+.memory-mission .mission-details {width: 100%; padding: 19px 21px;}
+.memory-mission .mission-details p {font-size: 13px; line-height: 1.9;}
+.intro-reference {display: flex; align-items: center; gap: 13px; margin-top: 16px;}
+.intro-target-cutout {display: block; position: relative; width: 112px; height: 168px; flex: 0 0 auto; overflow: hidden; background: transparent;}
+.intro-target-cutout img {position: absolute; left: 50%; top: 50%; height: 114%; width: auto; max-width: none; transform: translate(-50%, -50%);}
+/* Original-pixel reference window; framing comes from chapter art data. */
+.intro-target-cutout.is-source-crop {mask-image: linear-gradient(transparent, #000 5%, #000 95%, transparent);}
+.intro-target-cutout.is-source-crop img {max-width: none;}
+.intro-reference p {font-size: 12px; line-height: 1.9; color: #606b52; margin: 0;}
+.intro-enter.is-ready-to-search {font-size: 17px; letter-spacing: .04em; gap: 12px;}
+.hint-paper p {font-size: 14px; line-height: 1.9; color: #485a47;}
+.clue-card:not(.is-collected):not(:disabled) {cursor: pointer; opacity: 1;}
+.clue-card:not(.is-collected):not(:disabled):hover {background: #d9c59424;}
+.journal-section-note {font-size: 13px; line-height: 1.9;}
+@media (max-width: 700px) {
+  .mission.memory-mission {width: 270px; max-width: calc(100vw - 85px);}
+  .memory-mission .mission-summary {padding: 10px 12px;}
+  .memory-mission .mission-objective {font-size: 12px;}
+  .memory-mission .mission-details {width: min(310px,calc(100vw - 36px));}
+  .intro-target-cutout {width: 84px; height: 126px;}
+  .notebook-toggle, .hint-button {font-size: 12px; letter-spacing: 0; padding-inline: 10px; gap: 6px;}
+  .notebook-toggle > span, .hint-button > span {white-space: nowrap;}
+  .notebook-toggle > .art-icon:first-child, .hint-button > .art-icon {width: 24px !important; height: 24px !important;}
+  .notebook-count {display: none;}
+}
+@media (max-height: 580px) {
+  .intro-reference {margin-top: 10px; gap: 10px;}
+  .intro-target-cutout {width: 70px; height: 105px;}
+  .intro-reference p {font-size: 11px;}
+}
+
+.knowledge-stage h2:focus {outline: none;}
+.stage-question .knowledge-quiz {border-top: 0; padding-top: 0; margin-top: 0;}
+.knowledge-back {display: block; padding: 12px 0; margin: 6px 0 12px; background: transparent; color: #72765e; font-size: 12px; text-decoration: underline; text-underline-offset: 4px;}
+.knowledge-back:hover {color: var(--red);}
+
+
+.lantern-game {--painting-grade: saturate(.78) contrast(.96); background: #bba77d; color: #343a30;}
+.lantern-game .painting-world > .painting {visibility: visible;}
+.lantern-game .scroll-frame {background-size: cover;}
+.lantern-game .scene-status {background: #ded5bd; z-index: 4;}
+.lantern-game .round-control {opacity: 1; animation: none;}
+.lantern-hud {position: absolute; inset: 24px 28px auto; z-index: 6; display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; pointer-events: none;}
+.lantern-hud > * {pointer-events: auto;}
+.lantern-target {display: flex; align-items: center; gap: 15px; padding: 13px 18px 13px 13px; background: rgba(244,239,221,.93); box-shadow: 0 3px 18px #35291820; border: 1px solid #74633d35; max-width: 340px;}
+.lantern-target .lantern-crop {width: 90px; flex: 0 0 90px;}
+.lantern-target h1 {font-size: 19px; margin: 10px 0; font-weight: 600;}
+.lantern-eyebrow {font-size: 12px; letter-spacing: .14em; color: #6f705c; line-height: 1.6; margin: 0;}
+.lantern-trail {font-size: 13px; line-height: 1.75; color: #565e49; margin: 0 0 8px; text-wrap: pretty;}
+.lantern-progress {font-size: 12px; margin: 0; color: #747562;}
+.lantern-crop {position: relative; overflow: hidden; isolation: isolate; filter: saturate(.78) contrast(.96); background: #d2bf92;}
+.lantern-crop img {position: absolute; max-width: none; height: auto; pointer-events: none;}
+.lantern-tools {display: flex; align-items: center; gap: 10px; margin-left: auto;}
+.lantern-mode {height: 40px; padding: 0 17px; background: #f1ebd6e8; color: #394333; border: 1px solid #74633d35; border-radius: 24px; font-size: 13px; letter-spacing: .1em; box-shadow: 0 3px 14px #35291810;}
+.lantern-footer {position: absolute; bottom: 24px; left: 28px; right: 28px; z-index: 6; display: flex; align-items: flex-end; justify-content: space-between; pointer-events: none; gap: 15px;}
+.lantern-footer button {pointer-events: auto;}
+.lantern-quiet-button {display: flex; gap: 9px; align-items: center; padding: 12px 17px; background: #394535e8; border: 1px solid #e7dfbf6b; border-radius: 3px; color: #f1ebd6; font-size: 13px; letter-spacing: .1em; box-shadow: 0 3px 12px #171b2420;}
+.lantern-operation {text-align: center; color: #f3eddb; text-shadow: 0 1px 5px #262513; font-size: 12px; letter-spacing: .12em; margin: 0 0 3px;}
+.lantern-operation span {display: block; font-size: 10px; opacity: .75; margin-top: 6px;}
+.lantern-status {position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%); z-index: 8; max-width: calc(100% - 30px); text-align: center; background: #f1ebd6ec; padding: 12px 20px; font-size: 14px; border-radius: 3px; pointer-events: none;}
+.lantern-status:empty {display: none;}
+.lantern-dialog-layer {position: absolute; inset: 0; z-index: 20; display: grid; place-items: center; padding: 22px; background: #292b224d;}
+.lantern-paper {position: relative; background: #f2edda url('../../../public/art/ui/reading-paper.png') center / cover; border: 1px solid #7e725043; width: min(540px, 100%); max-height: calc(100dvh - 44px); overflow-y: auto; padding: 34px; box-shadow: 0 15px 60px #1c211f40; outline: none;}
+.lantern-paper h2 {font-size: 25px; font-weight: 500; letter-spacing: .12em; padding-right: 22px; margin: 0 0 18px;}
+.lantern-paper p {font-size: 16px; line-height: 1.9;}
+.lantern-paper .lantern-eyebrow {font-size: 12px; margin-top: -6px;}
+.lantern-paper .paper-close {position: absolute; right: 12px; top: 12px;}
+.lantern-paper a {color: #52654b; text-underline-offset: 4px;}
+.lantern-paper summary {cursor: pointer; font-size: 14px; margin-top: 22px;}
+.lantern-paper li {font-size: 13px; line-height: 1.9; margin: 5px 0;}
+.lantern-paper .lantern-source-note {font-size: 12px; color: #777664;}
+.lantern-discovery {place-items: end center; background: transparent; padding-bottom: 85px;}
+.lantern-discovery .lantern-paper {width: min(570px, 100%); padding: 26px 30px;}
+.lantern-found-content {display: flex; gap: 25px; align-items: center; margin: 20px 0;}
+.lantern-found-content .lantern-crop {width: 120px; flex: 0 0 120px; }
+.lantern-found-content p {margin: 0;}
+.lantern-help-portrait {width: 180px; max-width: 55%;  margin: 25px auto;}
+.lantern-paper-actions {display: flex; align-items: center; gap: 18px; justify-content: space-between; margin-top: 22px; flex-wrap: wrap;}
+.lantern-paper .primary-button {gap: 15px; font-size: 15px;}
+.lantern-text-button {padding: 8px 0; border: 0; background: none; color: #6c705a; text-decoration: underline; text-underline-offset: 5px; font-size: 14px;}
+.lantern-menu-controls {display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap;}
+.lantern-ending-portraits {display: flex; justify-content: space-around; align-items: flex-end; gap: 15px; margin: 26px 0;}
+.lantern-ending-portraits .lantern-crop {width: 100px; max-width: 28%;}
+.lantern-introduction .intro-reference {display: none;}
+.lantern-game button:focus-visible, .lantern-game a:focus-visible {outline: 2px solid #92603d; outline-offset: 5px;}
+@media (max-width: 680px) {
+  .lantern-hud {inset: 15px 14px auto; flex-direction: column-reverse; gap: 14px;}
+  .lantern-tools {gap: 8px;}
+  .lantern-target {gap: 12px; padding: 10px 14px 10px 10px;}
+  .lantern-target .lantern-crop {width: 65px; flex-basis: 65px;}
+  .lantern-target h1 {font-size: 16px; margin: 7px 0;}
+  .lantern-footer {bottom: 16px; left: 14px; right: 14px;}
+  .lantern-operation {display: none;}
+  .lantern-quiet-button {padding: 12px; font-size: 12px;}
+  .lantern-paper {padding: 26px 22px;}
+  .lantern-paper p {font-size: 15px;}
+  .lantern-discovery {padding: 14px 14px 78px;}
+  .lantern-discovery .lantern-paper {padding: 25px 22px;}
+  .lantern-found-content {gap: 18px;}
+  .lantern-found-content .lantern-crop {width: 90px; flex-basis: 90px;}
+}
+@media (max-height: 600px) {
+  .lantern-target .lantern-crop {width: 65px; flex-basis: 65px;}
+  .lantern-discovery {padding-bottom: 18px;}
+  .lantern-found-content .lantern-crop {width: 72px; flex-basis: 72px;}
+  .lantern-help-portrait {width: 80px;}
+}
+
+.lantern-game .intro-story {white-space: pre-line;}
+.introduction .chapter-links {gap: 6px 18px; max-width: calc(100vw - clamp(28px,6vw,100px) * 2);}
+
+/* Observation stays on the original scroll; notes have no panel or paper surface. */
+.lantern-game.is-near-view .lantern-hud, .lantern-game.is-near-view .lantern-footer {visibility: hidden;}
+.lantern-study-light .observation-shade {background: #17201626; backdrop-filter: grayscale(1) brightness(.78); -webkit-backdrop-filter: grayscale(1) brightness(.78);}
+.lantern-study-light .observation-shade {mask-image: radial-gradient(circle at var(--focus-x) var(--focus-y), transparent 0, transparent calc(var(--focus-radius) * .64), #000 calc(var(--focus-radius) * 1.25)); -webkit-mask-image: radial-gradient(circle at var(--focus-x) var(--focus-y), transparent 0, transparent calc(var(--focus-radius) * .64), #000 calc(var(--focus-radius) * 1.25));}
+.lantern-study-grayscale {position: absolute; inset: 0; backdrop-filter: grayscale(1); -webkit-backdrop-filter: grayscale(1);}
+.lantern-inline-study {position: absolute; left: var(--note-x); top: var(--note-y); width: var(--note-width, 300px); z-index: 22; color: #fff6df; outline: none; text-shadow: 0 1px 4px #121b10, 0 2px 12px #121b10; isolation: isolate;}
+.lantern-inline-study::before {content: ''; position: absolute; inset: -80px -65px; z-index: -1; pointer-events: none; background: radial-gradient(ellipse, #142012c9 0, #1420128a 32%, #14201200 72%);}
+.lantern-inline-study h2 {font-weight: 500; font-size: 27px; line-height: 1.5; letter-spacing: .08em; margin: 0 0 16px;}
+.lantern-inline-context {display: flex; align-items: center; gap: 24px; font-size: 12px; color: #f2e8cc; margin: 0 0 10px;}
+.lantern-inline-context span {opacity: .8; font-size: 11px;}
+.lantern-inline-message {font-size: 18px; line-height: 1.95; margin: 0 0 18px; text-wrap: pretty;}
+.lantern-inline-link {display: flex; align-items: center; justify-content: space-between; width: fit-content; gap: 30px; min-height: 44px; border: 0; border-bottom: 1px solid #eee2bc8a; background: transparent; color: #fff6df; font-size: 15px; padding: 9px 0; text-shadow: inherit;}
+.lantern-inline-link:hover {border-color: #fff6df; color: #fff;}
+.lantern-inline-link > span {font-size: 20px;}
+.lantern-inline-modes {display: flex; gap: 22px; margin: 0 0 13px;}
+.lantern-inline-modes button {border: 0; border-bottom: 1px solid transparent; padding: 8px 0; min-height: 40px; font-size: 14px; color: #e3ddc9; background: transparent; text-shadow: inherit;}
+.lantern-inline-modes button[aria-pressed="true"] {color: #fff; border-color: #fff3d4;}
+.lantern-inline-revisits {display: flex; flex-wrap: wrap; gap: 14px; margin: 4px 0 18px;}
+.lantern-inline-revisits button {background: transparent; border: 0; border-bottom: 1px solid #e8dcb96b; padding: 8px 0; font-size: 13px; color: #f4e9cd; text-shadow: inherit;}
+.lantern-inline-revisits button[aria-pressed="true"] {border-color: #fff6df; color: #fff;}
+.lantern-inline-revisits button span {display: block; margin-top: 5px; font-size: 10px; opacity: .7;}
+.lantern-inline-next {margin-top: 10px;}
+.lantern-inline-markers {position: absolute; inset: 0; pointer-events: none; z-index: 21;}
+.lantern-court-label {position: absolute; transform: translateY(-50%); font-family: 'LXGW WenKai TC', 'Kaiti TC', 'BiauKai', serif; font-size: 12px; font-weight: 400; line-height: 1.5; letter-spacing: .08em; white-space: nowrap; color: #e5dfce; text-shadow: 0 1px 3px #172113b3;}
+.lantern-court-anchor {position: absolute; width: 3px; height: 3px; transform: translate(-50%, -50%); border-radius: 50%; background: #d8d1bbad;}
+.lantern-court-leader {position: absolute; height: 1px; transform-origin: 0 50%; background: #d8d1bb80;}
+.lantern-inline-ending {left: auto; top: auto; right: 7vw; bottom: 12vh; width: min(360px, calc(100vw - 48px));}
+.lantern-inline-ending h2 {font-size: 26px;}
+.lantern-inline-restart {display: block; background: none; border: 0; padding: 12px 0; color: #e3ddc9; text-shadow: inherit; font-size: 12px; margin-top: 10px;}
+.lantern-study-notes section {border-top: 1px solid #91876b3b; margin-top: 22px; padding-top: 18px;}
+.lantern-study-notes h3, .lantern-study-notes h4 {font-size: 16px; font-weight: 500; line-height: 1.7; margin: 10px 0;}
+.lantern-paper .lantern-study-notes p {font-size: 14px; margin: 8px 0 18px;}
+@media (max-width: 680px) {
+  .lantern-inline-study {left: 24px; right: 24px; top: auto; bottom: 26px; width: auto; max-height: calc(100dvh - 48px); overflow-y: auto;}
+  .lantern-inline-study::before {position: fixed; inset: auto -80px -100px; height: 520px; background: radial-gradient(ellipse at center bottom, #142012eb 0, #142012a8 38%, #14201200 73%);}
+  .lantern-inline-study h2 {font-size: 23px; margin-bottom: 9px;}
+  .lantern-inline-message {font-size: 16px; margin-bottom: 10px;}
+  .lantern-inline-context {margin-bottom: 6px;}
+  .lantern-inline-revisits {margin-bottom: 10px;}
+}
+@media (max-height: 580px) and (min-width: 681px) {
+  .lantern-inline-study {top: 25px; max-height: calc(100dvh - 50px); overflow-y: auto;}
+  .lantern-inline-study h2 {font-size: 23px; margin-bottom: 8px;}
+  .lantern-inline-message {font-size: 16px; margin-bottom: 10px;}
+}
+
+.lantern-navigator {width: min(420px, calc(100vw - 400px)); padding: 7px 9px 3px; background: #eee8d6e8; border: 1px solid #75664460; box-shadow: 0 3px 18px #211b2428; pointer-events: auto;}
+.lantern-navigator-strip {position: relative; height: 32px; overflow: hidden;}
+.lantern-navigator-strip > img {width: 100%; height: 100%; object-fit: fill; filter: saturate(.65); pointer-events: none;}
+.lantern-navigator-window {position: absolute; top: 0; bottom: 0; border: 2px solid #f9f0d6; background: #faf2cf22; box-shadow: 0 0 0 1px #454e36; pointer-events: none;}
+.lantern-navigator-strip > input {position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize;}
+.lantern-navigator-strip:focus-within {outline: 2px solid #92603d; outline-offset: 2px;}
+.lantern-navigator-courts {display: flex; justify-content: space-between;}
+.lantern-navigator-courts > button {font-size: 10px; letter-spacing: .1em; color: #525d47; border: 0; background: transparent; padding: 7px 2px 5px;}
+
+/* Discovery notes use the selected A dialogue typography, without a large heading. */
+.lantern-discovery-note {font-family: 'LXGW WenKai TC', 'Kaiti TC', 'BiauKai', serif; text-shadow: 0 1px 3px #10180ee6, 0 2px 9px #10180e80;}
+.lantern-discovery-note::before {inset: -30px -28px; background: radial-gradient(ellipse, #17201383 0, #17201350 32%, transparent 72%);}
+.lantern-discovery-note .lantern-inline-context {font-size: 11px; gap: 12px; margin-bottom: 6px; color: #e8d8b5;}
+.lantern-discovery-note h2 {font-size: 14px; font-weight: 400; line-height: 1.5; letter-spacing: .06em; margin: 0 0 10px; color: #e8d8b5;}
+.lantern-discovery-note .lantern-inline-message {font-size: 20px; font-weight: 400; line-height: 1.55; margin: 0 0 12px; letter-spacing: 0; white-space: pre-line;}
+.lantern-discovery-note .lantern-inline-link {font-size: 13px; gap: 26px; border-bottom: 0; padding: 8px 0;}
+.lantern-discovery-note .lantern-inline-link > span {font-size: 17px;}
+.lantern-discovery-note .lantern-inline-next {margin-top: 4px;}
+.lantern-discovery-note .lantern-inline-modes {margin-bottom: 4px;}
+.lantern-discovery-note .lantern-inline-modes button {font-size: 13px;}
+@media (max-width: 680px) {
+  .lantern-discovery-note {left: 24px; right: auto; width: min(260px, calc(100vw - 48px));}
+  .lantern-discovery-note::before {position: absolute; height: auto;}
+}
+@media (max-width: 680px) {
+  .lantern-navigator {position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); width: min(360px, calc(100vw - 28px));}
+  .lantern-navigator-strip {height: 24px;}
+}
+
+/* The original scroll fills the viewport; a fixed reading column gives it room. */
+.lantern-game.is-reviewing .lantern-hud, .lantern-game.is-reviewing .lantern-footer {visibility: hidden;}
+.painting-departing {pointer-events: none;}
+.lantern-review {position: absolute; inset: 0; z-index: 22; outline: none; color: #f3ead3; font-family: 'LXGW WenKai TC', 'Kaiti TC', 'BiauKai', serif;}
+.lantern-review-colour {position: absolute; inset: 0; pointer-events: none; backdrop-filter: grayscale(1); -webkit-backdrop-filter: grayscale(1); animation: lantern-review-colour 400ms ease-out both;}
+.lantern-review-shade {position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, transparent 40%, #19231b1a 50%, #19231be8 67%, #19231bf5 100%); animation: lantern-review-arrive 400ms ease-out both;}
+.lantern-epilogue {position: absolute; left: 68%; right: 4%; top: 8%; bottom: 7%; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #c7b98e66 transparent; padding: 0 6px 12px 0; opacity: 1;}
+.lantern-epilogue.is-changing, .lantern-review-art-caption.is-changing {opacity: 0;}
+.lantern-epilogue h2 {font-size: 26px; font-weight: 400; line-height: 1.5; margin: 0 0 26px; letter-spacing: .025em;}
+.lantern-epilogue p {font-size: 20px; font-weight: 400; line-height: 1.65; margin: 0 0 22px; text-wrap: pretty;}
+.lantern-epilogue .lantern-epilogue-progress {display: flex; justify-content: space-between; gap: 16px; font-size: 12px; letter-spacing: .12em; color: #c9c4ad; margin-bottom: 28px;}
+.lantern-epilogue-progress span {font-size: 11px; letter-spacing: .08em;}
+.lantern-epilogue .lantern-epilogue-caption {font-size: 14px; line-height: 1.75; color: #cdc9b7; margin-bottom: 20px;}
+.lantern-epilogue .lantern-epilogue-prompt {font-size: 16px; margin-bottom: 8px;}
+.lantern-epilogue .lantern-epilogue-feedback {font-size: 14px; color: #d8cfaf; margin: 16px 0 0; line-height: 1.65;}
+.lantern-epilogue-revisits {display: flex; gap: 24px; margin: 0 0 16px;}
+.lantern-epilogue-revisits button {padding: 5px 0 8px; min-height: 44px; background: transparent; color: #b6baaa; border: 0; border-bottom: 1px solid transparent; font-size: 16px; letter-spacing: .08em;}
+.lantern-epilogue-revisits button[aria-pressed="true"] {border-color: #d9c591; color: #fff1cc;}
+.lantern-epilogue-choices {display: grid; gap: 0; margin-bottom: 8px;}
+.lantern-epilogue-choices button {display: flex; align-items: baseline; gap: 14px; background: transparent; color: #e8e3d1; border: 0; border-bottom: 1px solid #d8cfaf35; padding: 14px 0; min-height: 48px; text-align: left; font-size: 20px; font-weight: 400; line-height: 1.5; transition: color 160ms, border-color 160ms;}
+.lantern-choice-index {flex: 0 0 18px; font-size: 11px; color: #aaa994; letter-spacing: .04em;}
+.lantern-epilogue-choices button:hover, .lantern-epilogue-choices button[aria-pressed="true"] {color: #ffe7ae; border-color: #d9c591;}
+.lantern-epilogue-choices button[aria-pressed="true"] .lantern-choice-index {color: #ffe7ae;}
+.lantern-epilogue-next, .lantern-epilogue-restart {background: transparent; color: #f3ead3; font-size: 16px; line-height: 1.6; padding: 10px 0; min-height: 44px;}
+.lantern-epilogue-next {display: flex; align-items: center; justify-content: space-between; gap: 20px; width: 100%; margin-top: 26px; border-top: 1px solid #d8cfaf55; text-align: left;}
+.lantern-epilogue-next span {font-family: serif; font-size: 24px;}
+.lantern-epilogue-restart {display: block; font-size: 13px; color: #bcbba8;}
+.lantern-epilogue-concept {margin: 28px 0 22px; padding-left: 18px; border-left: 1px solid #c1b28499;}
+.lantern-epilogue-concept .lantern-epilogue-caption {font-size: 12px; letter-spacing: .1em; margin-bottom: 8px;}
+.lantern-epilogue-concept h3 {font-size: 22px; font-weight: 400; margin: 0 0 12px; color: #f0dbab;}
+.lantern-epilogue-concept p:last-child {font-size: 18px; line-height: 1.7; margin-bottom: 0;}
+.lantern-epilogue-findings {margin: 0;}
+.lantern-epilogue-findings > div {margin-bottom: 22px;}
+.lantern-epilogue-findings dt {font-size: 12px; letter-spacing: .1em; color: #bcbba8; margin-bottom: 7px;}
+.lantern-epilogue-findings dd {margin: 0; font-size: 20px; line-height: 1.65;}
+.lantern-epilogue-history {font-size: 14px; line-height: 1.7; margin: 24px 0 8px; color: #d1cbb5;}
+.lantern-epilogue-history summary {cursor: pointer; padding: 10px 0;}
+.lantern-epilogue-history p {font-size: 16px; margin: 14px 0;}
+.lantern-epilogue-sources {display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 18px;}
+.lantern-epilogue-sources a {font-size: 11px; color: #aaa994; text-underline-offset: 4px;}
+.lantern-epilogue .lantern-review-colour-note {font-size: 11px; margin-top: 30px; color: #aaa994;}
+.lantern-review-art-caption {position: absolute; left: 3%; bottom: 4%; margin: 0; padding: 8px 12px; background: #1c241a9c; color: #ede3ca; font-size: 12px; line-height: 1.65; pointer-events: none; transition: opacity 220ms;}
+.lantern-review-art-caption span {display: block; font-size: 11px; color: #d0c8af;}
+.lantern-review button:focus-visible, .lantern-review a:focus-visible, .lantern-review summary:focus-visible {outline: 1px solid #e5d3a5; outline-offset: 4px;}
+@keyframes lantern-review-arrive {from {opacity: 0;} to {opacity: 1;}}
+@keyframes lantern-review-colour {from {opacity: 1;} to {opacity: 0;}}
+@media (min-width: 760px) and (max-height: 740px) {
+  .lantern-epilogue {top: 5%; bottom: 4%;}
+  .lantern-epilogue h2 {margin-bottom: 18px; font-size: 24px;}
+  .lantern-epilogue .lantern-epilogue-progress {margin-bottom: 18px;}
+  .lantern-epilogue-choices button {padding: 10px 0;}
+  .lantern-epilogue-next {margin-top: 18px;}
+}
+@media (max-width: 759px) {
+  .lantern-review-shade {background: linear-gradient(180deg, transparent 22%, #19231b33 33%, #19231bed 45%, #19231bf5 100%);}
+  .lantern-epilogue {left: 7%; right: 7%; top: 45%; bottom: 3%;}
+  .lantern-epilogue h2 {font-size: 23px; margin-bottom: 18px;}
+  .lantern-epilogue h2 br {display: none;}
+  .lantern-epilogue .lantern-epilogue-progress {margin-bottom: 14px;}
+  .lantern-epilogue-revisits {gap: 28px; margin-bottom: 10px;}
+  .lantern-epilogue-choices button {padding: 10px 0;}
+  .lantern-epilogue-next {margin-top: 18px;}
+  .lantern-review-art-caption {left: 5%; bottom: auto; top: 2%;}
+}
+@media (prefers-reduced-motion: reduce) {
+  .lantern-review-shade {animation: none;}
+  .lantern-review-colour {animation: none; opacity: 0;}
+  .lantern-review *, .lantern-review *::before {transition: none !important;}
+}

@@ -1,0 +1,26 @@
+{
+  "id": "luoshen-before-three-act-20261027",
+  "version": "before-three-act-20261027",
+  "date": "2026-10-27",
+  "status": "preserved-local-copy",
+  "chapter": "洛水之間",
+  "baseCommit": "65b144abc4080f9fa7931716c01867be504bc8ef",
+  "acceptedSample": "output/design-preview/luoshen-entry-2026-10-27/",
+  "storageKey": "painting-luoshen-v1",
+  "entry": "public/chapters/luoshen-before-three-act-20261027/index.html",
+  "previous": null,
+  "productionRoute": "#luoshen (unchanged)",
+  "sources": {
+    "src/components/LuoshenGame.tsx": "12ed792476b0e7dea9cf0b2fb80bff40e879ef7708245fa385c05ea28104768b",
+    "src/luoshen-before-three-act.tsx": "e6e7b0a00c1ab7f8e859c971c7cc9ae60c50c6437ef2ff0c8070cdbe1f647e04",
+    "src/entries/VersionedLuoshenChapter.tsx": "a2ebeb2c040c9e68e51ab70ba14cb836218a688e5938bd2f198aadce4162d29f"
+  },
+  "entrySHA256": "a516b3b96547d7fcb9a95148ff10f48aa4a3cdc3b45d9aafb7fcebde8eb36dda",
+  "flow": [
+    "原有兩幕引言",
+    "原有完整章節"
+  ],
+  "role": null,
+  "sharedAssets": "Existing public artwork, portraits, fonts, audio and animation files are referenced read-only.",
+  "scope": "Independent full chapter versions only. No promotion, site home build, push or deployment."
+}

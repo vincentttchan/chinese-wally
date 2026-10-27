@@ -1,0 +1,7 @@
+{
+  "reason": "Vite first failed because picomatch loaded as an object from a cloud dataless dependency file; after hydration the exact same package returned a function.",
+  "previousDependencyLink": "/Users/vincentttchan99/Documents/ChatGPT/Chinese Wally/node_modules",
+  "isolatedRuntime": "/Users/vincentttchan99/.codex/build-runtimes/chinese-wally-20261027",
+  "install": "npm ci --ignore-scripts --no-audit --no-fund with an isolated npm cache",
+  "dependencyVersions": "Exact existing package-lock.json, no changes to package.json or lockfile"
+}

@@ -1,0 +1,203 @@
+{
+  "id": "luoshen-three-act-entry",
+  "version": "0.1.0",
+  "date": "2026-10-27",
+  "status": "independent-discussion-sample",
+  "role": "循賦入畫的年輕書生",
+  "baseline": "site-2026-10-27-three-act-entry-baseline",
+  "scenes": [
+    {
+      "label": "洛水相逢",
+      "caption": "第一幕 · 洛水相逢",
+      "action": "看看這一卷",
+      "groups": [
+        {
+          "lines": [
+            "三國時，曹植寫下《洛神賦》，",
+            "描繪一場人與神的相遇。",
+            "故事裡，他行經洛水，",
+            "在水岸之間，遇見神女洛神。",
+            "行旅的腳步，就此停留，",
+            "目光所及，多了她的身影。",
+            "一段故事，從這片水岸展開。"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "一卷藏時",
+      "caption": "第二幕 · 一卷藏時",
+      "action": "循賦入畫",
+      "groups": [
+        {
+          "lines": [
+            "眼前這卷《洛神賦圖》，",
+            "將賦中的故事繪成長卷。",
+            "原本相傳為顧愷之作，",
+            "此卷是北京故宮所藏宋摹本。",
+            "山水之間，熟悉的身影再現，",
+            "衣冠相似，姿態卻有不同。",
+            "他們之間，又發生了甚麼？"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "循賦入畫",
+      "caption": "第三幕 · 循賦入畫",
+      "action": "看看曹植的樣子",
+      "groups": [
+        {
+          "lines": [
+            "你是循賦入畫的年輕書生，",
+            "帶著《洛神賦》，展開此卷。",
+            "先認清岸上曹植的面貌，",
+            "找到他，再細看他的衣袖。",
+            "循著身影，留意姿態與位置，",
+            "看過細節，再翻開相應賦文，",
+            "讓文字與畫面，慢慢連在一起。"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/styles.css",
+      "sha256": "6e406c5def4f6314a3a2390de68acb0b4cb18780bdea78f18153198b163f669f"
+    },
+    {
+      "path": "src/lantern.css",
+      "sha256": "a0da9ad0317e1a8cf45bcb1f1201f78983c62f03fc5367be52a2f6b6b3535e02"
+    },
+    {
+      "path": "src/components/lantern-three-act-entry-v1.css",
+      "sha256": "57dba783fa927e1734c9a47eb5498eadfde0457c68c3a0dfc55eb54ce2dc943f"
+    },
+    {
+      "path": "src/entries/kangqu-three-act-v2.2.0/entry.js",
+      "sha256": "f4c915e9a878c4d1b95f572cd9fb3a80ddb764ed3d381ed8dbdf030dffc01b07"
+    },
+    {
+      "path": "src/components/LuoshenGame.tsx",
+      "sha256": "12ed792476b0e7dea9cf0b2fb80bff40e879ef7708245fa385c05ea28104768b"
+    },
+    {
+      "path": "src/components/LuoshenPanels.tsx",
+      "sha256": "7054abc097b513cf30fb092981d342d6cb451b66d894ac758d43ac20c3e47469"
+    },
+    {
+      "path": "src/game/luoshen.ts",
+      "sha256": "e377ab5e5f9509151ebe79d36d08c0dd56eb7524e6a1239444425ea5c74a1eb7"
+    },
+    {
+      "path": "public/art/luoshen/full-scroll.jpg",
+      "sha256": "059ee254ab7451e4a60a8c6de5b5faef975d383f7c21ffaa97de66c92e2c1cea"
+    },
+    {
+      "path": "public/art/luoshen/head-C1-cutout.png",
+      "sha256": "4fc06f7438fbae2ea687ba587541f7fac401da8be7d7ec574c4c230eb89110bb"
+    },
+    {
+      "path": "public/fonts/LXGWWenKaiTC-Regular.ttf",
+      "sha256": "d0a6217aedfc074f539ec46ad8fc7d74e16567e071bc9796b50e762c9d59d110"
+    },
+    {
+      "path": "public/art/luoshen/detail-7.jpg",
+      "sha256": "5d791d90115bfbbd3aa8374c77b4c09aed507d8dc2f88a2a3e78d00cf9df5514"
+    },
+    {
+      "path": "public/art/luoshen/detail-8.jpg",
+      "sha256": "43477766fbf1c727e2e94faf5eed2f98f688f97bf4c50de98c38a17eff9c5a1f"
+    },
+    {
+      "path": "public/art/luoshen/detail-9.jpg",
+      "sha256": "41c004d511eaa93c93bfaadd8a237cc03a82a4b44684eea3c9fea489f8091ebe"
+    }
+  ],
+  "painting": {
+    "width": 19950,
+    "height": 943,
+    "initialCenterX": 0.885,
+    "direction": "right",
+    "durationMs": 52000,
+    "maxTravelPx": 560,
+    "maxTravelViewportRatio": 0.48,
+    "detailTiles": [
+      7,
+      8,
+      9
+    ]
+  },
+  "layout": {
+    "columns": 7,
+    "maxGridWidthPx": 616,
+    "sameTopAndStartingColumn": true
+  },
+  "timing": {
+    "coverOverlapMs": 1050,
+    "coverFadeMs": 760,
+    "glyphMs": 110,
+    "glyphFadeMs": 220,
+    "punctuationExtraMs": 240,
+    "columnEndExtraMs": 180,
+    "firstGlyphDelayMs": 500,
+    "handoverMs": 1100
+  },
+  "handover": "Existing C1 portrait crop and appearance cue only; sample ends before game.",
+  "storage": "No reads or writes to player storage.",
+  "deployment": "Not integrated; not deployed.",
+  "review": {
+    "evidence": "/Users/vincentttchan99/.codex/visualizations/2026/10/27/luoshen-entry-v0.1",
+    "viewport": [
+      1280,
+      720
+    ],
+    "browser": "Codex in-app browser via cua_repl",
+    "consoleErrors": 0,
+    "flow": [
+      "cover",
+      "act1",
+      "act2",
+      "act3",
+      "back-to-act2",
+      "act3",
+      "portrait-endpoint",
+      "replay-cover",
+      "replay-act1"
+    ],
+    "notChecked": [
+      "physical mobile",
+      "assistive technology",
+      "load failure",
+      "system reduced motion",
+      "full game"
+    ]
+  },
+  "sampleFiles": [
+    {
+      "path": "README.md",
+      "sha256": "98bee3429f8a3de22a21adf9d0611fbc2c4e0d01a888e1138d447080eb664673"
+    },
+    {
+      "path": "baseline-cover.css",
+      "sha256": "36fb03c7e5f1214978a76c58034d056b18583b97de7d345330f2ade57d3e6dcc"
+    },
+    {
+      "path": "entry.css",
+      "sha256": "36b26e2f1336a9f604c91c58bdd40e14c5d84bd922a88b0265e8634099cb5e3a"
+    },
+    {
+      "path": "entry.js",
+      "sha256": "1db878ad707598717cd37590d93c44e56c6bb997401a27dda41c10d159cf2f8f"
+    },
+    {
+      "path": "index.html",
+      "sha256": "dc44635fd2ac5ef781391d48faae27ab24f679b7a37fa6b39fce4d2457a4a533"
+    },
+    {
+      "path": "sample.css",
+      "sha256": "a7a8bb2eb0120f91ed4f746e20c8ae29647aa02399220521a0e0824de0467f92"
+    }
+  ]
+}
