@@ -1,0 +1,169 @@
+{
+  "source": "stage-and-crowd-native.png",
+  "sourceSha256": "00a6d98cda0787326a49dc3aed754ba6396e265da8c581446330041df378103a",
+  "sheet": "expansion-art/grotto/motion-sheet-v1.png",
+  "sheetSha256": "01615e3d0950455d285267fb522ca30b5bbbb9254ce8419e3b83bb1a5de98bd5",
+  "cleanPlate": "expansion-art/grotto/clean-plate-v1.png",
+  "cleanPlateSha256": "e697f9e7ad4e692f86896decf233f8208b802eb3bdf70cf03b51c9964c25bec3",
+  "crop": {
+    "x": 3540,
+    "y": 760,
+    "width": 590,
+    "height": 490
+  },
+  "people": [
+    "grotto-01",
+    "grotto-02",
+    "grotto-03",
+    "grotto-04",
+    "grotto-05",
+    "grotto-06",
+    "grotto-07",
+    "grotto-08",
+    "grotto-09"
+  ],
+  "sheetGrid": {
+    "columns": 2,
+    "rows": 2
+  },
+  "uniformPlacement": {
+    "x": 97,
+    "y": 134,
+    "width": 375,
+    "height": 375,
+    "scale": 0.5974786958918048
+  },
+  "alignment": "A single least-squares uniform scale and translation for the whole group. No local warping or alpha repair.",
+  "anchorResiduals": [
+    {
+      "person": "grotto-01",
+      "reference": [
+        134.0,
+        302.0
+      ],
+      "registered": [
+        133.716,
+        315.911
+      ],
+      "errorPixels": 13.914
+    },
+    {
+      "person": "grotto-02",
+      "reference": [
+        187.0,
+        300.0
+      ],
+      "registered": [
+        185.696,
+        300.974
+      ],
+      "errorPixels": 1.627
+    },
+    {
+      "person": "grotto-03",
+      "reference": [
+        228.0,
+        289.0
+      ],
+      "registered": [
+        225.727,
+        292.012
+      ],
+      "errorPixels": 3.773
+    },
+    {
+      "person": "grotto-04",
+      "reference": [
+        264.0,
+        273.0
+      ],
+      "registered": [
+        261.576,
+        284.842
+      ],
+      "errorPixels": 12.088
+    },
+    {
+      "person": "grotto-05",
+      "reference": [
+        287.0,
+        258.0
+      ],
+      "registered": [
+        293.242,
+        251.981
+      ],
+      "errorPixels": 8.672
+    },
+    {
+      "person": "grotto-06",
+      "reference": [
+        285.0,
+        309.0
+      ],
+      "registered": [
+        293.242,
+        323.081
+      ],
+      "errorPixels": 16.316
+    },
+    {
+      "person": "grotto-07",
+      "reference": [
+        386.0,
+        343.0
+      ],
+      "registered": [
+        379.279,
+        333.238
+      ],
+      "errorPixels": 11.852
+    },
+    {
+      "person": "grotto-08",
+      "reference": [
+        415.0,
+        327.0
+      ],
+      "registered": [
+        416.921,
+        316.509
+      ],
+      "errorPixels": 10.666
+    },
+    {
+      "person": "grotto-09",
+      "reference": [
+        449.0,
+        300.0
+      ],
+      "registered": [
+        445.6,
+        282.452
+      ],
+      "errorPixels": 17.874
+    }
+  ],
+  "cleanPlateTransform": {
+    "scale": 0.4290718038528897,
+    "offset": [
+      0,
+      0
+    ]
+  },
+  "backgroundPolicy": "Generated clean plate is visible only in source-person holes. Other background pixels are the native image.",
+  "foregroundPolicy": "Native original pixels are restored over columns, rails, outside the performance aperture, and registered occluders.",
+  "closingFrame": "Exact copy of frame-01.png",
+  "visualPoseCounts": [
+    9,
+    9,
+    9,
+    9
+  ],
+  "expectedPeople": 9,
+  "notes": [
+    "The original sculpted outer frame, leaves and front rail occlude sprites.",
+    "The nine-person sheet is a game interpretation; no hidden limbs are added by this tool."
+  ],
+  "alphaPolicy": "Source sprite-cell alpha is preserved without color keying, erosion, thresholding, or repainting. Only uniform raster resampling is used for placement."
+}

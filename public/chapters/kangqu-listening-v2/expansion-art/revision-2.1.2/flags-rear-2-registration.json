@@ -1,0 +1,1200 @@
+{
+  "version": "2.1.2",
+  "previousRegistration": "expansion-art/flags-rear-2/registration.json",
+  "sprites": [
+    {
+      "id": "red-rear-center-08",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-0.webp",
+          "sourcePng": "flag-rear-standing-pose-0.png",
+          "x": -45.80541069714026,
+          "y": 311.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            475.5,
+            154.128
+          ],
+          "sourceFoot": [
+            434.4379562043796,
+            1004
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-1.webp",
+          "sourcePng": "flag-rear-standing-pose-1.png",
+          "x": -12.456859385883988,
+          "y": 311.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            284.0,
+            154.128
+          ],
+          "sourceFoot": [
+            242.01785714285714,
+            1004
+          ]
+        }
+      ],
+      "fixedHeadX": 37.0,
+      "fixedHeadY": 358.0,
+      "fixedFootY": 486
+    },
+    {
+      "id": "red-rear-center-09",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-0.webp",
+          "sourcePng": "flag-rear-standing-pose-0.png",
+          "x": -3.8054106971402604,
+          "y": 309.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            475.5,
+            154.128
+          ],
+          "sourceFoot": [
+            434.4379562043796,
+            1004
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-1.webp",
+          "sourcePng": "flag-rear-standing-pose-1.png",
+          "x": 29.543140614116012,
+          "y": 309.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            284.0,
+            154.128
+          ],
+          "sourceFoot": [
+            242.01785714285714,
+            1004
+          ]
+        }
+      ],
+      "fixedHeadX": 79.0,
+      "fixedHeadY": 356.0,
+      "fixedFootY": 484
+    },
+    {
+      "id": "red-rear-center-10",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-0.webp",
+          "sourcePng": "flag-rear-standing-pose-0.png",
+          "x": 417.19458930285975,
+          "y": 312.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            475.5,
+            154.128
+          ],
+          "sourceFoot": [
+            434.4379562043796,
+            1004
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-1.webp",
+          "sourcePng": "flag-rear-standing-pose-1.png",
+          "x": 450.543140614116,
+          "y": 312.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            284.0,
+            154.128
+          ],
+          "sourceFoot": [
+            242.01785714285714,
+            1004
+          ]
+        }
+      ],
+      "fixedHeadX": 500.0,
+      "fixedHeadY": 359.0,
+      "fixedFootY": 487
+    },
+    {
+      "id": "red-rear-center-11",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-staff-pose-0.webp",
+          "sourcePng": "flag-rear-staff-pose-0.png",
+          "x": 562.6978138418038,
+          "y": 310.8608518820638,
+          "width": 104.65066485069974,
+          "height": 179.46738831855598,
+          "mirror": true,
+          "uniformScale": 0.15458000716499223,
+          "sourceHead": [
+            351.0,
+            175.567
+          ],
+          "sourceFoot": [
+            357.827743902439,
+            1133
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-staff-pose-1.webp",
+          "sourcePng": "flag-rear-staff-pose-1.png",
+          "x": 550.3314132686045,
+          "y": 310.7062718748988,
+          "width": 104.80524485786474,
+          "height": 179.46738831855598,
+          "mirror": true,
+          "uniformScale": 0.15458000716499223,
+          "sourceHead": [
+            272.0,
+            176.567
+          ],
+          "sourceFoot": [
+            284.3489932885906,
+            1134
+          ]
+        }
+      ],
+      "fixedHeadX": 613.0908961775913,
+      "fixedHeadY": 358.0,
+      "fixedFootY": 486
+    },
+    {
+      "id": "red-rear-center-12",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-0.webp",
+          "sourcePng": "flag-rear-standing-pose-0.png",
+          "x": 604.1945893028598,
+          "y": 313.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            475.5,
+            154.128
+          ],
+          "sourceFoot": [
+            434.4379562043796,
+            1004
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-1.webp",
+          "sourcePng": "flag-rear-standing-pose-1.png",
+          "x": 637.543140614116,
+          "y": 313.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            284.0,
+            154.128
+          ],
+          "sourceFoot": [
+            242.01785714285714,
+            1004
+          ]
+        }
+      ],
+      "fixedHeadX": 687.0,
+      "fixedHeadY": 360.0,
+      "fixedFootY": 488
+    },
+    {
+      "id": "red-rear-east-01",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-0.webp",
+          "sourcePng": "flag-rear-standing-pose-0.png",
+          "x": 730.1945893028598,
+          "y": 309.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            475.5,
+            154.128
+          ],
+          "sourceFoot": [
+            434.4379562043796,
+            1004
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-1.webp",
+          "sourcePng": "flag-rear-standing-pose-1.png",
+          "x": 763.543140614116,
+          "y": 309.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            284.0,
+            154.128
+          ],
+          "sourceFoot": [
+            242.01785714285714,
+            1004
+          ]
+        }
+      ],
+      "fixedHeadX": 813.0,
+      "fixedHeadY": 356.0,
+      "fixedFootY": 484
+    },
+    {
+      "id": "red-rear-east-02",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-0.webp",
+          "sourcePng": "flag-rear-standing-pose-0.png",
+          "x": 801.1945893028598,
+          "y": 314.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            475.5,
+            154.128
+          ],
+          "sourceFoot": [
+            434.4379562043796,
+            1004
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-1.webp",
+          "sourcePng": "flag-rear-standing-pose-1.png",
+          "x": 834.543140614116,
+          "y": 314.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            284.0,
+            154.128
+          ],
+          "sourceFoot": [
+            242.01785714285714,
+            1004
+          ]
+        }
+      ],
+      "fixedHeadX": 884.0,
+      "fixedHeadY": 361.0,
+      "fixedFootY": 489
+    },
+    {
+      "id": "red-rear-east-03",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-staff-pose-0.webp",
+          "sourcePng": "flag-rear-staff-pose-0.png",
+          "x": 946.6978138418038,
+          "y": 305.8608518820638,
+          "width": 104.65066485069974,
+          "height": 179.46738831855598,
+          "mirror": true,
+          "uniformScale": 0.15458000716499223,
+          "sourceHead": [
+            351.0,
+            175.567
+          ],
+          "sourceFoot": [
+            357.827743902439,
+            1133
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-staff-pose-1.webp",
+          "sourcePng": "flag-rear-staff-pose-1.png",
+          "x": 934.3314132686045,
+          "y": 305.7062718748988,
+          "width": 104.80524485786474,
+          "height": 179.46738831855598,
+          "mirror": true,
+          "uniformScale": 0.15458000716499223,
+          "sourceHead": [
+            272.0,
+            176.567
+          ],
+          "sourceFoot": [
+            284.3489932885906,
+            1134
+          ]
+        }
+      ],
+      "fixedHeadX": 997.0908961775913,
+      "fixedHeadY": 353.0,
+      "fixedFootY": 481
+    },
+    {
+      "id": "red-rear-east-04",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-0.webp",
+          "sourcePng": "flag-rear-standing-pose-0.png",
+          "x": 1000.1945893028598,
+          "y": 308.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            475.5,
+            154.128
+          ],
+          "sourceFoot": [
+            434.4379562043796,
+            1004
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-1.webp",
+          "sourcePng": "flag-rear-standing-pose-1.png",
+          "x": 1033.543140614116,
+          "y": 308.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            284.0,
+            154.128
+          ],
+          "sourceFoot": [
+            242.01785714285714,
+            1004
+          ]
+        }
+      ],
+      "fixedHeadX": 1083.0,
+      "fixedHeadY": 355.0,
+      "fixedFootY": 483
+    },
+    {
+      "id": "red-rear-east-05",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-staff-pose-0.webp",
+          "sourcePng": "flag-rear-staff-pose-0.png",
+          "x": 1142.6978138418037,
+          "y": 298.8608518820638,
+          "width": 104.65066485069974,
+          "height": 179.46738831855598,
+          "mirror": true,
+          "uniformScale": 0.15458000716499223,
+          "sourceHead": [
+            351.0,
+            175.567
+          ],
+          "sourceFoot": [
+            357.827743902439,
+            1133
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-staff-pose-1.webp",
+          "sourcePng": "flag-rear-staff-pose-1.png",
+          "x": 1130.3314132686044,
+          "y": 298.7062718748988,
+          "width": 104.80524485786474,
+          "height": 179.46738831855598,
+          "mirror": true,
+          "uniformScale": 0.15458000716499223,
+          "sourceHead": [
+            272.0,
+            176.567
+          ],
+          "sourceFoot": [
+            284.3489932885906,
+            1134
+          ]
+        }
+      ],
+      "fixedHeadX": 1193.0908961775913,
+      "fixedHeadY": 346.0,
+      "fixedFootY": 474
+    },
+    {
+      "id": "red-rear-east-06",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-0.webp",
+          "sourcePng": "flag-rear-standing-pose-0.png",
+          "x": 1182.1945893028596,
+          "y": 308.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            475.5,
+            154.128
+          ],
+          "sourceFoot": [
+            434.4379562043796,
+            1004
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-1.webp",
+          "sourcePng": "flag-rear-standing-pose-1.png",
+          "x": 1215.543140614116,
+          "y": 308.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            284.0,
+            154.128
+          ],
+          "sourceFoot": [
+            242.01785714285714,
+            1004
+          ]
+        }
+      ],
+      "fixedHeadX": 1265.0,
+      "fixedHeadY": 355.0,
+      "fixedFootY": 483
+    },
+    {
+      "id": "red-rear-east-07",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-0.webp",
+          "sourcePng": "flag-rear-standing-pose-0.png",
+          "x": 1376.1945893028596,
+          "y": 291.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            475.5,
+            154.128
+          ],
+          "sourceFoot": [
+            434.4379562043796,
+            1004
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-1.webp",
+          "sourcePng": "flag-rear-standing-pose-1.png",
+          "x": 1409.543140614116,
+          "y": 291.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            284.0,
+            154.128
+          ],
+          "sourceFoot": [
+            242.01785714285714,
+            1004
+          ]
+        }
+      ],
+      "fixedHeadX": 1459.0,
+      "fixedHeadY": 338.0,
+      "fixedFootY": 466
+    },
+    {
+      "id": "red-rear-east-08",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-staff-pose-0.webp",
+          "sourcePng": "flag-rear-staff-pose-0.png",
+          "x": 1475.7424174850878,
+          "y": 309.8608518820638,
+          "width": 104.65066485069974,
+          "height": 179.46738831855598,
+          "mirror": false,
+          "uniformScale": 0.15458000716499223,
+          "sourceHead": [
+            351.0,
+            175.567
+          ],
+          "sourceFoot": [
+            357.827743902439,
+            1133
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-staff-pose-1.webp",
+          "sourcePng": "flag-rear-staff-pose-1.png",
+          "x": 1487.954238051122,
+          "y": 309.7062718748988,
+          "width": 104.80524485786474,
+          "height": 179.46738831855598,
+          "mirror": false,
+          "uniformScale": 0.15458000716499223,
+          "sourceHead": [
+            272.0,
+            176.567
+          ],
+          "sourceFoot": [
+            284.3489932885906,
+            1134
+          ]
+        }
+      ],
+      "fixedHeadX": 1530.0,
+      "fixedHeadY": 357.0,
+      "fixedFootY": 485
+    },
+    {
+      "id": "red-rear-east-09",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-0.webp",
+          "sourcePng": "flag-rear-standing-pose-0.png",
+          "x": 1548.1945893028596,
+          "y": 307.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            475.5,
+            154.128
+          ],
+          "sourceFoot": [
+            434.4379562043796,
+            1004
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-1.webp",
+          "sourcePng": "flag-rear-standing-pose-1.png",
+          "x": 1581.543140614116,
+          "y": 307.1595534386355,
+          "width": 133.74249298717922,
+          "height": 178.32332398290563,
+          "mirror": false,
+          "uniformScale": 0.17414387107705628,
+          "sourceHead": [
+            284.0,
+            154.128
+          ],
+          "sourceFoot": [
+            242.01785714285714,
+            1004
+          ]
+        }
+      ],
+      "fixedHeadX": 1631.0,
+      "fixedHeadY": 354.0,
+      "fixedFootY": 482
+    }
+  ],
+  "clothSprites": [
+    {
+      "id": "flag-lower-5",
+      "polygon": [
+        [
+          13,
+          70
+        ],
+        [
+          156,
+          110
+        ],
+        [
+          104,
+          141
+        ],
+        [
+          161,
+          173
+        ],
+        [
+          13,
+          186
+        ]
+      ],
+      "bbox": [
+        13,
+        70,
+        161,
+        186
+      ],
+      "nativePolygon": [
+        [
+          2313,
+          1830
+        ],
+        [
+          2456,
+          1870
+        ],
+        [
+          2404,
+          1901
+        ],
+        [
+          2461,
+          1933
+        ],
+        [
+          2313,
+          1946
+        ]
+      ],
+      "source": "expansion-art/flags-rear-2/original.png",
+      "sourceCoordinates": "relative to group crop; original pixels; no replacement cloth generated",
+      "path": "expansion-art/revision-2.1.2/flags-rear-2-cloth-0.png",
+      "spriteBox": [
+        13,
+        70,
+        162,
+        187
+      ],
+      "poleX": 13
+    },
+    {
+      "id": "flag-lower-6",
+      "polygon": [
+        [
+          592,
+          70
+        ],
+        [
+          735,
+          110
+        ],
+        [
+          683,
+          141
+        ],
+        [
+          740,
+          173
+        ],
+        [
+          592,
+          186
+        ]
+      ],
+      "bbox": [
+        592,
+        70,
+        740,
+        186
+      ],
+      "nativePolygon": [
+        [
+          2892,
+          1830
+        ],
+        [
+          3035,
+          1870
+        ],
+        [
+          2983,
+          1901
+        ],
+        [
+          3040,
+          1933
+        ],
+        [
+          2892,
+          1946
+        ]
+      ],
+      "source": "expansion-art/flags-rear-2/original.png",
+      "sourceCoordinates": "relative to group crop; original pixels; no replacement cloth generated",
+      "path": "expansion-art/revision-2.1.2/flags-rear-2-cloth-1.png",
+      "spriteBox": [
+        592,
+        70,
+        741,
+        187
+      ],
+      "poleX": 592
+    },
+    {
+      "id": "flag-lower-7",
+      "polygon": [
+        [
+          786,
+          70
+        ],
+        [
+          929,
+          110
+        ],
+        [
+          877,
+          141
+        ],
+        [
+          934,
+          173
+        ],
+        [
+          786,
+          186
+        ]
+      ],
+      "bbox": [
+        786,
+        70,
+        934,
+        186
+      ],
+      "nativePolygon": [
+        [
+          3086,
+          1830
+        ],
+        [
+          3229,
+          1870
+        ],
+        [
+          3177,
+          1901
+        ],
+        [
+          3234,
+          1933
+        ],
+        [
+          3086,
+          1946
+        ]
+      ],
+      "source": "expansion-art/flags-rear-2/original.png",
+      "sourceCoordinates": "relative to group crop; original pixels; no replacement cloth generated",
+      "path": "expansion-art/revision-2.1.2/flags-rear-2-cloth-2.png",
+      "spriteBox": [
+        786,
+        70,
+        935,
+        187
+      ],
+      "poleX": 786
+    },
+    {
+      "id": "flag-lower-8",
+      "polygon": [
+        [
+          976,
+          70
+        ],
+        [
+          1119,
+          110
+        ],
+        [
+          1067,
+          141
+        ],
+        [
+          1124,
+          173
+        ],
+        [
+          976,
+          186
+        ]
+      ],
+      "bbox": [
+        976,
+        70,
+        1124,
+        186
+      ],
+      "nativePolygon": [
+        [
+          3276,
+          1830
+        ],
+        [
+          3419,
+          1870
+        ],
+        [
+          3367,
+          1901
+        ],
+        [
+          3424,
+          1933
+        ],
+        [
+          3276,
+          1946
+        ]
+      ],
+      "source": "expansion-art/flags-rear-2/original.png",
+      "sourceCoordinates": "relative to group crop; original pixels; no replacement cloth generated",
+      "path": "expansion-art/revision-2.1.2/flags-rear-2-cloth-3.png",
+      "spriteBox": [
+        976,
+        70,
+        1125,
+        187
+      ],
+      "poleX": 976
+    },
+    {
+      "id": "flag-lower-9",
+      "polygon": [
+        [
+          1172,
+          70
+        ],
+        [
+          1315,
+          110
+        ],
+        [
+          1263,
+          141
+        ],
+        [
+          1320,
+          173
+        ],
+        [
+          1172,
+          186
+        ]
+      ],
+      "bbox": [
+        1172,
+        70,
+        1320,
+        186
+      ],
+      "nativePolygon": [
+        [
+          3472,
+          1830
+        ],
+        [
+          3615,
+          1870
+        ],
+        [
+          3563,
+          1901
+        ],
+        [
+          3620,
+          1933
+        ],
+        [
+          3472,
+          1946
+        ]
+      ],
+      "source": "expansion-art/flags-rear-2/original.png",
+      "sourceCoordinates": "relative to group crop; original pixels; no replacement cloth generated",
+      "path": "expansion-art/revision-2.1.2/flags-rear-2-cloth-4.png",
+      "spriteBox": [
+        1172,
+        70,
+        1321,
+        187
+      ],
+      "poleX": 1172
+    },
+    {
+      "id": "flag-lower-10",
+      "polygon": [
+        [
+          1363,
+          70
+        ],
+        [
+          1506,
+          110
+        ],
+        [
+          1454,
+          141
+        ],
+        [
+          1511,
+          173
+        ],
+        [
+          1363,
+          186
+        ]
+      ],
+      "bbox": [
+        1363,
+        70,
+        1511,
+        186
+      ],
+      "nativePolygon": [
+        [
+          3663,
+          1830
+        ],
+        [
+          3806,
+          1870
+        ],
+        [
+          3754,
+          1901
+        ],
+        [
+          3811,
+          1933
+        ],
+        [
+          3663,
+          1946
+        ]
+      ],
+      "source": "expansion-art/flags-rear-2/original.png",
+      "sourceCoordinates": "relative to group crop; original pixels; no replacement cloth generated",
+      "path": "expansion-art/revision-2.1.2/flags-rear-2-cloth-5.png",
+      "spriteBox": [
+        1363,
+        70,
+        1512,
+        187
+      ],
+      "poleX": 1363
+    },
+    {
+      "id": "flag-lower-11",
+      "polygon": [
+        [
+          1551,
+          70
+        ],
+        [
+          1694,
+          110
+        ],
+        [
+          1642,
+          141
+        ],
+        [
+          1699,
+          173
+        ],
+        [
+          1551,
+          186
+        ]
+      ],
+      "bbox": [
+        1551,
+        70,
+        1699,
+        186
+      ],
+      "nativePolygon": [
+        [
+          3851,
+          1830
+        ],
+        [
+          3994,
+          1870
+        ],
+        [
+          3942,
+          1901
+        ],
+        [
+          3999,
+          1933
+        ],
+        [
+          3851,
+          1946
+        ]
+      ],
+      "source": "expansion-art/flags-rear-2/original.png",
+      "sourceCoordinates": "relative to group crop; original pixels; no replacement cloth generated",
+      "path": "expansion-art/revision-2.1.2/flags-rear-2-cloth-6.png",
+      "spriteBox": [
+        1551,
+        70,
+        1698,
+        187
+      ],
+      "poleX": 1551
+    },
+    {
+      "id": "flag-lower-roof-left",
+      "polygon": [
+        [
+          208,
+          64
+        ],
+        [
+          243,
+          71
+        ],
+        [
+          265,
+          87
+        ],
+        [
+          210,
+          87
+        ]
+      ],
+      "bbox": [
+        208,
+        64,
+        265,
+        87
+      ],
+      "nativePolygon": [
+        [
+          2508,
+          1824
+        ],
+        [
+          2543,
+          1831
+        ],
+        [
+          2565,
+          1847
+        ],
+        [
+          2510,
+          1847
+        ]
+      ],
+      "source": "expansion-art/flags-rear-2/original.png",
+      "sourceCoordinates": "relative to group crop; original pixels; no replacement cloth generated",
+      "path": "expansion-art/revision-2.1.2/flags-rear-2-cloth-7.png",
+      "spriteBox": [
+        208,
+        64,
+        266,
+        88
+      ],
+      "poleX": 208
+    },
+    {
+      "id": "flag-lower-roof-right",
+      "polygon": [
+        [
+          405,
+          65
+        ],
+        [
+          451,
+          74
+        ],
+        [
+          499,
+          99
+        ],
+        [
+          549,
+          85
+        ],
+        [
+          549,
+          118
+        ],
+        [
+          470,
+          120
+        ],
+        [
+          437,
+          110
+        ]
+      ],
+      "bbox": [
+        405,
+        65,
+        549,
+        120
+      ],
+      "nativePolygon": [
+        [
+          2705,
+          1825
+        ],
+        [
+          2751,
+          1834
+        ],
+        [
+          2799,
+          1859
+        ],
+        [
+          2849,
+          1845
+        ],
+        [
+          2849,
+          1878
+        ],
+        [
+          2770,
+          1880
+        ],
+        [
+          2737,
+          1870
+        ]
+      ],
+      "source": "expansion-art/flags-rear-2/original.png",
+      "sourceCoordinates": "relative to group crop; original pixels; no replacement cloth generated",
+      "path": "expansion-art/revision-2.1.2/flags-rear-2-cloth-8.png",
+      "spriteBox": [
+        405,
+        65,
+        550,
+        121
+      ],
+      "poleX": 405
+    }
+  ],
+  "policy": "Paired raw adult portraits, per-figure uniform placement, fixed head compositing. Native cloth alpha moves around a fixed pole edge. Role/direction variants share the user-approved flag master; not 78 individually restored faces."
+}

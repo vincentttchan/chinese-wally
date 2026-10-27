@@ -1,0 +1,1362 @@
+{
+  "left": {
+    "ids": [
+      "crowd-west-09",
+      "crowd-west-10",
+      "crowd-west-11",
+      "crowd-west-12",
+      "crowd-west-13",
+      "crowd-west-14",
+      "crowd-west-15",
+      "crowd-west-16",
+      "crowd-west-17",
+      "crowd-west-18",
+      "crowd-west-19",
+      "crowd-west-20",
+      "crowd-west-21"
+    ],
+    "crop": [
+      520,
+      1320,
+      900,
+      1660
+    ],
+    "sprites": [
+      {
+        "id": "crowd-west-17",
+        "approvedTemplate": 3,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-03-pose-0.webp",
+            "sourcePng": "official-03-pose-0.png",
+            "x": 184.84040622387175,
+            "y": 45.26196545465669,
+            "width": 86.68964251483574,
+            "height": 159.1961172176112,
+            "mirror": false,
+            "uniformScale": 0.13255297020617085,
+            "sourceHead": [
+              393.5,
+              209.26
+            ],
+            "sourceFoot": [
+              410.31570512820514,
+              1190
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-03-pose-1.webp",
+            "sourcePng": "official-03-pose-1.png",
+            "x": 193.13742663474457,
+            "y": 46.59184168257718,
+            "width": 86.01792082108474,
+            "height": 157.72140901698134,
+            "mirror": false,
+            "uniformScale": 0.13132506995585458,
+            "sourceHead": [
+              334.0,
+              201.09
+            ],
+            "sourceFoot": [
+              334.6833910034602,
+              1191
+            ]
+          }
+        ],
+        "fixedHeadX": 237.0,
+        "fixedHeadY": 91.0,
+        "fixedFootY": 203
+      },
+      {
+        "id": "crowd-west-20",
+        "approvedTemplate": 4,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-04-pose-0.webp",
+            "sourcePng": "official-04-pose-0.png",
+            "x": 257.7127645235207,
+            "y": 47.757649278878546,
+            "width": 89.76951071572988,
+            "height": 159.05108505189378,
+            "mirror": false,
+            "uniformScale": 0.13478905512872355,
+            "sourceHead": [
+              380.5,
+              209.53
+            ],
+            "sourceFoot": [
+              506.3993993993994,
+              1174
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-04-pose-1.webp",
+            "sourcePng": "official-04-pose-1.png",
+            "x": 266.1370804690659,
+            "y": 47.757649278878546,
+            "width": 89.90429977085861,
+            "height": 159.05108505189378,
+            "mirror": false,
+            "uniformScale": 0.13478905512872355,
+            "sourceHead": [
+              318.0,
+              209.53
+            ],
+            "sourceFoot": [
+              439.6825842696629,
+              1174
+            ]
+          }
+        ],
+        "fixedHeadX": 309.0,
+        "fixedHeadY": 94.0,
+        "fixedFootY": 206
+      },
+      {
+        "id": "crowd-west-21",
+        "approvedTemplate": 9,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-09-pose-0.webp",
+            "sourcePng": "official-09-pose-0.png",
+            "x": 256.02301215194717,
+            "y": 53.491149172327994,
+            "width": 119.41441010429625,
+            "height": 159.219213472395,
+            "mirror": false,
+            "uniformScale": 0.15548751315663575,
+            "sourceHead": [
+              501.5,
+              176.92000000000002
+            ],
+            "sourceFoot": [
+              577.5934959349594,
+              1013
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-09-pose-1.webp",
+            "sourcePng": "official-09-pose-1.png",
+            "x": 286.0771744204139,
+            "y": 53.38369379181577,
+            "width": 119.49587676987709,
+            "height": 159.32783569316945,
+            "mirror": false,
+            "uniformScale": 0.1555935895441108,
+            "sourceHead": [
+              308.0,
+              177.49
+            ],
+            "sourceFoot": [
+              385.1841155234657,
+              1013
+            ]
+          }
+        ],
+        "fixedHeadX": 334.0,
+        "fixedHeadY": 99.0,
+        "fixedFootY": 211
+      },
+      {
+        "id": "crowd-west-18",
+        "approvedTemplate": 10,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-10-pose-0.webp",
+            "sourcePng": "official-10-pose-0.png",
+            "x": 217.4552665839111,
+            "y": 62.95619001483547,
+            "width": 85.54098923168527,
+            "height": 158.22459051136877,
+            "mirror": false,
+            "uniformScale": 0.13119783624491607,
+            "sourceHead": [
+              400.5,
+              206.13
+            ],
+            "sourceFoot": [
+              557.4617834394904,
+              1197
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-10-pose-1.webp",
+            "sourcePng": "official-10-pose-1.png",
+            "x": 230.7718469627701,
+            "y": 62.95619001483547,
+            "width": 85.6721870679302,
+            "height": 158.22459051136877,
+            "mirror": false,
+            "uniformScale": 0.13119783624491607,
+            "sourceHead": [
+              299.0,
+              206.13
+            ],
+            "sourceFoot": [
+              463.49152542372883,
+              1197
+            ]
+          }
+        ],
+        "fixedHeadX": 270.0,
+        "fixedHeadY": 108.0,
+        "fixedFootY": 220
+      },
+      {
+        "id": "crowd-west-13",
+        "approvedTemplate": 5,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-05-pose-0.webp",
+            "sourcePng": "official-05-pose-0.png",
+            "x": 142.77145551068932,
+            "y": 69.11982700309508,
+            "width": 87.26709984217108,
+            "height": 159.74542398589787,
+            "mirror": false,
+            "uniformScale": 0.13323221349949782,
+            "sourceHead": [
+              377.0,
+              209.26
+            ],
+            "sourceFoot": [
+              481.48812095032395,
+              1185
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-05-pose-1.webp",
+            "sourcePng": "official-05-pose-1.png",
+            "x": 150.85057930483418,
+            "y": 69.05619922759357,
+            "width": 87.49500599280863,
+            "height": 159.67505659874817,
+            "mirror": false,
+            "uniformScale": 0.13317352510320948,
+            "sourceHead": [
+              316.5,
+              209.82999999999998
+            ],
+            "sourceFoot": [
+              442.84054054054053,
+              1186
+            ]
+          }
+        ],
+        "fixedHeadX": 193.0,
+        "fixedHeadY": 115.0,
+        "fixedFootY": 227
+      },
+      {
+        "id": "crowd-west-12",
+        "approvedTemplate": 7,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-07-pose-0.webp",
+            "sourcePng": "official-07-pose-0.png",
+            "x": 104.75180691045159,
+            "y": 80.96709977449757,
+            "width": 55.83869555520679,
+            "height": 164.9389161015339,
+            "mirror": false,
+            "uniformScale": 0.10738210683693614,
+            "sourceHead": [
+              291.0,
+              270.37
+            ],
+            "sourceFoot": [
+              278.9068150208623,
+              1481
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-07-pose-1.webp",
+            "sourcePng": "official-07-pose-1.png",
+            "x": 108.53286894514002,
+            "y": 80.99106162772466,
+            "width": 54.07591426425559,
+            "height": 164.8027863291599,
+            "mirror": false,
+            "uniformScale": 0.1072934806830468,
+            "sourceHead": [
+              256.0,
+              270.37
+            ],
+            "sourceFoot": [
+              163.36402569593147,
+              1482
+            ]
+          }
+        ],
+        "fixedHeadX": 136.0,
+        "fixedHeadY": 128.0,
+        "fixedFootY": 240
+      },
+      {
+        "id": "crowd-west-19",
+        "approvedTemplate": 7,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-07-pose-0.webp",
+            "sourcePng": "official-07-pose-0.png",
+            "x": 267.7518069104516,
+            "y": 82.96709977449757,
+            "width": 55.83869555520679,
+            "height": 164.9389161015339,
+            "mirror": false,
+            "uniformScale": 0.10738210683693614,
+            "sourceHead": [
+              291.0,
+              270.37
+            ],
+            "sourceFoot": [
+              278.9068150208623,
+              1481
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-07-pose-1.webp",
+            "sourcePng": "official-07-pose-1.png",
+            "x": 271.53286894514,
+            "y": 82.99106162772466,
+            "width": 54.07591426425559,
+            "height": 164.8027863291599,
+            "mirror": false,
+            "uniformScale": 0.1072934806830468,
+            "sourceHead": [
+              256.0,
+              270.37
+            ],
+            "sourceFoot": [
+              163.36402569593147,
+              1482
+            ]
+          }
+        ],
+        "fixedHeadX": 299.0,
+        "fixedHeadY": 130.0,
+        "fixedFootY": 242
+      },
+      {
+        "id": "crowd-west-14",
+        "approvedTemplate": 9,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-09-pose-0.webp",
+            "sourcePng": "official-09-pose-0.png",
+            "x": 143.02301215194717,
+            "y": 87.491149172328,
+            "width": 119.41441010429625,
+            "height": 159.219213472395,
+            "mirror": false,
+            "uniformScale": 0.15548751315663575,
+            "sourceHead": [
+              501.5,
+              176.92000000000002
+            ],
+            "sourceFoot": [
+              577.5934959349594,
+              1013
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-09-pose-1.webp",
+            "sourcePng": "official-09-pose-1.png",
+            "x": 173.07717442041388,
+            "y": 87.38369379181577,
+            "width": 119.49587676987709,
+            "height": 159.32783569316945,
+            "mirror": false,
+            "uniformScale": 0.1555935895441108,
+            "sourceHead": [
+              308.0,
+              177.49
+            ],
+            "sourceFoot": [
+              385.1841155234657,
+              1013
+            ]
+          }
+        ],
+        "fixedHeadX": 221.0,
+        "fixedHeadY": 133.0,
+        "fixedFootY": 245
+      },
+      {
+        "id": "crowd-west-10",
+        "approvedTemplate": 4,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-04-pose-0.webp",
+            "sourcePng": "official-04-pose-0.png",
+            "x": 48.71276452352069,
+            "y": 107.75764927887855,
+            "width": 89.76951071572988,
+            "height": 159.05108505189378,
+            "mirror": false,
+            "uniformScale": 0.13478905512872355,
+            "sourceHead": [
+              380.5,
+              209.53
+            ],
+            "sourceFoot": [
+              506.3993993993994,
+              1174
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-04-pose-1.webp",
+            "sourcePng": "official-04-pose-1.png",
+            "x": 57.137080469065914,
+            "y": 107.75764927887855,
+            "width": 89.90429977085861,
+            "height": 159.05108505189378,
+            "mirror": false,
+            "uniformScale": 0.13478905512872355,
+            "sourceHead": [
+              318.0,
+              209.53
+            ],
+            "sourceFoot": [
+              439.6825842696629,
+              1174
+            ]
+          }
+        ],
+        "fixedHeadX": 100.0,
+        "fixedHeadY": 154.0,
+        "fixedFootY": 266
+      },
+      {
+        "id": "crowd-west-09",
+        "approvedTemplate": 1,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-approved.webp",
+            "sourcePng": "official-approved.png",
+            "x": 20.992103545590762,
+            "y": 117.61327597142935,
+            "width": 54.85232067510549,
+            "height": 159.05977956114467,
+            "mirror": false,
+            "uniformScale": 0.11950396661243026,
+            "sourceHead": [
+              226.0,
+              229.17
+            ],
+            "sourceFoot": [
+              331.95652173913044,
+              1317
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-01-pose-1.webp",
+            "sourcePng": "official-01-pose-1.png",
+            "x": 13.396469599327538,
+            "y": 116.09694592322779,
+            "width": 61.46679742224713,
+            "height": 165.96035304006725,
+            "mirror": false,
+            "uniformScale": 0.11382740263379099,
+            "sourceHead": [
+              304.0,
+              253.92
+            ],
+            "sourceFoot": [
+              419.6372881355932,
+              1396
+            ]
+          }
+        ],
+        "fixedHeadX": 48.0,
+        "fixedHeadY": 163.0,
+        "fixedFootY": 275
+      },
+      {
+        "id": "crowd-west-16",
+        "approvedTemplate": 2,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-02-pose-0.webp",
+            "sourcePng": "official-02-pose-0.png",
+            "x": 201.40321421842356,
+            "y": 131.86329840427842,
+            "width": 97.43694860439068,
+            "height": 146.155422906586,
+            "mirror": true,
+            "uniformScale": 0.13458142072429652,
+            "sourceHead": [
+              459.5,
+              105.042
+            ],
+            "sourceFoot": [
+              371.08678756476684,
+              1071
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-02-pose-1.webp",
+            "sourcePng": "official-02-pose-1.png",
+            "x": 178.7262448263796,
+            "y": 131.86329840427842,
+            "width": 97.43694860439068,
+            "height": 146.155422906586,
+            "mirror": true,
+            "uniformScale": 0.13458142072429652,
+            "sourceHead": [
+              291.0,
+              105.042
+            ],
+            "sourceFoot": [
+              201.90348837209302,
+              1071
+            ]
+          }
+        ],
+        "fixedHeadX": 237.0,
+        "fixedHeadY": 164.0,
+        "fixedFootY": 276
+      },
+      {
+        "id": "crowd-west-15",
+        "approvedTemplate": 1,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-approved.webp",
+            "sourcePng": "official-approved.png",
+            "x": 159.99210354559077,
+            "y": 122.61327597142935,
+            "width": 54.85232067510549,
+            "height": 159.05977956114467,
+            "mirror": false,
+            "uniformScale": 0.11950396661243026,
+            "sourceHead": [
+              226.0,
+              229.17
+            ],
+            "sourceFoot": [
+              331.95652173913044,
+              1317
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-01-pose-1.webp",
+            "sourcePng": "official-01-pose-1.png",
+            "x": 152.39646959932753,
+            "y": 121.09694592322779,
+            "width": 61.46679742224713,
+            "height": 165.96035304006725,
+            "mirror": false,
+            "uniformScale": 0.11382740263379099,
+            "sourceHead": [
+              304.0,
+              253.92
+            ],
+            "sourceFoot": [
+              419.6372881355932,
+              1396
+            ]
+          }
+        ],
+        "fixedHeadX": 187.0,
+        "fixedHeadY": 168.0,
+        "fixedFootY": 280
+      },
+      {
+        "id": "crowd-west-11",
+        "approvedTemplate": 3,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-03-pose-0.webp",
+            "sourcePng": "official-03-pose-0.png",
+            "x": 71.84040622387177,
+            "y": 166.2619654546567,
+            "width": 86.68964251483574,
+            "height": 159.1961172176112,
+            "mirror": false,
+            "uniformScale": 0.13255297020617085,
+            "sourceHead": [
+              393.5,
+              209.26
+            ],
+            "sourceFoot": [
+              410.31570512820514,
+              1190
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-03-pose-1.webp",
+            "sourcePng": "official-03-pose-1.png",
+            "x": 80.13742663474457,
+            "y": 167.59184168257718,
+            "width": 86.01792082108474,
+            "height": 157.72140901698134,
+            "mirror": false,
+            "uniformScale": 0.13132506995585458,
+            "sourceHead": [
+              334.0,
+              201.09
+            ],
+            "sourceFoot": [
+              334.6833910034602,
+              1191
+            ]
+          }
+        ],
+        "fixedHeadX": 124.0,
+        "fixedHeadY": 212.0,
+        "fixedFootY": 324
+      }
+    ],
+    "policy": "Reuse accepted revision-2.1.2 lossless portrait poses. Uniform per-person scale, native head and foot anchors; rest head/feet fixed by renderer. Native foreground attendants/poles preserved. New clean plate only inside cleared original-person holes."
+  },
+  "right": {
+    "ids": [
+      "crowd-center-01",
+      "crowd-center-02",
+      "crowd-center-03",
+      "crowd-center-04",
+      "crowd-center-05",
+      "crowd-center-06",
+      "crowd-center-07",
+      "crowd-center-08",
+      "crowd-center-09",
+      "crowd-center-10",
+      "crowd-center-11",
+      "crowd-center-12",
+      "crowd-center-13",
+      "crowd-center-14",
+      "crowd-center-15",
+      "crowd-center-16"
+    ],
+    "crop": [
+      1290,
+      1300,
+      1740,
+      1660
+    ],
+    "sprites": [
+      {
+        "id": "crowd-center-09",
+        "approvedTemplate": 8,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-08-pose-0.webp",
+            "sourcePng": "official-08-pose-0.png",
+            "x": 193.0862798172898,
+            "y": 46.65115885636948,
+            "width": 93.46980206394856,
+            "height": 159.86085264760615,
+            "mirror": true,
+            "uniformScale": 0.1374555912705126,
+            "sourceHead": [
+              426.0,
+              206.24
+            ],
+            "sourceFoot": [
+              463.3717472118959,
+              1152
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-08-pose-1.webp",
+            "sourcePng": "official-08-pose-1.png",
+            "x": 177.01879842499682,
+            "y": 46.62115246200091,
+            "width": 92.4679283627588,
+            "height": 160.03006054447692,
+            "mirror": true,
+            "uniformScale": 0.13760108387315298,
+            "sourceHead": [
+              301.5,
+              206.24
+            ],
+            "sourceFoot": [
+              295.45166959578205,
+              1151
+            ]
+          }
+        ],
+        "fixedHeadX": 228.0,
+        "fixedHeadY": 93.0,
+        "fixedFootY": 205
+      },
+      {
+        "id": "crowd-center-08",
+        "approvedTemplate": 3,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-03-pose-0.webp",
+            "sourcePng": "official-03-pose-0.png",
+            "x": 163.4699512612925,
+            "y": 55.26196545465669,
+            "width": 86.68964251483574,
+            "height": 159.1961172176112,
+            "mirror": true,
+            "uniformScale": 0.13255297020617085,
+            "sourceHead": [
+              393.5,
+              209.26
+            ],
+            "sourceFoot": [
+              410.31570512820514,
+              1190
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-03-pose-1.webp",
+            "sourcePng": "official-03-pose-1.png",
+            "x": 155.84465254417069,
+            "y": 56.59184168257718,
+            "width": 86.01792082108474,
+            "height": 157.72140901698134,
+            "mirror": true,
+            "uniformScale": 0.13132506995585458,
+            "sourceHead": [
+              334.0,
+              201.09
+            ],
+            "sourceFoot": [
+              334.6833910034602,
+              1191
+            ]
+          }
+        ],
+        "fixedHeadX": 198.0,
+        "fixedHeadY": 101.0,
+        "fixedFootY": 213
+      },
+      {
+        "id": "crowd-center-12",
+        "approvedTemplate": 9,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-09-pose-0.webp",
+            "sourcePng": "official-09-pose-0.png",
+            "x": 257.56257774375655,
+            "y": 55.491149172327994,
+            "width": 119.41441010429625,
+            "height": 159.219213472395,
+            "mirror": true,
+            "uniformScale": 0.15548751315663575,
+            "sourceHead": [
+              501.5,
+              176.92000000000002
+            ],
+            "sourceFoot": [
+              577.5934959349594,
+              1013
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-09-pose-1.webp",
+            "sourcePng": "official-09-pose-1.png",
+            "x": 227.42694880970902,
+            "y": 55.38369379181577,
+            "width": 119.49587676987709,
+            "height": 159.32783569316945,
+            "mirror": true,
+            "uniformScale": 0.1555935895441108,
+            "sourceHead": [
+              308.0,
+              177.49
+            ],
+            "sourceFoot": [
+              385.1841155234657,
+              1013
+            ]
+          }
+        ],
+        "fixedHeadX": 299.0,
+        "fixedHeadY": 101.0,
+        "fixedFootY": 213
+      },
+      {
+        "id": "crowd-center-14",
+        "approvedTemplate": 1,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-approved.webp",
+            "sourcePng": "official-approved.png",
+            "x": 298.1555757793038,
+            "y": 58.613275971429346,
+            "width": 54.85232067510549,
+            "height": 159.05977956114467,
+            "mirror": true,
+            "uniformScale": 0.11950396661243026,
+            "sourceHead": [
+              226.0,
+              229.17
+            ],
+            "sourceFoot": [
+              331.95652173913044,
+              1317
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-01-pose-1.webp",
+            "sourcePng": "official-01-pose-1.png",
+            "x": 299.13673297842536,
+            "y": 57.09694592322779,
+            "width": 61.46679742224713,
+            "height": 165.96035304006725,
+            "mirror": true,
+            "uniformScale": 0.11382740263379099,
+            "sourceHead": [
+              304.0,
+              253.92
+            ],
+            "sourceFoot": [
+              419.6372881355932,
+              1396
+            ]
+          }
+        ],
+        "fixedHeadX": 326.0,
+        "fixedHeadY": 104.0,
+        "fixedFootY": 216
+      },
+      {
+        "id": "crowd-center-05",
+        "approvedTemplate": 9,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-09-pose-0.webp",
+            "sourcePng": "official-09-pose-0.png",
+            "x": 89.56257774375658,
+            "y": 63.491149172327994,
+            "width": 119.41441010429625,
+            "height": 159.219213472395,
+            "mirror": true,
+            "uniformScale": 0.15548751315663575,
+            "sourceHead": [
+              501.5,
+              176.92000000000002
+            ],
+            "sourceFoot": [
+              577.5934959349594,
+              1013
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-09-pose-1.webp",
+            "sourcePng": "official-09-pose-1.png",
+            "x": 59.42694880970903,
+            "y": 63.38369379181577,
+            "width": 119.49587676987709,
+            "height": 159.32783569316945,
+            "mirror": true,
+            "uniformScale": 0.1555935895441108,
+            "sourceHead": [
+              308.0,
+              177.49
+            ],
+            "sourceFoot": [
+              385.1841155234657,
+              1013
+            ]
+          }
+        ],
+        "fixedHeadX": 131.0,
+        "fixedHeadY": 109.0,
+        "fixedFootY": 221
+      },
+      {
+        "id": "crowd-center-15",
+        "approvedTemplate": 5,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-05-pose-0.webp",
+            "sourcePng": "official-05-pose-0.png",
+            "x": 325.9614446471396,
+            "y": 71.11982700309508,
+            "width": 87.26709984217108,
+            "height": 159.74542398589787,
+            "mirror": true,
+            "uniformScale": 0.13323221349949782,
+            "sourceHead": [
+              377.0,
+              209.26
+            ],
+            "sourceFoot": [
+              481.48812095032395,
+              1185
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-05-pose-1.webp",
+            "sourcePng": "official-05-pose-1.png",
+            "x": 317.65441470235714,
+            "y": 71.05619922759357,
+            "width": 87.49500599280863,
+            "height": 159.67505659874817,
+            "mirror": true,
+            "uniformScale": 0.13317352510320948,
+            "sourceHead": [
+              316.5,
+              209.82999999999998
+            ],
+            "sourceFoot": [
+              442.84054054054053,
+              1186
+            ]
+          }
+        ],
+        "fixedHeadX": 363.0,
+        "fixedHeadY": 117.0,
+        "fixedFootY": 229
+      },
+      {
+        "id": "crowd-center-04",
+        "approvedTemplate": 7,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-07-pose-0.webp",
+            "sourcePng": "official-07-pose-0.png",
+            "x": 73.40949753434163,
+            "y": 74.96709977449757,
+            "width": 55.83869555520679,
+            "height": 164.9389161015339,
+            "mirror": true,
+            "uniformScale": 0.10738210683693614,
+            "sourceHead": [
+              291.0,
+              270.37
+            ],
+            "sourceFoot": [
+              278.9068150208623,
+              1481
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-07-pose-1.webp",
+            "sourcePng": "official-07-pose-1.png",
+            "x": 71.3912167906044,
+            "y": 74.99106162772466,
+            "width": 54.07591426425559,
+            "height": 164.8027863291599,
+            "mirror": true,
+            "uniformScale": 0.1072934806830468,
+            "sourceHead": [
+              256.0,
+              270.37
+            ],
+            "sourceFoot": [
+              163.36402569593147,
+              1482
+            ]
+          }
+        ],
+        "fixedHeadX": 98.0,
+        "fixedHeadY": 122.0,
+        "fixedFootY": 234
+      },
+      {
+        "id": "crowd-center-10",
+        "approvedTemplate": 10,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-10-pose-0.webp",
+            "sourcePng": "official-10-pose-0.png",
+            "x": 221.00374418440362,
+            "y": 79.95619001483547,
+            "width": 85.54098923168527,
+            "height": 158.22459051136877,
+            "mirror": true,
+            "uniformScale": 0.13119783624491607,
+            "sourceHead": [
+              400.5,
+              206.13
+            ],
+            "sourceFoot": [
+              557.4617834394904,
+              1197
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-10-pose-1.webp",
+            "sourcePng": "official-10-pose-1.png",
+            "x": 207.5559659692997,
+            "y": 79.95619001483547,
+            "width": 85.6721870679302,
+            "height": 158.22459051136877,
+            "mirror": true,
+            "uniformScale": 0.13119783624491607,
+            "sourceHead": [
+              299.0,
+              206.13
+            ],
+            "sourceFoot": [
+              463.49152542372883,
+              1197
+            ]
+          }
+        ],
+        "fixedHeadX": 254.0,
+        "fixedHeadY": 125.0,
+        "fixedFootY": 237
+      },
+      {
+        "id": "crowd-center-11",
+        "approvedTemplate": 7,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-07-pose-0.webp",
+            "sourcePng": "official-07-pose-0.png",
+            "x": 248.40949753434163,
+            "y": 80.96709977449757,
+            "width": 55.83869555520679,
+            "height": 164.9389161015339,
+            "mirror": true,
+            "uniformScale": 0.10738210683693614,
+            "sourceHead": [
+              291.0,
+              270.37
+            ],
+            "sourceFoot": [
+              278.9068150208623,
+              1481
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-07-pose-1.webp",
+            "sourcePng": "official-07-pose-1.png",
+            "x": 246.3912167906044,
+            "y": 80.99106162772466,
+            "width": 54.07591426425559,
+            "height": 164.8027863291599,
+            "mirror": true,
+            "uniformScale": 0.1072934806830468,
+            "sourceHead": [
+              256.0,
+              270.37
+            ],
+            "sourceFoot": [
+              163.36402569593147,
+              1482
+            ]
+          }
+        ],
+        "fixedHeadX": 273.0,
+        "fixedHeadY": 128.0,
+        "fixedFootY": 240
+      },
+      {
+        "id": "crowd-center-06",
+        "approvedTemplate": 5,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-05-pose-0.webp",
+            "sourcePng": "official-05-pose-0.png",
+            "x": 130.96144464713961,
+            "y": 90.11982700309508,
+            "width": 87.26709984217108,
+            "height": 159.74542398589787,
+            "mirror": true,
+            "uniformScale": 0.13323221349949782,
+            "sourceHead": [
+              377.0,
+              209.26
+            ],
+            "sourceFoot": [
+              481.48812095032395,
+              1185
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-05-pose-1.webp",
+            "sourcePng": "official-05-pose-1.png",
+            "x": 122.65441470235717,
+            "y": 90.05619922759357,
+            "width": 87.49500599280863,
+            "height": 159.67505659874817,
+            "mirror": true,
+            "uniformScale": 0.13317352510320948,
+            "sourceHead": [
+              316.5,
+              209.82999999999998
+            ],
+            "sourceFoot": [
+              442.84054054054053,
+              1186
+            ]
+          }
+        ],
+        "fixedHeadX": 168.0,
+        "fixedHeadY": 136.0,
+        "fixedFootY": 248
+      },
+      {
+        "id": "crowd-center-16",
+        "approvedTemplate": 3,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-03-pose-0.webp",
+            "sourcePng": "official-03-pose-0.png",
+            "x": 361.4699512612925,
+            "y": 90.26196545465669,
+            "width": 86.68964251483574,
+            "height": 159.1961172176112,
+            "mirror": true,
+            "uniformScale": 0.13255297020617085,
+            "sourceHead": [
+              393.5,
+              209.26
+            ],
+            "sourceFoot": [
+              410.31570512820514,
+              1190
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-03-pose-1.webp",
+            "sourcePng": "official-03-pose-1.png",
+            "x": 353.8446525441707,
+            "y": 91.59184168257718,
+            "width": 86.01792082108474,
+            "height": 157.72140901698134,
+            "mirror": true,
+            "uniformScale": 0.13132506995585458,
+            "sourceHead": [
+              334.0,
+              201.09
+            ],
+            "sourceFoot": [
+              334.6833910034602,
+              1191
+            ]
+          }
+        ],
+        "fixedHeadX": 396.0,
+        "fixedHeadY": 136.0,
+        "fixedFootY": 248
+      },
+      {
+        "id": "crowd-center-02",
+        "approvedTemplate": 3,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-03-pose-0.webp",
+            "sourcePng": "official-03-pose-0.png",
+            "x": 55.46995126129249,
+            "y": 99.26196545465669,
+            "width": 86.68964251483574,
+            "height": 159.1961172176112,
+            "mirror": true,
+            "uniformScale": 0.13255297020617085,
+            "sourceHead": [
+              393.5,
+              209.26
+            ],
+            "sourceFoot": [
+              410.31570512820514,
+              1190
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-03-pose-1.webp",
+            "sourcePng": "official-03-pose-1.png",
+            "x": 47.84465254417068,
+            "y": 100.59184168257718,
+            "width": 86.01792082108474,
+            "height": 157.72140901698134,
+            "mirror": true,
+            "uniformScale": 0.13132506995585458,
+            "sourceHead": [
+              334.0,
+              201.09
+            ],
+            "sourceFoot": [
+              334.6833910034602,
+              1191
+            ]
+          }
+        ],
+        "fixedHeadX": 90.0,
+        "fixedHeadY": 145.0,
+        "fixedFootY": 257
+      },
+      {
+        "id": "crowd-center-03",
+        "approvedTemplate": 2,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-02-pose-0.webp",
+            "sourcePng": "official-02-pose-0.png",
+            "x": 43.15983717718575,
+            "y": 118.86329840427842,
+            "width": 97.43694860439068,
+            "height": 146.155422906586,
+            "mirror": false,
+            "uniformScale": 0.13458142072429652,
+            "sourceHead": [
+              459.5,
+              105.042
+            ],
+            "sourceFoot": [
+              371.08678756476684,
+              1071
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-02-pose-1.webp",
+            "sourcePng": "official-02-pose-1.png",
+            "x": 65.83680656922971,
+            "y": 118.86329840427842,
+            "width": 97.43694860439068,
+            "height": 146.155422906586,
+            "mirror": false,
+            "uniformScale": 0.13458142072429652,
+            "sourceHead": [
+              291.0,
+              105.042
+            ],
+            "sourceFoot": [
+              201.90348837209302,
+              1071
+            ]
+          }
+        ],
+        "fixedHeadX": 105.0,
+        "fixedHeadY": 151.0,
+        "fixedFootY": 263
+      },
+      {
+        "id": "crowd-center-07",
+        "approvedTemplate": 6,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-06-pose-0.webp",
+            "sourcePng": "official-06-pose-0.png",
+            "x": 161.03032551788624,
+            "y": 120.77476076865707,
+            "width": 76.93620621203745,
+            "height": 146.1546738698893,
+            "mirror": false,
+            "uniformScale": 0.1205896649091496,
+            "sourceHead": [
+              389.5,
+              117.964
+            ],
+            "sourceFoot": [
+              385.77759197324417,
+              1196
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-06-pose-1.webp",
+            "sourcePng": "official-06-pose-1.png",
+            "x": 174.3866636516298,
+            "y": 120.78794405376652,
+            "width": 79.39494141066655,
+            "height": 146.0192245671136,
+            "mirror": false,
+            "uniformScale": 0.12047790805867459,
+            "sourceHead": [
+              279.0,
+              117.964
+            ],
+            "sourceFoot": [
+              277.14495114006513,
+              1197
+            ]
+          }
+        ],
+        "fixedHeadX": 208.0,
+        "fixedHeadY": 153.0,
+        "fixedFootY": 265
+      },
+      {
+        "id": "crowd-center-13",
+        "approvedTemplate": 4,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-04-pose-0.webp",
+            "sourcePng": "official-04-pose-0.png",
+            "x": 258.51772476074945,
+            "y": 108.75764927887855,
+            "width": 89.76951071572988,
+            "height": 159.05108505189378,
+            "mirror": true,
+            "uniformScale": 0.13478905512872355,
+            "sourceHead": [
+              380.5,
+              209.53
+            ],
+            "sourceFoot": [
+              506.3993993993994,
+              1174
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-04-pose-1.webp",
+            "sourcePng": "official-04-pose-1.png",
+            "x": 249.95861976007546,
+            "y": 108.75764927887855,
+            "width": 89.90429977085861,
+            "height": 159.05108505189378,
+            "mirror": true,
+            "uniformScale": 0.13478905512872355,
+            "sourceHead": [
+              318.0,
+              209.53
+            ],
+            "sourceFoot": [
+              439.6825842696629,
+              1174
+            ]
+          }
+        ],
+        "fixedHeadX": 297.0,
+        "fixedHeadY": 155.0,
+        "fixedFootY": 267
+      },
+      {
+        "id": "crowd-center-01",
+        "approvedTemplate": 6,
+        "poses": [
+          {
+            "path": "expansion-art/revision-2.1.2/official-06-pose-0.webp",
+            "sourcePng": "official-06-pose-0.png",
+            "x": 14.030325517886233,
+            "y": 133.77476076865707,
+            "width": 76.93620621203745,
+            "height": 146.1546738698893,
+            "mirror": false,
+            "uniformScale": 0.1205896649091496,
+            "sourceHead": [
+              389.5,
+              117.964
+            ],
+            "sourceFoot": [
+              385.77759197324417,
+              1196
+            ]
+          },
+          {
+            "path": "expansion-art/revision-2.1.2/official-06-pose-1.webp",
+            "sourcePng": "official-06-pose-1.png",
+            "x": 27.38666365162979,
+            "y": 133.78794405376652,
+            "width": 79.39494141066655,
+            "height": 146.0192245671136,
+            "mirror": false,
+            "uniformScale": 0.12047790805867459,
+            "sourceHead": [
+              279.0,
+              117.964
+            ],
+            "sourceFoot": [
+              277.14495114006513,
+              1197
+            ]
+          }
+        ],
+        "fixedHeadX": 61.0,
+        "fixedHeadY": 166.0,
+        "fixedFootY": 278
+      }
+    ],
+    "policy": "Reuse accepted revision-2.1.2 lossless portrait poses. Uniform per-person scale, native head and foot anchors; rest head/feet fixed by renderer. Native foreground attendants/poles preserved. New clean plate only inside cleared original-person holes."
+  }
+}

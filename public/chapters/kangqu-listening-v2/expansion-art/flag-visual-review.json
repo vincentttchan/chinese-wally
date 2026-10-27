@@ -1,0 +1,72 @@
+{
+  "flags-front-1": {
+    "approved": true,
+    "date": "2026-10-23",
+    "sha256": {
+      "rest": "8adfd0e000a9da8f791f2abd0aa66e90cb62168545e4aa21c53b1966a6a6f214",
+      "motion-a": "df52c30d9c0838ed9f06bbdcc7010d4b4bb23f856bc0ba7e90b812cbc38e8e33",
+      "clean": "97071692f0e712513cbd46d0ecbf227b4c58afabf545d176b41672982afc71f7"
+    },
+    "review": "Original, representative rest/mid/closure contact viewed; transparent-gutter splitting corrected cross-row feathers; whole-person head/foot uniform registration corrected head clipping. Rear foliage and roofs remain native fixed occluders. This is game interpretation, not exact reconstruction.",
+    "knownLimitations": [
+      "Two complete body poses alternate with staggered timing, rather than continuous joint motion.",
+      "Generated colors and small proportions differ from the original; return restores the original pixels."
+    ]
+  },
+  "flags-front-2": {
+    "approved": true,
+    "date": "2026-10-23",
+    "sha256": {
+      "rest": "79afa920f15c612a7e111eeeae6f9b9867a03094e2da8bb4700ea6bbbe8eaaa1",
+      "motion-a": "923cf8de528eb3548b4a9ff81da8dc2de3bfaf7a1de1a9bc3033a68424225438",
+      "clean": "6b435e36bf940adce633f179ce8ba2cc0b0a1efd7704fd2a411705b918717860"
+    },
+    "review": "Original, representative rest/mid/closure contact viewed; transparent-gutter splitting corrected cross-row feathers; whole-person head/foot uniform registration corrected head clipping. Rear foliage and roofs remain native fixed occluders. This is game interpretation, not exact reconstruction.",
+    "knownLimitations": [
+      "Two complete body poses alternate with staggered timing, rather than continuous joint motion.",
+      "Generated colors and small proportions differ from the original; return restores the original pixels."
+    ]
+  },
+  "flags-front-3": {
+    "approved": true,
+    "date": "2026-10-23",
+    "sha256": {
+      "rest": "0685773b168a99a83b232635efeef8f2b6a324c23169cf7713178deebc1353bc",
+      "motion-a": "07d0fcec608e60fc1ac7220e6c023f63e294dc3bf16dae63261aed16367c91a3",
+      "clean": "5155af5ab826373c36d2021e40310b680943bc05c2cb452e403f8067027860a1"
+    },
+    "review": "Original, representative rest/mid/closure contact viewed; transparent-gutter splitting corrected cross-row feathers; whole-person head/foot uniform registration corrected head clipping. Rear foliage and roofs remain native fixed occluders. This is game interpretation, not exact reconstruction.",
+    "knownLimitations": [
+      "Two complete body poses alternate with staggered timing, rather than continuous joint motion.",
+      "Generated colors and small proportions differ from the original; return restores the original pixels."
+    ]
+  },
+  "flags-rear-1": {
+    "approved": true,
+    "date": "2026-10-23",
+    "sha256": {
+      "rest": "95bf371255a765dcd6590dc43b626991426e7a6f94c549d2041cff0b6ecf1a4e",
+      "motion-a": "f776eccb838e138782bfb5685b5ea3e575f94310e88b4cd8334f326c08002cb4",
+      "clean": "a0f021ffdad34dc031b2df14ed1df9203362b5cccf79e6def1c646c67a124bfb"
+    },
+    "review": "Original, representative rest/mid/closure contact viewed; transparent-gutter splitting corrected cross-row feathers; whole-person head/foot uniform registration corrected head clipping. Rear foliage and roofs remain native fixed occluders. This is game interpretation, not exact reconstruction.",
+    "knownLimitations": [
+      "Two complete body poses alternate with staggered timing, rather than continuous joint motion.",
+      "Generated colors and small proportions differ from the original; return restores the original pixels."
+    ]
+  },
+  "flags-rear-2": {
+    "approved": true,
+    "date": "2026-10-23",
+    "sha256": {
+      "rest": "611612ddb54bc9bee60fedd0cbc9b0e925a3440191c9d83ad4a5b690e655e5b1",
+      "motion-a": "fac12438de8c52d02f115375c921d3e294126b743792257b8ccf3a37714329f1",
+      "clean": "e6db84323508bbe4cd51017a70bdb92e11a8f3562cdc57ddbccf8841f0662caf"
+    },
+    "review": "Original, representative rest/mid/closure contact viewed; transparent-gutter splitting corrected cross-row feathers; whole-person head/foot uniform registration corrected head clipping. Rear foliage and roofs remain native fixed occluders. This is game interpretation, not exact reconstruction.",
+    "knownLimitations": [
+      "Two complete body poses alternate with staggered timing, rather than continuous joint motion.",
+      "Generated colors and small proportions differ from the original; return restores the original pixels."
+    ]
+  }
+}

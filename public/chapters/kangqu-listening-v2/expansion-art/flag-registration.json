@@ -1,0 +1,225 @@
+{
+  "front": {
+    "ids": [
+      "red-front-west-01",
+      "red-front-west-02",
+      "red-front-west-03",
+      "red-front-west-04",
+      "red-front-west-05",
+      "red-front-west-06",
+      "red-front-west-07",
+      "red-front-west-08",
+      "red-front-west-09",
+      "red-front-west-10",
+      "red-front-west-11",
+      "red-front-west-12",
+      "red-front-west-13",
+      "red-front-west-14",
+      "red-left",
+      "hand-at-hat",
+      "red-right",
+      "red-further-right",
+      "red-front-center-03",
+      "red-front-center-04",
+      "red-front-center-05",
+      "red-front-center-06",
+      "red-front-center-07",
+      "red-front-center-08",
+      "red-front-center-09",
+      "red-front-center-10",
+      "red-front-center-11",
+      "red-front-center-12",
+      "red-front-center-13",
+      "red-front-center-14",
+      "red-front-center-15",
+      "red-front-center-16",
+      "red-front-east-01",
+      "red-front-east-02",
+      "red-front-east-03",
+      "red-front-east-04",
+      "red-front-east-05",
+      "red-front-east-06",
+      "red-front-east-07",
+      "red-front-east-08",
+      "red-front-east-09",
+      "red-front-east-10",
+      "red-front-east-11",
+      "red-front-east-12",
+      "red-front-east-13",
+      "red-front-east-14",
+      "red-front-east-15",
+      "red-front-east-16"
+    ],
+    "groups": [
+      {
+        "id": "flags-front-1",
+        "ids": [
+          "red-front-west-01",
+          "red-front-west-02",
+          "red-front-west-03",
+          "red-front-west-04",
+          "red-front-west-05",
+          "red-front-west-06",
+          "red-front-west-07",
+          "red-front-west-08",
+          "red-front-west-09",
+          "red-front-west-10",
+          "red-front-west-11",
+          "red-front-west-12",
+          "red-front-west-13",
+          "red-front-west-14",
+          "red-left",
+          "hand-at-hat"
+        ],
+        "crop": {
+          "x": 0,
+          "y": 1260,
+          "width": 1528,
+          "height": 505
+        }
+      },
+      {
+        "id": "flags-front-2",
+        "ids": [
+          "red-right",
+          "red-further-right",
+          "red-front-center-03",
+          "red-front-center-04",
+          "red-front-center-05",
+          "red-front-center-06",
+          "red-front-center-07",
+          "red-front-center-08",
+          "red-front-center-09",
+          "red-front-center-10",
+          "red-front-center-11",
+          "red-front-center-12",
+          "red-front-center-13",
+          "red-front-center-14",
+          "red-front-center-15",
+          "red-front-center-16"
+        ],
+        "crop": {
+          "x": 1476,
+          "y": 1260,
+          "width": 1501,
+          "height": 505
+        }
+      },
+      {
+        "id": "flags-front-3",
+        "ids": [
+          "red-front-east-01",
+          "red-front-east-02",
+          "red-front-east-03",
+          "red-front-east-04",
+          "red-front-east-05",
+          "red-front-east-06",
+          "red-front-east-07",
+          "red-front-east-08",
+          "red-front-east-09",
+          "red-front-east-10",
+          "red-front-east-11",
+          "red-front-east-12",
+          "red-front-east-13",
+          "red-front-east-14",
+          "red-front-east-15",
+          "red-front-east-16"
+        ],
+        "crop": {
+          "x": 2983,
+          "y": 1260,
+          "width": 1487,
+          "height": 505
+        }
+      }
+    ]
+  },
+  "rear": {
+    "ids": [
+      "red-rear-west-01",
+      "red-rear-west-02",
+      "red-rear-west-03",
+      "red-rear-west-04",
+      "red-rear-west-05",
+      "red-rear-west-06",
+      "red-rear-west-07",
+      "red-rear-west-08",
+      "red-rear-west-09",
+      "red-rear-center-01",
+      "red-rear-center-02",
+      "red-rear-center-03",
+      "red-rear-center-04",
+      "red-rear-center-05",
+      "red-rear-center-06",
+      "red-rear-center-07",
+      "red-rear-center-08",
+      "red-rear-center-09",
+      "red-rear-center-10",
+      "red-rear-center-11",
+      "red-rear-center-12",
+      "red-rear-east-01",
+      "red-rear-east-02",
+      "red-rear-east-03",
+      "red-rear-east-04",
+      "red-rear-east-05",
+      "red-rear-east-06",
+      "red-rear-east-07",
+      "red-rear-east-08",
+      "red-rear-east-09"
+    ],
+    "groups": [
+      {
+        "id": "flags-rear-1",
+        "ids": [
+          "red-rear-west-01",
+          "red-rear-west-02",
+          "red-rear-west-03",
+          "red-rear-west-04",
+          "red-rear-west-05",
+          "red-rear-west-06",
+          "red-rear-west-07",
+          "red-rear-west-08",
+          "red-rear-west-09",
+          "red-rear-center-01",
+          "red-rear-center-02",
+          "red-rear-center-03",
+          "red-rear-center-04",
+          "red-rear-center-05",
+          "red-rear-center-06",
+          "red-rear-center-07"
+        ],
+        "crop": {
+          "x": 14,
+          "y": 1760,
+          "width": 2270,
+          "height": 490
+        }
+      },
+      {
+        "id": "flags-rear-2",
+        "ids": [
+          "red-rear-center-08",
+          "red-rear-center-09",
+          "red-rear-center-10",
+          "red-rear-center-11",
+          "red-rear-center-12",
+          "red-rear-east-01",
+          "red-rear-east-02",
+          "red-rear-east-03",
+          "red-rear-east-04",
+          "red-rear-east-05",
+          "red-rear-east-06",
+          "red-rear-east-07",
+          "red-rear-east-08",
+          "red-rear-east-09"
+        ],
+        "crop": {
+          "x": 2300,
+          "y": 1760,
+          "width": 1698,
+          "height": 490
+        }
+      }
+    ]
+  }
+}

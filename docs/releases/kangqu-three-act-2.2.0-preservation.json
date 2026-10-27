@@ -1,0 +1,1019 @@
+{
+  "version": "2.2.0",
+  "baseVersion": "2.1.14",
+  "baseIndexSha256": "f654f205b7271baa98473d8912a4f2c42d4ec10a54739e77f927d8ec7e090523",
+  "basePath": "public/chapters/kangqu-listening-v2",
+  "archivePath": "public/chapters/kangqu-listening-v2-2.1.14",
+  "entry": "public/chapters/kangqu-listening-v2-2.2.0/index.html",
+  "newIndexSha256": "65aafa12fddf785287b4e3424525eb0dee232fcfa5e718e258c79510b9aed022",
+  "preservedFiles": {
+    "index.html": "f654f205b7271baa98473d8912a4f2c42d4ec10a54739e77f927d8ec7e090523",
+    "fresh.html": "e011fee67db055130663fc2876694163b52e94e38543241c52db11c9f1e09614",
+    "data/version-manifest.json": "dd3595bcb60c6d5d2459990f76497d31b4fe166e4600d3675785335d277d27e7",
+    "data/source-note.json": "5fc2308a648b96d1da53d75d871926f72e0d0c3781a41d4b2e496c73a7f20cfe"
+  },
+  "sharedAssets": {
+    "base": "chapters/kangqu-listening-v2/",
+    "handling": "Read-only references; no asset was rewritten.",
+    "assetHashes": [
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/recognition/seated-drum-head-tracing-v3.png",
+        "path": "recognition/seated-drum-head-tracing-v3.png",
+        "sha256": "95416c5260671b1b9e2e3c46321ea3cbcd7e5efd6fd4c498e72bd0f6f3ba5ecf",
+        "bytes": 1041429
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/recognition/seated-drum-head-source.png",
+        "path": "recognition/seated-drum-head-source.png",
+        "sha256": "4068996a12ba20c7e601f2156c05eec2d164b2fe870e85249cb2c7960824fa31",
+        "bytes": 3604
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/animation/group-master.png",
+        "path": "animation/group-master.png",
+        "sha256": "3c48b43c3775526adaf0e5c83849da1ec2d10a569737831cda4619e5e150e33e",
+        "bytes": 1707038
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/animation/group-rest.png",
+        "path": "animation/group-rest.png",
+        "sha256": "7fbbb86a85fbc63d26101ac46f298dfa5c4c94f50122207f4f9124dc3519e88e",
+        "bytes": 321747
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/animation/original-reference.png",
+        "path": "animation/original-reference.png",
+        "sha256": "dfddd8e03521d761d3b089cad8c9f281e0bae0ce0ab369e860d6a2428f873b57",
+        "bytes": 209693
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/animation/fixed-background.png",
+        "path": "animation/fixed-background.png",
+        "sha256": "6e55285e9b3908c88afdedcb961fb8bdb02e943f253eaf74cf791dd8f8849b38",
+        "bytes": 223602
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/animation/foreground.png",
+        "path": "animation/foreground.png",
+        "sha256": "19e104bcd6e243d622465e748989d7bd63e08f0bca51238ae6ad7ee72b2d12d6",
+        "bytes": 209702
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/animation/playback.json",
+        "path": "animation/playback.json",
+        "sha256": "b67aeda09caeda9e2d6293996f8be1c6024ef879e5365d1eaeff5aef12f9afa6",
+        "bytes": 329
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/animation/registration.json",
+        "path": "animation/registration.json",
+        "sha256": "872f6fa0fa0025c5069bf5b7583de810ecfa5addca67ca9bbfaa21352708ee7e",
+        "bytes": 1113
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/animation/frames/group-01.png",
+        "path": "animation/frames/group-01.png",
+        "sha256": "7fbbb86a85fbc63d26101ac46f298dfa5c4c94f50122207f4f9124dc3519e88e",
+        "bytes": 321747
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/animation/frames/group-02.png",
+        "path": "animation/frames/group-02.png",
+        "sha256": "3040d26270e7a44a7d9f2e5f89ff61483ab145c4b5394461854e95ffab7709e1",
+        "bytes": 332793
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/animation/frames/group-03.png",
+        "path": "animation/frames/group-03.png",
+        "sha256": "b093cbd8fa6f592626f39b0c226e0f6e537a73a76c0eabb9a7ca6a13398bac3c",
+        "bytes": 323859
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/animation/frames/group-04.png",
+        "path": "animation/frames/group-04.png",
+        "sha256": "480b88314d33c7aced0abd9a6f5bff6a8ed1bcf758d2542088db2acba0b0b9ae",
+        "bytes": 330863
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/animation/frames/group-05.png",
+        "path": "animation/frames/group-05.png",
+        "sha256": "750f25c23974102dec47b801a71d50a4b86bb49a1aa03569c2642cec7a1b1ffe",
+        "bytes": 332341
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/animation/frames/group-06.png",
+        "path": "animation/frames/group-06.png",
+        "sha256": "7fbbb86a85fbc63d26101ac46f298dfa5c4c94f50122207f4f9124dc3519e88e",
+        "bytes": 321747
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/brocade/collection.png",
+        "path": "expansion-art/brocade/collection.png",
+        "sha256": "64faea988ccb98a93b53da50b801cae9d8a92abd3d36aaf74f73821dc078f04f",
+        "bytes": 513820
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/brocade/frame-01.png",
+        "path": "expansion-art/brocade/frame-01.png",
+        "sha256": "8e8d0a0fc703bc8cc2369d25be852b093397f886169e4d1d29a1468ae128efac",
+        "bytes": 514139
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/brocade/frame-02.png",
+        "path": "expansion-art/brocade/frame-02.png",
+        "sha256": "d7dbaca5f7dfb0e4aec248d93b4ca65accfb5d172519feb739976cc16526bed2",
+        "bytes": 508935
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/brocade/frame-03.png",
+        "path": "expansion-art/brocade/frame-03.png",
+        "sha256": "ee01c5ee3cc84190845e45b0b173179aa223d3170ce9753e8363d3338332ee49",
+        "bytes": 512576
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/brocade/frame-04.png",
+        "path": "expansion-art/brocade/frame-04.png",
+        "sha256": "8e8d0a0fc703bc8cc2369d25be852b093397f886169e4d1d29a1468ae128efac",
+        "bytes": 514139
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/brocade/original.png",
+        "path": "expansion-art/brocade/original.png",
+        "sha256": "b3901961e8fd0503da09c3b6141d604e14b7c18632ca7be63eb85806379d935a",
+        "bytes": 250476
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flag-registration.json",
+        "path": "expansion-art/flag-registration.json",
+        "sha256": "35c7f3b664266874e916619f9cda39cac767adb65eec84e8ee4791af61049eca",
+        "bytes": 5603
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flag-visual-review.json",
+        "path": "expansion-art/flag-visual-review.json",
+        "sha256": "dfcc55375b96b3a4883e2745abb30301ce64a70729ffa84db97ce53a72d03999",
+        "bytes": 4521
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-1/frame-01.png",
+        "path": "expansion-art/flags-front-1/frame-01.png",
+        "sha256": "5903d70520bbef7d01a15d64f96fb0ab98970f92012aa1bc087b615f8c4c3cef",
+        "bytes": 387302
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-1/frame-02.png",
+        "path": "expansion-art/flags-front-1/frame-02.png",
+        "sha256": "5903d70520bbef7d01a15d64f96fb0ab98970f92012aa1bc087b615f8c4c3cef",
+        "bytes": 387302
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-1/frame-03.png",
+        "path": "expansion-art/flags-front-1/frame-03.png",
+        "sha256": "780f39ef81c95ead6dcff0e89e0342b5f284efcc0bcd2b3244cecfb6e05735d1",
+        "bytes": 391958
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-1/frame-04.png",
+        "path": "expansion-art/flags-front-1/frame-04.png",
+        "sha256": "f9b4929f42fca40a2340a1f35e56ac87c64c005ac54abc68c99bd25772e0a292",
+        "bytes": 398369
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-1/frame-05.png",
+        "path": "expansion-art/flags-front-1/frame-05.png",
+        "sha256": "844a471ae035bbae4f906439683ad30e75c2aee2644f9d3e37411e46061198d3",
+        "bytes": 398671
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-1/frame-06.png",
+        "path": "expansion-art/flags-front-1/frame-06.png",
+        "sha256": "2e45e304da43c416e1b5875a406fa7d4fb53610f1e3502cc066fc25c20d365ad",
+        "bytes": 396256
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-1/frame-07.png",
+        "path": "expansion-art/flags-front-1/frame-07.png",
+        "sha256": "c7db668a9cbb24753de5059a991deb85d2190c0fb7536f13439e2d6c99cae14e",
+        "bytes": 394375
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-1/frame-08.png",
+        "path": "expansion-art/flags-front-1/frame-08.png",
+        "sha256": "6cba534f684442ab1eda775a9b53c2c92bf83e1d8e28d72f4916413c48c57c6b",
+        "bytes": 392119
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-1/frame-09.png",
+        "path": "expansion-art/flags-front-1/frame-09.png",
+        "sha256": "5903d70520bbef7d01a15d64f96fb0ab98970f92012aa1bc087b615f8c4c3cef",
+        "bytes": 387302
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-1/original.png",
+        "path": "expansion-art/flags-front-1/original.png",
+        "sha256": "467277895394218a91d035c748afd7c25773425fcfc8aa75dca55a32cccfdf10",
+        "bytes": 1296601
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-2/frame-01.png",
+        "path": "expansion-art/flags-front-2/frame-01.png",
+        "sha256": "a8d7ee4776c53f9af1322ce4943c11c187157e30513e4140ba2431c1739751f6",
+        "bytes": 418387
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-2/frame-02.png",
+        "path": "expansion-art/flags-front-2/frame-02.png",
+        "sha256": "a8d7ee4776c53f9af1322ce4943c11c187157e30513e4140ba2431c1739751f6",
+        "bytes": 418387
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-2/frame-03.png",
+        "path": "expansion-art/flags-front-2/frame-03.png",
+        "sha256": "c93d322b6b1c9aa83a875adbb15b83f322dec34ba4dd605b364daeaef48568a6",
+        "bytes": 427293
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-2/frame-04.png",
+        "path": "expansion-art/flags-front-2/frame-04.png",
+        "sha256": "39c6e8b6b80b37c8733220353004a0929ac3424e6778fcd9515005eedc930b6f",
+        "bytes": 430676
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-2/frame-05.png",
+        "path": "expansion-art/flags-front-2/frame-05.png",
+        "sha256": "93fbdaeabe1eb7147614ab750bea7632f3ba6f7b6b82d772f5b149f3b613d1f6",
+        "bytes": 425504
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-2/frame-06.png",
+        "path": "expansion-art/flags-front-2/frame-06.png",
+        "sha256": "b0b0b47ab78f32551ad4100cbad75ba717b0ed92df633f65069e85bddb6288ac",
+        "bytes": 430473
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-2/frame-07.png",
+        "path": "expansion-art/flags-front-2/frame-07.png",
+        "sha256": "7c2f9c8390771eac8d2c2f632b113cc3512ecda1a5a4465c6e4a4be478850c9e",
+        "bytes": 422293
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-2/frame-08.png",
+        "path": "expansion-art/flags-front-2/frame-08.png",
+        "sha256": "556bc13b98d01d3a558c518b8ceacfd5b6504cd2340fec37616d8428116c4f5b",
+        "bytes": 422043
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-2/frame-09.png",
+        "path": "expansion-art/flags-front-2/frame-09.png",
+        "sha256": "a8d7ee4776c53f9af1322ce4943c11c187157e30513e4140ba2431c1739751f6",
+        "bytes": 418387
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-2/original.png",
+        "path": "expansion-art/flags-front-2/original.png",
+        "sha256": "7b76387791e91741a910b006ebe07f7842a53ca55c7a0a2fe82cc85dd21d72ba",
+        "bytes": 1189828
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-3/frame-01.png",
+        "path": "expansion-art/flags-front-3/frame-01.png",
+        "sha256": "1ba92a46b1563f6eb2a65d659a867088aa0fc1a1ce4e06727a8239ebcbdda1fd",
+        "bytes": 438260
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-3/frame-02.png",
+        "path": "expansion-art/flags-front-3/frame-02.png",
+        "sha256": "1ba92a46b1563f6eb2a65d659a867088aa0fc1a1ce4e06727a8239ebcbdda1fd",
+        "bytes": 438260
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-3/frame-03.png",
+        "path": "expansion-art/flags-front-3/frame-03.png",
+        "sha256": "697b862ce8cc64024b9f21afcd44b48afbd36b1cff69130588e3c53b320bb15d",
+        "bytes": 445521
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-3/frame-04.png",
+        "path": "expansion-art/flags-front-3/frame-04.png",
+        "sha256": "5fd20f7b945f574a0e3d5e2b650159eeb37f14338c227f85ba02bea866bb5f86",
+        "bytes": 452567
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-3/frame-05.png",
+        "path": "expansion-art/flags-front-3/frame-05.png",
+        "sha256": "8beb366a1e3e0021af93f8cc09866521b42db266051a66dde1b54aa43a7c9659",
+        "bytes": 451708
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-3/frame-06.png",
+        "path": "expansion-art/flags-front-3/frame-06.png",
+        "sha256": "b2a548b0d6bb275b8aec45f17d5c38308fa988d5460cfe2a640ff64dbc4a1ad5",
+        "bytes": 451511
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-3/frame-07.png",
+        "path": "expansion-art/flags-front-3/frame-07.png",
+        "sha256": "bc43f95a42f1c124bd8c8b77d2adf077786828ad27d94518dd5886e1b03f3aa3",
+        "bytes": 445924
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-3/frame-08.png",
+        "path": "expansion-art/flags-front-3/frame-08.png",
+        "sha256": "79752ef66f235b28ef7459144e3aa528cc11ede6fc97885d549d915c6217fe72",
+        "bytes": 444676
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-3/frame-09.png",
+        "path": "expansion-art/flags-front-3/frame-09.png",
+        "sha256": "1ba92a46b1563f6eb2a65d659a867088aa0fc1a1ce4e06727a8239ebcbdda1fd",
+        "bytes": 438260
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-front-3/original.png",
+        "path": "expansion-art/flags-front-3/original.png",
+        "sha256": "3efc3029144f97faf3c45e57f5500e6bcf6e52fa6f2c14c4adecfab1c99103d9",
+        "bytes": 1124051
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-1/frame-01.png",
+        "path": "expansion-art/flags-rear-1/frame-01.png",
+        "sha256": "4588af4d2a0c6d387a94cfb9d91a660ceeec39d8ae8a8d8d8619303598d50f19",
+        "bytes": 419305
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-1/frame-02.png",
+        "path": "expansion-art/flags-rear-1/frame-02.png",
+        "sha256": "4588af4d2a0c6d387a94cfb9d91a660ceeec39d8ae8a8d8d8619303598d50f19",
+        "bytes": 419305
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-1/frame-03.png",
+        "path": "expansion-art/flags-rear-1/frame-03.png",
+        "sha256": "fef04fabe5ba4bfa23f3b4d1ce17aa9036467b37d06a0bce139c1b70bef285a5",
+        "bytes": 419133
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-1/frame-04.png",
+        "path": "expansion-art/flags-rear-1/frame-04.png",
+        "sha256": "42d51313d78d2e8c0ab786f5979b7425abab6122122298cb88238329b7a2921b",
+        "bytes": 426871
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-1/frame-05.png",
+        "path": "expansion-art/flags-rear-1/frame-05.png",
+        "sha256": "e8ddc41046e3082f8b4fc346fed6a10fc09de2edee8f0221ff4483a660921ab8",
+        "bytes": 429918
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-1/frame-06.png",
+        "path": "expansion-art/flags-rear-1/frame-06.png",
+        "sha256": "4d80c54ab2eaea561b5071d2ebbddb7dd39e51b60a9a2992c38282fb2caeb8a8",
+        "bytes": 422154
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-1/frame-07.png",
+        "path": "expansion-art/flags-rear-1/frame-07.png",
+        "sha256": "153e4c0311a397fdffc72071a8412683cf8165fdf2e01b7965e3c076326dcafa",
+        "bytes": 427066
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-1/frame-08.png",
+        "path": "expansion-art/flags-rear-1/frame-08.png",
+        "sha256": "86a9607a79c4386585dc8136b3cbaa733f9910ca6a8e4f800a990badc8ccb8ac",
+        "bytes": 422411
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-1/frame-09.png",
+        "path": "expansion-art/flags-rear-1/frame-09.png",
+        "sha256": "4588af4d2a0c6d387a94cfb9d91a660ceeec39d8ae8a8d8d8619303598d50f19",
+        "bytes": 419305
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-1/original.png",
+        "path": "expansion-art/flags-rear-1/original.png",
+        "sha256": "fac46348c5d3411f2f253f42bd5118ab56e8263abd87fa11f5430501c59cbe93",
+        "bytes": 1455262
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-2/frame-01.png",
+        "path": "expansion-art/flags-rear-2/frame-01.png",
+        "sha256": "cf9db78625cdb1f442ed62c91a152935eeed2c41566666c4e64af225b6398042",
+        "bytes": 408468
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-2/frame-02.png",
+        "path": "expansion-art/flags-rear-2/frame-02.png",
+        "sha256": "cf9db78625cdb1f442ed62c91a152935eeed2c41566666c4e64af225b6398042",
+        "bytes": 408468
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-2/frame-03.png",
+        "path": "expansion-art/flags-rear-2/frame-03.png",
+        "sha256": "1c0640e09209db14f1d5942e064e72be9159fa52ade4d6310e81aeb1515bf260",
+        "bytes": 407260
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-2/frame-04.png",
+        "path": "expansion-art/flags-rear-2/frame-04.png",
+        "sha256": "86b9cef452f5b097b14fa2320cf37c6c2cc3c3e561ef22273f3f5f7d885ccdda",
+        "bytes": 407842
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-2/frame-05.png",
+        "path": "expansion-art/flags-rear-2/frame-05.png",
+        "sha256": "d428d18fff78ed7aac08d1d1590c8c4813f753eff49807177e091d41f08b3849",
+        "bytes": 412023
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-2/frame-06.png",
+        "path": "expansion-art/flags-rear-2/frame-06.png",
+        "sha256": "69b4a63b8cce1862ae07b3ddb6e482dfb0dd156abe00a3e8d4119057246a110c",
+        "bytes": 409118
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-2/frame-07.png",
+        "path": "expansion-art/flags-rear-2/frame-07.png",
+        "sha256": "ae0379a0758e7c4a0c9ce215ffd56ac300ac8c37c3eb910b61e718f043e94cba",
+        "bytes": 409954
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-2/frame-08.png",
+        "path": "expansion-art/flags-rear-2/frame-08.png",
+        "sha256": "747d334e62517daa0bc37afa78dc613d4119b3dcd2ad93d6861cc2fc25bf1bc1",
+        "bytes": 410558
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-2/frame-09.png",
+        "path": "expansion-art/flags-rear-2/frame-09.png",
+        "sha256": "cf9db78625cdb1f442ed62c91a152935eeed2c41566666c4e64af225b6398042",
+        "bytes": 408468
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/flags-rear-2/original.png",
+        "path": "expansion-art/flags-rear-2/original.png",
+        "sha256": "c1be2497a318ce0feef013fd5ccb3fc340717f30a365ee9375d9b6fabf8d03fd",
+        "bytes": 1178714
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/grotto/background.png",
+        "path": "expansion-art/grotto/background.png",
+        "sha256": "29e5a5cc154e402211a46340e816650a69700ca30516c61a87f0b894d4776241",
+        "bytes": 466821
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/grotto/collection.png",
+        "path": "expansion-art/grotto/collection.png",
+        "sha256": "19f18cea81e0219e849ee2271aabeda7053c89fe8badd8f695084679b3010a0a",
+        "bytes": 411710
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/grotto/foreground.png",
+        "path": "expansion-art/grotto/foreground.png",
+        "sha256": "401bb762e473fe0b248ece4fe409935059b45fda2dde7087d1a8ba6a9377fb06",
+        "bytes": 455918
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/grotto/frame-01.png",
+        "path": "expansion-art/grotto/frame-01.png",
+        "sha256": "a62c904a1ed873be09df3679c2438c814269f2f828919849b7605e0b1faa7807",
+        "bytes": 412891
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/grotto/frame-02.png",
+        "path": "expansion-art/grotto/frame-02.png",
+        "sha256": "72f1dfcc3d10c9e20662920249aa8bd0b42d057f1e321fe65e407536e72d979d",
+        "bytes": 414722
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/grotto/frame-03.png",
+        "path": "expansion-art/grotto/frame-03.png",
+        "sha256": "a75d6f7c1d5f2b80403b254df7d7e0c85d15bdd45441364ee243f611934da762",
+        "bytes": 413335
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/grotto/frame-04.png",
+        "path": "expansion-art/grotto/frame-04.png",
+        "sha256": "a62c904a1ed873be09df3679c2438c814269f2f828919849b7605e0b1faa7807",
+        "bytes": 412891
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/grotto/original.png",
+        "path": "expansion-art/grotto/original.png",
+        "sha256": "b9f9d51b11c5327e0506e465ba46e18814d98881208b969195bedbcfee8f4981",
+        "bytes": 455628
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/grotto/registration.json",
+        "path": "expansion-art/grotto/registration.json",
+        "sha256": "0b5b87bfa342724bc0e97c84f0db14a003a99ce63be74fa6d80605340257610f",
+        "bytes": 3608
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/manifest.json",
+        "path": "expansion-art/manifest.json",
+        "sha256": "59efc25657e6bf4782ce7defb21bd173dff1398af1e083ab5926c7af0e6326be",
+        "bytes": 254597
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/proportion-study-2026-10-25/official-matched-to-flag-v3.png",
+        "path": "expansion-art/proportion-study-2026-10-25/official-matched-to-flag-v3.png",
+        "sha256": "18a3b08e3d5cb38d035cb356bd10db4914f3eb30432d1c63562552ff87010cd8",
+        "bytes": 1950282
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.11/wall-1-art.png",
+        "path": "expansion-art/revision-2.1.11/wall-1-art.png",
+        "sha256": "6de426e2e1e7befbbe3f7217ebba7e6f052dbe6a8f3c55d0167932db7d659caf",
+        "bytes": 219488
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.11/wall-10-art.png",
+        "path": "expansion-art/revision-2.1.11/wall-10-art.png",
+        "sha256": "cf90867d65221a9023444432ebff9a15473ca78b0ee9cb7897587e34d5d21f15",
+        "bytes": 374196
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.11/wall-11-art.png",
+        "path": "expansion-art/revision-2.1.11/wall-11-art.png",
+        "sha256": "d8d2b98210177aa4660cb29802a77f20d9abaf1556a44cbdb9598eba74d57f2d",
+        "bytes": 482154
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.11/wall-12-art.png",
+        "path": "expansion-art/revision-2.1.11/wall-12-art.png",
+        "sha256": "2a571de8c3b50b94573ec7272fe6426652f41a53f15d5ab6aa7c9b7c27e3b489",
+        "bytes": 197476
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.11/wall-2-art.png",
+        "path": "expansion-art/revision-2.1.11/wall-2-art.png",
+        "sha256": "1afc2b2cc3fa7a71c8baf61de383a129f21e7479e75458039a7847aa16ab4c70",
+        "bytes": 174391
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.11/wall-4-art.png",
+        "path": "expansion-art/revision-2.1.11/wall-4-art.png",
+        "sha256": "e78fc351b64f1a07471cc6da287794fafcab2a3eeb2090ef83242a64b6f96edc",
+        "bytes": 354087
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.11/wall-6-art.png",
+        "path": "expansion-art/revision-2.1.11/wall-6-art.png",
+        "sha256": "6ae30d178a692c5ad4e1b72afb3a4415dfad282c86f8530f7be854060be2e209",
+        "bytes": 344332
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.11/wall-7-art.png",
+        "path": "expansion-art/revision-2.1.11/wall-7-art.png",
+        "sha256": "bde82e890b401f8b6634ea45ebf808ec42577f95f4d3659a994292104d25e1e7",
+        "bytes": 166591
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.11/wall-8-art.png",
+        "path": "expansion-art/revision-2.1.11/wall-8-art.png",
+        "sha256": "9077902ddf0548c1ace0be06c88be3dfa582c25b4860f1c6d258e6e255d0e6bf",
+        "bytes": 284240
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.11/wall-9-art.png",
+        "path": "expansion-art/revision-2.1.11/wall-9-art.png",
+        "sha256": "0cbcf97a2e490610f7acd43f5bfbcd141d8cd47cd419995b2dbd8aef238c57ba",
+        "bytes": 244316
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.12/left-background.png",
+        "path": "expansion-art/revision-2.1.12/left-background.png",
+        "sha256": "a08b0b579af111110fceff623d035741fee8c0a215267cc44d6afd2cb42b2354",
+        "bytes": 241563
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.12/left-foreground.png",
+        "path": "expansion-art/revision-2.1.12/left-foreground.png",
+        "sha256": "06f563a8709651db96250512550320d3481d03476657670412b0f2aab869018a",
+        "bytes": 232988
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.12/left-original.png",
+        "path": "expansion-art/revision-2.1.12/left-original.png",
+        "sha256": "8bdfb604e20af230e4baf9b0268725fcfc9cd1c0a681fa1d0f4335891dc00989",
+        "bytes": 232551
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.12/right-background.png",
+        "path": "expansion-art/revision-2.1.12/right-background.png",
+        "sha256": "43d6639d26cefd626f397a3f2a0f508cc1281137502b7727a59ce0901e4634dd",
+        "bytes": 296096
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.12/right-foreground.png",
+        "path": "expansion-art/revision-2.1.12/right-foreground.png",
+        "sha256": "551e916b1703e54f8a9d296350245f3e456fc546e84eb1106b47f4b1a8f97166",
+        "bytes": 292761
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.12/right-original.png",
+        "path": "expansion-art/revision-2.1.12/right-original.png",
+        "sha256": "9fe06e88bfeab0a16897ca5e85baa2f1a85116ac33c11181a52ad315ffc45c8e",
+        "bytes": 292260
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.12/stage-registration.json",
+        "path": "expansion-art/revision-2.1.12/stage-registration.json",
+        "sha256": "91b3fad074d59c47543f2d730145c4eb8cf70524732cf35537fd4878743c1397",
+        "bytes": 39831
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/flag-approved.webp",
+        "path": "expansion-art/revision-2.1.2/flag-approved.webp",
+        "sha256": "2df934e387e9dffdd86c9b9a7cd12fdcedeabc7b056d7e0a759bbda3eb3d7710",
+        "bytes": 638122
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/flag-front-motion-sheet.webp",
+        "path": "expansion-art/revision-2.1.2/flag-front-motion-sheet.webp",
+        "sha256": "674eb2ea5dba9f5c5b72af873d9aab0cfce2543e5c8edb3df7ebb17f98f6ad8f",
+        "bytes": 1111092
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/flag-rear-staff-pose-0.webp",
+        "path": "expansion-art/revision-2.1.2/flag-rear-staff-pose-0.webp",
+        "sha256": "ad3494d61088491850f09064e6c9808ae01579e01b4b07f8f79e6e8c7c089d54",
+        "bytes": 489178
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/flag-rear-staff-pose-1.webp",
+        "path": "expansion-art/revision-2.1.2/flag-rear-staff-pose-1.webp",
+        "sha256": "d918220d7fe1a7a513cd40992bbe0053503090fba53f82ff59850376e420b8fe",
+        "bytes": 479216
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/flag-rear-standing-pose-0.webp",
+        "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-0.webp",
+        "sha256": "8246bae65a34e7390bcd0ae2d758c0204c8221bfbb25f104bde6b91aee5f7a6f",
+        "bytes": 588734
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/flag-rear-standing-pose-1.webp",
+        "path": "expansion-art/revision-2.1.2/flag-rear-standing-pose-1.webp",
+        "sha256": "c8275e7e13b5041b58dcaed3027d56b418c5a1f7e7f1174b58076b9f8a5062bf",
+        "bytes": 594804
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+        "path": "expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+        "sha256": "6dc1cb54758219e85a5eebeabd6aa7a63b056f44682e78a4fd95e2290ea0ea76",
+        "bytes": 576406
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+        "path": "expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+        "sha256": "3fef4709d19a1cd8da159385c5bc23eab8141aa4bb35c83a9dc59413d3f858f7",
+        "bytes": 580924
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/flags-front-1-registration.json",
+        "path": "expansion-art/revision-2.1.2/flags-front-1-registration.json",
+        "sha256": "2a4e3c583421d898b0099a54991f12295517729c1ccfa0af926c419f60e8e498",
+        "bytes": 19708
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/flags-front-2-registration.json",
+        "path": "expansion-art/revision-2.1.2/flags-front-2-registration.json",
+        "sha256": "5df744e4e655efd63aebb78be351c989d0ff83e59f8c4221f8a42be8cf0c7f84",
+        "bytes": 20796
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/flags-front-3-registration.json",
+        "path": "expansion-art/revision-2.1.2/flags-front-3-registration.json",
+        "sha256": "d088e66aa20bbaae0375e06869b7b3c55a624bf61ddd461b603e381890ec7481",
+        "bytes": 28960
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/flags-rear-1-registration.json",
+        "path": "expansion-art/revision-2.1.2/flags-rear-1-registration.json",
+        "sha256": "358f61a2513b1fc991396bea7b91d96a74209d50f37e985d831e545ff7b40e80",
+        "bytes": 24263
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/flags-rear-2-registration.json",
+        "path": "expansion-art/revision-2.1.2/flags-rear-2-registration.json",
+        "sha256": "e6782b7a4f4a522e29c59cb252397aa2e3b78473553438bce80e7770ddc29df7",
+        "bytes": 26962
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-01-pose-1.webp",
+        "path": "expansion-art/revision-2.1.2/official-01-pose-1.webp",
+        "sha256": "be8987302084d18eadd8ac0194c8a33bd166c5ac11f1f12c7af16572a0fc10e0",
+        "bytes": 664582
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-02-pose-0.webp",
+        "path": "expansion-art/revision-2.1.2/official-02-pose-0.webp",
+        "sha256": "3ae38b051b3f9a76ad4b8e5b665c340c20fdfdf5fba0135f4f9636a9c025bd41",
+        "bytes": 498508
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-02-pose-1.webp",
+        "path": "expansion-art/revision-2.1.2/official-02-pose-1.webp",
+        "sha256": "9e7d68262f8f7100bdc090150a4fb304955544a483f6823a12a67e90ca4e0e04",
+        "bytes": 507154
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-03-pose-0.webp",
+        "path": "expansion-art/revision-2.1.2/official-03-pose-0.webp",
+        "sha256": "b870d182dc191abc62bdb4e3be760c0aa0e3b8c7ca4efe401664ea06c418443f",
+        "bytes": 533910
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-03-pose-1.webp",
+        "path": "expansion-art/revision-2.1.2/official-03-pose-1.webp",
+        "sha256": "9aeb577a1b52ab4207fc08b92d39dfefc50f52391ea192e02fc5f775dc131423",
+        "bytes": 540534
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-04-pose-0.webp",
+        "path": "expansion-art/revision-2.1.2/official-04-pose-0.webp",
+        "sha256": "340d8e3594a811d41ccdfdc1da43af8eea733691f1051b31a0733f85bcfe6f87",
+        "bytes": 543524
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-04-pose-1.webp",
+        "path": "expansion-art/revision-2.1.2/official-04-pose-1.webp",
+        "sha256": "701e2012fd866fa1bb597578838f8bcd503cdaacbc78bd768a6960a3c52bf855",
+        "bytes": 555106
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-05-pose-0.webp",
+        "path": "expansion-art/revision-2.1.2/official-05-pose-0.webp",
+        "sha256": "bb9e09bcb837afb2122f9d35cf4c6a519b3fd79464e5aa85426252c447a11a50",
+        "bytes": 598796
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-05-pose-1.webp",
+        "path": "expansion-art/revision-2.1.2/official-05-pose-1.webp",
+        "sha256": "4b489cf3957431b1511532ead575aa89f0aa90a37cf07999b8f8e03445c72273",
+        "bytes": 598526
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-06-pose-0.webp",
+        "path": "expansion-art/revision-2.1.2/official-06-pose-0.webp",
+        "sha256": "4a85521ccddcb8d66fa10551498cc0f6f397dbd9357b012a6805be29239b10f9",
+        "bytes": 544168
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-06-pose-1.webp",
+        "path": "expansion-art/revision-2.1.2/official-06-pose-1.webp",
+        "sha256": "f63abfd2122d7a0fe3572fae9123d2db9697a132a2752880fc0e0c2896aa7440",
+        "bytes": 556764
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-07-pose-0.webp",
+        "path": "expansion-art/revision-2.1.2/official-07-pose-0.webp",
+        "sha256": "98c9eea0e249f7c749d5774edc39e7cac7aaae59a02447a155742294850cfe36",
+        "bytes": 890444
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-07-pose-1.webp",
+        "path": "expansion-art/revision-2.1.2/official-07-pose-1.webp",
+        "sha256": "b25a1b7c620e17527d2eaaa2597a713b62ed53bfb2c00692baec41c46c16ab0b",
+        "bytes": 890480
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-08-pose-0.webp",
+        "path": "expansion-art/revision-2.1.2/official-08-pose-0.webp",
+        "sha256": "43b7f6c394fd0a94a60f44586776ca4941a1bfdd2feaa8cb6dcb384bf4158418",
+        "bytes": 568756
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-08-pose-1.webp",
+        "path": "expansion-art/revision-2.1.2/official-08-pose-1.webp",
+        "sha256": "1a2f8ddb11035a7ea36f4902c784b38f30205630bbef58ea07eff571f72a4c28",
+        "bytes": 541300
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-09-pose-0.webp",
+        "path": "expansion-art/revision-2.1.2/official-09-pose-0.webp",
+        "sha256": "06f8d3d78be474666d6eaa9da9f0d581c437f0884fa21db01d7aae30c8b57db1",
+        "bytes": 617856
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-09-pose-1.webp",
+        "path": "expansion-art/revision-2.1.2/official-09-pose-1.webp",
+        "sha256": "fedd3d3175cc3d986562535578413d0c26c01beef1542ae18652deb91144e41e",
+        "bytes": 636654
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-10-pose-0.webp",
+        "path": "expansion-art/revision-2.1.2/official-10-pose-0.webp",
+        "sha256": "993d03dcfb978bc893e5cd9a51f1a09f6d3f41c3c2438c697965f23383964462",
+        "bytes": 590824
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-10-pose-1.webp",
+        "path": "expansion-art/revision-2.1.2/official-10-pose-1.webp",
+        "sha256": "fe36fb42a9fb52f5637e6a5b7039190aaa0ff3d66f93f9c832251a6ad33c4c16",
+        "bytes": 602670
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-11-pose-0.webp",
+        "path": "expansion-art/revision-2.1.2/official-11-pose-0.webp",
+        "sha256": "0846dd5259097d9b7999e2188149f386e3b4259c730ac586ed9f45047ea37813",
+        "bytes": 634492
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/official-approved.webp",
+        "path": "expansion-art/revision-2.1.2/official-approved.webp",
+        "sha256": "45433d3cb730fb56eab72395e387d8f3ed4314a2cf7510885fac836151afd66a",
+        "bytes": 620510
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/officials-background.png",
+        "path": "expansion-art/revision-2.1.2/officials-background.png",
+        "sha256": "6076b9e6e657b222a4c9bbe36c831b865597c3afa745020cb9b4d05b4f32cf74",
+        "bytes": 229003
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/officials-collection.png",
+        "path": "expansion-art/revision-2.1.2/officials-collection.png",
+        "sha256": "eeb3d5741d006a2a4287a01ee728920ea18808223eb4941714e683538c172d1a",
+        "bytes": 1294410
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/officials-foreground.png",
+        "path": "expansion-art/revision-2.1.2/officials-foreground.png",
+        "sha256": "70cea4283c5ae8d9eda8c24088989a5f929977d20b1c84c49800eafb4fd621a9",
+        "bytes": 250606
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.2/officials-registration.json",
+        "path": "expansion-art/revision-2.1.2/officials-registration.json",
+        "sha256": "a04ee366f331cdef310e6359949c98e8ca716bb81b61c940c84f07d87cdbc367",
+        "bytes": 13651
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.3/black-cloth.webp",
+        "path": "expansion-art/revision-2.1.3/black-cloth.webp",
+        "sha256": "0847442d886e2c105d8fcc233b765290355acf6293a496c55d937245f4a948fb",
+        "bytes": 447104
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.3/flags-front-1-background.png",
+        "path": "expansion-art/revision-2.1.3/flags-front-1-background.png",
+        "sha256": "c3af647025f38b98ed35e8729cd684a046e646186b8740c4e6c01cfd2b0301b0",
+        "bytes": 1277999
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.3/flags-front-1-foreground.png",
+        "path": "expansion-art/revision-2.1.3/flags-front-1-foreground.png",
+        "sha256": "d465c6416825798acd4deef7fb3bc60a520723961fd30120920a266a40691532",
+        "bytes": 1296647
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.3/flags-front-2-background.png",
+        "path": "expansion-art/revision-2.1.3/flags-front-2-background.png",
+        "sha256": "a030c085bcfff6e25758a7ab0b553ed71111a5e9dc3569c3dc646f993f77c3be",
+        "bytes": 1154375
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.3/flags-front-2-foreground.png",
+        "path": "expansion-art/revision-2.1.3/flags-front-2-foreground.png",
+        "sha256": "5981e1ac999b0ad654a4fc71fb2bec14eb86cca5faf1d2b32571294531fcb950",
+        "bytes": 1189916
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.3/flags-front-3-background.png",
+        "path": "expansion-art/revision-2.1.3/flags-front-3-background.png",
+        "sha256": "8d5e8604315c17300b63b3a68216a2aef04417043a3cd63a85fff967953855dc",
+        "bytes": 1128880
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.3/flags-front-3-foreground.png",
+        "path": "expansion-art/revision-2.1.3/flags-front-3-foreground.png",
+        "sha256": "587813022b3b1094a0b3650585fa49d106460663194e9f80c583dbc459c915c8",
+        "bytes": 1124317
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.3/flags-rear-1-background.png",
+        "path": "expansion-art/revision-2.1.3/flags-rear-1-background.png",
+        "sha256": "f35bfea628fa9fd04edba2d8babd99e09cb37b1dcce0ca711ece10c265d2a52b",
+        "bytes": 1488608
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.3/flags-rear-1-foreground.png",
+        "path": "expansion-art/revision-2.1.3/flags-rear-1-foreground.png",
+        "sha256": "ea6c985369725f0a8171f0d48902b8d5ab845c6b55b820f57d71e3f132a92c3f",
+        "bytes": 1464574
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.3/white-cloth.webp",
+        "path": "expansion-art/revision-2.1.3/white-cloth.webp",
+        "sha256": "ce11b3d1c76de35b159fd70dbf0ff84a32a43517816ced020a00b3bae34c2404",
+        "bytes": 423182
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.3/yellow-cloth.webp",
+        "path": "expansion-art/revision-2.1.3/yellow-cloth.webp",
+        "sha256": "0f4970f48605bad0ca62f1b8fa139f4cc8481486f9d09b6ca5df88185fbd1268",
+        "bytes": 424784
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.4/flags-rear-2-background.png",
+        "path": "expansion-art/revision-2.1.4/flags-rear-2-background.png",
+        "sha256": "d0cfec25721beb548b05e57c7bfb9ab9a41e964a0b0f6608d974b95ca57685da",
+        "bytes": 1231403
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.4/flags-rear-2-foreground.png",
+        "path": "expansion-art/revision-2.1.4/flags-rear-2-foreground.png",
+        "sha256": "f2d286a010cbb24de7a0a09e5e846f2f54a6b1932db811b8e931eaeca0e667c6",
+        "bytes": 1185185
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.8/basket-collectible.png",
+        "path": "expansion-art/revision-2.1.8/basket-collectible.png",
+        "sha256": "64247131cb2685fa10aff3a801167a04ec6cbdc44f73a55983ac8bf9d197f9b9",
+        "bytes": 329278
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.8/fan-collectible.png",
+        "path": "expansion-art/revision-2.1.8/fan-collectible.png",
+        "sha256": "2d4a85b66d1bc5398c44f1c23fc957a3984cdd39d12ac564c0a6435a118d5d51",
+        "bytes": 312171
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.8/jade-collectible.png",
+        "path": "expansion-art/revision-2.1.8/jade-collectible.png",
+        "sha256": "1fc8bd3b3bc5dd67de1b1a54718fe84592c380d134cbb0f89deabce545e778f9",
+        "bytes": 287390
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/revision-2.1.8/lotus-collectible.png",
+        "path": "expansion-art/revision-2.1.8/lotus-collectible.png",
+        "sha256": "5e71ce6ccdd700f2a1ff6887b6ea9dbcfc2d273ac76190a4b69f56ab469ae6fc",
+        "bytes": 330214
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/source-registration.json",
+        "path": "expansion-art/source-registration.json",
+        "sha256": "f15820e43c7950320c12ead30496ddde199ce0f5841200869c87fbbb42b54485",
+        "bytes": 117554
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/stage/background.png",
+        "path": "expansion-art/stage/background.png",
+        "sha256": "4597fb21e3ad4e9cb2b3ef54154d23b3caa4143a8e4a0f1b7e0ef6cdaeca76e5",
+        "bytes": 558772
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/stage/collection.png",
+        "path": "expansion-art/stage/collection.png",
+        "sha256": "b1612132f8f83708a2aecc305f91569fd90999c3b0b4878109b707c4de640ccf",
+        "bytes": 427775
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/stage/foreground.png",
+        "path": "expansion-art/stage/foreground.png",
+        "sha256": "bea1d57a5df1b274855024a8bd3f68d9321a840c427c29fb91e28d086860d0d0",
+        "bytes": 552885
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/stage/frame-01.png",
+        "path": "expansion-art/stage/frame-01.png",
+        "sha256": "0575726ecf40095ac2a64d2255a13b8f9c4f08ed74c02ed2eb3b23d73a6039cc",
+        "bytes": 427907
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/stage/frame-02.png",
+        "path": "expansion-art/stage/frame-02.png",
+        "sha256": "d6aa1313052a9a8289bf094d0ce5c24850f3f2a06212dce6914c8f1d1d1e9d40",
+        "bytes": 458493
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/stage/frame-03.png",
+        "path": "expansion-art/stage/frame-03.png",
+        "sha256": "c68445623313640aa6b2939666349d33a09827a454455bbc39646ea7da4d4a80",
+        "bytes": 447060
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/stage/frame-04.png",
+        "path": "expansion-art/stage/frame-04.png",
+        "sha256": "0575726ecf40095ac2a64d2255a13b8f9c4f08ed74c02ed2eb3b23d73a6039cc",
+        "bytes": 427907
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/stage/original.png",
+        "path": "expansion-art/stage/original.png",
+        "sha256": "ebf1c4e172403e2306d7931e46795ee3b1ae647a69504cb206801adddac82994",
+        "bytes": 552882
+      },
+      {
+        "source": "output/art-direction/wanshou-third-scroll/v2.0/expansion-art/stage/registration.json",
+        "path": "expansion-art/stage/registration.json",
+        "sha256": "ecd02cae10a01e803a5dd27cdb54e3eb5480eeb86ddbfac3574a7210728f7060",
+        "bytes": 2376
+      }
+    ]
+  },
+  "storageKey": "chinese-wally:kangqu-listening-v2:journal:v2",
+  "deployment": "Not deployed; official routes unchanged."
+}

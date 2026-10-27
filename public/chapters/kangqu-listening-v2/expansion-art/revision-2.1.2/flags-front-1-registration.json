@@ -1,0 +1,712 @@
+{
+  "version": "2.1.2",
+  "previousRegistration": "expansion-art/flags-front-1/registration.json",
+  "sprites": [
+    {
+      "id": "red-front-west-01",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+          "sourcePng": "flag-side-pose-0.png",
+          "x": -40.38679457437309,
+          "y": 295.75866039727475,
+          "width": 140.02494962095767,
+          "height": 186.69993282794357,
+          "mirror": false,
+          "uniformScale": 0.18232415315228864,
+          "sourceHead": [
+            401.0,
+            182.32
+          ],
+          "sourceFoot": [
+            468.22162162162164,
+            1016
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+          "sourcePng": "flag-side-pose-1.png",
+          "x": -25.24415506229859,
+          "y": 295.78976277853735,
+          "width": 140.00143915953083,
+          "height": 186.66858554604113,
+          "mirror": false,
+          "uniformScale": 0.1822935405723058,
+          "sourceHead": [
+            318.0,
+            182.18
+          ],
+          "sourceFoot": [
+            386.70460704607046,
+            1016
+          ]
+        }
+      ],
+      "fixedHeadX": 32.725190839694655,
+      "fixedHeadY": 349,
+      "fixedFootY": 481
+    },
+    {
+      "id": "red-front-west-02",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+          "sourcePng": "flag-side-pose-0.png",
+          "x": 66.3215855347033,
+          "y": 301.8521255157855,
+          "width": 135.41886575184722,
+          "height": 180.55848766912962,
+          "mirror": false,
+          "uniformScale": 0.1763266481143844,
+          "sourceHead": [
+            401.0,
+            182.32
+          ],
+          "sourceFoot": [
+            468.22162162162164,
+            1016
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+          "sourcePng": "flag-side-pose-1.png",
+          "x": 80.96611190493323,
+          "y": 301.88220479240124,
+          "width": 135.39612866086208,
+          "height": 180.5281715478161,
+          "mirror": false,
+          "uniformScale": 0.17629704252716416,
+          "sourceHead": [
+            318.0,
+            182.18
+          ],
+          "sourceFoot": [
+            386.70460704607046,
+            1016
+          ]
+        }
+      ],
+      "fixedHeadX": 137.02857142857144,
+      "fixedHeadY": 354,
+      "fixedFootY": 481
+    },
+    {
+      "id": "red-front-west-03",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+          "sourcePng": "flag-side-pose-0.png",
+          "x": 146.9831049192627,
+          "y": 292.0708185394876,
+          "width": 134.49764897802513,
+          "height": 179.33019863736683,
+          "mirror": false,
+          "uniformScale": 0.17512714710680355,
+          "sourceHead": [
+            401.0,
+            182.32
+          ],
+          "sourceFoot": [
+            468.22162162162164,
+            1016
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+          "sourcePng": "flag-side-pose-1.png",
+          "x": 161.52800866112372,
+          "y": 292.100693195174,
+          "width": 134.4750665611283,
+          "height": 179.30008874817108,
+          "mirror": false,
+          "uniformScale": 0.17509774291813582,
+          "sourceHead": [
+            318.0,
+            182.18
+          ],
+          "sourceFoot": [
+            386.70460704607046,
+            1016
+          ]
+        }
+      ],
+      "fixedHeadX": 217.20909090909092,
+      "fixedHeadY": 344,
+      "fixedFootY": 470
+    },
+    {
+      "id": "red-front-west-04",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+          "sourcePng": "flag-side-pose-0.png",
+          "x": 246.784177901396,
+          "y": 304.726897610594,
+          "width": 131.73399865655887,
+          "height": 175.64533154207848,
+          "mirror": false,
+          "uniformScale": 0.17152864408406102,
+          "sourceHead": [
+            401.0,
+            182.32
+          ],
+          "sourceFoot": [
+            468.22162162162164,
+            1016
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+          "sourcePng": "flag-side-pose-1.png",
+          "x": 261.0302137581503,
+          "y": 304.75615840349235,
+          "width": 131.71188026192704,
+          "height": 175.61584034923607,
+          "mirror": false,
+          "uniformScale": 0.17149984409105085,
+          "sourceHead": [
+            318.0,
+            182.18
+          ],
+          "sourceFoot": [
+            386.70460704607046,
+            1016
+          ]
+        }
+      ],
+      "fixedHeadX": 315.56716417910445,
+      "fixedHeadY": 356,
+      "fixedFootY": 479
+    },
+    {
+      "id": "red-front-west-05",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+          "sourcePng": "flag-side-pose-0.png",
+          "x": 319.22116233310305,
+          "y": 299.5082045868919,
+          "width": 132.65521543038096,
+          "height": 176.87362057384127,
+          "mirror": false,
+          "uniformScale": 0.17272814509164186,
+          "sourceHead": [
+            401.0,
+            182.32
+          ],
+          "sourceFoot": [
+            468.22162162162164,
+            1016
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+          "sourcePng": "flag-side-pose-1.png",
+          "x": 333.5668208182263,
+          "y": 299.5376700007196,
+          "width": 132.6329423616608,
+          "height": 176.84392314888106,
+          "mirror": false,
+          "uniformScale": 0.17269914370007916,
+          "sourceHead": [
+            318.0,
+            182.18
+          ],
+          "sourceFoot": [
+            386.70460704607046,
+            1016
+          ]
+        }
+      ],
+      "fixedHeadX": 388.48514851485146,
+      "fixedHeadY": 351,
+      "fixedFootY": 475
+    },
+    {
+      "id": "red-front-west-06",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-approved.webp",
+          "sourcePng": "flag-approved.png",
+          "x": 462.22749670572676,
+          "y": 296.19071275788315,
+          "width": 68.58483405782101,
+          "height": 176.6059476988891,
+          "mirror": false,
+          "uniformScale": 0.12247291796039467,
+          "sourceHead": [
+            366.5,
+            251.56
+          ],
+          "sourceFoot": [
+            456.0899653979239,
+            1411
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-front-motion-sheet.webp",
+          "sourcePng": "flag-front-motion-sheet.png",
+          "x": 461.8489396484748,
+          "y": 296.0740074337407,
+          "width": 69.13503383783986,
+          "height": 177.87683897919922,
+          "mirror": false,
+          "uniformScale": 0.08840797165964176,
+          "sourceHead": [
+            512.0,
+            349.81
+          ],
+          "sourceFoot": [
+            636.8016085790885,
+            1956
+          ]
+        }
+      ],
+      "fixedHeadX": 507.1138211382114,
+      "fixedHeadY": 347,
+      "fixedFootY": 469
+    },
+    {
+      "id": "red-front-west-07",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+          "sourcePng": "flag-side-pose-0.png",
+          "x": 504.61101381825165,
+          "y": 285.5082045868919,
+          "width": 132.65521543038096,
+          "height": 176.87362057384127,
+          "mirror": false,
+          "uniformScale": 0.17272814509164186,
+          "sourceHead": [
+            401.0,
+            182.32
+          ],
+          "sourceFoot": [
+            468.22162162162164,
+            1016
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+          "sourcePng": "flag-side-pose-1.png",
+          "x": 518.9566723033748,
+          "y": 285.5376700007196,
+          "width": 132.6329423616608,
+          "height": 176.84392314888106,
+          "mirror": false,
+          "uniformScale": 0.17269914370007916,
+          "sourceHead": [
+            318.0,
+            182.18
+          ],
+          "sourceFoot": [
+            386.70460704607046,
+            1016
+          ]
+        }
+      ],
+      "fixedHeadX": 573.875,
+      "fixedHeadY": 337,
+      "fixedFootY": 461
+    },
+    {
+      "id": "red-front-west-08",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-approved.webp",
+          "sourcePng": "flag-approved.png",
+          "x": 653.2800662388739,
+          "y": 297.10587870006214,
+          "width": 70.99979300351893,
+          "height": 182.82446698406127,
+          "mirror": false,
+          "uniformScale": 0.12678534464914096,
+          "sourceHead": [
+            366.5,
+            251.56
+          ],
+          "sourceFoot": [
+            456.0899653979239,
+            1411
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-front-motion-sheet.webp",
+          "sourcePng": "flag-front-motion-sheet.png",
+          "x": 652.8881797077751,
+          "y": 296.9850640335203,
+          "width": 71.56936601522858,
+          "height": 184.14010795734004,
+          "mirror": false,
+          "uniformScale": 0.0915209284082207,
+          "sourceHead": [
+            512.0,
+            349.81
+          ],
+          "sourceFoot": [
+            636.8016085790885,
+            1956
+          ]
+        }
+      ],
+      "fixedHeadX": 699.7468950527841,
+      "fixedHeadY": 349,
+      "fixedFootY": 476
+    },
+    {
+      "id": "red-front-west-09",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+          "sourcePng": "flag-side-pose-0.png",
+          "x": 688.9836112315207,
+          "y": 298.1642836579983,
+          "width": 129.89156510891468,
+          "height": 173.1887534785529,
+          "mirror": false,
+          "uniformScale": 0.16912964206889933,
+          "sourceHead": [
+            401.0,
+            182.32
+          ],
+          "sourceFoot": [
+            468.22162162162164,
+            1016
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+          "sourcePng": "flag-side-pose-1.png",
+          "x": 703.0304018315372,
+          "y": 298.1931352090379,
+          "width": 129.86975606245954,
+          "height": 173.15967474994605,
+          "mirror": false,
+          "uniformScale": 0.1691012448729942,
+          "sourceHead": [
+            318.0,
+            182.18
+          ],
+          "sourceFoot": [
+            386.70460704607046,
+            1016
+          ]
+        }
+      ],
+      "fixedHeadX": 756.8045977011494,
+      "fixedHeadY": 349,
+      "fixedFootY": 470
+    },
+    {
+      "id": "red-front-west-10",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+          "sourcePng": "flag-side-pose-0.png",
+          "x": 809.3746692804365,
+          "y": 300.5082045868919,
+          "width": 132.65521543038096,
+          "height": 176.87362057384127,
+          "mirror": false,
+          "uniformScale": 0.17272814509164186,
+          "sourceHead": [
+            401.0,
+            182.32
+          ],
+          "sourceFoot": [
+            468.22162162162164,
+            1016
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+          "sourcePng": "flag-side-pose-1.png",
+          "x": 823.7203277655597,
+          "y": 300.5376700007196,
+          "width": 132.6329423616608,
+          "height": 176.84392314888106,
+          "mirror": false,
+          "uniformScale": 0.17269914370007916,
+          "sourceHead": [
+            318.0,
+            182.18
+          ],
+          "sourceFoot": [
+            386.70460704607046,
+            1016
+          ]
+        }
+      ],
+      "fixedHeadX": 878.6386554621848,
+      "fixedHeadY": 352,
+      "fixedFootY": 476
+    },
+    {
+      "id": "red-front-west-11",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+          "sourcePng": "flag-side-pose-0.png",
+          "x": 891.5852635303713,
+          "y": 301.1642836579983,
+          "width": 129.89156510891468,
+          "height": 173.1887534785529,
+          "mirror": false,
+          "uniformScale": 0.16912964206889933,
+          "sourceHead": [
+            401.0,
+            182.32
+          ],
+          "sourceFoot": [
+            468.22162162162164,
+            1016
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+          "sourcePng": "flag-side-pose-1.png",
+          "x": 905.6320541303878,
+          "y": 301.1931352090379,
+          "width": 129.86975606245954,
+          "height": 173.15967474994605,
+          "mirror": false,
+          "uniformScale": 0.1691012448729942,
+          "sourceHead": [
+            318.0,
+            182.18
+          ],
+          "sourceFoot": [
+            386.70460704607046,
+            1016
+          ]
+        }
+      ],
+      "fixedHeadX": 959.40625,
+      "fixedHeadY": 352,
+      "fixedFootY": 473
+    },
+    {
+      "id": "red-front-west-12",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+          "sourcePng": "flag-side-pose-0.png",
+          "x": 1004.0579726180848,
+          "y": 302.3829766817004,
+          "width": 128.97034833509258,
+          "height": 171.96046444679013,
+          "mirror": false,
+          "uniformScale": 0.16793014106131848,
+          "sourceHead": [
+            401.0,
+            182.32
+          ],
+          "sourceFoot": [
+            468.22162162162164,
+            1016
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+          "sourcePng": "flag-side-pose-1.png",
+          "x": 1018.0051405897324,
+          "y": 302.4116236118107,
+          "width": 128.94869396272577,
+          "height": 171.93159195030103,
+          "mirror": false,
+          "uniformScale": 0.16790194526396585,
+          "sourceHead": [
+            318.0,
+            182.18
+          ],
+          "sourceFoot": [
+            386.70460704607046,
+            1016
+          ]
+        }
+      ],
+      "fixedHeadX": 1071.3979591836735,
+      "fixedHeadY": 353,
+      "fixedFootY": 473
+    },
+    {
+      "id": "red-front-west-13",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+          "sourcePng": "flag-side-pose-0.png",
+          "x": 1079.1501031301316,
+          "y": 299.82036272910466,
+          "width": 127.12791478744842,
+          "height": 169.50388638326456,
+          "mirror": false,
+          "uniformScale": 0.1655311390461568,
+          "sourceHead": [
+            401.0,
+            182.32
+          ],
+          "sourceFoot": [
+            468.22162162162164,
+            1016
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+          "sourcePng": "flag-side-pose-1.png",
+          "x": 1092.8980258450413,
+          "y": 299.84860041735624,
+          "width": 127.10656976325825,
+          "height": 169.475426351011,
+          "mirror": false,
+          "uniformScale": 0.1655033460459092,
+          "sourceHead": [
+            318.0,
+            182.18
+          ],
+          "sourceFoot": [
+            386.70460704607046,
+            1016
+          ]
+        }
+      ],
+      "fixedHeadX": 1145.5280898876404,
+      "fixedHeadY": 350,
+      "fixedFootY": 468
+    },
+    {
+      "id": "red-front-west-14",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+          "sourcePng": "flag-side-pose-0.png",
+          "x": 1193.8492026236004,
+          "y": 307.3829766817004,
+          "width": 128.97034833509258,
+          "height": 171.96046444679013,
+          "mirror": false,
+          "uniformScale": 0.16793014106131848,
+          "sourceHead": [
+            401.0,
+            182.32
+          ],
+          "sourceFoot": [
+            468.22162162162164,
+            1016
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+          "sourcePng": "flag-side-pose-1.png",
+          "x": 1207.796370595248,
+          "y": 307.4116236118107,
+          "width": 128.94869396272577,
+          "height": 171.93159195030103,
+          "mirror": false,
+          "uniformScale": 0.16790194526396585,
+          "sourceHead": [
+            318.0,
+            182.18
+          ],
+          "sourceFoot": [
+            386.70460704607046,
+            1016
+          ]
+        }
+      ],
+      "fixedHeadX": 1261.1891891891892,
+      "fixedHeadY": 358,
+      "fixedFootY": 478
+    },
+    {
+      "id": "red-left",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+          "sourcePng": "flag-side-pose-0.png",
+          "x": 1265.2170137222915,
+          "y": 303.726897610594,
+          "width": 131.73399865655887,
+          "height": 175.64533154207848,
+          "mirror": false,
+          "uniformScale": 0.17152864408406102,
+          "sourceHead": [
+            401.0,
+            182.32
+          ],
+          "sourceFoot": [
+            468.22162162162164,
+            1016
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+          "sourcePng": "flag-side-pose-1.png",
+          "x": 1279.463049579046,
+          "y": 303.75615840349235,
+          "width": 131.71188026192704,
+          "height": 175.61584034923607,
+          "mirror": false,
+          "uniformScale": 0.17149984409105085,
+          "sourceHead": [
+            318.0,
+            182.18
+          ],
+          "sourceFoot": [
+            386.70460704607046,
+            1016
+          ]
+        }
+      ],
+      "fixedHeadX": 1334.0,
+      "fixedHeadY": 355,
+      "fixedFootY": 478
+    },
+    {
+      "id": "hand-at-hat",
+      "poses": [
+        {
+          "path": "expansion-art/revision-2.1.2/flag-approved.webp",
+          "sourcePng": "flag-approved.png",
+          "x": 1408.6664596701855,
+          "y": 296.1482957289726,
+          "width": 69.79231353066997,
+          "height": 179.71520734147518,
+          "mirror": false,
+          "uniformScale": 0.12462913130476781,
+          "sourceHead": [
+            366.5,
+            251.56
+          ],
+          "sourceFoot": [
+            456.0899653979239,
+            1411
+          ]
+        },
+        {
+          "path": "expansion-art/revision-2.1.2/flag-front-motion-sheet.webp",
+          "sourcePng": "flag-front-motion-sheet.png",
+          "x": 1408.2812378760102,
+          "y": 296.0295357336305,
+          "width": 70.35219992653421,
+          "height": 181.0084734682696,
+          "mirror": false,
+          "uniformScale": 0.08996445003393122,
+          "sourceHead": [
+            512.0,
+            349.81
+          ],
+          "sourceFoot": [
+            636.8016085790885,
+            1956
+          ]
+        }
+      ],
+      "fixedHeadX": 1454.343036293383,
+      "fixedHeadY": 347.5,
+      "fixedFootY": 472
+    }
+  ],
+  "clothSprites": [],
+  "policy": "Paired raw adult portraits, per-figure uniform placement, fixed head compositing. Native cloth alpha moves around a fixed pole edge. Role/direction variants share the user-approved flag master; not 78 individually restored faces."
+}
