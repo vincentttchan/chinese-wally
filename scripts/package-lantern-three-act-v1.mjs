@@ -1,0 +1,26 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+
+const root=path.resolve(import.meta.dirname,'..');
+const release=path.join(root,'output/releases/lantern-three-act-v1-2026-10-27');
+const build=path.join(release,'build');
+const destination=path.join(root,'public/chapters/lantern-three-act-v1');
+let html=fs.readFileSync(path.join(build,'lantern-three-act-v1.html'),'utf8');
+const scripts=Array.from(html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"[^>]*><\/script>/g));
+const styles=Array.from(html.matchAll(/<link\b[^>]*\bhref="([^"]+\.css)"[^>]*>/g));
+if(scripts.length!==1)throw new Error('Expected one independent chapter bundle.');
+const localize=text=>text.replaceAll('/chinese-wally/','../../').replace(/(["'`])\/(art|audio|fonts|chapters)\//g,'$1../../$2/').replace(/url\((["']?)\/(art|audio|fonts|chapters)\//g,'url($1../../$2/');
+const js=localize(fs.readFileSync(path.join(build,'assets',path.basename(scripts[0][1])),'utf8'));
+if(/\bimport\s*\(|\bimport\.meta|\bexport\s*\{/.test(js))throw new Error('Unexpected external module in independent bundle.');
+const css=localize(styles.map(match=>fs.readFileSync(path.join(build,'assets',path.basename(match[1])),'utf8')).join('\n'));
+html=html.replace(scripts[0][0],'');
+for(const style of styles)html=html.replace(style[0],'');
+html=html.replace('</head>',()=>`<style>${css}</style></head>`).replace('</body>',()=>`<script>${js.replaceAll('</script','<\\/script')}</script></body>`);
+fs.mkdirSync(destination,{recursive:true});fs.writeFileSync(path.join(destination,'index.html'),html);
+const sources=['lantern-three-act-v1.html','src/lantern-three-act-v1.tsx','src/components/LanternThreeActEntryV1.tsx','src/components/lantern-three-act-entry-v1.css','src/components/LanternThreeActGameV1.tsx','scripts/package-lantern-three-act-v1.mjs','vite.lantern-three-act-v1.config.ts'];
+const hash=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
+const manifest={id:'lantern-three-act-v1',version:'1.1.0',date:'2026-10-27',chapter:'宮中鬧元宵',status:'release-candidate',entry:'public/chapters/lantern-three-act-v1/index.html',previous:'public/chapters/lantern-three-act-v1-1.0.0/index.html',flow:['封面','展卷交接','宮中元宵','畫中元宵','初次隨行','原畫尋人'],sources:Object.fromEntries(sources.map(file=>[file,hash(fs.readFileSync(path.join(root,file)))])),entrySHA256:hash(html),notes:['宮中鬧元宵三幕入場；封面至入場加入交疊淡化，首幕文字在畫面停定後開始。','在人群中聽樂等待使用者審視，不接入新入場。','文字與背景採用已確認三幕樣段；小內侍身份及對白為遊戲虛構。']};
+fs.writeFileSync(path.join(destination,'version.json'),JSON.stringify(manifest,null,2)+'\n');
+fs.writeFileSync(path.join(release,'version.json'),JSON.stringify(manifest,null,2)+'\n');
+console.log(`Saved ${path.relative(root,destination)}/index.html (${Buffer.byteLength(html)} bytes), v${manifest.version}.`);
