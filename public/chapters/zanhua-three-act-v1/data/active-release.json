@@ -1,0 +1,14 @@
+{
+  "chapter": "zanhua",
+  "version": "1.0.0",
+  "status": "approved-for-production",
+  "date": "2026-10-27",
+  "route": "#zanhua",
+  "component": "src/components/ZanhuaThreeActGameV1.tsx",
+  "standaloneEntry": "chapters/zanhua-three-act-v1/index.html",
+  "archiveRoute": "#zanhua-legacy",
+  "archiveEntry": "chapters/zanhua-before-three-act-20261027/index.html",
+  "storageKey": "chinese-wally:zanhua-findings:v1",
+  "role": "隨師展卷的學畫人",
+  "note": "Accepted sources and standalone HTML retained verbatim; original version.json describes creation-time local-review status. Deployment outcome is recorded in docs/releases/zanhua-three-act-1.0.0-live.json."
+}

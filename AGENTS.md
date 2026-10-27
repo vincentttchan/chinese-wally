@@ -2,12 +2,12 @@
 
 使用者已於 2026-10-10 確認「宮中鬧元宵」章節完成，並要求以其作為後續畫作的製作基準。
 
-## 2026-10-27《簪花仕女圖》三幕入場 1.0.0 本機候審版
+## 2026-10-27《簪花仕女圖》三幕入場 1.0.0 正式入口
 
-- 使用者已確認學畫人三幕文案及 v0.1 獨立樣段，要求接入完整章節、另存版本並保留舊版，**先不要上線**。本機新版為 `public/chapters/zanhua-three-act-v1/index.html`（1.0.0），完整舊版另存 `public/chapters/zanhua-before-three-act-20261027/`。
-- 本次保留學畫人身份、封面交疊、文字對齊、逐字與背景右移，三幕後接現有樣貌提示及原有完整遊戲。來源是獨立的 `ZanhuaThreeActGameV1.tsx`、`ZanhuaThreeActEntryV1.tsx`；原 `ZanhuaPreview.tsx`、正式 `#zanhua` 與其他章節不變。
-- 新版與舊版文件都引用既有唯讀素材，不能刪除。此候審版未推送、未部署，日後發布其他工作時不可將它一併上線；需等使用者另行通知。
-- 記錄見 `docs/releases/zanhua-three-act-v1-2026-10-27.md`；獨立打包使用 `vite.zanhua-three-act-v1.config.ts` 及 `scripts/package-zanhua-three-act-v1.mjs`，不執行全站首頁封裝。
+- 使用者已確認完整三幕入場 1.0.0，並另行授權接到正式章節入口及上線，取代先前「先不要上線」的候審限制。正式 `#zanhua` 使用 `ZanhuaThreeActGameV1.tsx`，獨立完整文件仍保留於 `public/chapters/zanhua-three-act-v1/`。
+- 保留學畫人身份、封面交疊、文字對齊、逐字與背景右移，三幕後接現有樣貌提示及原有完整遊戲；不修改已確認入場來源或成品。
+- 完整舊版另存 `public/chapters/zanhua-before-three-act-20261027/`，原 `ZanhuaPreview.tsx` 保留於 `#zanhua-legacy`。新舊版文件都引用既有唯讀素材，不能刪除或覆寫。其他五章與原封存標記不變。
+- 本機候審歷程見 `docs/releases/zanhua-three-act-v1-2026-10-27.md`；本次上線紀錄見 `docs/releases/zanhua-three-act-1.0.0-live-2026-10-27.md`。獨立打包腳本仍用於版本成品，正式網站建置沿用現有發布流程。
 
 ## 2026-10-27 兩章三幕入場正式封存與後續基準
 
