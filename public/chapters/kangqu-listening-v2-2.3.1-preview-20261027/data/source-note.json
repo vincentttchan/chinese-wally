@@ -1,0 +1,112 @@
+{
+  "painting": "崇慶皇太后六旬萬壽圖 · 第三卷 康衢駢慶",
+  "catalog": "https://www.dpm.org.cn/collection/paint/232815.html",
+  "nativeViewer": "https://www.dpm.org.cn/dyx.html?path=/Uploads/tilegenerator/dest/files/image/8831/2015/0778/img0002.xml",
+  "nativeSegment": {
+    "sourceDimensions": [
+      24592,
+      2843
+    ],
+    "sourceCrop": [
+      8000,
+      0,
+      12500,
+      2843
+    ],
+    "dimensions": [
+      4500,
+      2843
+    ],
+    "sha256": "00a6d98cda0787326a49dc3aed754ba6396e265da8c581446330041df378103a",
+    "method": "官方原生圖磚拼合及裁切，沒有放大、補畫或生成原畫。"
+  },
+  "completeComposition": {
+    "page": "https://yihua.art/chong-qing-wan-shou-qing-dian.html",
+    "image": "https://yihua.art/wp-content/uploads/2023/04/wanshoutu-shang.jpg",
+    "dimensions": [
+      33949,
+      800
+    ],
+    "scope": "完整公開構圖；不當作全卷原生高清。"
+  },
+  "interfaceArt": "頭像與收藏圖樣為原畫衍生插圖；角色短句為遊戲虛構對白。",
+  "scope": "互動位置位於 4500×2843 的原生清晰段落，完整第三卷其他位置未有同等高清互動覆蓋。",
+  "displayBounds": {
+    "nativeBounds": [
+      0,
+      120,
+      4500,
+      2708
+    ],
+    "fullBounds": [
+      0,
+      20,
+      33949,
+      782
+    ],
+    "initialPoint": [
+      2250,
+      1700
+    ],
+    "initialZoomRatio": 1.5,
+    "gutter": 1,
+    "method": "Display bounds only. Original image files, registration and hotspot coordinates are unchanged.",
+    "evidence": "Source pixels and original overview inspected. Native registered people extend from y=630 to y=2675; the chosen bounds contain them. Black photograph margins lie outside the display bounds.",
+    "validation": "Source inspection only; no tests, browser or gameplay execution."
+  },
+  "runtimeNativeEncoding": {
+    "method": "lossless WebP encoding, unchanged source dimensions and RGB pixels",
+    "dimensions": [
+      4500,
+      2843
+    ],
+    "originalBytes": 15450097,
+    "runtimeBytes": 10300464,
+    "originalPixelSHA256": "d66a9d170253e7128c3508ad84a141260b7b48d3695e7fbd4a1817b5cb7ed173",
+    "runtimePixelSHA256": "d66a9d170253e7128c3508ad84a141260b7b48d3695e7fbd4a1817b5cb7ed173",
+    "encodingSeconds": 14.29
+  },
+  "newVersion": {
+    "id": "kangqu-listening-v2",
+    "version": "2.2.0",
+    "date": "2026-10-27",
+    "story": "三段尋人、點一位看旗列、沿街見聞、畫作小記及卷旁留印",
+    "interpretation": "頭像及六人、七人、十六人旗列與三處群像均為輔助摹繪／遊戲演繹，原畫為證據；紀念印留在玩家冊頁。"
+  },
+  "wallPatternArt": {
+    "version": "2.1.14",
+    "method": "四款主要圖樣預先顯示淡色美術圖，收集後點亮並計四款進度；其他牆格收入沿街拾趣補充見聞。素材按原畫可見輪廓作輔助摹繪，並非原畫像素提取或原件高清復原。",
+    "identification": "以可見形狀命名，撤下未核實的逐一八仙對應；雙菱構成參照故宮方勝詞條。",
+    "reference": "https://www.dpm.org.cn/lemmas/241568.html",
+    "rights": "原畫來源及其使用條件沿用既有記錄；生成衍生插圖不代表取得館藏圖像的新授權。"
+  },
+  "wallPatternMeanings": {
+    "traditional": [
+      "盤長：福壽綿長",
+      "方勝：同心雙合"
+    ],
+    "comparison": "螺旋輪廓與法螺紋對讀，不當作原畫確證",
+    "contextual": "花葉、結帶及受遮擋圖樣標示讀畫意趣",
+    "sources": [
+      "https://www.wxmuseum.cn/News/Details/33c3e298-adce-429c-b18e-dd9ae1553b7a",
+      "https://artsandculture.google.com/asset/glass-window-with-an-inner-frame-in-the-shape-of-the-chinese-character-jing/1QEMxHFh2XWx5Q?hl=zh-cn",
+      "https://collections.nmth.gov.tw/CollectionContent.aspx?a=132&rno=2011.019.0028"
+    ]
+  },
+  "entrance": {
+    "historicalCopy": "沿用已確認的三幕；一七五一年指慶典年份，不作畫作完成年份。",
+    "fiction": "初到京城的外鄉客身份為遊戲虛構。",
+    "art": "只移動既有官方原生畫作段落，不生成或修改原畫像素。"
+  },
+  "contentPreview": {
+    "version": "2.3.1",
+    "date": "2026-10-27",
+    "copy": "src/entries/kangqu-content-v2.3.1/copy.json",
+    "sources": [
+      "https://www.dpm.org.cn/collection/paint/232815.html",
+      "https://www.dpm.org.cn/Uploads/File/2020/11/13/u5fae087d8cc21.pdf"
+    ],
+    "fiction": "人物對白為遊戲虛構，動態場景為遊戲演繹；歷史背景與畫作解說另依原畫及館方資料整理。",
+    "deployment": "Local preview only; no route promotion or deployment."
+  }
+}

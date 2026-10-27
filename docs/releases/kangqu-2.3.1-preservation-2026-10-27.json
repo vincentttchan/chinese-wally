@@ -1,0 +1,3747 @@
+{
+  "baselineCommit": "bac6a4fb40d1a46cf343a421ecd01002262169a8",
+  "allowedExistingChanges": [
+    "public/chapters/kangqu-listening/data/active-release.json",
+    "public/chapters/kangqu-listening/index.html",
+    "public/index.html",
+    "src/game/historicalChapters.ts"
+  ],
+  "preservedExistingSourceAndPublicFiles": [
+    {
+      "path": "public/art/animations/kangqu-audience-v1/fixed-background.png",
+      "gitBlob": "ea829f444cf0c0123fb6567c7767df5b4509dd0b"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v1/frame-registration.json",
+      "gitBlob": "30db2c13e94ae44d662054a4149f26db45c05b4c"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v1/frames/group-01.png",
+      "gitBlob": "701dce2c928ec47137b52c6ba82a4e8cdaa6cfd2"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v1/frames/group-02.png",
+      "gitBlob": "3a5e55786008773ab432dce388c7b996a9962e2c"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v1/frames/group-03.png",
+      "gitBlob": "e434634773f055ef1366fb6ec42af5179865bb4a"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v1/frames/group-04.png",
+      "gitBlob": "e434634773f055ef1366fb6ec42af5179865bb4a"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v1/frames/group-05.png",
+      "gitBlob": "8edde93cf1f98f7c9de54c16fc61bd31b4ad0bef"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v1/frames/group-06.png",
+      "gitBlob": "3aaa400199ebfc6f83c49b798ac329755844fc0e"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v1/frames/group-07.png",
+      "gitBlob": "3aaa400199ebfc6f83c49b798ac329755844fc0e"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v1/frames/group-08.png",
+      "gitBlob": "701dce2c928ec47137b52c6ba82a4e8cdaa6cfd2"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v1/frames/group-09.png",
+      "gitBlob": "701dce2c928ec47137b52c6ba82a4e8cdaa6cfd2"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v1/group-master.png",
+      "gitBlob": "701dce2c928ec47137b52c6ba82a4e8cdaa6cfd2"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v1/original-reference.png",
+      "gitBlob": "7ea83f1648dfce3f20afff634d1461ed52a4f9ed"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v2-seven/fixed-background.png",
+      "gitBlob": "c9507b6918928dc04aeba0fcceaa586f9e0c1deb"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v2-seven/frame-registration.json",
+      "gitBlob": "085c0d51f7ac40b585507c8fd753dd7fe96f950d"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v2-seven/frames/group-01.png",
+      "gitBlob": "aae0b53c6b884c2d492b2f5b2f31426169db6b40"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v2-seven/frames/group-02.png",
+      "gitBlob": "2c04b7e163d2b948435f624a1d19939a416e9a3c"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v2-seven/frames/group-03.png",
+      "gitBlob": "98182e2a931a18cfd8136ef0e0b8cc734921cad3"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v2-seven/frames/group-04.png",
+      "gitBlob": "98182e2a931a18cfd8136ef0e0b8cc734921cad3"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v2-seven/frames/group-05.png",
+      "gitBlob": "f16fa1d8d6636b64efc4337d0a831f9c2ec973a9"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v2-seven/frames/group-06.png",
+      "gitBlob": "d3546452a36c8d1a44fddbba67c40089cf897775"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v2-seven/frames/group-07.png",
+      "gitBlob": "d3546452a36c8d1a44fddbba67c40089cf897775"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v2-seven/frames/group-08.png",
+      "gitBlob": "aae0b53c6b884c2d492b2f5b2f31426169db6b40"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v2-seven/frames/group-09.png",
+      "gitBlob": "aae0b53c6b884c2d492b2f5b2f31426169db6b40"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v2-seven/group-master.png",
+      "gitBlob": "aae0b53c6b884c2d492b2f5b2f31426169db6b40"
+    },
+    {
+      "path": "public/art/animations/kangqu-audience-v2-seven/original-reference.png",
+      "gitBlob": "3a5882c3b5cc713aca3d39abbea15d0defe77011"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-keyposes-v4/three-poses.png",
+      "gitBlob": "29d9ccedb69506fc5b877dcd0201e3a55bed2d28"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/attachment-mask.png",
+      "gitBlob": "37ef646d05a8f705a260dacc1bcf1660be0685e5"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/drawing-01.png",
+      "gitBlob": "3568aaa8549af04ca2fba0eeec24da2a5d02347c"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/drawing-02.png",
+      "gitBlob": "7c56a5df4935e5ffa93aae58037df0b98b550e9d"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/drawing-03.png",
+      "gitBlob": "230302fd6a6a0b32a8b5f8633ca94c3a2a2095a5"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/drawing-04.png",
+      "gitBlob": "a6eba1b833d28879c10344cd22a365d48ac10bc5"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/drawing-05.png",
+      "gitBlob": "7335fecc98cae049dcfbf5f44c3a2120a80a7c6e"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/drawing-06.png",
+      "gitBlob": "d0a87ae7d9acc2699016228f755813cc541ce0c5"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/drawing-07.png",
+      "gitBlob": "6817fd7eb674ce520022a70c8987843d50e61893"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/drawing-08.png",
+      "gitBlob": "4e2968e8686643cc0d63aa84ac89932c57a2c39e"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/drawing-09.png",
+      "gitBlob": "348adbafa300b7e59661bb887b71ee1ee1b64da3"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/drawing-10.png",
+      "gitBlob": "00d6042af4c77e911e0a2a7597348b6acddc1b7c"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/drawing-11.png",
+      "gitBlob": "4dd829e195e279890152cf03079b0a7f3fea92ed"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/drawing-12.png",
+      "gitBlob": "4f3f9d3ffa070a469b197d9117d0ab4440679a16"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/drawing-13.png",
+      "gitBlob": "3795b9c914a3625bdaf387ff12d323640e4dd168"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/drawing-14.png",
+      "gitBlob": "36a48b40245503cf33488825d868c0116a4873bf"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/drawing-15.png",
+      "gitBlob": "5dfbdb8e1291552d1ff66cbaee4dce0fb29b1d73"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/drawing-16.png",
+      "gitBlob": "d7a568fbfd70e92e652e66f509a933233e99f22b"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/middle-registration.json",
+      "gitBlob": "11175570332773212f2b6f33299334c7d3e9db5e"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-01.png",
+      "gitBlob": "7156b897e079fcaea3237344724595dbc0523fc4"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-02.png",
+      "gitBlob": "0b2eca8456066c8d8fbb196a3e82ddca47ea4dca"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-03.png",
+      "gitBlob": "8d533ce785169faf152d21137852e824d31ac0cc"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-04.png",
+      "gitBlob": "c0a941cb13d963863a03b487ae37580aa2080dce"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-05.png",
+      "gitBlob": "e56500fe6c6b688d4d0ba71e17466b3e92adb461"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-06.png",
+      "gitBlob": "3ae2af9409971b746b563f553110d8f9b7f93fa5"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-07.png",
+      "gitBlob": "b2c3962583c8f379291f40bbf97cd53d88fc0c71"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-08.png",
+      "gitBlob": "d90c6d2b11bdaa6657942c5a47eea72bf08fe418"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-09.png",
+      "gitBlob": "a62f6538db3bb93f169d2e0f257582afe836f32c"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-10.png",
+      "gitBlob": "6bb2b96b6b82a58efa23791e798f4a2081eccdb8"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-11.png",
+      "gitBlob": "7a963ca7dc351d8e9d72fe1c9f9ecebe45d69de9"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-12.png",
+      "gitBlob": "9a42d168185fd784214c07b6bc31fb2b2cd9f51e"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-13.png",
+      "gitBlob": "8f9dc2e79ffdc1aad70a85ad9afe84fbd8e99386"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-14.png",
+      "gitBlob": "5dadb49e6a6baa8f199ed3399b200acd79e5d681"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-15.png",
+      "gitBlob": "5b76e65a4f1bd8e764e8bff12cbeecfc3c83535f"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-16.png",
+      "gitBlob": "c4384147509466ceac62c52d12509943a65a7dc9"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/pose-17.png",
+      "gitBlob": "d6e43a1c6e67fd05892e45a0c88b953c59e466f7"
+    },
+    {
+      "path": "public/art/animations/kangqu-drummer-v5/registration.json",
+      "gitBlob": "8b05f418fcf7da2df927207ebf03486a26e0d26b"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-master-v7/fixed-background.png",
+      "gitBlob": "1ad000a880b3d9f88ecf38915dcf340338958cfb"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-master-v7/frame-registration.json",
+      "gitBlob": "ba08dca1e2c36af7e59902f25fa05ff208edf007"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-master-v7/frames/group-01.png",
+      "gitBlob": "748cf5f5bd4b11b64f1f73f72ba1c675c0a3d352"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-master-v7/frames/group-02.png",
+      "gitBlob": "6e11e072b40c85c9da3af947a28c11116e0d1823"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-master-v7/frames/group-03.png",
+      "gitBlob": "822299ff73c620a25000a5d6ba7c50f6bbf00a57"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-master-v7/frames/group-04.png",
+      "gitBlob": "55ab83c524907bf602d782e5650f4ae62a5c7e9d"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-master-v7/frames/group-05.png",
+      "gitBlob": "fbb9326fbbc6e4b044bd406b4fcd15420c1fa457"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-master-v7/frames/group-06.png",
+      "gitBlob": "0dd56bcf3942cd37f42f365a879f39bc623a62e0"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-master-v7/frames/group-07.png",
+      "gitBlob": "a12ad294527dee4fbc292037ce3eb1ebda6aff1c"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-master-v7/frames/group-08.png",
+      "gitBlob": "8900cc110cf64cb05dd40dec3a6c860d5fc8119f"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-master-v7/frames/group-09.png",
+      "gitBlob": "3c96eaa86e74cf3e9f2135fd028a2474025686f0"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-master-v7/group-master.png",
+      "gitBlob": "0930d55c97229931c34bb9502055859ca07fe0cd"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-master-v7/original-reference.png",
+      "gitBlob": "396601d2882b5068c115dad9c4a616ad4cbaa12c"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v1/hand-repair-v1.png",
+      "gitBlob": "323e4687e7b3c8419d6a01d1ad4a98fce3c343e9"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v1/provenance.json",
+      "gitBlob": "14e5d92c644690baa6ee534a15716d8feaea8fb3"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v1/source.png",
+      "gitBlob": "aa467e27c3c789ec0ee4d6414eaa1827e4e4a89a"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v2/pose-01.png",
+      "gitBlob": "3951c2223314bc50fcb27cda9be4c64529ed95c5"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v2/pose-02.png",
+      "gitBlob": "9fb4e84934575144ca9be4bc552b1d5315a5b49d"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v2/pose-03.png",
+      "gitBlob": "7a4e1e20f5b3cf7367bc5f267f9244de7798e45d"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v2/pose-04.png",
+      "gitBlob": "012b8c35a2b181f468c30a52a511f29aa8e9fa30"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v2/pose-05.png",
+      "gitBlob": "2456a803fe3b4239fa295c15ce31c53d03655707"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v2/pose-06.png",
+      "gitBlob": "9637c93835e393af501e32cc08c8dab699b49ddd"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v2/pose-07.png",
+      "gitBlob": "47f59555139c71fc72c7ebaf18b3ae3cdf7486ee"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v2/pose-08.png",
+      "gitBlob": "d1356e8eae83ac1346cd69ad49c73005a202dc09"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v2/pose-09.png",
+      "gitBlob": "5f901ff9ee9151b2ae4687ea24a7b36a7f9b0a08"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v2/pose-10.png",
+      "gitBlob": "4490b9377c5c88d7ad7b405abee6b44a725d099a"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v2/pose-11.png",
+      "gitBlob": "ed8ff8f2586fddabb25b74b6d2ad841cc55c1569"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v2/pose-12.png",
+      "gitBlob": "eeee620f347fe8acc310152db773951080878f4b"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v2/registration.json",
+      "gitBlob": "c2febe925772d3e9dbed6180d9738c7931561f73"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/background.png",
+      "gitBlob": "19b0b63aa2793d15243b67f3af2c29157b8ae77b"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/blue-00.png",
+      "gitBlob": "7991635fe0ee716833ebf5c21f2915435e9538c5"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/blue-01.png",
+      "gitBlob": "a2ec539a454507f66e5b222ebb64dca757d02aae"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/blue-02.png",
+      "gitBlob": "750c40cba45d876b01d020b39e251a76e7e559f5"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/blue-03.png",
+      "gitBlob": "95a11ff2061df3efe72026b161d8c9b7653a5eed"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/blue-05.png",
+      "gitBlob": "4de07afac3221033db5b27e1f6266c2b669aef0e"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/blue-06.png",
+      "gitBlob": "2821712c7d63c23ac5fec4234c643e31be06a246"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/blue-07.png",
+      "gitBlob": "c5ec57bb4140c5668322dc8119c9bcb93ef35376"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/blue-09.png",
+      "gitBlob": "758b60589b10d3ac2323efa98552124c23ff6d20"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/blue-10.png",
+      "gitBlob": "d8a595db13c5a66d364b302eb9ad79000ee7703d"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/blue-11.png",
+      "gitBlob": "6a855d2b84316f16828b6a502702632564651626"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/blue-13.png",
+      "gitBlob": "e28b9d94509f13a84e715e9c971f0a8d04bf8dc3"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/blue-head.png",
+      "gitBlob": "1f30a1276d2a0f45a9c140c7b7d21ba6d06d1efc"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/drum.png",
+      "gitBlob": "6eb1d73f748fb37a80d501534af2f0eeeb18e6ce"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/drummer-00.png",
+      "gitBlob": "3ed978c99cc16a1e3b011bc07a0ae87bd10460f5"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/drummer-01.png",
+      "gitBlob": "ec1ecde37ed46c7d8e1ff5ee86e221fac092d23c"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/drummer-02.png",
+      "gitBlob": "717fddecc66072e1297840b363f6701149614d32"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/drummer-03.png",
+      "gitBlob": "137426ae1ae8903987fe597a7a8b9f35debfa1f8"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/drummer-04.png",
+      "gitBlob": "18ef6106933834e30e46e8fdb89c111ef9c7a1cb"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/drummer-05.png",
+      "gitBlob": "283af7014eba204c0bbb1759bbac482d445e4580"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/drummer-06.png",
+      "gitBlob": "993a65f9c3b9d93796b65d01f043ff8aeb882b2a"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/drummer-07.png",
+      "gitBlob": "3a8d689619cbfa61fd5fef11255a83cdbc076790"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/drummer-09.png",
+      "gitBlob": "6d49e114722082aea62e8dc26511271871eec962"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/drummer-13.png",
+      "gitBlob": "dac2d1c3b2570f82c3eeea7d3e0a4d3c06c627d1"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/drummer-17.png",
+      "gitBlob": "2a9374becfb5e7d0c35b89b01887f42ede27a91a"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/drummer-head.png",
+      "gitBlob": "f69702aba75eb703fce61bf2f3b2f9c98cc67816"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/grey-00.png",
+      "gitBlob": "40df949299ce91810daa57c279ed58af696b5899"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/grey-01.png",
+      "gitBlob": "546295b3edbc0261c0a7463e712635f185ae5440"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/grey-02.png",
+      "gitBlob": "05c781a8e0acc4f6758b121a326a2cd903d8597a"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/grey-03.png",
+      "gitBlob": "97207d338ae0bee010f03af83a05c2bf95c36fd3"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/grey-05.png",
+      "gitBlob": "f073fd5fec80f8d10c25763bb9826160a5f4f2e1"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/grey-06.png",
+      "gitBlob": "51af7c83a7b16b418e798119a77c6f16c4488570"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/grey-07.png",
+      "gitBlob": "4f51bd0cdbece78079184ed168ff6f32917a9a65"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/grey-09.png",
+      "gitBlob": "c3c0f4bd76461676924019d8ca1bb9ede590dfba"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/grey-10.png",
+      "gitBlob": "0790890c70cd1e51cd2a517bfc6f3f57db421bab"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/grey-11.png",
+      "gitBlob": "ef5495d15185bf68f55333006f42de4b0d97840d"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/grey-13.png",
+      "gitBlob": "44a13d4f173c4020f6ba5ab72e45a9f5ee0988c4"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/grey-head.png",
+      "gitBlob": "1664dd39283eca3521022bcd4b4a12ee5a26d6b4"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/registration.json",
+      "gitBlob": "5af2d86ab6013cbc006e9814afe1f7cd993a39ca"
+    },
+    {
+      "path": "public/art/animations/kangqu-ensemble-v6/source.png",
+      "gitBlob": "396601d2882b5068c115dad9c4a616ad4cbaa12c"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v1/fixed-background.png",
+      "gitBlob": "710c85982848ff8a0edf0d78279e1b1029551dd3"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v1/frame-registration.json",
+      "gitBlob": "5a4108b50a2ab2798d90bc1244c34d50ec2215df"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v1/frames/group-01.png",
+      "gitBlob": "3e899a74e92f1bcb5a9d133ad5bd3539a08b989b"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v1/frames/group-02.png",
+      "gitBlob": "d9b23a8de5a7a66dcc4314d6713725b6435a5f2c"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v1/frames/group-03.png",
+      "gitBlob": "ab9e16e267d43881c7a312998d9e1e28bb275c8f"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v1/frames/group-04.png",
+      "gitBlob": "cdf1121d21affb9b2a9084ce321fab77ed2c60b7"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v1/frames/group-05.png",
+      "gitBlob": "6b45f00ff1f8b29bb440e584ba637ff841a54d63"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v1/frames/group-06.png",
+      "gitBlob": "991187758077729e017b4c803c07a6c5d5cbad60"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v1/frames/group-07.png",
+      "gitBlob": "484dc00ca6bdd15fe77becf49c21c22bd2731025"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v1/frames/group-08.png",
+      "gitBlob": "7e08ede3fdd5c53df1b8157d3211c7f8b2ad493d"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v1/frames/group-09.png",
+      "gitBlob": "3e899a74e92f1bcb5a9d133ad5bd3539a08b989b"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v1/group-master.png",
+      "gitBlob": "26d063a3c036a560b852c59b61dc72451284c3eb"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v1/original-reference.png",
+      "gitBlob": "9640c43c9b67b07b52f195263e75788105794b16"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v2-detail/fixed-background.png",
+      "gitBlob": "5a23fc8534e8e302a88cd47bfc6b06c657a01173"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v2-detail/frame-registration.json",
+      "gitBlob": "2d91bb5f0e9ac49c32a02068743be16b3d9a9f02"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v2-detail/frames/group-01.png",
+      "gitBlob": "d05692c4091fe6848abe0e328d0aee68a6b472a4"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v2-detail/frames/group-02.png",
+      "gitBlob": "92a28107e2f7a8b850353d95f86e83f661bb9a3b"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v2-detail/frames/group-03.png",
+      "gitBlob": "2c59c2731ef9ab336c5e49c7ba291f48f5f099f3"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v2-detail/frames/group-04.png",
+      "gitBlob": "6362343ba2fadb4ba14d15bea0003ef757c14265"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v2-detail/frames/group-05.png",
+      "gitBlob": "065f316b65da35b0675c6feb51382ac3769d972e"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v2-detail/frames/group-06.png",
+      "gitBlob": "6362343ba2fadb4ba14d15bea0003ef757c14265"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v2-detail/frames/group-07.png",
+      "gitBlob": "92a28107e2f7a8b850353d95f86e83f661bb9a3b"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v2-detail/frames/group-08.png",
+      "gitBlob": "d05692c4091fe6848abe0e328d0aee68a6b472a4"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v2-detail/frames/group-09.png",
+      "gitBlob": "d05692c4091fe6848abe0e328d0aee68a6b472a4"
+    },
+    {
+      "path": "public/art/animations/kangqu-flags-v2-detail/original-reference.png",
+      "gitBlob": "67daa10d885a3f6f968cd95cca8544202fe68260"
+    },
+    {
+      "path": "public/art/animations/lantern-acrobat/background-v1.png",
+      "gitBlob": "5440bd8b1feaaca76153420c6ce32e87b1f5e179"
+    },
+    {
+      "path": "public/art/animations/lantern-acrobat/poses-v1.png",
+      "gitBlob": "8926f66d025aa025a46593c78f5af4b8e66c565b"
+    },
+    {
+      "path": "public/art/animations/lantern-drummer/background-v1.png",
+      "gitBlob": "453deb54e5f16762bcc40d54709241278541f477"
+    },
+    {
+      "path": "public/art/animations/lantern-drummer/poses-v1.png",
+      "gitBlob": "858936397c80322c16fd5d105baaa186af5f7f4f"
+    },
+    {
+      "path": "public/art/animations/lantern-emperor/first-background-v1.png",
+      "gitBlob": "a8438ee7e68c5bb2be32a1b71b3b4148066d69cf"
+    },
+    {
+      "path": "public/art/animations/lantern-emperor/first-background-v2.png",
+      "gitBlob": "09f54b9348493a1d4ae85dce85066d91577d6165"
+    },
+    {
+      "path": "public/art/animations/lantern-emperor/first-background-v3.png",
+      "gitBlob": "04bed8610cfaa2bda127e54981831fd78caf0ce2"
+    },
+    {
+      "path": "public/art/animations/lantern-emperor/first-poses-v2.png",
+      "gitBlob": "907b58244651e4ffff9496de5193e37286d184fc"
+    },
+    {
+      "path": "public/art/animations/lantern-emperor/second-background-v1.png",
+      "gitBlob": "21f9187218b0f30e32568614f686abff6570f132"
+    },
+    {
+      "path": "public/art/animations/lantern-emperor/second-background-v3.png",
+      "gitBlob": "c3dae1b1e0c7c6aec9196a6445031e877c2ca90a"
+    },
+    {
+      "path": "public/art/animations/lantern-emperor/second-poses-v2.png",
+      "gitBlob": "aad409eb6fb22cd3d96989590f141513eee3ff00"
+    },
+    {
+      "path": "public/art/animations/lantern-emperor/third-background-v1.png",
+      "gitBlob": "6073240691506cac8ae8aea481451f2796b0ef26"
+    },
+    {
+      "path": "public/art/animations/lantern-emperor/third-background-v2.png",
+      "gitBlob": "2a125b76957d5210de8e3f85835fcbc762e9b234"
+    },
+    {
+      "path": "public/art/animations/lantern-emperor/third-background-v3.png",
+      "gitBlob": "0b61abf126c2abe2184a94a95c1c2fb045b11da6"
+    },
+    {
+      "path": "public/art/animations/lantern-emperor/third-poses-v2.png",
+      "gitBlob": "8c05ec8665c54b5671a735330cc6befae82130a7"
+    },
+    {
+      "path": "public/art/animations/lantern-fireworks/back-v1.png",
+      "gitBlob": "b4bbaae1532b21511d4ddace03cb57c574982d2a"
+    },
+    {
+      "path": "public/art/animations/lantern-fireworks/background-v1.png",
+      "gitBlob": "9eaf5067962a7074f683807c3ee4df2e66323169"
+    },
+    {
+      "path": "public/art/animations/lantern-fireworks/blue-v1.png",
+      "gitBlob": "539f9fa8f678efab7c6227659ee289d991caebe8"
+    },
+    {
+      "path": "public/art/animations/lantern-fireworks/green-v1.png",
+      "gitBlob": "e35e70ffd5c61219ac60bc94c6fdbe52ba2bce60"
+    },
+    {
+      "path": "public/art/animations/lantern-fireworks/lighter-v1.png",
+      "gitBlob": "bcdbab1d4668418e9040a9983503bf943193034c"
+    },
+    {
+      "path": "public/art/animations/lantern-market/background-v1.png",
+      "gitBlob": "85d19fc5d688698cd4706779c6508a01f294b073"
+    },
+    {
+      "path": "public/art/animations/lantern-market/hanging-background-v1.png",
+      "gitBlob": "5056d5a810a96bcaa6c4fb7baadf26386f6f555f"
+    },
+    {
+      "path": "public/art/animations/lantern-market/hanging-ornaments-v1.png",
+      "gitBlob": "ed5c283e6858e33a5a60b41612283acd0a5d143c"
+    },
+    {
+      "path": "public/art/animations/lantern-market/poses-v1.png",
+      "gitBlob": "57ba25ef83218bfc9d2b6dd84b163b5ae76d2189"
+    },
+    {
+      "path": "public/art/animations/lantern-monk/monk-poses-v1.png",
+      "gitBlob": "d152b107426500fcbc195c82099183ba32b7a0e5"
+    },
+    {
+      "path": "public/art/animations/lantern-stove/background-v1.png",
+      "gitBlob": "605392517ca69d83ff0c6abbeb0ec6744c196666"
+    },
+    {
+      "path": "public/art/animations/lantern-stove/green-poses-v1.png",
+      "gitBlob": "06faf34433c07107006a82d7f9ac1eaba334bc8d"
+    },
+    {
+      "path": "public/art/animations/lantern-stove/red-poses-v1.png",
+      "gitBlob": "8db763de650c0d6da328c10c53c0e59c94f3ef6f"
+    },
+    {
+      "path": "public/art/animations/lantern-theatre/background-v1.png",
+      "gitBlob": "775d77cfebc55e931585dcaed8d9dac886b4a7a4"
+    },
+    {
+      "path": "public/art/animations/lantern-theatre/banner-poses-v1.png",
+      "gitBlob": "0467022c2ae479989d22ae7dd9a0bf04ac27e39c"
+    },
+    {
+      "path": "public/art/animations/lantern-theatre/dancer-poses-v1.png",
+      "gitBlob": "585ef1b705e1863b7599784c7f830afe29a3b46f"
+    },
+    {
+      "path": "public/art/animations/lantern-theatre/drummer-poses-v1.png",
+      "gitBlob": "4bfeb8513ecde05fe5270d1c82f29cb4b792c61d"
+    },
+    {
+      "path": "public/art/animations/lantern-zhongkui/background-v1.png",
+      "gitBlob": "19b92b120db30951cfa2bcc2361b3d8250fe3056"
+    },
+    {
+      "path": "public/art/animations/lantern-zhongkui/background-v2.png",
+      "gitBlob": "d4e7244d3073bac0a42ae67655ea4d7f3448edaf"
+    },
+    {
+      "path": "public/art/animations/lantern-zhongkui/front-poses-v2.png",
+      "gitBlob": "611028c92bb5971004ded6f9aa70180ec68d1d92"
+    },
+    {
+      "path": "public/art/animations/lantern-zhongkui/rear-poses-v2.png",
+      "gitBlob": "073323a7d37662a0459ad94ca5c5a9de93c1d660"
+    },
+    {
+      "path": "public/art/animations/lantern-zhongkui/staff-poses-v2.png",
+      "gitBlob": "3025a08fed69944dfd441ca2a1b2f43ddfb5acfd"
+    },
+    {
+      "path": "public/art/animations/lantern-zhongkui/staff-poses-v3.png",
+      "gitBlob": "3149cb096b2ddcd4593df229167463191e566f37"
+    },
+    {
+      "path": "public/art/animations/lantern-zhongkui/zhongkui-poses-v1.png",
+      "gitBlob": "f44e17ee84d0506aeddfed3fa0a151de71793fb4"
+    },
+    {
+      "path": "public/art/animations/lantern-zhongkui/zhongkui-poses-v2.png",
+      "gitBlob": "584e3c1919b0793b4bb795415e861a91092f07e5"
+    },
+    {
+      "path": "public/art/animations/luoshen-birds/redrawn/PROMPT.txt",
+      "gitBlob": "9dcdddea85b4c81da7d663b3f2fce4ef70003184"
+    },
+    {
+      "path": "public/art/animations/luoshen-birds/redrawn/README.md",
+      "gitBlob": "82a6210788edb732fc2c0ebeaaee6ba89fe21a88"
+    },
+    {
+      "path": "public/art/animations/luoshen-birds/redrawn/SILK-PROMPTS.txt",
+      "gitBlob": "bfd002c071fed5ff59af0e8445a15677ee26018f"
+    },
+    {
+      "path": "public/art/animations/luoshen-birds/redrawn/bird-parts-v2.png",
+      "gitBlob": "b479e2fb0e89b4b64804a6e0aa4e19892b6bd00f"
+    },
+    {
+      "path": "public/art/animations/luoshen-birds/redrawn/silk-plate-v3.png",
+      "gitBlob": "c86b8956e4d38d0059c89fd7e93cfe7145750a55"
+    },
+    {
+      "path": "public/art/animations/luoshen-birds/silk-plate-v1.png",
+      "gitBlob": "da7dbbcb60d5f33fb8fd7267a9e084da768eccb0"
+    },
+    {
+      "path": "public/art/animations/luoshen-cao/figure-master-v2.png",
+      "gitBlob": "78ea5e69d2a1a33532110966ad21c6b191009dd8"
+    },
+    {
+      "path": "public/art/animations/luoshen-cao/figure-parts-v1.png",
+      "gitBlob": "5f0598934d46075cb4895088af49ac1a6557fa78"
+    },
+    {
+      "path": "public/art/animations/luoshen-cao/silk-plate-v1.png",
+      "gitBlob": "ae3f67a885b91ef8dd94e115f10493fa4058f5c2"
+    },
+    {
+      "path": "public/art/animations/luoshen-cao/silk-plate-v2.png",
+      "gitBlob": "2edffdf938593c13621e602ca091ac5b6e0dccdd"
+    },
+    {
+      "path": "public/art/animations/luoshen-cao/silk-plate-v3.png",
+      "gitBlob": "16cb4f8876cad51091d079db662dd6a3d45ad8ac"
+    },
+    {
+      "path": "public/art/animations/luoshen-cloudcar/master-v1.png",
+      "gitBlob": "2d17de1c239df9d9935f0d86d7ac3df491477ab5"
+    },
+    {
+      "path": "public/art/animations/luoshen-cloudcar/master-v2.png",
+      "gitBlob": "ef1c0f356a62194a76bd947d23bd487d242ac4b7"
+    },
+    {
+      "path": "public/art/animations/luoshen-cloudcar/silk-plate-v1.png",
+      "gitBlob": "40a2edf9691d962952f4bafa8136bce33550746b"
+    },
+    {
+      "path": "public/art/animations/luoshen-dragon/PROMPT-HINDLEG-V3.txt",
+      "gitBlob": "231601461f8168e8142e17c2bcb16752e9a92dd8"
+    },
+    {
+      "path": "public/art/animations/luoshen-dragon/PROMPTS.txt",
+      "gitBlob": "d5e79419302b0fdb9568f82bc8c8dbc1e2bbb05d"
+    },
+    {
+      "path": "public/art/animations/luoshen-dragon/README.md",
+      "gitBlob": "7e6f3d61d169652fc89627086d2f9f811773782a"
+    },
+    {
+      "path": "public/art/animations/luoshen-dragon/dragon-parts-v1.png",
+      "gitBlob": "e2cf19b201c447c9b6aab2e41bea1335b64ed2bb"
+    },
+    {
+      "path": "public/art/animations/luoshen-dragon/dragon-parts-v2.png",
+      "gitBlob": "8f1d33a40ce87bce80dcfffe8afe26908e0ae081"
+    },
+    {
+      "path": "public/art/animations/luoshen-dragon/hindleg-v3.png",
+      "gitBlob": "5e6c60aacda4084f4234f2f98ddadad9d715c13b"
+    },
+    {
+      "path": "public/art/animations/luoshen-dragon/silk-plate-v1.png",
+      "gitBlob": "a86034f68ed27d55c4cc1128381610f660add57f"
+    },
+    {
+      "path": "public/art/animations/luoshen-farewell-scene/mount-master-v1.png",
+      "gitBlob": "10ecb0ea587da1323bfa93a083d3bfb42de4614a"
+    },
+    {
+      "path": "public/art/animations/luoshen-farewell-scene/retinue-master-v1.png",
+      "gitBlob": "3fd64b94219076ae3234165f3c5fd933700561f1"
+    },
+    {
+      "path": "public/art/animations/luoshen-farewell-scene/silk-plate-v1.png",
+      "gitBlob": "db4ac7bda72a5b4843c204328cfe1054dd6dfe42"
+    },
+    {
+      "path": "public/art/animations/luoshen-farewell/figure-parts-v1.png",
+      "gitBlob": "0a16a2e1d2e1a9b9d92a97db96ce4a65d3ccc708"
+    },
+    {
+      "path": "public/art/animations/luoshen-farewell/silk-plate-v1.png",
+      "gitBlob": "4277ff93ef5ff9ef6b56d838e7a8a9e9bfd44953"
+    },
+    {
+      "path": "public/art/animations/luoshen-figure/PROMPT-PARTS-V2.txt",
+      "gitBlob": "d86fe248e2e79c2c7e7fdd4535e28be8c641f82d"
+    },
+    {
+      "path": "public/art/animations/luoshen-figure/PROMPTS.txt",
+      "gitBlob": "b120f72b15d171873146e150277e1b935ffab731"
+    },
+    {
+      "path": "public/art/animations/luoshen-figure/README.md",
+      "gitBlob": "7bcbe045ee549c9525410b466def785bc433246b"
+    },
+    {
+      "path": "public/art/animations/luoshen-figure/figure-parts-v2.png",
+      "gitBlob": "16da9bc92fb94d0fc308b9f6507d41d74dc16cc6"
+    },
+    {
+      "path": "public/art/animations/luoshen-figure/figure-v1.png",
+      "gitBlob": "ee7c0038edf426edcd67439a182fd1aaf2f7c373"
+    },
+    {
+      "path": "public/art/animations/luoshen-figure/silk-plate-v1.png",
+      "gitBlob": "972e34d26bcd857ef8cb4a461bb6576195d1c6e5"
+    },
+    {
+      "path": "public/art/animations/luoshen-opening-sleeves/companion-repair-plate-v1.png",
+      "gitBlob": "d9b09e48a857f6e5f5f6e609d90dd74b722b0afe"
+    },
+    {
+      "path": "public/art/animations/luoshen-opening-sleeves/repair-plate-v1.png",
+      "gitBlob": "68a45c529cf95eac04c036969cc09df006fba104"
+    },
+    {
+      "path": "public/art/animations/luoshen-opening-sleeves/repair-plate-v2.png",
+      "gitBlob": "0f3460c944c62b836ce0b969da2bd4f640919007"
+    },
+    {
+      "path": "public/art/animations/luoshen-ribbon/PROMPTS.txt",
+      "gitBlob": "f8c1c6470bf26981d443de0ce96f9b2af4d7537e"
+    },
+    {
+      "path": "public/art/animations/luoshen-ribbon/README.md",
+      "gitBlob": "2aa3b877ba74f336358b2415409b30cfc88b17de"
+    },
+    {
+      "path": "public/art/animations/luoshen-ribbon/ribbon-v1.png",
+      "gitBlob": "ef8e94c9ab538fc88bcb5d7ac592d19d6f1d9837"
+    },
+    {
+      "path": "public/art/animations/luoshen-ribbon/silk-plate-v1.png",
+      "gitBlob": "fbea19575d016f3d568f1ae16bb113c0e3b25841"
+    },
+    {
+      "path": "public/art/collectibles/lantern-firelight-v1.png",
+      "gitBlob": "e3349914fec5dffb91c8754da1b57ad07200d819"
+    },
+    {
+      "path": "public/art/collectibles/lantern-journal-atlas-v1.png",
+      "gitBlob": "3c861ad44f22f23c7657003080dcbefef994c892"
+    },
+    {
+      "path": "public/art/collectibles/lantern-stove-v1.png",
+      "gitBlob": "229f804b2fcfd91070e3659d39e9d39daf2ba0ca"
+    },
+    {
+      "path": "public/art/collectibles/lantern-stove-v2.png",
+      "gitBlob": "81b0a0c95ef78fec6011e3f54aae4deb3aa339bc"
+    },
+    {
+      "path": "public/art/collectibles/lantern-zhongkui-v1.png",
+      "gitBlob": "3a4a040b1ff7420fd6d08816d69406649b25d812"
+    },
+    {
+      "path": "public/art/examination-dense-scroll-v3.png",
+      "gitBlob": "9c892690472addbfec7b9198d4b06755c4716b50"
+    },
+    {
+      "path": "public/art/examination-panorama-v2.png",
+      "gitBlob": "8a53cc51e5c3c7f7b4ba56b26b66be645c5e06a3"
+    },
+    {
+      "path": "public/art/examination-scroll.png",
+      "gitBlob": "e6b41a8462665bab42831f6f03292f91d47ac85a"
+    },
+    {
+      "path": "public/art/examination-street-life/collectibles/basket-v1.png",
+      "gitBlob": "fd0e0434285113dfd4a623f84e57cb7ee7211c13"
+    },
+    {
+      "path": "public/art/examination-street-life/collectibles/case-v1.png",
+      "gitBlob": "f501524454b55099da512c03fad83a14adb9e15e"
+    },
+    {
+      "path": "public/art/examination-street-life/collectibles/paper-v1.png",
+      "gitBlob": "138541bfc55f103cf4c1e2a6bf3bf748bb11f70b"
+    },
+    {
+      "path": "public/art/examination-street-life/collectibles/tea-v1.png",
+      "gitBlob": "db54830ccf3c3258f36db292e31b3111b81e26dc"
+    },
+    {
+      "path": "public/art/examination-street-life/target-face-cutout-v1.png",
+      "gitBlob": "542a4e3dab2ea73efa82772622bfce97cda409cc"
+    },
+    {
+      "path": "public/art/examination-street-life/target-head.png",
+      "gitBlob": "1b68a8bee9bd8d30f99ac3bbdccc3e17dfc70565"
+    },
+    {
+      "path": "public/art/hd/board.png",
+      "gitBlob": "4e794801c0d743729b2d82a4589dadef2f798260"
+    },
+    {
+      "path": "public/art/hd/bridge-v2.png",
+      "gitBlob": "45187c3baeeaf91f89599f307cfd5df703ff60ae"
+    },
+    {
+      "path": "public/art/hd/bridge.png",
+      "gitBlob": "d381557b5b1dfb8faa8f358b21f810af46cb0c70"
+    },
+    {
+      "path": "public/art/hd/tea.png",
+      "gitBlob": "6ec45b65ad5f81868a02f81491fe32bc9d4645f8"
+    },
+    {
+      "path": "public/art/lantern-festival/SOURCES.md",
+      "gitBlob": "6d378d1d31b02d7a68b24fe21ae5fc6e455910f8"
+    },
+    {
+      "path": "public/art/lantern-festival/commons-originals.json",
+      "gitBlob": "33b703add0ef6193f89bb3730c00c0bfdd727200"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-1.jpg",
+      "gitBlob": "ab1ccde8c8037e34eb3094c8bb68396724cf02a4"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-10.jpg",
+      "gitBlob": "fc32c5d58b8c4451931f4a77fa171b93dc67081c"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-11.jpg",
+      "gitBlob": "77e474dc7488e1e7f5a25c05a19c85ca6b85d478"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-12.jpg",
+      "gitBlob": "02dc5297525f9c43e855c6896e45587ab9e01a66"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-13.jpg",
+      "gitBlob": "c7f6a986f4d31b386ea3abe980b87790e020af58"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-15.jpg",
+      "gitBlob": "d1d39762961d2aecf59cdda01c07642faedd953a"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-16.jpg",
+      "gitBlob": "1a0b0acae0f821a365b492286140e049235404cd"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-17.jpg",
+      "gitBlob": "a2a6d2e6d1fc19a984c796e3628b021ce632dd62"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-18.jpg",
+      "gitBlob": "799ce2fa8cceae8b12776d3156d6812780dca8ac"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-2.jpg",
+      "gitBlob": "a90be4b0f4b333e5d5709ba9caa175e601002e2f"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-3.jpg",
+      "gitBlob": "220246d3cef5ee00a5cbdf95bdc61759012e2840"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-4.jpg",
+      "gitBlob": "7535b920671b23c662da267a071b0bfa2b5c43b4"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-5.jpg",
+      "gitBlob": "c8c7ee5f5f26467cc43ce79978ef05b333c45795"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-6.jpg",
+      "gitBlob": "ca53bb7d382b5a5031015d8deb31e9b9d2525d5c"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-7.jpg",
+      "gitBlob": "9007d29c0d25d790eed84ab540d828f034ef270b"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-8.jpg",
+      "gitBlob": "e4578f8ff5ac7e0761e1fc361a47bb8869ed3d00"
+    },
+    {
+      "path": "public/art/lantern-festival/detail-9.jpg",
+      "gitBlob": "98602fedb324137c053be9968fbd6c0ca53d496e"
+    },
+    {
+      "path": "public/art/lantern-festival/full-scroll.jpg",
+      "gitBlob": "5b0b8c5c28a39a55b99cb9fcfcb6fd91d3ae2824"
+    },
+    {
+      "path": "public/art/lantern-festival/registration.json",
+      "gitBlob": "3324eae6f1eae96fcbd015f37580910a2af5cfc2"
+    },
+    {
+      "path": "public/art/luoshen/ASSET-SOURCES.md",
+      "gitBlob": "70a6b72a7fc208ca3bd79f596ecd659f1d16826f"
+    },
+    {
+      "path": "public/art/luoshen/BOOK-CREDITS.md",
+      "gitBlob": "bebaef6c7b86b90064b14890c74301b285b09e9c"
+    },
+    {
+      "path": "public/art/luoshen/BOOK-PROMPT.txt",
+      "gitBlob": "006b45600132ec1f5ffc219e45d38208138b2848"
+    },
+    {
+      "path": "public/art/luoshen/book-closed.png",
+      "gitBlob": "8e72b063f24ff137c9d1df0661bdd3c8be37ba10"
+    },
+    {
+      "path": "public/art/luoshen/collection-additions-2026-10-16.json",
+      "gitBlob": "179065c91ac03fd96ea9e38b165ed66396db9c08"
+    },
+    {
+      "path": "public/art/luoshen/collection-beast-cutout.png",
+      "gitBlob": "5bf0a1b658d49cbd63a91aafb3768507cb8f60cb"
+    },
+    {
+      "path": "public/art/luoshen/collection-bird-cutout.png",
+      "gitBlob": "7b005aef749f499ca06977a12ffa8ce45f4f5623"
+    },
+    {
+      "path": "public/art/luoshen/collection-bird-final-2026-10-16.json",
+      "gitBlob": "f8944d1403620fbb404a64a785105ec0329a912d"
+    },
+    {
+      "path": "public/art/luoshen/collection-boat-cutout.png",
+      "gitBlob": "987231ac9b1c7238a435c9dacde5a6b4bd59e6f2"
+    },
+    {
+      "path": "public/art/luoshen/collection-boat.jpg",
+      "gitBlob": "6697d459f97abd5a3269fa86f96117ed48c4f516"
+    },
+    {
+      "path": "public/art/luoshen/collection-canopy-cutout.png",
+      "gitBlob": "8d46a2e274a5d57ead76655d55d5342e2fc4e3ce"
+    },
+    {
+      "path": "public/art/luoshen/collection-canopy.jpg",
+      "gitBlob": "aa11cfdbc516ce225b49f509eba811ac48e71588"
+    },
+    {
+      "path": "public/art/luoshen/collection-cutout-assets-2026-10-15.json",
+      "gitBlob": "bfb95f995f48ab3697a496c8f0dedb1590762eff"
+    },
+    {
+      "path": "public/art/luoshen/collection-dragon-cutout.png",
+      "gitBlob": "06dc861516dd337da76682ce642c8cd6062a332e"
+    },
+    {
+      "path": "public/art/luoshen/collection-dragon.jpg",
+      "gitBlob": "634fb8e2319a7b3834351c4bd1903e2080ba16f2"
+    },
+    {
+      "path": "public/art/luoshen/collection-ribbon-cutout.png",
+      "gitBlob": "62ae668bcf7c16a090336272d4342520c47ab852"
+    },
+    {
+      "path": "public/art/luoshen/collection-sites-2026-10-16.json",
+      "gitBlob": "d9f80e658dee0bebee49101ecca9c4d464bbafbf"
+    },
+    {
+      "path": "public/art/luoshen/cover.jpg",
+      "gitBlob": "a46c9d00a2bfd06108e6e63bbbe0eb78072ffe1f"
+    },
+    {
+      "path": "public/art/luoshen/cutout-assets-2026-10-15.json",
+      "gitBlob": "49f459d143ace5266b137da607fae05ce8e0bf55"
+    },
+    {
+      "path": "public/art/luoshen/detail-0.jpg",
+      "gitBlob": "2d1202d91f2605cb9dcb69c6376a16bd006ff876"
+    },
+    {
+      "path": "public/art/luoshen/detail-1.jpg",
+      "gitBlob": "545695de38e9754959a3be1f075ad20e0560da7c"
+    },
+    {
+      "path": "public/art/luoshen/detail-2.jpg",
+      "gitBlob": "de87f09b7a2b1dabf05c85d07ffbe17dbd26f510"
+    },
+    {
+      "path": "public/art/luoshen/detail-3.jpg",
+      "gitBlob": "33a7ef8788cd0207e51794964efeb7e019e0bad0"
+    },
+    {
+      "path": "public/art/luoshen/detail-4.jpg",
+      "gitBlob": "3ddaee5815e7b3b0d81beb72d141cb3c228a6648"
+    },
+    {
+      "path": "public/art/luoshen/detail-5.jpg",
+      "gitBlob": "3a8195afa963fd57fbe00665041dd9265c551feb"
+    },
+    {
+      "path": "public/art/luoshen/detail-6.jpg",
+      "gitBlob": "4d988bec18e2aa8e4c6d975ea3d26eb9137f6ec3"
+    },
+    {
+      "path": "public/art/luoshen/detail-7.jpg",
+      "gitBlob": "af0d38374266455f15936504726a6a9e240106e6"
+    },
+    {
+      "path": "public/art/luoshen/detail-8.jpg",
+      "gitBlob": "d6689a314802216b8105a2d18b449e44e9557d79"
+    },
+    {
+      "path": "public/art/luoshen/detail-9.jpg",
+      "gitBlob": "706270c44096efcbce887bd6a84c12d6d472aa2b"
+    },
+    {
+      "path": "public/art/luoshen/elements/boatman-v1.png",
+      "gitBlob": "abc76a6cabd262805db96379b9e4b8cbdb3b88d2"
+    },
+    {
+      "path": "public/art/luoshen/elements/boatman-v2.png",
+      "gitBlob": "6cf762962182054aa67728ac5eeae4622764e844"
+    },
+    {
+      "path": "public/art/luoshen/elements/sleeves-cao-v1.png",
+      "gitBlob": "b4fdbef8cb40f3721191384e736b709227f32f22"
+    },
+    {
+      "path": "public/art/luoshen/elements/sleeves-cao-v2.png",
+      "gitBlob": "b4c820a502f0fb39fac968c727e61e5cb82e8171"
+    },
+    {
+      "path": "public/art/luoshen/elements/sleeves-companion-v1.png",
+      "gitBlob": "edf925e787916e3798520caf56ecef11c2be880f"
+    },
+    {
+      "path": "public/art/luoshen/elements/sleeves-companion-v2.png",
+      "gitBlob": "2016868c7c249cd6e2664425aca47098b4fe1684"
+    },
+    {
+      "path": "public/art/luoshen/farewell-cao-study-v1.png",
+      "gitBlob": "a0d2e950e4db4870947eb5514c224ff46e0c43e5"
+    },
+    {
+      "path": "public/art/luoshen/farewell-goddess-study-v1.png",
+      "gitBlob": "14f462903c1cf0d2984e19cc7f37589bf48eff47"
+    },
+    {
+      "path": "public/art/luoshen/full-scroll.jpg",
+      "gitBlob": "17fe15dc4b6183c96a495c22520fecacc8a90727"
+    },
+    {
+      "path": "public/art/luoshen/hair-first-study-v1.png",
+      "gitBlob": "cb5b8a8ea42d7cf52bcff783065220872a59bd42"
+    },
+    {
+      "path": "public/art/luoshen/hair-seat-study-v1.png",
+      "gitBlob": "2b80f8100c132e77f4f3cca1406467e8ac51705e"
+    },
+    {
+      "path": "public/art/luoshen/head-C1-cutout.png",
+      "gitBlob": "d176990e5cd47518e6a557716ed19fff492f2186"
+    },
+    {
+      "path": "public/art/luoshen/head-C1.jpg",
+      "gitBlob": "55bffadedcc91cea6d40898816d4a7b9a83b91ec"
+    },
+    {
+      "path": "public/art/luoshen/head-C2-cutout.png",
+      "gitBlob": "a5aa7258b6e26feefd8f18743fc4a67bf292f5aa"
+    },
+    {
+      "path": "public/art/luoshen/head-C2.jpg",
+      "gitBlob": "09de41e53b80f450d6d9ab99b10222eaadce03d9"
+    },
+    {
+      "path": "public/art/luoshen/head-C4-cutout.png",
+      "gitBlob": "dc8cc086b2323272afebd75451971acf144c2a87"
+    },
+    {
+      "path": "public/art/luoshen/head-C4.jpg",
+      "gitBlob": "400ddbce6265e9fc755e2b00ed967365463ffe89"
+    },
+    {
+      "path": "public/art/luoshen/head-L1-cutout.png",
+      "gitBlob": "242a08e92ea93ece310e1b72d05d02a13cc36d2d"
+    },
+    {
+      "path": "public/art/luoshen/head-L1.jpg",
+      "gitBlob": "ec38c4e16b1bd0832aefa334a94bf5992ae3a72c"
+    },
+    {
+      "path": "public/art/luoshen/head-L8-cutout.png",
+      "gitBlob": "dbc915bf5a0883527adb11a77494e4a1a5ccab6e"
+    },
+    {
+      "path": "public/art/luoshen/head-L8.jpg",
+      "gitBlob": "215f0bbd52c5e398c6f9f18fe0108ca7b947ca75"
+    },
+    {
+      "path": "public/art/luoshen/head-L9-cutout.png",
+      "gitBlob": "f25fc99cdbb4fc6d7bb56f50f161613f541c10db"
+    },
+    {
+      "path": "public/art/luoshen/head-L9.jpg",
+      "gitBlob": "f02709a1bfd81591c6190d2584c1cc1386bd8f17"
+    },
+    {
+      "path": "public/art/portraits/emperor-cutout-v1.png",
+      "gitBlob": "a5e63a1a9036034a7b24042f77494d3741aa2472"
+    },
+    {
+      "path": "public/art/portraits/emperor-reference-v2-cutout.png",
+      "gitBlob": "afd455b76c9d202632bbf2f16448a93c2a9f4b6e"
+    },
+    {
+      "path": "public/art/portraits/scholar-cutout-v1.png",
+      "gitBlob": "b66d12420e9c9da6279f23b49b4d4a4077b6e7a3"
+    },
+    {
+      "path": "public/art/portraits/xianzong-recognition-v2.png",
+      "gitBlob": "3ee802e47638ed47666093693fbdeb066b98da57"
+    },
+    {
+      "path": "public/art/qingming/INTERFACE-ART.md",
+      "gitBlob": "74653d85c666ee603df0c6a93fb872055b14a583"
+    },
+    {
+      "path": "public/art/qingming/SOURCE.md",
+      "gitBlob": "5a5adc5f9bbc2415f448f27a2287515ef9d938eb"
+    },
+    {
+      "path": "public/art/qingming/book-closed.png",
+      "gitBlob": "22a8fb06afe6642b56d4cc93c87603ca96d41334"
+    },
+    {
+      "path": "public/art/qingming/book-page-blank.png",
+      "gitBlob": "6e25b3d84ebdf6c7434533dae641f639a0f273e1"
+    },
+    {
+      "path": "public/art/qingming/bridge-arch.jpg",
+      "gitBlob": "afa23893e00fbc1608972e2d0c41a05de362da84"
+    },
+    {
+      "path": "public/art/qingming/bridge-boat-v55.png",
+      "gitBlob": "f45e0db02b26d449362742aec0bf1bdce30e4431"
+    },
+    {
+      "path": "public/art/qingming/bridge-boat.jpg",
+      "gitBlob": "8d9f831e34f58a2938245a7340bcf245c5c1a213"
+    },
+    {
+      "path": "public/art/qingming/bridge-scene.jpg",
+      "gitBlob": "a0f6c25e2cddaebdf291c9ffb246a50731ad8bd9"
+    },
+    {
+      "path": "public/art/qingming/bridge-stalls.jpg",
+      "gitBlob": "db53767280f7a2eec78c2ab1312e426f6def98d0"
+    },
+    {
+      "path": "public/art/qingming/city-gate.jpg",
+      "gitBlob": "d01d6f893ff552a7200f127396973e1f660fb745"
+    },
+    {
+      "path": "public/art/qingming/cover.jpg",
+      "gitBlob": "bec437b635dfd049fe57037554d3d729b81d71f2"
+    },
+    {
+      "path": "public/art/qingming/full-scroll.jpg",
+      "gitBlob": "f427bca000d539c446ca7cbb5cbc668adc4b672d"
+    },
+    {
+      "path": "public/art/qingming/gate-scene.jpg",
+      "gitBlob": "8fce4e0d5367a7ce6c9dbb44a9e639b466e00ee7"
+    },
+    {
+      "path": "public/art/qingming/incense-head.png",
+      "gitBlob": "de3951284c55d2bdd4bbf260814140a46f1d228c"
+    },
+    {
+      "path": "public/art/qingming/incense-scene.jpg",
+      "gitBlob": "b7c39bce6115969aebc2fe773960475a6f07b3d0"
+    },
+    {
+      "path": "public/art/qingming/incense-sign.jpg",
+      "gitBlob": "98b5e7457719723669dbb51f1751a4f515a9455f"
+    },
+    {
+      "path": "public/art/qingming/lodging-head.png",
+      "gitBlob": "95ea49a9c313ffed014f85fa09de52fe82811143"
+    },
+    {
+      "path": "public/art/qingming/lodging-scene.jpg",
+      "gitBlob": "ea118c194ffffd8eacb3f2c25d2293909cc9a84e"
+    },
+    {
+      "path": "public/art/qingming/lodging-sign.jpg",
+      "gitBlob": "4989b8813951e9a8ef0a220d7938e109826f7a77"
+    },
+    {
+      "path": "public/art/qingming/medicine-advertisement.jpg",
+      "gitBlob": "70f5c00a1a83e98e4d3a91a9b2db04bdac67a77b"
+    },
+    {
+      "path": "public/art/qingming/medicine-head.png",
+      "gitBlob": "490c05933ff1a7424a170f81d1349385f44f9152"
+    },
+    {
+      "path": "public/art/qingming/medicine-name.jpg",
+      "gitBlob": "638eb425fc9ed0faf52a4eb1004ad2ed0fc3fd82"
+    },
+    {
+      "path": "public/art/qingming/medicine-scene.jpg",
+      "gitBlob": "d8efdbfee84e2a8ba4b4aba4c5bb7186595f8bb9"
+    },
+    {
+      "path": "public/art/qingming/paper-display.jpg",
+      "gitBlob": "4da62d10d36784ff15e820cedba55fad661d87be"
+    },
+    {
+      "path": "public/art/qingming/paper-head.png",
+      "gitBlob": "2d71a5f6df1ad6decbc96892c56b737dfa375f18"
+    },
+    {
+      "path": "public/art/qingming/paper-scene.jpg",
+      "gitBlob": "b28f4ae5c2b8453e63000ecae538c5c7156a4fa3"
+    },
+    {
+      "path": "public/art/qingming/paper-shop-study.png",
+      "gitBlob": "f28a50f4f76ee223a02da508bf8a1cd1537a2e83"
+    },
+    {
+      "path": "public/art/qingming/paper-sign.jpg",
+      "gitBlob": "939eeae305cc29e830033244281dd40c3f913097"
+    },
+    {
+      "path": "public/art/qingming/story-boat.jpg",
+      "gitBlob": "eebf703eeae84945f01dd99b13d939850f36c7ec"
+    },
+    {
+      "path": "public/art/qingming/story-street.jpg",
+      "gitBlob": "aa8faa1046d4f2ef2387af838e268a1fc9218701"
+    },
+    {
+      "path": "public/art/qingming/tile-01.jpg",
+      "gitBlob": "e088247ecabae1f6ece6ec2b55e0c86aaee39bc1"
+    },
+    {
+      "path": "public/art/qingming/tile-02.jpg",
+      "gitBlob": "51ff43523a05e7be683899068a749a0c708249bd"
+    },
+    {
+      "path": "public/art/qingming/tile-03.jpg",
+      "gitBlob": "047e38ebc62ab34cd4d427fb94c808891f99f200"
+    },
+    {
+      "path": "public/art/qingming/tile-04.jpg",
+      "gitBlob": "3427820cbc13c8ce5fdbc995dfd4c87612e1946f"
+    },
+    {
+      "path": "public/art/qingming/tile-05.jpg",
+      "gitBlob": "757f92dd6c13aca9f4fe25e727423f4eb71a4c3a"
+    },
+    {
+      "path": "public/art/qingming/tile-06.jpg",
+      "gitBlob": "84e3c5a847c3648cb54b83b5c29ef66ce5bb1dc3"
+    },
+    {
+      "path": "public/art/qingming/tile-07.jpg",
+      "gitBlob": "d75afb426e9de49d3196316b7f14b89284649f88"
+    },
+    {
+      "path": "public/art/qingming/tile-08.jpg",
+      "gitBlob": "8e2d0eefd0e7b4dbde509283777e95d3d6ab6e9d"
+    },
+    {
+      "path": "public/art/qingming/tile-09.jpg",
+      "gitBlob": "22fd23aa55d6bb2009ebfbd8f3705436c9f3ac0c"
+    },
+    {
+      "path": "public/art/qingming/tile-10.jpg",
+      "gitBlob": "cbe427457460d582fb0418a49756e2901c10a162"
+    },
+    {
+      "path": "public/art/qingming/tiles.json",
+      "gitBlob": "e203b6e4ef429323fce8646dd69cc404b265f9fe"
+    },
+    {
+      "path": "public/art/qingming/wine-decoration.jpg",
+      "gitBlob": "ca5b9d9f0b5ecc742302d626a4607adf01e88ec8"
+    },
+    {
+      "path": "public/art/qingming/wine-head.png",
+      "gitBlob": "3393e966c73d60f89a5ad3f7732843424e0fe8c7"
+    },
+    {
+      "path": "public/art/qingming/wine-scene.jpg",
+      "gitBlob": "7c558018b85a9125651f21bfb0716879c6cd3608"
+    },
+    {
+      "path": "public/art/qingming/wine-sign.jpg",
+      "gitBlob": "c503fa94ee11499adff3be2b6fe6576ae2383232"
+    },
+    {
+      "path": "public/art/ui/lantern-dialogue-ink-frame-v1.png",
+      "gitBlob": "4301cd8c73fe7ab06f28977f911b1d47d6733385"
+    },
+    {
+      "path": "public/art/ui/lantern-search-frame-v1.png",
+      "gitBlob": "a9ad47af53c037e3ea74c42c819e98dc17a78194"
+    },
+    {
+      "path": "public/art/ui/lantern-search-note-v4.png",
+      "gitBlob": "79ccbaa46c03740a49c91f1c4a9b57ff5debb63d"
+    },
+    {
+      "path": "public/art/ui/lantern-silk-note-v1.png",
+      "gitBlob": "3a594f02f28b12a9bfcad0d7fd692d41dfc53fd3"
+    },
+    {
+      "path": "public/art/ui/painted-icons.png",
+      "gitBlob": "bae51e3c92a41d4b1b6aa9e13799bb3fb8873c99"
+    },
+    {
+      "path": "public/art/ui/reading-paper.png",
+      "gitBlob": "985ce779612d1cc40e2843a137e5636e7562fc7f"
+    },
+    {
+      "path": "public/art/zanhua/CREDITS.md",
+      "gitBlob": "9ee8f70199091aaff534426fe2d32b5ceeea9623"
+    },
+    {
+      "path": "public/art/zanhua/animation/P1-attentive-v1.png",
+      "gitBlob": "57d71cb5a44e319659b84a27e84ee61025430c35"
+    },
+    {
+      "path": "public/art/zanhua/animation/P1-delighted-v1.png",
+      "gitBlob": "9c3d0ca06654bef3a56a3bc1a139c8e49e499dee"
+    },
+    {
+      "path": "public/art/zanhua/animation/P1-full-background-v1.png",
+      "gitBlob": "f6171f172f324fa940f506201453c96a8c6d6afb"
+    },
+    {
+      "path": "public/art/zanhua/animation/P1-lure-clean-v1.png",
+      "gitBlob": "5e576c08fb2739d5b63cafe4c5514745c5093da5"
+    },
+    {
+      "path": "public/art/zanhua/animation/P4-attentive-v1.png",
+      "gitBlob": "b0630c45d94a01540abc3946aeaf10a22c082ee0"
+    },
+    {
+      "path": "public/art/zanhua/animation/P4-full-background-v1.png",
+      "gitBlob": "00006071cefae31f209376cd746a40e5fb144b56"
+    },
+    {
+      "path": "public/art/zanhua/animation/P4-plate-v1.png",
+      "gitBlob": "ac082172f3cf45e3597a58ad4d95c36f9d9b9a6b"
+    },
+    {
+      "path": "public/art/zanhua/animation/P4-soft-smile-v1.png",
+      "gitBlob": "0e983768d49883c4548324a7ff8e5b6dd164005f"
+    },
+    {
+      "path": "public/art/zanhua/animation/P6-curious-v1.png",
+      "gitBlob": "b336989b48ab74ed846dc35d21d11747c3ed0d34"
+    },
+    {
+      "path": "public/art/zanhua/animation/P6-full-background-v1.png",
+      "gitBlob": "d0b4a78eae27569ee1325aa7cfb7b1ce90ba9537"
+    },
+    {
+      "path": "public/art/zanhua/animation/P6-plate-v1.png",
+      "gitBlob": "2fc139e8314603197d956cc125568c0edb6ffd54"
+    },
+    {
+      "path": "public/art/zanhua/animation/P6-reflective-v1.png",
+      "gitBlob": "95c669ada937dc7b474b0557f979fc1558ac21c0"
+    },
+    {
+      "path": "public/art/zanhua/animation/dog-background-v1.png",
+      "gitBlob": "9fa175741f9735434481e46b60c98edc045cf20d"
+    },
+    {
+      "path": "public/art/zanhua/animation/dog-layer-v1.png",
+      "gitBlob": "93f756c70ae92f4228961efd191eff334ceaf9f1"
+    },
+    {
+      "path": "public/art/zanhua/collectibles/atlas-v1.png",
+      "gitBlob": "9869792572fc02a868931ddb24bc95e9447c2819"
+    },
+    {
+      "path": "public/art/zanhua/full-scroll.jpg",
+      "gitBlob": "fb3fa35493d1665a93dc94386f0654de52f5dcd6"
+    },
+    {
+      "path": "public/art/zanhua/portraits/P1-head-v2.png",
+      "gitBlob": "818f35f91293850337d8d99ea940ec249f1fb83f"
+    },
+    {
+      "path": "public/art/zanhua/portraits/P1.png",
+      "gitBlob": "b130720feb1affcc084a6bdeef6b6d5e65ccb9e0"
+    },
+    {
+      "path": "public/art/zanhua/portraits/P4-head-v2.png",
+      "gitBlob": "d3b4c564f64a373a011a7e22af5a8d0a6ba61757"
+    },
+    {
+      "path": "public/art/zanhua/portraits/P4.png",
+      "gitBlob": "b9b4af7acd4dc146386ee4b9c7bd72e461d3f170"
+    },
+    {
+      "path": "public/art/zanhua/portraits/P6-head-v2.png",
+      "gitBlob": "02103feaeb9b7486ef5a52250f4cab8d0e58f55e"
+    },
+    {
+      "path": "public/art/zanhua/portraits/P6.png",
+      "gitBlob": "fdcaf7a46d624398ad381bb784b787f03c2062d5"
+    },
+    {
+      "path": "public/art/zanhua/seal/CREDITS.md",
+      "gitBlob": "2495700df1f1ee647b90e8a86f114f3b15a022b0"
+    },
+    {
+      "path": "public/art/zanhua/seal/collector-frame-v3.png",
+      "gitBlob": "68d97cd16766481b0760be18969cd034b5326cd7"
+    },
+    {
+      "path": "public/art/zanhua/seal/scholar-stone-v1.png",
+      "gitBlob": "43268b969218d7456589e2b0879f5e5f303f0a4b"
+    },
+    {
+      "path": "public/art/zanhua/seal/viewing-impression-v2.png",
+      "gitBlob": "dce15c80c03d655dfe7bacb17b38761d3b496241"
+    },
+    {
+      "path": "public/art/zanhua/studies/P1-dress-layers-v1.png",
+      "gitBlob": "89e670bfad164d8e26140f0562ab98218379b273"
+    },
+    {
+      "path": "public/art/zanhua/studies/P1-dress-original.png",
+      "gitBlob": "7ec4f948a6a71161ab420091a2c826a1572660ea"
+    },
+    {
+      "path": "public/art/zanhua/studies/P1-dress-study-v1.png",
+      "gitBlob": "1ba685330907097afce44404e8d593b7c95ec701"
+    },
+    {
+      "path": "public/art/zanhua/studies/P4-dress-layers-v1.png",
+      "gitBlob": "3b3dadc55550b612842257f27bd9b700e0061124"
+    },
+    {
+      "path": "public/art/zanhua/studies/P4-dress-original.png",
+      "gitBlob": "7706edbcb60c1ebf3cce861ec52526963856a95d"
+    },
+    {
+      "path": "public/art/zanhua/studies/P4-dress-study-v1.png",
+      "gitBlob": "176da7870563c655629eea292342b11df84da16f"
+    },
+    {
+      "path": "public/art/zanhua/studies/P6-coiffure-layers-v1.png",
+      "gitBlob": "ed1856bd4ef4cd3675e704490a06047747cdc941"
+    },
+    {
+      "path": "public/art/zanhua/studies/P6-coiffure-study-v1.png",
+      "gitBlob": "5cd6d77f0a536772f5092f20bff14e6a9e5c47e2"
+    },
+    {
+      "path": "public/art/zanhua/studies/P6-full-study-v1.png",
+      "gitBlob": "9dec5ea7e3540eb655d761279295d0cf44aad6e3"
+    },
+    {
+      "path": "public/art/zanhua/studies/P6-hair-flower-focus-v2.png",
+      "gitBlob": "1ae5ebf3203039a8aa1834b569f3600136848128"
+    },
+    {
+      "path": "public/art/zanhua/studies/P6-hair-ornament-focus-v2.png",
+      "gitBlob": "51e17dffb57c8e36d87ae53ad24b29214aafde98"
+    },
+    {
+      "path": "public/art/zanhua/studies/P6-head-original.png",
+      "gitBlob": "e4c6eab427121c7dcd59e65ba0bd2b3b451f9699"
+    },
+    {
+      "path": "public/art/zanhua/studies/P6-high-hair-focus-v2.png",
+      "gitBlob": "f524b2e8f1cdbc8af9fed691666182f53dac40e5"
+    },
+    {
+      "path": "public/audio/CREDITS.md",
+      "gitBlob": "8139b2dc7c09b549efaeb8396005151df3de03b5"
+    },
+    {
+      "path": "public/audio/crowd.ogg",
+      "gitBlob": "850c6432ad1f3826dcbe8385953470c829dbb862"
+    },
+    {
+      "path": "public/audio/examination-music.mp3",
+      "gitBlob": "74768874402e0631de9ddaebbc652bbcf5b2d566"
+    },
+    {
+      "path": "public/audio/kangqu-music.mp3",
+      "gitBlob": "56046b84bb2799b28b4751404119dc7eee965706"
+    },
+    {
+      "path": "public/audio/luoshen-music.wav",
+      "gitBlob": "62586b6fea4d1b058aa857d3e6bb86d8eea2090f"
+    },
+    {
+      "path": "public/audio/qingming-music.mp3",
+      "gitBlob": "a04a256431f6b4575ea1c95f7588d28c6556f212"
+    },
+    {
+      "path": "public/audio/scroll-music.mp3",
+      "gitBlob": "5cdeefcaee6e9ceb291cd96716f44a691dac982e"
+    },
+    {
+      "path": "public/audio/tea.ogg",
+      "gitBlob": "fd36b08f32fd6f2439617f325e23cda5e482c267"
+    },
+    {
+      "path": "public/audio/zanhua-music.mp3",
+      "gitBlob": "eb79e7ba0a1e8b4cfbc15d2e5336d5c88128c0bf"
+    },
+    {
+      "path": "public/chapters/examination-standalone-20261027/index.html",
+      "gitBlob": "c7466bd0a541ae593a28523e2187f35b4d49a458"
+    },
+    {
+      "path": "public/chapters/examination-standalone-20261027/version.json",
+      "gitBlob": "f707239dc58da40a7a5732082c00ddf87770a76f"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-legacy-20261027/index.html",
+      "gitBlob": "e0b21b170dcc0c2e82f35a1c26d643beacb7bf4d"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-legacy-20261027/original-index.html",
+      "gitBlob": "d6735b10820ab9aee89c55cb4f86439375a8a913"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.1.14/data/source-note.json",
+      "gitBlob": "2fd5792f3036530fac510d4d7cb221895ce688f5"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.1.14/data/version-manifest.json",
+      "gitBlob": "cfd5c99ed3eb5ae397bb04191b25ea13590b218b"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.1.14/fresh.html",
+      "gitBlob": "9fdb3d03a1c88c64e86af13510f2491b14235621"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.1.14/index.html",
+      "gitBlob": "6bb6fcdb8d7f4f646fca7e980e0975ea5ba8f990"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.1.14/original-index.html",
+      "gitBlob": "41e96eb75d1cfb7bc175aae0522719a4f6a80b6b"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.2.0-navigation-20261027/index.html",
+      "gitBlob": "2856f62afa59fbb3685e389b40acb84c5422b86e"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.2.0-navigation-20261027/version.json",
+      "gitBlob": "f50b4a53377b66c34add2caf362451488b0b6ec5"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.2.0/data/active-release.json",
+      "gitBlob": "d8ac9991461eba226abf46b6aea8e2a5bbf81616"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.2.0/data/source-note.json",
+      "gitBlob": "1ab00d0d2a3c0d1b989230ed4deb5b98cef19a4f"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.2.0/data/version-manifest.json",
+      "gitBlob": "c67b67933987d465b79e1369861da071c5af8553"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.2.0/fresh.html",
+      "gitBlob": "361479392231bf6c1dcc5ce3e907188ca3c06124"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.2.0/index.html",
+      "gitBlob": "a4fe125c25dd005d85577c161615d62a210803fb"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/animation/fixed-background.png",
+      "gitBlob": "3711bc78fb586b0d193dce5a8df5aeefaddb49e5"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/animation/foreground.png",
+      "gitBlob": "8d6454deccca0462c77bd9c1538a7c702bcfb207"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/animation/frames/group-01.png",
+      "gitBlob": "7081ce0b445f2eb9adeee862e701aafeec588194"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/animation/frames/group-02.png",
+      "gitBlob": "b224639fdd6f44a1e02498229c8da798b928b3c3"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/animation/frames/group-03.png",
+      "gitBlob": "2854d124122e7114c14ca34f41ac69efea05fb83"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/animation/frames/group-04.png",
+      "gitBlob": "8663ddd77bc2e71ff64c4dc8ad5741bef7fc2a35"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/animation/frames/group-05.png",
+      "gitBlob": "b5c155663006e3661c9b7585af6ab67b4ddf8c2f"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/animation/frames/group-06.png",
+      "gitBlob": "7081ce0b445f2eb9adeee862e701aafeec588194"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/animation/group-master.png",
+      "gitBlob": "a6a4be91482aa56b8624ab3ba9918634ad9a30bf"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/animation/group-rest.png",
+      "gitBlob": "7081ce0b445f2eb9adeee862e701aafeec588194"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/animation/original-reference.png",
+      "gitBlob": "e0967afd17afa052a20ee54238c67ba01be91ec3"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/animation/playback.json",
+      "gitBlob": "4882537b01b964bb16a4cca246e8dfab41db49c3"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/animation/registration.json",
+      "gitBlob": "61c626a5fd3118f26d7398eed2a9cf55af4ffa27"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/data/source-note.json",
+      "gitBlob": "2fd5792f3036530fac510d4d7cb221895ce688f5"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/data/version-manifest.json",
+      "gitBlob": "cfd5c99ed3eb5ae397bb04191b25ea13590b218b"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/brocade/collection.png",
+      "gitBlob": "cb8ef1b3bb4401fa8dbabc5f71964fce6797accd"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/brocade/frame-01.png",
+      "gitBlob": "4d29671a4fb32e3aa88efdef26076f83e1230b1a"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/brocade/frame-02.png",
+      "gitBlob": "cfe2690ca7018326b39285cfcd402afd6ac11662"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/brocade/frame-03.png",
+      "gitBlob": "b67672423c1f6858852ff88ab21250120e282202"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/brocade/frame-04.png",
+      "gitBlob": "4d29671a4fb32e3aa88efdef26076f83e1230b1a"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/brocade/original.png",
+      "gitBlob": "5246cc0765984397fa402ecb0a493e1fdc1c021e"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flag-registration.json",
+      "gitBlob": "dc5e48b2667980f5b2e8ecd894970056b079e58b"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flag-visual-review.json",
+      "gitBlob": "1dff4eadedbb6f135352dd7910bdd2d666c433e4"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-01.png",
+      "gitBlob": "def196d6cd0d09a62cde5231bde66e91e951960f"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-02.png",
+      "gitBlob": "def196d6cd0d09a62cde5231bde66e91e951960f"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-03.png",
+      "gitBlob": "20832c6cbeaf7fa73c353782837852a0f64e61f4"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-04.png",
+      "gitBlob": "ffdee7e8cae457a52e32ef4002336b0121f5ec08"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-05.png",
+      "gitBlob": "14605c5a047d6f3f8b553ba804cbdea5c59031fa"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-06.png",
+      "gitBlob": "84feeddea6b726d8c6b9c9d1b2353805e2458523"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-07.png",
+      "gitBlob": "097059242e8e98239f829295e4c7b5751bfd9a6a"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-08.png",
+      "gitBlob": "133011f47d0bba5b9bab8373223c1003e3798539"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-09.png",
+      "gitBlob": "def196d6cd0d09a62cde5231bde66e91e951960f"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-1/original.png",
+      "gitBlob": "27cc1b900e2e35c206ed8dfbba9a34e9b037fdb7"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-01.png",
+      "gitBlob": "759073322bea6811c257b5caf4f98245cb498a6b"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-02.png",
+      "gitBlob": "759073322bea6811c257b5caf4f98245cb498a6b"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-03.png",
+      "gitBlob": "308b0056a1e1a360b9d30ca42f0922f0d6fcc7cf"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-04.png",
+      "gitBlob": "8024774ccb7542b47a8895c14cb95328c6f4f305"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-05.png",
+      "gitBlob": "0671353a56eb0a55000a79d7fb010fd3087f1a96"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-06.png",
+      "gitBlob": "5e3eee7256a5f73e92387d26491ed690f8c989bd"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-07.png",
+      "gitBlob": "e641e3795f1f657ee11ffd5c53025f236993599b"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-08.png",
+      "gitBlob": "cf0b8093e97c2476e8fc22d78e751ce43e7038f2"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-09.png",
+      "gitBlob": "759073322bea6811c257b5caf4f98245cb498a6b"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-2/original.png",
+      "gitBlob": "514510de5ad99f8151162b8fb4f6b02ebcf9d8c0"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-01.png",
+      "gitBlob": "cad5b53ade585f9a744d13f845dccc0fffb6c32a"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-02.png",
+      "gitBlob": "cad5b53ade585f9a744d13f845dccc0fffb6c32a"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-03.png",
+      "gitBlob": "b93872fdd01c0e870c4c2fcfa4f44442ff79d1af"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-04.png",
+      "gitBlob": "9ac691204e32c4927a50c961c29f4318ba2f83ec"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-05.png",
+      "gitBlob": "a6c75dd86b549ae7961801a592d5e69d42fac108"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-06.png",
+      "gitBlob": "7cb06beb876d1796b0f5a411bbbd26487b9f85c2"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-07.png",
+      "gitBlob": "b9b002e5b0799b73a5dbdd37b0ab0bc89c074264"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-08.png",
+      "gitBlob": "82a25bfd14d5e4db1fd0e2b0046b5d2b8f8c536f"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-09.png",
+      "gitBlob": "cad5b53ade585f9a744d13f845dccc0fffb6c32a"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-front-3/original.png",
+      "gitBlob": "0ab78e29cde6e799ceb5361a90c7b7e0e4084ce4"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-01.png",
+      "gitBlob": "1c5a43cd43cf4ce614df4a84ab58dcdd015c1af8"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-02.png",
+      "gitBlob": "1c5a43cd43cf4ce614df4a84ab58dcdd015c1af8"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-03.png",
+      "gitBlob": "21a0db21f4af855a9ccf98117d748f93bedfab6c"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-04.png",
+      "gitBlob": "a2713d586d1ff1b6d53adc340af6d03370b598cc"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-05.png",
+      "gitBlob": "78fc6b0f90718d358eb6e2413f19f073039abf9e"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-06.png",
+      "gitBlob": "a44ce8bbd9f55989484fbdd8e7749ddf4eb3f921"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-07.png",
+      "gitBlob": "b536aad6450a31b93a3dfa23320d15b228401c8e"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-08.png",
+      "gitBlob": "670918196069c9f912791d3a250c904be77a8273"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-09.png",
+      "gitBlob": "1c5a43cd43cf4ce614df4a84ab58dcdd015c1af8"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-1/original.png",
+      "gitBlob": "1436d1e55393fb42f1f66c3acaf168b197f4d717"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-01.png",
+      "gitBlob": "80c9e6917e7381fe6736cc702eaf817b2ac21db3"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-02.png",
+      "gitBlob": "80c9e6917e7381fe6736cc702eaf817b2ac21db3"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-03.png",
+      "gitBlob": "beb36ed4c0c42b67b907c8c57269bb35d8608faa"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-04.png",
+      "gitBlob": "0996d9260de158f7f02c224170a6002ffd0dbde5"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-05.png",
+      "gitBlob": "c0006a2da2428b6f38c2bd971ca939904b922cae"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-06.png",
+      "gitBlob": "2b4c0609ce5d7caa7b9a4f3056247d1302a4381c"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-07.png",
+      "gitBlob": "23bdc5d31783133a3ffacea8704e286775121abd"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-08.png",
+      "gitBlob": "1557542f7cf6580de26c4d7f6e441923a07783c4"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-09.png",
+      "gitBlob": "80c9e6917e7381fe6736cc702eaf817b2ac21db3"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/flags-rear-2/original.png",
+      "gitBlob": "dc353e983bbf92c08f9de62597ceec5b80ad208e"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/grotto/background.png",
+      "gitBlob": "f26b50f1391c0b31fe7fccf7302827c7b575d184"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/grotto/collection.png",
+      "gitBlob": "577472e1a1600fa88ee3077435b7308d1113b966"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/grotto/foreground.png",
+      "gitBlob": "8a3308062ec38831281a9402a44a2c4cd7b0243c"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/grotto/frame-01.png",
+      "gitBlob": "b512242b8767687ed70e183c10252c1f3a74c0d9"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/grotto/frame-02.png",
+      "gitBlob": "17c8c80894e84b189736e7fee64e02dff3a18095"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/grotto/frame-03.png",
+      "gitBlob": "3ed0c20b18fd879abb49d87eb1b182a914bbf9d5"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/grotto/frame-04.png",
+      "gitBlob": "b512242b8767687ed70e183c10252c1f3a74c0d9"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/grotto/original.png",
+      "gitBlob": "dabeab5522f6c35b5f46f7dca73e7fa3f1902338"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/grotto/registration.json",
+      "gitBlob": "2028795ed15b8cb58eee1da132e72992121f6dc3"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/manifest.json",
+      "gitBlob": "93795c343aa6a3eaaa07b786064fa379143ff6d6"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/proportion-study-2026-10-25/official-matched-to-flag-v3.png",
+      "gitBlob": "56d5d972c79fb1c282771608998388a663ef9991"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-1-art.png",
+      "gitBlob": "228e514523e4390142e751cb0355d29c87293624"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-10-art.png",
+      "gitBlob": "3896d3eb59d8813da1242afb8340057223c8dca0"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-11-art.png",
+      "gitBlob": "48e556145eebe0e9dccc8f072d6e2e8b8d3c9c7e"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-12-art.png",
+      "gitBlob": "c156d6d0e00f7fe2efd38392761507e9493a95bb"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-2-art.png",
+      "gitBlob": "f2c2ce89ad7d03e6c46824516fc699f43194fb07"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-4-art.png",
+      "gitBlob": "2c1e9f88682c28fbeb3c985197f14ab6d6a1a6e5"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-6-art.png",
+      "gitBlob": "b07e76ee7f04a1efb76b31a5cd9cd47cea4b82eb"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-7-art.png",
+      "gitBlob": "f7c36ff653acdd5163ee693ff512ba9b201d0d0d"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-8-art.png",
+      "gitBlob": "3cd829547bc012a9f5989620202cef095a2cb917"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-9-art.png",
+      "gitBlob": "b00d894b425e4bdeba8ef4741d2c9e7cfbf9d420"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.12/left-background.png",
+      "gitBlob": "092add14e9af3f420cf028d38e3097c6526f9495"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.12/left-foreground.png",
+      "gitBlob": "8ec5ea72ec55b0ff1a1a0c35f999efb291ee782f"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.12/left-original.png",
+      "gitBlob": "6fbf172ea3400b7727df92c8eb9d277c222a88c8"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.12/right-background.png",
+      "gitBlob": "c53c6172d64ad1b5c6999c7612f2cd8f461106cd"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.12/right-foreground.png",
+      "gitBlob": "f0d20b2e5a3e04ad64c9577ae5b2d9b5c7acc93c"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.12/right-original.png",
+      "gitBlob": "1f62bfc15d9a52a6b41f9ee98ec4c7708f3168d9"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.12/stage-registration.json",
+      "gitBlob": "c9dd5b2e0dc6f5e78ed40a2cb16ab8af45ef172d"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flag-approved.webp",
+      "gitBlob": "f0206c0ceb4ed0781968925ef164578208d7a696"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flag-front-motion-sheet.webp",
+      "gitBlob": "2e1134fbe5207e1749f1ec721caedd8b9bd33453"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flag-rear-staff-pose-0.webp",
+      "gitBlob": "296bf54138e824d36c2f209447feb42fb55c6ddb"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flag-rear-staff-pose-1.webp",
+      "gitBlob": "d0a802b5043f3f4c36f976519a83409251c42818"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flag-rear-standing-pose-0.webp",
+      "gitBlob": "39bae2d23d283602b1c13581a258eb19d090972f"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flag-rear-standing-pose-1.webp",
+      "gitBlob": "8c436256fa80513e679caf688761019b70e13a8d"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+      "gitBlob": "f1d04cb48cc6bf8875b1582e379c05c866a6c184"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+      "gitBlob": "afce157744757810e3a22f4f9049d0da52edf186"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flags-front-1-registration.json",
+      "gitBlob": "191e945d2a1aad84d19dcc4e13e53deb4fc43cb9"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flags-front-2-registration.json",
+      "gitBlob": "10d3ee76b81fe45c55ba54b982cd96514e3bf498"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flags-front-3-registration.json",
+      "gitBlob": "fa95f395dd0243a608677d093952126a472e86d5"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flags-rear-1-registration.json",
+      "gitBlob": "2eabf161aab8ce7146ebd92a8966d297b85cc62e"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flags-rear-2-registration.json",
+      "gitBlob": "3a7e67e40ebfcca6af9261cedf8ddca6cd7dd495"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-01-pose-1.webp",
+      "gitBlob": "c898e46ab852dde8477d4b591ad93da987b4c3cc"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-02-pose-0.webp",
+      "gitBlob": "d5f0b54de8d377b80838dbe3a41bcfdd5eb05b2f"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-02-pose-1.webp",
+      "gitBlob": "809ef4dd3ccabf23b84a537df50da7d68881974e"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-03-pose-0.webp",
+      "gitBlob": "ad08a1a63c100951cf748512fe17cb17e10b5eb4"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-03-pose-1.webp",
+      "gitBlob": "86f86d4dae11d0c243dc8d6be4109b0ed36ba153"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-04-pose-0.webp",
+      "gitBlob": "fabe02bddb18a1a3f50e0f44b5fde399fee4db15"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-04-pose-1.webp",
+      "gitBlob": "c772cb07bf884b9a416d5c8e183aaebe364dec25"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-05-pose-0.webp",
+      "gitBlob": "433f4996b5b6b61151217b01e8c8a72b40333453"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-05-pose-1.webp",
+      "gitBlob": "9a1b25d0026482753f7ba6da02e2f7d6785d6bcf"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-06-pose-0.webp",
+      "gitBlob": "11ec1435773f1f2941d044824df42e13e0c04dbb"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-06-pose-1.webp",
+      "gitBlob": "55eeba547e29e95a73c891e0359adc4263af5baf"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-07-pose-0.webp",
+      "gitBlob": "6f6e3378a50916ace18e200e569b5e06cc956ac7"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-07-pose-1.webp",
+      "gitBlob": "9f416826e6a645d2eed9884b1dd13cc6e6d6ad56"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-08-pose-0.webp",
+      "gitBlob": "8f76b760e6715691fe00627ede98461d780f9eba"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-08-pose-1.webp",
+      "gitBlob": "7bda141cc328f677d12a1598529787378204f663"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-09-pose-0.webp",
+      "gitBlob": "a93fa755e54223af894ea830d5284b6621151c93"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-09-pose-1.webp",
+      "gitBlob": "9a918e22e013993f08cd3af116e457adc4cfe96d"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-10-pose-0.webp",
+      "gitBlob": "de45449fca9531089baf6b7ef1b31a1ed1c59fd5"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-10-pose-1.webp",
+      "gitBlob": "29714a505365b23a90d78fefede465788e8673af"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-11-pose-0.webp",
+      "gitBlob": "df06f07ce0bcfefce5a2d4c96b9aef8d14e021d8"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-approved.webp",
+      "gitBlob": "bb6b012b65e2b13fbeb24df29f38022949b92a94"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/officials-background.png",
+      "gitBlob": "cf3800cb2eb15a4c2d99ec77d5d28e4a21609a6e"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/officials-collection.png",
+      "gitBlob": "926b5f7fd8a2025e4222eb876df12182d0dee875"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/officials-foreground.png",
+      "gitBlob": "cba4d425b799599b98c4869098ff202908c591f7"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/officials-registration.json",
+      "gitBlob": "81fad369df45d26420751ec9878982e24aae3478"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/black-cloth.webp",
+      "gitBlob": "673006a53bf49345af83cd74f0ac076181e804f0"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/flags-front-1-background.png",
+      "gitBlob": "3245bc385611ad72c879676e8e78197b12dea708"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/flags-front-1-foreground.png",
+      "gitBlob": "06ba31c7477e55acac6a29664077f3f34575e702"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/flags-front-2-background.png",
+      "gitBlob": "ed2b030b4933bb118047d2f063d9a1471b46bb26"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/flags-front-2-foreground.png",
+      "gitBlob": "c4633405398aed917fd5ec19d2fcff0ac78ea45d"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/flags-front-3-background.png",
+      "gitBlob": "f4f202bb21721d041ad048404b3f793cc192f69c"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/flags-front-3-foreground.png",
+      "gitBlob": "95af56a0ba80305202ea395e3839dcc8a48029d0"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/flags-rear-1-background.png",
+      "gitBlob": "c0e0a33619d60de56f1c90c58e8bcdb4929e55f6"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/flags-rear-1-foreground.png",
+      "gitBlob": "b984c136768079e0972228ae2cdd0126a0b7aa70"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/white-cloth.webp",
+      "gitBlob": "b58bc5ea5b2a1f56fcfa79bc57b92995699e0b54"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/yellow-cloth.webp",
+      "gitBlob": "d0529791f3880f7224dafc9fb82c404972590ef2"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.4/flags-rear-2-background.png",
+      "gitBlob": "3a7c0d4987b7d5150b6ff611efe045eb7f3ed349"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.4/flags-rear-2-foreground.png",
+      "gitBlob": "3da010c1516564b4b6b1103976789e0d66bce8cc"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.8/basket-collectible.png",
+      "gitBlob": "8be270610d16f990296987eced3a2ddf3b550932"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.8/fan-collectible.png",
+      "gitBlob": "bac2535e1423dca35211ca75722858d7847d1133"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.8/jade-collectible.png",
+      "gitBlob": "6808610b5ffacb4bacdedcb58e45d14a729cf1da"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/revision-2.1.8/lotus-collectible.png",
+      "gitBlob": "aed2df97ff2097890c79affe2e42995fc03f9e28"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/source-registration.json",
+      "gitBlob": "6d638d33338ca4d0476a33831bcac263384c6ac4"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/stage/background.png",
+      "gitBlob": "772e804161954168efdbb2916b602ccb84917aa3"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/stage/collection.png",
+      "gitBlob": "ba6f2bc65751bad7069476f00f907a8b3f462a92"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/stage/foreground.png",
+      "gitBlob": "a92b08fe30f6305b47ee4f4f963f9645399a34c3"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/stage/frame-01.png",
+      "gitBlob": "3e7bc66d202daf4c77055598f8bae7bbc39b0f1a"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/stage/frame-02.png",
+      "gitBlob": "f7bcca68435c4751148e3cb5defa807576931845"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/stage/frame-03.png",
+      "gitBlob": "175db10c71ac00cf29675fbb6250183a34c2d29b"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/stage/frame-04.png",
+      "gitBlob": "3e7bc66d202daf4c77055598f8bae7bbc39b0f1a"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/stage/original.png",
+      "gitBlob": "073278c75449ecbccda3d3457d2b516a8e8924dd"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/expansion-art/stage/registration.json",
+      "gitBlob": "e5a31650931f4f625066f270d7f2920f9f6f6100"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/fresh.html",
+      "gitBlob": "8a62e17c70c050b5fcd60380debe04a5c4a45e5a"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/index.html",
+      "gitBlob": "41e96eb75d1cfb7bc175aae0522719a4f6a80b6b"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/recognition/seated-drum-head-source.png",
+      "gitBlob": "0bfdf32b0835f8ff65afac89a2e374b4b693d582"
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/recognition/seated-drum-head-tracing-v3.png",
+      "gitBlob": "7ffdba5615aa6e47ad24177a38c1a97f9e4ca8b2"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/animation/frames/01.png",
+      "gitBlob": "8f617a81458d1aa0151a81cdb381f593cba17e09"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/animation/frames/02.png",
+      "gitBlob": "9653ad215ec2d7176e10226c2c1058eb530e46a3"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/animation/frames/03.png",
+      "gitBlob": "0ce3fae78736dc8e32510af416c305317214b1ff"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/animation/frames/04.png",
+      "gitBlob": "6de3b7c7b103104f7b5b35ef4ae07be3ee3a1fce"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/animation/generation-records.json",
+      "gitBlob": "83e5ac940cbd8e97c548d9c17015102bb319061d"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/animation/plate.png",
+      "gitBlob": "ecbc8f5383af47a8f0965415d3146d8c2b50362d"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/art/complete-scroll.jpg",
+      "gitBlob": "001e0c763341a3953fa5226c69a39ed6b57f85fe"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/art/native-segment-lossless.webp",
+      "gitBlob": "5568428d19deb7592b5c9b174300121890a148e3"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/art/native-segment.png",
+      "gitBlob": "2425104ab9409c23a2b0556cc5ca8d5b6e94a71e"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/art/overview.jpg",
+      "gitBlob": "ded39ed2ef72d25555854643b03003617c3b8732"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/collections/discs-illustration-v1.png",
+      "gitBlob": "02a08a3cedf279ca689465860274006e83a965a3"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/collections/drum-illustration-v1.png",
+      "gitBlob": "ccad467f7a785ad5f1f2872521b174604ed7ed14"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/collections/flag-illustration-v1.png",
+      "gitBlob": "611590918a476d4e0c6a5b0975a1681495673635"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/collections/gong-illustration-v1.png",
+      "gitBlob": "c12db234f087353487a5d38afc30ab3ea4e9fd63"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/collections/horn-illustration-v1.png",
+      "gitBlob": "8d36d4ccd57260c34666b80fdd3dd37a4bd6ce12"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/collections/painted-wall-illustration-v1.png",
+      "gitBlob": "3563946df3f8e2cef3aa89ddd981dd553ca8a1b1"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/data/collection-generation-records.json",
+      "gitBlob": "95d9bb12c49e83eca8231c311ee72c71656410cf"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/data/content-sources.json",
+      "gitBlob": "98f5f5f5f6a1b51037f9f160a515d79e8927a88d"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/data/dialogue-evidence.json",
+      "gitBlob": "9c44f05899ad881db9c4fb5f45c3ad06a0382b0b"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/data/native-encoding-record.json",
+      "gitBlob": "b3492e548f309ac99c792291037a275fa4f74317"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/data/source-note.json",
+      "gitBlob": "cac7f3dacf77938b9f0c27f3015dcd54e4e28cc7"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/data/ui-source-manifest.json",
+      "gitBlob": "be2133295e85cce693dc91219627e54d90423ce2"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/data/viewport-config.json",
+      "gitBlob": "c8b7e3a1e582711f3f917c3de602167ee156d1d7"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/recognition/brown-green-hem-head-source.png",
+      "gitBlob": "7ea2e704c3b0cbbf2e8cb42b17e99569787e0b0f"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/recognition/brown-green-hem-head-tracing-v2.png",
+      "gitBlob": "8676b2210857fbaec8db4d4ca167265dd4157fe5"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/recognition/hand-at-hat-head-source.png",
+      "gitBlob": "a9f81417efa7683f13652cbe42f64f6cd0fe991b"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/recognition/hand-at-hat-head-tracing-v2.png",
+      "gitBlob": "37b5141cdc643c0394065f7cc30f927d101e4dca"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/recognition/red-front-east-05-head-source.png",
+      "gitBlob": "05a1c89344130f70898afbfb3e9d787dad0bf0d4"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/recognition/red-front-east-05-head-tracing-v2.png",
+      "gitBlob": "2158cf1035309c303a37999cc47e382476cc3277"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/recognition/seated-drum-head-source.png",
+      "gitBlob": "0bfdf32b0835f8ff65afac89a2e374b4b693d582"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/recognition/seated-drum-head-tracing-v2.png",
+      "gitBlob": "70eceafe141b188295fcef8892b3ed3a07f78893"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/recognition/watcher-blue-head-source.png",
+      "gitBlob": "98c0e61a7cb510e304c6de7320ad727e35388bd0"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/recognition/watcher-blue-head-tracing-v2.png",
+      "gitBlob": "12be07341dc940d04c56a15602838c4e8244a6b2"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/recognition/watcher-pattern-head-source.png",
+      "gitBlob": "d022a39d646015806485f0d5efdf0abb53c4b874"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/recognition/watcher-pattern-head-tracing-v2.png",
+      "gitBlob": "3b2f34f493b6538e3a30e70bd8628bcd930ff480"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/ui/button-cinnabar-v1.png",
+      "gitBlob": "dcf2cfa607af2b18ccd40b3467a90cbbaecb9486"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/ui/button-paper-v1.png",
+      "gitBlob": "dbb10e30b6a39301a4f4bce51d86e998ffce635b"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/ui/lantern-dialogue-ink-frame-v1.png",
+      "gitBlob": "4301cd8c73fe7ab06f28977f911b1d47d6733385"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/ui/lantern-search-frame-v1.png",
+      "gitBlob": "a9ad47af53c037e3ea74c42c819e98dc17a78194"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/ui/lantern-silk-note-v1.png",
+      "gitBlob": "3a594f02f28b12a9bfcad0d7fd692d41dfc53fd3"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/ui/painted-icons.png",
+      "gitBlob": "bae51e3c92a41d4b1b6aa9e13799bb3fb8873c99"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/ui/paper-frame-v2.png",
+      "gitBlob": "5da68f721fa83416e76dc5aab38f6eba67f3363b"
+    },
+    {
+      "path": "public/chapters/kangqu-listening/ui/reading-paper.png",
+      "gitBlob": "985ce779612d1cc40e2843a137e5636e7562fc7f"
+    },
+    {
+      "path": "public/chapters/lantern-three-act-v1-1.0.0/index.html",
+      "gitBlob": "236b58666a567347ec3da3ef918d0a5da9286e26"
+    },
+    {
+      "path": "public/chapters/lantern-three-act-v1-1.0.0/version.json",
+      "gitBlob": "5797eb6e0d15a30305c8aa8fd9ea25a2ddb3494a"
+    },
+    {
+      "path": "public/chapters/lantern-three-act-v1/index.html",
+      "gitBlob": "44eed8041eed9428a31ed0ba5ab5a322efd0099b"
+    },
+    {
+      "path": "public/chapters/lantern-three-act-v1/version.json",
+      "gitBlob": "9db4b3a56e3e8a37c714010b4d463e78f84db684"
+    },
+    {
+      "path": "public/chapters/luoshen-before-three-act-20261027/index.html",
+      "gitBlob": "3e5175dba4598f14fb57e2dcc54a75bff841fbd9"
+    },
+    {
+      "path": "public/chapters/luoshen-before-three-act-20261027/version.json",
+      "gitBlob": "0e0ccc080309778275822daa42bed1f03e15a481"
+    },
+    {
+      "path": "public/chapters/luoshen-three-act-v1/data/active-release.json",
+      "gitBlob": "0250ef5fc56dfc40134fc234160b5f8f91573e37"
+    },
+    {
+      "path": "public/chapters/luoshen-three-act-v1/index.html",
+      "gitBlob": "6c2819a4d83ebaf45b21cac100e8473ac802db03"
+    },
+    {
+      "path": "public/chapters/luoshen-three-act-v1/version.json",
+      "gitBlob": "44729a5a32bc23639a8cb2dd531f45991faadda0"
+    },
+    {
+      "path": "public/chapters/zanhua-before-three-act-20261027/index.html",
+      "gitBlob": "5f5f701af2839062bff3eb38b9710237237f1051"
+    },
+    {
+      "path": "public/chapters/zanhua-before-three-act-20261027/version.json",
+      "gitBlob": "35dbc7693ed435c094354e570c83dddde26857ed"
+    },
+    {
+      "path": "public/chapters/zanhua-three-act-v1/data/active-release.json",
+      "gitBlob": "41087d3506c179d61a73fbb9c8d95e4732469163"
+    },
+    {
+      "path": "public/chapters/zanhua-three-act-v1/index.html",
+      "gitBlob": "f41179696ca04ce8e2440463e699d12ad6e3ff27"
+    },
+    {
+      "path": "public/chapters/zanhua-three-act-v1/version.json",
+      "gitBlob": "451b42caaede14c6584ad8d2b2c5507e9ccb3a05"
+    },
+    {
+      "path": "public/fonts/LXGWWenKaiTC-OFL.txt",
+      "gitBlob": "72694770c120925ea3d0940c2cbf635c85d1dae4"
+    },
+    {
+      "path": "public/fonts/LXGWWenKaiTC-Regular.ttf",
+      "gitBlob": "62da0aef12182ad74cd706d00e540e4513960fce"
+    },
+    {
+      "path": "public/fonts/chongxi/CREDITS.md",
+      "gitBlob": "eb0ed75d772fe6853502d4caf044b7c1ff2a2449"
+    },
+    {
+      "path": "public/fonts/chongxi/LICENSE.html",
+      "gitBlob": "1c056860d5ece98f5ee75a3bcec6c79141a3fa2b"
+    },
+    {
+      "path": "public/fonts/chongxi/chongxi_seal.otf",
+      "gitBlob": "616c5d7387579b0695029a620cec98e802184039"
+    },
+    {
+      "path": "public/release.json",
+      "gitBlob": "32fa901638e2b82fcb8af7a15bcf0906d5b887a2"
+    },
+    {
+      "path": "public/zanhua-preview.html",
+      "gitBlob": "4027f9686beddd6a3f88bb1928dc17708f22d33a"
+    },
+    {
+      "path": "src/App.tsx",
+      "gitBlob": "8a0f10be49c70bdadb9a77fffaa48140bd658c37"
+    },
+    {
+      "path": "src/audio/chapterMusic.d.ts",
+      "gitBlob": "de1a563fb9e89ecaba8091555b467148c6c50573"
+    },
+    {
+      "path": "src/audio/chapterMusic.js",
+      "gitBlob": "45c6d0a8c59cc372ab07fb18b1ca63af4d656b8c"
+    },
+    {
+      "path": "src/audio/chapterMusicTracks.d.ts",
+      "gitBlob": "3ffb54ab6a86e55ee5528f10be4a4fbce103a931"
+    },
+    {
+      "path": "src/audio/chapterMusicTracks.js",
+      "gitBlob": "2a91c3a3c052c1c1ba554ae925ea081af3a84a7b"
+    },
+    {
+      "path": "src/audio/useAmbience.ts",
+      "gitBlob": "055f3e317c39fc8c21bed6b3f8e0d1012de0f8c5"
+    },
+    {
+      "path": "src/chapterNavigation.d.ts",
+      "gitBlob": "cee9bcdef730c293e392b84fe9551a8e8c62d811"
+    },
+    {
+      "path": "src/chapterNavigation.js",
+      "gitBlob": "ed6e47cf61057416758b244b2a5edc23e726249c"
+    },
+    {
+      "path": "src/components/ArtCrop.tsx",
+      "gitBlob": "2ed02109ea5fd4ffe453bac771ecacc923e61aec"
+    },
+    {
+      "path": "src/components/ArtIcons.tsx",
+      "gitBlob": "5bca98133e415c02bcee662ebabd3ec7dc951717"
+    },
+    {
+      "path": "src/components/ChapterDialog.tsx",
+      "gitBlob": "9e0f9cfae34e73323aa67b7cfd2a2336710c68d0"
+    },
+    {
+      "path": "src/components/ChapterLinks.tsx",
+      "gitBlob": "5360289915603ff69e065e76602fdf4bbf8ec203"
+    },
+    {
+      "path": "src/components/ExaminationStreetLifeGame.tsx",
+      "gitBlob": "eb9aafdf0faf3a99dbe2368d6d439af04262a9de"
+    },
+    {
+      "path": "src/components/HistoricalPaintings.tsx",
+      "gitBlob": "989a8496ba9d44ea3ae8c7cd1180df7907415683"
+    },
+    {
+      "path": "src/components/Introduction.tsx",
+      "gitBlob": "9f5f697c63359ef6ca40c6048e9cde8b87035e97"
+    },
+    {
+      "path": "src/components/KangquAudienceAnimation.tsx",
+      "gitBlob": "9bc7f0f18aab740b143df013baf48ad80fb53339"
+    },
+    {
+      "path": "src/components/KangquAudienceMasterReview.tsx",
+      "gitBlob": "44ed9a4049c1b5c30eaa89c13f4420fa0c15b603"
+    },
+    {
+      "path": "src/components/KangquAudiencePreview.tsx",
+      "gitBlob": "2a865d257e77d52bfd71e40c1fd334fab65782fe"
+    },
+    {
+      "path": "src/components/KangquEnsembleAnimation.tsx",
+      "gitBlob": "4b4de95789bdeeaf450af9edf42f061ba6c23af5"
+    },
+    {
+      "path": "src/components/KangquEnsembleMasterReview.tsx",
+      "gitBlob": "e160d3fd30a4897824b5958d7e3ea8188d86775f"
+    },
+    {
+      "path": "src/components/KangquEnsemblePreview.tsx",
+      "gitBlob": "811f9f1407043f5ec3a94aa29447d6be015d25e6"
+    },
+    {
+      "path": "src/components/KangquFlagsAnimation.tsx",
+      "gitBlob": "07bfd6faf4d8261ddbcc1fc5f90c1339e2c2eb50"
+    },
+    {
+      "path": "src/components/KangquFlagsMasterReview.tsx",
+      "gitBlob": "99ea745c39929aa450bb93cb15a8d330a5c00b17"
+    },
+    {
+      "path": "src/components/KangquFlagsPreview.tsx",
+      "gitBlob": "e201dbc4cc04f7001dcf04c4907c2e424faa5d0d"
+    },
+    {
+      "path": "src/components/KangquGame.tsx",
+      "gitBlob": "297f7aa859527219f6e3318fe8a4098d880b405d"
+    },
+    {
+      "path": "src/components/KnowledgeReading.tsx",
+      "gitBlob": "412b8622f2611eb6c8abf766019f266df97eea25"
+    },
+    {
+      "path": "src/components/LanternAcrobatAnimation.tsx",
+      "gitBlob": "a13f7474f887c1eff7133289599acca6624e640a"
+    },
+    {
+      "path": "src/components/LanternAcrobatPreview.tsx",
+      "gitBlob": "06227c668685e95bd9371ef97782dd2938276570"
+    },
+    {
+      "path": "src/components/LanternCollectionImage.tsx",
+      "gitBlob": "6b05d51e4e258297ea92fa5c29646fc61ae078da"
+    },
+    {
+      "path": "src/components/LanternDialogue.tsx",
+      "gitBlob": "b08553e0db51d8c3d8b95a292372ff1476114790"
+    },
+    {
+      "path": "src/components/LanternDialoguePreview.tsx",
+      "gitBlob": "2ddaea1cc848b81265790a9a1c374c899d2b8354"
+    },
+    {
+      "path": "src/components/LanternDiscovery.tsx",
+      "gitBlob": "e5beb8eb4344f116f011fa1f3399e6b0e6785d68"
+    },
+    {
+      "path": "src/components/LanternDrummerAnimation.tsx",
+      "gitBlob": "f46ad537f546a1c6c00ee94bf2d4cdf3ee14bf32"
+    },
+    {
+      "path": "src/components/LanternDrummerPreview.tsx",
+      "gitBlob": "158b353233403c17a0638911f903848103761588"
+    },
+    {
+      "path": "src/components/LanternEmperorAnimation.tsx",
+      "gitBlob": "87e165e18d969e3f951a4374020a75d2ce72391b"
+    },
+    {
+      "path": "src/components/LanternEmperorPreview.tsx",
+      "gitBlob": "0c78497f8cb7e5de5be94f51018e0d0a0db4cb10"
+    },
+    {
+      "path": "src/components/LanternEmperorSpeech.tsx",
+      "gitBlob": "2d553f75779ce60bebe9efa365cca104b8889e7c"
+    },
+    {
+      "path": "src/components/LanternEpilogue.tsx",
+      "gitBlob": "2528ffa74121b5ed53b50cdf15dd79ff1abaa65c"
+    },
+    {
+      "path": "src/components/LanternFireworksAnimation.tsx",
+      "gitBlob": "a47b42c1e169e5e09b64f5420b9143e3daa3b323"
+    },
+    {
+      "path": "src/components/LanternFireworksPreview.tsx",
+      "gitBlob": "a32f77aabfcd88be5ddf21a681c67331fd3e28e4"
+    },
+    {
+      "path": "src/components/LanternGame.tsx",
+      "gitBlob": "43f476ac01208df7be76e94987d85ae8194d7848"
+    },
+    {
+      "path": "src/components/LanternJournal.tsx",
+      "gitBlob": "a8b64c76aa1548f5c4dc2a58c8ff55482c3aef50"
+    },
+    {
+      "path": "src/components/LanternJournalPreview.tsx",
+      "gitBlob": "f004d7cb5c4438e487977f4cba35b5f81fc17ffd"
+    },
+    {
+      "path": "src/components/LanternMarketAnimation.tsx",
+      "gitBlob": "d9e95b362102e6247096a5d5f642a7db0b463b39"
+    },
+    {
+      "path": "src/components/LanternMarketPreview.tsx",
+      "gitBlob": "a851412fe56a246ca44292cdce238cff226d6443"
+    },
+    {
+      "path": "src/components/LanternMonkAnimation.tsx",
+      "gitBlob": "6ec2b14e3dd6c4bd9b89198c88ccaa130e05db9d"
+    },
+    {
+      "path": "src/components/LanternMonkPreview.tsx",
+      "gitBlob": "470e6d4511fdfc1df94dd53a9c539ad1ecf7996b"
+    },
+    {
+      "path": "src/components/LanternNavigator.tsx",
+      "gitBlob": "45106b4a83afcae6949a74a39baa71424e4ff520"
+    },
+    {
+      "path": "src/components/LanternNotice.tsx",
+      "gitBlob": "1980176faab296be3c02d4cadfe1890a6026f4d5"
+    },
+    {
+      "path": "src/components/LanternPaintingNote.tsx",
+      "gitBlob": "4972e6cc01674539cd0a1ea40b9bb4932e4ae899"
+    },
+    {
+      "path": "src/components/LanternPaintingTarget.tsx",
+      "gitBlob": "1c48f29462a46c4ccc70fdb62f709d25bb226e31"
+    },
+    {
+      "path": "src/components/LanternSparkDiscovery.tsx",
+      "gitBlob": "6f7a50156a90cfcdfaeafc6ee2f6a9071fefc34c"
+    },
+    {
+      "path": "src/components/LanternStoveAnimation.tsx",
+      "gitBlob": "ca17921d2dcf8df5b9459ed40e49901864586748"
+    },
+    {
+      "path": "src/components/LanternStovePreview.tsx",
+      "gitBlob": "00068eef090f25caf365a75e5db0e365548b3cf8"
+    },
+    {
+      "path": "src/components/LanternTheatreAnimation.tsx",
+      "gitBlob": "1f83f64d4c0d7d5bc67bb4079e479b3dd5b42355"
+    },
+    {
+      "path": "src/components/LanternTheatrePreview.tsx",
+      "gitBlob": "19b9cd3bc9e689afe1018cad796855bc29ee6f1b"
+    },
+    {
+      "path": "src/components/LanternThreeActEntryV1.tsx",
+      "gitBlob": "5d06d2252e6f30e304f1cbd30fe04ccc1f38277c"
+    },
+    {
+      "path": "src/components/LanternThreeActGameV1.tsx",
+      "gitBlob": "d64c56b2b1bbc4c222c5279e6ad5115d131a8d0c"
+    },
+    {
+      "path": "src/components/LanternZhongKuiAnimation.tsx",
+      "gitBlob": "d6c63fdad5652a370c8d59beede07d6a513657c1"
+    },
+    {
+      "path": "src/components/LanternZhongKuiPreview.tsx",
+      "gitBlob": "9b09cfd51ee9c952e0d7b15977f6206cca7c509f"
+    },
+    {
+      "path": "src/components/LivingPainting.tsx",
+      "gitBlob": "114b8207e91eba8a47214155e6754eca2435991a"
+    },
+    {
+      "path": "src/components/LuoshenBirdAnimation.tsx",
+      "gitBlob": "157f8c26a9afdc3b881de8dbed9676f96d103aba"
+    },
+    {
+      "path": "src/components/LuoshenBirdPreview.tsx",
+      "gitBlob": "96c892872ba14aa619b6aa60dabc6eac6401432f"
+    },
+    {
+      "path": "src/components/LuoshenCloudCarAnimation.tsx",
+      "gitBlob": "c6be1e905a286d6ca987e5396d88a3f502c07276"
+    },
+    {
+      "path": "src/components/LuoshenDragonAnimation.tsx",
+      "gitBlob": "677b4553c26f6626c155a1273483ef4f81796907"
+    },
+    {
+      "path": "src/components/LuoshenDragonPreview.tsx",
+      "gitBlob": "d6dae2d33502c8ab7158d747ab322b6aed73d60d"
+    },
+    {
+      "path": "src/components/LuoshenElementArt.tsx",
+      "gitBlob": "c42913dd9c02e7df5741cbb6417a244fcf0d6ad6"
+    },
+    {
+      "path": "src/components/LuoshenFarewellAnimation.tsx",
+      "gitBlob": "39b94859da8a59b7597d09eaa96f42cb36da156b"
+    },
+    {
+      "path": "src/components/LuoshenFarewellDiscovery.tsx",
+      "gitBlob": "bac3500b957dcad2df386ddfd55b52ce628874fb"
+    },
+    {
+      "path": "src/components/LuoshenFarewellSceneAnimation.tsx",
+      "gitBlob": "4c168f70b69def2885d8b00ceb886071fa0636f9"
+    },
+    {
+      "path": "src/components/LuoshenGame.tsx",
+      "gitBlob": "f9f2d63f7ee18843c28734c20a2a0d3fbdc36c5e"
+    },
+    {
+      "path": "src/components/LuoshenGoldFeedback.tsx",
+      "gitBlob": "198a78723b8eea4abbdecfff3d0d8765f7aea1ec"
+    },
+    {
+      "path": "src/components/LuoshenHairDiscovery.tsx",
+      "gitBlob": "c0c1da582210bf76c6948d129297bbb1e456885e"
+    },
+    {
+      "path": "src/components/LuoshenOpeningSleeveAnimation.tsx",
+      "gitBlob": "500e1866f3cd898fe57d51c6403a056db351012a"
+    },
+    {
+      "path": "src/components/LuoshenPanels.tsx",
+      "gitBlob": "1cfcbe7c1130d46a6508eb45f397f707fcb88e28"
+    },
+    {
+      "path": "src/components/LuoshenPoemBook.tsx",
+      "gitBlob": "e6a8ae6ad67877ef4f57bfcc6b7ce0da52bee4f2"
+    },
+    {
+      "path": "src/components/LuoshenRedrawnBird.tsx",
+      "gitBlob": "7a87bc4658aedc5d115991c7ea48af23e7e051f1"
+    },
+    {
+      "path": "src/components/LuoshenRibbonAnimation.tsx",
+      "gitBlob": "f8347584c677d7f3465a4682a16b58ff24451134"
+    },
+    {
+      "path": "src/components/LuoshenRibbonPreview.tsx",
+      "gitBlob": "75f57f53fd437b7afb4bae3c2a4993df92107a21"
+    },
+    {
+      "path": "src/components/LuoshenSleeveStudies.tsx",
+      "gitBlob": "5250969824ebf92ff84b0b5722a01eb27e1a7620"
+    },
+    {
+      "path": "src/components/LuoshenThreeActEntryV1.tsx",
+      "gitBlob": "4b898b16fd3ac60ec9005a4ff69637ede9b9df4d"
+    },
+    {
+      "path": "src/components/LuoshenThreeActGameV1.tsx",
+      "gitBlob": "ea7d22a33d7e6d92828ac3762abfed656f02d2fc"
+    },
+    {
+      "path": "src/components/PaintedPortrait.tsx",
+      "gitBlob": "82fa49ff06c66cac32515c3e0f7955c6cec936cf"
+    },
+    {
+      "path": "src/components/QingmingFocus.tsx",
+      "gitBlob": "88bb2b7bb067d7cf22e8e5fb67d7dafc87652c6f"
+    },
+    {
+      "path": "src/components/QingmingGame.tsx",
+      "gitBlob": "4eda1177a8813ebd1fb8d21af6611dce65f045cb"
+    },
+    {
+      "path": "src/components/QingmingJournal.tsx",
+      "gitBlob": "cadfe034166578fdd5e15da7591c1f3e56f9a5a3"
+    },
+    {
+      "path": "src/components/QingmingPanels.tsx",
+      "gitBlob": "2e899c1ceeb10fd00c3c4eb1418a09dff6b97d50"
+    },
+    {
+      "path": "src/components/QingmingSourceReading.tsx",
+      "gitBlob": "bdd0808fcc782faaa8a76becd783e1a333c17c1c"
+    },
+    {
+      "path": "src/components/ScrollScene.tsx",
+      "gitBlob": "d58353c94a4f8e8bd0bccda7fdbdc51de738e1b2"
+    },
+    {
+      "path": "src/components/ZanhuaArtEdge.tsx",
+      "gitBlob": "3689c8bcca669faa76df619381f5587a2ec28bbf"
+    },
+    {
+      "path": "src/components/ZanhuaCoiffurePage.tsx",
+      "gitBlob": "9411971e090ee958a94c391bb8d7cf8ab3db4776"
+    },
+    {
+      "path": "src/components/ZanhuaCoiffureStudy.tsx",
+      "gitBlob": "42c1314bb949d6907e8c60ce75c104b660cc301a"
+    },
+    {
+      "path": "src/components/ZanhuaCourtExpression.tsx",
+      "gitBlob": "99e3c658e5d25e34421de0923e856fd1762b88ee"
+    },
+    {
+      "path": "src/components/ZanhuaDetailOverlay.tsx",
+      "gitBlob": "300f5a3a9d257387cbaedee18f05cde5aebdf63e"
+    },
+    {
+      "path": "src/components/ZanhuaDogAnimation.tsx",
+      "gitBlob": "8fe57ea29d519e7e4aefde76f6519a540b4c7ef4"
+    },
+    {
+      "path": "src/components/ZanhuaDressPage.tsx",
+      "gitBlob": "11c5a9320b8c6a464e5f8184494df819096232c0"
+    },
+    {
+      "path": "src/components/ZanhuaFigureAnimation.tsx",
+      "gitBlob": "223ebc2bcb7a63e154d59a609fc4aaffde4fec62"
+    },
+    {
+      "path": "src/components/ZanhuaInPaintingStudy.tsx",
+      "gitBlob": "4c43c4df62c6fc8751548dac0573fe8cabdc872e"
+    },
+    {
+      "path": "src/components/ZanhuaLifeSummary.tsx",
+      "gitBlob": "d70efcc29baabd9b87c61638183305a0a8172fc5"
+    },
+    {
+      "path": "src/components/ZanhuaMaidAnimation.tsx",
+      "gitBlob": "4c9b7f97df3831d81e8654b0fbd87a719a0919a1"
+    },
+    {
+      "path": "src/components/ZanhuaOriginalDetailReveal.tsx",
+      "gitBlob": "40ac1fb685cab9c86242b67e1a78c60715519769"
+    },
+    {
+      "path": "src/components/ZanhuaP1Expression.tsx",
+      "gitBlob": "e835a2ab316657597c53e89b9f91e5399a0d7673"
+    },
+    {
+      "path": "src/components/ZanhuaPreview.tsx",
+      "gitBlob": "343254ac875b8af84c0b051070d71f9faab3c46d"
+    },
+    {
+      "path": "src/components/ZanhuaSealRitual.tsx",
+      "gitBlob": "42abee2ad690f36d5f659ee8e283af9eab1637e2"
+    },
+    {
+      "path": "src/components/ZanhuaThreeActEntryV1.tsx",
+      "gitBlob": "5c485a0d96300f4b97d16b99803661cd372c7aa8"
+    },
+    {
+      "path": "src/components/ZanhuaThreeActGameV1.tsx",
+      "gitBlob": "3e57383ca6c72b07ac997da12c50b9c20c0dd9b1"
+    },
+    {
+      "path": "src/components/lantern-three-act-entry-v1.css",
+      "gitBlob": "6c3547bea051d8c8ae0184148aa340cc217452a5"
+    },
+    {
+      "path": "src/components/lanternReviewCommand.ts",
+      "gitBlob": "4bc3772d2caeee49bb82c5b0c2aa892b48587b79"
+    },
+    {
+      "path": "src/components/luoshen-three-act-entry-v1.css",
+      "gitBlob": "027c9f731f582a9f3252266bd5a1e9ffe62ad8a5"
+    },
+    {
+      "path": "src/components/paintingCropStyle.ts",
+      "gitBlob": "1062a7bcd1fe25573495ff96f87472ed19eb975a"
+    },
+    {
+      "path": "src/components/zanhua-three-act-entry-v1.css",
+      "gitBlob": "849cb1c0c63a2fee039a640c64ce38a5ab3898a0"
+    },
+    {
+      "path": "src/entries/StandaloneExamination.tsx",
+      "gitBlob": "be987f7a5b4be83d9e04f280c1b8848f39687bc8"
+    },
+    {
+      "path": "src/entries/VersionedLuoshenChapter.tsx",
+      "gitBlob": "c9a4773e12eb3a2e7318b2a3bb5923a834a97079"
+    },
+    {
+      "path": "src/entries/VersionedZanhuaChapter.tsx",
+      "gitBlob": "bd6dfa9bd063415ef4ce9d80fd4fb3917e4d1eb5"
+    },
+    {
+      "path": "src/entries/kangqu-three-act-v2.2.0/entry.css",
+      "gitBlob": "6c3547bea051d8c8ae0184148aa340cc217452a5"
+    },
+    {
+      "path": "src/entries/kangqu-three-act-v2.2.0/entry.html",
+      "gitBlob": "56f834ccc2c20024aa837673a7a1deb3102c68a5"
+    },
+    {
+      "path": "src/entries/kangqu-three-act-v2.2.0/entry.js",
+      "gitBlob": "0566dbb538afdd26761b48848e1c8ed9dcf8263c"
+    },
+    {
+      "path": "src/examination-street-life.css",
+      "gitBlob": "be0cfda489ca34b9d38451180a3d513d0c65d357"
+    },
+    {
+      "path": "src/game/assets.ts",
+      "gitBlob": "8800ff1931960386c2e4444b461d5f443a270581"
+    },
+    {
+      "path": "src/game/chapterCover.ts",
+      "gitBlob": "ab1dc8c841fac405c6aad0802944008a84a9b6a6"
+    },
+    {
+      "path": "src/game/chapters.ts",
+      "gitBlob": "ec19c1bdfaf31f4d545aa7643f0f19378df052b4"
+    },
+    {
+      "path": "src/game/examinationHit.ts",
+      "gitBlob": "2e1d77cee872b7662ef4d0d8ee980c2883ccc701"
+    },
+    {
+      "path": "src/game/examinationStreetLife.ts",
+      "gitBlob": "90518e63ab63be45e437b1bafc4dde3d1aa38fb9"
+    },
+    {
+      "path": "src/game/examinationStreetLifeState.ts",
+      "gitBlob": "a54cd249e9e95911312b44e07db851ea1df5f47f"
+    },
+    {
+      "path": "src/game/examinationStreetLifeStorage.ts",
+      "gitBlob": "41024575e31b173ad83276f731fafbe99c9bd241"
+    },
+    {
+      "path": "src/game/geometry.ts",
+      "gitBlob": "679573d7ea182b99df315cca31cec334ea3b83aa"
+    },
+    {
+      "path": "src/game/kangquAudience.ts",
+      "gitBlob": "e7575d7526d37f20176f50951f2704ebe01f03af"
+    },
+    {
+      "path": "src/game/kangquAudiencePlayback.json",
+      "gitBlob": "f16df5a4375691d6f8b7f53f8bb550e24e646be1"
+    },
+    {
+      "path": "src/game/kangquDrummerAnimation.ts",
+      "gitBlob": "74ac03405cb97bd0008550eb58f3bd8f8ae2c5b7"
+    },
+    {
+      "path": "src/game/kangquEnsemble.ts",
+      "gitBlob": "b13a0c0d0a08ce64d67fd6d95c2b1e3ab785a436"
+    },
+    {
+      "path": "src/game/kangquEnsembleGroup.ts",
+      "gitBlob": "8b0771b07d6cc9f9ae1001a80ea2799434b10e4a"
+    },
+    {
+      "path": "src/game/kangquEnsembleMaster.ts",
+      "gitBlob": "3edce38325711292fc6b75b3daacc876e9b5a3ee"
+    },
+    {
+      "path": "src/game/kangquEnsembleMotion.ts",
+      "gitBlob": "d59a237cfa86300f36d8f3bff6d1c002b9e3239a"
+    },
+    {
+      "path": "src/game/kangquEnsemblePlayback.json",
+      "gitBlob": "d5a16d604956224ef6c544e395f778105b55d39f"
+    },
+    {
+      "path": "src/game/kangquEnsemblePoses.ts",
+      "gitBlob": "e4c0dcf869dc094c603a18b1a25849c56c094cbf"
+    },
+    {
+      "path": "src/game/kangquFlags.ts",
+      "gitBlob": "a3b300a0e0240ace45df354213b5f0165d08d854"
+    },
+    {
+      "path": "src/game/kangquFlagsPlayback.json",
+      "gitBlob": "b9713823939bb55921776a53860e38cf27f398f7"
+    },
+    {
+      "path": "src/game/knowledge.ts",
+      "gitBlob": "f719d21ac57b4f33b57169645032c6a9d11f7c89"
+    },
+    {
+      "path": "src/game/lanternCollection.ts",
+      "gitBlob": "d2c7105e8cfb9fbe81d24e3b0da4873e6ee29c0c"
+    },
+    {
+      "path": "src/game/lanternDialogue.ts",
+      "gitBlob": "e28ba7f1d78c714d56920eb1070be3cde3b73c89"
+    },
+    {
+      "path": "src/game/lanternEmperorMotion.ts",
+      "gitBlob": "899c72dc3253d788cd51078cfd7b560167e49100"
+    },
+    {
+      "path": "src/game/lanternEmperorPoseRegistration.ts",
+      "gitBlob": "00fa27df0c3922e998cdb5887d70b469537a5be2"
+    },
+    {
+      "path": "src/game/lanternExtraPeople.ts",
+      "gitBlob": "e2150dddbc3fd289053829ff184bada77f7717f5"
+    },
+    {
+      "path": "src/game/lanternFestival.ts",
+      "gitBlob": "dfc7462e25786e3d7d3147ae4cd20fa7ccbb19e8"
+    },
+    {
+      "path": "src/game/lanternFireworksRegistration.ts",
+      "gitBlob": "fd255a1d0a980d2249f9b3f1092569bf61bbc434"
+    },
+    {
+      "path": "src/game/lanternLampLocations.ts",
+      "gitBlob": "ad0182ea3ac3b7f3a771fafec968af843fe32164"
+    },
+    {
+      "path": "src/game/lanternMonk.ts",
+      "gitBlob": "a87a824705a88110b6d2a71566d1cdb338371a04"
+    },
+    {
+      "path": "src/game/lanternMonkPoseRegistration.ts",
+      "gitBlob": "fd069462f593d2f267ab79bef002e7591aef8472"
+    },
+    {
+      "path": "src/game/lanternReply.ts",
+      "gitBlob": "3c2d9c8779b86f34add7f1a59b83cc21d1118543"
+    },
+    {
+      "path": "src/game/lanternScrollPlacement.ts",
+      "gitBlob": "52543cca795f59bf6d1e063aaa1cbf970661253d"
+    },
+    {
+      "path": "src/game/lanternState.ts",
+      "gitBlob": "2127c9d7d62b95730c49c984ca298e29ea988ee5"
+    },
+    {
+      "path": "src/game/lanternStove.ts",
+      "gitBlob": "9e499e0ed9025efd5c71cf274a97a42301710f2b"
+    },
+    {
+      "path": "src/game/lanternStovePoseRegistration.ts",
+      "gitBlob": "a15c94d4877fa6ff0a6f7c03c56766271eff5923"
+    },
+    {
+      "path": "src/game/lanternStudy.ts",
+      "gitBlob": "1005b80be78d74644a022a3e101fe58e5effd779"
+    },
+    {
+      "path": "src/game/lanternTheatre.ts",
+      "gitBlob": "c7bac4bc52c8377f1658be7433c7124403650a30"
+    },
+    {
+      "path": "src/game/lanternTheatrePoseRegistration.ts",
+      "gitBlob": "bd33fac2f1b602fd0b118a534a16c6eb0b08ca2c"
+    },
+    {
+      "path": "src/game/lanternZhongKui.ts",
+      "gitBlob": "9a31972b560ef99bd2595ce7c3b84d1351412192"
+    },
+    {
+      "path": "src/game/lanternZhongKuiPoseRegistration.ts",
+      "gitBlob": "b40c4fca5cde02557f58c230dbfa1a5f694ca6cb"
+    },
+    {
+      "path": "src/game/level.ts",
+      "gitBlob": "fb7385311e9b1638bc4104f4f3da7814cb005f0d"
+    },
+    {
+      "path": "src/game/luoshen.ts",
+      "gitBlob": "343477e8f173f4d25c8755873476708fddfe5197"
+    },
+    {
+      "path": "src/game/luoshenBirdFeathers.ts",
+      "gitBlob": "a4a69c93f6b934418074e19fa2edcfdd91058118"
+    },
+    {
+      "path": "src/game/luoshenBirdInPainting.ts",
+      "gitBlob": "a5821e7912702913585c021fec3f2d064807adba"
+    },
+    {
+      "path": "src/game/luoshenBirdMotion.ts",
+      "gitBlob": "96fbe542a9e512cf887d298a1818d2e5a392da1a"
+    },
+    {
+      "path": "src/game/luoshenBookLayout.ts",
+      "gitBlob": "70ed042d919c37b406a14950c2f131f456b5e458"
+    },
+    {
+      "path": "src/game/luoshenCaoMotion.ts",
+      "gitBlob": "40ee728acb3ab09eeb4675766facb0bac885c66c"
+    },
+    {
+      "path": "src/game/luoshenCloudCarCloth.ts",
+      "gitBlob": "76a4e3bdc078a5a9cebba3a99525abd046b32b91"
+    },
+    {
+      "path": "src/game/luoshenCloudCarLayout.ts",
+      "gitBlob": "140c5d698971f902d0be76f2f564274b50a25047"
+    },
+    {
+      "path": "src/game/luoshenCloudCarMotion.ts",
+      "gitBlob": "f1d6640ef91d889773997226d07e18a491bc23e9"
+    },
+    {
+      "path": "src/game/luoshenCloudCarRenderer.ts",
+      "gitBlob": "0cc0489b16dfb1405d729fa3f8c37385b198a1b8"
+    },
+    {
+      "path": "src/game/luoshenDetail.ts",
+      "gitBlob": "b70bf01bd53afb51a769261e52d8ba74c5b6eea9"
+    },
+    {
+      "path": "src/game/luoshenDragonLayout.ts",
+      "gitBlob": "f55da2aa0532a5b03016984e050e2d47c1d1bf37"
+    },
+    {
+      "path": "src/game/luoshenDragonMotion.ts",
+      "gitBlob": "02af8a9e95a3ce08d02c8a4c808114392ba33c43"
+    },
+    {
+      "path": "src/game/luoshenFarewellLayout.ts",
+      "gitBlob": "785c260613d813621e736d758a44306abed7ee42"
+    },
+    {
+      "path": "src/game/luoshenFarewellMotion.ts",
+      "gitBlob": "b8fa71e4728d52d2b6c80a5644d7ead405ece04e"
+    },
+    {
+      "path": "src/game/luoshenFarewellPairClock.ts",
+      "gitBlob": "0341c800020d233f5132c3d514c196071be63b9b"
+    },
+    {
+      "path": "src/game/luoshenFarewellSceneMotion.ts",
+      "gitBlob": "a2be2bf1a7891dd80ac47cb809210953b613866b"
+    },
+    {
+      "path": "src/game/luoshenFarewellSceneRenderer.ts",
+      "gitBlob": "bf8a14ee2154f060a8f19d7cb3a1217f0bf02b4c"
+    },
+    {
+      "path": "src/game/luoshenFigureLayout.ts",
+      "gitBlob": "1fcaad62969bf4fa5cd73dd5b1e73fc5d64086a9"
+    },
+    {
+      "path": "src/game/luoshenFigureMotion.ts",
+      "gitBlob": "5ad67d0f4b0e352923f821a37be8f1f6c17688b7"
+    },
+    {
+      "path": "src/game/luoshenFigureParts.ts",
+      "gitBlob": "3042c9650c8eb022803ee9d57526711018962812"
+    },
+    {
+      "path": "src/game/luoshenGoldClues.ts",
+      "gitBlob": "aa17db21778312d8ca53843af5f8c13d7676dde2"
+    },
+    {
+      "path": "src/game/luoshenHairLayout.ts",
+      "gitBlob": "c4278cd35de12cf8e805dad6f65123e909904f27"
+    },
+    {
+      "path": "src/game/luoshenHit.ts",
+      "gitBlob": "5cdeff8337a3ddb8359c923dedd0ec0147a20c75"
+    },
+    {
+      "path": "src/game/luoshenJournal.ts",
+      "gitBlob": "bdbafbdc300681ecd3356a77b2f53b82d57bace6"
+    },
+    {
+      "path": "src/game/luoshenLayout.ts",
+      "gitBlob": "072001174ead7709a900f8dfc4ce935659a10e27"
+    },
+    {
+      "path": "src/game/luoshenOpeningSleeveRenderer.ts",
+      "gitBlob": "e96362b5d57d4efbd7984fb9395b08a1f4a7cd21"
+    },
+    {
+      "path": "src/game/luoshenReading.ts",
+      "gitBlob": "6b2f985d4f8d818b043b14e2bd4ce49814637644"
+    },
+    {
+      "path": "src/game/luoshenRedrawnBird.ts",
+      "gitBlob": "8c5ad87d803e4bc32db95c5cde840457edbf0f7a"
+    },
+    {
+      "path": "src/game/luoshenRelationshipLayout.ts",
+      "gitBlob": "f41bc4d6202c691463400883cfa6130e59ea1457"
+    },
+    {
+      "path": "src/game/luoshenRibbonMotion.ts",
+      "gitBlob": "9f01907fbe63cf360e181787343974d17c7b2ca2"
+    },
+    {
+      "path": "src/game/luoshenRibbonRedraw.ts",
+      "gitBlob": "2f4e0454d05164793d9cedce325ca355e42f5324"
+    },
+    {
+      "path": "src/game/luoshenSleeveMotion.ts",
+      "gitBlob": "1b6f103a48b4ed4f848027810181af4995ead234"
+    },
+    {
+      "path": "src/game/luoshenState.ts",
+      "gitBlob": "d97d3771272d8c4c418f2b7c1b176f7aee84dbc1"
+    },
+    {
+      "path": "src/game/qingming.ts",
+      "gitBlob": "426435941d4eafc45d6cedec3053522ff764ecca"
+    },
+    {
+      "path": "src/game/qingmingCoverageData.ts",
+      "gitBlob": "88045d91d7f9e9dcc3ec5e12680cc6039caad042"
+    },
+    {
+      "path": "src/game/qingmingHit.ts",
+      "gitBlob": "94b972fb78068f8051823b0c1341e02f86ae9e64"
+    },
+    {
+      "path": "src/game/qingmingReading.ts",
+      "gitBlob": "31641a89c4d30e23f1a9de900e50d5c2b25e203e"
+    },
+    {
+      "path": "src/game/qingmingState.ts",
+      "gitBlob": "410b363477b2c77666279885387db3344599373a"
+    },
+    {
+      "path": "src/game/qingmingStories.ts",
+      "gitBlob": "c919007f0122b358594db05efcc8bc4ec21c55d5"
+    },
+    {
+      "path": "src/game/state.ts",
+      "gitBlob": "80825dcbcd1e710b391588ca87e79264629987e1"
+    },
+    {
+      "path": "src/game/zanhuaAnimationBackdrop.ts",
+      "gitBlob": "162f4109451410a2b16d4c18126cd3df6d2612f7"
+    },
+    {
+      "path": "src/game/zanhuaAnnotations.ts",
+      "gitBlob": "865e8279731ec1dd5de869f6b62bc75a91fadc88"
+    },
+    {
+      "path": "src/game/zanhuaArtEdges.ts",
+      "gitBlob": "87c9e5e2b8f058bee352ba4eeaba5f06dadf848f"
+    },
+    {
+      "path": "src/game/zanhuaCoiffureStudy.ts",
+      "gitBlob": "6846ccfc2f57cf6c9823e5a5aa3d8e99b0f07db8"
+    },
+    {
+      "path": "src/game/zanhuaCollection.ts",
+      "gitBlob": "8a763212274adaf85298d66fdbdfaa8642ebc7d3"
+    },
+    {
+      "path": "src/game/zanhuaContext.ts",
+      "gitBlob": "7f7bbd9c0278eb59f369e30956ebd849aef47a6f"
+    },
+    {
+      "path": "src/game/zanhuaCourtPerformance.ts",
+      "gitBlob": "3140c879dfa7d9172c73a772e89f1425dfe434b3"
+    },
+    {
+      "path": "src/game/zanhuaDetailContours.ts",
+      "gitBlob": "8d599344ffc9e55e1b2ada29798cd1723ce52148"
+    },
+    {
+      "path": "src/game/zanhuaDogPerformance.ts",
+      "gitBlob": "bf9ec69457ab247ef7213199cd21564bbc93547e"
+    },
+    {
+      "path": "src/game/zanhuaDressStudies.ts",
+      "gitBlob": "8d4784770ab01fc1fb3a5e76db42d3bd0483bd07"
+    },
+    {
+      "path": "src/game/zanhuaEnding.ts",
+      "gitBlob": "674aecbefd697b0227fd986b2b0ba4c16ec0d6c6"
+    },
+    {
+      "path": "src/game/zanhuaNavigation.ts",
+      "gitBlob": "7420f8abe49dd244b573d80aa5e0d92eeb959e7e"
+    },
+    {
+      "path": "src/game/zanhuaP4OuterwearContours.ts",
+      "gitBlob": "ac18409f9b04d40b13035020e332f6e1e804fafa"
+    },
+    {
+      "path": "src/game/zanhuaP4SkirtContour.ts",
+      "gitBlob": "df5ba46243ee79a54a26a935b8a1337086d110eb"
+    },
+    {
+      "path": "src/game/zanhuaP6CoiffureContours.ts",
+      "gitBlob": "3488182b56c2e7c65b45bfc9c684124bd075ef4d"
+    },
+    {
+      "path": "src/game/zanhuaPreview.ts",
+      "gitBlob": "cf02056feaf792b7b76f5e3485032c01e3c8478c"
+    },
+    {
+      "path": "src/game/zanhuaSeal.ts",
+      "gitBlob": "5bab8f92db34df91b7ffbea1de11614fccf7a1a8"
+    },
+    {
+      "path": "src/game/zanhuaSealCharacters.ts",
+      "gitBlob": "4f4f0a81b0753f640f89ab9d4daf9b33c6bf608d"
+    },
+    {
+      "path": "src/game/zanhuaStoryFraming.ts",
+      "gitBlob": "f25a5ad92cedc5f3f5412a9de2616ae86313852e"
+    },
+    {
+      "path": "src/game/zanhuaStudyInteraction.ts",
+      "gitBlob": "9680a9f4462f6324f1adf90162f48b3797febc89"
+    },
+    {
+      "path": "src/historical-paintings.css",
+      "gitBlob": "0211c664288076ced45d873975f0beb3493c37f6"
+    },
+    {
+      "path": "src/hooks/useLuoshenAnimationPlayback.ts",
+      "gitBlob": "b348f5a90da153370c83d2ea0635f74257c75a23"
+    },
+    {
+      "path": "src/hooks/useLuoshenBirdPlayback.ts",
+      "gitBlob": "2cd1f8d28666ca953f5e5b878ba655469359e10b"
+    },
+    {
+      "path": "src/hooks/useLuoshenCollectionFeedback.ts",
+      "gitBlob": "21564e28967c8a149e82b5255fc262891d8e3bfb"
+    },
+    {
+      "path": "src/kangqu-ensemble.css",
+      "gitBlob": "6078cc20f4efb4cc9c8a132633427313409e11be"
+    },
+    {
+      "path": "src/lantern-acrobat.css",
+      "gitBlob": "f79cd61d19129e8b8a5d34b051df94bc10ad1055"
+    },
+    {
+      "path": "src/lantern-dialogue-preview.css",
+      "gitBlob": "076357c42bb81e8ea6762ab3ccb9970171166df4"
+    },
+    {
+      "path": "src/lantern-feedback.css",
+      "gitBlob": "4d16816362118b22362613c767e1c9f18b1de154"
+    },
+    {
+      "path": "src/lantern-field-journal.css",
+      "gitBlob": "6e30afd87ae9f45b852a4322a7348f4aab4f2794"
+    },
+    {
+      "path": "src/lantern-journal-preview.css",
+      "gitBlob": "e3f739715b82ea68d97990771efd921cd133a020"
+    },
+    {
+      "path": "src/lantern-journal.css",
+      "gitBlob": "71dfcb6480c728f9ba242189fa88953ef3289ed5"
+    },
+    {
+      "path": "src/lantern-market.css",
+      "gitBlob": "28248701dd63fba470569a63590c6f2a069df8c4"
+    },
+    {
+      "path": "src/lantern-observation.css",
+      "gitBlob": "23a0f471c1b7ddb39f6465e602c82ddf5677de59"
+    },
+    {
+      "path": "src/lantern-search-hud.css",
+      "gitBlob": "76b816ccf01bbd1942e233032739eeaa31df8c9c"
+    },
+    {
+      "path": "src/lantern-spark.css",
+      "gitBlob": "40086e00de8ca3812f2be8b4621d54f0d83ef0a4"
+    },
+    {
+      "path": "src/lantern-three-act-v1.tsx",
+      "gitBlob": "8f6655664488abb3ae1093e3d85ff67fe16822d4"
+    },
+    {
+      "path": "src/lantern.css",
+      "gitBlob": "611304a715e19cd1d61cb50cdc8835dffc7890e7"
+    },
+    {
+      "path": "src/luoshen-before-three-act.tsx",
+      "gitBlob": "72d77b03bd4915bdf9195da1043bfc0c49a5db01"
+    },
+    {
+      "path": "src/luoshen-birds.css",
+      "gitBlob": "2f3a9d1a980f85239f5c0ab8726e82eb9279b794"
+    },
+    {
+      "path": "src/luoshen-ribbon.css",
+      "gitBlob": "41b7573a6b1f6756f423d9aa98d96c3ce013cc46"
+    },
+    {
+      "path": "src/luoshen-three-act-v1.tsx",
+      "gitBlob": "862351480c47ff3a24132b261d925a51685b22f3"
+    },
+    {
+      "path": "src/luoshen.css",
+      "gitBlob": "49c1ee5d6057efc300f54fa750a6fd51269d7c72"
+    },
+    {
+      "path": "src/main.tsx",
+      "gitBlob": "de8ad1465f07c55b65d806a3d094aef7bbbb5852"
+    },
+    {
+      "path": "src/page-motion.css",
+      "gitBlob": "23cff2671e4c14b84a47ff4a292ec0463c1c764f"
+    },
+    {
+      "path": "src/page-motion.d.ts",
+      "gitBlob": "cb0ff5c3b541f646105198ee23ac0fc3d805023e"
+    },
+    {
+      "path": "src/page-motion.js",
+      "gitBlob": "4cfa6fa457a341971c146288fed32c2bbff844ac"
+    },
+    {
+      "path": "src/qingming.css",
+      "gitBlob": "1328a334f5f6db459fa8f79f9d00cdb26976e417"
+    },
+    {
+      "path": "src/styles.css",
+      "gitBlob": "9f6835f5dca9fbe992f76daab069670c119e1aa9"
+    },
+    {
+      "path": "src/zanhua-before-three-act.tsx",
+      "gitBlob": "3488cc216e17f9a12a262561d4942c505d03cd20"
+    },
+    {
+      "path": "src/zanhua-preview.css",
+      "gitBlob": "45936d6327f0b1d7431165a789a96002e76919a4"
+    },
+    {
+      "path": "src/zanhua-preview.tsx",
+      "gitBlob": "c67941ddb0ca86d58f4acd640a88d62d2df09acf"
+    },
+    {
+      "path": "src/zanhua-three-act-v1.tsx",
+      "gitBlob": "f066544f3a371399da6cb06aaededc34e911d778"
+    }
+  ],
+  "preservedCount": 933,
+  "preservedTags": "kangqu-2.3.1-promotion-20261027/preserved-tags.txt",
+  "scope": "New Kangqu files and two entry pointers only; old chapters and shared assets preserved.",
+  "verifiedAfterBuild": true
+}

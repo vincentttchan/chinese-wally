@@ -1,0 +1,22 @@
+{
+  "version": "2.3.0",
+  "status": "local-preview",
+  "date": "2026-10-27",
+  "base": "public/chapters/kangqu-listening-v2-2.2.0-navigation-20261027/index.html",
+  "baseSha256": "2786c4b032613a97c7717fd87107741a36f9ffb1a8f273d10bce2de790984cec",
+  "sources": {
+    "copy.json": "7f4797c2128b2ffd769f17492fe2414866bcc1f9a3b8736bc32a14aa62975ba1",
+    "recollection.js": "aee6c32b7a280fa4ad6866f014a4fdf3af2daf5aa7f07623e59b571ce10ee542",
+    "flag-introduction.js": "5b0ebaf29198c0b6ce9f1e282998da7d36ef500ce69215c65a97397a7044e268",
+    "content.js": "fc90b4e2ea2a5bdd2467c284714be612b540871a9ddab3978076f116593720b0",
+    "base.sha256": "9a06187178bd56b0eeedd78e9c0713248e75652a8f1be542efa26cc2623cbc5b"
+  },
+  "entries": {
+    "index.html": "dceaa8c150011b5b655a990ff4f0a8425705dfcc151aa43db650c7f0252bd43e",
+    "fresh.html": "03d8cdd098e3a9b3263f0a5159b15dd841431edef5d839f7dc35aa48c8ae0ea4",
+    "note.html": "c9d14e8b9e70714d1a9bce26592f56788ddcceef0375dbc93dd7824e879c487f"
+  },
+  "storageKey": "chinese-wally:kangqu-listening-v2:preview:2.3.0:journal:v2",
+  "sharedAssets": "All artwork, animation, UI, music and font paths from the pinned 2.2.0 document; no shared files rewritten.",
+  "scope": "Approved copy, evidence-reading summary question and existing-note handoffs. No official route change or deployment."
+}

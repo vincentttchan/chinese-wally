@@ -1,0 +1,31 @@
+{
+  "version": "2.3.1",
+  "status": "production",
+  "date": "2026-10-27",
+  "base": "public/chapters/kangqu-listening-v2-2.2.0-navigation-20261027/index.html",
+  "baseSha256": "2786c4b032613a97c7717fd87107741a36f9ffb1a8f273d10bce2de790984cec",
+  "sources": {
+    "copy.json": "3bd070745c77318e5a1f0484b8e3bf0bbf3e88d9066495ebf5ad0ff4c254ac08",
+    "recollection.js": "2336a7ca6da9261c9d0c3420f811588b35727160edd6fb4e00e1a82a7c615199",
+    "flag-introduction.js": "5b0ebaf29198c0b6ce9f1e282998da7d36ef500ce69215c65a97397a7044e268",
+    "content.js": "fc90b4e2ea2a5bdd2467c284714be612b540871a9ddab3978076f116593720b0",
+    "base.sha256": "9a06187178bd56b0eeedd78e9c0713248e75652a8f1be542efa26cc2623cbc5b"
+  },
+  "entries": {
+    "index.html": "4fca5b692eacff9d381e98f3fa076adf255e5eb388992e7ea367cf0467fd213b",
+    "fresh.html": "cd06a03ffbca48f4b9199509677b6b52bafd5fbdc77d0041b9dcd67aa346e8cc",
+    "note.html": "9aab93766233068fc54cbef5f717bfc3a1d0bcf2e37b480638a7caa3b4a13a47"
+  },
+  "storageKey": "chinese-wally:kangqu-listening-v2:journal:v2",
+  "sharedAssets": "All artwork, animation, UI, music and font paths from the pinned 2.2.0 document; no shared files rewritten.",
+  "scope": "Approved 2.3.1 content promoted to the official route. Interface, animation, shared assets and production storage retained.",
+  "entry": "chapters/kangqu-listening-v2-2.3.1/index.html",
+  "approvedPreview": "public/chapters/kangqu-listening-v2-2.3.1-preview-20261027",
+  "approvedPreviewEntries": {
+    "index.html": "2f4070b52e2cbffaccfbf0a8ab57d98603f3b67db66c68651e47940b324faac4",
+    "fresh.html": "c286a4f3a6ab0e1ac2c940a24fda6d865302c57f945112ec46566f3d47582339",
+    "note.html": "7f4d56a9c86befe0c5c598e58a06d55181a50a9d74d90b41b7b676a5bc35f8e3"
+  },
+  "sharedAssetManifest": "chapters/kangqu-listening-v2/data/version-manifest.json",
+  "previousProductionEntry": "chapters/kangqu-listening-v2-2.2.0-navigation-20261027/index.html"
+}

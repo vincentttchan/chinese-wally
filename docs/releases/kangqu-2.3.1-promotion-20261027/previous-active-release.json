@@ -1,0 +1,16 @@
+{
+  "chapter": "kangqu-listening",
+  "version": "2.2.0",
+  "promoted": "2026-10-27",
+  "route": "#kangqu-listening",
+  "entry": "chapters/kangqu-listening-v2-2.2.0-navigation-20261027/index.html",
+  "revision": "2.2.0-navigation-20261027",
+  "archivedEntry": "chapters/kangqu-listening-v2-2.1.14/index.html",
+  "exactArchivedDocument": "chapters/kangqu-listening-v2-2.1.14/original-index.html",
+  "archiveOriginalSha256": "f654f205b7271baa98473d8912a4f2c42d4ec10a54739e77f927d8ec7e090523",
+  "olderPublishedArchive": "chapters/kangqu-listening-legacy-20261027/index.html",
+  "storageKey": "chinese-wally:kangqu-listening-v2:journal:v2",
+  "assets": "Reviewed 2.1.14 assets retained read-only under kangqu-listening-v2 and original shared directories.",
+  "navigationRevision": "2026-10-27: Examination detached; Qingming locked",
+  "approvedGameplayEntry": "chapters/kangqu-listening-v2-2.2.0/index.html"
+}

@@ -9,8 +9,8 @@ export const historicalChapters = [
   {id:'qingming-shanghe',title:'清明上河圖',painting:'北宋 · 張擇端',href:'#qingming-shanghe',locked:true,status:'已上鎖',description:'由五位畫中人接力引路，對讀原畫與《東京夢華錄》，看船運、店舖與城市服務。',image:assetPath('art/qingming/cover.jpg'),imageAlt:'清明上河圖局部：酒樓門面、店招與街市人群'},
 ] as const;
 
-export const kangquChapterRevision = '2.2.0-navigation-20261027';
-export const kangquChapterDocument = assetPath('chapters/kangqu-listening-v2-2.2.0-navigation-20261027/index.html');
+export const kangquChapterRevision = '2.3.1-20261027';
+export const kangquChapterDocument = assetPath('chapters/kangqu-listening-v2-2.3.1/index.html');
 
 /** Local files enter the saved chapter directly; web hosting uses the router. */
 export function historicalChapterHref(chapter:{id:string;href:string}) {
