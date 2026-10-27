@@ -1,0 +1,91 @@
+{
+  "version": "1.0.0",
+  "chapter": "簪花仕女圖",
+  "date": "2026-10-27",
+  "deploymentCommit": "4235f3e6131a2f96bb6407fab2af8d7da2cb0321",
+  "workflow": {
+    "conclusion": "success",
+    "headSha": "4235f3e6131a2f96bb6407fab2af8d7da2cb0321",
+    "status": "completed",
+    "updatedAt": "2026-10-27T04:25:59Z",
+    "url": "https://github.com/vincentttchan/chinese-wally/actions/runs/40449582031"
+  },
+  "releaseTag": "site-2026-10-27-zanhua-three-act-v1.0.0",
+  "releaseUrl": "https://github.com/vincentttchan/chinese-wally/releases/tag/site-2026-10-27-zanhua-three-act-v1.0.0",
+  "officialUrl": "https://vincentttchan.github.io/chinese-wally/#zanhua",
+  "archiveUrl": "https://vincentttchan.github.io/chinese-wally/chapters/zanhua-before-three-act-20261027/",
+  "legacyRoute": "https://vincentttchan.github.io/chinese-wally/#zanhua-legacy",
+  "role": "隨師展卷的學畫人",
+  "preservation": {
+    "protectedExistingSourceAndPublicFiles": 908,
+    "acceptedStandaloneNewAndOldArtifactsUnchanged": true,
+    "acceptedChapterSourcesUnchanged": true,
+    "existingReleaseTagsRetained": true,
+    "storageKey": "chinese-wally:zanhua-findings:v1"
+  },
+  "httpVerification": [
+    {
+      "path": "chapters/zanhua-three-act-v1/index.html",
+      "sha256": "b6dc7d62e942b9592546078eae7beceeea8d7c03b8c23f6a7dbb00151e1882b0",
+      "bytes": 717611,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/zanhua-three-act-v1/version.json",
+      "sha256": "e3c35af3c9ff8faf3020d108dd395791e5e5ce00b9bdaa23157715259bde0e6c",
+      "bytes": 1478,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/zanhua-three-act-v1/data/active-release.json",
+      "sha256": "df7cef1ce02b3d2535c8dff12f4d58e5e6bbfdecac9962e5ec3931735af91241",
+      "bytes": 673,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/zanhua-before-three-act-20261027/index.html",
+      "sha256": "14eb590c07543d4ba329ee9a940b734cbcdf223cd604c1b1b66ee1df488d2c2d",
+      "bytes": 697133,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/zanhua-before-three-act-20261027/version.json",
+      "sha256": "e81dc1caf67e20acb0da00e5b661e0a23512bb978de93bae24bd1daea9df1886",
+      "bytes": 1065,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/lantern-three-act-v1/index.html",
+      "sha256": "4c3dd9209c94f29361e18193b1214b14ec53e7abcf9d049163ecce4553dcf58c",
+      "bytes": 507368,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.2.0/index.html",
+      "sha256": "65aafa12fddf785287b4e3424525eb0dee232fcfa5e718e258c79510b9aed022",
+      "bytes": 877616,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.1.14/original-index.html",
+      "sha256": "f654f205b7271baa98473d8912a4f2c42d4ec10a54739e77f927d8ec7e090523",
+      "bytes": 858126,
+      "matchesRelease": true
+    }
+  ],
+  "browserInspection": {
+    "officialRoute": "https://vincentttchan.github.io/chinese-wally/#zanhua",
+    "legacyRoute": "https://vincentttchan.github.io/chinese-wally/#zanhua-legacy",
+    "flow": [
+      "cover",
+      "three-acts",
+      "learning-painter-role",
+      "appearance",
+      "search"
+    ],
+    "console": []
+  },
+  "evidenceDirectory": "output/releases/zanhua-three-act-1.0.0-live-2026-10-27",
+  "scope": "Route promotion and publication only; all other chapters unchanged. No test suite or full chapter replay.",
+  "staging": "Independent Git staging recreated the exact local review and publication commits before pushing; no changes to release content."
+}
