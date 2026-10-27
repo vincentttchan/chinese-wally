@@ -1,0 +1,156 @@
+{
+  "id": "three-act-entry-baseline-2026-10-27",
+  "status": "user-confirmed-and-sealed",
+  "date": "2026-10-27",
+  "tag": "site-2026-10-27-three-act-entry-baseline",
+  "documentationBaseCommit": "cd48c610c7abd3f1f02ecef5aa62dd88739559df",
+  "runtimeReferenceCommit": "b150a346bee6cc017de1e1fb36b3e578fde1c9f9",
+  "chapters": [
+    {
+      "id": "lantern-festival",
+      "version": "1.1.0",
+      "releaseTag": "site-2026-10-27-lantern-three-act-v1.1.0",
+      "deploymentCommit": "1026563b73501884d1664053970ccd38ec17c6f2"
+    },
+    {
+      "id": "kangqu-listening",
+      "version": "2.2.0",
+      "releaseTag": "site-2026-10-27-kangqu-three-act-2.2.0",
+      "deploymentCommit": "b150a346bee6cc017de1e1fb36b3e578fde1c9f9"
+    }
+  ],
+  "runtimeTrees": {
+    "src": "8abe38c9b449fc13cae8fc79fd19addfe2563cba",
+    "public": "ad77b828810da38236d6f3ec7a5f51062968477d"
+  },
+  "files": [
+    {
+      "path": "src/components/LanternThreeActEntryV1.tsx",
+      "sha256": "e95a020bb55ad32d191ccbf0e329ed161e3644220d9c923939b130e4157ca6d1",
+      "bytes": 9864
+    },
+    {
+      "path": "src/components/lantern-three-act-entry-v1.css",
+      "sha256": "57dba783fa927e1734c9a47eb5498eadfde0457c68c3a0dfc55eb54ce2dc943f",
+      "bytes": 10975
+    },
+    {
+      "path": "src/components/LanternThreeActGameV1.tsx",
+      "sha256": "8f0c25482d44b49e00f3d14ca9967bedf9b5079ccee476942d61093be43e414c",
+      "bytes": 32954
+    },
+    {
+      "path": "src/lantern-three-act-v1.tsx",
+      "sha256": "c1af5e4c94c2b1f521279d319a22ecf86e32c530215ec356b4f0e062598af812",
+      "bytes": 1012
+    },
+    {
+      "path": "scripts/package-lantern-three-act-v1.mjs",
+      "sha256": "41ade6ba1174b17b280181ffb5f98c8489bc530638fea9ba646adba92194aa0c",
+      "bytes": 2995
+    },
+    {
+      "path": "vite.lantern-three-act-v1.config.ts",
+      "sha256": "2e99ca1117fd13be4fb4f920e95f0d148ef5134f19b16a985d65b985107daf99",
+      "bytes": 427
+    },
+    {
+      "path": "public/chapters/lantern-three-act-v1/index.html",
+      "sha256": "4c3dd9209c94f29361e18193b1214b14ec53e7abcf9d049163ecce4553dcf58c",
+      "bytes": 507368
+    },
+    {
+      "path": "public/chapters/lantern-three-act-v1/version.json",
+      "sha256": "6101bfdd02a1ae7b0a7aeb3f4451aad2c5c2ac246165ce9f7aaea55715d04f69",
+      "bytes": 1595
+    },
+    {
+      "path": "public/chapters/lantern-three-act-v1-1.0.0/index.html",
+      "sha256": "0837d72c7483cc9bb32a4889aafe3657dc0397fc787844afdca0983e4b9104e6",
+      "bytes": 505429
+    },
+    {
+      "path": "src/entries/kangqu-three-act-v2.2.0/entry.js",
+      "sha256": "f4c915e9a878c4d1b95f572cd9fb3a80ddb764ed3d381ed8dbdf030dffc01b07",
+      "bytes": 8261
+    },
+    {
+      "path": "src/entries/kangqu-three-act-v2.2.0/entry.css",
+      "sha256": "57dba783fa927e1734c9a47eb5498eadfde0457c68c3a0dfc55eb54ce2dc943f",
+      "bytes": 10975
+    },
+    {
+      "path": "src/entries/kangqu-three-act-v2.2.0/entry.html",
+      "sha256": "5ff119ce04cc10752bac492002a0f7e91e15628cba59c495b10a911e2803efcf",
+      "bytes": 1393
+    },
+    {
+      "path": "scripts/package-kangqu-three-act-v2.2.0.py",
+      "sha256": "6d709fa9b85f12f9173e8a8032b937a37e8ce75e6a5e20cc63d87fdb11482d78",
+      "bytes": 7157
+    },
+    {
+      "path": "scripts/promote-kangqu-three-act-2.2.0.py",
+      "sha256": "8389c6052f2188b39a0c3e03523d47613848b33bfc4763b8ee0777fd680fdfdc",
+      "bytes": 2580
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.2.0/index.html",
+      "sha256": "65aafa12fddf785287b4e3424525eb0dee232fcfa5e718e258c79510b9aed022",
+      "bytes": 877616
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.2.0/data/version-manifest.json",
+      "sha256": "5a2b187cea1c366395ef6b7ebf9534ea55fbdaa68b2adef56aa2303c644ae9fe",
+      "bytes": 51815
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.2.0/data/source-note.json",
+      "sha256": "a054db19ec5ced8bd5662e3f991b35295b1a833db5e332018d724d5274bfdd31",
+      "bytes": 4176
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.1.14/original-index.html",
+      "sha256": "f654f205b7271baa98473d8912a4f2c42d4ec10a54739e77f927d8ec7e090523",
+      "bytes": 858126
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2-2.1.14/index.html",
+      "sha256": "30ca427d745914794eb853b304c679a0951fc6291a8f9d9ae0e44ba07839acdd",
+      "bytes": 858163
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/index.html",
+      "sha256": "f654f205b7271baa98473d8912a4f2c42d4ec10a54739e77f927d8ec7e090523",
+      "bytes": 858126
+    },
+    {
+      "path": "public/chapters/kangqu-listening-v2/data/version-manifest.json",
+      "sha256": "dd3595bcb60c6d5d2459990f76497d31b4fe166e4600d3675785335d277d27e7",
+      "bytes": 51416
+    },
+    {
+      "path": "public/chapters/kangqu-listening-legacy-20261027/original-index.html",
+      "sha256": "a895044ce6904cc78198acb577eee1ff998d225a626cd1379b1d876b64a49cb6",
+      "bytes": 514182
+    },
+    {
+      "path": "docs/releases/three-act-entry-baseline-2026-10-27/confirmed-copy.json",
+      "sha256": "0c1c0c9b85f0cde856eebe943a408827a1e15f2c693da100c58616ef095318ae",
+      "bytes": 5170
+    },
+    {
+      "path": "docs/releases/three-act-entry-baseline-2026-10-27/kangqu-2.2.0-live.png",
+      "sha256": "f93f8e9ffe1f2b51dd01f02903d9781d0147a65dddaf5a5ea4d69f66ef61ef60",
+      "bytes": 114986
+    },
+    {
+      "path": "docs/releases/three-act-entry-baseline-2026-10-27/lantern-1.1.0-live.png",
+      "sha256": "04609c02179343171b3ae34f32249314bceda3a744d000173f250fc772677aab",
+      "bytes": 151461
+    }
+  ],
+  "assets": "All referenced assets and their existing locations remain under the joint Git tag. Kangqu asset hashes are also pinned by its preserved version manifest. Do not distribute a saved HTML without the shared assets.",
+  "scope": "Archive and production documentation only; no runtime changes, build, test suite, browser playthrough or redeployment.",
+  "historicalMetadata": "Original version.json status/notes describe its creation-time candidate or review hold; retained verbatim. This manifest and deployment records establish the currently confirmed sealed state."
+}
