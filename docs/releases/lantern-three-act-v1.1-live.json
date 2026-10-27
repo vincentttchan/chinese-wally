@@ -1,0 +1,29 @@
+[
+  {
+    "path": "",
+    "status": 200,
+    "sha256": "88195c09ca5221c6f1bd05ddb73c2f0c691dfc2ba30bd2c738312bab0c03e60b",
+    "bytes": 617
+  },
+  {
+    "path": "chapters/lantern-three-act-v1/version.json",
+    "status": 200,
+    "sha256": "6101bfdd02a1ae7b0a7aeb3f4451aad2c5c2ac246165ce9f7aaea55715d04f69",
+    "bytes": 1595,
+    "version": "1.1.0"
+  },
+  {
+    "path": "chapters/lantern-three-act-v1-1.0.0/version.json",
+    "status": 200,
+    "sha256": "0a5bd4bcc03b2e146c30724b3fd52e12b0b09d0130c7d7d48f94a0bae2ae203f",
+    "bytes": 1468,
+    "version": "1.0.0"
+  },
+  {
+    "path": "chapters/kangqu-listening/index.html",
+    "status": 200,
+    "sha256": "a895044ce6904cc78198acb577eee1ff998d225a626cd1379b1d876b64a49cb6",
+    "bytes": 514182,
+    "matchesPreserved": true
+  }
+]
