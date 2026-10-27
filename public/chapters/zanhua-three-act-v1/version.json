@@ -1,0 +1,31 @@
+{
+  "id": "zanhua-three-act-v1",
+  "version": "1.0.0",
+  "date": "2026-10-27",
+  "status": "local-review-not-deployed",
+  "chapter": "簪花仕女圖",
+  "entry": "public/chapters/zanhua-three-act-v1/index.html",
+  "previous": "public/chapters/zanhua-before-three-act-20261027/index.html",
+  "productionRoute": "#zanhua (unchanged)",
+  "sources": {
+    "src/components/ZanhuaThreeActGameV1.tsx": "4805a736d5e32f17c1d63f65f7d202712e599c9d5cc76d4117a4cd063a36f2d0",
+    "src/components/ZanhuaThreeActEntryV1.tsx": "7f1ddf763b04e662104abbcde2a5656077ca0bc9c9906e6901d95ff481a42ff5",
+    "src/components/zanhua-three-act-entry-v1.css": "cce8b4514fa81f1f8d10ed14fb12e79f622a60e0241e45af0431e15a32dd4c38",
+    "src/zanhua-three-act-v1.tsx": "3c9c2dd803f355c73e1dc8c605e22fdeb176e41e936b7ece19a2ae1b21456c1f",
+    "src/entries/VersionedZanhuaChapter.tsx": "e1fe26336a1725a4d9c208215d41faba86ebf1321532f68eb5f14fb3a12a8df1"
+  },
+  "entrySHA256": "b6dc7d62e942b9592546078eae7beceeea8d7c03b8c23f6a7dbb00151e1882b0",
+  "flow": [
+    "封面",
+    "交疊展卷",
+    "盛裝一刻",
+    "畫中仕女",
+    "初學看畫",
+    "現有樣貌提示",
+    "原畫尋人",
+    "原有觀察、衣飾細看、見聞冊與收尾"
+  ],
+  "role": "隨師展卷的學畫人",
+  "sharedAssets": "Existing public artwork, portraits, fonts, audio and animation files are referenced read-only.",
+  "scope": "Independent full chapter versions only. No promotion, site home build, push or deployment."
+}

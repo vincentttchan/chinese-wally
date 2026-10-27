@@ -1,0 +1,14 @@
+/* Geometry and sample-only handover; canonical cover and entrance CSS are preserved copies. */
+[hidden]{display:none!important}
+.cover-art{position:absolute;inset:0;overflow:hidden;background:#bba77d}
+.cover-art img{position:absolute;left:0;top:0;max-width:none;transform-origin:0 0;filter:saturate(.78) contrast(.96)}
+.lantern-entry-v1 .art-world,.lantern-entry-v1 .full-painting{width:6455px;height:1378px}
+.lantern-entry-v1.is-handing-over .narrative,.lantern-entry-v1.is-handing-over .entry-controls{opacity:0;pointer-events:none}
+.lantern-entry-v1.is-handing-over .shade{opacity:.22}
+.lantern-entry-v1.is-handing-over .entry-header{opacity:0;pointer-events:none}
+.lantern-entry-v1.is-handing-over .entry-footer{color:#f3ead7;text-shadow:0 1px 5px #211c10}
+.lantern-entry-v1 .handover-note{position:absolute;left:clamp(24px,4vw,64px);bottom:115px;margin:0;max-width:calc(100% - 48px);font-size:16px;line-height:1.8;letter-spacing:.08em;text-shadow:0 1px 6px #211c10}
+.lantern-entry-v1 .target{top:clamp(115px,18vh,160px)}
+.lantern-entry-v1 .replay-button{bottom:65px}
+@media(max-width:600px){.lantern-entry-v1 .handover-note{bottom:155px;max-width:calc(100% - 48px);font-size:14px}.lantern-entry-v1 .replay-button{bottom:100px}.lantern-entry-v1 .entry-footer>span:first-child{max-width:145px}.lantern-entry-v1 .sample-note{max-width:180px}}
+@media(max-height:520px){.lantern-entry-v1 .narrative{inset:64px 20px 98px}.lantern-entry-v1 .vertical-copy{padding-top:10px}.lantern-entry-v1 .vertical-copy .passage{font-size:16px;letter-spacing:.06em}.lantern-entry-v1 .vertical-copy .passage.kicker{font-size:12px}.lantern-entry-v1 .target{top:80px}.lantern-entry-v1 .handover-note{bottom:95px;font-size:13px}.lantern-entry-v1 .replay-button{bottom:45px}}

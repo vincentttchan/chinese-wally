@@ -1,0 +1,37 @@
+{
+  "readings": [
+    {
+      "frame": [
+        1218,
+        853
+      ],
+      "phase": "lantern-entry-v1 is-opening",
+      "shown": 0,
+      "total": 57,
+      "transform": "translate3d(-2775.4px, 0px, 0px) scale(0.619013)"
+    },
+    {
+      "frame": [
+        1218,
+        853
+      ],
+      "phase": "lantern-entry-v1 is-opening has-arrived",
+      "shown": 56,
+      "total": 57,
+      "transform": "translate3d(-2663.58px, 0px, 0px) scale(0.619013)"
+    },
+    {
+      "paused": "true",
+      "shown": 57,
+      "total": 57,
+      "transform": "translate3d(-2570.33px, 0px, 0px) scale(0.619013)"
+    },
+    {
+      "paused": "true",
+      "shown": 57,
+      "total": 57,
+      "transform": "translate3d(-2570.33px, 0px, 0px) scale(0.619013)"
+    }
+  ],
+  "console": []
+}

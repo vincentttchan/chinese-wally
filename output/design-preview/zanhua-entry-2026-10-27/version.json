@@ -1,0 +1,151 @@
+{
+  "id": "zanhua-three-act-entry",
+  "version": "0.1.0",
+  "date": "2026-10-27",
+  "status": "independent-discussion-sample",
+  "role": "隨師展卷的學畫人",
+  "baseline": "site-2026-10-27-three-act-entry-baseline",
+  "scenes": [
+    {
+      "label": "盛裝一刻",
+      "caption": "畫中場景 · 盛裝遊賞",
+      "action": "看看這一卷",
+      "groups": [
+        {
+          "kind": "kicker",
+          "lines": [
+            "盛裝一刻"
+          ]
+        },
+        {
+          "lines": [
+            "畫中，幾位女子盛裝遊賞。",
+            "高髻簪花，長裙曳地。",
+            "有人拈花，有人在旁執扇。"
+          ]
+        },
+        {
+          "kind": "closing",
+          "lines": [
+            "她們的手勢與目光，",
+            "留下各不相同的片刻。"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "畫中仕女",
+      "caption": "簪花仕女圖 · 傳唐代周昉作",
+      "action": "隨師展卷",
+      "groups": [
+        {
+          "kind": "kicker",
+          "lines": [
+            "畫中仕女"
+          ]
+        },
+        {
+          "lines": [
+            "眼前的《簪花仕女圖》，",
+            "傳為唐代畫家周昉所作，",
+            "現藏遼寧省博物館。"
+          ]
+        },
+        {
+          "kind": "closing",
+          "lines": [
+            "畫卷留下了她們的樣貌，",
+            "畫中卻沒有記下她們的姓名。"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "初學看畫",
+      "caption": "你的身份 · 隨師展卷的學畫人",
+      "action": "看看她的樣子",
+      "groups": [
+        {
+          "kind": "kicker",
+          "lines": [
+            "初學看畫"
+          ]
+        },
+        {
+          "lines": [
+            "你是隨師展卷的學畫人。",
+            "師長輕聲囑咐："
+          ]
+        },
+        {
+          "kind": "quote",
+          "lines": [
+            "「先認清這位女子的面孔。",
+            "找到她，再循着手勢與目光，",
+            "看看她正在做甚麼。」"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/styles.css",
+      "sha256": "6e406c5def4f6314a3a2390de68acb0b4cb18780bdea78f18153198b163f669f"
+    },
+    {
+      "path": "src/lantern.css",
+      "sha256": "a0da9ad0317e1a8cf45bcb1f1201f78983c62f03fc5367be52a2f6b6b3535e02"
+    },
+    {
+      "path": "src/zanhua-preview.css",
+      "sha256": "aacdf237818feb32e278ebe6c3b6c27f882c087aa9c6b352a1d89c6a9b82a486"
+    },
+    {
+      "path": "src/components/lantern-three-act-entry-v1.css",
+      "sha256": "57dba783fa927e1734c9a47eb5498eadfde0457c68c3a0dfc55eb54ce2dc943f"
+    },
+    {
+      "path": "src/entries/kangqu-three-act-v2.2.0/entry.js",
+      "sha256": "f4c915e9a878c4d1b95f572cd9fb3a80ddb764ed3d381ed8dbdf030dffc01b07"
+    },
+    {
+      "path": "public/art/zanhua/full-scroll.jpg",
+      "sha256": "cc8956b101f60880d1c0736d56e0f988667ba08983d5b526940da56d198de909"
+    },
+    {
+      "path": "public/art/zanhua/portraits/P1-head-v2.png",
+      "sha256": "1ecd095882069caa5f4660242acdae2399c9c4bac59d411e97c2ce38a49f7110"
+    },
+    {
+      "path": "public/fonts/LXGWWenKaiTC-Regular.ttf",
+      "sha256": "d0a6217aedfc074f539ec46ad8fc7d74e16567e071bc9796b50e762c9d59d110"
+    }
+  ],
+  "painting": {
+    "width": 6455,
+    "height": 1378,
+    "direction": "right",
+    "durationMs": 52000,
+    "maxTravelPx": 560,
+    "maxTravelViewportRatio": 0.48
+  },
+  "layout": {
+    "columns": 7,
+    "maxGridWidthPx": 616,
+    "sameTopAndStartingColumn": true
+  },
+  "timing": {
+    "coverOverlapMs": 1050,
+    "coverFadeMs": 760,
+    "glyphMs": 110,
+    "glyphFadeMs": 220,
+    "punctuationExtraMs": 240,
+    "columnEndExtraMs": 180,
+    "firstGlyphDelayMs": 500,
+    "handoverMs": 1100
+  },
+  "handover": "Shows existing first-woman portrait and appearance cue, then ends; no production game entry.",
+  "storage": "No reads or writes to player storage.",
+  "deployment": "Not integrated; not deployed."
+}

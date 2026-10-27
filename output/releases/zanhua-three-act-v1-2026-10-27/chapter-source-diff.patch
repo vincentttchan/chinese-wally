@@ -1,0 +1,101 @@
+--- ZanhuaPreview.tsx (unchanged)
+
++++ ZanhuaThreeActGameV1.tsx
+
+@@ -1,4 +1,5 @@
+
+ import {zanhuaMountingSeals,zanhuaPlayerSeal,zanhuaCollectorSeals,resolveZanhuaCollectorSeal} from '../game/zanhuaSeal.ts';
++import {ZanhuaThreeActEntryV1} from './ZanhuaThreeActEntryV1.tsx';
+ import {ChapterLinks} from './ChapterLinks.tsx';
+ import {useAmbience} from '../audio/useAmbience.ts';
+ import {chapterMusicTracks} from '../audio/chapterMusicTracks.js';
+@@ -7,7 +8,7 @@
+
+ import {resolveZanhuaStudyHit} from '../game/zanhuaStudyInteraction.ts';
+ import {ZanhuaMaidAnimation} from './ZanhuaMaidAnimation.tsx';
+ import {ZanhuaLifeSummary} from './ZanhuaLifeSummary.tsx';
+-import {useEffect,useLayoutEffect,useRef,useState} from 'react';
++import {useCallback,useEffect,useLayoutEffect,useRef,useState} from 'react';
+ import type {CSSProperties} from 'react';
+ import {ScrollScene} from './ScrollScene.tsx';
+ import type {SceneCommand,SceneHint,SceneViewport,StudyCommand} from './ScrollScene.tsx';
+@@ -50,8 +51,10 @@
+
+ const stops=[{x:.24,label:'卷左'},{x:.50,label:'卷中'},{x:.76,label:'卷右'}];
+ 
+ /** The same approved chapter runtime serves the formal route and the development preview. */
+-export function ZanhuaPreview(){
+- const [phase,setPhase]=useState<Phase>(initialPhase),[index,setIndex]=useState(initialIndex),[intro,setIntro]=useState(0);
++export function ZanhuaThreeActGameV1(){
++ const [phase,setPhase]=useState<Phase>(initialPhase),[index,setIndex]=useState(initialIndex);
++ const [entryStarted,setEntryStarted]=useState(false),[coverVisible,setCoverVisible]=useState(true),[coverLeaving,setCoverLeaving]=useState(false);
++ const prepareEntry=useCallback(()=>setCoverLeaving(true),[]),revealEntry=useCallback(()=>setCoverVisible(false),[]);
+  const [ready,setReady]=useState(false),[busy,setBusy]=useState(false),[reset,setReset]=useState(0),[entering,setEntering]=useState(false);
+  const [focusing,setFocusing]=useState(initialPhase==='intro'||initialPhase==='search'),[overlay,setOverlay]=useState<Overlay>(null),[depth,setDepth]=useState(0);
+  const [viewport,setViewport]=useState<SceneViewport>({view:{x:0,y:0,scale:1},frame:{width:1440,height:900}});
+@@ -191,11 +194,18 @@
+
+   const show=()=>setReply({id,text:zanhuaReplies[id][count%3],token:++token.current});
+   show();
+  }
+- function begin(){
++ function begin(opening:SceneViewport){
+   if(entering||!ready)return;setEntering(true);
+   if(timer.current)clearTimeout(timer.current);
+-  timer.current=setTimeout(()=>{setPhase('search');setEntering(false);setReset(v=>v+1);},matchMedia('(prefers-reduced-motion: reduce)').matches?0:950);
+- }
++  setStudy({region:{
++   x:(opening.frame.width/2-opening.view.x)/(zanhuaSize.width*opening.view.scale),
++   y:(opening.frame.height/2-opening.view.y)/(zanhuaSize.height*opening.view.scale),
++  },scaleRatio:opening.view.scale/coverView(opening.frame,zanhuaSize).scale,transition:'instant',token:++token.current,onSettled:()=>{
++   if(timer.current)clearTimeout(timer.current);
++   timer.current=setTimeout(()=>{setPhase('search');setEntering(false);setStudy(null);},matchMedia('(prefers-reduced-motion: reduce)').matches?0:1100);
++  }});
++ }
++
+  function frameObservation(which=index){
+   pan(zanhuaSteps[which].focus);
+  }
+@@ -251,7 +261,7 @@
+
+   if(index===2){setPhase('complete');setFocusing(false);return;}
+   setFigureStudy(false);setIndex(v=>v+1);setContextStep(0);setContextSeen(false);setDepth(0);setReply(null);setHint(null);setStudy(null);setFocusing(savedFocus.current);setPhase('search');
+  }
+- function restart(){setPlayerSeal(null);setFigureStudy(false);setRetainedStudy(false);setMaidPlaying(false);setConfirmation(null);setDetail(null);collection.settle();if(timer.current)clearTimeout(timer.current);token.current++;setBusy(false);setStudy(null);setReply(null);setOverlay(null);setIndex(0);setContextStep(0);setContextSeen(false);setDepth(0);setPhase('intro');setIntro(0);setEntering(false);setReset(v=>v+1);setFocusing(true);}
++ function restart(){setPlayerSeal(null);setFigureStudy(false);setRetainedStudy(false);setMaidPlaying(false);setConfirmation(null);setDetail(null);collection.settle();if(timer.current)clearTimeout(timer.current);token.current++;setBusy(false);setStudy(null);setReply(null);setOverlay(null);setIndex(0);setContextStep(0);setContextSeen(false);setDepth(0);setPhase('intro');setEntryStarted(false);setCoverVisible(true);setCoverLeaving(false);setEntering(false);setReset(v=>v+1);setFocusing(true);}
+  function returnToCover(){window.dispatchEvent(new CustomEvent('chapter-cover-request',{detail:()=>{const url=new URL(window.location.href);url.searchParams.delete('scene');url.searchParams.delete('person');window.history.replaceState(null,'',url);restart();}}));}
+  function help(){setDepth(0);setOverlay('hint');}
+  function playMotion(){
+@@ -281,18 +291,19 @@
+
+    focusing={phase==='intro'?false:focusing} motion={false} steam={null} minimumScaleRatio={overlay==='journal'?.1:.7} zoomStops={[.7,.85,1,1.3,1.6,2.1,2.6,3.2,4]}
+    onViewportChange={setViewport} onViewChange={setScrollWindow} keyboardNavigation smoothNavigation onPaintingTap={activateObservation}
+    title="簪花仕女圖" description="遼寧省博物館藏《簪花仕女圖》完整畫面，五位簪花女子與一位執扇侍女，人物間有兩隻小犬與一隻鶴。"/>
+-  {phase==='intro'?<section className={`introduction lantern-introduction ${entering?'is-entering':''}`} aria-label="簪花仕女圖引言" inert={entering}>
+-   <div className="intro-brand"><span/>畫中尋人</div>
+-   <div className="intro-content"><div className="intro-copy"><div className="intro-narrative" aria-live="polite"><div className="intro-lines" key={intro}>
+-    <p className="intro-chapter">{intro===0?'遼寧省博物館藏 · 絹本設色 · 畫心46×180厘米':'尋人，也讀畫'}</p>
+-    <p className="intro-story">{intro===0?'這卷絹畫傳為唐代周昉所作，\n留下貴族女子遊賞、盛裝的身影。\n從面孔，找到她們各自的故事。':'先記住這張面孔。\n她垂着頭，\n臉朝左下方。'}</p>
+-    {intro===1&&<><img className="zanhua-intro-face" src={zanhuaSteps[0].portrait} alt="第一位女子的完整髮型與面貌摹繪"/><span className="zanhua-portrait-caption">樣貌摹繪，原畫為準</span></>}
+-   </div></div>
+-   <button className="intro-enter" disabled={entering||(intro===1&&!ready)} onClick={()=>intro===0?setIntro(1):begin()}><span>{intro===0?'展開這一卷':ready?'入畫尋人':'正在展卷'}</span><ArrowRight size={23}/></button>
+-   <div className="intro-sequence"><button className="intro-back" style={{visibility:intro?'visible':'hidden'}} onClick={()=>setIntro(0)}>前一幕</button><div className="intro-progress" role="img" aria-label={`引言第${intro+1}幕，共兩幕`}><span className="is-read"/><span className={intro?'is-read':''}/></div></div>
+-   </div><div className="intro-title"><h1>簪花仕女圖</h1><span className="intro-seal" aria-hidden="true">尋人</span></div></div>
+-   <div className="intro-footer"><p>在原畫中尋找三位女子 · 動作與表情為遊戲演繹</p><ChapterLinks current="zanhua"/></div>
+-  </section>:<>
++  {phase==='intro'?<>
++   {entryStarted&&<ZanhuaThreeActEntryV1 ready={ready} leaving={entering} onBegin={begin} onPrepared={prepareEntry} onRevealed={revealEntry}/>}
++   {coverVisible&&<section className={`introduction lantern-introduction zanhua-entry-cover-v1 ${coverLeaving?'is-opening-scroll':''}`} aria-label="簪花仕女圖封面" inert={entryStarted}>
++    <div className="intro-brand"><span/>畫中尋人</div>
++    <div className="intro-content"><div className="intro-copy"><div className="intro-narrative"><div className="intro-lines">
++     <p className="intro-chapter">遼寧省博物館藏 · 絹本設色 · 畫心46×180厘米</p>
++     <p className="intro-story">{'這卷絹畫傳為唐代周昉所作，\n留下貴族女子遊賞、盛裝的身影。\n從面孔，找到她們各自的故事。'}</p>
++    </div></div><button className="intro-enter" disabled={entryStarted} onClick={()=>setEntryStarted(true)}><span>{entryStarted&&!coverLeaving?'正在展卷':'走進這一卷'}</span><ArrowRight size={23}/></button>
++    </div><div className="intro-title"><h1>簪花仕女圖</h1><span className="intro-seal" aria-hidden="true">尋人</span></div></div>
++    <div className="intro-footer"><p>在原畫中尋找三位女子 · 動作與表情為遊戲演繹</p><ChapterLinks current="zanhua"/></div>
++   </section>}
++  </>:<>
++
+    <header className="lantern-hud" inert={blocked} hidden={phase==='seal'}>
+     {phase!=='free'&&<section className="lantern-target" aria-label="本次人物提示"><button className="lantern-face-reference" aria-label="放大人物樣貌" onClick={help}><img className="lantern-face-illustration" src={step.portrait} alt={`${step.appearance}（樣貌摹繪，原畫為準）`}/></button>
+      <div><p className="lantern-eyebrow">尋人 · {String(index+1).padStart(2,'0')} / 03</p><h1>尋找這張面孔</h1><p className="lantern-trail">{step.appearance}</p><p className="lantern-progress">已尋得 {index} / 3 位</p></div>

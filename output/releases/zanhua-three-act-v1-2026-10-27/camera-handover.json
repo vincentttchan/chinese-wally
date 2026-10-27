@@ -1,0 +1,10 @@
+{
+  "before": {
+    "entry": "translate3d(-2217.73px, 0px, 0px) scale(0.619013)",
+    "scene": "translate(0px, 5.68434e-14px) scale(0.619013)"
+  },
+  "after": {
+    "entryPresent": false,
+    "scene": "translate(-2217.73px, 5.68434e-14px) scale(0.619013)"
+  }
+}
