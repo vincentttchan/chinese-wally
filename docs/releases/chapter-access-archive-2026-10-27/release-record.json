@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-27",
+  "status": "formally-archived-maintenance-baseline",
+  "tag": "site-2026-10-27-chapter-access",
+  "deployedCommit": "5e488f8d7125a64e6975f93159daac451b2b8e8a",
+  "actionsRun": 40460342079,
+  "artifactId": 12714580829,
+  "artifactBytes": 626551598,
+  "artifactSHA256": "f2f86513301a0e20919c499df966822e02740e4510ccb620e042c86f0aa8735d",
+  "officialDigestMatched": true,
+  "websiteFiles": 686,
+  "previouslyVerifiedLiveFilesMatchedArtifact": 12,
+  "preservedTags": {
+    "refs/tags/site-2026-10-23": "5eb7999ceb87e5a1897c90ee09ea9d7c8c8edf14",
+    "refs/tags/site-2026-10-23^{}": "c9e99bfbc13322269c29d5d0d12071c739c3b828",
+    "refs/tags/site-2026-10-23-zanhua-navigation": "c41301531cf81d166e121f48d6381d4ddd2c0eb2",
+    "refs/tags/site-2026-10-23-zanhua-navigation^{}": "222747b2e999e09f666073460a58d80294123c35",
+    "refs/tags/site-2026-10-27-chapter-access": "5e488f8d7125a64e6975f93159daac451b2b8e8a",
+    "refs/tags/site-2026-10-27-kangqu-three-act-2.2.0": "b150a346bee6cc017de1e1fb36b3e578fde1c9f9",
+    "refs/tags/site-2026-10-27-lantern-three-act-v1.1.0": "568654705eeb02b2fb3ebb8bce51d49fc771450c",
+    "refs/tags/site-2026-10-27-lantern-three-act-v1.1.0^{}": "1026563b73501884d1664053970ccd38ec17c6f2",
+    "refs/tags/site-2026-10-27-luoshen-before-three-act": "65b144abc4080f9fa7931716c01867be504bc8ef",
+    "refs/tags/site-2026-10-27-luoshen-three-act-v1.0.0": "236b7775c872ee4bcf2c1ae20957dbc53fd30c83",
+    "refs/tags/site-2026-10-27-three-act-entry-baseline": "306b9fe093f6422340319807f3a9fdf692ac0f5d",
+    "refs/tags/site-2026-10-27-zanhua-three-act-v1.0.0": "4235f3e6131a2f96bb6407fab2af8d7da2cb0321"
+  },
+  "policies": [
+    "Keep Examination detached and standalone playable.",
+    "Keep Qingming locked.",
+    "Keep other chapters, UI, music, saves and frozen versions unchanged.",
+    "Future user-authorized modifications create new versions; preserve every previous tag, release and referenced asset."
+  ],
+  "verification": "Archive download, hashes, tar inventory and tag preservation only; no rebuild, redeployment or new gameplay tests."
+}
