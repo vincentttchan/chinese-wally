@@ -1,0 +1,282 @@
+{
+  "version": "1.0.0",
+  "chapter": "洛水之間",
+  "date": "2026-10-27",
+  "deploymentCommit": "236b7775c872ee4bcf2c1ae20957dbc53fd30c83",
+  "workflow": {
+    "conclusion": "success",
+    "databaseId": 40458232066,
+    "headSha": "236b7775c872ee4bcf2c1ae20957dbc53fd30c83",
+    "status": "completed",
+    "updatedAt": "2026-10-27T05:58:31Z",
+    "url": "https://github.com/vincentttchan/chinese-wally/actions/runs/40458232066"
+  },
+  "releaseTag": "site-2026-10-27-luoshen-three-act-v1.0.0",
+  "releaseUrl": "https://github.com/vincentttchan/chinese-wally/releases/tag/site-2026-10-27-luoshen-three-act-v1.0.0",
+  "legacyArchiveTag": "site-2026-10-27-luoshen-before-three-act",
+  "legacyArchiveCommit": "65b144abc4080f9fa7931716c01867be504bc8ef",
+  "officialUrl": "https://vincentttchan.github.io/chinese-wally/#luoshen",
+  "archiveUrl": "https://vincentttchan.github.io/chinese-wally/chapters/luoshen-before-three-act-20261027/",
+  "legacyRoute": "https://vincentttchan.github.io/chinese-wally/#luoshen-legacy",
+  "role": "循賦入畫的年輕書生",
+  "preservation": {
+    "protectedExistingSourceAndPublicFiles": 919,
+    "acceptedStandaloneNewAndOldArtifactsUnchanged": true,
+    "acceptedEntranceSourceAndStylesUnchanged": true,
+    "chapterSourceTitleOnlyChange": true,
+    "existingReleaseTagsRetained": true,
+    "storageKey": "painting-luoshen-v1"
+  },
+  "httpVerification": [
+    {
+      "path": "chapters/luoshen-three-act-v1/index.html",
+      "sha256": "f2f5d04835cfbf9e9afbe70ca99c944a9cdc89dcc4a28ea9eed8884cb5fdde65",
+      "bytes": 850540,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/luoshen-three-act-v1/version.json",
+      "sha256": "7f9f9b6322ec7dde329d842ab5abc6bb06ee7aaf33319f6782bee76d9f97dc38",
+      "bytes": 1660,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/luoshen-three-act-v1/data/active-release.json",
+      "sha256": "ace4a69a25755e6b48c540beab1c7cb5391534b51f46fe41d20f0b97744ce189",
+      "bytes": 562,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/luoshen-before-three-act-20261027/index.html",
+      "sha256": "a516b3b96547d7fcb9a95148ff10f48aa4a3cdc3b45d9aafb7fcebde8eb36dda",
+      "bytes": 828639,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/luoshen-before-three-act-20261027/version.json",
+      "sha256": "35a72e40d07f2a00f5ebf8396ecc841862748e817b3e4c206c3b580ff9501702",
+      "bytes": 1227,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/zanhua-three-act-v1/index.html",
+      "sha256": "b6dc7d62e942b9592546078eae7beceeea8d7c03b8c23f6a7dbb00151e1882b0",
+      "bytes": 717611,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/zanhua-before-three-act-20261027/index.html",
+      "sha256": "14eb590c07543d4ba329ee9a940b734cbcdf223cd604c1b1b66ee1df488d2c2d",
+      "bytes": 697133,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/lantern-three-act-v1/index.html",
+      "sha256": "4c3dd9209c94f29361e18193b1214b14ec53e7abcf9d049163ecce4553dcf58c",
+      "bytes": 507368,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.2.0/index.html",
+      "sha256": "65aafa12fddf785287b4e3424525eb0dee232fcfa5e718e258c79510b9aed022",
+      "bytes": 877616,
+      "matchesRelease": true
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.1.14/original-index.html",
+      "sha256": "f654f205b7271baa98473d8912a4f2c42d4ec10a54739e77f927d8ec7e090523",
+      "bytes": 858126,
+      "matchesRelease": true
+    }
+  ],
+  "browserReview": {
+    "typewriter": [
+      {
+        "total": 84,
+        "visible": 0,
+        "world": "matrix(0.763521, 0, 0, 0.763521, -12826.8, 0)"
+      },
+      {
+        "total": 84,
+        "visible": 84,
+        "world": "matrix(0.763521, 0, 0, 0.763521, -12592.6, 0)"
+      }
+    ],
+    "alignment": [
+      {
+        "columns": [
+          {
+            "height": 383.140625,
+            "text": "三國時，曹植寫下《洛神賦》，",
+            "width": 44.3984375,
+            "x": 881.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 301.0390625,
+            "text": "描繪一場人與神的相遇。",
+            "width": 44.3984375,
+            "x": 793.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 273.671875,
+            "text": "故事裡，他行經洛水，",
+            "width": 44.3984375,
+            "x": 705.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 355.7734375,
+            "text": "在水岸之間，遇見神女洛神。",
+            "width": 44.3984375,
+            "x": 617.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 301.0390625,
+            "text": "行旅的腳步，就此停留，",
+            "width": 44.3984375,
+            "x": 529.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 328.40625,
+            "text": "目光所及，多了她的身影。",
+            "width": 44.3984375,
+            "x": 441.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 355.7734375,
+            "text": "一段故事，從這片水岸展開。",
+            "width": 44.3984375,
+            "x": 353.8046875,
+            "y": 140.796875
+          }
+        ],
+        "stage": "引言第1幕，共三幕"
+      },
+      {
+        "columns": [
+          {
+            "height": 301.0390625,
+            "text": "眼前這卷《洛神賦圖》，",
+            "width": 44.3984375,
+            "x": 881.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 301.0390625,
+            "text": "將賦中的故事繪成長卷。",
+            "width": 44.3984375,
+            "x": 793.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 273.671875,
+            "text": "原本相傳為顧愷之作，",
+            "width": 44.3984375,
+            "x": 705.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 355.7734375,
+            "text": "此卷是北京故宮所藏宋摹本。",
+            "width": 44.3984375,
+            "x": 617.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 355.7734375,
+            "text": "山水之間，熟悉的身影再現，",
+            "width": 44.3984375,
+            "x": 529.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 328.40625,
+            "text": "衣冠相似，姿態卻有不同。",
+            "width": 44.3984375,
+            "x": 441.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 328.40625,
+            "text": "他們之間，又發生了甚麼？",
+            "width": 44.3984375,
+            "x": 353.8046875,
+            "y": 140.796875
+          }
+        ],
+        "stage": "引言第2幕，共三幕"
+      },
+      {
+        "columns": [
+          {
+            "height": 328.40625,
+            "text": "你是循賦入畫的年輕書生，",
+            "width": 44.3984375,
+            "x": 881.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 355.7734375,
+            "text": "帶著《洛神賦》，展開此卷。",
+            "width": 44.3984375,
+            "x": 793.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 301.0390625,
+            "text": "先認清岸上曹植的面貌，",
+            "width": 44.3984375,
+            "x": 705.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 328.40625,
+            "text": "找到他，再細看他的衣袖。",
+            "width": 44.3984375,
+            "x": 617.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 355.7734375,
+            "text": "循著身影，留意姿態與位置，",
+            "width": 44.3984375,
+            "x": 529.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 355.7734375,
+            "text": "看過細節，再翻開相應賦文，",
+            "width": 44.3984375,
+            "x": 441.8046875,
+            "y": 140.796875
+          },
+          {
+            "height": 383.140625,
+            "text": "讓文字與畫面，慢慢連在一起。",
+            "width": 44.3984375,
+            "x": 353.8046875,
+            "y": 140.796875
+          }
+        ],
+        "stage": "引言第3幕，共三幕"
+      }
+    ],
+    "cameraBefore": "matrix(0.763521, 0, 0, 0.763521, -12280.5, 0)",
+    "cameraAfter": "matrix(0.763521, 0, 0, 0.763521, -12280.5, 0)",
+    "console": [],
+    "flow": [
+      "official-root-cover",
+      "three-acts",
+      "young-scholar-role",
+      "existing-C1-appearance",
+      "playable-C1-search"
+    ],
+    "legacy": "Original two-act introduction visible at #luoshen-legacy"
+  },
+  "evidenceDirectory": "output/releases/luoshen-three-act-1.0.0-live-2026-10-27"
+}
