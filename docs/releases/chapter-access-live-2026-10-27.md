@@ -14,3 +14,11 @@
 完整 `NODE_DISABLE_COMPILE_CACHE=1 npm run build` 已成功，包括 TypeScript、Vite 和本機首頁封裝。逐一核對既有 src/public 檔案，除七個入口、導航、資料及產生文件外均保持原 Git blob。清單見 `chapter-access-deployment-preservation-2026-10-27.json`。
 
 未執行測試套件或重新通關其他章節。發布後的 Actions 與線上文件核對另記於 `chapter-access-live-2026-10-27.json`。
+
+## 正式上線結果
+
+發布提交：`5e488f8d7125a64e6975f93159daac451b2b8e8a`。GitHub Actions `40460342079` 已成功完成完整建置與 GitHub Pages 部署。12 份線上 HTML、JavaScript、CSS 及發布資料均回應 HTTP 200，SHA-256 與本次發布檔案完全一致。核對包含洛水、簪花新舊獨立文件及保留的康衢 2.2.0。
+
+正式網址：<https://vincentttchan.github.io/chinese-wally/>。榜下獨立版本：<https://vincentttchan.github.io/chinese-wally/chapters/examination-standalone-20261027/>。
+
+版本標記：`site-2026-10-27-chapter-access`；所有先前標記保留。線上核對為文件與 bundle 指紋檢查，未聲稱瀏覽器通關測試。
