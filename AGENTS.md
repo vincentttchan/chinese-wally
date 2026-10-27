@@ -2,13 +2,13 @@
 
 使用者已於 2026-10-10 確認「宮中鬧元宵」章節完成，並要求以其作為後續畫作的製作基準。
 
-## 2026-10-27《洛水之間》三幕入場 1.0.0 本機候審版
+## 2026-10-27《洛水之間》三幕入場 1.0.0 正式入口
 
-- 使用者已確認「循賦入畫的年輕書生」三幕文案與獨立樣段，要求接到現有完整流程、另存新版並保留舊版，**先不要上線，其他章節不變**。
-- 新版獨立文件：`public/chapters/luoshen-three-act-v1/`；三幕前完整舊版：`public/chapters/luoshen-before-three-act-20261027/`。已確認的 v0.1 樣段保留於 `output/design-preview/luoshen-entry-2026-10-27/`。
-- 正式 `#luoshen`、`src/main.tsx`、`public/index.html` 與原 `LuoshenGame.tsx` 保持不變；新來源 `LuoshenThreeActGameV1.tsx` 只替換入場與鏡頭交接，沿用原有尋人、觀察、古籍、收藏、存檔及收尾。
-- 未有使用者後續明確授權，不推送或部署這份候審版本。不可移動或覆寫既有封存標記。新舊文件依賴既有唯讀 public 素材，不能刪除其素材目錄。
-- 本機版本及實際檢視紀錄見 `docs/releases/luoshen-three-act-v1-2026-10-27.md`。
+- 使用者已確認完整1.0.0並明確授權接到正式入口及上線，取代先前本機候審限制。正式 `#luoshen` 使用 `LuoshenThreeActGameV1.tsx`；獨立完整成品仍在 `public/chapters/luoshen-three-act-v1/`。
+- 保留「循賦入畫的年輕書生」身份、確認的三幕原文、封面過渡、七欄對齊、逐字與背景右移、樣貌及鏡頭交接。正式頁籤標題沿用「洛水之間 · 洛神賦圖」，不顯示本機候審字樣。
+- 完整舊版在 `public/chapters/luoshen-before-three-act-20261027/`，原 `LuoshenGame.tsx` 保留於 `#luoshen-legacy`；舊試玩入口仍使用原元件。新舊成品與既有素材不得刪除或覆寫。
+- 原有尋人、原畫觀察、古籍、收藏、存檔及收尾沿用；其他五章、共用介面、配樂與原封存標記不變。
+- 本機候審歷程見 `docs/releases/luoshen-three-act-v1-2026-10-27.md`；正式發布與核對見 `docs/releases/luoshen-three-act-1.0.0-live-2026-10-27.md`。
 
 ## 2026-10-27《簪花仕女圖》三幕入場 1.0.0 正式入口
 

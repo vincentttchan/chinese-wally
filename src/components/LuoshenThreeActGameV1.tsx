@@ -165,7 +165,7 @@ export function LuoshenThreeActGameV1({birdTrial=false,ribbonTrial=false,dragonT
  useEffect(()=>{if(!isolatedTrial)setStorageAvailable(saveLuoshen(state));},[state,isolatedTrial]);
  useEffect(()=>{if(!resumePending.current||state.phase==='intro'||!ready)return;resumePending.current=false;if(state.phase==='observe'||state.phase==='ending'){setFocus(false);if(dragonFramed)panDragons();else if(farewellContext)pan(farewellLayout.region,farewellLayout.scaleRatio,farewellLayout.screenAnchor);else if(hairContext)pan(hairLayout.region,hairLayout.scaleRatio,hairLayout.screenAnchor);else if(observation)pan(observation.actor,1.5);}else if(state.phase==='interpret'||state.phase==='complete')setFocus(false);},[state.phase,ready]);
 
- useEffect(()=>{const old=document.title;document.title='洛水之間 · 三幕入場 1.0.0 本機版';return()=>{document.title=old;};},[]);
+ useEffect(()=>{const old=document.title;document.title='洛水之間 · 洛神賦圖';return()=>{document.title=old;};},[]);
  useEffect(()=>{setHintDepth(0);setFolded(false);setReply(null);},[state.index,state.phase,state.observation,state.ending]);
  useEffect(()=>{if(!reply)return;const t=setTimeout(()=>setReply(null),3500);return()=>clearTimeout(t);},[reply]);
  useEffect(()=>{if(!notice)return;const t=setTimeout(()=>setNoticeState(null),3600);return()=>clearTimeout(t);},[notice]);

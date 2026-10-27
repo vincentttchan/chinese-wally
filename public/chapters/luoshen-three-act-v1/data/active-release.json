@@ -1,0 +1,14 @@
+{
+  "chapter": "洛水之間",
+  "id": "luoshen-three-act-v1",
+  "version": "1.0.0",
+  "date": "2026-10-27",
+  "status": "approved-for-production",
+  "role": "循賦入畫的年輕書生",
+  "officialUrl": "https://vincentttchan.github.io/chinese-wally/#luoshen",
+  "archiveUrl": "https://vincentttchan.github.io/chinese-wally/chapters/luoshen-before-three-act-20261027/",
+  "legacyRoute": "#luoshen-legacy",
+  "storageKey": "painting-luoshen-v1",
+  "reviewCommit": "c6cfff0",
+  "standaloneArtifact": "Preserved byte-for-byte from the approved local version."
+}
