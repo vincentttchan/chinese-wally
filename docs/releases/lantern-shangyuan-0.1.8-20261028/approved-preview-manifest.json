@@ -1,0 +1,38 @@
+{
+  "fontSHA256": "b5f52fe62e84b2b18ff4b586d9838d157e05925eca847ecd48c915ba4dcd735a",
+  "id": "lantern-shangyuan-v2",
+  "version": "0.1.8",
+  "date": "2026-10-28",
+  "status": "local-playable-preview-not-published",
+  "baseline": "efd4e2292c4c9c9c303b2276595baa864e9c966f",
+  "officialPreserved": "site-2026-10-27-chapter-access",
+  "entry": "public/chapters/lantern-shangyuan-v2-0.1.8/index.html",
+  "sha256": "088ac149077fc4cc4569f0c2b535355354ac72e1eb68e1cc1650b4ce0446c382",
+  "sources": {
+    "src/game/lanternJourneyHit.ts": "398a908f8507e7a31e17373ad76319a9b0e9263e89c4112e9e2ff4d33a33467d",
+    "src/game/lanternJourneySummary.ts": "60a72c0d26041ec93a3bb73cd6c451a63165e46c0bc8cc1a58f9ab25c6ce2045",
+    "src/game/lanternAnimationAssets.ts": "6f2817a9c41c962697b5033b239f7d685e122cd377fa6152f766fbac812e782c",
+    "src/game/lanternLampLocations.ts": "c329b1f7e0b2fef0f58479ef160caaac755ec946ccb41463b620d0cccaa11c18",
+    "src/game/lanternCollection.ts": "f0e8ef41f123d8521cc7ddbb8bd840ac4590179277c15e4da3cabd5abd95d201",
+    "src/components/LanternMarketAnimation.tsx": "4cb495cb2ef6aa30ed1e0f4167cfb8ea14282b40e59727129449e7feb24c1334",
+    "src/components/LanternTheatreAnimation.tsx": "bbac0fdbb0690a8964a59326c39ef9c373204d8ee6d88f99cc0384108448f612",
+    "lantern-shangyuan-v2.html": "14bdb5a3525cf0054db70812a5a67e7e136b184b51337599b1dad12a283e8e0b",
+    "src/lantern-shangyuan-v2.tsx": "4973e8faea580588f6e3849fba6c49c99ba4a4c6e00dbb2af5d4835d848d4e6d",
+    "src/page-motion-lantern-v2.js": "20f21f65841f751a89a9a156d73284bccd82bb63f59d768500d31bcfc1b55e56",
+    "src/styles-lantern-v2.css": "b58c1e8f9e327fb04563ed7c956391044783df604b711c847c44a7b11803c4e3",
+    "src/components/LanternShangyuanV2Game.tsx": "7b4da31c115693c91ae7e93a0ff6da4cdf0defea800a8e1dd28bf61303fa7ccf",
+    "src/components/LanternJourneyV2.tsx": "8b78639165540f45fb0e38fdd37ae30b496a173d40666ef4a97f76b744d1de3a",
+    "src/components/LanternJourneyJournalV2.tsx": "e38ea9a850386a8837e95d4645152e7a9ae8537b03df762f2d2792b6d6e95c82",
+    "src/components/LanternJourneyEndingV2.tsx": "2a6b8d6493bd78219138bf1187f05d6d955f25790c7153359fc87673f7454573",
+    "src/components/LanternJourneySealV2.tsx": "0b6e5223dbe87f808f5dfd20bf022a3cd4865ba26c5e4d89fdf5534acd48de98",
+    "src/game/lanternJourneyV2.ts": "24324b0ec8bdbb07afd6f1ca05c225b0058a6483ebad03c295eedd638585b387",
+    "src/lantern-shangyuan-v2.css": "091b8f8853b6f25e4ffe5007e214a64633ce89f847c63113f5613a43b7aee47a",
+    "vite.lantern-shangyuan-v2.config.ts": "97dd88c179a9d3357150e4310fca33d580af3b98e8db1718d81c135763400990",
+    "scripts/package-lantern-shangyuan-v2.mjs": "3d5dddb4d4e2f749939663320401c440060843f6aefed4f7c69dcdcb96e2d445"
+  },
+  "notes": [
+    "獨立三庭隨行與上元隨記試玩版；未接正式路由、未推送或部署。",
+    "唯讀沿用原畫、動畫、字型與配樂；現行封存成品不改。",
+    "試玩進度與收藏使用專用存檔鍵。"
+  ]
+}

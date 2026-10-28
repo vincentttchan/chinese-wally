@@ -1,0 +1,10 @@
+{
+  "baseline": "546d76861e0d06a4ddc5226281e26c9d1d4034b1",
+  "modifiedExistingFiles": [
+    "public/chapters/lantern-three-act-v1/index.html",
+    "public/index.html",
+    "src/main.tsx"
+  ],
+  "unchangedExistingSourcePublicFiles": 960,
+  "archivedPreviousEntrySHA256": "4c3dd9209c94f29361e18193b1214b14ec53e7abcf9d049163ecce4553dcf58c"
+}

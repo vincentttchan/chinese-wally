@@ -2,6 +2,14 @@
 
 使用者已於 2026-10-10 確認「宮中鬧元宵」章節完成，並要求以其作為後續畫作的製作基準。
 
+## 2026-10-28《宮中鬧元宵》上元隨記0.1.8正式更新
+
+- 使用者已確認整個設計優化完成，授權取代舊版本並更新上線，取代之前僅本機預覽限制。正式`#lantern-festival`使用`public/chapters/lantern-shangyuan-v2-0.1.8-live/index.html`完整遊戲。
+- 保留已確認的三幕、三庭尋人及短對白、原畫觀察與演繹、收藏、兩題「選取→確認→獨立說明頁」、按內容縮短的左側說明框及直接觀遊留印；不接入兩題快速試玩版。
+- 舊宮中1.1.0完整成品另存`public/chapters/lantern-three-act-v1-1.1.0-archive-20261028/`，原正式文件網址轉到新版。1.0.0、更早來源、預覽、素材、Git標記及Release均保留。原始三幕來源與其他章節不改。
+- 正式收藏沿用`chinese-wally:lantern-findings:v1`及`chinese-wally:lantern-finding-origins:v1`；新版主線使用正式`chinese-wally:lantern-shangyuan-v2:journey:v2`，預覽存檔不遷入。
+- 以遠端正式站為基底，只發布宮中章節與入口；康衢2.3.1、洛水及簪花保持現行版本，榜下維持獨立、清明維持上鎖。後續修改另存版本，見`docs/releases/lantern-shangyuan-0.1.8-live-2026-10-28.md`。
+
 ## 2026-10-27《康衢駢慶》2.3.1 正式封存（本章目前維護基準）
 
 - 使用者已正式要求封存本次上線的 2.3.1，作為本章後續維護基準。固定標記沿用 `site-2026-10-27-kangqu-2.3.1`，對應實際部署提交 `65e6497244b970fb2eefd27d3d44818ee8da0d04`；不移動或重建標記。封存與還原見 `docs/releases/kangqu-2.3.1-archive-2026-10-27.md`。
