@@ -1,0 +1,319 @@
+[
+  {
+    "id": 426246399,
+    "tag_name": "site-2026-10-28-lantern-shangyuan-0.1.8",
+    "name": "宮中鬧元宵 · 上元隨記 0.1.8 正式更新",
+    "body": "# 宮中鬧元宵上元隨記0.1.8正式發布\n\n2026-10-28（香港）。使用者確認整個設計優化完成，要求取代舊版本並更新，授權正式入口與發布。\n\n正式入口：<https://vincentttchan.github.io/chinese-wally/#lantern-festival>。完整文件：`public/chapters/lantern-shangyuan-v2-0.1.8-live/index.html`。\n\n以遠端main 546d76861e0d06a4ddc5226281e26c9d1d4034b1的乾淨發布副本為基底；採用經確認的0.1.8完整遊戲，不採用questions快速試玩版本。只更改正式題名、正式存檔與章節導航宿主交接。正式收藏沿用原鍵，主線使用正式新鍵，預覽鍵隔離。所需共用素材逐檔比對現行正式站相同，未覆寫素材。\n\n完整保留三幕1.1.0成品於`public/chapters/lantern-three-act-v1-1.1.0-archive-20261028/`，原文件網址改轉新版；舊版本、舊來源、Git標記、Release與本機預覽均保留。除宮中原入口、主站路由及產生首頁以外，960個既有src/public檔案不變，見`lantern-shangyuan-0.1.8-20261028/preservation.json`。康衢、簪花、洛水、清明上鎖及榜下獨立狀態維持。\n\n乾淨副本npm ci及NODE_DISABLE_COMPILE_CACHE=1 npm run build通過型別、Vite與本機首頁打包；本機以/chinese-wally/子路徑實際開啟正式路由，確認iframe載入完整新版封面，章節導航仍有清明已上鎖且無榜下主站入口。未重新通關三庭與所有動畫；本次兩題與縮短題箋的實際檢視沿用各預覽記錄，沒有宣稱新增手機檢視。\n\n批准來源ZIP、預覽manifest、正式manifest及提升轉換記錄分開保存；實際部署提交及線上指紋在GitHub發布記錄與本機補充核對檔保存。\n\n## 線上部署確認\n\n部署提交：`9527bad5619ad941946c1aba8f3038dc5ec83abe`。GitHub Actions [40629346928](https://github.com/vincentttchan/chinese-wally/actions/runs/40629346928)成功。10份主站、JS/CSS、新版章節及metadata、舊入口轉接、舊宮中存檔與康衢／簪花／洛水文件均HTTP200，SHA256與乾淨發布建置完全相同；見同名JSON核對檔。\n\n瀏覽器首次無參數首頁曾讀到舊快取；本次交付使用<https://vincentttchan.github.io/chinese-wally/?v=0.1.8-20261028#lantern-festival>避免舊首頁快取。\n\n原工作目錄只同步宮中正式文件、源碼入口及維護文件。同步前本機來源保存在`output/releases/lantern-before-0.1.8-live-20261028/`；未重建原工作目錄public/index.html，以保留其中其他未發布內容。線上首頁由乾淨副本建置發布。\n",
+    "target_commitish": "9527bad5619ad941946c1aba8f3038dc5ec83abe",
+    "created_at": "2026-10-28T03:54:43Z",
+    "published_at": "2026-10-28T03:57:29Z",
+    "draft": false,
+    "prerelease": false,
+    "assets": [
+      {
+        "id": 683751744,
+        "name": "approved-source-0.1.8.zip",
+        "size": 752670,
+        "digest": "sha256:0cd0193aa5b5ef28d90cc6facd25e20bb12f5f29a64da6b10f51b49c439bc282",
+        "created_at": "2026-10-28T03:57:28Z",
+        "updated_at": "2026-10-28T03:57:28Z"
+      },
+      {
+        "id": 683751743,
+        "name": "lantern-shangyuan-0.1.8-live-2026-10-28.json",
+        "size": 1868,
+        "digest": "sha256:e46cb6e26d8e2ef4cea433d5d56ff69fbee61d1312dd0ff75da32183cedcb53d",
+        "created_at": "2026-10-28T03:57:28Z",
+        "updated_at": "2026-10-28T03:57:28Z"
+      },
+      {
+        "id": 683751740,
+        "name": "preservation.json",
+        "size": 340,
+        "digest": "sha256:e463cf85adf7671b8cd362fd5d1d60510a63d61ddb82c6ed0edffd2f0fb91f31",
+        "created_at": "2026-10-28T03:57:28Z",
+        "updated_at": "2026-10-28T03:57:28Z"
+      },
+      {
+        "id": 683751741,
+        "name": "version.json",
+        "size": 3183,
+        "digest": "sha256:1e446b48eb286fa539ddc04baaf27174ad9ac815f07d558f5aceb1c169c19347",
+        "created_at": "2026-10-28T03:57:28Z",
+        "updated_at": "2026-10-28T03:57:28Z"
+      }
+    ]
+  },
+  {
+    "id": 425037674,
+    "tag_name": "site-2026-10-27-zanhua-three-act-v1.0.0",
+    "name": "簪花仕女圖 1.0.0 · 三幕入場正式版",
+    "body": "《簪花仕女圖》三幕入場 1.0.0 正式上線。正式 #zanhua 使用已確認的完整新版，保留隨師展卷的學畫人身份、師長囑咐、封面交疊、文字對齊、逐字呈現、背景向右緩移與原畫鏡頭交接。\n\n三幕之後接現有樣貌提示及完整尋人、觀察、衣飾細看、收藏、見聞冊與收尾。原收藏儲存鍵不變。\n\n完整舊版保留於 chapters/zanhua-before-three-act-20261027/，原程式另可由 #zanhua-legacy 開啟。其他五章及全部原有封存標記保持不變。908 個既有來源及網站檔案與前次正式主分支相同，已確認的新舊簪花獨立文件與來源也保持相同。\n\n正式入口：https://vincentttchan.github.io/chinese-wally/#zanhua\n\n完整舊版：https://vincentttchan.github.io/chinese-wally/chapters/zanhua-before-three-act-20261027/\n\n詳細發布記錄：docs/releases/zanhua-three-act-1.0.0-live-2026-10-27.md\n",
+    "target_commitish": "4235f3e6131a2f96bb6407fab2af8d7da2cb0321",
+    "created_at": "2026-10-27T04:23:37Z",
+    "published_at": "2026-10-27T04:33:46Z",
+    "draft": false,
+    "prerelease": false,
+    "assets": []
+  },
+  {
+    "id": 425002040,
+    "tag_name": "site-2026-10-27-three-act-entry-baseline",
+    "name": "三幕入場設計 · 後續畫作製作基準",
+    "body": "正式封存《宮中鬧元宵》1.1.0 與《在人群中聽樂》2.2.0 的三幕入場設計，作為後續新增畫作章節的製作基準。\n\n保留封面交疊展卷、背景／畫作／身份任務三幕、直排固定欄位對齊、逐字呈現、背景向右緩移、玩家推進及原畫鏡頭交接。角色身份與文案按新畫作另行設計。\n\n保存六幕定稿文案、25 份來源／成品／代表畫面指紋與兩張既有上線畫面；製作標準更新為 1.2，章節模板及 AGENTS.md 同步。\n\n此次只更新封存及製作文件。程式及網站內容的 Git 樹完全相同，其他四章暫時不改，沒有重新建置或部署。原有發布標記與舊版封存均保留。\n\n完整紀錄：docs/releases/three-act-entry-baseline-2026-10-27.md\n",
+    "target_commitish": "306b9fe093f6422340319807f3a9fdf692ac0f5d",
+    "created_at": "2026-10-27T03:21:31Z",
+    "published_at": "2026-10-27T03:22:27Z",
+    "draft": false,
+    "prerelease": false,
+    "assets": []
+  },
+  {
+    "id": 425083044,
+    "tag_name": "site-2026-10-27-luoshen-three-act-v1.0.0",
+    "name": "洛水之間三幕入場 1.0.0",
+    "body": "《洛水之間》三幕入場1.0.0正式接入章節入口，保留「循賦入畫的年輕書生」身份、封面交疊、七欄直排對齊、逐字呈現、背景向右緩移及原畫鏡頭交接。\n\n- 正式遊玩：https://vincentttchan.github.io/chinese-wally/#luoshen\n- 完整舊版：https://vincentttchan.github.io/chinese-wally/chapters/luoshen-before-three-act-20261027/\n- 舊版路由：https://vincentttchan.github.io/chinese-wally/#luoshen-legacy\n- 舊正式版本封存標記：site-2026-10-27-luoshen-before-three-act\n\n尋人、原畫觀察、《洛神賦》對讀、收藏、配樂、存檔及收尾沿用；其餘五章不變。確認過的獨立新版與完整舊版逐位元保留，919個既有來源及素材檔案保持原狀（正式入口與重新封裝首頁除外）。\n\n發布建置與線上新舊入口作目標確認；沒有重新通關全章或執行測試套件。\n",
+    "target_commitish": "236b7775c872ee4bcf2c1ae20957dbc53fd30c83",
+    "created_at": "2026-10-27T05:55:24Z",
+    "published_at": "2026-10-27T05:59:19Z",
+    "draft": false,
+    "prerelease": false,
+    "assets": []
+  },
+  {
+    "id": 424960557,
+    "tag_name": "site-2026-10-27-lantern-three-act-v1.1.0",
+    "name": "宮中鬧元宵三幕入場 1.1.0",
+    "body": "《宮中鬧元宵》三幕入場 1.1.0，正式發布。\n\n封面文字先淡去，原畫與暗幕交疊淡入，畫面停定後才開始逐字呈現。保留三幕頂端對齊、固定欄距與起筆位置、原畫向右緩移，以及最後接入原有尋人流程。\n\n- 正式入口：https://vincentttchan.github.io/chinese-wally/#lantern-festival\n- 舊版流程：https://vincentttchan.github.io/chinese-wally/#lantern-festival-legacy\n- 已確認1.0.0成品：https://vincentttchan.github.io/chinese-wally/chapters/lantern-three-act-v1-1.0.0/\n- 部署：https://github.com/vincentttchan/chinese-wally/actions/runs/40435996153\n\n《在人群中聽樂》仍先不更新；其正式目錄44個檔案與發布前相同。84個受保護的既有檔案核對未變。\n\n舊標記 site-2026-10-23、site-2026-10-23-zanhua-navigation 與既有封存附件完整保留。新版固定於提交 1026563b73501884d1664053970ccd38ec17c6f2。\n\n本次完成正式產物建置、三幕至可操作尋人流程檢視；未重新全章通關或執行測試套件。\n",
+    "target_commitish": "main",
+    "created_at": "2026-10-27T02:02:50Z",
+    "published_at": "2026-10-27T02:05:19Z",
+    "draft": false,
+    "prerelease": false,
+    "assets": []
+  },
+  {
+    "id": 424985310,
+    "tag_name": "site-2026-10-27-kangqu-three-act-2.2.0",
+    "name": "在人群中聽樂 2.2.0 · 三幕入場正式版",
+    "body": "《在人群中聽樂》2.2.0 三幕入場正式上線。正式 #kangqu-listening 與原分享網址均開啟此版，沿用已確認的封面過渡、對齊、逐字呈現、背景右移及外鄉客身份。\n\n2.1.14 封存在 chapters/kangqu-listening-v2-2.1.14/，精確原文及既有素材保留；更早原上線版亦另行保留。既有收藏儲存鍵不變。其他五章、宮中鬧元宵 1.1.0 與所有既有封存標記保持不變。\n\n正式入口：https://vincentttchan.github.io/chinese-wally/#kangqu-listening\n\n2.1.14 封存：https://vincentttchan.github.io/chinese-wally/chapters/kangqu-listening-v2-2.1.14/\n\n發布建置完成；166 個素材與版本清單相同，720 個既有保留檔案與前次發布相同。詳細發布記錄見 docs/releases/kangqu-three-act-2.2.0-live-2026-10-27.md。\n",
+    "target_commitish": "b150a346bee6cc017de1e1fb36b3e578fde1c9f9",
+    "created_at": "2026-10-27T02:42:16Z",
+    "published_at": "2026-10-27T02:50:58Z",
+    "draft": false,
+    "prerelease": false,
+    "assets": []
+  },
+  {
+    "id": 425313404,
+    "tag_name": "site-2026-10-27-kangqu-2.3.1",
+    "name": "《康衢駢慶》2.3.1 正式封存 · 2026-10-27",
+    "body": "正式封存本次已上線的《康衢駢慶》2.3.1，作為本章後續維護基準。\n\n固定標記 `site-2026-10-27-kangqu-2.3.1` 沿用原指向，對應實際部署提交 `65e6497244b970fb2eefd27d3d44818ee8da0d04`。部署來源：[成功的 GitHub Actions 40475459248](https://github.com/vincentttchan/chinese-wally/actions/runs/40475459248)。本次只下載、核對及封存原部署包，沒有重新建置或部署。\n\n封存包含完整 2.3.1：三位人物對白、觀察與交接、51 字畫作小記、畫家如何營造祝壽氣氛的總結題，以及現有介面、封面、三幕、動畫、音樂、收藏、見聞冊、留印、存檔機制和導航。\n\n沒有使用者新指示，不改動定稿；日後修改另存新版本。所有舊正式版、預覽、來源、共用素材、Git 標記、Release 及附件完整保留。榜下維持獨立、清明維持上鎖，其他章節與原共同三幕基準不變。\n\n附件：\n\n- `github-pages-artifact.zip`：從該成功 run 下載的原始部署包，包含 `artifact.tar`；SHA-256 已與 GitHub 官方 artifact digest 核對。\n- `website-file-manifest.json`：部署包中每個一般檔案的路徑、大小及 SHA-256。\n- `archive-records.zip`：維護規範、來源署名、文案與包裝來源、發布及封存記錄、舊標記與 Release 清單。\n- `release-record.json`：固定版本、原包 digest、逐檔與保留核對紀錄。\n- `SHA256SUMS`：上述四份附件的校驗值。\n\n還原前先核對 `SHA256SUMS`，再解開原包中的 `artifact.tar`，保留 `/chinese-wally/` 網站路徑及全部相對素材目錄。原始碼可從固定標記另開乾淨目錄取回。封存包含存檔機制與鍵名，不包含各玩家瀏覽器中的個人存檔。還原封存不等於獲准覆蓋線上版本。\n\n[正式遊戲](https://vincentttchan.github.io/chinese-wally/#kangqu-listening) · [封存與還原說明](https://github.com/vincentttchan/chinese-wally/blob/main/docs/releases/kangqu-2.3.1-archive-2026-10-27.md)\n",
+    "target_commitish": "main",
+    "created_at": "2026-10-27T08:47:05Z",
+    "published_at": "2026-10-27T10:38:56Z",
+    "draft": false,
+    "prerelease": false,
+    "assets": [
+      {
+        "id": 681266882,
+        "name": "archive-records.zip",
+        "size": 173595,
+        "digest": "sha256:ec396a71016b10cec14fe02085b5d28bcd8dbb5078ad7adaaa9cb40a9ad29f25",
+        "created_at": "2026-10-27T10:36:14Z",
+        "updated_at": "2026-10-27T10:36:14Z"
+      },
+      {
+        "id": 681266886,
+        "name": "github-pages-artifact.zip",
+        "size": 628410942,
+        "digest": "sha256:74ad89269d5a6bf4ce1f25d0c8ece8db2a7a5816cc642d31603a84d9f9e73bab",
+        "created_at": "2026-10-27T10:36:14Z",
+        "updated_at": "2026-10-27T10:37:27Z"
+      },
+      {
+        "id": 681266879,
+        "name": "release-record.json",
+        "size": 2747,
+        "digest": "sha256:7074c9844af4dafe7bb7692a7303df2336638494319a53110514573f4651b0b2",
+        "created_at": "2026-10-27T10:36:14Z",
+        "updated_at": "2026-10-27T10:36:14Z"
+      },
+      {
+        "id": 681266877,
+        "name": "SHA256SUMS",
+        "size": 357,
+        "digest": "sha256:94e1d6e83790b9180048f7b426285a465654896ba0c5ac27e5c55aa2befa8ed6",
+        "created_at": "2026-10-27T10:36:14Z",
+        "updated_at": "2026-10-27T10:36:14Z"
+      },
+      {
+        "id": 681266880,
+        "name": "website-file-manifest.json",
+        "size": 131918,
+        "digest": "sha256:83d681923eac26de2c199abe888a7c3516c1d55b3ad64cd6a9e52ae95ec7a60c",
+        "created_at": "2026-10-27T10:36:14Z",
+        "updated_at": "2026-10-27T10:36:14Z"
+      }
+    ]
+  },
+  {
+    "id": 425101081,
+    "tag_name": "site-2026-10-27-chapter-access",
+    "name": "正式封存：章節入口調整（2026-10-27）",
+    "body": "使用者正式確認本次上線版本為後續維護基準。\n\n固定發布提交：`5e488f8d7125a64e6975f93159daac451b2b8e8a`；標記 `site-2026-10-27-chapter-access` 保持原指向。\n\n- 《榜下尋人》從主站抽離，獨立可玩版本及素材保留。\n- 《清明上河圖》保持上鎖，其他章節保持現行正式內容。\n- 所有舊版、先前 Release、素材與封存標記保留；後續修改另存版本。\n\n附件包含 GitHub Pages 成功部署的官方原包（686 個網站檔案）、逐檔 SHA-256、維護與發布紀錄及 SHA256SUMS。官方部署包 digest：`f2f86513301a0e20919c499df966822e02740e4510ccb620e042c86f0aa8735d`。\n\n[正式封存、維護與還原說明](https://github.com/vincentttchan/chinese-wally/blob/bac6a4fb40d1a46cf343a421ecd01002262169a8/docs/releases/chapter-access-archive-2026-10-27.md) · [成功部署](https://github.com/vincentttchan/chinese-wally/actions/runs/40460342079)\n\n本次僅保存封存與文件，沒有修改遊戲、重新建置或重新部署。\n",
+    "target_commitish": "main",
+    "created_at": "2026-10-27T06:18:38Z",
+    "published_at": "2026-10-27T06:32:10Z",
+    "draft": false,
+    "prerelease": false,
+    "assets": [
+      {
+        "id": 680686641,
+        "name": "archive-records.zip",
+        "size": 73546,
+        "digest": "sha256:e91f0b82f763e2d9a70a08b2ee3f52e508094d877ab977c5b532b5c631a1e33f",
+        "created_at": "2026-10-27T06:30:33Z",
+        "updated_at": "2026-10-27T06:30:34Z"
+      },
+      {
+        "id": 680686636,
+        "name": "github-pages-artifact.zip",
+        "size": 626551598,
+        "digest": "sha256:f2f86513301a0e20919c499df966822e02740e4510ccb620e042c86f0aa8735d",
+        "created_at": "2026-10-27T06:30:33Z",
+        "updated_at": "2026-10-27T06:32:09Z"
+      },
+      {
+        "id": 680686647,
+        "name": "release-record.json",
+        "size": 2096,
+        "digest": "sha256:7eb1f6c55c9958123c948bbefb9f84e9168f384301af04639f9b3bb93cdc5cf3",
+        "created_at": "2026-10-27T06:30:34Z",
+        "updated_at": "2026-10-27T06:30:34Z"
+      },
+      {
+        "id": 680686640,
+        "name": "SHA256SUMS",
+        "size": 357,
+        "digest": "sha256:c14007c2ef7f6aa2933de731186dd488da75f7207342628b4f2163bbe5e08e38",
+        "created_at": "2026-10-27T06:30:33Z",
+        "updated_at": "2026-10-27T06:30:34Z"
+      },
+      {
+        "id": 680686646,
+        "name": "website-file-manifest.json",
+        "size": 128757,
+        "digest": "sha256:5b6d193c8eb375362618c2ccc0157cc16f6632dec54dad5ae628b946d3866a27",
+        "created_at": "2026-10-27T06:30:34Z",
+        "updated_at": "2026-10-27T06:30:34Z"
+      }
+    ]
+  },
+  {
+    "id": 421612103,
+    "tag_name": "site-2026-10-23-zanhua-navigation",
+    "name": "畫中尋人｜簪花與封面導航正式封存 2026-10-23",
+    "body": "# 正式封存：簪花與封面導航 · 2026-10-23\n\n使用者確認目前上線版本正式定稿，之後新增畫作沿用這套封面及底部導航。\n\n## 版本識別\n\n- 固定標記：`site-2026-10-23-zanhua-navigation`，對應已部署提交 `222747b2e999e09f666073460a58d80294123c35`。\n- [GitHub Release 與下載](https://github.com/vincentttchan/chinese-wally/releases/tag/site-2026-10-23-zanhua-navigation) · [成功部署](https://github.com/vincentttchan/chinese-wally/actions/runs/39889538980) · [正式網站](https://vincentttchan.github.io/chinese-wally/#zanhua)。\n- [改動及實際檢視紀錄](https://github.com/vincentttchan/chinese-wally/blob/main/docs/releases/site-2026-10-23-zanhua-navigation.md)。封存紀錄提交只保存文件，不是另一份遊戲版本。\n- 上一份 `site-2026-10-23`（`c9e99bfbc13322269c29d5d0d12071c739c3b828`）標記及附件完整保留。\n\n## 定稿範圍與後續基準\n\n目前六章的畫面、流程、動畫、對白、收藏、收尾及背景音樂依本版保存，包含最新簪花的收藏印與玩家篆體留印，以及六章簡化封面導航。沒有使用者明確的新修改要求，保留這份定稿；日後修改另存新版本。\n\n新增畫作沿用原畫背景、淡絹漸層、直排章節題名、短引言、現行字體與留白、一個主要入畫操作，以及底部章節名稱導航。當前章節以朱色細線標示；窄畫面保留水平捲動。完成章節可留在畫中，也可「回到本章封面」再選另一幅畫。\n\n詳細設計規則以[製作標準的封面與跨章導航](https://github.com/vincentttchan/chinese-wally/blob/main/docs/historical-painting-chapter-standard.md#封面與跨章導航)為準；[新章節模板](https://github.com/vincentttchan/chinese-wally/blob/main/docs/templates/historical-painting-chapter-template.md)已加入沿用來源、導航入口及收尾回封面的填寫欄位。案桌、藏卷架與獨立卡片目錄保留為設計歷程。\n\n## 封存附件與還原\n\n本機目錄：`output/releases/site-2026-10-23-zanhua-navigation/`；以下檔案亦保存於 GitHub Release：\n\n- `github-pages-artifact.zip`：直接下載本次成功部署的官方產物，內含 `artifact.tar`；沒有重新建置。大小 541,634,427 bytes，SHA-256 `08351b5b830d0828e85abb8fea1aa87116d63d27b38e9422a3f1a077e130d01f`，與官方 artifact digest 一致。\n- `archive-records.zip`：專案指示、製作標準、模板、發布與封存紀錄、音樂及篆體署名、修訂文件、代表畫面和檔案指紋。\n- `release-record.json`：提交、標記、部署、六章入口、原有音樂指紋與沿用政策。\n- `website-file-manifest.json`：部署包內全部 485 個一般檔案的相對路徑、大小與 SHA-256。\n- `SHA256SUMS`：以上下載附件的校驗值。大型 ZIP 留在本機及 Release，不加入 Git 歷史。\n\n還原時先核對 `SHA256SUMS`，再解出 ZIP 中的 `artifact.tar`，保持 `/chinese-wally/` 路徑與素材相對結構；原始碼由固定標記另開工作目錄取回。取回不代表獲准覆蓋線上版本。\n\n本次只保存部署包、核對官方 ZIP 指紋、產生逐檔指紋並確認六章音樂與上一份封存相同，更新後續製作規範；沒有修改遊戲程式、重新建置、重新部署、重新通關或執行測試套件。既有發布檢視範圍與限制照實保留。\n",
+    "target_commitish": "main",
+    "created_at": "2026-10-23T08:32:32Z",
+    "published_at": "2026-10-23T08:38:51Z",
+    "draft": false,
+    "prerelease": false,
+    "assets": [
+      {
+        "id": 668495138,
+        "name": "archive-records.zip",
+        "size": 573971,
+        "digest": "sha256:13262039b68db9f9abe25e46ddd0a7f524a3da0056ac14cc7c6516d6fcbb073e",
+        "created_at": "2026-10-23T08:34:14Z",
+        "updated_at": "2026-10-23T08:34:15Z"
+      },
+      {
+        "id": 668495139,
+        "name": "github-pages-artifact.zip",
+        "size": 541634427,
+        "digest": "sha256:08351b5b830d0828e85abb8fea1aa87116d63d27b38e9422a3f1a077e130d01f",
+        "created_at": "2026-10-23T08:34:14Z",
+        "updated_at": "2026-10-23T08:38:21Z"
+      },
+      {
+        "id": 668495141,
+        "name": "release-record.json",
+        "size": 3290,
+        "digest": "sha256:88bd32ea179ade057ba68bfa2d9480a040d83d0294be4400b15f3aff8e382c07",
+        "created_at": "2026-10-23T08:34:14Z",
+        "updated_at": "2026-10-23T08:34:14Z"
+      },
+      {
+        "id": 668495143,
+        "name": "SHA256SUMS",
+        "size": 357,
+        "digest": "sha256:dec6404107f6a2cd11d335d488f58e1c83a6202179fe6c4f73cc1c21fe0b687a",
+        "created_at": "2026-10-23T08:34:14Z",
+        "updated_at": "2026-10-23T08:34:14Z"
+      },
+      {
+        "id": 668495125,
+        "name": "website-file-manifest.json",
+        "size": 87466,
+        "digest": "sha256:7b199ed21227c909864bb7e7fb942dfa4c12d8ca4087cc330e4de4b1f26bd64f",
+        "created_at": "2026-10-23T08:34:14Z",
+        "updated_at": "2026-10-23T08:34:14Z"
+      }
+    ]
+  },
+  {
+    "id": 421314879,
+    "tag_name": "site-2026-10-23",
+    "name": "畫中尋人｜六章正式封存 2026-10-23",
+    "body": "正式封存已上線的六章版本：簪花仕女圖、洛水之間、宮中鬧元宵、在人群中聽樂、清明上河圖、榜下尋人。\n\n部署提交：`c9e99bfbc13322269c29d5d0d12071c739c3b828`。標記固定對應這份上線內容；後續紀錄提交不改變遊戲版本。\n\n依使用者指示，沒有明確的新修改要求，不改動已定稿的畫面、流程及背景音樂。後續修改另存版本，保留此標記與封存附件。\n\n- `github-pages-artifact.zip`：成功部署當次的原始 GitHub Pages 產物，內含 `artifact.tar`；沒有重新建置。官方 ZIP 指紋及包內全部 481 個檔案核對一致。\n- `archive-records.zip`：發布歷程、上線檢視及已知限制、保留規則、音樂署名、檔案指紋與代表截圖。\n- `release-record.json`、`website-file-manifest.json`、`SHA256SUMS`：版本識別及完整性核對資料。\n- 本頁 Source code 下載對應固定 Git 標記。\n\n[正式網站](https://vincentttchan.github.io/chinese-wally/#painting-selection) · [成功部署](https://github.com/vincentttchan/chinese-wally/actions/runs/39796696844) · [封存紀錄](https://github.com/vincentttchan/chinese-wally/blob/main/docs/releases/site-2026-10-23.md)\n\n只保存正式上線版及紀錄，不改動畫面、流程、音樂，不重新部署；既有檢視範圍及限制保留於紀錄。\n",
+    "target_commitish": "main",
+    "created_at": "2026-10-22T23:58:03Z",
+    "published_at": "2026-10-23T00:01:22Z",
+    "draft": false,
+    "prerelease": false,
+    "assets": [
+      {
+        "id": 667444288,
+        "name": "archive-records.zip",
+        "size": 1062610,
+        "digest": "sha256:01c5e33b75a4d17f00eb6f47af7daf7ead3119a516ec8eead358d8475525de17",
+        "created_at": "2026-10-22T23:58:29Z",
+        "updated_at": "2026-10-22T23:58:31Z"
+      },
+      {
+        "id": 667444287,
+        "name": "github-pages-artifact.zip",
+        "size": 529135957,
+        "digest": "sha256:1da3677df4e3153809ec42d9cf8151ce53229fdc214871f0267c1adf36376dc5",
+        "created_at": "2026-10-22T23:58:29Z",
+        "updated_at": "2026-10-23T00:00:58Z"
+      },
+      {
+        "id": 667444290,
+        "name": "release-record.json",
+        "size": 3050,
+        "digest": "sha256:7029f9c715f20ba16f6e57ea3f94f62fa4981c4c988c8f3ea0dac88bb93e0f00",
+        "created_at": "2026-10-22T23:58:30Z",
+        "updated_at": "2026-10-22T23:58:30Z"
+      },
+      {
+        "id": 667444284,
+        "name": "SHA256SUMS",
+        "size": 357,
+        "digest": "sha256:9f325f4517efbc5a9d53b83c602d75ab7d13511b5844a98130495d961b0c6399",
+        "created_at": "2026-10-22T23:58:29Z",
+        "updated_at": "2026-10-22T23:58:30Z"
+      },
+      {
+        "id": 667444286,
+        "name": "website-file-manifest.json",
+        "size": 79987,
+        "digest": "sha256:551c80be46d903928aaec8418e8304c3cdd97f3bac682001d9aa00164d586332",
+        "created_at": "2026-10-22T23:58:29Z",
+        "updated_at": "2026-10-22T23:58:30Z"
+      }
+    ]
+  }
+]

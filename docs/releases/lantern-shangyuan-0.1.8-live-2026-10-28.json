@@ -1,0 +1,66 @@
+{
+  "commit": "9527bad5619ad941946c1aba8f3038dc5ec83abe",
+  "actionsRun": 40629346928,
+  "result": "success",
+  "files": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "56aa8f2525e6eb739cebaf6b4bc8c189d83467e5497bf3fe368121a0dfb0093c"
+    },
+    {
+      "path": "chapters/lantern-shangyuan-v2-0.1.8-live/index.html",
+      "status": 200,
+      "sha256": "40b26e0ff7a2b01f1d8b99fcdf2d7488c3ffe497453d0503c26317e73cac5f9c"
+    },
+    {
+      "path": "chapters/lantern-shangyuan-v2-0.1.8-live/version.json",
+      "status": 200,
+      "sha256": "1e446b48eb286fa539ddc04baaf27174ad9ac815f07d558f5aceb1c169c19347"
+    },
+    {
+      "path": "chapters/lantern-three-act-v1/index.html",
+      "status": 200,
+      "sha256": "508e82b594fa0614cc0c1e308c9790a3a3b89e46989910f90c481eee7897bbc0"
+    },
+    {
+      "path": "chapters/lantern-three-act-v1-1.1.0-archive-20261028/index.html",
+      "status": 200,
+      "sha256": "4c3dd9209c94f29361e18193b1214b14ec53e7abcf9d049163ecce4553dcf58c"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1/index.html",
+      "status": 200,
+      "sha256": "4fca5b692eacff9d381e98f3fa076adf255e5eb388992e7ea367cf0467fd213b"
+    },
+    {
+      "path": "chapters/zanhua-three-act-v1/index.html",
+      "status": 200,
+      "sha256": "b6dc7d62e942b9592546078eae7beceeea8d7c03b8c23f6a7dbb00151e1882b0"
+    },
+    {
+      "path": "chapters/luoshen-three-act-v1/index.html",
+      "status": 200,
+      "sha256": "f2f5d04835cfbf9e9afbe70ca99c944a9cdc89dcc4a28ea9eed8884cb5fdde65"
+    },
+    {
+      "path": "assets/index-cF7LfH34.css",
+      "status": 200,
+      "sha256": "6bbc2e05cb5dabf3a58f99295c9386ff5c97fd91c3f2d3b7d66650c165cbfc1f"
+    },
+    {
+      "path": "assets/index-DZ8X6Ko2.js",
+      "status": 200,
+      "sha256": "ef1ad0da6cac6e158c2fa7e4a3f860240c8c7a6bdbfd70e3b6913a7ea3848f9d"
+    }
+  ],
+  "browser": {
+    "url": "https://vincentttchan.github.io/chinese-wally/?v=0.1.8-20261028#lantern-festival",
+    "iframe": "/chinese-wally/chapters/lantern-shangyuan-v2-0.1.8-live/index.html?v=0.1.8-20261028",
+    "cover": "verified",
+    "lockedQingming": true,
+    "consoleErrorsWarnings": [],
+    "screenshot": "/tmp/lantern-018-live-cover.png"
+  },
+  "release": "https://github.com/vincentttchan/chinese-wally/releases/tag/site-2026-10-28-lantern-shangyuan-0.1.8"
+}

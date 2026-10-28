@@ -1,0 +1,3557 @@
+{
+  "deploymentCommit": "9527bad5619ad941946c1aba8f3038dc5ec83abe",
+  "artifactSHA256": "7194f1341098c35dfca94699aeae7aa5e121d7f0c48d5fae0b7311190e38517a",
+  "fileCount": 710,
+  "files": [
+    {
+      "path": "art/animations/kangqu-audience-v1/fixed-background.png",
+      "bytes": 160215,
+      "sha256": "b2d3d0399106bcd7ef66c79af6aca66a262f0f43103ec85619235b1f051d2002"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v1/frame-registration.json",
+      "bytes": 834,
+      "sha256": "f67b7c7445e55ffb4a0b15a041ae00634d846976f4d61a468700ad35aa91565e"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v1/frames/group-01.png",
+      "bytes": 1075628,
+      "sha256": "b899194337c4151027b707f7126b45e4eeae85b444eeb69d1d084d354cf24a2c"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v1/frames/group-02.png",
+      "bytes": 1096201,
+      "sha256": "9bc71fba1afc8dc6a10f4c6004ad9096e0d602e380fa46f92a5aee9526431c1f"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v1/frames/group-03.png",
+      "bytes": 1120856,
+      "sha256": "65848b8e25f06ec7da4df57766f0f915be36220a43b386103da18c8eec429121"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v1/frames/group-04.png",
+      "bytes": 1120856,
+      "sha256": "65848b8e25f06ec7da4df57766f0f915be36220a43b386103da18c8eec429121"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v1/frames/group-05.png",
+      "bytes": 1081712,
+      "sha256": "0fc6ee102b6d7dd9cca0239a82805076af7fcb9cab81c2159c5b8114886b9123"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v1/frames/group-06.png",
+      "bytes": 1071627,
+      "sha256": "ac6809c57ee51c2d6e7383108597b003665d0c0155fc071e6b75ab2576215056"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v1/frames/group-07.png",
+      "bytes": 1071627,
+      "sha256": "ac6809c57ee51c2d6e7383108597b003665d0c0155fc071e6b75ab2576215056"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v1/frames/group-08.png",
+      "bytes": 1075628,
+      "sha256": "b899194337c4151027b707f7126b45e4eeae85b444eeb69d1d084d354cf24a2c"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v1/frames/group-09.png",
+      "bytes": 1075628,
+      "sha256": "b899194337c4151027b707f7126b45e4eeae85b444eeb69d1d084d354cf24a2c"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v1/group-master.png",
+      "bytes": 1075628,
+      "sha256": "b899194337c4151027b707f7126b45e4eeae85b444eeb69d1d084d354cf24a2c"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v1/original-reference.png",
+      "bytes": 144538,
+      "sha256": "640e9a9ee54a5a83c740ea2f4a6c28798cd2e255f8706f2539ff5b5eaadc2848"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v2-seven/fixed-background.png",
+      "bytes": 229281,
+      "sha256": "5886e38c46452e3b73cf01232e167b04633262e6ba1ad87c6064b5b25cf1ae81"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v2-seven/frame-registration.json",
+      "bytes": 780,
+      "sha256": "50ba1238f86cfee1c9cd60aa382a69f46ba2ce0228eef771cc0445fbfc4a4aa9"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v2-seven/frames/group-01.png",
+      "bytes": 2131536,
+      "sha256": "2fe8ae492a0a4ae553f8f3bc3f0e45dd5279f9ca553f4ff1ddbe9ff2365a74b0"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v2-seven/frames/group-02.png",
+      "bytes": 2243525,
+      "sha256": "f385a7a884a96e16564eaf788d419a3e0556c833a0034b7a8b3f4f48464314fa"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v2-seven/frames/group-03.png",
+      "bytes": 2354173,
+      "sha256": "54bdacc1857b43f21b4d8f031366f2a19657f6196dcfc604f403a29372bb4d5e"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v2-seven/frames/group-04.png",
+      "bytes": 2354173,
+      "sha256": "54bdacc1857b43f21b4d8f031366f2a19657f6196dcfc604f403a29372bb4d5e"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v2-seven/frames/group-05.png",
+      "bytes": 2206672,
+      "sha256": "a1d912deaab2436d1a4f4c9b6a858e4adee7124b64dbf2c04a7de615506edb8e"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v2-seven/frames/group-06.png",
+      "bytes": 2195056,
+      "sha256": "5e4b6ba2a7960eb6aebda4347e85caab2ad8ee1265213eb68a044fff267e1b6c"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v2-seven/frames/group-07.png",
+      "bytes": 2195056,
+      "sha256": "5e4b6ba2a7960eb6aebda4347e85caab2ad8ee1265213eb68a044fff267e1b6c"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v2-seven/frames/group-08.png",
+      "bytes": 2131536,
+      "sha256": "2fe8ae492a0a4ae553f8f3bc3f0e45dd5279f9ca553f4ff1ddbe9ff2365a74b0"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v2-seven/frames/group-09.png",
+      "bytes": 2131536,
+      "sha256": "2fe8ae492a0a4ae553f8f3bc3f0e45dd5279f9ca553f4ff1ddbe9ff2365a74b0"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v2-seven/group-master.png",
+      "bytes": 2131536,
+      "sha256": "2fe8ae492a0a4ae553f8f3bc3f0e45dd5279f9ca553f4ff1ddbe9ff2365a74b0"
+    },
+    {
+      "path": "art/animations/kangqu-audience-v2-seven/original-reference.png",
+      "bytes": 218656,
+      "sha256": "0916f4fb0940ffbcc78d13a8499ae7f3955c2e732e373e9ba67eaa87708745da"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-keyposes-v4/three-poses.png",
+      "bytes": 2225092,
+      "sha256": "b7299cefe57ee86807d0f6eca48da5c5455a70bc8315bab19443bccddc8096cf"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/attachment-mask.png",
+      "bytes": 1165,
+      "sha256": "8b0d3ff0bbf3c684db4153f1298bd707333b0817fe74bdd0377174d868f77567"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/drawing-01.png",
+      "bytes": 82807,
+      "sha256": "db73ee520a07a8a0e0248df0a10b643adcf4dc5833a0ac3436c6da0d75d49717"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/drawing-02.png",
+      "bytes": 82884,
+      "sha256": "06305300518aa5778fa5af71286b66684e097f7ca3ccd4f33659558ebd88df3e"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/drawing-03.png",
+      "bytes": 82036,
+      "sha256": "fc4f1aed10a8ac80c013a8d765cfb28fbff83665b0b9523a033389d88d52afa1"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/drawing-04.png",
+      "bytes": 68928,
+      "sha256": "bf94c860524cef18e55b623615da82cb269ef450354be2a2f774cb65466b1b60"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/drawing-05.png",
+      "bytes": 82151,
+      "sha256": "f6fad8dd2709ef5c1dd8b5dacc41411184886fe5b5a0278cf5c381fcfabb6c55"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/drawing-06.png",
+      "bytes": 81619,
+      "sha256": "65024280ce9c5ba3c72e56bd1157a1959ab3de3228c1106722115710f7316124"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/drawing-07.png",
+      "bytes": 81069,
+      "sha256": "e50998c4e1d297ee67867be219c61b1ac53ba75ea32d4b933ffc8c363ee70102"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/drawing-08.png",
+      "bytes": 67956,
+      "sha256": "3b49bc68030ab75dc9cc4b1a8384019cf737cb35d98d246ce1c62746d1a5b2e7"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/drawing-09.png",
+      "bytes": 82280,
+      "sha256": "52a0c086fe74ea35dd44aa5cf2f5e3504fe7bb5ae18ae73365731b65e21105f6"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/drawing-10.png",
+      "bytes": 82381,
+      "sha256": "abac3159f1ad87465fc155e34dcda5b76772d5ba8224dd86144cd8ad05d0e24b"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/drawing-11.png",
+      "bytes": 81400,
+      "sha256": "399fe658350af1d6ac8e243f04abe78c472d5780520266a358ff1b7388d51bea"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/drawing-12.png",
+      "bytes": 67883,
+      "sha256": "9c00575e3e1a9b0d6536bdee8a4fef8c671f728992cc8ed8c4169a786d2d2f75"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/drawing-13.png",
+      "bytes": 81630,
+      "sha256": "fd59863b63a359269aab1a36f46584d282cb9990ac027399edb7c1db0f20ee43"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/drawing-14.png",
+      "bytes": 81270,
+      "sha256": "bbcb7b210915cddf232c23a17defbd7ce485012768e696712cb81e8fcbad452c"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/drawing-15.png",
+      "bytes": 80433,
+      "sha256": "0b516cb7619d360d758b7ef11dcda93e3a0d33e3e459cb469396cbb30b41c7a4"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/drawing-16.png",
+      "bytes": 67593,
+      "sha256": "02a9ada7481761bb829cd6c21c0715a3c12c0b5a50234d481f81cf723f357e48"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/middle-registration.json",
+      "bytes": 146,
+      "sha256": "1d4129a4cd55cd5724bb1a141253131b1f209bc307617f64f003cd5d53105dfb"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-01.png",
+      "bytes": 80355,
+      "sha256": "b0c0d8c2e6106037d6e933d882018cb3b8ecd749201eb747e21afd0d747cbb29"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-02.png",
+      "bytes": 80695,
+      "sha256": "2f0949bab9abecb3111d37744f377d426dfd8fe2f6eaaf688699998f1d7989c2"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-03.png",
+      "bytes": 80613,
+      "sha256": "433306c56178c9595f820b1e586cbd9f6a42741b3e9c78664b10c82c8738a141"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-04.png",
+      "bytes": 80614,
+      "sha256": "56f215487fd00356d5b98d0940f23c6f4ed19b8a7eedd602e8a2036345d73520"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-05.png",
+      "bytes": 80675,
+      "sha256": "75b1773893dc4671a4e923f42ee9df0e31dc8c13f677ac48c79bc9c3a2312fc1"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-06.png",
+      "bytes": 80571,
+      "sha256": "7fdd25e9453a2bb7b9d4897f417c3b31d4ff736041099ff876e9bbfb25b999c0"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-07.png",
+      "bytes": 80557,
+      "sha256": "9bef5fdf19bfe2091ff8b7013e1ba25f31821c0fb89000f089bbd29696ee9a3b"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-08.png",
+      "bytes": 80469,
+      "sha256": "ccbcfe33f38e0f7d04d572d65f94820f8d8fddcf384df756446fe341e2c097a0"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-09.png",
+      "bytes": 80672,
+      "sha256": "2560c0c3eee6bdd2b9a62ea5354d90d5a96781e8377bccf5e4af3858f846dcc6"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-10.png",
+      "bytes": 80464,
+      "sha256": "a7c66487acfb11adb54e2fdba1b32e2a3bc1af4cef30c8f4bfbb222ed0bbc6ad"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-11.png",
+      "bytes": 80474,
+      "sha256": "53e694cb9c6b3912c42f3b579a963b8e1b58fec496b0e721a83f722da1753968"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-12.png",
+      "bytes": 80417,
+      "sha256": "6acc32d944cfe9e90fa408289e9d18e778d93ad149c1304d5416b489aaaa11e9"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-13.png",
+      "bytes": 80452,
+      "sha256": "cd19e4580d6cf581504ae994f66deff4728ff7a84c286661dfe7976f677d0b6e"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-14.png",
+      "bytes": 80455,
+      "sha256": "821650185a4a8ebfe266009461f07202a043f580558e922d17a16e5858231a3d"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-15.png",
+      "bytes": 80395,
+      "sha256": "8a3b8514528087e83d4fe9e6b3dca55af5701779c5b85ce3aaf32022d7b987d4"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-16.png",
+      "bytes": 80435,
+      "sha256": "b40a049083f0f36ced54fd12607e2a592ac1eed3c43dec550c928f5a6dca8955"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/pose-17.png",
+      "bytes": 80470,
+      "sha256": "b70318426c0c0365576554d096dfa64d16f0da22c3bab6d3105a8f75a09c3571"
+    },
+    {
+      "path": "art/animations/kangqu-drummer-v5/registration.json",
+      "bytes": 1987,
+      "sha256": "fd0badd60e2d9d31d7036c7d5c35441ded3b3379e521089391035e6a282413c7"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-master-v7/fixed-background.png",
+      "bytes": 98529,
+      "sha256": "461009eb316374459994c31ea98cccfdaf64bafb0d29922730aa3bbac6f9db09"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-master-v7/frame-registration.json",
+      "bytes": 1405,
+      "sha256": "22f9d16165c52fece2600ece7c3fac5d40b37781969bf77914314f34b224b4f6"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-master-v7/frames/group-01.png",
+      "bytes": 235419,
+      "sha256": "68bef0399dafc3a7857e829ecdae304ccb5a075df0e000fcb51c13defff04aca"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-master-v7/frames/group-02.png",
+      "bytes": 236603,
+      "sha256": "665a15d4ad6a54de5c97c529a877e00e69d4db297772e72ab4b68cb13eab1aaa"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-master-v7/frames/group-03.png",
+      "bytes": 238094,
+      "sha256": "4d64d15cbf028059544423355d9174ec136617cae0711bdb0b4ada4086d496bf"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-master-v7/frames/group-04.png",
+      "bytes": 237178,
+      "sha256": "1cd6599b968353a1b7fcc94a024fc6b971dfac1814e6f7f50a44238e6424cd89"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-master-v7/frames/group-05.png",
+      "bytes": 235539,
+      "sha256": "480b817db9a9b3ff5797a75b9a69a7005347ce4c9c2861dbb75a05e2f376d809"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-master-v7/frames/group-06.png",
+      "bytes": 231694,
+      "sha256": "a09285ec9e6b03948e2f76340290c94edb4a28c6a63e5b26307d627bbec34563"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-master-v7/frames/group-07.png",
+      "bytes": 235950,
+      "sha256": "17f0ba31fcd2a5b4f65de18a3d6b8e23983ca7be2e34b2f21cce726c2050967b"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-master-v7/frames/group-08.png",
+      "bytes": 238237,
+      "sha256": "ddf6a8e5c4c4f39f9df8978cea5ee4e45220644501849c4588d94f1b247d8d62"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-master-v7/frames/group-09.png",
+      "bytes": 235787,
+      "sha256": "abf03d658fc81b4b6c5462ae5830c15151c7b18bd368533ac3b926150d419dd0"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-master-v7/group-master.png",
+      "bytes": 1739734,
+      "sha256": "b6b196a5b5b50a25be71561d348c804ac2c8a14124a1b006ae0f4b15aefdf3df"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-master-v7/original-reference.png",
+      "bytes": 99148,
+      "sha256": "513b7244e4f0fd6060335b2e0ca4e36a3fa0933154b91b916c496ee2e1b63bef"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v1/hand-repair-v1.png",
+      "bytes": 1884003,
+      "sha256": "1138f04917331e7ccedc659184269254d2c5c85c56152d43e4aa2c333f547fdf"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v1/provenance.json",
+      "bytes": 1415,
+      "sha256": "6300b08220c7fe97be71f65d80c7fa326797e286614a0aa7d1469090af97fb45"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v1/source.png",
+      "bytes": 79252,
+      "sha256": "308dc4acb3a3799720795d6acff4c3afe0d4ba219441c7fd5b706733082401c0"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v2/pose-01.png",
+      "bytes": 82856,
+      "sha256": "81db6db4739177636f163cada1084ad778f45ca7a894789eb44dace6efa74d51"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v2/pose-02.png",
+      "bytes": 83048,
+      "sha256": "fdc27bb735e17d2ccd8c0cc5e12a54b2822a0b09965a35a6a8cc50fad764b864"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v2/pose-03.png",
+      "bytes": 83130,
+      "sha256": "e4e3c6a80d1798461f2dab7c52cde60eab657db543141aa3ad8a29b1cc459b8e"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v2/pose-04.png",
+      "bytes": 83149,
+      "sha256": "e48878356f35dcd8617feee0f41d00f3113e261f3eab5531e931f354aa7439d0"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v2/pose-05.png",
+      "bytes": 82992,
+      "sha256": "e8834d45094ade6f16517c79b97ec90ef2f7af694532588a82334f91d1ab1b2f"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v2/pose-06.png",
+      "bytes": 82733,
+      "sha256": "f81547490076aa175ea5826f54228774a662f09bfda48a33836f02c1173e962c"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v2/pose-07.png",
+      "bytes": 83032,
+      "sha256": "bbeb5b4537bdc0eaf1c28b162746a3d6cbbecb22ee6f3765d22f42b9ab4cd3c8"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v2/pose-08.png",
+      "bytes": 82688,
+      "sha256": "68863f99c55e82dfc81ff26caf503e8a014c33ea9fcf87aea7edf79b3846b838"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v2/pose-09.png",
+      "bytes": 82652,
+      "sha256": "e6efc387748eb4f4bbd3b838ba0511935f4a05c159f1e210700c860adaeea2df"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v2/pose-10.png",
+      "bytes": 82660,
+      "sha256": "3d14dcbd30b5508d6abb3ecd7fd66a9fe2403ad3a9fa001fead0a2c248bf9510"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v2/pose-11.png",
+      "bytes": 82451,
+      "sha256": "2e3c710b57cf3a1148a6e8998d6469dfc9b694f5b6b25fcdd61994a4b2554c2f"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v2/pose-12.png",
+      "bytes": 82590,
+      "sha256": "5cbf82c12ca6476696c8e52309e17e3230e6116d11fd27e8d8b4bbbae50b6405"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v2/registration.json",
+      "bytes": 2751,
+      "sha256": "b9f3330832b5eeea607d7a70c1799be10586952ce2ef19c461a687c3cd98dae4"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/background.png",
+      "bytes": 98591,
+      "sha256": "eae853ca30d5d32a0fc9de3f5f11ecf896a24dcf476baee8c1cc14f46b733c5b"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/blue-00.png",
+      "bytes": 111079,
+      "sha256": "f84de5fe86cd819e38c29143a05d450b1d3cfa7e9db6c7bb9121bfccd7d3ccc0"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/blue-01.png",
+      "bytes": 112087,
+      "sha256": "45d7c23e1ff4bc20561f39b553a20697ea2e8c7179e021c006daf62c237529d9"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/blue-02.png",
+      "bytes": 111896,
+      "sha256": "869fa90c27a2549669c915d91df30c3266e0b98e045fd0663ea154581e0e1365"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/blue-03.png",
+      "bytes": 111919,
+      "sha256": "fa864653bfb64a3559c2382683410e00e7c51e66abc8facc01813f46969a2d72"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/blue-05.png",
+      "bytes": 111964,
+      "sha256": "56970f7b33e0ae3d294b8499520edb1f77360912850a420c9da81f2dff805d70"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/blue-06.png",
+      "bytes": 111870,
+      "sha256": "2215baeaeb2d6a181045da8a9c8bd18bc1afb5ca65a05bc330ed66c6637b7f6b"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/blue-07.png",
+      "bytes": 111947,
+      "sha256": "ffa56df5cd653551b3ca6736b5de6cb7513e04d1ca7feb558f83633e7db15b75"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/blue-09.png",
+      "bytes": 112019,
+      "sha256": "fb737399561297eea6821e685e8c161018d388c5261231a5de54f4220a5bb5fb"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/blue-10.png",
+      "bytes": 111975,
+      "sha256": "d9bfadb317f33adf44caea66a37791b72429f06b43461b46cd7b8951224b4030"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/blue-11.png",
+      "bytes": 111826,
+      "sha256": "c3ca23e6fbc311d838b988a061da23b0bb05ac7b8b59bfae56c7b0c3eb65ea05"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/blue-13.png",
+      "bytes": 111961,
+      "sha256": "0b1eb128d788df861aa1cb8136d0eb2ccaefe3226786ec2ddfd05c8062238e7f"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/blue-head.png",
+      "bytes": 109687,
+      "sha256": "b4628ae73aedd739c4090bccc45b95d7c7b32be6df787d3a41ef0c602a7599e9"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/drum.png",
+      "bytes": 109854,
+      "sha256": "bc743225ecfb9d47966970226ef8350414899a69d1850eb61177a6dc302c099b"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/drummer-00.png",
+      "bytes": 110473,
+      "sha256": "95c1013df65052d9607346e0b40b39b2a2c5fcce1772f0ef199fda6d3840bc45"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/drummer-01.png",
+      "bytes": 111783,
+      "sha256": "7c4df307802ac9c4b4aab69abd6e9d82ada10c8dcda419c32b8cf5c1d8444a25"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/drummer-02.png",
+      "bytes": 112296,
+      "sha256": "8c0c1e9551a406060697df26dc9133f5c40a028e81607886012bfcd902ffd864"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/drummer-03.png",
+      "bytes": 112126,
+      "sha256": "418ee2a9bae1a19be791726347e76ede41fb1fbac49281b7534d4c4b38de46c4"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/drummer-04.png",
+      "bytes": 112096,
+      "sha256": "453cfacf459f1ef51802e3064720b0e831532af631ebe6282a11f7d390bd2062"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/drummer-05.png",
+      "bytes": 112159,
+      "sha256": "07b1966001c669091f54e87412e74d3fdf332d044c45c154cae31a349159dd45"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/drummer-06.png",
+      "bytes": 112139,
+      "sha256": "2ad9e88603f3385016049a129ebcb5fdfca3bc2d76812f206c858c83383e5abf"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/drummer-07.png",
+      "bytes": 112113,
+      "sha256": "01b66d2a9e7dc78f632470d781e41fa2d0f46132e674e6b6f9ae106732e1013d"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/drummer-09.png",
+      "bytes": 112201,
+      "sha256": "d42410b4074771b613748dc8d62b7e645b2dd1435cd3ddca48ba1f6e73573ae9"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/drummer-13.png",
+      "bytes": 111859,
+      "sha256": "920b435e59a4522001dc89f55c3717e32049a03e64f9018bc9df39d2650ad1cb"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/drummer-17.png",
+      "bytes": 111998,
+      "sha256": "55360da90fead914e335a1f32227476127335614bcc777f9b68f689d63717dd6"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/drummer-head.png",
+      "bytes": 109802,
+      "sha256": "1a9738244ef9b703deb834a6b8ba15aac7b3b54967b72a898d33412bcb55b63e"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/grey-00.png",
+      "bytes": 110733,
+      "sha256": "89f447a230309c9df62c85dc1473dcb2b1fdaf064af0f4e561764d9a5d87ef81"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/grey-01.png",
+      "bytes": 112837,
+      "sha256": "813d47e2bdb84221e1679d35f2af7e3ac6105f9c308ab9cbd30a9e27e4d602f3"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/grey-02.png",
+      "bytes": 112714,
+      "sha256": "1b7d708961b41ab17289c2808b9f181609aec7b914f5288ede5f8e191f5a3f63"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/grey-03.png",
+      "bytes": 112642,
+      "sha256": "a0fe7ce4a6237028e093581c250e06151dccfe26ecbc2b910abafb79ed95410b"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/grey-05.png",
+      "bytes": 112865,
+      "sha256": "7d511f7258730120c91b9fc86127755b5f0eb4ad35a254ee6fd09fc06c7cc8ae"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/grey-06.png",
+      "bytes": 112599,
+      "sha256": "0c66a5c9a2570744df7b26a55a2fbeb93971d581232af0dd3d2255dc48d29604"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/grey-07.png",
+      "bytes": 112516,
+      "sha256": "e069d16dc425b5bedae93e8974c0c33b4114096b359558eab0733316949cc925"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/grey-09.png",
+      "bytes": 112759,
+      "sha256": "ad845533ddd9580fe440cdaf80901439c466627da2f5717e699e7518d5bca6d8"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/grey-10.png",
+      "bytes": 112674,
+      "sha256": "0718a704da0872a970f66cd2b07b871e963a8ac58bfaa178e0c9fa7592004673"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/grey-11.png",
+      "bytes": 112651,
+      "sha256": "1d52dae2003913c54d7e629b12da6d8444d202f28b57fc0efdcfd2c3ecc8cda7"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/grey-13.png",
+      "bytes": 112886,
+      "sha256": "af2d1890b5e683a238dccc1e78f9b948ee708c95d2e7cab4ea6d8a7055569b4c"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/grey-head.png",
+      "bytes": 109905,
+      "sha256": "0d37af25cd71687f5d105749971207aa1cb6559bb36796b112095f6641e5bbe5"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/registration.json",
+      "bytes": 4670,
+      "sha256": "b01cb85c4eb8c475683dfa2862e2e7947b2f2cea695a197812ab2e5341fba7cc"
+    },
+    {
+      "path": "art/animations/kangqu-ensemble-v6/source.png",
+      "bytes": 99148,
+      "sha256": "513b7244e4f0fd6060335b2e0ca4e36a3fa0933154b91b916c496ee2e1b63bef"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v1/fixed-background.png",
+      "bytes": 257513,
+      "sha256": "13dd5ae0923725d1945fbe221a830bb50f8ea43eb0b08b9e4ab59c9dbe33108c"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v1/frame-registration.json",
+      "bytes": 1410,
+      "sha256": "1646257a24464b488b1106ce825695ff022c235fb208878aae0fe3954b8d7e57"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v1/frames/group-01.png",
+      "bytes": 259013,
+      "sha256": "0718a1b8a6206970c482dfdf8e8b22ffcd7bcfff1c34b813adc2ae014cc08d93"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v1/frames/group-02.png",
+      "bytes": 256624,
+      "sha256": "17053b72c6eb24a5539c4a51b928a0fe9de2db03311c3f787942fdcbc1dacde2"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v1/frames/group-03.png",
+      "bytes": 257404,
+      "sha256": "bf4ffec9aff917b5e383261cd2c690a4ce39dedf602b1cefc8b15c6dab841313"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v1/frames/group-04.png",
+      "bytes": 258487,
+      "sha256": "d6f991126dfd2e77030a9cfef5105a51d60f2d8574193be6211450df8f069229"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v1/frames/group-05.png",
+      "bytes": 259651,
+      "sha256": "ab5af1c1240960744103ea2b228593dc02bdd792410ebc380c0c700c81f641be"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v1/frames/group-06.png",
+      "bytes": 256661,
+      "sha256": "dad97597207463d7bbbfd5397df22197f2949cd5b83d0753584cc715b4c4ea55"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v1/frames/group-07.png",
+      "bytes": 256376,
+      "sha256": "c9366f7a422d357973a9b452edb8e5762294d751ad10d0bb2e629f86afc040fb"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v1/frames/group-08.png",
+      "bytes": 257886,
+      "sha256": "5ee783f944c8e212b1f19986f54a02cfc65f458df3120f3d51ce903b591699a5"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v1/frames/group-09.png",
+      "bytes": 259013,
+      "sha256": "0718a1b8a6206970c482dfdf8e8b22ffcd7bcfff1c34b813adc2ae014cc08d93"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v1/group-master.png",
+      "bytes": 1505337,
+      "sha256": "f2625f0e2daecfb2325b871d92e0157399f1c131743bbb68d83113a169e8bb89"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v1/original-reference.png",
+      "bytes": 280625,
+      "sha256": "9fb4326b593bd4ab24a3b57e5aff2582ecaf28e09e26ed8fe0731f0c57a685a7"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v2-detail/fixed-background.png",
+      "bytes": 296193,
+      "sha256": "6f750ab495a960c7d4361e7251fe0d5aa1498a8257078b6baf563478f870fde3"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v2-detail/frame-registration.json",
+      "bytes": 1362,
+      "sha256": "f92bca7b9182cc7bc650b30329162d22bd39fe85ad3fd57a9e7d7b77775dd101"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v2-detail/frames/group-01.png",
+      "bytes": 1445604,
+      "sha256": "b092aafa66bf873a27c5f1df92fe44926bce389410500a7450ed932b7664ce89"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v2-detail/frames/group-02.png",
+      "bytes": 1456707,
+      "sha256": "92842fc699da6fd4aaad9e75d093112b6fe241285d1e4ebf69384f98a26dccab"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v2-detail/frames/group-03.png",
+      "bytes": 1479855,
+      "sha256": "c618854d875fa0f02f486d085336b2b7c71c539a39678a9fbc286cf1fc39949e"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v2-detail/frames/group-04.png",
+      "bytes": 1466564,
+      "sha256": "64b1b517510086a1de14e550ee04b7a672dd340e3217d0189468e8cf599068eb"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v2-detail/frames/group-05.png",
+      "bytes": 1481431,
+      "sha256": "f10376247b9695647cc6537768146ec29c418512faaf0bd1378a7c565b49f539"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v2-detail/frames/group-06.png",
+      "bytes": 1466564,
+      "sha256": "64b1b517510086a1de14e550ee04b7a672dd340e3217d0189468e8cf599068eb"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v2-detail/frames/group-07.png",
+      "bytes": 1456707,
+      "sha256": "92842fc699da6fd4aaad9e75d093112b6fe241285d1e4ebf69384f98a26dccab"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v2-detail/frames/group-08.png",
+      "bytes": 1445604,
+      "sha256": "b092aafa66bf873a27c5f1df92fe44926bce389410500a7450ed932b7664ce89"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v2-detail/frames/group-09.png",
+      "bytes": 1445604,
+      "sha256": "b092aafa66bf873a27c5f1df92fe44926bce389410500a7450ed932b7664ce89"
+    },
+    {
+      "path": "art/animations/kangqu-flags-v2-detail/original-reference.png",
+      "bytes": 317197,
+      "sha256": "0d48567167807538ef7fcc9626956b8278d28f748b5619e081b308554f7474f0"
+    },
+    {
+      "path": "art/animations/lantern-acrobat/background-v1.png",
+      "bytes": 2616750,
+      "sha256": "6089022883997c931a56bff7237a6be542c992d2e94b2cb40656b34de15f2796"
+    },
+    {
+      "path": "art/animations/lantern-acrobat/poses-v1.png",
+      "bytes": 1471902,
+      "sha256": "91b650b920d85627d0dfac2bf2c5c9629118ef83ac8a64357ade44e002908763"
+    },
+    {
+      "path": "art/animations/lantern-drummer/background-v1.png",
+      "bytes": 3118420,
+      "sha256": "5aee572409b0f95d82ffd328539cb1ddd15496afc1ac6ca6a09d6af82fe08a07"
+    },
+    {
+      "path": "art/animations/lantern-drummer/poses-v1.png",
+      "bytes": 1254450,
+      "sha256": "d2fc1f2ba5562117775a8ea0ab1a477dbf743756c226ed1c5aefe421eeb0024a"
+    },
+    {
+      "path": "art/animations/lantern-emperor/first-background-v1.png",
+      "bytes": 3093498,
+      "sha256": "e0ba0fb28adb75e63e9d94906dfb1b8b19f9c99b27e55b9cf247c975133bf647"
+    },
+    {
+      "path": "art/animations/lantern-emperor/first-background-v2.png",
+      "bytes": 2852278,
+      "sha256": "7eb3f3664dbb85a375500a779fcc41346ce25f9b00238fd7277186488479ff5a"
+    },
+    {
+      "path": "art/animations/lantern-emperor/first-background-v3.png",
+      "bytes": 3101047,
+      "sha256": "0152fbb019a1d18f421c9b7de8ba5c5b49d4ebff927c483c4650a167ec9daea3"
+    },
+    {
+      "path": "art/animations/lantern-emperor/first-poses-v2.png",
+      "bytes": 2226616,
+      "sha256": "fc60828b94879550d187c9d20e8df3dc73af277d0a2cb7d33a68e416d0ad9971"
+    },
+    {
+      "path": "art/animations/lantern-emperor/second-background-v1.png",
+      "bytes": 2890023,
+      "sha256": "eb1fc8fa89a5f769c4beb690badf461a178606c984ced1e6d5b0db133e8b1212"
+    },
+    {
+      "path": "art/animations/lantern-emperor/second-background-v3.png",
+      "bytes": 2812720,
+      "sha256": "a6f5143cb72e60a05e8c0ab8d44fdc3281282ef2b4b6b9e196567222dc5d3f69"
+    },
+    {
+      "path": "art/animations/lantern-emperor/second-poses-v2.png",
+      "bytes": 1998707,
+      "sha256": "ebb05f8495ee959a4dd3409609bb2328f44f678dd77627f22c195048c2ff055b"
+    },
+    {
+      "path": "art/animations/lantern-emperor/third-background-v1.png",
+      "bytes": 3247814,
+      "sha256": "0aea00efd65bee64f9abe17d9c1a5876cad1bf0507622f0d5cabe8ba890c356b"
+    },
+    {
+      "path": "art/animations/lantern-emperor/third-background-v2.png",
+      "bytes": 2956800,
+      "sha256": "fd43bbf4ca14ec0b44390986ef375b9c08adfa522e35c75c184ac6bafc86e3a4"
+    },
+    {
+      "path": "art/animations/lantern-emperor/third-background-v3.png",
+      "bytes": 3193989,
+      "sha256": "58b430e1a40041ab11722368b5001c926687c656ea455bf31a72cd99e4082a16"
+    },
+    {
+      "path": "art/animations/lantern-emperor/third-poses-v2.png",
+      "bytes": 2045058,
+      "sha256": "24e101cea7ffac37723aa50fb9eed848328f608328487c4a6222d34bb9aae91c"
+    },
+    {
+      "path": "art/animations/lantern-fireworks/back-v1.png",
+      "bytes": 1217061,
+      "sha256": "ca597867fe617f455755f1757a95187955f233f5befe169e46f7a5c7757b211b"
+    },
+    {
+      "path": "art/animations/lantern-fireworks/background-v1.png",
+      "bytes": 2895949,
+      "sha256": "f9764f4c3d7aa56de7e9b79717b759fba4985e1aafcdfa249f910c214df10bec"
+    },
+    {
+      "path": "art/animations/lantern-fireworks/blue-v1.png",
+      "bytes": 1836659,
+      "sha256": "30621040d017e68b7dd5e675803cb0c684a821dbd4c4dac3e445f63bce6292a5"
+    },
+    {
+      "path": "art/animations/lantern-fireworks/green-v1.png",
+      "bytes": 1297885,
+      "sha256": "96caf21b9ee1742f01ecf10c30ac01993bbc4897b75177793b1f849df8d077dd"
+    },
+    {
+      "path": "art/animations/lantern-fireworks/lighter-v1.png",
+      "bytes": 1013613,
+      "sha256": "e7eb0499bc5b4a83ba9418dcfcdec7d64b25c93b27defe8dac207f46dc7e46c3"
+    },
+    {
+      "path": "art/animations/lantern-market/background-v1.png",
+      "bytes": 2756516,
+      "sha256": "e059d29f1d566d4364006c3d9090c1f5149a687189b02d6d6ab72a8400ec79f8"
+    },
+    {
+      "path": "art/animations/lantern-market/hanging-background-v1.png",
+      "bytes": 2470607,
+      "sha256": "3d4f1a4f344f630d97c6d30bbffb6729090ad772408d6cf911f0b5ce27e53427"
+    },
+    {
+      "path": "art/animations/lantern-market/hanging-ornaments-v1.png",
+      "bytes": 97686,
+      "sha256": "e94b4c60aadb5f7a55fe0abf187457f0819004de58dc2fe50cdd106d4b42f54d"
+    },
+    {
+      "path": "art/animations/lantern-market/poses-v1.png",
+      "bytes": 1672137,
+      "sha256": "2fdbda783ecef0606b8b567d85f8ec815d4c0c053633867a1c4aa1be0d8042c2"
+    },
+    {
+      "path": "art/animations/lantern-monk/monk-poses-v1.png",
+      "bytes": 1684731,
+      "sha256": "25d485b2e8fe8e248c12a9db92419361565dc0685f53bbaed701ed9fc5679a17"
+    },
+    {
+      "path": "art/animations/lantern-stove/background-v1.png",
+      "bytes": 2923845,
+      "sha256": "73522ab9a9fe05bb766ec454a5394b5f9592b279821b261854ddd8f93546a0ca"
+    },
+    {
+      "path": "art/animations/lantern-stove/green-poses-v1.png",
+      "bytes": 1452862,
+      "sha256": "0b680be19519abb5ab32d3c27fdf0d4e95ef3105926f52d36112d59fdaa36f71"
+    },
+    {
+      "path": "art/animations/lantern-stove/red-poses-v1.png",
+      "bytes": 1517605,
+      "sha256": "a42128b552e87593307d62b4862331531b6b275426a18ae78af7781a822a53a4"
+    },
+    {
+      "path": "art/animations/lantern-theatre/background-v1.png",
+      "bytes": 2767620,
+      "sha256": "c7afa55e36a978e952f103ec0d7a6af30c424a504a79c866a6152385bb55540b"
+    },
+    {
+      "path": "art/animations/lantern-theatre/banner-poses-v1.png",
+      "bytes": 860165,
+      "sha256": "6ccecaddcb9ada628092882102e0661e4b430ba2b50ab19924d7b5db93c1ef19"
+    },
+    {
+      "path": "art/animations/lantern-theatre/dancer-poses-v1.png",
+      "bytes": 1692942,
+      "sha256": "bffd378d4159d16d961e3aa7fc2d6cb1272cf8a0e30705e97df7cc6147224671"
+    },
+    {
+      "path": "art/animations/lantern-theatre/drummer-poses-v1.png",
+      "bytes": 1439189,
+      "sha256": "8241c76bcaf2d0e5790475aad8ffa1fe3c21ad291149b97c2e0082bf9d737936"
+    },
+    {
+      "path": "art/animations/lantern-zhongkui/background-v1.png",
+      "bytes": 2891317,
+      "sha256": "b92d13241e8bc33e9e5c08566a9b6c84f372dac4689ce5804e55a9aaba97849b"
+    },
+    {
+      "path": "art/animations/lantern-zhongkui/background-v2.png",
+      "bytes": 3001487,
+      "sha256": "4e82aef8ce826cb2110ab948377183395957f695370f22ebacfaf24c5118c39b"
+    },
+    {
+      "path": "art/animations/lantern-zhongkui/front-poses-v2.png",
+      "bytes": 1482131,
+      "sha256": "8ec2d50bc248f64547d3bf77cd12bd38e43b55994b30aa7c1414a8dcaaf30561"
+    },
+    {
+      "path": "art/animations/lantern-zhongkui/rear-poses-v2.png",
+      "bytes": 1235657,
+      "sha256": "90aa2b2953be22dee3592919159ab93986ff1d084531002cb9fc18c616112e81"
+    },
+    {
+      "path": "art/animations/lantern-zhongkui/staff-poses-v2.png",
+      "bytes": 1101892,
+      "sha256": "3f3eeebf6714ea0289ce51d3c3ff18ec4482448626fa5090139a6690b182876f"
+    },
+    {
+      "path": "art/animations/lantern-zhongkui/staff-poses-v3.png",
+      "bytes": 1145305,
+      "sha256": "3e32db1e7b6b0e4ca5a85f1fac00c503e69c3841c6679c0a15e9a96229a47ed4"
+    },
+    {
+      "path": "art/animations/lantern-zhongkui/zhongkui-poses-v1.png",
+      "bytes": 2029824,
+      "sha256": "f65b3878e08415fce273be4463dfeea42669deac724797ad8c0a5f6fba2e0e2a"
+    },
+    {
+      "path": "art/animations/lantern-zhongkui/zhongkui-poses-v2.png",
+      "bytes": 1808406,
+      "sha256": "d0949c923859cdd7293a2fac7c1f0a1c362a5a5070a2492ea3f089b12d2e6d8b"
+    },
+    {
+      "path": "art/animations/luoshen-birds/redrawn/PROMPT.txt",
+      "bytes": 1855,
+      "sha256": "e402015204c7a5968824a30f22e3c1f4400c5d67b87e9051b23ccb47e5abedd5"
+    },
+    {
+      "path": "art/animations/luoshen-birds/redrawn/README.md",
+      "bytes": 1851,
+      "sha256": "8e308829b2020fdd6b03e7196df09251fb5cbdf2a964fb7224f649a1e184f99e"
+    },
+    {
+      "path": "art/animations/luoshen-birds/redrawn/SILK-PROMPTS.txt",
+      "bytes": 1411,
+      "sha256": "aabff80d649f4ec5fa93fd8f5603ef1c63775b903eb42490c3212a6c9a760027"
+    },
+    {
+      "path": "art/animations/luoshen-birds/redrawn/bird-parts-v2.png",
+      "bytes": 929663,
+      "sha256": "64df4783621cde9c2f214d993e049e779f9bf969f1a7340df31771dd68656ac3"
+    },
+    {
+      "path": "art/animations/luoshen-birds/redrawn/silk-plate-v3.png",
+      "bytes": 2476800,
+      "sha256": "24aa7ac5ddee4f96ec9d2b0b5b57c942b06e750b0a450644423d7f3bed68250e"
+    },
+    {
+      "path": "art/animations/luoshen-birds/silk-plate-v1.png",
+      "bytes": 2473811,
+      "sha256": "6a9282388a4529dc0c29a9e0c1ec5d3ed5448f71bad2824b201395da58833be6"
+    },
+    {
+      "path": "art/animations/luoshen-cao/figure-master-v2.png",
+      "bytes": 2203970,
+      "sha256": "6451df4e71b2bca45eb15c03f56ba43324583f9e7172e1475011eb6336dc9f52"
+    },
+    {
+      "path": "art/animations/luoshen-cao/figure-parts-v1.png",
+      "bytes": 1023769,
+      "sha256": "eb2416939b850d4b2a9e985e87fe01d6505376fbd382a757ea6fa56b05218465"
+    },
+    {
+      "path": "art/animations/luoshen-cao/silk-plate-v1.png",
+      "bytes": 2684670,
+      "sha256": "3e8d1e352dc5c6a34836b8226770410da5a6cc011bae6b897ea6383ab6eed69a"
+    },
+    {
+      "path": "art/animations/luoshen-cao/silk-plate-v2.png",
+      "bytes": 2872796,
+      "sha256": "1a50416698191bd0fddeb9b4192fc2427fc5c60226525f676bf962699591d000"
+    },
+    {
+      "path": "art/animations/luoshen-cao/silk-plate-v3.png",
+      "bytes": 2805613,
+      "sha256": "560b309fe5e2fddabad05c79756986710d71e220243ccb465dcb08f8ea23e632"
+    },
+    {
+      "path": "art/animations/luoshen-cloudcar/master-v1.png",
+      "bytes": 1726685,
+      "sha256": "a43b3a2d94b2bbb9ac238556c8a9729f3c52e8f96dc86d34cc26d178f5a39f75"
+    },
+    {
+      "path": "art/animations/luoshen-cloudcar/master-v2.png",
+      "bytes": 1450407,
+      "sha256": "5e950abd27d84d3709446a3df2c6269df01717b3df96707c768f13a4bada9ce4"
+    },
+    {
+      "path": "art/animations/luoshen-cloudcar/silk-plate-v1.png",
+      "bytes": 2829587,
+      "sha256": "71ca61ef2911a64f94f5722e16b53348dfd8ea325489266d0a084da623e22397"
+    },
+    {
+      "path": "art/animations/luoshen-dragon/PROMPT-HINDLEG-V3.txt",
+      "bytes": 1875,
+      "sha256": "a1fa0be2ade25f984d9aed4b9ee0d40aaa8816ad5426ce8ecd5366970cfe5e4a"
+    },
+    {
+      "path": "art/animations/luoshen-dragon/PROMPTS.txt",
+      "bytes": 4340,
+      "sha256": "9866f12ce28c30c2d4ad4431cdd615f5fb23cbf18b5da52d8dfd7275cb939a05"
+    },
+    {
+      "path": "art/animations/luoshen-dragon/README.md",
+      "bytes": 2645,
+      "sha256": "b5f6f269795475ac8f2f2cc3220feffb59a8e97f3d7454c63e9b4995e27d28cf"
+    },
+    {
+      "path": "art/animations/luoshen-dragon/dragon-parts-v1.png",
+      "bytes": 1028547,
+      "sha256": "ca3e0ec3ca1f548ad2bd75a3aee5dd7244bf88b20213b813f4cc9e7278c05c17"
+    },
+    {
+      "path": "art/animations/luoshen-dragon/dragon-parts-v2.png",
+      "bytes": 985231,
+      "sha256": "dea9ebf363e5679cf8f3eb41cf3f777856c519ac7f56041230de89a49884efe5"
+    },
+    {
+      "path": "art/animations/luoshen-dragon/hindleg-v3.png",
+      "bytes": 647548,
+      "sha256": "55205a9956b0712cf186dabda59dd0839cc3ab7b8ba3cf5f9caac6684d8ebf9c"
+    },
+    {
+      "path": "art/animations/luoshen-dragon/silk-plate-v1.png",
+      "bytes": 2442636,
+      "sha256": "85de8bcc242394eb428876f20b36eee09d4bca128a8ccbf5d6b28ed9cd25e31a"
+    },
+    {
+      "path": "art/animations/luoshen-farewell-scene/mount-master-v1.png",
+      "bytes": 1336144,
+      "sha256": "411183a0989b0ca8e9e05e5417153da2b72917d16da40912ab320a367928364f"
+    },
+    {
+      "path": "art/animations/luoshen-farewell-scene/retinue-master-v1.png",
+      "bytes": 1997821,
+      "sha256": "502d50582bf28d97cdb1b5495de799b48770d05c320b3925ca8f799198a66a79"
+    },
+    {
+      "path": "art/animations/luoshen-farewell-scene/silk-plate-v1.png",
+      "bytes": 3037833,
+      "sha256": "0965296e4db0dada5376edfc6a3ce7620687b4576030b0489475b9a3796dcc73"
+    },
+    {
+      "path": "art/animations/luoshen-farewell/figure-parts-v1.png",
+      "bytes": 1813821,
+      "sha256": "bb3173638b7bf1239a77930fb1fdd0261f20c43a0ff719a2344380c0d3e7a67d"
+    },
+    {
+      "path": "art/animations/luoshen-farewell/silk-plate-v1.png",
+      "bytes": 2677100,
+      "sha256": "d55d85fceb766498eb8f944881ec7a91073334112e0a88e8722e7dcb14924a60"
+    },
+    {
+      "path": "art/animations/luoshen-figure/PROMPT-PARTS-V2.txt",
+      "bytes": 2816,
+      "sha256": "00167f1a12387a2c18b253bee4d4285408a055b0f33afa01b4edd876aba07614"
+    },
+    {
+      "path": "art/animations/luoshen-figure/PROMPTS.txt",
+      "bytes": 2373,
+      "sha256": "8b1c9225fa557190f585ea1a4f64f60c91c4b5fb75681c0545f0273fc2dd653e"
+    },
+    {
+      "path": "art/animations/luoshen-figure/README.md",
+      "bytes": 2508,
+      "sha256": "4c8e1f6ca17a05ff635a330e664ddeb6f7c89d9f3239cbe933aabbe3ef1ef944"
+    },
+    {
+      "path": "art/animations/luoshen-figure/figure-parts-v2.png",
+      "bytes": 1328167,
+      "sha256": "c04805a7584fd57f11f61df29d560245f85b8883b8fec782e9556e706dd508bf"
+    },
+    {
+      "path": "art/animations/luoshen-figure/figure-v1.png",
+      "bytes": 1813406,
+      "sha256": "b222b4bbd808024b473e8d6e6cb536a45046f588ddf03e64e16fee29b0330f97"
+    },
+    {
+      "path": "art/animations/luoshen-figure/silk-plate-v1.png",
+      "bytes": 2523723,
+      "sha256": "a01c0a5579fdefe6ca9ad7f3b0c2c02f7f3f48c4bba0dc5ef4838c844479639d"
+    },
+    {
+      "path": "art/animations/luoshen-opening-sleeves/companion-repair-plate-v1.png",
+      "bytes": 2299005,
+      "sha256": "06aa9cd8e175935cf12d78760c5e30ca1f86cf98d3c26a905267494b98aeafd1"
+    },
+    {
+      "path": "art/animations/luoshen-opening-sleeves/repair-plate-v1.png",
+      "bytes": 2611074,
+      "sha256": "f251a0fffc7178bdec132f273c4b6b43ff823f19b1dd4a2701e4a63b21c4a7ec"
+    },
+    {
+      "path": "art/animations/luoshen-opening-sleeves/repair-plate-v2.png",
+      "bytes": 2426023,
+      "sha256": "3febd458af7228f9d2a2b29c55bbc7e3aa63324e05891e7f728966d9d6491662"
+    },
+    {
+      "path": "art/animations/luoshen-ribbon/PROMPTS.txt",
+      "bytes": 2434,
+      "sha256": "0563cd3f266115fd34d10c236ca82c18bf8f76a92f183b709774889fb8a9e549"
+    },
+    {
+      "path": "art/animations/luoshen-ribbon/README.md",
+      "bytes": 1135,
+      "sha256": "90b9ad77f92516f2546d7cba54b9fc2b55d8b02a37de70a4329385e395597d71"
+    },
+    {
+      "path": "art/animations/luoshen-ribbon/ribbon-v1.png",
+      "bytes": 256292,
+      "sha256": "7e51071d538f66728abff0a783087bc6ea2205e6aced856b28982b1f2f711627"
+    },
+    {
+      "path": "art/animations/luoshen-ribbon/silk-plate-v1.png",
+      "bytes": 2229324,
+      "sha256": "7b326c1843658de9056c05efb077a94ad6b6fb909c0238442f6193885a436aee"
+    },
+    {
+      "path": "art/collectibles/lantern-firelight-v1.png",
+      "bytes": 188272,
+      "sha256": "e92a83c58160ba5814439df2714b27e5cbc79389b1c942e4ee8ef8e1afc2fae0"
+    },
+    {
+      "path": "art/collectibles/lantern-journal-atlas-v1.png",
+      "bytes": 2215923,
+      "sha256": "737d5e03569344da6ff721b4e40d9e2aea610811305f5343fc6be9edd1eedcee"
+    },
+    {
+      "path": "art/collectibles/lantern-stove-v1.png",
+      "bytes": 1843595,
+      "sha256": "4390098e38b6d2ce25d6e5ea74c82f5ee88d469539396ab32abe939ca517d592"
+    },
+    {
+      "path": "art/collectibles/lantern-stove-v2.png",
+      "bytes": 2288093,
+      "sha256": "a1b8fb9d1db9760b4566c5fde0725348b1d87aa24224ce7792e2e3382445e5fc"
+    },
+    {
+      "path": "art/collectibles/lantern-zhongkui-v1.png",
+      "bytes": 2276696,
+      "sha256": "e5884adf862d52b108b4f4ef7bd37023f86e132de2c9b44ba1091fe7874784c3"
+    },
+    {
+      "path": "art/examination-dense-scroll-v3.png",
+      "bytes": 3441504,
+      "sha256": "447b29f613d5023cb6050d8d2bddcc0d653c72669dc895b840556509c29764b4"
+    },
+    {
+      "path": "art/examination-panorama-v2.png",
+      "bytes": 3301812,
+      "sha256": "52d8ee567e4ba3e9422ab414445abd4374723a7f5ebf5a55936168955a25bf0c"
+    },
+    {
+      "path": "art/examination-scroll.png",
+      "bytes": 3258252,
+      "sha256": "bf755cedfba2f1494ee98a3e117f1ffa99531af07513a4b2b45141b6f1e6889f"
+    },
+    {
+      "path": "art/examination-street-life/collectibles/basket-v1.png",
+      "bytes": 1873956,
+      "sha256": "ff04f4ff65cc5e1f2f85522ac924365ae8ccdc4a29ca5184e14394c1aed56268"
+    },
+    {
+      "path": "art/examination-street-life/collectibles/case-v1.png",
+      "bytes": 1506884,
+      "sha256": "7c946f4d9bad5e8fbd1e7a58ef495f16b209756273c335f133899602c2204701"
+    },
+    {
+      "path": "art/examination-street-life/collectibles/paper-v1.png",
+      "bytes": 1042618,
+      "sha256": "4c644d9130925497697aca8b8fe37a11d13c8f68c22fdb51c84ecd1cdfb66eff"
+    },
+    {
+      "path": "art/examination-street-life/collectibles/tea-v1.png",
+      "bytes": 1053407,
+      "sha256": "5583ec05864eb2e8d0ba04e58b7e0119a001702e647140bd78fc3ecd8c1ddfe1"
+    },
+    {
+      "path": "art/examination-street-life/target-face-cutout-v1.png",
+      "bytes": 1457342,
+      "sha256": "4a9ab426fd5af0c6d184498d217f39bb0617a33631fbae1b9f5eaca384a859bb"
+    },
+    {
+      "path": "art/examination-street-life/target-head.png",
+      "bytes": 9565,
+      "sha256": "c99229657850726fa15170dc2226b1c96055bac56f15024a0eb35e634971ba6f"
+    },
+    {
+      "path": "art/hd/board.png",
+      "bytes": 3380515,
+      "sha256": "4574eb4b282c3752edf08ff2787c6b9400a3e1a6ec195fbea910ffd228536cf6"
+    },
+    {
+      "path": "art/hd/bridge-v2.png",
+      "bytes": 3223339,
+      "sha256": "3baa77213053f3243c8feec113150d9204f597598e99eba90b32746b66245b56"
+    },
+    {
+      "path": "art/hd/bridge.png",
+      "bytes": 3423925,
+      "sha256": "51cbea05b73be7ad69165a5b35f1f75484909ced6fd724aadb415b3a7bbda07c"
+    },
+    {
+      "path": "art/hd/tea.png",
+      "bytes": 3383118,
+      "sha256": "f55e500e79e4de87e9ead3cb8f07b0b246c36192cdf29b22bb1352b99532882e"
+    },
+    {
+      "path": "art/lantern-festival/SOURCES.md",
+      "bytes": 5611,
+      "sha256": "918fcea30ce89a9d706221ffcf2fbfdd98ef1a2b410865c6c5e023f3c965ad27"
+    },
+    {
+      "path": "art/lantern-festival/commons-originals.json",
+      "bytes": 41442,
+      "sha256": "4570b39e8ada234b97e9b16912bd2dc66cdfa9f0876d0bb4420641d49ed62695"
+    },
+    {
+      "path": "art/lantern-festival/detail-1.jpg",
+      "bytes": 925546,
+      "sha256": "915ef7b8ee6e3ca96a14a15beed8ee90afcc15db96eaa69d17119981bf2ad668"
+    },
+    {
+      "path": "art/lantern-festival/detail-10.jpg",
+      "bytes": 990379,
+      "sha256": "01a274316562b9a9846e6a228aefc59a67ca0fbedb69047dc7ae40df63a2232c"
+    },
+    {
+      "path": "art/lantern-festival/detail-11.jpg",
+      "bytes": 1254593,
+      "sha256": "d2ebba9ca592ee693687f06a241a9e9eb052fb784b3c349cfa20e5cfdeac1fa5"
+    },
+    {
+      "path": "art/lantern-festival/detail-12.jpg",
+      "bytes": 795466,
+      "sha256": "d270a7128046be0d8bc4abb4f4be3e3526fe8f88a36d1715ecc85f34e597d43e"
+    },
+    {
+      "path": "art/lantern-festival/detail-13.jpg",
+      "bytes": 972076,
+      "sha256": "98a0581177e9f91cdd4d0e6b4c8a1a0df5337ba3e10abd2be7c22e6917c3b4d0"
+    },
+    {
+      "path": "art/lantern-festival/detail-15.jpg",
+      "bytes": 925980,
+      "sha256": "c4cfc7c40316ee283f9d6a3fe67f0bbccdd78d23672d4ff9f4a96df9491a9000"
+    },
+    {
+      "path": "art/lantern-festival/detail-16.jpg",
+      "bytes": 1033791,
+      "sha256": "72c6085795226636551723b8f8d1ac496451497a8cd7e4492ff91d0ed9d52782"
+    },
+    {
+      "path": "art/lantern-festival/detail-17.jpg",
+      "bytes": 1128527,
+      "sha256": "5fcd547ce26876ae9dbfc09c8076d7484eb2395b8c45f7b7ee4581503d40aa00"
+    },
+    {
+      "path": "art/lantern-festival/detail-18.jpg",
+      "bytes": 534941,
+      "sha256": "f3b9b1b11613e4d2a478a98c4cc02dbe53c45409d88c99f543218ac3bf4d1600"
+    },
+    {
+      "path": "art/lantern-festival/detail-2.jpg",
+      "bytes": 910863,
+      "sha256": "70babf12aeb00c6f4a298d2475e917a5cced26f0b399fcb597d027740174fff0"
+    },
+    {
+      "path": "art/lantern-festival/detail-3.jpg",
+      "bytes": 1002148,
+      "sha256": "95dd75c6230a83f68486e456ffa85648f41c082abd30399731a350416bc325ab"
+    },
+    {
+      "path": "art/lantern-festival/detail-4.jpg",
+      "bytes": 770068,
+      "sha256": "0a4804a76b9a16930b1aff423483d34ad52229d52ffe0e15ac989b52af7c110c"
+    },
+    {
+      "path": "art/lantern-festival/detail-5.jpg",
+      "bytes": 1334229,
+      "sha256": "01f0e8121c41e281f7d0202f0dc0619c0b30a7ca08a9b5f131fd03f8f62c08ab"
+    },
+    {
+      "path": "art/lantern-festival/detail-6.jpg",
+      "bytes": 1109300,
+      "sha256": "3da6b67027bf445b108900cc47c863c6a5e8861a15dd7297ffc0a922285b753c"
+    },
+    {
+      "path": "art/lantern-festival/detail-7.jpg",
+      "bytes": 378906,
+      "sha256": "a9b69a95f85cb07c5dc26516a2e1571e83c3928bc387f98300c078f3c9f64362"
+    },
+    {
+      "path": "art/lantern-festival/detail-8.jpg",
+      "bytes": 895379,
+      "sha256": "8f047ff527c0824005858ef85b6bbc10d5c8bb544ac808a9fa4979d3aba09f91"
+    },
+    {
+      "path": "art/lantern-festival/detail-9.jpg",
+      "bytes": 889475,
+      "sha256": "e671f40fc799888dd5ad1045dbf8f0748760988ce3787e6a8b8c48c7d8a5fe37"
+    },
+    {
+      "path": "art/lantern-festival/full-scroll.jpg",
+      "bytes": 3394756,
+      "sha256": "b9eaefa92dece060af2fda0f846d8883bd914df8bc02a3f1de82388097747704"
+    },
+    {
+      "path": "art/lantern-festival/registration.json",
+      "bytes": 8906,
+      "sha256": "420dc74462858c29c61f23e26507147877f3140ccf2ac8c65928442f66979bf1"
+    },
+    {
+      "path": "art/luoshen/ASSET-SOURCES.md",
+      "bytes": 8028,
+      "sha256": "4d6892e5d4bb2f7d718f6b97c57fc4d1b7ad12f18dbcd0115b09a3ae0a1e523b"
+    },
+    {
+      "path": "art/luoshen/BOOK-CREDITS.md",
+      "bytes": 1833,
+      "sha256": "825432066d17c0bf4796b05dd0cb3ad64259d97d700d6e20495f8e63d9f22b94"
+    },
+    {
+      "path": "art/luoshen/BOOK-PROMPT.txt",
+      "bytes": 897,
+      "sha256": "43f16754a25fcbd181c9660b9f7d80f339935d3a36f7dc407d3a8c890f1082bf"
+    },
+    {
+      "path": "art/luoshen/book-closed.png",
+      "bytes": 1495964,
+      "sha256": "5718dbfbc90f39563bd1b606d7bfe67a7e674d719742f263a821eedcd7d914d9"
+    },
+    {
+      "path": "art/luoshen/collection-additions-2026-10-16.json",
+      "bytes": 3269,
+      "sha256": "5f3143684229ec9a74ebc520f369170e2d11365aa8c81a6adec41a049beaf263"
+    },
+    {
+      "path": "art/luoshen/collection-beast-cutout.png",
+      "bytes": 1460281,
+      "sha256": "75148cd7363f531cfc724f4ffe0a71b14d94525c558301914352cb799e82af90"
+    },
+    {
+      "path": "art/luoshen/collection-bird-cutout.png",
+      "bytes": 1517447,
+      "sha256": "3e64c1fde0f8b86ecb3af8c4c16e02d6bd31eb2ca258329e6a9a9244e8847c39"
+    },
+    {
+      "path": "art/luoshen/collection-bird-final-2026-10-16.json",
+      "bytes": 1763,
+      "sha256": "ba3b941821f5f74ab068817d7266980d04751810bdba61d65af4f30a5a42cef6"
+    },
+    {
+      "path": "art/luoshen/collection-boat-cutout.png",
+      "bytes": 1898051,
+      "sha256": "63d7b042f63e6b0f81a2ee353e807dc4750e819f8e50a4fb14f5237b4feae3ea"
+    },
+    {
+      "path": "art/luoshen/collection-boat.jpg",
+      "bytes": 390772,
+      "sha256": "9c6b157bfda5911832f5c8a988667979c24eb8879c11cfb40d038523b4846dbf"
+    },
+    {
+      "path": "art/luoshen/collection-canopy-cutout.png",
+      "bytes": 617443,
+      "sha256": "5937a650a5e2c4e1598742832eb53d00700852e75324348194209d44fd0ffe9f"
+    },
+    {
+      "path": "art/luoshen/collection-canopy.jpg",
+      "bytes": 105197,
+      "sha256": "73dd13ff0fe383c393a05b36fee4bbdf47d8c87ab6ddd918da64025cc59e0588"
+    },
+    {
+      "path": "art/luoshen/collection-cutout-assets-2026-10-15.json",
+      "bytes": 4933,
+      "sha256": "032febe042d30e5ef1c1c2ebad4ec357a959214819172ebe932f62982d9df3a7"
+    },
+    {
+      "path": "art/luoshen/collection-dragon-cutout.png",
+      "bytes": 1085281,
+      "sha256": "8e2ce236b397b1002125cc60079ef26a7ad4680842d872f64e76529c666a0eb9"
+    },
+    {
+      "path": "art/luoshen/collection-dragon.jpg",
+      "bytes": 48706,
+      "sha256": "00f74cda90a6e7c34f3730d3e43d5b63d62ca6244750296d1bfb4bda09dcab2e"
+    },
+    {
+      "path": "art/luoshen/collection-ribbon-cutout.png",
+      "bytes": 796196,
+      "sha256": "8902a716feb0205fdbb25ea53685a5c41d9c31b658eb04b495303aec1e165c97"
+    },
+    {
+      "path": "art/luoshen/collection-sites-2026-10-16.json",
+      "bytes": 4266,
+      "sha256": "63952afa2387978b498b6554ebe220731e9330aadc0da05c6ecdda9bfcba8a09"
+    },
+    {
+      "path": "art/luoshen/cover.jpg",
+      "bytes": 158563,
+      "sha256": "b3eaa16d5171d0ca1fb206d3ea71a49e824b50b3ed9baf34d768f1d5bd7679a1"
+    },
+    {
+      "path": "art/luoshen/cutout-assets-2026-10-15.json",
+      "bytes": 2568,
+      "sha256": "7d59efe60d984e7e2438deca5e004dfb6a78250e7a7e9f5f0281f427a901e658"
+    },
+    {
+      "path": "art/luoshen/detail-0.jpg",
+      "bytes": 782545,
+      "sha256": "ea172eaf3eff06900a04bf3aadbbdf8c88030f3f0194d75493dec80907a60d98"
+    },
+    {
+      "path": "art/luoshen/detail-1.jpg",
+      "bytes": 795996,
+      "sha256": "1e3cd3079958cbe53d530964ddf71d6251284c935b9c0f468a97ab5d0c9fd1df"
+    },
+    {
+      "path": "art/luoshen/detail-2.jpg",
+      "bytes": 768996,
+      "sha256": "fb032891e4a760c424bbb81fa0ec6e2b4a9f9ef1d625a271ec9ed5f1937864fe"
+    },
+    {
+      "path": "art/luoshen/detail-3.jpg",
+      "bytes": 776338,
+      "sha256": "e483a2b95bdf35dc2562b8fb64c64fe02eb552063f800911c561ab7d3b8a327b"
+    },
+    {
+      "path": "art/luoshen/detail-4.jpg",
+      "bytes": 784199,
+      "sha256": "70472244245b609b6825c4b4aa5edbcb23686a6703ffcb0b172c943b3131f060"
+    },
+    {
+      "path": "art/luoshen/detail-5.jpg",
+      "bytes": 819214,
+      "sha256": "4dd1928e8b72cfff3e86b87e8512e1e568ddfad70b10dab0ac5131fe29bef78c"
+    },
+    {
+      "path": "art/luoshen/detail-6.jpg",
+      "bytes": 850269,
+      "sha256": "2f086ad752f883d71a6aa5bcc3c61c47b718c7eba955352c105fabd2753f7133"
+    },
+    {
+      "path": "art/luoshen/detail-7.jpg",
+      "bytes": 791496,
+      "sha256": "5d791d90115bfbbd3aa8374c77b4c09aed507d8dc2f88a2a3e78d00cf9df5514"
+    },
+    {
+      "path": "art/luoshen/detail-8.jpg",
+      "bytes": 748989,
+      "sha256": "43477766fbf1c727e2e94faf5eed2f98f688f97bf4c50de98c38a17eff9c5a1f"
+    },
+    {
+      "path": "art/luoshen/detail-9.jpg",
+      "bytes": 750102,
+      "sha256": "41c004d511eaa93c93bfaadd8a237cc03a82a4b44684eea3c9fea489f8091ebe"
+    },
+    {
+      "path": "art/luoshen/elements/boatman-v1.png",
+      "bytes": 882817,
+      "sha256": "91dc37dda9222a9b38cd3e576ef2ae2739d7793f41d2cc0c19b3d4ace16f5bd0"
+    },
+    {
+      "path": "art/luoshen/elements/boatman-v2.png",
+      "bytes": 848455,
+      "sha256": "bb97dc0fa0b87e48e41cfb957489ec21eb650f168b405151bf978ed37d8adc7f"
+    },
+    {
+      "path": "art/luoshen/elements/sleeves-cao-v1.png",
+      "bytes": 2483392,
+      "sha256": "a92e8137857894cd39e853de83cef0b8df46c82f3e163eda6be4782c590e7e58"
+    },
+    {
+      "path": "art/luoshen/elements/sleeves-cao-v2.png",
+      "bytes": 2445497,
+      "sha256": "7ebbc023ba275d2308780e52bb40ecdbc88abcf38d949b4b28177e82eb99699c"
+    },
+    {
+      "path": "art/luoshen/elements/sleeves-companion-v1.png",
+      "bytes": 2040085,
+      "sha256": "eaf763b4655af8a4d9768269f5ba23a8a39adbb4e7cc5bdd646ab99a85a1ad30"
+    },
+    {
+      "path": "art/luoshen/elements/sleeves-companion-v2.png",
+      "bytes": 2043454,
+      "sha256": "a156586f7d4cf18687b06b375e10ad4cf8b70d0495514c57df2bc94fa8bd5c2c"
+    },
+    {
+      "path": "art/luoshen/farewell-cao-study-v1.png",
+      "bytes": 1647270,
+      "sha256": "20e5405bbf39bc9adc9e8f1215da5752139cdc6e7b492e969ba84d400578725f"
+    },
+    {
+      "path": "art/luoshen/farewell-goddess-study-v1.png",
+      "bytes": 1807512,
+      "sha256": "f4db376f04b34d18bc2e35274884623780ae4db66a7f1ca8a3e946f3bc24db76"
+    },
+    {
+      "path": "art/luoshen/full-scroll.jpg",
+      "bytes": 2114118,
+      "sha256": "059ee254ab7451e4a60a8c6de5b5faef975d383f7c21ffaa97de66c92e2c1cea"
+    },
+    {
+      "path": "art/luoshen/hair-first-study-v1.png",
+      "bytes": 1297218,
+      "sha256": "3fc662adc020d4e7767bfabc7be874af242a43dc10e16a8e72f7b238ba1cf87f"
+    },
+    {
+      "path": "art/luoshen/hair-seat-study-v1.png",
+      "bytes": 1001886,
+      "sha256": "aaaf61f53f933b95a1c874112fa1e332e2fd916afb5e0c689e9295d2a22d5b64"
+    },
+    {
+      "path": "art/luoshen/head-C1-cutout.png",
+      "bytes": 1096215,
+      "sha256": "4fc06f7438fbae2ea687ba587541f7fac401da8be7d7ec574c4c230eb89110bb"
+    },
+    {
+      "path": "art/luoshen/head-C1.jpg",
+      "bytes": 9897,
+      "sha256": "ed85894b002fb99d79535e5c3ea019013d720b33634c1d3fbfc70825f99b4903"
+    },
+    {
+      "path": "art/luoshen/head-C2-cutout.png",
+      "bytes": 1020015,
+      "sha256": "6e763bb726d8cf56859f559d349e8aed17707b99cf3c2fce1b40533f556894f7"
+    },
+    {
+      "path": "art/luoshen/head-C2.jpg",
+      "bytes": 12956,
+      "sha256": "313b3a2f179f19908c1fea8281119b10657a26cb9ea86b405c36252a4e885824"
+    },
+    {
+      "path": "art/luoshen/head-C4-cutout.png",
+      "bytes": 1402923,
+      "sha256": "33655acdd97a1f2dc1576a570753f88389864289c891e081bd4adba065dea196"
+    },
+    {
+      "path": "art/luoshen/head-C4.jpg",
+      "bytes": 12307,
+      "sha256": "84fd79c58f3b5c64d8af40cc0916fe16a10a09fe0ca61fa375b4dba1a45d35a8"
+    },
+    {
+      "path": "art/luoshen/head-L1-cutout.png",
+      "bytes": 928542,
+      "sha256": "d0cb1a03d4a3c65cc7e5b218106ea3877a9a9ba5dba9ceb26dfbc0f5afb1bd92"
+    },
+    {
+      "path": "art/luoshen/head-L1.jpg",
+      "bytes": 12920,
+      "sha256": "7ea46bbedc75601e6c6997618010d875b1b61e2b220efa093b5b7ebe1e05d20f"
+    },
+    {
+      "path": "art/luoshen/head-L8-cutout.png",
+      "bytes": 1192750,
+      "sha256": "3dc3d43064e779ad02892e41d13d7c2cd87a7be2a527c4884f4c4ce19db0938d"
+    },
+    {
+      "path": "art/luoshen/head-L8.jpg",
+      "bytes": 7067,
+      "sha256": "54bf6173f32b344c4d652b48d8f9360f7533d80387dedc46a9208bf90a2ab184"
+    },
+    {
+      "path": "art/luoshen/head-L9-cutout.png",
+      "bytes": 1451078,
+      "sha256": "aabcbb0f1ca4f1a81430a18fbfa4958c306787063de2b04f5ab0be2e711d3efd"
+    },
+    {
+      "path": "art/luoshen/head-L9.jpg",
+      "bytes": 9363,
+      "sha256": "fdb7ca99d8a01889ae16b38621f0ee58eb4db0b362d4fec837d67eb7fcf689e2"
+    },
+    {
+      "path": "art/portraits/emperor-cutout-v1.png",
+      "bytes": 758016,
+      "sha256": "ff0225762370a6d781672d50c6aea6dfdcc918d01827c99c05ba563b239c83ec"
+    },
+    {
+      "path": "art/portraits/emperor-reference-v2-cutout.png",
+      "bytes": 994301,
+      "sha256": "bc7a13b1fe658c731347f5a784a736d623e18eeb42ed9f1008961949b6ad4a7d"
+    },
+    {
+      "path": "art/portraits/scholar-cutout-v1.png",
+      "bytes": 686914,
+      "sha256": "f7a6a9291406c810afe47a830119f28828bdb2a0ab51fb960ec9759a894116bf"
+    },
+    {
+      "path": "art/portraits/xianzong-recognition-v2.png",
+      "bytes": 1164901,
+      "sha256": "33b40100dd1d7ed006dd64729ffaab61d58860d639b7e48eca5cc8c2532e72a8"
+    },
+    {
+      "path": "art/qingming/INTERFACE-ART.md",
+      "bytes": 2085,
+      "sha256": "11af72cc38d2cdb193cf8452f336b14b0c2ddbeb91edc5e9922ace4eab63949c"
+    },
+    {
+      "path": "art/qingming/SOURCE.md",
+      "bytes": 650,
+      "sha256": "fca8cad2e00d0d3ba76740baa5b141ad37ec32045d7c6d5ed77b885792b1717a"
+    },
+    {
+      "path": "art/qingming/book-closed.png",
+      "bytes": 1667507,
+      "sha256": "a262861ec72bfbd3ff0081d7f472b28c023e6b522ff858d681a3b235ae8bcfff"
+    },
+    {
+      "path": "art/qingming/book-page-blank.png",
+      "bytes": 1858452,
+      "sha256": "1cc1b952af749fe16b18c3124f2cd563d0690e0e2cde2de6bec42c1bdeeb21a9"
+    },
+    {
+      "path": "art/qingming/bridge-arch.jpg",
+      "bytes": 361463,
+      "sha256": "059f8f396dc28bf45bf1eb561097434951939e2334bc0b2f2ef553aeda9d9b01"
+    },
+    {
+      "path": "art/qingming/bridge-boat-v55.png",
+      "bytes": 2389174,
+      "sha256": "202643f88faa858bcffeb30ee50051e7972f27d02786a32472f432df67be440c"
+    },
+    {
+      "path": "art/qingming/bridge-boat.jpg",
+      "bytes": 270557,
+      "sha256": "daa8214a469b6cbe128dbb2edaae4982ec6882d02b4583756896ab3f60c44bb8"
+    },
+    {
+      "path": "art/qingming/bridge-scene.jpg",
+      "bytes": 1842671,
+      "sha256": "f533fd116b968f237f469fdf928cc31bdf956e87191efc9aa0e903cc222a9fc5"
+    },
+    {
+      "path": "art/qingming/bridge-stalls.jpg",
+      "bytes": 94756,
+      "sha256": "6b608f062ba8dccfa6c6e0778b7c05692d2a9cc30f06ede33ff20234b8bf469a"
+    },
+    {
+      "path": "art/qingming/city-gate.jpg",
+      "bytes": 105961,
+      "sha256": "3aa0bfe0f87a17067f5177f2b8a72b87c11f4f53a94b1bb4db245974c1d4f484"
+    },
+    {
+      "path": "art/qingming/cover.jpg",
+      "bytes": 3203147,
+      "sha256": "b21ca6512bc0bef59fc7387e70478c12f58b2e7c4e4637c45be7aaec90388f48"
+    },
+    {
+      "path": "art/qingming/full-scroll.jpg",
+      "bytes": 856280,
+      "sha256": "36be9d952c04766c6c0d87272d43e85816eb4cb87a9f1f9cdc85247e67417d92"
+    },
+    {
+      "path": "art/qingming/gate-scene.jpg",
+      "bytes": 618675,
+      "sha256": "503ad362cef59c5c4fcceaabc477ed344a48d9d6560ed1eb6ef0062638d5697b"
+    },
+    {
+      "path": "art/qingming/incense-head.png",
+      "bytes": 7117,
+      "sha256": "86fd056d591fd0d2266ab17b59e6be27442f62b3211f5b3fcaf7eeb2e53c4870"
+    },
+    {
+      "path": "art/qingming/incense-scene.jpg",
+      "bytes": 282368,
+      "sha256": "29a8fe5f009e70a16638e5da9a7e4bd278dfd0cfb990bbacc40dc989fa97cbdd"
+    },
+    {
+      "path": "art/qingming/incense-sign.jpg",
+      "bytes": 11201,
+      "sha256": "1c4dc9a9fd003d4106a49a7a107f1e1b1be1eda6934240c4efcf3a188362b5eb"
+    },
+    {
+      "path": "art/qingming/lodging-head.png",
+      "bytes": 10135,
+      "sha256": "f77dcc1964384bb99dedce0a5f88d0e73cef3edd65574419a646c6fb4c61462b"
+    },
+    {
+      "path": "art/qingming/lodging-scene.jpg",
+      "bytes": 199248,
+      "sha256": "83b3a73b48c4ab78fc9004f6f7f9a2e52ea264bc3ce4ad212750c2f9c6a22cb9"
+    },
+    {
+      "path": "art/qingming/lodging-sign.jpg",
+      "bytes": 13609,
+      "sha256": "8009b8f0e605395b1a3007767dbe9b3ec9ecc52829e9897a31e44acc8800ec68"
+    },
+    {
+      "path": "art/qingming/medicine-advertisement.jpg",
+      "bytes": 8919,
+      "sha256": "2b4d2a3de315edb1f340ea4468434fcfeefe7ec63d5732bed38fa3c9bc145412"
+    },
+    {
+      "path": "art/qingming/medicine-head.png",
+      "bytes": 7697,
+      "sha256": "e09405daed0545afd5cee13c232ce325aff476c5ff701590f7aab15333aa0fc7"
+    },
+    {
+      "path": "art/qingming/medicine-name.jpg",
+      "bytes": 9812,
+      "sha256": "936b3c57fce866da17e864322c10be35e7c3614470848fb9fa61691145467f21"
+    },
+    {
+      "path": "art/qingming/medicine-scene.jpg",
+      "bytes": 198158,
+      "sha256": "07e1867571a781b332f1dd99577489283f7aa4ba22303c265df93365e19407fd"
+    },
+    {
+      "path": "art/qingming/paper-display.jpg",
+      "bytes": 22432,
+      "sha256": "f86548470ec7cc43dcf4afdcb0ba60462185e9f651d7a3b141f765e21a05a241"
+    },
+    {
+      "path": "art/qingming/paper-head.png",
+      "bytes": 7436,
+      "sha256": "2e83b71e348cb7cfcd7cec0da25f78ad01a3fa4cdb9d9036df7f2a6058347512"
+    },
+    {
+      "path": "art/qingming/paper-scene.jpg",
+      "bytes": 444008,
+      "sha256": "e56cabeccac887dd12056952140b4e57e54ff17ff508d8a4acd3528ddfccc142"
+    },
+    {
+      "path": "art/qingming/paper-shop-study.png",
+      "bytes": 1418954,
+      "sha256": "1e5cf77ca8f318514b557a5f39f6361414b26fdc5f083476ca26d5181fe1df28"
+    },
+    {
+      "path": "art/qingming/paper-sign.jpg",
+      "bytes": 7981,
+      "sha256": "613b4ac951c871fe8d4f5bc962a88a810a767ad452419e7a98a666ac26efd857"
+    },
+    {
+      "path": "art/qingming/story-boat.jpg",
+      "bytes": 926975,
+      "sha256": "0b3b17c6197eefb8f1a4cc0d75271729cceea6d247223865961b6ba38c69d09e"
+    },
+    {
+      "path": "art/qingming/story-street.jpg",
+      "bytes": 546417,
+      "sha256": "60b2994b4724d45668900bb0b8b1f2f39333e881dd926239e17040f3063ff9c6"
+    },
+    {
+      "path": "art/qingming/tile-01.jpg",
+      "bytes": 4035443,
+      "sha256": "0a62870d16bbff3fbecf212572dda886c9c933d5061491a8eb89fe76c93c11cc"
+    },
+    {
+      "path": "art/qingming/tile-02.jpg",
+      "bytes": 4194892,
+      "sha256": "791f7f72be421a55116049f497fb7e4939cfb103d11cf8069e989ba60b787182"
+    },
+    {
+      "path": "art/qingming/tile-03.jpg",
+      "bytes": 4075403,
+      "sha256": "a174a1a59d8acbf5011d049fc5cd7f7c5e2db209ccea9a02664b27c17d289bdc"
+    },
+    {
+      "path": "art/qingming/tile-04.jpg",
+      "bytes": 4111411,
+      "sha256": "8e9514bb22a24b8716daa02ad7fa90b259c7c4b6a7ad84cb587f1e5a35c62e2f"
+    },
+    {
+      "path": "art/qingming/tile-05.jpg",
+      "bytes": 4163125,
+      "sha256": "f496ca4dd3a5294937937d6a5c9558cf72f028f273f2b80eac178573b0abff15"
+    },
+    {
+      "path": "art/qingming/tile-06.jpg",
+      "bytes": 4107560,
+      "sha256": "e172896ee88724aaf23342223913424ab39fd690c230a33a5229cc8b5459bb3b"
+    },
+    {
+      "path": "art/qingming/tile-07.jpg",
+      "bytes": 3872185,
+      "sha256": "2251c9bcd10f082f37a5c250758c1c2c7b1b48eb477a39547611dd37c5ee99bf"
+    },
+    {
+      "path": "art/qingming/tile-08.jpg",
+      "bytes": 3954246,
+      "sha256": "9a24a6ceb3149c7a60444fb09a2ebb797fac555b983fcd706ae82064b7e979ab"
+    },
+    {
+      "path": "art/qingming/tile-09.jpg",
+      "bytes": 3785392,
+      "sha256": "24d9fabd2f50af85fb311fec76e92144a0fdf5168355217b810641f4efce0915"
+    },
+    {
+      "path": "art/qingming/tile-10.jpg",
+      "bytes": 2098606,
+      "sha256": "5cbba7206bf8264d61532642782b12323066296a570c0378444848db816079d7"
+    },
+    {
+      "path": "art/qingming/tiles.json",
+      "bytes": 1399,
+      "sha256": "b1291f824a319a50fea9e70616795ef05a596897d3349cdea046fb929b28f21b"
+    },
+    {
+      "path": "art/qingming/wine-decoration.jpg",
+      "bytes": 182683,
+      "sha256": "319a5efe668263041cc5b8020b17d7497f813c559dfec0a6399584d962f224bf"
+    },
+    {
+      "path": "art/qingming/wine-head.png",
+      "bytes": 7780,
+      "sha256": "73f55189397c149b683fc9a62612d9e366991c10ccda4b66e1889b1a6c36d901"
+    },
+    {
+      "path": "art/qingming/wine-scene.jpg",
+      "bytes": 354878,
+      "sha256": "cf168129cee513fd2840581ca3371befe09a87f46c1615f3b7335571466b75e9"
+    },
+    {
+      "path": "art/qingming/wine-sign.jpg",
+      "bytes": 8465,
+      "sha256": "03f984bcd9a6947be49b1da56556561dbe4d8f56c027be6369c3f9d9ece4fd5a"
+    },
+    {
+      "path": "art/ui/lantern-dialogue-ink-frame-v1.png",
+      "bytes": 694548,
+      "sha256": "f7a18b50c25390687ca5f5c34f6aab5c7bd07a46f0f1d95003b054c6e144fd62"
+    },
+    {
+      "path": "art/ui/lantern-search-frame-v1.png",
+      "bytes": 2179662,
+      "sha256": "dfe79984c74047201d02d8f4192ff2cd28cf89ed6bb76a245d00470d491d76f1"
+    },
+    {
+      "path": "art/ui/lantern-search-note-v4.png",
+      "bytes": 2778086,
+      "sha256": "cbe443d9e86d0d5ca91d8afff4ccc1b52bcca5a0875fa4f7807ca89ea716a368"
+    },
+    {
+      "path": "art/ui/lantern-silk-note-v1.png",
+      "bytes": 2351976,
+      "sha256": "8ef10fa3ae5dae574d427d8f91c0880615cb981efcae41c3650a1310b7dc63cf"
+    },
+    {
+      "path": "art/ui/painted-icons.png",
+      "bytes": 948267,
+      "sha256": "a7b9aee34c9f4bfc9501f0f6af9bc993e3afdb5eb734dc53aa15ae85b2edda3f"
+    },
+    {
+      "path": "art/ui/reading-paper.png",
+      "bytes": 2248234,
+      "sha256": "2722e956b8033de67219903bf519da3eec10dd4042250d521b7c339529fdaf30"
+    },
+    {
+      "path": "art/zanhua/CREDITS.md",
+      "bytes": 12547,
+      "sha256": "a86236280fa4bb829e43efb4a853d29504b57e77f191400ad3ac0ce53747404b"
+    },
+    {
+      "path": "art/zanhua/animation/P1-attentive-v1.png",
+      "bytes": 2206174,
+      "sha256": "5aedd31e14e27a96d0b0bdd7567a6b15809362dfc1943efcdc6150ff37f77e15"
+    },
+    {
+      "path": "art/zanhua/animation/P1-delighted-v1.png",
+      "bytes": 2073969,
+      "sha256": "0d9f8863abdba6ab78af6d7a05630cf02c9bd20e704f916ab8001c521d56f9c2"
+    },
+    {
+      "path": "art/zanhua/animation/P1-full-background-v1.png",
+      "bytes": 3133499,
+      "sha256": "c65161cceedc1a483540019b1cce44bbf46c02c7f5e5ba03a44fd32afb3cb5bb"
+    },
+    {
+      "path": "art/zanhua/animation/P1-lure-clean-v1.png",
+      "bytes": 2866972,
+      "sha256": "ffa55cd32445b48bd72a14cfe96fb9ff6a164385a5e8be3e9b14547d7eb4d5c9"
+    },
+    {
+      "path": "art/zanhua/animation/P4-attentive-v1.png",
+      "bytes": 2467287,
+      "sha256": "2dec44f017fa0f8c2105a7546285015ef3ff6a3947a008ecc394d283b2dd4a1f"
+    },
+    {
+      "path": "art/zanhua/animation/P4-full-background-v1.png",
+      "bytes": 3003636,
+      "sha256": "26132d0128ea474496b3e6e01014e04715f767301d9455f7040ca6a38bc66c01"
+    },
+    {
+      "path": "art/zanhua/animation/P4-plate-v1.png",
+      "bytes": 2997418,
+      "sha256": "adf8711a0d02da35f5d61d8c2ce99b0919c533850593e3f503d5374b19b7d013"
+    },
+    {
+      "path": "art/zanhua/animation/P4-soft-smile-v1.png",
+      "bytes": 2283944,
+      "sha256": "dcd4b49a47c55d602672f41bafd0ddd30cf95b95bf9b3558ea818744ec9f67e1"
+    },
+    {
+      "path": "art/zanhua/animation/P6-curious-v1.png",
+      "bytes": 2112881,
+      "sha256": "93611cad85b169155f00ac06f7dc00fe262107904105dc2b378d07b6d815fba0"
+    },
+    {
+      "path": "art/zanhua/animation/P6-full-background-v1.png",
+      "bytes": 2800840,
+      "sha256": "732ed19d4b12340fc4006583182fd505f754d391dafcd107deddb1375df94bd1"
+    },
+    {
+      "path": "art/zanhua/animation/P6-plate-v1.png",
+      "bytes": 2844948,
+      "sha256": "47d1af87468bbcb69b1102ee951c665074a67676a80a3846bdcacd813b2b1187"
+    },
+    {
+      "path": "art/zanhua/animation/P6-reflective-v1.png",
+      "bytes": 2198592,
+      "sha256": "580c60b177f6c224e90e05f19879d0653a8cafea10c28a03aeb2f7a26d210943"
+    },
+    {
+      "path": "art/zanhua/animation/dog-background-v1.png",
+      "bytes": 2861922,
+      "sha256": "527b178bcd733a069481413c0a6fa4124b6fa81e20477f3a43dd85c4111c0b36"
+    },
+    {
+      "path": "art/zanhua/animation/dog-layer-v1.png",
+      "bytes": 257348,
+      "sha256": "b7701b71c2487f3e56d0532c9cd668b2471cb5dc8076776f6796f6d967a7fd6d"
+    },
+    {
+      "path": "art/zanhua/collectibles/atlas-v1.png",
+      "bytes": 1330959,
+      "sha256": "55aa7e2238ea56996fa45def4d987e49472176c69a5912a6b072c5a9ee9f8c63"
+    },
+    {
+      "path": "art/zanhua/full-scroll.jpg",
+      "bytes": 9742449,
+      "sha256": "cc8956b101f60880d1c0736d56e0f988667ba08983d5b526940da56d198de909"
+    },
+    {
+      "path": "art/zanhua/portraits/P1-head-v2.png",
+      "bytes": 1663286,
+      "sha256": "1ecd095882069caa5f4660242acdae2399c9c4bac59d411e97c2ce38a49f7110"
+    },
+    {
+      "path": "art/zanhua/portraits/P1.png",
+      "bytes": 86570,
+      "sha256": "cd921e252b06584a3bf0a6155592d5a3904241a52b16aeacc980cbb0ee2ed670"
+    },
+    {
+      "path": "art/zanhua/portraits/P4-head-v2.png",
+      "bytes": 1648549,
+      "sha256": "0cde550e654dbaae55bacc8440a05ac96a3cf2790820ab487ec3f5c5d04ce186"
+    },
+    {
+      "path": "art/zanhua/portraits/P4.png",
+      "bytes": 95159,
+      "sha256": "33777ce37ede2317f2a6e6b789fcc0cc102c024cbc166c52dc2388ed39d6e7a1"
+    },
+    {
+      "path": "art/zanhua/portraits/P6-head-v2.png",
+      "bytes": 1731757,
+      "sha256": "dbd1bdee7e3be43f21748977a690dc33637014f64f9ee2d7527141897df07908"
+    },
+    {
+      "path": "art/zanhua/portraits/P6.png",
+      "bytes": 129189,
+      "sha256": "b93bf5b92cc1ef882fb6d38ab778685e87db89f096489d69bff770c3fa7bec2e"
+    },
+    {
+      "path": "art/zanhua/seal/CREDITS.md",
+      "bytes": 2123,
+      "sha256": "270ab33d27154f8e622c2e967df497598ebe35e6f4a0ec15956502b712775c33"
+    },
+    {
+      "path": "art/zanhua/seal/collector-frame-v3.png",
+      "bytes": 420362,
+      "sha256": "204c0b0dd085efe83ad6ffcc72be48541dc659aea269a07bdf9296deeb887009"
+    },
+    {
+      "path": "art/zanhua/seal/scholar-stone-v1.png",
+      "bytes": 1736185,
+      "sha256": "66c3b148925e9abe163fc1eccf49921b38485bb708590f0d17b83b1cdacfc78c"
+    },
+    {
+      "path": "art/zanhua/seal/viewing-impression-v2.png",
+      "bytes": 1833607,
+      "sha256": "93bf5e951850f86d6c00d2e90a83cb377ad1dcb85a5dee1267a7c577852b1470"
+    },
+    {
+      "path": "art/zanhua/studies/P1-dress-layers-v1.png",
+      "bytes": 1836642,
+      "sha256": "1ce16f400c3c6c2d3636a6521316a7370e571c5b1a05e24c47b1230852f46d0c"
+    },
+    {
+      "path": "art/zanhua/studies/P1-dress-original.png",
+      "bytes": 2202944,
+      "sha256": "1036202e60915eb13c8de2be3213775dd4b209b4630e9f4574b491ac17ab3193"
+    },
+    {
+      "path": "art/zanhua/studies/P1-dress-study-v1.png",
+      "bytes": 1622672,
+      "sha256": "4af17c6ac04d4aa2ecbc1fd2a011b00e58ddbc29828b22b388679dc2414a63e6"
+    },
+    {
+      "path": "art/zanhua/studies/P4-dress-layers-v1.png",
+      "bytes": 1995829,
+      "sha256": "028667a2cf93bc10cb72b1ede916b20d4e5fde5026a6abaf8ec81d4387e6a1c3"
+    },
+    {
+      "path": "art/zanhua/studies/P4-dress-original.png",
+      "bytes": 2106697,
+      "sha256": "9cf9fa041d3e9cdf4ac328ce903373032d2d665dee681a25c4bddcb83d5a2e38"
+    },
+    {
+      "path": "art/zanhua/studies/P4-dress-study-v1.png",
+      "bytes": 1858172,
+      "sha256": "3532c77a27ad5d39e071d6fdf0ce73a903da301ddc5b6266a2b42ead19130c8a"
+    },
+    {
+      "path": "art/zanhua/studies/P6-coiffure-layers-v1.png",
+      "bytes": 2212057,
+      "sha256": "5d5be1fd66efe74e66c24e982830c7fcb86c10ff90d4192476fce2e6cd09eabf"
+    },
+    {
+      "path": "art/zanhua/studies/P6-coiffure-study-v1.png",
+      "bytes": 2192409,
+      "sha256": "9d5caa81da8f2b89d0e69c79034d283785579f8764daa6fffae43c0fdd82513b"
+    },
+    {
+      "path": "art/zanhua/studies/P6-full-study-v1.png",
+      "bytes": 1795580,
+      "sha256": "4ac5df4c89f254bc0b8067dd0a80c0ac20d3165926c718d47433565721ad72e3"
+    },
+    {
+      "path": "art/zanhua/studies/P6-hair-flower-focus-v2.png",
+      "bytes": 17918,
+      "sha256": "148d8e0211810a7ef47246234cf03a102420d18d034fa5a148d7b44fad0179e0"
+    },
+    {
+      "path": "art/zanhua/studies/P6-hair-ornament-focus-v2.png",
+      "bytes": 16209,
+      "sha256": "e399db966123c5770f49e3aaad8553dfc95e5c0ae708ff31196a90156e4d5edb"
+    },
+    {
+      "path": "art/zanhua/studies/P6-head-original.png",
+      "bytes": 408236,
+      "sha256": "62369ca36032b474a174c31332c9b82a21590c1966b9ca3687430da117f85ab4"
+    },
+    {
+      "path": "art/zanhua/studies/P6-high-hair-focus-v2.png",
+      "bytes": 18712,
+      "sha256": "82b3de9cc63b6026b1af57b7005cc4944b1b22f4fb9f2e676dbf1455b1378592"
+    },
+    {
+      "path": "assets/index-DZ8X6Ko2.js",
+      "bytes": 1191988,
+      "sha256": "ef1ad0da6cac6e158c2fa7e4a3f860240c8c7a6bdbfd70e3b6913a7ea3848f9d"
+    },
+    {
+      "path": "assets/index-cF7LfH34.css",
+      "bytes": 232441,
+      "sha256": "6bbc2e05cb5dabf3a58f99295c9386ff5c97fd91c3f2d3b7d66650c165cbfc1f"
+    },
+    {
+      "path": "audio/CREDITS.md",
+      "bytes": 6566,
+      "sha256": "ca813344f015a36fce3575aea301303c8c9a1ab8b8eb088f93ffe0cc656d0ed4"
+    },
+    {
+      "path": "audio/crowd.ogg",
+      "bytes": 1970215,
+      "sha256": "0aeb1fa7a3d9647d3284e97d9880b6375b54db2eda6a517c64e3bb02ac8a51cc"
+    },
+    {
+      "path": "audio/examination-music.mp3",
+      "bytes": 2098944,
+      "sha256": "0fc1757554a51d3359a5e8f483e609b43387cbff014b4a4fe6e590e43c72ebe8"
+    },
+    {
+      "path": "audio/kangqu-music.mp3",
+      "bytes": 2098944,
+      "sha256": "6482317dfc38cc81cc0ffc96180197b5e065e38bba088442074beedb17ca4292"
+    },
+    {
+      "path": "audio/luoshen-music.wav",
+      "bytes": 2304044,
+      "sha256": "d53baadf544cfb61ed020ffdafa354ff17544c3b201a9146be7468dd407ab8b7"
+    },
+    {
+      "path": "audio/qingming-music.mp3",
+      "bytes": 2098944,
+      "sha256": "f323097c1727128076e95da70212465ee69d9d7a8af9834ecebf4c52be4abd72"
+    },
+    {
+      "path": "audio/scroll-music.mp3",
+      "bytes": 2098944,
+      "sha256": "46caeb57f1068d6a780913cd1ec9e00c3d337a2815bb5c355e46bb88c90a3123"
+    },
+    {
+      "path": "audio/tea.ogg",
+      "bytes": 252347,
+      "sha256": "5580d3f8f6bde68b5215a99c7a8180536eb89be3a47b49e21da73e4e17e0906f"
+    },
+    {
+      "path": "audio/zanhua-music.mp3",
+      "bytes": 2098944,
+      "sha256": "c16be78cb00ea97f236af1f9a50b1aaa1f94f67f9cabc86c170b1393f1d2c8bf"
+    },
+    {
+      "path": "chapters/examination-standalone-20261027/index.html",
+      "bytes": 524141,
+      "sha256": "9d7b269acd0a25a53b437f897bf7c535a684122e1d77f89253bcb950dff3e0f0"
+    },
+    {
+      "path": "chapters/examination-standalone-20261027/version.json",
+      "bytes": 464,
+      "sha256": "64f777102bcac50a2eea990c8a156bcb02aeb8621b17aad4f8d9218db5bb06d2"
+    },
+    {
+      "path": "chapters/kangqu-listening-legacy-20261027/index.html",
+      "bytes": 514216,
+      "sha256": "e5926c1e8b7f3a89b4295a36db45e965e4b7f684f3d87ef81f36b7801fb579ef"
+    },
+    {
+      "path": "chapters/kangqu-listening-legacy-20261027/original-index.html",
+      "bytes": 514182,
+      "sha256": "a895044ce6904cc78198acb577eee1ff998d225a626cd1379b1d876b64a49cb6"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.1.14/data/source-note.json",
+      "bytes": 3887,
+      "sha256": "5fc2308a648b96d1da53d75d871926f72e0d0c3781a41d4b2e496c73a7f20cfe"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.1.14/data/version-manifest.json",
+      "bytes": 51416,
+      "sha256": "dd3595bcb60c6d5d2459990f76497d31b4fe166e4600d3675785335d277d27e7"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.1.14/fresh.html",
+      "bytes": 858202,
+      "sha256": "6d9e7efca26f349661b4f68861a5031136e359fa9cef02bec4ae3e4557ceaaef"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.1.14/index.html",
+      "bytes": 858163,
+      "sha256": "30ca427d745914794eb853b304c679a0951fc6291a8f9d9ae0e44ba07839acdd"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.1.14/original-index.html",
+      "bytes": 858126,
+      "sha256": "f654f205b7271baa98473d8912a4f2c42d4ec10a54739e77f927d8ec7e090523"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.2.0-navigation-20261027/index.html",
+      "bytes": 877468,
+      "sha256": "2786c4b032613a97c7717fd87107741a36f9ffb1a8f273d10bce2de790984cec"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.2.0-navigation-20261027/version.json",
+      "bytes": 444,
+      "sha256": "a86d667d4620e88445bf5e7f9ac4d02c21ab55ce3c7e6a86b9c9e232b257b0fe"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.2.0/data/active-release.json",
+      "bytes": 723,
+      "sha256": "18057f37e1c661960d062f59f8b133767f1fb8b4d7f2813fdeb6a223d3885771"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.2.0/data/source-note.json",
+      "bytes": 4176,
+      "sha256": "a054db19ec5ced8bd5662e3f991b35295b1a833db5e332018d724d5274bfdd31"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.2.0/data/version-manifest.json",
+      "bytes": 51815,
+      "sha256": "5a2b187cea1c366395ef6b7ebf9534ea55fbdaa68b2adef56aa2303c644ae9fe"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.2.0/fresh.html",
+      "bytes": 877618,
+      "sha256": "c402c9fc3003a36da4110569e51e1b35f6214fd9860137a2841d144cbe5c2057"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.2.0/index.html",
+      "bytes": 877616,
+      "sha256": "65aafa12fddf785287b4e3424525eb0dee232fcfa5e718e258c79510b9aed022"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.0-preview-20261027/data/source-note.json",
+      "bytes": 4687,
+      "sha256": "0eeb7a3f8fd282b7c60904970e36dbb6550306cd337dab0630132d1784fd44d1"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.0-preview-20261027/data/version-manifest.json",
+      "bytes": 1326,
+      "sha256": "19e67db541ede6dcfaef54ce0471936e122999bfea0745de0a6b9edf4307fe25"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.0-preview-20261027/fresh.html",
+      "bytes": 887418,
+      "sha256": "03d8cdd098e3a9b3263f0a5159b15dd841431edef5d839f7dc35aa48c8ae0ea4"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.0-preview-20261027/index.html",
+      "bytes": 887419,
+      "sha256": "dceaa8c150011b5b655a990ff4f0a8425705dfcc151aa43db650c7f0252bd43e"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.0-preview-20261027/note.html",
+      "bytes": 887417,
+      "sha256": "c9d14e8b9e70714d1a9bce26592f56788ddcceef0375dbc93dd7824e879c487f"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1-preview-20261027/data/source-note.json",
+      "bytes": 4687,
+      "sha256": "d11b4401f937aa52267f711da23396bf04d84bd4933e486b7488e99679b93a40"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1-preview-20261027/data/version-manifest.json",
+      "bytes": 1329,
+      "sha256": "56d653ce0b5eb0b85b1917b5e3f2a0a35a6eef5fa2c9858654bf8416dc21e638"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1-preview-20261027/fresh.html",
+      "bytes": 886736,
+      "sha256": "c286a4f3a6ab0e1ac2c940a24fda6d865302c57f945112ec46566f3d47582339"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1-preview-20261027/index.html",
+      "bytes": 886737,
+      "sha256": "2f4070b52e2cbffaccfbf0a8ab57d98603f3b67db66c68651e47940b324faac4"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1-preview-20261027/note.html",
+      "bytes": 886735,
+      "sha256": "7f4d56a9c86befe0c5c598e58a06d55181a50a9d74d90b41b7b676a5bc35f8e3"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1/data/active-release.json",
+      "bytes": 1087,
+      "sha256": "e027c723b414dc398953afea6c9ef87da9feff952415bf255782cbd7e377b979"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1/data/source-note.json",
+      "bytes": 5258,
+      "sha256": "318ebabddae74d9642acb55a9324ac77a8d26fd3e3f81c8b771162ebe486602a"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1/data/version-manifest.json",
+      "bytes": 1932,
+      "sha256": "749c98a074e181c2e2433a3e6ecbf311e024c1c090f80ebf3007bc0b86a29ad8"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1/fresh.html",
+      "bytes": 886654,
+      "sha256": "cd06a03ffbca48f4b9199509677b6b52bafd5fbdc77d0041b9dcd67aa346e8cc"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1/index.html",
+      "bytes": 886652,
+      "sha256": "4fca5b692eacff9d381e98f3fa076adf255e5eb388992e7ea367cf0467fd213b"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2-2.3.1/note.html",
+      "bytes": 886650,
+      "sha256": "9aab93766233068fc54cbef5f717bfc3a1d0bcf2e37b480638a7caa3b4a13a47"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/animation/fixed-background.png",
+      "bytes": 223602,
+      "sha256": "6e55285e9b3908c88afdedcb961fb8bdb02e943f253eaf74cf791dd8f8849b38"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/animation/foreground.png",
+      "bytes": 209702,
+      "sha256": "19e104bcd6e243d622465e748989d7bd63e08f0bca51238ae6ad7ee72b2d12d6"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/animation/frames/group-01.png",
+      "bytes": 321747,
+      "sha256": "7fbbb86a85fbc63d26101ac46f298dfa5c4c94f50122207f4f9124dc3519e88e"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/animation/frames/group-02.png",
+      "bytes": 332793,
+      "sha256": "3040d26270e7a44a7d9f2e5f89ff61483ab145c4b5394461854e95ffab7709e1"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/animation/frames/group-03.png",
+      "bytes": 323859,
+      "sha256": "b093cbd8fa6f592626f39b0c226e0f6e537a73a76c0eabb9a7ca6a13398bac3c"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/animation/frames/group-04.png",
+      "bytes": 330863,
+      "sha256": "480b88314d33c7aced0abd9a6f5bff6a8ed1bcf758d2542088db2acba0b0b9ae"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/animation/frames/group-05.png",
+      "bytes": 332341,
+      "sha256": "750f25c23974102dec47b801a71d50a4b86bb49a1aa03569c2642cec7a1b1ffe"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/animation/frames/group-06.png",
+      "bytes": 321747,
+      "sha256": "7fbbb86a85fbc63d26101ac46f298dfa5c4c94f50122207f4f9124dc3519e88e"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/animation/group-master.png",
+      "bytes": 1707038,
+      "sha256": "3c48b43c3775526adaf0e5c83849da1ec2d10a569737831cda4619e5e150e33e"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/animation/group-rest.png",
+      "bytes": 321747,
+      "sha256": "7fbbb86a85fbc63d26101ac46f298dfa5c4c94f50122207f4f9124dc3519e88e"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/animation/original-reference.png",
+      "bytes": 209693,
+      "sha256": "dfddd8e03521d761d3b089cad8c9f281e0bae0ce0ab369e860d6a2428f873b57"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/animation/playback.json",
+      "bytes": 329,
+      "sha256": "b67aeda09caeda9e2d6293996f8be1c6024ef879e5365d1eaeff5aef12f9afa6"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/animation/registration.json",
+      "bytes": 1113,
+      "sha256": "872f6fa0fa0025c5069bf5b7583de810ecfa5addca67ca9bbfaa21352708ee7e"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/data/source-note.json",
+      "bytes": 3887,
+      "sha256": "5fc2308a648b96d1da53d75d871926f72e0d0c3781a41d4b2e496c73a7f20cfe"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/data/version-manifest.json",
+      "bytes": 51416,
+      "sha256": "dd3595bcb60c6d5d2459990f76497d31b4fe166e4600d3675785335d277d27e7"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/brocade/collection.png",
+      "bytes": 513820,
+      "sha256": "64faea988ccb98a93b53da50b801cae9d8a92abd3d36aaf74f73821dc078f04f"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/brocade/frame-01.png",
+      "bytes": 514139,
+      "sha256": "8e8d0a0fc703bc8cc2369d25be852b093397f886169e4d1d29a1468ae128efac"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/brocade/frame-02.png",
+      "bytes": 508935,
+      "sha256": "d7dbaca5f7dfb0e4aec248d93b4ca65accfb5d172519feb739976cc16526bed2"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/brocade/frame-03.png",
+      "bytes": 512576,
+      "sha256": "ee01c5ee3cc84190845e45b0b173179aa223d3170ce9753e8363d3338332ee49"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/brocade/frame-04.png",
+      "bytes": 514139,
+      "sha256": "8e8d0a0fc703bc8cc2369d25be852b093397f886169e4d1d29a1468ae128efac"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/brocade/original.png",
+      "bytes": 250476,
+      "sha256": "b3901961e8fd0503da09c3b6141d604e14b7c18632ca7be63eb85806379d935a"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flag-registration.json",
+      "bytes": 5603,
+      "sha256": "35c7f3b664266874e916619f9cda39cac767adb65eec84e8ee4791af61049eca"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flag-visual-review.json",
+      "bytes": 4521,
+      "sha256": "dfcc55375b96b3a4883e2745abb30301ce64a70729ffa84db97ce53a72d03999"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-01.png",
+      "bytes": 387302,
+      "sha256": "5903d70520bbef7d01a15d64f96fb0ab98970f92012aa1bc087b615f8c4c3cef"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-02.png",
+      "bytes": 387302,
+      "sha256": "5903d70520bbef7d01a15d64f96fb0ab98970f92012aa1bc087b615f8c4c3cef"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-03.png",
+      "bytes": 391958,
+      "sha256": "780f39ef81c95ead6dcff0e89e0342b5f284efcc0bcd2b3244cecfb6e05735d1"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-04.png",
+      "bytes": 398369,
+      "sha256": "f9b4929f42fca40a2340a1f35e56ac87c64c005ac54abc68c99bd25772e0a292"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-05.png",
+      "bytes": 398671,
+      "sha256": "844a471ae035bbae4f906439683ad30e75c2aee2644f9d3e37411e46061198d3"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-06.png",
+      "bytes": 396256,
+      "sha256": "2e45e304da43c416e1b5875a406fa7d4fb53610f1e3502cc066fc25c20d365ad"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-07.png",
+      "bytes": 394375,
+      "sha256": "c7db668a9cbb24753de5059a991deb85d2190c0fb7536f13439e2d6c99cae14e"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-08.png",
+      "bytes": 392119,
+      "sha256": "6cba534f684442ab1eda775a9b53c2c92bf83e1d8e28d72f4916413c48c57c6b"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-1/frame-09.png",
+      "bytes": 387302,
+      "sha256": "5903d70520bbef7d01a15d64f96fb0ab98970f92012aa1bc087b615f8c4c3cef"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-1/original.png",
+      "bytes": 1296601,
+      "sha256": "467277895394218a91d035c748afd7c25773425fcfc8aa75dca55a32cccfdf10"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-01.png",
+      "bytes": 418387,
+      "sha256": "a8d7ee4776c53f9af1322ce4943c11c187157e30513e4140ba2431c1739751f6"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-02.png",
+      "bytes": 418387,
+      "sha256": "a8d7ee4776c53f9af1322ce4943c11c187157e30513e4140ba2431c1739751f6"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-03.png",
+      "bytes": 427293,
+      "sha256": "c93d322b6b1c9aa83a875adbb15b83f322dec34ba4dd605b364daeaef48568a6"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-04.png",
+      "bytes": 430676,
+      "sha256": "39c6e8b6b80b37c8733220353004a0929ac3424e6778fcd9515005eedc930b6f"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-05.png",
+      "bytes": 425504,
+      "sha256": "93fbdaeabe1eb7147614ab750bea7632f3ba6f7b6b82d772f5b149f3b613d1f6"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-06.png",
+      "bytes": 430473,
+      "sha256": "b0b0b47ab78f32551ad4100cbad75ba717b0ed92df633f65069e85bddb6288ac"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-07.png",
+      "bytes": 422293,
+      "sha256": "7c2f9c8390771eac8d2c2f632b113cc3512ecda1a5a4465c6e4a4be478850c9e"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-08.png",
+      "bytes": 422043,
+      "sha256": "556bc13b98d01d3a558c518b8ceacfd5b6504cd2340fec37616d8428116c4f5b"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-2/frame-09.png",
+      "bytes": 418387,
+      "sha256": "a8d7ee4776c53f9af1322ce4943c11c187157e30513e4140ba2431c1739751f6"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-2/original.png",
+      "bytes": 1189828,
+      "sha256": "7b76387791e91741a910b006ebe07f7842a53ca55c7a0a2fe82cc85dd21d72ba"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-01.png",
+      "bytes": 438260,
+      "sha256": "1ba92a46b1563f6eb2a65d659a867088aa0fc1a1ce4e06727a8239ebcbdda1fd"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-02.png",
+      "bytes": 438260,
+      "sha256": "1ba92a46b1563f6eb2a65d659a867088aa0fc1a1ce4e06727a8239ebcbdda1fd"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-03.png",
+      "bytes": 445521,
+      "sha256": "697b862ce8cc64024b9f21afcd44b48afbd36b1cff69130588e3c53b320bb15d"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-04.png",
+      "bytes": 452567,
+      "sha256": "5fd20f7b945f574a0e3d5e2b650159eeb37f14338c227f85ba02bea866bb5f86"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-05.png",
+      "bytes": 451708,
+      "sha256": "8beb366a1e3e0021af93f8cc09866521b42db266051a66dde1b54aa43a7c9659"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-06.png",
+      "bytes": 451511,
+      "sha256": "b2a548b0d6bb275b8aec45f17d5c38308fa988d5460cfe2a640ff64dbc4a1ad5"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-07.png",
+      "bytes": 445924,
+      "sha256": "bc43f95a42f1c124bd8c8b77d2adf077786828ad27d94518dd5886e1b03f3aa3"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-08.png",
+      "bytes": 444676,
+      "sha256": "79752ef66f235b28ef7459144e3aa528cc11ede6fc97885d549d915c6217fe72"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-3/frame-09.png",
+      "bytes": 438260,
+      "sha256": "1ba92a46b1563f6eb2a65d659a867088aa0fc1a1ce4e06727a8239ebcbdda1fd"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-front-3/original.png",
+      "bytes": 1124051,
+      "sha256": "3efc3029144f97faf3c45e57f5500e6bcf6e52fa6f2c14c4adecfab1c99103d9"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-01.png",
+      "bytes": 419305,
+      "sha256": "4588af4d2a0c6d387a94cfb9d91a660ceeec39d8ae8a8d8d8619303598d50f19"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-02.png",
+      "bytes": 419305,
+      "sha256": "4588af4d2a0c6d387a94cfb9d91a660ceeec39d8ae8a8d8d8619303598d50f19"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-03.png",
+      "bytes": 419133,
+      "sha256": "fef04fabe5ba4bfa23f3b4d1ce17aa9036467b37d06a0bce139c1b70bef285a5"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-04.png",
+      "bytes": 426871,
+      "sha256": "42d51313d78d2e8c0ab786f5979b7425abab6122122298cb88238329b7a2921b"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-05.png",
+      "bytes": 429918,
+      "sha256": "e8ddc41046e3082f8b4fc346fed6a10fc09de2edee8f0221ff4483a660921ab8"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-06.png",
+      "bytes": 422154,
+      "sha256": "4d80c54ab2eaea561b5071d2ebbddb7dd39e51b60a9a2992c38282fb2caeb8a8"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-07.png",
+      "bytes": 427066,
+      "sha256": "153e4c0311a397fdffc72071a8412683cf8165fdf2e01b7965e3c076326dcafa"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-08.png",
+      "bytes": 422411,
+      "sha256": "86a9607a79c4386585dc8136b3cbaa733f9910ca6a8e4f800a990badc8ccb8ac"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-1/frame-09.png",
+      "bytes": 419305,
+      "sha256": "4588af4d2a0c6d387a94cfb9d91a660ceeec39d8ae8a8d8d8619303598d50f19"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-1/original.png",
+      "bytes": 1455262,
+      "sha256": "fac46348c5d3411f2f253f42bd5118ab56e8263abd87fa11f5430501c59cbe93"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-01.png",
+      "bytes": 408468,
+      "sha256": "cf9db78625cdb1f442ed62c91a152935eeed2c41566666c4e64af225b6398042"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-02.png",
+      "bytes": 408468,
+      "sha256": "cf9db78625cdb1f442ed62c91a152935eeed2c41566666c4e64af225b6398042"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-03.png",
+      "bytes": 407260,
+      "sha256": "1c0640e09209db14f1d5942e064e72be9159fa52ade4d6310e81aeb1515bf260"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-04.png",
+      "bytes": 407842,
+      "sha256": "86b9cef452f5b097b14fa2320cf37c6c2cc3c3e561ef22273f3f5f7d885ccdda"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-05.png",
+      "bytes": 412023,
+      "sha256": "d428d18fff78ed7aac08d1d1590c8c4813f753eff49807177e091d41f08b3849"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-06.png",
+      "bytes": 409118,
+      "sha256": "69b4a63b8cce1862ae07b3ddb6e482dfb0dd156abe00a3e8d4119057246a110c"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-07.png",
+      "bytes": 409954,
+      "sha256": "ae0379a0758e7c4a0c9ce215ffd56ac300ac8c37c3eb910b61e718f043e94cba"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-08.png",
+      "bytes": 410558,
+      "sha256": "747d334e62517daa0bc37afa78dc613d4119b3dcd2ad93d6861cc2fc25bf1bc1"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-2/frame-09.png",
+      "bytes": 408468,
+      "sha256": "cf9db78625cdb1f442ed62c91a152935eeed2c41566666c4e64af225b6398042"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/flags-rear-2/original.png",
+      "bytes": 1178714,
+      "sha256": "c1be2497a318ce0feef013fd5ccb3fc340717f30a365ee9375d9b6fabf8d03fd"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/grotto/background.png",
+      "bytes": 466821,
+      "sha256": "29e5a5cc154e402211a46340e816650a69700ca30516c61a87f0b894d4776241"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/grotto/collection.png",
+      "bytes": 411710,
+      "sha256": "19f18cea81e0219e849ee2271aabeda7053c89fe8badd8f695084679b3010a0a"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/grotto/foreground.png",
+      "bytes": 455918,
+      "sha256": "401bb762e473fe0b248ece4fe409935059b45fda2dde7087d1a8ba6a9377fb06"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/grotto/frame-01.png",
+      "bytes": 412891,
+      "sha256": "a62c904a1ed873be09df3679c2438c814269f2f828919849b7605e0b1faa7807"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/grotto/frame-02.png",
+      "bytes": 414722,
+      "sha256": "72f1dfcc3d10c9e20662920249aa8bd0b42d057f1e321fe65e407536e72d979d"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/grotto/frame-03.png",
+      "bytes": 413335,
+      "sha256": "a75d6f7c1d5f2b80403b254df7d7e0c85d15bdd45441364ee243f611934da762"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/grotto/frame-04.png",
+      "bytes": 412891,
+      "sha256": "a62c904a1ed873be09df3679c2438c814269f2f828919849b7605e0b1faa7807"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/grotto/original.png",
+      "bytes": 455628,
+      "sha256": "b9f9d51b11c5327e0506e465ba46e18814d98881208b969195bedbcfee8f4981"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/grotto/registration.json",
+      "bytes": 3608,
+      "sha256": "0b5b87bfa342724bc0e97c84f0db14a003a99ce63be74fa6d80605340257610f"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/manifest.json",
+      "bytes": 254597,
+      "sha256": "59efc25657e6bf4782ce7defb21bd173dff1398af1e083ab5926c7af0e6326be"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/proportion-study-2026-10-25/official-matched-to-flag-v3.png",
+      "bytes": 1950282,
+      "sha256": "18a3b08e3d5cb38d035cb356bd10db4914f3eb30432d1c63562552ff87010cd8"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-1-art.png",
+      "bytes": 219488,
+      "sha256": "6de426e2e1e7befbbe3f7217ebba7e6f052dbe6a8f3c55d0167932db7d659caf"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-10-art.png",
+      "bytes": 374196,
+      "sha256": "cf90867d65221a9023444432ebff9a15473ca78b0ee9cb7897587e34d5d21f15"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-11-art.png",
+      "bytes": 482154,
+      "sha256": "d8d2b98210177aa4660cb29802a77f20d9abaf1556a44cbdb9598eba74d57f2d"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-12-art.png",
+      "bytes": 197476,
+      "sha256": "2a571de8c3b50b94573ec7272fe6426652f41a53f15d5ab6aa7c9b7c27e3b489"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-2-art.png",
+      "bytes": 174391,
+      "sha256": "1afc2b2cc3fa7a71c8baf61de383a129f21e7479e75458039a7847aa16ab4c70"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-4-art.png",
+      "bytes": 354087,
+      "sha256": "e78fc351b64f1a07471cc6da287794fafcab2a3eeb2090ef83242a64b6f96edc"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-6-art.png",
+      "bytes": 344332,
+      "sha256": "6ae30d178a692c5ad4e1b72afb3a4415dfad282c86f8530f7be854060be2e209"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-7-art.png",
+      "bytes": 166591,
+      "sha256": "bde82e890b401f8b6634ea45ebf808ec42577f95f4d3659a994292104d25e1e7"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-8-art.png",
+      "bytes": 284240,
+      "sha256": "9077902ddf0548c1ace0be06c88be3dfa582c25b4860f1c6d258e6e255d0e6bf"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.11/wall-9-art.png",
+      "bytes": 244316,
+      "sha256": "0cbcf97a2e490610f7acd43f5bfbcd141d8cd47cd419995b2dbd8aef238c57ba"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.12/left-background.png",
+      "bytes": 241563,
+      "sha256": "a08b0b579af111110fceff623d035741fee8c0a215267cc44d6afd2cb42b2354"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.12/left-foreground.png",
+      "bytes": 232988,
+      "sha256": "06f563a8709651db96250512550320d3481d03476657670412b0f2aab869018a"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.12/left-original.png",
+      "bytes": 232551,
+      "sha256": "8bdfb604e20af230e4baf9b0268725fcfc9cd1c0a681fa1d0f4335891dc00989"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.12/right-background.png",
+      "bytes": 296096,
+      "sha256": "43d6639d26cefd626f397a3f2a0f508cc1281137502b7727a59ce0901e4634dd"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.12/right-foreground.png",
+      "bytes": 292761,
+      "sha256": "551e916b1703e54f8a9d296350245f3e456fc546e84eb1106b47f4b1a8f97166"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.12/right-original.png",
+      "bytes": 292260,
+      "sha256": "9fe06e88bfeab0a16897ca5e85baa2f1a85116ac33c11181a52ad315ffc45c8e"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.12/stage-registration.json",
+      "bytes": 39831,
+      "sha256": "91b3fad074d59c47543f2d730145c4eb8cf70524732cf35537fd4878743c1397"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flag-approved.webp",
+      "bytes": 638122,
+      "sha256": "2df934e387e9dffdd86c9b9a7cd12fdcedeabc7b056d7e0a759bbda3eb3d7710"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flag-front-motion-sheet.webp",
+      "bytes": 1111092,
+      "sha256": "674eb2ea5dba9f5c5b72af873d9aab0cfce2543e5c8edb3df7ebb17f98f6ad8f"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flag-rear-staff-pose-0.webp",
+      "bytes": 489178,
+      "sha256": "ad3494d61088491850f09064e6c9808ae01579e01b4b07f8f79e6e8c7c089d54"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flag-rear-staff-pose-1.webp",
+      "bytes": 479216,
+      "sha256": "d918220d7fe1a7a513cd40992bbe0053503090fba53f82ff59850376e420b8fe"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flag-rear-standing-pose-0.webp",
+      "bytes": 588734,
+      "sha256": "8246bae65a34e7390bcd0ae2d758c0204c8221bfbb25f104bde6b91aee5f7a6f"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flag-rear-standing-pose-1.webp",
+      "bytes": 594804,
+      "sha256": "c8275e7e13b5041b58dcaed3027d56b418c5a1f7e7f1174b58076b9f8a5062bf"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flag-side-pose-0.webp",
+      "bytes": 576406,
+      "sha256": "6dc1cb54758219e85a5eebeabd6aa7a63b056f44682e78a4fd95e2290ea0ea76"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flag-side-pose-1.webp",
+      "bytes": 580924,
+      "sha256": "3fef4709d19a1cd8da159385c5bc23eab8141aa4bb35c83a9dc59413d3f858f7"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flags-front-1-registration.json",
+      "bytes": 19708,
+      "sha256": "2a4e3c583421d898b0099a54991f12295517729c1ccfa0af926c419f60e8e498"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flags-front-2-registration.json",
+      "bytes": 20796,
+      "sha256": "5df744e4e655efd63aebb78be351c989d0ff83e59f8c4221f8a42be8cf0c7f84"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flags-front-3-registration.json",
+      "bytes": 28960,
+      "sha256": "d088e66aa20bbaae0375e06869b7b3c55a624bf61ddd461b603e381890ec7481"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flags-rear-1-registration.json",
+      "bytes": 24263,
+      "sha256": "358f61a2513b1fc991396bea7b91d96a74209d50f37e985d831e545ff7b40e80"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/flags-rear-2-registration.json",
+      "bytes": 26962,
+      "sha256": "e6782b7a4f4a522e29c59cb252397aa2e3b78473553438bce80e7770ddc29df7"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-01-pose-1.webp",
+      "bytes": 664582,
+      "sha256": "be8987302084d18eadd8ac0194c8a33bd166c5ac11f1f12c7af16572a0fc10e0"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-02-pose-0.webp",
+      "bytes": 498508,
+      "sha256": "3ae38b051b3f9a76ad4b8e5b665c340c20fdfdf5fba0135f4f9636a9c025bd41"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-02-pose-1.webp",
+      "bytes": 507154,
+      "sha256": "9e7d68262f8f7100bdc090150a4fb304955544a483f6823a12a67e90ca4e0e04"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-03-pose-0.webp",
+      "bytes": 533910,
+      "sha256": "b870d182dc191abc62bdb4e3be760c0aa0e3b8c7ca4efe401664ea06c418443f"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-03-pose-1.webp",
+      "bytes": 540534,
+      "sha256": "9aeb577a1b52ab4207fc08b92d39dfefc50f52391ea192e02fc5f775dc131423"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-04-pose-0.webp",
+      "bytes": 543524,
+      "sha256": "340d8e3594a811d41ccdfdc1da43af8eea733691f1051b31a0733f85bcfe6f87"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-04-pose-1.webp",
+      "bytes": 555106,
+      "sha256": "701e2012fd866fa1bb597578838f8bcd503cdaacbc78bd768a6960a3c52bf855"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-05-pose-0.webp",
+      "bytes": 598796,
+      "sha256": "bb9e09bcb837afb2122f9d35cf4c6a519b3fd79464e5aa85426252c447a11a50"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-05-pose-1.webp",
+      "bytes": 598526,
+      "sha256": "4b489cf3957431b1511532ead575aa89f0aa90a37cf07999b8f8e03445c72273"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-06-pose-0.webp",
+      "bytes": 544168,
+      "sha256": "4a85521ccddcb8d66fa10551498cc0f6f397dbd9357b012a6805be29239b10f9"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-06-pose-1.webp",
+      "bytes": 556764,
+      "sha256": "f63abfd2122d7a0fe3572fae9123d2db9697a132a2752880fc0e0c2896aa7440"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-07-pose-0.webp",
+      "bytes": 890444,
+      "sha256": "98c9eea0e249f7c749d5774edc39e7cac7aaae59a02447a155742294850cfe36"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-07-pose-1.webp",
+      "bytes": 890480,
+      "sha256": "b25a1b7c620e17527d2eaaa2597a713b62ed53bfb2c00692baec41c46c16ab0b"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-08-pose-0.webp",
+      "bytes": 568756,
+      "sha256": "43b7f6c394fd0a94a60f44586776ca4941a1bfdd2feaa8cb6dcb384bf4158418"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-08-pose-1.webp",
+      "bytes": 541300,
+      "sha256": "1a2f8ddb11035a7ea36f4902c784b38f30205630bbef58ea07eff571f72a4c28"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-09-pose-0.webp",
+      "bytes": 617856,
+      "sha256": "06f8d3d78be474666d6eaa9da9f0d581c437f0884fa21db01d7aae30c8b57db1"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-09-pose-1.webp",
+      "bytes": 636654,
+      "sha256": "fedd3d3175cc3d986562535578413d0c26c01beef1542ae18652deb91144e41e"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-10-pose-0.webp",
+      "bytes": 590824,
+      "sha256": "993d03dcfb978bc893e5cd9a51f1a09f6d3f41c3c2438c697965f23383964462"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-10-pose-1.webp",
+      "bytes": 602670,
+      "sha256": "fe36fb42a9fb52f5637e6a5b7039190aaa0ff3d66f93f9c832251a6ad33c4c16"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-11-pose-0.webp",
+      "bytes": 634492,
+      "sha256": "0846dd5259097d9b7999e2188149f386e3b4259c730ac586ed9f45047ea37813"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/official-approved.webp",
+      "bytes": 620510,
+      "sha256": "45433d3cb730fb56eab72395e387d8f3ed4314a2cf7510885fac836151afd66a"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/officials-background.png",
+      "bytes": 229003,
+      "sha256": "6076b9e6e657b222a4c9bbe36c831b865597c3afa745020cb9b4d05b4f32cf74"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/officials-collection.png",
+      "bytes": 1294410,
+      "sha256": "eeb3d5741d006a2a4287a01ee728920ea18808223eb4941714e683538c172d1a"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/officials-foreground.png",
+      "bytes": 250606,
+      "sha256": "70cea4283c5ae8d9eda8c24088989a5f929977d20b1c84c49800eafb4fd621a9"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.2/officials-registration.json",
+      "bytes": 13651,
+      "sha256": "a04ee366f331cdef310e6359949c98e8ca716bb81b61c940c84f07d87cdbc367"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/black-cloth.webp",
+      "bytes": 447104,
+      "sha256": "0847442d886e2c105d8fcc233b765290355acf6293a496c55d937245f4a948fb"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/flags-front-1-background.png",
+      "bytes": 1277999,
+      "sha256": "c3af647025f38b98ed35e8729cd684a046e646186b8740c4e6c01cfd2b0301b0"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/flags-front-1-foreground.png",
+      "bytes": 1296647,
+      "sha256": "d465c6416825798acd4deef7fb3bc60a520723961fd30120920a266a40691532"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/flags-front-2-background.png",
+      "bytes": 1154375,
+      "sha256": "a030c085bcfff6e25758a7ab0b553ed71111a5e9dc3569c3dc646f993f77c3be"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/flags-front-2-foreground.png",
+      "bytes": 1189916,
+      "sha256": "5981e1ac999b0ad654a4fc71fb2bec14eb86cca5faf1d2b32571294531fcb950"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/flags-front-3-background.png",
+      "bytes": 1128880,
+      "sha256": "8d5e8604315c17300b63b3a68216a2aef04417043a3cd63a85fff967953855dc"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/flags-front-3-foreground.png",
+      "bytes": 1124317,
+      "sha256": "587813022b3b1094a0b3650585fa49d106460663194e9f80c583dbc459c915c8"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/flags-rear-1-background.png",
+      "bytes": 1488608,
+      "sha256": "f35bfea628fa9fd04edba2d8babd99e09cb37b1dcce0ca711ece10c265d2a52b"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/flags-rear-1-foreground.png",
+      "bytes": 1464574,
+      "sha256": "ea6c985369725f0a8171f0d48902b8d5ab845c6b55b820f57d71e3f132a92c3f"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/white-cloth.webp",
+      "bytes": 423182,
+      "sha256": "ce11b3d1c76de35b159fd70dbf0ff84a32a43517816ced020a00b3bae34c2404"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.3/yellow-cloth.webp",
+      "bytes": 424784,
+      "sha256": "0f4970f48605bad0ca62f1b8fa139f4cc8481486f9d09b6ca5df88185fbd1268"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.4/flags-rear-2-background.png",
+      "bytes": 1231403,
+      "sha256": "d0cfec25721beb548b05e57c7bfb9ab9a41e964a0b0f6608d974b95ca57685da"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.4/flags-rear-2-foreground.png",
+      "bytes": 1185185,
+      "sha256": "f2d286a010cbb24de7a0a09e5e846f2f54a6b1932db811b8e931eaeca0e667c6"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.8/basket-collectible.png",
+      "bytes": 329278,
+      "sha256": "64247131cb2685fa10aff3a801167a04ec6cbdc44f73a55983ac8bf9d197f9b9"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.8/fan-collectible.png",
+      "bytes": 312171,
+      "sha256": "2d4a85b66d1bc5398c44f1c23fc957a3984cdd39d12ac564c0a6435a118d5d51"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.8/jade-collectible.png",
+      "bytes": 287390,
+      "sha256": "1fc8bd3b3bc5dd67de1b1a54718fe84592c380d134cbb0f89deabce545e778f9"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/revision-2.1.8/lotus-collectible.png",
+      "bytes": 330214,
+      "sha256": "5e71ce6ccdd700f2a1ff6887b6ea9dbcfc2d273ac76190a4b69f56ab469ae6fc"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/source-registration.json",
+      "bytes": 117554,
+      "sha256": "f15820e43c7950320c12ead30496ddde199ce0f5841200869c87fbbb42b54485"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/stage/background.png",
+      "bytes": 558772,
+      "sha256": "4597fb21e3ad4e9cb2b3ef54154d23b3caa4143a8e4a0f1b7e0ef6cdaeca76e5"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/stage/collection.png",
+      "bytes": 427775,
+      "sha256": "b1612132f8f83708a2aecc305f91569fd90999c3b0b4878109b707c4de640ccf"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/stage/foreground.png",
+      "bytes": 552885,
+      "sha256": "bea1d57a5df1b274855024a8bd3f68d9321a840c427c29fb91e28d086860d0d0"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/stage/frame-01.png",
+      "bytes": 427907,
+      "sha256": "0575726ecf40095ac2a64d2255a13b8f9c4f08ed74c02ed2eb3b23d73a6039cc"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/stage/frame-02.png",
+      "bytes": 458493,
+      "sha256": "d6aa1313052a9a8289bf094d0ce5c24850f3f2a06212dce6914c8f1d1d1e9d40"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/stage/frame-03.png",
+      "bytes": 447060,
+      "sha256": "c68445623313640aa6b2939666349d33a09827a454455bbc39646ea7da4d4a80"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/stage/frame-04.png",
+      "bytes": 427907,
+      "sha256": "0575726ecf40095ac2a64d2255a13b8f9c4f08ed74c02ed2eb3b23d73a6039cc"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/stage/original.png",
+      "bytes": 552882,
+      "sha256": "ebf1c4e172403e2306d7931e46795ee3b1ae647a69504cb206801adddac82994"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/expansion-art/stage/registration.json",
+      "bytes": 2376,
+      "sha256": "ecd02cae10a01e803a5dd27cdb54e3eb5480eeb86ddbfac3574a7210728f7060"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/fresh.html",
+      "bytes": 858165,
+      "sha256": "e011fee67db055130663fc2876694163b52e94e38543241c52db11c9f1e09614"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/index.html",
+      "bytes": 858126,
+      "sha256": "f654f205b7271baa98473d8912a4f2c42d4ec10a54739e77f927d8ec7e090523"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/recognition/seated-drum-head-source.png",
+      "bytes": 3604,
+      "sha256": "4068996a12ba20c7e601f2156c05eec2d164b2fe870e85249cb2c7960824fa31"
+    },
+    {
+      "path": "chapters/kangqu-listening-v2/recognition/seated-drum-head-tracing-v3.png",
+      "bytes": 1041429,
+      "sha256": "95416c5260671b1b9e2e3c46321ea3cbcd7e5efd6fd4c498e72bd0f6f3ba5ecf"
+    },
+    {
+      "path": "chapters/kangqu-listening/animation/frames/01.png",
+      "bytes": 145548,
+      "sha256": "e39fc4cc94f220618defd1773e303a8b11859caabfcdb003f413533065fa00db"
+    },
+    {
+      "path": "chapters/kangqu-listening/animation/frames/02.png",
+      "bytes": 138035,
+      "sha256": "c8cdadb5b683084f5d470702e23a4c421045edd05d7f80604adc3cdd0bb00374"
+    },
+    {
+      "path": "chapters/kangqu-listening/animation/frames/03.png",
+      "bytes": 133145,
+      "sha256": "7b68fbbc383424e7fb10387a9b6809344474a1f169fd36740f0155d6240ac8ea"
+    },
+    {
+      "path": "chapters/kangqu-listening/animation/frames/04.png",
+      "bytes": 144985,
+      "sha256": "0fee720b5c89e9ffa19873f7271013d3e867c47e78d828d5685df6f2a34f142f"
+    },
+    {
+      "path": "chapters/kangqu-listening/animation/generation-records.json",
+      "bytes": 6883,
+      "sha256": "ca5bb770d9e3ebeb2f2083591ef1a13b0f369f86d5371f65f6e1911dfc49cbb8"
+    },
+    {
+      "path": "chapters/kangqu-listening/animation/plate.png",
+      "bytes": 1926572,
+      "sha256": "88a16315caad1104e35f61dc24bd72e5453878ba4c74af2d5be05f46a1a7c9a5"
+    },
+    {
+      "path": "chapters/kangqu-listening/art/complete-scroll.jpg",
+      "bytes": 10521379,
+      "sha256": "48b68bb139ad030f8d0af5cb7143602a8ae92ea6d94e9db67004c079816ed45f"
+    },
+    {
+      "path": "chapters/kangqu-listening/art/native-segment-lossless.webp",
+      "bytes": 10300464,
+      "sha256": "475057289c4d3c869eecdc6d4f51be9c8837d347429f1f9c32080e91a244dcb8"
+    },
+    {
+      "path": "chapters/kangqu-listening/art/native-segment.png",
+      "bytes": 15450097,
+      "sha256": "00a6d98cda0787326a49dc3aed754ba6396e265da8c581446330041df378103a"
+    },
+    {
+      "path": "chapters/kangqu-listening/art/overview.jpg",
+      "bytes": 1404407,
+      "sha256": "7446ac67efa0a688ef9f3b166d031649260d4955229eb6521750be08f45be9d5"
+    },
+    {
+      "path": "chapters/kangqu-listening/collections/discs-illustration-v1.png",
+      "bytes": 1941286,
+      "sha256": "6a9abcc13b2f2f0fd301534fe256235f3800e2a54c5f29dda70856c5f9e536d8"
+    },
+    {
+      "path": "chapters/kangqu-listening/collections/drum-illustration-v1.png",
+      "bytes": 2138857,
+      "sha256": "87185df0662243853950ebba368669a897095766c273c7b7626006eb523ab577"
+    },
+    {
+      "path": "chapters/kangqu-listening/collections/flag-illustration-v1.png",
+      "bytes": 916565,
+      "sha256": "8b9767f7840be7e94e63cbd0d30b0e5bcb8060c9b405967867b38589ab36d5c1"
+    },
+    {
+      "path": "chapters/kangqu-listening/collections/gong-illustration-v1.png",
+      "bytes": 1394139,
+      "sha256": "da00234ee13432454cc86ec17dce2e8517efe95e2ff8ca8fd7cfdad0dc0846b8"
+    },
+    {
+      "path": "chapters/kangqu-listening/collections/horn-illustration-v1.png",
+      "bytes": 305412,
+      "sha256": "53e9544174fd7d7794d267789b77233a99d34c9dc93f553cac63bcda236fa952"
+    },
+    {
+      "path": "chapters/kangqu-listening/collections/painted-wall-illustration-v1.png",
+      "bytes": 2210147,
+      "sha256": "1e7ff9373884e0f49457de2ee37f5aa51a631569697a655690b07336021490fd"
+    },
+    {
+      "path": "chapters/kangqu-listening/data/active-release.json",
+      "bytes": 1087,
+      "sha256": "e027c723b414dc398953afea6c9ef87da9feff952415bf255782cbd7e377b979"
+    },
+    {
+      "path": "chapters/kangqu-listening/data/collection-generation-records.json",
+      "bytes": 2695,
+      "sha256": "e39f488f0724f1997c15a004191ad0b53e41e8a217462430852f434bdac10f31"
+    },
+    {
+      "path": "chapters/kangqu-listening/data/content-sources.json",
+      "bytes": 5121,
+      "sha256": "7b7148221c367900b0783d00d2216bad1b4148a3f07b926843b3c26a5be70d1f"
+    },
+    {
+      "path": "chapters/kangqu-listening/data/dialogue-evidence.json",
+      "bytes": 156012,
+      "sha256": "56881243df834d008e26bb49d46562ad132bd54cc7a367f848935795587222a1"
+    },
+    {
+      "path": "chapters/kangqu-listening/data/native-encoding-record.json",
+      "bytes": 397,
+      "sha256": "233e13451413f6c915b4a777390113ce2d232482d11a46b91d2eac4a793e2f5e"
+    },
+    {
+      "path": "chapters/kangqu-listening/data/source-note.json",
+      "bytes": 2297,
+      "sha256": "d00afa71033161c90f2adcce906729eca9157fe15e05a52b97f3159d58a94893"
+    },
+    {
+      "path": "chapters/kangqu-listening/data/ui-source-manifest.json",
+      "bytes": 2840,
+      "sha256": "5f301339eb0370b3c543128d403f35fd934ab6fb6ee640a7c8ade384133e283a"
+    },
+    {
+      "path": "chapters/kangqu-listening/data/viewport-config.json",
+      "bytes": 630,
+      "sha256": "61abc22086064c04eedaeaf57b693d2ab8d06863306f82061e5c23b0b36ee360"
+    },
+    {
+      "path": "chapters/kangqu-listening/index.html",
+      "bytes": 564,
+      "sha256": "7dd24fc2e67c84170d9dfd4212836cece1c8ad3e4164a4c17333aa94b231a323"
+    },
+    {
+      "path": "chapters/kangqu-listening/recognition/brown-green-hem-head-source.png",
+      "bytes": 6107,
+      "sha256": "aaaf3a35f18cd3dfc3334737bf58ec381f3a7546e18aa5979ff7f169c0313c62"
+    },
+    {
+      "path": "chapters/kangqu-listening/recognition/brown-green-hem-head-tracing-v2.png",
+      "bytes": 871000,
+      "sha256": "ea5c697f8fbe7af5dab7706eeef0a9caf377c57d1a61441acafc21ac13c2a99a"
+    },
+    {
+      "path": "chapters/kangqu-listening/recognition/hand-at-hat-head-source.png",
+      "bytes": 4648,
+      "sha256": "5f5cdba8e8692b8ed57e0a90a7725f012d6f4ff58d05a47efbe52e7c0105bcf7"
+    },
+    {
+      "path": "chapters/kangqu-listening/recognition/hand-at-hat-head-tracing-v2.png",
+      "bytes": 901242,
+      "sha256": "e6f0acab9623f9d09e0bb3b11e58af4160e769910e10ed5404ee205f55fc0215"
+    },
+    {
+      "path": "chapters/kangqu-listening/recognition/red-front-east-05-head-source.png",
+      "bytes": 5798,
+      "sha256": "8e998bfaf1905862e012d351401608d4d41f6bef49d3dfedd5f998d001ea9bd6"
+    },
+    {
+      "path": "chapters/kangqu-listening/recognition/red-front-east-05-head-tracing-v2.png",
+      "bytes": 1122374,
+      "sha256": "c6fb1c8bbdecbb2d4f652ae153da9b11a8893342a38535fa6a97398c6b8ee8d3"
+    },
+    {
+      "path": "chapters/kangqu-listening/recognition/seated-drum-head-source.png",
+      "bytes": 3604,
+      "sha256": "4068996a12ba20c7e601f2156c05eec2d164b2fe870e85249cb2c7960824fa31"
+    },
+    {
+      "path": "chapters/kangqu-listening/recognition/seated-drum-head-tracing-v2.png",
+      "bytes": 1184176,
+      "sha256": "606f088c5d77683531149b36a6cc5fde29a1c000e57405e0ab3603b1a49834ac"
+    },
+    {
+      "path": "chapters/kangqu-listening/recognition/watcher-blue-head-source.png",
+      "bytes": 4357,
+      "sha256": "ea3a091f946e28ef36c40785d3a9592858f177c63f306c98eb0feb7529cf91ce"
+    },
+    {
+      "path": "chapters/kangqu-listening/recognition/watcher-blue-head-tracing-v2.png",
+      "bytes": 1095252,
+      "sha256": "a14f628da9cfd3bc16ad3e9dc7df3df73c3c0cde7c005eba32172091939681d1"
+    },
+    {
+      "path": "chapters/kangqu-listening/recognition/watcher-pattern-head-source.png",
+      "bytes": 7421,
+      "sha256": "bc2452f5d3b88eb5db85925068d0ab056e2f55c75222da89c916a2ec2c50c03a"
+    },
+    {
+      "path": "chapters/kangqu-listening/recognition/watcher-pattern-head-tracing-v2.png",
+      "bytes": 1078321,
+      "sha256": "526a3e4e1d0ef4b3dd021bada8fa3b3e9bb19fc704dd4444842186757e0849be"
+    },
+    {
+      "path": "chapters/kangqu-listening/ui/button-cinnabar-v1.png",
+      "bytes": 1864784,
+      "sha256": "8ab99f9bfbe3f852571385a6c4ec9be857ec19c18ad462a2f526041fb770bbae"
+    },
+    {
+      "path": "chapters/kangqu-listening/ui/button-paper-v1.png",
+      "bytes": 1857416,
+      "sha256": "237e8e0afda308d5a72fb6d64285e109682d1f9265dd8ebf560702962387c0a6"
+    },
+    {
+      "path": "chapters/kangqu-listening/ui/lantern-dialogue-ink-frame-v1.png",
+      "bytes": 694548,
+      "sha256": "f7a18b50c25390687ca5f5c34f6aab5c7bd07a46f0f1d95003b054c6e144fd62"
+    },
+    {
+      "path": "chapters/kangqu-listening/ui/lantern-search-frame-v1.png",
+      "bytes": 2179662,
+      "sha256": "dfe79984c74047201d02d8f4192ff2cd28cf89ed6bb76a245d00470d491d76f1"
+    },
+    {
+      "path": "chapters/kangqu-listening/ui/lantern-silk-note-v1.png",
+      "bytes": 2351976,
+      "sha256": "8ef10fa3ae5dae574d427d8f91c0880615cb981efcae41c3650a1310b7dc63cf"
+    },
+    {
+      "path": "chapters/kangqu-listening/ui/painted-icons.png",
+      "bytes": 948267,
+      "sha256": "a7b9aee34c9f4bfc9501f0f6af9bc993e3afdb5eb734dc53aa15ae85b2edda3f"
+    },
+    {
+      "path": "chapters/kangqu-listening/ui/paper-frame-v2.png",
+      "bytes": 2073709,
+      "sha256": "be5ab78b32068db501772c3d33d8970ea2ed02f84f1ea7dabef756640682ac77"
+    },
+    {
+      "path": "chapters/kangqu-listening/ui/reading-paper.png",
+      "bytes": 2248234,
+      "sha256": "2722e956b8033de67219903bf519da3eec10dd4042250d521b7c339529fdaf30"
+    },
+    {
+      "path": "chapters/lantern-shangyuan-v2-0.1.8-live/fonts/chongxi/CREDITS.md",
+      "bytes": 1189,
+      "sha256": "211509a2a57350bdce6e454ad193d6fabe30bf8cfa9298881eced41a19113325"
+    },
+    {
+      "path": "chapters/lantern-shangyuan-v2-0.1.8-live/fonts/chongxi/LICENSE.html",
+      "bytes": 31775,
+      "sha256": "04e6ef69a223b6e13c93c97a918ad5fd0dbb9fc34ae307f4449ed264e2d4108f"
+    },
+    {
+      "path": "chapters/lantern-shangyuan-v2-0.1.8-live/fonts/chongxi/chongxi_seal.otf",
+      "bytes": 21817868,
+      "sha256": "b5f52fe62e84b2b18ff4b586d9838d157e05925eca847ecd48c915ba4dcd735a"
+    },
+    {
+      "path": "chapters/lantern-shangyuan-v2-0.1.8-live/index.html",
+      "bytes": 551110,
+      "sha256": "40b26e0ff7a2b01f1d8b99fcdf2d7488c3ffe497453d0503c26317e73cac5f9c"
+    },
+    {
+      "path": "chapters/lantern-shangyuan-v2-0.1.8-live/version.json",
+      "bytes": 3183,
+      "sha256": "1e446b48eb286fa539ddc04baaf27174ad9ac815f07d558f5aceb1c169c19347"
+    },
+    {
+      "path": "chapters/lantern-three-act-v1-1.0.0/index.html",
+      "bytes": 505429,
+      "sha256": "0837d72c7483cc9bb32a4889aafe3657dc0397fc787844afdca0983e4b9104e6"
+    },
+    {
+      "path": "chapters/lantern-three-act-v1-1.0.0/version.json",
+      "bytes": 1468,
+      "sha256": "0a5bd4bcc03b2e146c30724b3fd52e12b0b09d0130c7d7d48f94a0bae2ae203f"
+    },
+    {
+      "path": "chapters/lantern-three-act-v1-1.1.0-archive-20261028/index.html",
+      "bytes": 507368,
+      "sha256": "4c3dd9209c94f29361e18193b1214b14ec53e7abcf9d049163ecce4553dcf58c"
+    },
+    {
+      "path": "chapters/lantern-three-act-v1-1.1.0-archive-20261028/version.json",
+      "bytes": 1595,
+      "sha256": "6101bfdd02a1ae7b0a7aeb3f4451aad2c5c2ac246165ce9f7aaea55715d04f69"
+    },
+    {
+      "path": "chapters/lantern-three-act-v1/active-release.json",
+      "bytes": 172,
+      "sha256": "95614ee53a9557fa5f401c58e0e3f2eaf6ed59a8cccbec74ffb590005c6d3c45"
+    },
+    {
+      "path": "chapters/lantern-three-act-v1/index.html",
+      "bytes": 536,
+      "sha256": "508e82b594fa0614cc0c1e308c9790a3a3b89e46989910f90c481eee7897bbc0"
+    },
+    {
+      "path": "chapters/lantern-three-act-v1/version.json",
+      "bytes": 1595,
+      "sha256": "6101bfdd02a1ae7b0a7aeb3f4451aad2c5c2ac246165ce9f7aaea55715d04f69"
+    },
+    {
+      "path": "chapters/luoshen-before-three-act-20261027/index.html",
+      "bytes": 828639,
+      "sha256": "a516b3b96547d7fcb9a95148ff10f48aa4a3cdc3b45d9aafb7fcebde8eb36dda"
+    },
+    {
+      "path": "chapters/luoshen-before-three-act-20261027/version.json",
+      "bytes": 1227,
+      "sha256": "35a72e40d07f2a00f5ebf8396ecc841862748e817b3e4c206c3b580ff9501702"
+    },
+    {
+      "path": "chapters/luoshen-three-act-v1/data/active-release.json",
+      "bytes": 562,
+      "sha256": "ace4a69a25755e6b48c540beab1c7cb5391534b51f46fe41d20f0b97744ce189"
+    },
+    {
+      "path": "chapters/luoshen-three-act-v1/index.html",
+      "bytes": 850540,
+      "sha256": "f2f5d04835cfbf9e9afbe70ca99c944a9cdc89dcc4a28ea9eed8884cb5fdde65"
+    },
+    {
+      "path": "chapters/luoshen-three-act-v1/version.json",
+      "bytes": 1660,
+      "sha256": "7f9f9b6322ec7dde329d842ab5abc6bb06ee7aaf33319f6782bee76d9f97dc38"
+    },
+    {
+      "path": "chapters/zanhua-before-three-act-20261027/index.html",
+      "bytes": 697133,
+      "sha256": "14eb590c07543d4ba329ee9a940b734cbcdf223cd604c1b1b66ee1df488d2c2d"
+    },
+    {
+      "path": "chapters/zanhua-before-three-act-20261027/version.json",
+      "bytes": 1065,
+      "sha256": "e81dc1caf67e20acb0da00e5b661e0a23512bb978de93bae24bd1daea9df1886"
+    },
+    {
+      "path": "chapters/zanhua-three-act-v1/data/active-release.json",
+      "bytes": 673,
+      "sha256": "df7cef1ce02b3d2535c8dff12f4d58e5e6bbfdecac9962e5ec3931735af91241"
+    },
+    {
+      "path": "chapters/zanhua-three-act-v1/index.html",
+      "bytes": 717611,
+      "sha256": "b6dc7d62e942b9592546078eae7beceeea8d7c03b8c23f6a7dbb00151e1882b0"
+    },
+    {
+      "path": "chapters/zanhua-three-act-v1/version.json",
+      "bytes": 1478,
+      "sha256": "e3c35af3c9ff8faf3020d108dd395791e5e5ce00b9bdaa23157715259bde0e6c"
+    },
+    {
+      "path": "fonts/LXGWWenKaiTC-OFL.txt",
+      "bytes": 4395,
+      "sha256": "1a13783bf4337242834b60309cdcdbeb566ae3f923576fdbba8b78db9d174def"
+    },
+    {
+      "path": "fonts/LXGWWenKaiTC-Regular.ttf",
+      "bytes": 13061420,
+      "sha256": "d0a6217aedfc074f539ec46ad8fc7d74e16567e071bc9796b50e762c9d59d110"
+    },
+    {
+      "path": "fonts/chongxi/CREDITS.md",
+      "bytes": 1189,
+      "sha256": "211509a2a57350bdce6e454ad193d6fabe30bf8cfa9298881eced41a19113325"
+    },
+    {
+      "path": "fonts/chongxi/LICENSE.html",
+      "bytes": 31775,
+      "sha256": "04e6ef69a223b6e13c93c97a918ad5fd0dbb9fc34ae307f4449ed264e2d4108f"
+    },
+    {
+      "path": "fonts/chongxi/chongxi_seal.otf",
+      "bytes": 21817868,
+      "sha256": "b5f52fe62e84b2b18ff4b586d9838d157e05925eca847ecd48c915ba4dcd735a"
+    },
+    {
+      "path": "index.html",
+      "bytes": 617,
+      "sha256": "56aa8f2525e6eb739cebaf6b4bc8c189d83467e5497bf3fe368121a0dfb0093c"
+    },
+    {
+      "path": "release.json",
+      "bytes": 58009,
+      "sha256": "189c62c7f18d470d0e6b8a142a7fcc75167090a429d53ad7630e472b22f1df94"
+    },
+    {
+      "path": "zanhua-preview.html",
+      "bytes": 369,
+      "sha256": "4637862ea958432a1b0f8fe90926dd3bb5a13a70c7581e24a2be75cd9515c4d9"
+    }
+  ]
+}

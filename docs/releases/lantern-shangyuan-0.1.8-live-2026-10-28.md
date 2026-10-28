@@ -11,3 +11,13 @@
 乾淨副本npm ci及NODE_DISABLE_COMPILE_CACHE=1 npm run build通過型別、Vite與本機首頁打包；本機以/chinese-wally/子路徑實際開啟正式路由，確認iframe載入完整新版封面，章節導航仍有清明已上鎖且無榜下主站入口。未重新通關三庭與所有動畫；本次兩題與縮短題箋的實際檢視沿用各預覽記錄，沒有宣稱新增手機檢視。
 
 批准來源ZIP、預覽manifest、正式manifest及提升轉換記錄分開保存；實際部署提交及線上指紋在GitHub發布記錄與本機補充核對檔保存。
+
+## 線上部署確認
+
+部署提交：`9527bad5619ad941946c1aba8f3038dc5ec83abe`。GitHub Actions [40629346928](https://github.com/vincentttchan/chinese-wally/actions/runs/40629346928)成功。10份主站、JS/CSS、新版章節及metadata、舊入口轉接、舊宮中存檔與康衢／簪花／洛水文件均HTTP200，SHA256與乾淨發布建置完全相同；見同名JSON核對檔。
+
+瀏覽器首次無參數首頁曾讀到舊快取；本次交付使用<https://vincentttchan.github.io/chinese-wally/?v=0.1.8-20261028#lantern-festival>避免舊首頁快取。
+
+原工作目錄只同步宮中正式文件、源碼入口及維護文件。同步前本機來源保存在`output/releases/lantern-before-0.1.8-live-20261028/`；未重建原工作目錄public/index.html，以保留其中其他未發布內容。線上首頁由乾淨副本建置發布。
+
+已實際開啟線上新版封面，宿主iframe指向0.1.8-live，控制台沒有error或warn。新增Release標記site-2026-10-28-lantern-shangyuan-0.1.8指向實際部署提交；所有舊標記保留。
