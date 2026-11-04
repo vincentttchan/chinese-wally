@@ -1,0 +1,20 @@
+.lantern-character-reply {position:absolute;z-index:15;box-sizing:border-box;height:40px;padding:8px 13px;background:transparent url('../art/ui/lantern-dialogue-ink-frame-v1.png') center / 100% 370% no-repeat;border:0;border-radius:0;color:#414534;font-family:'LXGW WenKai TC','Kaiti TC',serif;pointer-events:none;box-shadow:none;text-shadow:none;}
+.lantern-character-reply p {font-size:16px;line-height:24px;margin:0;white-space:nowrap;}
+.lantern-character-reply.has-finding {display:flex;align-items:center;gap:8px;animation:character-reply-in 180ms ease both;}
+.lantern-character-reply button {pointer-events:auto;flex:0 0 40px;min-height:40px;padding:0 0 0 6px;border:0;border-left:1px solid #8a795944;background:transparent;color:#775e45;font:14px 'LXGW WenKai TC','Kaiti TC',serif;white-space:nowrap;}
+.lantern-character-reply button:hover {color:#414534;text-decoration:underline;text-underline-offset:3px;}
+.lantern-character-reply button:focus-visible {outline-offset:2px;}
+@keyframes character-reply-in {from {opacity:0;} to {opacity:1;}}
+.lantern-character-reply::before {content:"";position:absolute;width:7px;height:7px;background:#eee4cd;transform:rotate(45deg);pointer-events:none;border:solid #82796277;border-width:0;}
+.lantern-character-reply.tail-left::before {left:-5px;top:calc(var(--reply-tail-y) - 4px);border-left-width:1px;border-bottom-width:1px;}
+.lantern-character-reply.tail-right::before {right:-5px;top:calc(var(--reply-tail-y) - 4px);border-top-width:1px;border-right-width:1px;}
+.lantern-character-reply.tail-bottom::before {bottom:-5px;left:calc(var(--reply-tail-x) - 4px);border-right-width:1px;border-bottom-width:1px;}
+.lantern-character-reply.tail-top::before {top:-5px;left:calc(var(--reply-tail-x) - 4px);border-top-width:1px;border-left-width:1px;}
+.lantern-emperor-speech {position:absolute;z-index:20;outline:none;font-family:'LXGW WenKai TC','Kaiti TC',serif;animation:character-reply-in 180ms ease both;}
+.lantern-character-reply.emperor-speech-bubble {position:relative;width:100%;height:auto;min-height:0;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:12px 16px;pointer-events:auto;}
+.lantern-character-reply.emperor-speech-bubble p {font-size:18px;line-height:26px;white-space:normal;overflow-wrap:anywhere;}
+.lantern-character-reply.emperor-speech-bubble .emperor-speech-action {display:block;flex:0 0 auto;align-self:flex-end;min-height:36px;margin:6px 0 0;padding:3px 0 0;border:0;background:transparent;color:#626c50;font:15px/1.6 'LXGW WenKai TC','Kaiti TC',serif;}
+.emperor-speech-action:hover {text-decoration:underline;text-underline-offset:4px;}
+.emperor-speech-action:focus-visible {outline:2px solid #786c48;outline-offset:3px;}
+.lantern-character-reply {animation:character-reply 3s ease both;}
+@keyframes character-reply {0% {opacity:0;} 6%,90% {opacity:1;} 100% {opacity:0;}}

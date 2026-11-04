@@ -1,0 +1,32 @@
+.chapter-complete {
+  position: fixed;
+  z-index: 10000;
+  top: max(14px, env(safe-area-inset-top));
+  left: 50%;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  padding: 12px 16px;
+  color: #414534;
+  background: #eee4cd url("../art/ui/lantern-dialogue-ink-frame-v1.png") center / 100% 370%;
+  box-shadow: 0 6px 24px #24180d44;
+}
+
+.chapter-complete[hidden] { display: none; }
+.chapter-complete p { margin: 0 0 6px; }
+.chapter-complete button {
+  min-height: 44px;
+  padding: 4px 8px;
+  color: inherit;
+  background: transparent;
+  border: 1px solid #82785c88;
+  font: inherit;
+  cursor: pointer;
+}
+
+.chapter-complete button:focus-visible { outline: 2px solid #786c48; outline-offset: 2px; }
+.chapter-stay { margin-left: 6px; }
+.chapter-complete.is-compact { padding: 2px 6px; }
+.chapter-complete.is-compact :is(p, .chapter-stay) { display: none; }
+.chapter-complete.is-compact .chapter-next { border: 0; }

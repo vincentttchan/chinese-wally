@@ -362,3 +362,4 @@ button:not(.actor-hitbox) {transition: background var(--motion-fast) var(--ease-
 .knowledge-back {display: block; padding: 12px 0; margin: 6px 0 12px; background: transparent; color: #72765e; font-size: 12px; text-decoration: underline; text-underline-offset: 4px;}
 .knowledge-back:hover {color: var(--red);}
 
+html[data-atelier-journey] .chapter-links { display: none; }

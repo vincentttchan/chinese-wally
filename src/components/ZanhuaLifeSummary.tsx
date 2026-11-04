@@ -1,8 +1,10 @@
 import {ChapterDialog} from './ChapterDialog.tsx';
 import {ArrowRight} from './ArtIcons.tsx';
 const sources=[['中國國家博物館：唐代女服與生活','https://www.chnmuseum.cn/yj/xscg/xslw/201812/t20181224_33161.shtml'],['遼博副館長談《簪花仕女圖》','https://www.neac.gov.cn/seac/xwzx/202606/1191211.shtml'],['河南博物院：戴帷帽騎馬女俑','https://www.chnmus.net/ch/collection/appraise/details.html?id=512157604994293381']];
-export function ZanhuaLifeSummary({collected,onSeal}:{collected:number;onSeal:()=>void}){
- return <ChapterDialog label="唐代婦女生活小結" className="zanhua-life-summary" onClose={onSeal}>
+export function ZanhuaLifeSummary({collected,onSeal,onFinish,onDismiss}:{
+ collected:number;onSeal:()=>void;onFinish?:()=>void;onDismiss?:()=>void;
+}){
+ return <ChapterDialog label="唐代婦女生活小結" className="zanhua-life-summary" onClose={onDismiss??onSeal}>
   <header className="zanhua-summary-heading"><p className="lantern-eyebrow">一卷讀畢 · 簪花仕女圖</p><h2>盛裝之中，看見怎樣的生活？</h2>
   <p className="zanhua-summary-intro">從逗犬、拈花到執扇的身影，這一卷留下了貴族女子遊賞生活的一個片刻。</p></header>
   <div className="zanhua-summary-sections">
@@ -12,6 +14,9 @@ export function ZanhuaLifeSummary({collected,onSeal}:{collected:number;onSeal:()
   </div>
   <footer className="zanhua-summary-footer"><p className="zanhua-summary-progress">已尋得三位女子 <span>見聞冊 {collected}／4 類</span></p><p className="zanhua-summary-optional">收藏不必集齊，隨時可以回畫中探索。</p>
   <details><summary>資料依據與演繹說明</summary><p>衣飾摹繪含補繪；人物對白、表情及動作均為遊戲演繹。本幅無作者落款，傳為周昉作，作者與成畫年代仍有討論。</p>{sources.map(([label,url])=><p key={url}><a href={url} target="_blank" rel="noreferrer">{label} ↗</a></p>)}</details>
-  <div className="lantern-paper-actions"><button className="lantern-quiet-button" onClick={onSeal}>回畫中，蓋下我的印章<ArrowRight size={17}/></button></div></footer>
+  <div className="lantern-paper-actions">
+   {onFinish&&<button className="lantern-note-next" onClick={onFinish}>完成小結<ArrowRight size={17}/></button>}
+   <button className="lantern-quiet-button" onClick={onSeal}>{onFinish?'留印紀念':'回畫中，蓋下我的印章'}<ArrowRight size={17}/></button>
+  </div></footer>
  </ChapterDialog>;
 }

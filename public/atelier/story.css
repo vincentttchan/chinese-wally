@@ -1,0 +1,15 @@
+[data-state="desk"] .desk { opacity: 0; }
+[data-state="desk"] .desk-waiting { opacity: 1; }
+[data-state="passing"] .desk { opacity: 1; }
+
+/* Cut between poses to keep two versions of the same person from overlapping. */
+:is([data-state="desk"], [data-state="passing"]) .desk-waiting,
+[data-state="passing"] .desk,
+[data-state="cue"] .cue { transition: none; }
+
+[data-state="passing"] .focus-light { opacity: 0; }
+
+.desk-waiting {
+  transform: scale(1.09);
+  transform-origin: 50% 0;
+}

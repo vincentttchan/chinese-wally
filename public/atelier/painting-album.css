@@ -1,0 +1,68 @@
+.painting-album-toggle {
+  position: fixed;
+  z-index: 9000;
+  top: max(14px, env(safe-area-inset-top));
+  left: max(16px, env(safe-area-inset-left));
+  min-height: 42px;
+  padding: 5px 13px;
+  border: 1px solid #82785c88;
+  background: #eee4cd;
+  color: #414534;
+  font: inherit;
+  cursor: pointer;
+}
+
+.painting-album-toggle[hidden],
+.opening:not([data-state="unlit"]) > .painting-album-toggle { display: none; }
+.opening > .painting-album-toggle {
+  position: absolute;
+  top: auto;
+  right: max(24px, calc((100vw - min(100vw, 177.68dvh)) / 2 + 24px));
+  bottom: max(80px, calc((100dvh - min(100dvh, 56.28vw)) / 2 + 80px));
+  left: auto;
+}
+
+.painting-album {
+  width: min(560px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  box-sizing: border-box;
+  padding: clamp(16px, 4vw, 28px);
+  overflow: auto;
+  border: 1px solid #82785c;
+  background: #eee4cd url("../art/ui/reading-paper.png") center / cover;
+  color: #414534;
+  font: inherit;
+  color-scheme: light;
+}
+.painting-album::backdrop { background: #211b19b8; }
+.painting-album header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.painting-album h2 { margin: 0; font-size: 1.35em; }
+.painting-album-count { margin: 4px 0 14px; }
+.painting-album-list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.painting-album button {
+  min-height: 44px;
+  border: 1px solid #82785c88;
+  background: #faf2dd9c;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.painting-album-close { padding: 4px 12px; }
+.painting-album-list button {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 72px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 7px;
+  text-align: left;
+}
+.painting-album-list img { width: 72px; height: 46px; object-fit: cover; }
+.painting-album-revisit { font-size: .9em; white-space: nowrap; }
+.painting-album button:focus-visible,
+.painting-album-toggle:focus-visible { outline: 2px solid #8b5636; outline-offset: 2px; }

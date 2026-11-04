@@ -1,0 +1,20 @@
+.door-view { background-image: url("assets/hall.jpg"); }
+.door-leaf { background-image: url("assets/lit.jpg"); }
+.seal-actor { background-image: url("assets/cue.jpg"); }
+.seal-clean {
+  mask-image: radial-gradient(ellipse 5.4% 15.5% at 74.5% 75%, #000 91%, transparent);
+  transition: none;
+}
+.seal-pressed:not(.stamp-complete) .seal-clean { opacity: 1; }
+
+.resume-journey {
+  position: absolute;
+  right: max(24px, calc((100vw - min(100vw, 177.68dvh)) / 2 + 24px));
+  bottom: max(24px, calc((100dvh - min(100dvh, 56.28vw)) / 2 + 24px));
+  min-height: 44px;
+  padding: 8px 14px;
+  color: #f8ead1;
+  background: #241c17f2;
+  border: 1px solid #b79c72;
+}
+.resume-journey:focus-visible { outline: 2px solid #ffe7af; outline-offset: 3px; }

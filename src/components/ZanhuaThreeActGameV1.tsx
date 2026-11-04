@@ -44,6 +44,7 @@ import '../zanhua-preview.css';
 type Phase='intro'|'search'|'found'|'observe'|'animate'|'interpret'|'context'|'compare'|'clue'|'ending'|'recall'|'complete'|'seal'|'free';
 type Overlay='hint'|'about'|'menu'|'journal'|null;
 const query=new URLSearchParams(window.location.search);
+const atelierJourney=query.get('atelier')==='1'&&window.parent!==window;
 const requested=query.get('scene');
 const collectorEntry=requested==='seal-detail'||requested==='collector-seals';
 const initialPhase:Phase=collectorEntry?'context':['intro','search','found','observe','interpret','complete'].includes(requested??'')?requested as Phase:'intro';
@@ -258,7 +259,11 @@ export function ZanhuaThreeActGameV1(){
 
  function advance(){
   if(busy||phase!=='clue')return;setConfirmation(null);setDetail(null);
-  if(index===2){setPhase('complete');setFocusing(false);return;}
+  if(index===2){
+   if(atelierJourney)openEnding();
+   else {setPhase('complete');setFocusing(false);}
+   return;
+  }
   setFigureStudy(false);setIndex(v=>v+1);setContextStep(0);setContextSeen(false);setDepth(0);setReply(null);setHint(null);setStudy(null);setFocusing(savedFocus.current);setPhase('search');
  }
  function restart(){setPlayerSeal(null);setFigureStudy(false);setRetainedStudy(false);setMaidPlaying(false);setConfirmation(null);setDetail(null);collection.settle();if(timer.current)clearTimeout(timer.current);token.current++;setBusy(false);setStudy(null);setReply(null);setOverlay(null);setIndex(0);setContextStep(0);setContextSeen(false);setDepth(0);setPhase('intro');setEntryStarted(false);setCoverVisible(true);setCoverLeaving(false);setEntering(false);setReset(v=>v+1);setFocusing(true);}
@@ -272,6 +277,10 @@ export function ZanhuaThreeActGameV1(){
  function openEnding(){if(busy)return;setReply(null);setFocusing(false);setIndex(2);setPhase('ending');frameObservation(2);}
  function recall(which:number){if(busy||phase!=='ending')return;setRemembered(which);setIndex(which);setPhase('recall');frameObservation(which);}
  function finishRecollection(){if(busy||phase!=='recall')return;setPhase('complete');}
+ function leaveSummary(){setPhase('free');setFocusing(savedFocus.current);}
+ function collectPainting(){
+  window.parent.postMessage({type:'study-chapter-complete',chapter:'zanhua'},window.location.origin);
+ }
  function beginSeal(){
   if(phase!=='complete')return;
   setPhase('seal');setFocusing(false);setReply(null);setConfirmation(null);setDetail(null);setNotice('');collection.settle();
@@ -363,7 +372,10 @@ export function ZanhuaThreeActGameV1(){
   {!overlay&&!figureStudy&&!maidPlaying&&phase!=='animate'&&confirmation&&<ZanhuaDetailOverlay viewport={viewport} confirmation={confirmation} annotations={phase==='context'&&contextSeen&&!(index===2&&contextStep===0)&&!(index===0||(index===1&&contextStep<2))?(zanhuaAnnotations[index][contextStep]??[]).filter(item=>!collectorContext||item.id===collectorSealId):[]} selected={detail?.id} onSelect={selectAnnotation} reserved={dialogueSpace()} paper={noteBounds??undefined}/>}
   {(figureStudy||showRetainedStudy)&&<ZanhuaInPaintingStudy key={index} active={figureStudy} scope={studyScope} requireCompletion={phase!=='free'} anchorViewport={studyAnchor??viewport} onCompareChange={value=>{studyComparing.current=value;}} returnLabel={phase==='free'?'回到原畫':undefined} person={index} viewport={viewport} selected={studyPart} onSelect={setStudyPart} onClose={closeFigureStudy}/>}
   {maidPlaying&&<><ZanhuaMaidAnimation viewport={viewport} onDone={()=>setMaidPlaying(false)}/><button className="lantern-quiet-button zanhua-skip-animation" onClick={()=>setMaidPlaying(false)}>略過演繹 →</button></>}
-  {phase==='complete'&&<ZanhuaLifeSummary collected={Object.keys(origins).length} onSeal={beginSeal}/>}
+  {phase==='complete'&&<ZanhuaLifeSummary collected={Object.keys(origins).length}
+   onFinish={atelierJourney?()=>{collectPainting();leaveSummary();}:undefined}
+   onDismiss={atelierJourney?leaveSummary:undefined}
+   onSeal={atelierJourney?()=>{collectPainting();beginSeal();}:beginSeal}/>}
   {playerSeal&&<ZanhuaPlayerSeal viewport={viewport} text={playerSeal}/>}
   {phase==='seal'&&<ZanhuaSealRitual viewport={viewport} busy={busy} seal={playerSeal} onStamp={setPlayerSeal} onCover={returnToCover} onExplore={()=>{setPhase('free');setFocusing(false);}}/>}
   {collection.flight&&<LanternSparkDiscovery key={collection.flight.token} artwork={zanhuaCollectionItems[collection.flight.category]} discovery={{token:collection.flight.token,newlyCollected:true,findingId:collection.flight.category,source:{x:collection.flight.x,y:collection.flight.y},destination:{x:collection.flight.x+collection.flight.dx,y:collection.flight.y+collection.flight.dy},frame:viewport.frame}} onDone={collection.settle}/>}

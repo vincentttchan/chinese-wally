@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#211b19">
+  <title>畫中尋人 · 夜訪畫坊</title>
+  <link rel="stylesheet" href="dialogue.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="story.css">
+  <link rel="stylesheet" href="opening.css">
+  <link rel="stylesheet" href="painting-album.css">
+</head>
+<body>
+  <main class="opening" data-state="loading">
+    <h1 class="sr-only">畫中尋人 · 夜訪畫坊</h1>
+    <div class="stage">
+      <div class="art" aria-hidden="true">
+        <img class="scene unlit" src="assets/unlit.jpg" alt="" fetchpriority="high">
+        <img class="scene lit" src="assets/lit.jpg" alt="">
+        <img class="entry-seal" src="assets/entry-seal.png" alt="">
+        <div class="focus-light"></div>
+        <div class="doorway">
+          <div class="door-view"></div>
+          <div class="door-leaf left"></div>
+          <div class="door-leaf right"></div>
+        </div>
+        <img class="scene hall" src="assets/hall.jpg" alt="">
+        <img class="scene desk-waiting" src="assets/desk-waiting.jpg" alt="">
+        <img class="scene desk" src="assets/desk-passing.jpg" alt="">
+        <img class="scene cue" src="assets/cue.jpg" alt="">
+        <img class="scene seal-clean" src="assets/desk-without-seal.jpg" alt="">
+        <div class="seal-movement"><div class="seal-actor"></div></div>
+        <div class="impression"><img src="assets/entry-seal.png" alt=""></div>
+      </div>
+      <button class="target lamp" type="button" aria-label="點亮廊燈" hidden></button>
+      <button class="target door" type="button" aria-label="輕叩畫坊門" hidden></button>
+      <button class="target seal" type="button" aria-label="在觀畫帖上蓋印報到" hidden></button>
+    </div>
+    <section class="conversation lantern-emperor-speech" aria-label="同窗的遊戲對白" hidden>
+      <div class="lantern-character-reply has-finding emperor-speech-bubble tail-right">
+        <p class="zanhua-dialogue-caption">同窗 · 遊戲對白</p>
+        <p id="line" aria-live="polite"></p>
+        <button class="next emperor-speech-action" type="button"></button>
+      </div>
+    </section>
+    <button class="resume-journey" type="button" hidden>繼續旅程 →</button>
+    <p class="guide" role="status"></p>
+    <button class="retry" type="button" hidden>重新載入</button>
+  </main>
+  <div class="silk" aria-hidden="true"></div>
+  <iframe class="gallery" title="簪花仕女圖" allow="fullscreen" inert aria-hidden="true"></iframe>
+  <section class="chapter-complete" aria-label="章節解鎖" hidden>
+    <p role="status"></p>
+    <button class="chapter-next" type="button"></button>
+    <button class="chapter-stay" type="button">留在本章</button>
+  </section>
+  <script type="module" src="opening.js?v=2"></script>
+</body>
+</html>

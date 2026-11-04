@@ -1,0 +1,231 @@
+@font-face {
+  font-family: "LXGW WenKai TC";
+  src: url("../fonts/LXGWWenKaiTC-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: "LXGW WenKai TC", "Kaiti TC", serif;
+  background: #211b19;
+  color: #f5ead5;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+button { font: inherit; }
+button:not(:disabled) { cursor: pointer; }
+[hidden] { display: none !important; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.opening {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stage {
+  position: relative;
+  width: min(100%, 177.68dvh);
+  aspect-ratio: 1672 / 941;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.art, .scene, .focus-light { position: absolute; inset: 0; width: 100%; height: 100%; }
+.art { pointer-events: none; transform-origin: 52.5% 82%; transition: transform 750ms ease-in; }
+.approach-paper .art { transform: scale(1.65); }
+.scene { opacity: 0; object-fit: fill; transition: opacity 560ms ease, transform 1100ms ease; }
+.unlit { opacity: 1; filter: brightness(.81); }
+.lit { filter: brightness(.9); }
+.entry-seal { position: absolute; top: 62%; left: 19%; width: 3.2%; }
+.focus-light {
+  background: radial-gradient(ellipse 17% 27% at var(--x, 53%) var(--y, 32%), transparent, #180f0d55 85%, #180f0d75);
+  transition: opacity 360ms ease;
+}
+:is([data-state="lighting"], [data-state="lit"], [data-state="opening"]) .lit { opacity: 1; }
+:is([data-state="opening"], [data-state="hall"], [data-state="walking"], [data-state="desk"], [data-state="cue"], [data-state="stamping"], [data-state="handoff"]) .focus-light { opacity: 0; }
+
+.doorway {
+  position: absolute;
+  left: 54.85%;
+  top: 12.8%;
+  width: 30.65%;
+  height: 70.5%;
+  overflow: hidden;
+  perspective: 72vw;
+  visibility: hidden;
+}
+.door-view { position: absolute; inset: 0; background: #30241e url("assets/hall.jpg") center / auto 100%; }
+.door-leaf {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: url("assets/lit.jpg") 64.78% 43.39% / 652.53% 141.84%;
+  filter: brightness(.9);
+  transition: transform 1280ms cubic-bezier(.28,.02,.24,1);
+}
+.door-leaf.left { left: 0; transform-origin: left; }
+.door-leaf.right { right: 0; transform-origin: right; background-position-x: 82.88%; }
+[data-state="opening"] .doorway { visibility: visible; }
+.doors-open .door-leaf.left { transform: rotateY(84deg); }
+.doors-open .door-leaf.right { transform: rotateY(-84deg); }
+
+:is([data-state="hall"], [data-state="walking"], [data-state="desk"], [data-state="cue"], [data-state="stamping"], [data-state="handoff"]) .hall { opacity: 1; }
+[data-state="walking"] .hall { transform: scale(1.24); transform-origin: 51% 59%; }
+:is([data-state="desk"], [data-state="cue"], [data-state="stamping"], [data-state="handoff"]) .desk { opacity: 1; }
+:is([data-state="cue"], [data-state="stamping"], [data-state="handoff"]) .cue { opacity: 1; }
+
+.target {
+  position: absolute;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  touch-action: manipulation;
+}
+.target:focus-visible { outline: 2px solid #ffe7af; outline-offset: 2px; }
+.lamp { left: 49%; top: 23%; width: 7.8%; height: 17%; min-width: 34px; min-height: 36px; }
+.door { left: 54.7%; top: 13%; width: 31%; height: 70%; }
+.seal { left: 70.6%; top: 63.4%; width: 8.5%; height: 22%; min-width: 36px; min-height: 44px; }
+.seal:hover { box-shadow: inset 0 0 19px #ffdda032; }
+
+.guide, .retry {
+  position: absolute;
+  bottom: clamp(16px, 4vh, 36px);
+  margin: 0;
+  color: #fff0d3;
+  background: #211b19e8;
+  border: 1px solid #ae8e6755;
+  padding: .45em .95em;
+}
+.guide:empty { display: none; }
+.retry { bottom: 78px; }
+
+/* The same paper and classes used by LanternEmperorSpeech in the paintings. */
+.conversation {
+  bottom: max(14px, calc((100dvh - min(100dvh, 56.28vw)) / 2 + 12px));
+  left: max(18px, calc((100vw - min(100vw, 177.68dvh)) / 2 + 18px));
+  width: min(310px, calc(100% - 36px));
+  --reply-tail-y: 34px;
+}
+.conversation .lantern-character-reply {
+  background-image: url("../art/ui/lantern-dialogue-ink-frame-v1.png");
+}
+.conversation .emperor-speech-bubble p { margin: 0; }
+.conversation .emperor-speech-bubble .zanhua-dialogue-caption {
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: .04em;
+  opacity: .7;
+}
+.chapter-complete {
+  position: fixed;
+  z-index: 1;
+  top: max(14px, env(safe-area-inset-top));
+  left: 50%;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  transform: translateX(-50%);
+  padding: 12px 16px;
+  background: #eee4cd url("../art/ui/lantern-dialogue-ink-frame-v1.png") center / 100% 370%;
+  color: #414534;
+  box-shadow: 0 6px 24px #24180d44;
+}
+.chapter-complete p { margin: 0 0 6px; }
+.chapter-complete button {
+  background: transparent;
+  color: #414534;
+  border: 1px solid #82785c88;
+  padding: 4px 8px;
+}
+.chapter-stay { margin-left: 6px; }
+
+.seal-movement {
+  position: absolute;
+  left: 71.65%;
+  top: 65.75%;
+  width: 5.84%;
+  height: 18.8%;
+  visibility: hidden;
+}
+.seal-patch, .seal-actor { position: absolute; inset: 0; background-image: url("assets/cue.jpg"); }
+.seal-patch {
+  background-size: 1712% 794%;
+  background-position: 76.1% 100%;
+  mask-image: radial-gradient(ellipse closest-side, #000 83%, #0000 110%);
+}
+.seal-actor {
+  background-size: 1712% 532%;
+  background-position: 76.1% 80.97%;
+  clip-path: polygon(13% 31%, 13% 18%, 29% 5%, 42% 0, 67% 2%, 87% 10%, 92% 29%, 99% 36%, 99% 93%, 69% 100%, 5% 95%, 1% 36%);
+  transform-origin: 50% 95%;
+}
+.seal-pressed .seal-movement { visibility: visible; }
+.seal-pressed .seal-actor { animation: stamp 960ms ease-in-out both; }
+@keyframes stamp {
+  0% { transform: none; }
+  32% { transform: translate(-305%, -35%) rotate(-9deg); }
+  58% { transform: translate(-370%, 2%) scale(.93); }
+  69% { transform: translate(-370%, 2%) scale(.93); }
+  84% { transform: translate(-290%, -38%) rotate(6deg); }
+  100% { transform: none; }
+}
+.impression {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  width: 5%;
+  opacity: 0;
+  transform: scaleY(.72) rotate(-4deg);
+  mix-blend-mode: multiply;
+}
+.impression img { display: block; width: 100%; }
+.seal-pressed .impression { opacity: .94; transition: opacity 140ms ease 530ms; }
+
+.silk, .gallery { position: fixed; inset: 0; width: 100%; height: 100%; }
+.silk { background: #efe3cb; opacity: 0; pointer-events: none; transition: opacity 440ms ease; }
+.gallery { border: 0; opacity: 0; visibility: hidden; background: #f1ead7; transition: opacity 560ms ease; }
+.handing-off .silk { opacity: 1; }
+.gallery-visible .gallery { opacity: 1; visibility: visible; }
+.gallery-visible .opening { pointer-events: none; }
+
+@media (max-aspect-ratio: 4/5) {
+  .conversation { top: calc(50% + 28.15vw + 14px); bottom: auto; }
+  .guide { bottom: auto; top: calc(50% + 28.15vw + 16px); }
+}
+@media (max-height: 460px) {
+  .conversation .emperor-speech-bubble { padding: 8px 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; transition-duration: 100ms !important; transition-delay: 0ms !important; }
+  [data-state="walking"] .hall { transform: none; }
+  .approach-paper .art { transform: none; }
+}
+
+.guide {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  clip-path: inset(50%);
+}
+[data-state="asset-error"] .guide,
+[data-state="handoff"]:has(.retry:not([hidden])) .guide {
+  width: auto;
+  height: auto;
+  padding: .45em .95em;
+  clip-path: none;
+}
+.stamp-complete .seal-movement { visibility: hidden; }
