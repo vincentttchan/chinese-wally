@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-04",
+  "timezone": "Asia/Hong_Kong",
+  "archivedAtUTC": "2026-11-04T01:47:13.119763+00:00",
+  "site": "https://vincentttchan.github.io/chinese-wally/",
+  "tag": "site-2026-11-04-night-atelier",
+  "deployedCommit": "234d08ae93ce4ac38b65719b507bcf1323d73a7e",
+  "deploymentId": 7535303393,
+  "deploymentStatus": "success",
+  "deployedAtUTC": "2026-11-04T01:26:56Z",
+  "actionsRun": 41753947817,
+  "artifactId": 13286693282,
+  "artifactBytes": 645295626,
+  "artifactSHA256": "691ad5d8088b72b18292b1440675fd8f6f9fb711a6c2769866915fdaa5ccaa80",
+  "officialDigestMatched": true,
+  "websiteFiles": 731,
+  "liveFingerprintMatched": {
+    "path": "atelier/journey.js",
+    "sha256": "193b5671c0a86bae05b25c46ed91926da7e6684360c4e4313a3e565eda989e1f"
+  },
+  "releaseURL": "https://github.com/vincentttchan/chinese-wally/releases/tag/site-2026-11-04-night-atelier",
+  "acceptance": {
+    "environment": "2026-11-04, desktop Chrome, isolated browser profiles, production site",
+    "freshSave": "Completed the atelier opening and entire Zanhua chapter. Recall and summary unlocked Lantern and collected only Zanhua.",
+    "laterChapterEndings": "From chapter-end fixtures, Lantern answers and explanations unlocked Kangqu, and the Kangqu note, answer and explanation unlocked Luoshen. Three paintings were collected.",
+    "onePaintingSave": "Reopened the site, revisited Zanhua from the album, then resumed Lantern with one click.",
+    "threePaintingFixture": "Revisited Zanhua from the atelier and Luoshen, retained all three paintings, and resumed Luoshen with one click after preloading Zanhua."
+  }
+}
