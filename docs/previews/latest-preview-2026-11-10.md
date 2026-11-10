@@ -9,3 +9,5 @@ GitHub 預覽分支：`codex/latest-preview-2026-11-10`。本分支保存目前�
 本次補齊本機稀疏工作目錄缺少的 90 個既有檔案；這些檔案本已存在 Git 基準，沒有替換圖像內容。另修正 `public/atelier/kangqu.html` 重複 base 設定造成相對素材位置錯誤，使用共享的 `chapters/kangqu-listening-v2/` 素材根目錄，官方 2.3.1 章節文件未改。
 
 驗證：534 張本機 PNG/JPEG/WebP 圖片完整性通過，`npm run build` 成功（保留既有大型 bundle 警告）；預覽分支供檢視與後續修改。正式部署另行處理。
+
+iCloud 下載驗收：與本版本相關的 472 個佔位檔已全部實體化（剩餘 0）；預覽資產放在非 iCloud 工作目錄中。《在人群中聽樂》15 個宣告圖片來源全部解碼成功，見聞冊 10 張實際顯示圖片的 naturalWidth 皆大於 0。

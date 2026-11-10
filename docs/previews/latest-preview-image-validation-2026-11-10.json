@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-10",
+  "cloud_placeholders_before": 472,
+  "cloud_placeholders_after": 0,
+  "restored_tracked_files": 90,
+  "verified_raster_images": 534,
+  "invalid_raster_images": 0,
+  "kangqu_declared_images": 15,
+  "kangqu_declared_failures": 0,
+  "kangqu_journal_displayed_images": 10,
+  "kangqu_journal_failures": 0,
+  "build": "passed",
+  "preview_branch": "codex/latest-preview-2026-11-10",
+  "deployment": false,
+  "code_commit": "67c9c395ed98cfa298ae2fd0d90d252f1d698c01"
+}
