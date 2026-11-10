@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 112" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="silk" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#65402c"/>
+      <stop offset=".19" stop-color="#b68151"/>
+      <stop offset=".37" stop-color="#d0a574"/>
+      <stop offset=".58" stop-color="#b6895e"/>
+      <stop offset=".83" stop-color="#876041"/>
+      <stop offset="1" stop-color="#543622"/>
+    </linearGradient>
+    <linearGradient id="wood" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#31221b"/>
+      <stop offset=".44" stop-color="#936240"/>
+      <stop offset="1" stop-color="#342119"/>
+    </linearGradient>
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".18 .43" numOctaves="3" stitchTiles="stitch" result="grain"/>
+      <feColorMatrix in="grain" type="saturate" values="0"/>
+      <feComposite in2="SourceAlpha" operator="in"/>
+      <feBlend in2="SourceGraphic" mode="soft-light"/>
+    </filter>
+  </defs>
+  <path d="M15 45c-12 1-13 29 0 31l27 3V41zM594 40l28 2c17 2 16 31 1 34l-28 3z" fill="url(#wood)" stroke="#33231c" stroke-width="3"/>
+  <path d="M41 24C97 17 193 18 286 20c119 3 220-4 309 1 12 1 15 15 15 34s-5 33-16 36c-114 4-191 2-311 1-91-1-186 5-242-1-17-4-20-58 0-67z" fill="url(#silk)" stroke="#5b3c2a" stroke-width="3" filter="url(#grain)"/>
+  <path d="M49 24c-10 12-12 53-1 67m17-68c-8 14-10 51-1 68m515-69c9 16 11 53 0 68m14-68c10 15 12 52 0 68" fill="none" stroke="#4f3324" stroke-opacity=".52" stroke-width="3"/>
+  <path d="M66 36c83-6 160-2 226-1m60 0c72-2 150-5 222-4M81 74c60 2 146-3 205-2m64 3c63 1 148 1 207-3" fill="none" stroke="#e9bc83" stroke-opacity=".19" stroke-width="2"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M316 17c-9 18-9 58-2 76m12-77c-8 19-8 58 0 77m-6-50c-37-34-52-9-29 3 12 6 18 2 29-3zm2 0c30-34 52-15 34 0-11 9-25 6-34 0zm-1 4c-3 26-18 39-26 50m28-50c4 23 13 45 23 55" stroke="#4d2a1b" stroke-width="8"/>
+    <path d="M317 18c-9 17-8 56-2 74m12-75c-8 18-8 56-1 75m-7-50c-34-31-49-8-27 3 11 5 17 1 27-3zm4 0c28-32 49-14 33 0-10 8-24 5-33 0zm-1 5c-3 24-16 38-24 49m26-48c4 23 14 43 22 52" stroke="#9c6945" stroke-width="2.8"/>
+  </g>
+</svg>

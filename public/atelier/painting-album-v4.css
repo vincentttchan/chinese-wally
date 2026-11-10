@@ -1,0 +1,13 @@
+@import url('painting-album-v3.css?v=1');
+.personal-album .album-details {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 12px;}
+.personal-album .album-details:empty {display:none;}
+.personal-album .album-details figure {max-width:none;min-width:0;}
+.personal-album .album-details svg {width:clamp(46px,4.7cqw,66px);max-width:100%;margin:0 auto;}
+.personal-album .album-details figcaption {font-size:clamp(11px,1cqw,13px);white-space:normal;line-height:1.5;overflow-wrap:anywhere;}
+.personal-album .album-findings {padding-top:16px;}
+@media(max-width:650px) {
+  .personal-album .album-details {gap:8px;}
+  .personal-album .album-details svg {width:46px;}
+  .personal-album .album-details figcaption {font-size:10px;}
+  .personal-album .album-findings {padding-top:10px;}
+}

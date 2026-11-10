@@ -1,0 +1,21 @@
+/* Shared paper action labels at the outer edge, away from cover lettering. */
+body > .painting-album-toggle {
+ left:auto; right:max(22px,env(safe-area-inset-right)); top:max(20px,env(safe-area-inset-top));
+ min-width:108px; min-height:46px; padding:9px 16px;
+ border:1px solid #978260; border-radius:2px;
+ background:#eee4cd url('../art/ui/reading-paper.png') center/cover;
+ color:#414534; letter-spacing:.12em; box-shadow:0 3px 10px #30241a20;
+}
+body > .chapter-complete.is-compact {
+ top:max(20px,env(safe-area-inset-top)); right:150px; left:auto;
+ transform:none; max-width:calc(100vw - 174px); padding:0;
+ border:1px solid #978260; border-radius:2px;
+ background:#eee4cd url('../art/ui/reading-paper.png') center/cover;
+ box-shadow:0 3px 10px #30241a20;
+}
+body > .chapter-complete.is-compact .chapter-next { min-height:46px; padding:9px 16px; letter-spacing:.06em; }
+body > .painting-album-toggle:hover,body > .chapter-complete.is-compact .chapter-next:hover { color:#8b4435; background-color:#f5e8ce; }
+@media(max-width:600px) {
+ body > .painting-album-toggle { right:12px; top:12px; min-width:88px; padding:7px 10px; }
+ body > .chapter-complete.is-compact { top:66px; right:12px; max-width:calc(100vw - 24px); }
+}

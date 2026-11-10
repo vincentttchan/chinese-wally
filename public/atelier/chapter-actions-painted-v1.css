@@ -1,0 +1,38 @@
+/* Hand-painted objects sit directly on the painting, with live accessible labels. */
+body > .painting-album-toggle,
+body > .chapter-complete.is-compact {
+ position:fixed; top:max(14px,env(safe-area-inset-top)); left:auto; bottom:auto;
+ width:104px; height:102px; min-width:0; max-width:none;
+ padding:0; margin:0; transform:none; border:0; border-radius:0;
+ background:transparent; box-shadow:none;
+}
+body > .painting-album-toggle { right:max(18px,env(safe-area-inset-right)); padding:78px 0 4px; min-height:0; color:#faedce; font-size:15px; font-weight:500; line-height:20px; letter-spacing:.14em; text-shadow:0 1px 3px #27190e,0 0 8px #27190e; }
+body > .chapter-complete.is-compact { right:138px; }
+body > .chapter-complete.is-compact .chapter-next { position:relative; display:block; width:104px; height:102px; min-height:0; padding:78px 0 4px; border:0; background:transparent; color:#faedce; font-size:0; line-height:20px; cursor:pointer; text-shadow:0 1px 3px #27190e,0 0 8px #27190e; }
+body > .painting-album-toggle::before,
+body > .chapter-complete.is-compact .chapter-next::before {
+ content:''; position:absolute; left:4px; top:-7px; width:96px; height:88px;
+ background:url('assets/painted-actions-v1/album-scroll.png') 0 50% / 200% auto no-repeat;
+ pointer-events:none; transition:transform 180ms ease;
+}
+body > .chapter-complete.is-compact .chapter-next::before { background-position:100% 50%; }
+body > .chapter-complete.is-compact .chapter-next::after { content:'下一卷'; font-size:15px; font-weight:500; letter-spacing:.14em; }
+body > .painting-album-toggle:hover,
+body > .chapter-complete.is-compact .chapter-next:hover { background:transparent; color:#fff5df; }
+body > .painting-album-toggle:hover::before,
+body > .chapter-complete.is-compact .chapter-next:hover::before { transform:translateY(-3px) rotate(-2deg); }
+body > .painting-album-toggle:focus-visible,
+body > .chapter-complete.is-compact .chapter-next:focus-visible { outline:2px solid #d7bb83; outline-offset:3px; border-radius:4px; }
+@media(max-width:600px) {
+ body > .painting-album-toggle,body > .chapter-complete.is-compact { top:max(8px,env(safe-area-inset-top)); width:76px; height:82px; }
+ body > .painting-album-toggle {right:max(8px,env(safe-area-inset-right));padding-top:59px;font-size:13px;}
+ body > .chapter-complete.is-compact {right:92px;}
+ body > .chapter-complete.is-compact .chapter-next {width:76px;height:82px;padding-top:59px;}
+ body > .painting-album-toggle::before,body > .chapter-complete.is-compact .chapter-next::before {left:2px;top:-4px;width:72px;height:66px;}
+ body > .chapter-complete.is-compact .chapter-next::after {font-size:13px;}
+}
+@media(prefers-reduced-motion:reduce) {body > .painting-album-toggle::before,body > .chapter-complete.is-compact .chapter-next::before {transition:none;}}
+@media(max-width:600px) {
+ body > .painting-album-toggle,body > .chapter-complete.is-compact .chapter-next {color:#3b4030;text-shadow:none;}
+ body > .painting-album-toggle:hover,body > .chapter-complete.is-compact .chapter-next:hover {color:#813e30;}
+}

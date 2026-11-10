@@ -1,0 +1,6 @@
+@import url('chapter-album-river-v2.css?v=1');
+
+/* These are cover entrances. The chapter's own tools take over after entry. */
+html:not(:has(.introduction:not([inert], [hidden], .is-opening-scroll))) body > :is(.painting-album-toggle, .chapter-complete.is-compact) {
+  display:none!important;
+}

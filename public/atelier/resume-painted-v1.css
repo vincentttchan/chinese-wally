@@ -1,0 +1,27 @@
+/* A tangible reading marker, matching the album and scroll illustrations. */
+.opening > .resume-journey {
+  right:max(26px,calc((100vw - min(100vw,177.68dvh)) / 2 + 26px),env(safe-area-inset-right));
+  bottom:max(24px,calc((100dvh - min(100dvh,56.28vw)) / 2 + 24px),env(safe-area-inset-bottom));
+  width:246px;height:92px;min-height:44px;
+  padding:0;border:0;background:none;box-shadow:none;
+  display:grid;place-items:center;isolation:isolate;
+  font-family:AtelierAlbum,'LXGW WenKai TC','Kaiti TC',serif;
+  font-size:22px;line-height:1.5;letter-spacing:.08em;
+  color:#473427;cursor:pointer;-webkit-tap-highlight-color:transparent;
+}
+.opening > .resume-journey[hidden] {display:none;}
+.resume-journey::before {
+  content:'';position:absolute;inset:0;z-index:-1;
+  background:url('assets/resume-painted-v1/reading-marker.png') center/contain no-repeat;
+  filter:drop-shadow(0 5px 7px #100b0870);
+  transition:transform 180ms ease,filter 180ms ease;
+}
+.resume-journey > span {padding-left:12px;padding-bottom:1px;}
+.resume-journey > span > span {margin-left:6px;}
+.resume-journey:hover::before {transform:translateY(-2px);filter:drop-shadow(0 7px 9px #100b0880) brightness(1.04);}
+.resume-journey:active::before {transform:none;}
+.opening > .resume-journey:focus-visible {outline:2px solid #e4c486;outline-offset:4px;border-radius:4px;}
+@media(max-width:600px) {
+  .opening > .resume-journey {right:max(16px,calc((100vw - min(100vw,177.68dvh)) / 2 + 16px),env(safe-area-inset-right));bottom:max(18px,calc((100dvh - min(100dvh,56.28vw)) / 2 + 18px),env(safe-area-inset-bottom));width:216px;height:81px;font-size:20px;}
+}
+@media(prefers-reduced-motion:reduce) {.resume-journey::before{transition:none}.resume-journey:hover::before{transform:none}}

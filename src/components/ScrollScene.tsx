@@ -219,7 +219,7 @@ export function ScrollScene({image, tiles, actors, active, blocked, resetKey, hi
       if (raf !== undefined) cancelAnimationFrame(raf);
       fade?.cancel(); stopAnimation(); setDepartingView(null);
     };
-  }, [studyCommand?.token, loaded, frameSize.width, frameSize.height]);
+  }, [studyCommand?.token, studyCommand?.scaleRatio, loaded, frameSize.width, frameSize.height]);
   useEffect(() => {
     setMark(null); if (!selection || !loaded) return;
     const actor = actors.find(a => a.id === selection.actorId); if (!actor) return;

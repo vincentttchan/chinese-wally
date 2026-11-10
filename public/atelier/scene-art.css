@@ -1,0 +1,117 @@
+/* Full painted environments and their movable objects share one camera. */
+.scene-plane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+}
+.scene-plane > img:first-child { display: block; width: 100%; height: 100%; }
+.room-plane {
+  visibility: hidden;
+  pointer-events: none;
+
+}
+.camera-moving .room-plane { transition: transform 1080ms cubic-bezier(.25,.65,.25,1); }
+.is-room .room-plane { visibility: visible; pointer-events: auto; }
+.is-room .corridor-plane { visibility: hidden; pointer-events: none; }
+.scene-shade { position: absolute; inset: 0; pointer-events: none; }
+.opening:is([data-state="unlit"],[data-state="lit"]) .scene-shade {
+  background: radial-gradient(circle at var(--x,var(--lamp-x)) var(--y,var(--lamp-y)), transparent 55px, #0d0f185c min(30vw,340px));
+}
+.lantern-glow { position: absolute; pointer-events: none; opacity: 0; transition: opacity 700ms ease; }
+.lantern-glow::before, .lantern-glow::after { content: ""; position: absolute; pointer-events: none; }
+.lantern-glow::before {
+  inset: 20% 9%;
+  background: radial-gradient(ellipse, #ffe6ae99 8%, #ffbf6166 40%, transparent 72%);
+  mix-blend-mode: screen;
+}
+.lantern-glow::after {
+  inset: -240% -500%;
+  background: radial-gradient(ellipse, #efa5473b, #f4b25b12 42%, transparent 72%);
+  mix-blend-mode: screen;
+}
+.opening:is([data-state="lighting"],[data-state="lit"],[data-state="opening"]) .lantern-glow { opacity: 1; }
+.lamp:hover, .door:hover { outline: 1px solid #f4d6a642; outline-offset: 4px; }
+
+.doorway { position: absolute; inset: 0; pointer-events: none; visibility: hidden; }
+[data-state="opening"] .doorway { visibility: visible; }
+.door-view, .door-leaves { position: absolute; }
+.door-view { overflow: hidden; background: #2e251b; transition: all 900ms cubic-bezier(.28,.6,.25,1); }
+.door-room { position: absolute; top: 0; left: 0; transform-origin: 0 0; }
+.door-room > .door-art { display: block; width: 100%; height: 100%; }
+.door-book, .door-seal, .door-roll { position: absolute; object-fit: fill; }
+.door-book { filter: drop-shadow(0 3px 3px #1d110d59); }
+.door-roll { transform: rotate(var(--roll-angle,0deg)); filter: brightness(.70) saturate(.82); }
+.door-seal { filter: drop-shadow(2px 3px 2px #21140c5c); }
+.door-leaves { perspective: 1100px; }
+.door-leaf {
+  position: absolute; top: 0; width: 50%; height: 100%;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  transition: transform 1100ms cubic-bezier(.3,.05,.2,1), opacity 500ms ease;
+}
+.door-leaf.left { left: 0; transform-origin: left; }
+.door-leaf.right { right: 0; transform-origin: right; }
+.doors-open .door-leaf.left { transform: rotateY(-103deg); }
+.doors-open .door-leaf.right { transform: rotateY(103deg); }
+.entering-room .door-view { left: 0 !important; top: 0 !important; width: 100% !important; height: 100% !important; }
+.entering-room .door-leaves { opacity: 0; transition: opacity 250ms ease; }
+
+.scene-wordmark {
+  position: absolute; display: flex; align-items: center; gap: .6em;
+  color: #f5dfb7; font-size: clamp(28px,4vw,72px); letter-spacing: .18em;
+  text-shadow: 0 2px 16px #141622; white-space: nowrap; pointer-events: none;
+}
+.scene-wordmark b { border: 1px solid #bb7a67; padding: .35em; font-size: .27em; font-weight: 400; letter-spacing: .1em; background: #78372fca; }
+.is-room .scene-wordmark, [data-state="opening"] .scene-wordmark { display: none; }
+
+.book-prop, .seal-prop, .entry-impression { position: absolute; pointer-events: none; object-fit: fill; }
+.book-prop { filter: drop-shadow(0 3px 3px #1d110d59); }
+[data-state="passing"] .book-prop { transition: transform 900ms cubic-bezier(.25,.1,.25,1); }
+.book-received .book-prop { transform: translateY(var(--book-advance)); }
+.seal-prop { filter: drop-shadow(2px 3px 2px #21140c5c); }
+.seal-pressed .seal-prop { animation: seal-press 1500ms cubic-bezier(.4,0,.2,1) both; }
+@keyframes seal-press {
+  0%, 100% { transform: translate(0,0); }
+  25% { transform: translate(0,var(--stamp-lift)); }
+  48%, 58% { transform: translate(var(--stamp-dx),calc(var(--stamp-dy) - 24px)); }
+  65%, 72% { transform: translate(var(--stamp-dx),var(--stamp-dy)); }
+  85% { transform: translate(var(--stamp-dx),calc(var(--stamp-dy) - 24px)); }
+}
+.entry-impression { opacity: 0; mix-blend-mode: multiply; transform: skewX(-8deg) rotate(-3deg); }
+.seal-pressed .entry-impression { animation: impression-arrives 1500ms both; }
+@keyframes impression-arrives { 0%, 65% { opacity: 0; } 72%, 100% { opacity: .92; } }
+
+.archive-controls .archive-book { transform: none; }
+.archive-controls button { min-height: calc(44px / var(--camera-scale)); }
+.archive-store { font-size: calc(16px / var(--camera-scale)); }
+.archive-book-title { font-size: calc(15px / var(--camera-scale)); white-space: nowrap; letter-spacing: .12em; }
+.archive-shelf span { font-size: calc(16px / var(--camera-scale)); }
+.target { min-width: 0; min-height: 0; }
+.conversation, [data-state="return-room"] .conversation {
+  width: min(350px,calc(100% - 36px));
+  max-height: calc(100dvh - 36px);
+  overflow-y: auto;
+  --reply-tail-y: 40px;
+}
+.conversation .emperor-speech-bubble { padding: 16px 20px; }
+.conversation .emperor-speech-bubble #line, [data-state="return-room"] .conversation #line { font-size: 18px; line-height: 1.6; }
+.conversation .emperor-speech-bubble .zanhua-dialogue-caption { font-size: 11px; line-height: 18px; }
+.archive-question label { padding-block: 8px; min-height: 40px; font-size: 15px; }
+.conversation .emperor-speech-bubble .archive-confirm { position: sticky; bottom: 0; min-height: 44px; background: #f0e7d0; width: 100%; text-align: right; }
+.conversation:has(.archive-question:not([hidden])) .tail-left::before { display: none; }
+
+@media (max-aspect-ratio: 1/1) {
+  .scene-wordmark { font-size: clamp(27px,7vw,52px); }
+  .conversation .tail-left::before { display: none; }
+}
+@media (max-height: 460px) {
+  .conversation .emperor-speech-bubble { padding: 10px 16px; }
+  .conversation .emperor-speech-bubble #line, [data-state="return-room"] .conversation #line { font-size: 16px; line-height: 1.5; }
+  .archive-question label { padding-block: 5px; min-height: 36px; font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .room-plane, .door-leaf, .door-view, .book-prop { transition-duration: 0ms; }
+  .seal-pressed .seal-prop { animation: none; }
+  .seal-pressed .entry-impression { animation: none; opacity: .92; }
+}

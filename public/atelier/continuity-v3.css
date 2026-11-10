@@ -1,0 +1,32 @@
+/* Same 2:1 painted extent in every frame. Original action coordinate plane stays fixed. */
+.scene { left: -6.279905%; width: 112.55981%; object-fit: contain; }
+.opening .stage { overflow: visible; }
+/* The door preview and first hall frame share a camera; the camera settles
+   during the existing hall dissolve rather than replacing the composition. */
+.door-view { background-position: 19% center; }
+.hall { transform: translate(25%, 0) scale(.7); transform-origin: 50% 50%; transition: opacity 560ms ease, transform 560ms ease; }
+.opening:is([data-state='hall'],[data-state='desk'],[data-state='passing'],[data-state='cue'],[data-state='stamping'],[data-state='handoff']) .hall { transform: none; }
+.opening[data-state='walking'] .hall { transform: scale(1.24); transform-origin: 51% 59%; transition: transform 1100ms ease; }
+/* Use the widened source for both the moving seal and the clean plate. */
+.seal-actor { background-image: url('assets/proportions-v3/cue.png'); background-size: 1927.39% 532%; background-position: 73.02% 80.97%; }
+.seal-clean { mask-image: radial-gradient(ellipse 4.8% 15.5% at 71.77% 75%, #000 91%, transparent); }
+/* Shelves are a close-up; clip the camera only while that view is active. */
+.opening[data-state='shelf-view'] .stage { overflow: hidden; }
+@media(prefers-reduced-motion:reduce) { .hall { transform: none; } }
+.opening:not([data-state='shelf-view']) .stage { overflow: visible; }
+/* Anchor speech beside the speaker, in the room's coordinate plane. */
+@media(min-aspect-ratio:4/5) {
+ .opening:is([data-state='hall'],[data-state='desk'],[data-state='passing'],[data-state='cue'],[data-state='return-room'],[data-state='room-handoff']) .conversation {
+  top: calc(50% - min(100dvh, 56.28vw) * .21);
+  left: calc(50% + min(100vw,177.68dvh) * .025);
+  right: auto; bottom: auto;
+  width: clamp(250px,24vw,360px);
+  max-width: calc(47vw - 20px);
+  --reply-tail-y: 32px;
+ }
+ .opening[data-state='hall'] .conversation {
+  left: calc(50% - min(100vw,177.68dvh) * .08);
+  top: calc(50% - min(100dvh,56.28vw) * .15);
+ }
+ .opening .conversation .tail-right::before { left: -5px; right: auto; border-width: 0 0 1px 1px; }
+}

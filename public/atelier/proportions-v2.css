@@ -1,0 +1,35 @@
+/* Two complete 2:1 paintings, at their native aspect. Original 1672:941
+   coordinate plane stays fixed for desk poses, stamping and shelf camera. */
+.stage { overflow: visible; }
+.scene:is(.unlit,.lit,.hall) {
+  left: -6.279905%;
+  width: 112.55981%;
+  object-fit: contain;
+}
+.lit { filter: brightness(1.15) sepia(.12); }
+.focus-light { left: -6.279905%; width: 112.55981%; }
+/* Keep pointer illumination in the original coordinate plane. */
+.focus-light { background: radial-gradient(ellipse 17% 27% at calc(5.579171% + var(--x, 43%) * .88841658) var(--y, 32%), transparent, #180f0d55 85%, #180f0d75); }
+.entry-seal { left: 11.9%; top: 62%; }
+.lamp { left: 38.5%; top: 24%; width: 8%; height: 16%; }
+.door { left: 44.2%; top: 14%; width: 32.9%; height: 70%; }
+.doorway { left: 44.37%; top: 14%; width: 32.76%; height: 70%; }
+.door-view { background-image: url('assets/proportions-v2/hall.png'); }
+/* Crop each hinged leaf from the exact same source as the closed doorway. */
+.door-leaf {
+  background-image: url('assets/proportions-v2/entrance.png');
+  background-size: 687.2% 142.857%;
+  background-position: 52.71% 46.667%;
+  filter: brightness(1.15) sepia(.12);
+}
+.door-leaf.right { background-position-x: 69.74%; }
+/* Later scenes retain their original bounded artboard and animations. */
+.opening:is([data-state='desk'],[data-state='passing'],[data-state='cue'],[data-state='stamping'],[data-state='handoff'],[data-state='return-room'],[data-state='room-handoff']) .stage { overflow: hidden; }
+/* Warm light belongs to the newly positioned lantern; fade uses the original
+   lighting transition duration and the original state machine. */
+.art::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 2.1% 4% at 41.9% 33%, #ffe3a8cc, #ffc46544 75%, transparent 100%), radial-gradient(ellipse 17% 29% at 42% 33%, #ffba5b28, transparent 100%);
+  opacity: 0; transition: opacity 560ms ease;
+}
+.opening:is([data-state='lighting'],[data-state='lit'],[data-state='opening']) .art::after { opacity: 1; }

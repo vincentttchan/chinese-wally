@@ -305,3 +305,12 @@
 .luoshen-opening-sleeve-world canvas{position:absolute}
 .luoshen-opening-sleeve-return{position:absolute;border:0;background:transparent;padding:0;pointer-events:auto;cursor:pointer}
 .luoshen-opening-sleeve-return:focus-visible{outline:2px solid #d9b761;outline-offset:4px}
+
+.luoshen-game.is-luoshen-final :is(.lantern-hud,.lantern-footer,.luoshen-skip-controls),
+body:has(.is-luoshen-final) > .painting-album-toggle { visibility:hidden; }
+.luoshen-game .luoshen-final-note { padding:24px 27px 18px; }
+.luoshen-game .luoshen-final-note .lantern-note-body { margin:0; }
+.luoshen-game .luoshen-final-note .lantern-note-next { margin-top:12px; padding-top:5px; }
+@media(max-width:699px) {
+ .luoshen-game .luoshen-final-note { top:auto; bottom:clamp(24px, 10dvh, 88px); }
+}

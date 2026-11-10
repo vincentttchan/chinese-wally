@@ -1,0 +1,87 @@
+@import url('painting-album.css?v=6');
+@font-face {font-family:AtelierAlbum;src:url('../fonts/LXGWWenKaiTC-Regular.ttf') format('truetype');font-display:swap;}
+.personal-album {
+  position:fixed;inset:0;margin:auto;width:100%;height:100%;max-width:none;max-height:none;
+  padding:0;border:0;border-radius:0;overflow:auto;color:#4c3827;
+  background:#efe0bf url('../art/ui/reading-paper.png') center/cover;
+  font-family:AtelierAlbum,'Kaiti TC',serif;font-size:16px;box-shadow:none;
+}
+.personal-album::backdrop {background:#211a14b8;}
+.personal-album[open] {display:flex;flex-direction:column;animation:album-arrive 320ms ease-out;}
+.personal-album * {box-sizing:border-box;}
+.personal-album .album-heading {
+  flex:none;display:flex;align-items:center;justify-content:space-between;
+  padding:14px clamp(22px,3.5vw,64px) 0;gap:16px;position:relative;z-index:2;
+}
+.album-heading h2 {font:500 clamp(22px,2.2vw,32px)/1.5 AtelierAlbum,serif;letter-spacing:.12em;margin:0;}
+.album-heading form {margin:0;}
+.personal-album .painting-album-close {background:none;box-shadow:none;padding:4px 0;letter-spacing:.13em;min-width:78px;}
+.personal-album .painting-album-close:hover {background:none;color:#983e2d;}
+.album-stage {flex:1;min-height:0;display:grid;place-items:center;padding:0 16px;}
+.album-canvas {position:relative;width:min(1480px,100%,calc((100dvh - 142px) * 1.8503));aspect-ratio:1706/922;container-type:inline-size;}
+.album-paper {display:block;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+.album-paper img {display:block;width:100%;height:100%;max-width:none;object-fit:contain;}
+.album-spread-content {position:absolute;inset:11% 7.5% 14% 11.8%;display:grid;grid-template-columns:46% 46%;gap:8%;}
+.album-left,.album-right {position:relative;min-width:0;display:flex;flex-direction:column;align-items:flex-start;}
+.personal-album p {margin:0;}
+.album-volume-number,.album-eyebrow {font-size:clamp(12px,1.2cqw,16px);letter-spacing:.22em;color:#82634b;}
+.personal-album .album-chapter-title {font-size:clamp(23px,3cqw,40px);line-height:1.5;letter-spacing:.08em;font-weight:500;margin:8px 0 0;}
+.album-memento {flex:1;align-self:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;}
+.album-impression {width:clamp(100px,14cqw,180px);height:clamp(100px,14cqw,180px);transform:rotate(-5deg);opacity:.88;mix-blend-mode:multiply;}
+.album-impression svg {display:block;width:100%;height:100%;overflow:visible;}
+.album-memento p {font-size:clamp(13px,1.25cqw,17px);letter-spacing:.15em;color:#9a4938;}
+.album-inscription {font-size:clamp(13px,1.55cqw,20px);line-height:1.6;color:#70523e;}
+.album-right {padding-top:7%;}
+.personal-album .album-memory-title {font-size:clamp(22px,2.5cqw,32px);line-height:1.55;letter-spacing:.04em;font-weight:500;margin:12px 0 18px;}
+.album-memory-lines {font-size:clamp(15px,1.65cqw,22px);line-height:1.9;white-space:pre-line;}
+.album-findings {margin-top:auto;padding-top:22px;width:100%;}
+.album-journal-label {font-size:clamp(12px,1.25cqw,16px);letter-spacing:.1em;color:#795f48;}
+.album-details {display:flex;gap:10px;margin:8px 0;}
+.album-details:empty {display:none;}
+.album-details figure {margin:0;flex:1;max-width:70px;text-align:center;}
+.album-details svg {display:block;width:100%;aspect-ratio:1;overflow:hidden;}
+.album-details figcaption {font-size:clamp(10px,1.1cqw,14px);white-space:nowrap;}
+.album-journal-note {font-size:clamp(12px,1.15cqw,15px);line-height:1.7;color:#80654c;}
+.personal-album .album-revisit {position:absolute;right:-4%;bottom:-6%;font-size:clamp(16px,1.9cqw,25px);letter-spacing:.06em;white-space:nowrap;}
+.personal-album .album-revisit:hover {color:#a44931;}
+.personal-album .album-revisit span {display:inline-block;margin-left:12px;transition:transform 180ms;}
+.personal-album .album-revisit:hover span {transform:translateX(4px);}
+.album-pagination {display:flex;gap:16px;align-items:center;justify-content:center;flex:none;}
+.album-page-tabs {display:flex;gap:8px;}
+.personal-album .album-pagination button {min-width:42px;min-height:42px;padding:6px 10px;font-size:18px;}
+.personal-album .album-pagination button[aria-current] {color:#a04430;box-shadow:inset 0 -2px #a04430;}
+.personal-album button:disabled {opacity:.28;cursor:default;}
+.personal-album .album-page-status {text-align:center;font-size:12px;letter-spacing:.1em;color:#866d54;padding:4px 12px 12px;}
+@keyframes album-arrive {from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(max-width:650px) {
+  .personal-album {background:#f2e4c9 url('../art/ui/reading-paper.png') center/cover;}
+  .personal-album .album-heading {padding:12px 20px 0;}
+  .album-heading h2 {font-size:23px;}
+  .album-stage {padding:0 8px;min-height:0;flex:none;margin-block:auto;}
+  .album-canvas {width:100%;aspect-ratio:971/1619;}
+  .album-spread-content {inset:10% 9% 8% 17%;display:flex;flex-direction:column;gap:18px;overflow:auto;scrollbar-width:thin;}
+  .album-left {flex:none;}
+  .personal-album .album-chapter-title {font-size:26px;margin:5px 0 6px;}
+  .album-memento {flex-direction:row;justify-content:flex-start;gap:16px;padding:12px 0 8px;}
+  .album-impression {width:76px;height:76px;flex:none;}
+  .album-memento p {font-size:13px;max-width:8em;line-height:1.8;}
+  .album-inscription {display:none;}
+  .album-right {padding:0;flex:1;}
+  .personal-album .album-memory-title {font-size:22px;margin:8px 0 12px;}
+  .album-memory-lines {font-size:16px;}
+  .album-findings {padding-top:16px;}
+  .album-details figure {max-width:50px;}
+  .album-details figcaption {font-size:11px;}
+  .album-journal-note {font-size:12px;}
+  .personal-album .album-revisit {position:static;align-self:flex-end;margin-top:12px;padding-right:0;font-size:18px;}
+  .album-pagination {padding-top:4px;}
+}
+@media(max-width:380px) {
+  .album-stage {margin-block:8px;}
+  .album-memento {gap:10px;padding-block:8px;}
+  .album-impression {width:60px;height:60px;}
+  .album-spread-content {gap:12px;}
+  .album-memory-lines {font-size:15px;}
+  .album-findings {padding-top:12px;}
+}
+@media(prefers-reduced-motion:reduce) {.personal-album[open]{animation:none}.personal-album .album-revisit span{transition:none}}

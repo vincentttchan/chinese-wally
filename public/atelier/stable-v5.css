@@ -1,0 +1,33 @@
+/* The portal is an opaque view of the same hall, never an alpha blend of rooms. */
+.door-view { background-size:240.51% 100%; background-position:19% 50%; transition:background-size 1200ms cubic-bezier(.28,.02,.24,1),background-position 1200ms cubic-bezier(.28,.02,.24,1); }
+.doors-open .door-view { background-size:343.59% 142.857%; background-position:63.47% 46.667%; }
+.hall { opacity:1; visibility:hidden; transform:none; clip-path:inset(14% 25.9% 16% 45%); transition:clip-path 520ms cubic-bezier(.28,.02,.24,1); }
+.opening:is([data-state='hall'],[data-state='walking'],[data-state='desk'],[data-state='passing'],[data-state='cue'],[data-state='stamping'],[data-state='handoff']) .hall { visibility:visible; opacity:1; clip-path:inset(0); }
+.opening[data-state='hall'] .doorway { visibility:visible; }
+.opening[data-state='walking'] .hall { transform:scale(1.24); transform-origin:51% 59%; transition:transform 1080ms ease; }
+/* One immutable room. Only the opaque foreground pose and book change. */
+.desk-composition { position:absolute; left:-6.279905%; top:0; width:112.55981%; height:100%; visibility:hidden; overflow:hidden; }
+.opening:is([data-state='desk'],[data-state='passing'],[data-state='cue'],[data-state='stamping'],[data-state='handoff'],[data-state='return-room'],[data-state='room-handoff'],[data-state='shelf-view']) .desk-composition { visibility:visible; }
+.stable-room { position:absolute; inset:0; width:100%; height:100%; }
+.stable-character { position:absolute; left:10.7%; top:2%; width:72%; height:72%; }
+.stable-pose { position:absolute; inset:0; background-image:url('assets/stable-v5/actors.png'); background-size:200% 200%; visibility:hidden; }
+.stable-pose.idle { background-position:0 0; }
+.stable-pose.passing { background-position:100% 0; }
+.stable-pose.pointing { background-position:0 100%; }
+.opening:is([data-state='desk'],[data-state='return-room'],[data-state='room-handoff'],[data-state='shelf-view']) .stable-pose.idle,
+.opening[data-state='passing'] .stable-pose.passing,
+.opening:is([data-state='cue'],[data-state='stamping'],[data-state='handoff']) .stable-pose.pointing { visibility:visible; }
+.stable-book { position:absolute; left:9%; top:10%; width:84%; height:84%; background:url('assets/stable-v5/actors.png') 100% 100%/200% 200%; clip-path:inset(64% 30% 0 0); transform:translate(3%,-3%) scale(.86); transform-origin:50% 80%; transition:transform 620ms cubic-bezier(.28,.06,.3,1); }
+.opening:is([data-state='passing'],[data-state='cue'],[data-state='stamping'],[data-state='handoff'],[data-state='return-room'],[data-state='room-handoff'],[data-state='shelf-view']) .stable-book { transform:none; }
+/* Same seal sprite and original stamp path, with no clean-plate swap. */
+.desk-composition .seal-movement { left:71%; top:65.5%; width:5.5%; height:18.7%; visibility:visible; }
+.desk-composition .seal-actor { background:url('assets/stable-v5/actors.png') 88.62% 95.2%/2247% 735.3%; clip-path:none; }
+/* Archive affordances stay on the same album after returning. */
+.opening[data-state='return-room'] .archive-controls .archive-book { left:41%; top:79%; }
+.opening[data-state='return-room'] .archive-controls .archive-store { left:39%; top:79%; }
+@media(prefers-reduced-motion:reduce) { .hall,.door-view,.stable-book { transition:none; } .opening[data-state='walking'] .hall { transform:none; } }
+/* A prop must inherit the hidden room, not leak through before entry. */
+.desk-composition .seal-movement { visibility:inherit; }
+/* The root viewport already clips the shelf camera; do not reintroduce a
+   narrower inner mat around the enlarged cabinet. */
+.opening[data-state='shelf-view'] .stage { overflow:visible; }

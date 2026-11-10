@@ -1,8 +1,8 @@
 const chapters = [
-  {id: 'zanhua', title: '簪花仕女圖', page: '../index.html?atelier=1#zanhua'},
+  {id: 'zanhua', title: '簪花仕女圖', page: '../?atelier=1#zanhua'},
   {id: 'lantern-festival', title: '宮中鬧元宵', page: 'lantern.html'},
   {id: 'kangqu-listening', title: '在人群中聽樂', page: 'kangqu.html'},
-  {id: 'luoshen', title: '洛水之間', page: '../index.html?atelier=1#luoshen'}
+  {id: 'luoshen', title: '洛水之間', page: '../?atelier=1#luoshen'}
 ];
 const progressKey = 'chinese-wally:atelier:completed-chapters:v1';
 const previewProgressKey = 'chinese-wally:study-v12:completed-chapters';
@@ -10,7 +10,7 @@ const previewProgressKey = 'chinese-wally:study-v12:completed-chapters';
 function readProgress() {
   try {
     const saved = Number(localStorage.getItem(progressKey) ?? localStorage.getItem(previewProgressKey));
-    return Number.isInteger(saved) && saved >= 0 && saved < chapters.length ? saved : 0;
+    return Number.isInteger(saved) && saved >= 0 && saved <= chapters.length ? saved : 0;
   } catch {
     return 0;
   }
@@ -30,7 +30,8 @@ export function chapterJourney(frame, prompt, {
   hideChapterNavigation = false,
   keepNextChapter = false,
   chapterPromptStylesheet,
-  mountAlbum
+  mountAlbum,
+  onReturnToRoom
 } = {}) {
   let next;
   let completed = readProgress();
@@ -49,6 +50,18 @@ export function chapterJourney(frame, prompt, {
       if (chapterPromptStylesheet) next.focus({preventScroll: true});
       else frame.focus();
     });
+  }
+
+  function saveCompleted(count) {
+    completed = Math.max(completed, readProgress(), count);
+    try { localStorage.setItem(progressKey, String(completed)); }
+    catch { /* Progress remains available for this visit. */ }
+    if (frame.contentDocument) updateNavigation(frame.contentDocument);
+    refreshAlbum?.();
+  }
+
+  function roomChapter() {
+    return chapters[Math.min(chapters.length - 1, Math.max(1, completed, readProgress()))];
   }
 
   function collectedChapters() {
@@ -87,7 +100,7 @@ export function chapterJourney(frame, prompt, {
     prompt.querySelector('p').textContent = mountAlbum
       ? '《' + chapters[active].title + '》已收入觀畫帖 · 已收藏 ' + completed + ' 卷'
       : '已解鎖《' + following.title + '》';
-    next.textContent = compact ? '前往下一卷 →' : '前往《' + following.title + '》';
+    next.textContent = '前往《' + following.title + '》 →';
     next.setAttribute('aria-label', '前往《' + following.title + '》');
     prompt.classList.toggle('is-compact', compact);
     prompt.hidden = false;
@@ -157,7 +170,7 @@ export function chapterJourney(frame, prompt, {
     }
     delete doc.documentElement.dataset.studyLoading;
     refreshAlbum = mountAlbum?.(doc.body, collectedChapters, chapter => openCollected(chapter.id));
-    if (keepNextChapter && active < completed && prompt.hidden) showNextChapter(true);
+    if (keepNextChapter && active < completed && active < chapters.length - 1 && prompt.hidden) showNextChapter(true);
 
     frame.contentWindow.addEventListener('click', event => {
       const link = event.target.closest?.('a');
@@ -175,15 +188,20 @@ export function chapterJourney(frame, prompt, {
   window.addEventListener('message', event => {
     if (event.origin !== location.origin || event.source !== frame.contentWindow) return;
     if (event.data?.type !== 'study-chapter-complete' || event.data.chapter !== chapters[active].id) return;
-    if (active >= chapters.length - 1 || active > completed) return;
-    completed = Math.max(completed, readProgress(), active + 1);
-    try {
-      localStorage.setItem(progressKey, String(completed));
-    } catch {
-      // The unlocked chapter remains available for this visit.
+    if (active > completed) return;
+    if (active === chapters.length - 1) {
+      saveCompleted(chapters.length);
+      prompt.hidden = true;
+      onReturnToRoom?.(chapters[active], true);
+      return;
     }
-    updateNavigation(frame.contentDocument);
-    refreshAlbum?.();
+    if (active === 0 && event.data.returnToRoom && onReturnToRoom) {
+      prompt.hidden = true;
+      onReturnToRoom(roomChapter());
+      return;
+    }
+    if (active === 0 && event.data.deferPrompt && onReturnToRoom) return;
+    saveCompleted(active + 1);
     showNextChapter();
   });
 
@@ -194,8 +212,14 @@ export function chapterJourney(frame, prompt, {
     openSaved: () => openChapter(completed),
     openCollected,
     collectedChapters,
+    roomChapter,
+    archiveFirst: () => saveCompleted(1),
     savedChapter: () => completed > 0 ? chapters[completed] : null,
-    isReady: () => !pending && Boolean(frame.contentDocument?.querySelector('h1')),
+    isReady: () => {
+      const doc = frame.contentDocument;
+      const painting = doc?.querySelector('.painting-world > img.painting, #painting');
+      return !pending && Boolean(doc?.querySelector('h1') && painting?.complete && painting.naturalWidth > 0);
+    },
     firstCover: () => frame.contentDocument?.querySelector('[aria-label="簪花仕女圖封面"]')
   };
 }

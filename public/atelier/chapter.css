@@ -1,2 +1,4 @@
 @import url("chapter-prompt.css");
-@import url("painting-album.css");
+@import url("painting-album.css?v=6");
+
+@import url("chapter-actions-painted-v1.css?v=1");

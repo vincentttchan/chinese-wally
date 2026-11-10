@@ -13,7 +13,7 @@
 }
 
 .painting-album-toggle[hidden],
-.opening:not([data-state="unlit"]) > .painting-album-toggle { display: none; }
+.opening:not([data-state="unlit"], [data-state="return-room"]) > .painting-album-toggle { display: none; }
 .opening > .painting-album-toggle {
   position: absolute;
   top: auto;
@@ -22,47 +22,145 @@
   left: auto;
 }
 
+.opening[data-state="return-room"] > .painting-album-toggle {
+  top: max(16px, env(safe-area-inset-top));
+  bottom: auto;
+}
+
 .painting-album {
-  width: min(560px, calc(100% - 32px));
+  --folio-ink: #473629;
+  --folio-rule: #99755062;
+  width: min(830px, calc(100% - 32px));
   max-height: calc(100dvh - 32px);
   box-sizing: border-box;
-  padding: clamp(16px, 4vw, 28px);
+  padding: 0;
   overflow: auto;
-  border: 1px solid #82785c;
-  background: #eee4cd url("../art/ui/reading-paper.png") center / cover;
-  color: #414534;
-  font: inherit;
+  border: 1px solid #4d342b;
+  border-radius: 4px 6px 6px 4px;
+  background: #402b25;
+  color: var(--folio-ink);
+  font-family: "LXGW WenKai TC", "Kaiti TC", serif;
+  font-size: 16px;
   color-scheme: light;
+  box-shadow: 0 24px 65px #100b08b0;
 }
-.painting-album::backdrop { background: #211b19b8; }
-.painting-album header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
+.painting-album::backdrop { background: #211711ad; }
+.folio-spread {
+  display: grid;
+  grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr);
+  margin: 5px 7px 10px;
+  box-shadow: 0 2px #b39161, 0 4px #e1c9a0, 0 6px #a17c54;
 }
-.painting-album h2 { margin: 0; font-size: 1.35em; }
-.painting-album-count { margin: 4px 0 14px; }
-.painting-album-list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.folio-leaf {
+  position: relative;
+  box-sizing: border-box;
+  min-width: 0;
+  padding: clamp(25px, 5vw, 54px) clamp(24px, 4.7vw, 52px);
+  background: #f0dfbb url("../art/ui/reading-paper.png") center / cover;
+}
+.folio-frontispiece {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-height: 370px;
+  background-image: linear-gradient(90deg, #b5844712, transparent 14%, transparent 81%, #64412455),
+    url("../art/ui/reading-paper.png");
+  border-radius: 3px 0 0 2px;
+}
+.folio-frontispiece::before {
+  content: "";
+  position: absolute;
+  inset: 15px 19px 15px 16px;
+  border: 1px solid #94714650;
+  outline: 1px solid #94714625;
+  outline-offset: 3px;
+  pointer-events: none;
+}
+.painting-album-eyebrow, .painting-album-count { margin: 0; color: #6f5841; font-size: .88rem; letter-spacing: .18em; }
+.folio-frontispiece h2 {
+  margin: 12px 0 8px;
+  font-size: clamp(2rem, 5vw, 3.35rem);
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-indent: .12em;
+  line-height: 1.25;
+}
+.folio-owner-seal {
+  width: 68px;
+  height: 68px;
+  margin-top: 26px;
+  transform: rotate(-5deg);
+  mix-blend-mode: multiply;
+  opacity: .83;
+}
+.folio-owner-seal[hidden] { display: none; }
+.folio-owner-seal svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.folio-contents {
+  align-content: start;
+  padding-top: 58px;
+  background-image: linear-gradient(90deg, #69412752, transparent 10%, transparent 91%, #bb894625),
+    url("../art/ui/reading-paper.png");
+  border-radius: 0 4px 3px 0;
+}
+.folio-contents h3 {
+  margin: 0;
+  padding: 0 0 13px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: .18em;
+  border-bottom: 1px solid var(--folio-rule);
+}
+.folio-clasp { position: absolute; z-index: 2; top: 14px; right: 24px; margin: 0; }
 .painting-album button {
   min-height: 44px;
-  border: 1px solid #82785c88;
-  background: #faf2dd9c;
+  border: 0;
   color: inherit;
+  background: transparent;
   font: inherit;
   cursor: pointer;
 }
-.painting-album-close { padding: 4px 12px; }
-.painting-album-list button {
+.painting-album .painting-album-close {
+  padding: 4px 12px;
+  color: #684f37;
+  background: #eedcba;
+  box-shadow: inset 0 -1px #99755062;
+}
+.painting-album .painting-album-close:hover { background: #e7cca2; }
+.painting-album-list { display: grid; margin: 0; padding: 0; list-style: none; }
+.painting-album .painting-volume {
   display: grid;
   width: 100%;
-  grid-template-columns: 72px minmax(0, 1fr) auto;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  gap: 10px;
-  padding: 7px;
+  gap: 8px;
+  padding: 10px 2px;
   text-align: left;
+  border-bottom: 1px solid var(--folio-rule);
 }
-.painting-album-list img { width: 72px; height: 46px; object-fit: cover; }
-.painting-album-revisit { font-size: .9em; white-space: nowrap; }
+.painting-volume-caption { display: grid; gap: 3px; }
+.painting-volume-number { color: #6f5841; font-size: .73rem; letter-spacing: .11em; }
+.painting-volume-title { font-size: clamp(1rem, 2.25vw, 1.22rem); line-height: 1.35; }
+.painting-album-revisit { color: #794d38; font-size: .82rem; white-space: nowrap; }
+.painting-album .painting-volume:hover { background: #8f693014; }
 .painting-album button:focus-visible,
-.painting-album-toggle:focus-visible { outline: 2px solid #8b5636; outline-offset: 2px; }
+.painting-album-toggle:focus-visible { outline: 2px solid #946341; outline-offset: 2px; }
+
+@media (max-width: 590px) {
+  .folio-spread { grid-template-columns: minmax(0, 1fr); }
+  .folio-frontispiece {
+    min-height: 0;
+    justify-items: start;
+    padding: 36px 30px 25px;
+    background-image: linear-gradient(0deg, #6541243d, transparent 26%), url("../art/ui/reading-paper.png");
+  }
+  .folio-frontispiece::before { inset: 11px 12px 12px; }
+  .folio-frontispiece h2 { margin: 7px 0; text-indent: 0; }
+  .folio-owner-seal { position: absolute; right: 30px; bottom: 26px; width: 48px; height: 48px; margin: 0; }
+  .folio-contents {
+    padding: 22px 26px 25px;
+    background-image: linear-gradient(180deg, #734d2d28, transparent 19%), url("../art/ui/reading-paper.png");
+  }
+  .folio-contents h3 { padding-bottom: 8px; }
+  .painting-album .painting-volume { padding-block: 8px; }
+}

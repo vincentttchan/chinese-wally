@@ -6,18 +6,26 @@
   <meta name="theme-color" content="#211b19">
   <title>畫中尋人 · 夜訪畫坊</title>
   <link rel="stylesheet" href="dialogue.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=original-1">
   <link rel="stylesheet" href="story.css">
   <link rel="stylesheet" href="opening.css">
-  <link rel="stylesheet" href="painting-album.css">
+  <link rel="stylesheet" href="painting-album-stickers-v3.css?v=1">
+  <link rel="stylesheet" href="shelf.css?v=2">
+  <link rel="stylesheet" href="chapter-river-v3.css?v=1">
+  <link rel="stylesheet" href="proportions-v2.css?v=3">
+  <link rel="stylesheet" href="continuity-v3.css?v=1">
+  <link rel="stylesheet" href="stable-v5.css?v=4">
+  <link rel="stylesheet" href="camera-v6-no-column.css?v=1">
+  <link rel="stylesheet" href="resume-painted-v1.css?v=1">
 </head>
 <body>
   <main class="opening" data-state="loading">
     <h1 class="sr-only">畫中尋人 · 夜訪畫坊</h1>
     <div class="stage">
       <div class="art" aria-hidden="true">
-        <img class="scene unlit" src="assets/unlit.jpg" alt="" fetchpriority="high">
-        <img class="scene lit" src="assets/lit.jpg" alt="">
+        <div class="threshold-camera">
+        <img class="scene unlit" src="assets/proportions-v2/entrance.png" alt="" fetchpriority="high">
+        <img class="scene lit" src="assets/proportions-v2/entrance.png" alt="">
         <img class="entry-seal" src="assets/entry-seal.png" alt="">
         <div class="focus-light"></div>
         <div class="doorway">
@@ -25,26 +33,61 @@
           <div class="door-leaf left"></div>
           <div class="door-leaf right"></div>
         </div>
-        <img class="scene hall" src="assets/hall.jpg" alt="">
-        <img class="scene desk-waiting" src="assets/desk-waiting.jpg" alt="">
-        <img class="scene desk" src="assets/desk-passing.jpg" alt="">
-        <img class="scene cue" src="assets/cue.jpg" alt="">
-        <img class="scene seal-clean" src="assets/desk-without-seal.jpg" alt="">
-        <div class="seal-movement"><div class="seal-actor"></div></div>
-        <div class="impression"><img src="assets/entry-seal.png" alt=""></div>
+        </div>
+        <img class="scene hall" src="assets/proportions-v2/hall.png" alt="">
+        <div class="desk-composition">
+          <img class="stable-room" src="assets/stable-v5/room.png" alt="">
+          <img class="stable-preload" src="assets/camera-v6/scholar-six-poses.png" alt="" hidden>
+          <img class="stable-preload" src="assets/stable-v5/actors.png" alt="" hidden>
+          <div class="stable-book"></div>
+          <div class="stable-character">
+            <div class="stable-animation"></div>
+          </div>
+          <div class="seal-movement"><div class="seal-actor"></div></div>
+          <div class="impression"><img src="assets/entry-seal.png" alt=""></div>
+        </div>
+
       </div>
       <button class="target lamp" type="button" aria-label="點亮廊燈" hidden></button>
       <button class="target door" type="button" aria-label="輕叩畫坊門" hidden></button>
       <button class="target seal" type="button" aria-label="在觀畫帖上蓋印報到" hidden></button>
+
+      <div class="archive-controls" aria-label="收卷案" hidden>
+        <button type="button" class="archive-store" aria-label="在觀畫帖蓋印，收下簪花仕女圖" hidden>蓋印收卷</button>
+        <button type="button" class="archive-book" aria-label="翻閱觀畫帖" hidden>
+          <span class="archive-stamp" role="img" aria-label="第一卷的觀畫紀念印" hidden></span>
+          <span class="archive-book-title" aria-hidden="true">觀畫帖</span>
+        </button>
+      </div>
+      <button class="archive-shelf" aria-controls="shelf-view" aria-expanded="false" type="button" aria-label="打開藏畫櫃，重訪舊卷或開啟新卷" hidden><span>藏畫櫃</span></button>
+      <section id="shelf-view" class="shelf-view" aria-labelledby="shelf-title" hidden>
+        <div class="shelf-vignette" aria-hidden="true"></div>
+        <header class="shelf-header">
+          <h2 id="shelf-title">藏畫櫃</h2>
+          <button class="shelf-back" type="button">← 回案前</button>
+        </header>
+        <div class="shelf-volumes"></div>
+      </section>
     </div>
     <section class="conversation lantern-emperor-speech" aria-label="同窗的遊戲對白" hidden>
       <div class="lantern-character-reply has-finding emperor-speech-bubble tail-right">
         <p class="zanhua-dialogue-caption">同窗 · 遊戲對白</p>
         <p id="line" aria-live="polite"></p>
+        <div class="archive-replies" aria-label="回應同窗" hidden>
+          <button class="emperor-speech-action" type="button" data-reply="flowers">那朵髻花</button>
+          <button class="emperor-speech-action" type="button" data-reply="robe">那件薄紗衣</button>
+        </div>
+        <fieldset class="archive-question" hidden>
+          <legend class="sr-only">唐代女子平日都這樣穿嗎？</legend>
+          <label><input type="radio" name="archive-answer" value="0">宮廷女子行禮時的服飾。</label>
+          <label><input type="radio" name="archive-answer" value="1">貴族女子遊賞時的盛裝。</label>
+          <label><input type="radio" name="archive-answer" value="2">不同身分女子相近的日常穿着。</label>
+          <button class="archive-confirm emperor-speech-action" type="button" disabled>就選這一項 →</button>
+        </fieldset>
         <button class="next emperor-speech-action" type="button"></button>
       </div>
     </section>
-    <button class="resume-journey" type="button" hidden>繼續旅程 →</button>
+    <button class="resume-journey" type="button" hidden><span>繼續旅程 <span aria-hidden="true">→</span></span></button>
     <p class="guide" role="status"></p>
     <button class="retry" type="button" hidden>重新載入</button>
   </main>
@@ -55,6 +98,6 @@
     <button class="chapter-next" type="button"></button>
     <button class="chapter-stay" type="button">留在本章</button>
   </section>
-  <script type="module" src="opening.js?v=2"></script>
+  <script type="module" src="opening-river-mystery-v2.js?v=1"></script>
 </body>
 </html>

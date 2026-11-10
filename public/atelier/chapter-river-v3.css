@@ -1,0 +1,19 @@
+@import url('chapter-river-v2.css?v=1');
+.chapter-river .river-viewport {overflow-x:auto;}
+.chapter-river .river-world {width:max(111.111%,calc((100dvh - 32px) * 2.2222));aspect-ratio:2.2222/1;background:linear-gradient(90deg,#ead8b6 80%,#e9dac0 100%);margin:auto 0;}
+.chapter-river .river-landscape {width:90%;height:100%;}
+.chapter-river .river-places {right:10%;}
+.chapter-river .river-header {width:100%;right:auto;}
+.chapter-river .river-header > div {position:relative;isolation:isolate;}
+.chapter-river .river-header > div::before {content:'';position:absolute;inset:-16px -34px;z-index:-1;background:radial-gradient(ellipse,#f4e4c9ee 15%,#f4e4c9bb 55%,transparent 78%);pointer-events:none;}
+.chapter-river .river-footer {left:0;right:auto;width:100%;padding:0 20%;}
+@media(max-width:650px){
+ .chapter-river .river-world{width:max(111.111%,calc((100dvh - 48px) * 2.2222));min-width:944px;}
+ .chapter-river .river-header,.chapter-river .river-footer{width:100vw;}
+ .chapter-river .river-footer{padding:0 10px;}
+}
+
+.chapter-river .river-landscape {mask-image:linear-gradient(to right,#000 94%,transparent 100%);}
+
+.chapter-river .river-viewport {cursor:grab;}
+.chapter-river .river-viewport.is-dragging {cursor:grabbing;user-select:none;}

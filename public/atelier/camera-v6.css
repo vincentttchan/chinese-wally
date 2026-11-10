@@ -1,0 +1,21 @@
+/* The doorway belongs to the corridor camera, not an expanding picture card. */
+.threshold-camera { position:absolute; inset:0; transform-origin:50% 50%; }
+.opening .door-view { transition:none; background-repeat:no-repeat; background-size:240.51% 100%; background-position:19% 50%; }
+.opening .art .hall { clip-path:none; transition:none; }
+.opening.entering-hall .hall { visibility:hidden; }
+.opening:is([data-state='hall'],[data-state='walking'],[data-state='desk'],[data-state='passing'],[data-state='cue'],[data-state='stamping'],[data-state='handoff'],[data-state='return-room'],[data-state='room-handoff'],[data-state='shelf-view']) .threshold-camera { display:none; }
+.opening.entering-hall .art::after { opacity:0; }
+.opening[data-state='walking'] .hall { transform:none; transition:none; }
+.opening.approaching-desk .desk-composition { visibility:visible; }
+.opening.approaching-desk .stable-pose.idle { visibility:visible; }
+.camera-post { display:none; position:absolute; top:-15%; height:130%; width:32%; left:108%; z-index:8; background:#382317 url('assets/proportions-v2/hall.png') 77% 30% / auto 540%; box-shadow:7px 0 12px #140d0980,-5px 0 10px #140d0960; }
+.opening.approaching-desk .camera-post { display:block; }
+@media(prefers-reduced-motion:reduce) { .camera-post { display:none !important; } }
+/* One aligned six-pose strip replaces the unrelated three-image switches. */
+.stable-character { left:22.9%; top:1%; width:36%; height:72%; }
+.stable-animation { position:absolute; inset:0; background:url('assets/camera-v6/scholar-six-poses.png') 0 0 / 300% 200% no-repeat; }
+.opening[data-state='passing'] .stable-animation { background-position:var(--pose-x,0%) var(--pose-y,0%); }
+.opening:is([data-state='cue'],[data-state='stamping'],[data-state='handoff']) .stable-animation { background-position:100% 100%; }
+.stable-animation { filter:brightness(.92) saturate(.94); }
+.opening[data-state='passing'] .stable-animation:is([data-frame='3'],[data-frame='4'],[data-frame='5']),
+.opening:is([data-state='cue'],[data-state='stamping'],[data-state='handoff']) .stable-animation { transform:translate(7%,-2%); }

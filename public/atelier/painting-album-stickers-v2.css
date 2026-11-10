@@ -1,0 +1,42 @@
+@import url('painting-album-stickers-v1.css?v=1');
+
+.memento-current-selection{display:none;}
+.memento-choice-buttons{display:flex;align-items:center;gap:22px;}
+
+/* Keep compact book text within its own leaf, with the full text scrollable. */
+@media(min-width:651px){
+ @container(max-width:1100px){
+  .memento-detail-spread{margin-top:3%;}
+  .memento-story{min-width:0;justify-content:flex-start;}
+  .memento-reading{
+   display:block;flex:1;min-width:0;min-height:0;max-height:none;
+   overflow:auto;scrollbar-width:thin;margin-top:10px;padding-right:6px;
+  }
+  .memento-story h4{writing-mode:horizontal-tb;font-size:clamp(23px,2.7cqw,30px);line-height:1.5;letter-spacing:.08em;margin:0 0 10px;}
+  .memento-story-body{writing-mode:horizontal-tb;text-orientation:mixed;font-size:clamp(14px,1.8cqw,18px);letter-spacing:0;line-height:1.9;max-height:none;overflow-wrap:anywhere;}
+  .memento-source{flex:none;margin-top:10px;font-size:12px;}
+  .memento-detail-actions{flex:none;margin-top:10px;padding-top:0;gap:10px;}
+  .memento-detail-actions .memento-action{font-size:16px;min-height:40px;}
+  .memento-detail-actions .memento-link{font-size:12px;}
+ }
+}
+
+/* The paper stays still. Only the candidate stickers scroll between preview and actions. */
+@media(max-width:650px){
+ .sticker-album[data-view="choose"] .memento-content:has(.memento-chooser){overflow:hidden;}
+ .sticker-album[data-view="choose"] .memento-back{flex:none;min-height:24px;}
+ .sticker-album[data-view="choose"] .memento-view-title{flex:none;font-size:16px;letter-spacing:0;}
+ .memento-choose-caption{flex:none;font-size:10.5px;line-height:1.55;}
+ .memento-chooser{flex:1;min-height:0;overflow:hidden;gap:8px;margin-block:8px;}
+ .memento-options{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;}
+ .memento-preview{flex:none;grid-template-columns:52px minmax(0,1fr);column-gap:10px;align-items:center;}
+ .memento-preview .memento-art{grid-row:1;width:52px;height:52px;}
+ .memento-preview h4{font-size:18px;line-height:1.5;letter-spacing:.04em;}
+ .memento-preview p{display:none;}
+ .memento-choose-actions{flex:none;gap:2px;padding:0;align-items:stretch;}
+ .memento-current-selection{display:block;font-size:13px;line-height:1.5;overflow-wrap:anywhere;}
+ .memento-choice-buttons{width:100%;justify-content:space-between;gap:12px;}
+ .memento-confirm-prefix{display:none;}
+ .memento-choice-buttons .memento-confirm{font-size:17px;min-height:44px;white-space:nowrap;}
+ .memento-choice-buttons .memento-link{font-size:13px;min-height:44px;white-space:nowrap;}
+}

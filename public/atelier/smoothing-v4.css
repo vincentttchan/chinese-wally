@@ -1,0 +1,26 @@
+/* Let the view through the door arrive at the exact full-room coordinates
+   before the existing hall dissolve. No second lateral camera move. */
+.door-view {
+ background-size:240.51% 100%; background-position:19% 50%;
+ transition:background-size 1200ms cubic-bezier(.28,.02,.24,1),background-position 1200ms cubic-bezier(.28,.02,.24,1);
+}
+.doors-open .door-view { background-size:343.59% 142.857%; background-position:63.47% 46.667%; }
+.hall { transform:none; transition:opacity 560ms ease,transform 1100ms ease; }
+/* Hold one framing for all seated poses. The hand/book movement, rather than
+   an extra enlargement, now distinguishes waiting from passing. */
+.desk-waiting { transform:none; }
+.opening[data-state='walking'] .desk-waiting {
+ opacity:1;
+ transition:opacity 260ms ease 820ms;
+}
+.opening[data-state='desk'] .desk-waiting { opacity:1; transition:none; }
+/* Matching room framing remains stable while the pose changes. */
+.opening[data-state='passing'] .desk { transition:opacity 140ms ease; }
+.opening[data-state='cue'] .cue { transition:opacity 140ms ease; }
+@media(prefers-reduced-motion:reduce) {
+ .door-view { transition:none; }
+ .opening[data-state='walking'] .desk-waiting { transition:none; }
+}
+/* Keep the opened portal beneath the room during the dissolve, rather than
+   uncovering the closed-door base for a frame. */
+.opening[data-state='hall'] .doorway { visibility:visible; }

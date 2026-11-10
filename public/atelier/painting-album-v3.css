@@ -1,0 +1,61 @@
+@import url('painting-album-v2.css?v=1');
+
+/* The illustration is the book, with no second paper or panel behind it. */
+.personal-album {
+  background:transparent;
+  overflow:hidden;
+}
+.personal-album::backdrop {background:#211a14b8;}
+.personal-album .album-stage {
+  flex:1;min-height:0;margin:0;padding:16px;
+}
+.personal-album .album-canvas {
+  width:min(1480px,100%,calc((100dvh - 32px) * 1.8503));
+}
+.personal-album .album-heading {
+  position:absolute;top:5.5%;left:11.8%;right:7.5%;padding:0;
+}
+.personal-album .album-heading h2 {
+  font-size:clamp(19px,2cqw,27px);
+}
+.personal-album .painting-album-close {min-height:36px;font-size:16px;}
+.personal-album .album-spread-content {inset:18% 7.5% 19% 11.8%;}
+.personal-album .album-pagination {
+  position:absolute;left:57%;right:10%;bottom:8.5%;gap:10px;
+}
+.personal-album .album-pagination button {min-width:36px;min-height:36px;padding:4px 8px;font-size:17px;}
+.personal-album .album-page-tabs {gap:4px;}
+.personal-album .album-page-status {
+  position:absolute;left:11.8%;bottom:9.5%;padding:0;text-align:left;
+  max-width:36%;line-height:1.6;
+}
+.personal-album .album-revisit {bottom:-4%;}
+
+@media(max-width:650px) {
+  .personal-album {background:transparent;}
+  .personal-album .album-stage {padding:12px;}
+  .personal-album .album-canvas {
+    width:min(100%,calc((100dvh - 24px) * 971 / 1619));
+    aspect-ratio:971/1619;
+  }
+  .personal-album .album-heading {top:7%;left:17%;right:9%;gap:6px;padding:0;align-items:center;}
+  .personal-album .album-heading h2 {font-size:19px;letter-spacing:.03em;}
+  .personal-album .painting-album-close {min-width:52px;font-size:14px;letter-spacing:0;}
+  .personal-album .album-spread-content {inset:15% 9% 17% 17%;gap:12px;}
+  .personal-album .album-eyebrow {display:none;}
+  .personal-album .album-volume-number {font-size:12px;}
+  .personal-album .album-chapter-title {font-size:24px;}
+  .personal-album .album-memento {padding-block:6px;gap:12px;}
+  .personal-album .album-impression {width:62px;height:62px;}
+  .personal-album .album-memento p {font-size:12px;}
+  .personal-album .album-memory-title {font-size:20px;margin-block:6px 8px;}
+  .personal-album .album-memory-lines {font-size:15px;line-height:1.8;}
+  .personal-album .album-findings {padding-top:12px;}
+  .personal-album .album-details {margin-block:4px;}
+  .personal-album .album-details figure {max-width:46px;}
+  .personal-album .album-revisit {position:static;margin-top:6px;min-height:38px;font-size:17px;}
+  .personal-album .album-pagination {left:17%;right:9%;bottom:10.5%;gap:6px;padding:0;}
+  .personal-album .album-pagination button {min-width:32px;min-height:36px;padding:2px 6px;font-size:16px;}
+  .personal-album .album-page-tabs {gap:2px;}
+  .personal-album .album-page-status {left:17%;right:9%;max-width:none;bottom:6.7%;font-size:10px;text-align:center;}
+}

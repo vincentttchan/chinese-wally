@@ -1,0 +1,27 @@
+/* Low, wide player replies leave the middle of the painting open. */
+.journey-v2 .journey-player-reply {
+  left:50%;top:auto;bottom:max(20px,env(safe-area-inset-bottom));
+  width:min(740px,calc(100% - 48px));max-height:32dvh;
+  padding:14px 24px;display:grid;grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;gap:5px 22px;overflow:auto;
+}
+.journey-player-reply .lantern-observation-eyebrow {grid-column:1/-1;margin:0;font-size:12px;line-height:1.5;}
+.journey-player-reply .lantern-note-body {grid-column:1;grid-row:2;margin:0;font-size:18px;line-height:1.8;white-space:normal;}
+.journey-player-reply .lantern-note-next {
+  grid-column:2;grid-row:2;width:auto;min-width:90px;min-height:44px;
+  margin:0;padding:6px 0 6px 14px;border-top:0;align-self:end;
+}
+.journey-player-reply .lantern-note-caption {grid-column:1/-1;margin:0;font-size:12px;}
+@media(max-width:699px) {
+  .journey-v2 .journey-player-reply {bottom:max(12px,env(safe-area-inset-bottom));width:calc(100% - 24px);padding:12px 16px;gap:4px 12px;max-height:38dvh;}
+  .journey-player-reply .lantern-note-body {font-size:16px;line-height:1.65;}
+  .journey-player-reply .lantern-note-next {min-width:60px;padding-left:6px;font-size:15px;}
+}
+@media(max-width:400px) {
+  .journey-v2 .journey-player-reply {grid-template-columns:minmax(0,1fr);}
+  .journey-player-reply .lantern-note-next {grid-column:1;grid-row:3;justify-self:end;padding:2px 0;min-height:38px;}
+}
+@media(max-height:500px) {
+  .journey-v2 .journey-player-reply {padding:9px 18px;max-height:44dvh;}
+  .journey-player-reply .lantern-note-body {font-size:16px;line-height:1.65;}
+}

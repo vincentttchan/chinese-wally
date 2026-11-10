@@ -1,0 +1,6 @@
+@import url('chapter-prompt.css');
+@import url('painting-album-v2.css?v=1');
+@import url('chapter-actions-painted-v1.css?v=1');
+body > .chapter-complete.is-compact .chapter-next::after {content:'畫卷';}
+body:not(.has-collected-volumes) > .chapter-complete.is-compact {right:max(18px,env(safe-area-inset-right));}
+@media(max-width:600px) {body:not(.has-collected-volumes) > .chapter-complete.is-compact{right:max(8px,env(safe-area-inset-right));}}

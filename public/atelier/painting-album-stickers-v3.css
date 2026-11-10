@@ -1,0 +1,7 @@
+@import url('painting-album-stickers-v2.css?v=1');
+@media(min-width:651px){
+ .sticker-album .memento-book {width:min(1280px,90%,calc((100dvh - 64px)*1.8503));}
+}
+@media(min-width:1000px){
+ .sticker-album .memento-options {grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 8px;}
+}

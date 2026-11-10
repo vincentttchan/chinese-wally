@@ -1,0 +1,39 @@
+.threshold-camera {position:absolute;inset:0;transform-origin:50% 50%;}
+.opening .door-view {background:#211b19;transition:none;}
+.opening .art .hall {display:none!important;}
+.opening:is([data-state='hall'],[data-state='walking'],[data-state='desk'],[data-state='passing'],[data-state='cue'],[data-state='stamping'],[data-state='handoff'],[data-state='return-room'],[data-state='room-handoff'],[data-state='shelf-view']) .threshold-camera {display:none;}
+.opening.entering-hall .art::after {opacity:0;}
+.opening:is([data-state='hall'],[data-state='walking']) .desk-composition {visibility:visible;}
+.desk-composition {transform:scale(var(--room-zoom,1.06));transform-origin:50% 55%;}
+.opening[data-state='hall'] .desk-composition {transform:scale(1);}
+.portal-room {position:absolute;width:240.51%;height:100%;left:-26.7%;top:0;overflow:hidden;}
+.portal-room .stable-room {width:100%;height:100%;}
+.stable-character {left:22.9%;top:7%;width:54%;height:72%;transform:translate(var(--scholar-offset,0%),var(--scholar-settle,0%));}
+/* The character registration is shared by portal, hall and desk. */
+.stable-character {left:13%;width:54%;}
+.opening[data-state='hall'] .desk-composition .stable-character,.portal-room .stable-character {transform:translate(-4%,0);}
+.scholar-rig {position:absolute;inset:0;width:100%;height:100%;overflow:visible;filter:brightness(.92) saturate(.94);}
+.scholar-right {transform-origin:315px 200px;}
+.arm-welcome,.arm-idle,.arm-point {visibility:hidden;}
+.arm-idle {visibility:visible;}
+.portal-room .arm-idle,.opening[data-state='hall'] .desk-composition .arm-idle {visibility:hidden;}
+.portal-room .arm-welcome,.opening[data-state='hall'] .desk-composition .arm-welcome {visibility:visible;}
+.opening[data-state='walking'] .scholar-right {transform:rotate(var(--greeting-turn,0deg));}
+.opening[data-state='passing'] .scholar-right {transform:translateY(var(--hand-push,0px));}
+.opening[data-state='passing'] .scholar-rig.pointing .arm-idle,
+.opening:is([data-state='cue'],[data-state='stamping'],[data-state='handoff']) .arm-idle {visibility:hidden;}
+.opening[data-state='passing'] .scholar-rig.pointing .arm-point,
+.opening:is([data-state='cue'],[data-state='stamping'],[data-state='handoff']) .arm-point {visibility:visible;}
+.opening[data-state='passing'] .scholar-rig.pointing .scholar-right {transform:rotate(var(--point-turn,0deg));}
+.opening[data-state='passing'] .stable-book {transform:translate(calc(3% * (1 - var(--book-push,0))),calc(-3% * (1 - var(--book-push,0)))) scale(calc(.86 + .14 * var(--book-push,0)));transition:none;}
+.opening:is([data-state='return-room'],[data-state='room-handoff'],[data-state='shelf-view']) .desk-composition {transform:scale(1.06);}
+/* A clone is just a view through the open door; its props inherit visibility. */
+.portal-room .seal-movement {left:71%;top:65.5%;width:5.5%;height:18.7%;visibility:inherit;}
+.portal-room .seal-actor {background:url('assets/stable-v5/actors.png') 88.62% 95.2%/2247% 735.3%;clip-path:none;}
+@media(prefers-reduced-motion:reduce){.stable-book{transition:none;}}
+.opening:is([data-state='cue'],[data-state='stamping'],[data-state='handoff']) .scholar-right {transform:rotate(0deg);}
+.opening[data-state='walking'] .scholar-rig:not(.greeting-lowered) .arm-welcome {visibility:visible;}
+.opening[data-state='walking'] .scholar-rig:not(.greeting-lowered) .arm-idle {visibility:hidden;}
+/* Keep the collected seal on the clear lower half of the album page. */
+.opening[data-state='return-room'] .archive-controls .archive-book,
+.opening[data-state='return-room'] .archive-controls .archive-store {top:86%;}
