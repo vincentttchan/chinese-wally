@@ -9,7 +9,8 @@ import re
 root=Path(__file__).resolve().parents[1]
 release=root/'dist'
 html=(release/'index.html').read_text()
-scripts=re.findall(r'<script\b[^>]*\bsrc="([^"]+)"[^>]*></script>',html)
+module_script=r'<script\b(?=[^>]*\btype="module")[^>]*\bsrc="([^"]+)"[^>]*></script>'
+scripts=re.findall(module_script,html)
 styles=re.findall(r'<link\b[^>]*\bhref="([^"]+)"[^>]*>',html)
 if len(scripts)!=1:
     raise RuntimeError('Local packaging expects one built entry bundle.')
@@ -22,7 +23,8 @@ js=js.replace('/chinese-wally/','./')
 js=re.sub(r'([\x22\x27`])/(art|audio|fonts|chapters)/',r'\1./\2/',js)
 css=css.replace('/chinese-wally/','./')
 css=re.sub(r'url\(([\x22\x27]?)/(art|audio|fonts|chapters)/',r'url(\1./\2/',css)
-html=re.sub(r'<script\b[^>]*\bsrc="[^"]+"[^>]*></script>','',html)
+html=re.sub(module_script,'',html)
+html=html.replace('src="/chinese-wally/atelier/', 'src="./atelier/')
 html=re.sub(r'<link\b[^>]*\bhref="[^"]+\.css"[^>]*>',lambda _: '<style>'+css+'</style>',html)
 html=html.replace('</body>','<script>'+js.replace('</script','<\\/script')+'</script></body>')
 (root/'public/index.html').write_text(html)
