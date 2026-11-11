@@ -1,5 +1,5 @@
 import {useEffect, useLayoutEffect, useMemo, useRef, useState} from 'react';
-import {zanhuaImage,zanhuaSize,zanhuaSteps} from '../game/zanhuaPreview.ts';
+import {zanhuaImage,zanhuaSize} from '../game/zanhuaPreview.ts';
 import type {SceneViewport} from './ScrollScene.tsx';
 import './zanhua-three-act-entry-v1.css';
 
@@ -81,9 +81,9 @@ export const zanhuaEntryScenesV1=[
       {
         "kind": "quote",
         "lines": [
-          "「先認清這位女子的面孔。",
-          "找到她，再循着手勢與目光，",
-          "看看她正在做甚麼。」"
+          "「先認認這位女子。",
+          "找到她，從袖口看到裙襬。",
+          "這身盛裝，疊了哪幾層衣料？」"
         ]
       }
     ]
@@ -92,10 +92,7 @@ export const zanhuaEntryScenesV1=[
 
 export function ZanhuaThreeActEntryV1({ready,leaving,onBegin,onPrepared,onRevealed}:{ready:boolean;leaving:boolean;onBegin:(viewport:SceneViewport)=>void;onPrepared:()=>void;onRevealed:()=>void}) {
   const root=useRef<HTMLElement>(null),world=useRef<HTMLDivElement>(null);
-  const portraitButton=useRef<HTMLButtonElement>(null);
   const [stage,setStage]=useState(0),[shown,setShown]=useState(0),[loaded,setLoaded]=useState(false);
-  const [portraitEntering,setPortraitEntering]=useState(false),[portraitVisible,setPortraitVisible]=useState(false);
-  const [portraitReady,setPortraitReady]=useState(false),[portraitFailed,setPortraitFailed]=useState(false),[portraitRetry,setPortraitRetry]=useState(0);
   const [failed,setFailed]=useState(false),[retry,setRetry]=useState(0),[fontReady,setFontReady]=useState(false);
   const [reduced,setReduced]=useState(()=>window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   const [paused,setPaused]=useState(reduced),[changing,setChanging]=useState(false);
@@ -103,7 +100,7 @@ export function ZanhuaThreeActEntryV1({ready,leaving,onBegin,onPrepared,onReveal
   const viewport=useRef<SceneViewport>({view:{x:0,y:0,scale:1},frame:{width:1280,height:800}});
   const drift=useRef(0),pauseRef=useRef(paused),leaveRef=useRef(leaving),loadRef=useRef(false);
   const timers=useRef(new Set<number>()),changingRef=useRef(false),finished=useRef(false);
-  pauseRef.current=paused;leaveRef.current=leaving||portraitEntering;loadRef.current=loaded&&fontReady&&opening;
+  pauseRef.current=paused;leaveRef.current=leaving;loadRef.current=loaded&&fontReady&&opening;
   const scene=zanhuaEntryScenesV1[stage];
   const columns=useMemo(()=>{
     let offset=0;
@@ -116,7 +113,6 @@ export function ZanhuaThreeActEntryV1({ready,leaving,onBegin,onPrepared,onReveal
   const revealing=!reduced&&shown<characters.length;
   const entryReady=loaded&&fontReady;
   const artwork=retry?`${zanhuaImage}?entryRetry=${retry}`:zanhuaImage;
-  useEffect(()=>{if(portraitVisible&&!leaving)portraitButton.current?.focus({preventScroll:true});},[portraitVisible,leaving]);
   useEffect(()=>{
     let cancelled=false;
     void document.fonts.load('24px LanternEntryWenKai').then(()=>{if(!cancelled)setFontReady(true);},()=>{if(!cancelled)setFontReady(true);});
@@ -151,7 +147,7 @@ export function ZanhuaThreeActEntryV1({ready,leaving,onBegin,onPrepared,onReveal
     return()=>{resize.disconnect();cancelAnimationFrame(raf);};
   },[]);
   useEffect(()=>{
-    if(!loaded||!fontReady||!revealed||changing||leaving||portraitEntering)return;
+    if(!loaded||!fontReady||!revealed||changing||leaving)return;
     finished.current=false;
     if(reduced){setShown(characters.length);return;}
     let raf=0,last=0,index=0,wait=500;
@@ -168,7 +164,7 @@ export function ZanhuaThreeActEntryV1({ready,leaving,onBegin,onPrepared,onReveal
     };
     setShown(0);raf=requestAnimationFrame(tick);
     return()=>cancelAnimationFrame(raf);
-  },[characters,loaded,fontReady,revealed,reduced,changing,leaving,portraitEntering]);
+  },[characters,loaded,fontReady,revealed,reduced,changing,leaving]);
   // Completing a paragraph stops its animation without restarting the effect.
   const showAll=()=>{finished.current=true;setShown(characters.length);};
   const schedule=(callback:()=>void,ms:number)=>{
@@ -183,29 +179,23 @@ export function ZanhuaThreeActEntryV1({ready,leaving,onBegin,onPrepared,onReveal
     if(leaving||changingRef.current)return;
     if(revealing){showAll();return;}
     if(stage<zanhuaEntryScenesV1.length-1)changeStage(stage+1);
-    else if(portraitFailed){setPortraitFailed(false);setPortraitRetry(value=>value+1);}
-    else if(portraitReady){setPortraitEntering(true);schedule(()=>setPortraitVisible(true),reduced?0:1100);}
+    else if(ready)onBegin(viewport.current);
   };
   const visibleCount=finished.current?characters.length:shown;
-  return <section ref={root} className={`zanhua-entry-v1 entry ${opening?'is-opening':''} ${revealed?'has-arrived':''} ${leaving?'is-leaving':''} ${portraitEntering?'is-previewing-person':''} ${portraitVisible?'has-portrait':''}`} aria-label="簪花仕女圖三幕入場" inert={!revealed||leaving}>
+  return <section ref={root} className={`zanhua-entry-v1 entry ${opening?'is-opening':''} ${revealed?'has-arrived':''} ${leaving?'is-leaving':''}`} aria-label="簪花仕女圖三幕入場" inert={!revealed||leaving}>
     <div className="art-window" aria-hidden="true"><div ref={world} className="art-world">
       <img className="full-painting" src={artwork} width={zanhuaSize.width} height={zanhuaSize.height} draggable={false} alt="" onLoad={()=>{setLoaded(true);setFailed(false);}} onError={()=>{setLoaded(false);setFailed(true);}}/>
     </div></div><div className="shade" aria-hidden="true"/>
-    <header className="entry-header" inert={portraitEntering}><p className="chapter-name">簪花仕女圖<span>傳唐代周昉作 · 遼寧省博物館藏</span></p><button className="quiet-button" aria-pressed={paused} onClick={()=>setPaused(value=>!value)}>{paused?'繼續展卷':'暫停畫卷'}</button></header>
+    <header className="entry-header"><p className="chapter-name">簪花仕女圖<span>傳唐代周昉作 · 遼寧省博物館藏</span></p><button className="quiet-button" aria-pressed={paused} onClick={()=>setPaused(value=>!value)}>{paused?'繼續展卷':'暫停畫卷'}</button></header>
     {!entryReady?<div className="load-status" role="status">{failed?<div>畫卷未能載入。<button onClick={()=>{setFailed(false);setRetry(value=>value+1);}}>重新展卷</button></div>:'畫卷正徐徐展開……'}</div>:<>
-      <section hidden={portraitVisible} inert={portraitEntering} className={`narrative ${changing?'is-changing':''}`} aria-label="入場引言" onClick={()=>{if(!changing)showAll();}}>
+      <section className={`narrative ${changing?'is-changing':''}`} aria-label="入場引言" onClick={()=>{if(!changing)showAll();}}>
         <div className="vertical-copy" aria-hidden="true">{columns.map((column,index)=><p className={`passage ${column.kind}`} key={`${stage}-${index}`}>{column.characters.map((character,glyph)=><span className={`glyph ${reduced||column.start+glyph<visibleCount?'is-visible':''}`} key={glyph}>{character}</span>)}</p>)}</div>
         <p className="sr-only" aria-live="polite" aria-atomic="true">{scene.groups.flatMap(group=>group.lines).join('\n')}</p>
       </section>
-      <nav className="entry-controls" aria-label="引言操作" hidden={portraitVisible} inert={portraitEntering}><div className="sequence"><button className="quiet-button" disabled={stage===0||changing} onClick={()=>changeStage(stage-1)}>前一幕</button><span className="progress" role="img" aria-label={`引言第${stage+1}幕，共三幕`}>{zanhuaEntryScenesV1.map((_,index)=><i className={index===stage?'current':''} key={index}/>)}</span></div>
-        <button className="enter-button" disabled={changing||(!revealing&&stage===2&&!portraitReady&&!portraitFailed)} onClick={next}><span>{revealing?'顯示全文':stage===2&&portraitFailed?'重新載入樣貌':stage===2&&!portraitReady?'正在準備樣貌':scene.action}</span><svg viewBox="0 0 32 20" width="32" height="20" aria-hidden="true"><path d="M2 10c8-.8 17-.5 27 0M23 3l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/></svg></button>
+      <nav className="entry-controls" aria-label="引言操作"><div className="sequence"><button className="quiet-button" disabled={stage===0||changing} onClick={()=>changeStage(stage-1)}>前一幕</button><span className="progress" role="img" aria-label={`引言第${stage+1}幕，共三幕`}>{zanhuaEntryScenesV1.map((_,index)=><i className={index===stage?'current':''} key={index}/>)}</span></div>
+        <button className="enter-button" disabled={changing||(!revealing&&stage===2&&!ready)} onClick={next}><span>{revealing?'顯示全文':stage===2&&!ready?'正在準備畫卷':scene.action}</span><svg viewBox="0 0 32 20" width="32" height="20" aria-hidden="true"><path d="M2 10c8-.8 17-.5 27 0M23 3l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/></svg></button>
       </nav>
     </>}
-    <section className="handover" aria-label="第一位女子樣貌提示" hidden={!portraitVisible}>
-      <div className="target"><img src={portraitRetry?`${zanhuaSteps[0].portrait}?portraitRetry=${portraitRetry}`:zanhuaSteps[0].portrait} alt="第一位女子的完整髮型與面貌摹繪" onLoad={()=>{setPortraitReady(true);setPortraitFailed(false);}} onError={()=>{setPortraitReady(false);setPortraitFailed(true);}}/><div><p>先看樣貌，再入畫尋找</p><h1>先記住這張面孔</h1><p>她垂着頭，<br/>臉朝左下方。</p><small>樣貌摹繪，原畫為準</small></div></div>
-      <p className="handover-note">記住她的樣子，再循着手勢與目光細看。</p>
-      <nav className="entry-controls portrait-controls" aria-label="樣貌提示操作"><button className="quiet-button" onClick={()=>{setPortraitEntering(false);setPortraitVisible(false);}}>前一幕</button><button ref={portraitButton} className="enter-button" disabled={!ready||leaving} onClick={()=>onBegin(viewport.current)}><span>{ready?'入畫尋人':'正在展卷'}</span><span aria-hidden="true">⟶</span></button></nav>
-    </section>
-    <footer className="entry-footer"><span>{portraitVisible?'先看樣貌，再入畫尋找':scene.caption}</span><span className="sample-note">學畫人與師長身份、對白為遊戲虛構。</span></footer>
+    <footer className="entry-footer"><span>{scene.caption}</span><span className="sample-note">學畫人與師長身份、對白為遊戲虛構。</span></footer>
   </section>;
 }

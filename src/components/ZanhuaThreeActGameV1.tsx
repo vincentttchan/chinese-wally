@@ -21,14 +21,14 @@ import {LanternNotice} from './LanternNotice.tsx';
 import {ChapterDialog} from './ChapterDialog.tsx';
 import {LanternJournal} from './LanternJournal.tsx';
 import {LanternSparkDiscovery} from './LanternSparkDiscovery.tsx';
-import {ZanhuaFigureAnimation,zanhuaMotionLabels,zanhuaFigureContour} from './ZanhuaFigureAnimation.tsx';
+import {ZanhuaFigureAnimation,zanhuaFigureContour} from './ZanhuaFigureAnimation.tsx';
 import {useLuoshenCollectionFeedback} from '../hooks/useLuoshenCollectionFeedback.ts';
 import {zanhuaReviewShots} from '../game/zanhuaEnding.ts';
 import {zanhuaThreeActContext as zanhuaContext,zanhuaHistorySources,zanhuaThreeActContextDialogue as zanhuaContextDialogue,zanhuaThreeActStoryDialogue,zanhuaMaidSideStory,zanhuaThreeActPassingDialogue} from '../game/zanhuaContext.ts';
 import {zanhuaDetailContours} from '../game/zanhuaDetailContours.ts';
 import {ZanhuaDetailOverlay} from './ZanhuaDetailOverlay.tsx';
 import type {ZanhuaConfirmation} from './ZanhuaDetailOverlay.tsx';
-import {zanhuaAnnotations,zanhuaDressComparison,zanhuaEarlierSealNote} from '../game/zanhuaAnnotations.ts';
+import {zanhuaAnnotations} from '../game/zanhuaAnnotations.ts';
 import type {ZanhuaAnnotation} from '../game/zanhuaAnnotations.ts';
 import type {PaintingRegion} from '../game/lanternStudy.ts';
 import {coverView} from '../game/geometry.ts';
@@ -158,12 +158,12 @@ export function ZanhuaThreeActGameV1(){
  function collect(id:string){saveFinding(id)?.();}
  function openJournal(){collection.settle();setReply(null);journalView.current={viewport:{view:{...viewport.view},frame:{...viewport.frame}},focus:focusing,horizontalMargin:Boolean(study?.allowHorizontalMargin),verticalMargin:Boolean(study?.allowVerticalMargin)};setFocusing(false);setOverlay('journal');}
  function lookAtFinding(finding:(typeof findings)[number],done:()=>void){
-  const {width,height}=viewport.frame,compact=width<760;
-  // Fit the complete original detail into the clear area beside/above the shared paper.
-  const availableWidth=compact?width-48:width*.32-32;
-  const availableHeight=compact?height*.21-24:height*.65;
+  const {width,height}=viewport.frame;
+  // The book folds away while looking: use the whole painting viewport.
+  const availableWidth=width-48;
+  const availableHeight=height*.72;
   const scale=Math.min(coverView(viewport.frame,zanhuaSize).scale*1.15,availableWidth/finding.crop.rect[2],availableHeight/finding.crop.rect[3]);
-  pan(finding.actor,false,done,compact?{x:.5,y:.12}:{x:.16,y:.43},scale/coverView(viewport.frame,zanhuaSize).scale,true,true);
+  pan(finding.actor,false,done,{x:.5,y:.5},scale/coverView(viewport.frame,zanhuaSize).scale,false,false);
  }
  function closeJournal(){
   setOverlay(null);const saved=journalView.current;journalView.current=null;if(!saved)return;
@@ -328,7 +328,7 @@ export function ZanhuaThreeActGameV1(){
  function playMotion(){
   if(busy)return;setFigureStudy(false);setReply(null);setMotionToken(v=>v+1);setFocusing(false);setPhase('animate');
  }
- function observe(){if(busy||phase!=='observe')return;if(index===0)collect('dog-right');if(index===2)collect('blossom-P6');confirmRegion(step.region,step.label);setBusy(true);timer.current=setTimeout(()=>{setBusy(false);playMotion();},700);}
+ function observe(){if(busy||phase!=='observe')return;if(index===0)collect('dog-right');if(index===2)collect('blossom-P6');confirmRegion(step.region,step.label);playMotion();}
 
  function frameReview(which:number,resized=false){
   if(busy&&!resized)return;
@@ -376,8 +376,8 @@ export function ZanhuaThreeActGameV1(){
   pan({x:505/zanhuaSize.width,y:zanhuaPlayerSeal.y/zanhuaSize.height},false,undefined,compact?{x:.43,y:.30}:{x:.30,y:.58},scale/coverView(viewport.frame,zanhuaSize).scale,true,true);
  }
  function fullScreen(){if(document.fullscreenElement)void document.exitFullscreen?.();else void document.documentElement.requestFullscreen?.().catch(()=>setNotice('可在目前視窗繼續觀畫。'));}
- const dogNoteWidth=Math.min(260,Math.max(220,520*viewport.view.scale-48));
- const dogNoteLeft=Math.max(16,Math.min(viewport.frame.width-dogNoteWidth-16,viewport.view.x+5330*viewport.view.scale-dogNoteWidth-24));
+ const dogNoteWidth=Math.min(420,viewport.frame.width-32);
+ const dogNoteLeft=Math.max(16,Math.min(viewport.frame.width-dogNoteWidth-16,viewport.view.x+5500*viewport.view.scale-dogNoteWidth-24));
  const heading=phase==='context'?context.title:step.title;
  const observationPrompt=index===1?'從她拈花的手往回看，哪一層衣料底下還透得出肩臂的輪廓？點點那裏。':step.prompt;
  const observationAction=index===1?'點擊透得出肩臂輪廓的衣料':step.action;
@@ -411,7 +411,7 @@ export function ZanhuaThreeActGameV1(){
     <div className="lantern-tools"><button className="lantern-mode" aria-pressed={focusing} onClick={()=>setFocusing(v=>!v)}>{focusing?'轉回彩色':'凝神觀察'}</button><button className="round-control" aria-busy={sound.state==='loading'} aria-label={soundLabel} aria-pressed={sound.state==='on'} onClick={()=>void sound.toggle()}>{sound.state==='on'?<Volume2 size={19}/>:<VolumeX size={19}/>}</button><button className="round-control" aria-label="切換全螢幕" onClick={fullScreen}><Maximize size={18}/></button><button className="round-control" aria-label="畫卷操作" onClick={()=>setOverlay('menu')}><MoreHorizontal size={20}/></button></div>
    </header>
    <footer className="lantern-footer" inert={blocked} hidden={phase==='seal'}>
-    <button ref={book} className={`lantern-quiet-button lantern-journal-button ${collection.receiving?'is-spark-arriving':''}`} onClick={openJournal}><BookOpen size={18}/>見聞冊 <span>{collection.count}／4</span></button>
+    <button ref={book} className={`lantern-quiet-button lantern-journal-button ${collection.receiving?'is-spark-arriving':''}`} onClick={openJournal}><BookOpen size={18}/>見聞冊 <span>{Object.keys(origins).length}／4</span></button>
     <LanternNavigator image={zanhuaImage} stops={stops} window={scrollWindow} onNavigate={x=>setHint({region:{x,y:.5},token:++token.current})}/>
     <button className="lantern-quiet-button" onClick={phase==='free'?openEnding:help}><CircleHelp size={18}/>{phase==='free'?'回看發現':'給我提示'}</button>
    </footer>
@@ -423,7 +423,6 @@ export function ZanhuaThreeActGameV1(){
    speakerLabel="女子回望方才動作的遊戲虛構對白" caption="畫中女子 · 遊戲對白" text={storyDialogue.interpret}
    speechGeometry={{openSpaceCandidates:true,maxWidth:310,reservedRects:speechSpace(),anchor:zanhuaMouths[step.id],faces:Object.values(zanhuaMouths),heads:zanhuaHeads}}
    actionLabel="再看她的盛裝" onContinue={startContext}>
-    <button className="lantern-text-button zanhua-dialogue-replay" onClick={playMotion}>重看{zanhuaMotionLabels[index]}演繹</button>
   </LanternEmperorSpeech>}
   {phase==='context'&&!busy&&!overlay&&!figureStudy&&!maidScene&&(!contextLooking||contextSeen)&&<LanternEmperorSpeech stablePlacement trapFocus={false} actor={contextSpeaker} people={zanhuaPeople} artworkSize={zanhuaSize} viewport={viewport}
    speakerLabel={detail?(collectionDetail?'原畫流傳小注':'衣飾與髮型小注'):historicalTurn?'畫外解說：歷史資料':`畫中女子的遊戲虛構對白`}
@@ -431,9 +430,6 @@ export function ZanhuaThreeActGameV1(){
    text={detail?.body??dialogueText} speechGeometry={{openSpaceCandidates:true,maxWidth:310,reservedRects:speechSpace(),anchor:speakingAnchor(conversation.speaker),faces:Object.values(zanhuaMouths),heads:zanhuaHeads}}
    actionLabel={detail?'返回人物對話':!contextSeen?'讓我看看':contextTurn+1<conversation.reply.length+conversation.history.length?'聽下去':contextStep+1===zanhuaContext[index].length?'循她的線索走':'再看下一處'}
    onContinue={contextSeen?nextContext:lookContext}>
-    {!detail&&contextSeen&&index===1&&contextStep===1&&<button className="lantern-text-button zanhua-more-dress" onClick={()=>setDetail(zanhuaDressComparison)}>還有哪些唐代穿搭？</button>}
-    {!detail&&contextSeen&&index===2&&contextStep===0&&<button className="lantern-text-button zanhua-more-dress" onClick={()=>openFigureStudy()}>再看髮型圖解</button>}
-    {!detail&&contextSeen&&collectorContext&&<button className="lantern-text-button zanhua-more-dress" onClick={()=>setDetail(zanhuaEarlierSealNote)}>更早的收藏線索</button>}
     {detail&&<div className="zanhua-detail-links"><a href={zanhuaHistorySources[detail.source].url} target="_blank" rel="noreferrer">資料依據 ↗</a></div>}
     {!detail&&contextSeen&&contextTurn+1===conversation.reply.length+conversation.history.length&&<details className="zanhua-dialogue-source"><summary>這段的資料依據</summary><a href={zanhuaHistorySources[context.source].url} target="_blank" rel="noreferrer">{zanhuaHistorySources[context.source].label} ↗</a></details>}
   </LanternEmperorSpeech>}
@@ -442,8 +438,8 @@ export function ZanhuaThreeActGameV1(){
    {phase==='context'&&contextLooking&&!busy&&!contextSeen&&!collectorContext&&<LanternPaintingTarget pointerThrough region={context.region} artworkSize={zanhuaSize} viewport={viewport} label={context.action} buttonRef={actionRef} onClick={()=>revealContext()}/>}
    {phase==='context'&&lookingForScarf&&!busy&&context.additionalRegion&&<LanternPaintingTarget pointerThrough region={context.additionalRegion} artworkSize={zanhuaSize} viewport={viewport} label={index===0?"點擊手臂下方露出的紅底花紋":"點擊垂到身前的花紋末端"} onClick={()=>revealContext()}/>}
    {collectorContext&&contextLooking&&!busy&&zanhuaCollectorSeals.map((seal,n)=><LanternPaintingTarget key={seal.id} pointerThrough region={seal.region} artworkSize={zanhuaSize} viewport={viewport} label={`${contextSeen?'細看':'點擊'}${seal.label}`} buttonRef={n===0?actionRef:undefined} onClick={()=>{if(contextSeen)selectAnnotation(zanhuaAnnotations[2][1].find(item=>item.id===seal.id)!);else revealContext(seal.id);}}/>)}
-   {phase!=='animate'&&phase!=='interpret'&&(phase!=='context'||contextLooking&&!contextSeen)&&<LanternPaintingNote index={index} anchor={observationAnchor} artworkSize={zanhuaSize} viewport={viewport} label={phase==='context'?`循着細節讀畫 · ${contextStep+1} / ${zanhuaContext[index].length}`:`原畫觀察 · ${index+1} / 3`} title={heading} busy={busy} noteRef={noteRef}>
-    <p className="lantern-note-body">{phase==='context'?context.prompt:observationPrompt}</p>
+   {phase!=='animate'&&phase!=='interpret'&&(phase!=='context'||contextLooking&&!contextSeen)&&<LanternPaintingNote index={index} anchor={observationAnchor} artworkSize={zanhuaSize} viewport={viewport} label={phase==='context'?`循着細節讀畫 · ${contextStep+1} / ${zanhuaContext[index].length}`:`原畫觀察 · ${index+1} / 3`} title={phase==='observe'&&index===0?'她在逗誰？':heading} busy={busy} noteRef={noteRef}>
+    <p className="lantern-note-body">{phase==='context'?context.prompt:index===0?'順着長柄往下看，點一點抬頭的小犬。':observationPrompt}</p>
    </LanternPaintingNote>}
   </>}
   {reply&&!blocked&&mouthVisible(reply.id)&&<LanternEmperorSpeech trapFocus={false} key={reply.token} actor={zanhuaPeople.find(p=>p.id===reply.id)!} people={zanhuaPeople} artworkSize={zanhuaSize} viewport={viewport} text={reply.text} speakerLabel="畫中人物的遊戲虛構對白" speechGeometry={{maxWidth:280,anchor:zanhuaMouths[reply.id],faces:Object.values(zanhuaMouths),heads:zanhuaHeads,reservedRects:[...speechSpace(),...(noteBounds?[noteBounds]:[])]}}/>}
@@ -458,7 +454,6 @@ export function ZanhuaThreeActGameV1(){
    text={zanhuaMaidSideStory[maidScene]} actionLabel={maidScene==='dialogue'?'細看長柄扇':'繼續觀畫'}
    onContinue={maidScene==='dialogue'?()=>setMaidScene('explanation'):closeMaidScene}>
     {maidScene==='explanation'&&<>
-     <button className="lantern-text-button zanhua-dialogue-replay" onClick={()=>setMaidPlaying(true)}>看執扇演繹</button>
      <div className="zanhua-detail-links"><a href={zanhuaHistorySources[zanhuaMaidSideStory.source].url} target="_blank" rel="noreferrer">資料依據 ↗</a></div>
     </>}
   </LanternEmperorSpeech>}
@@ -479,7 +474,7 @@ export function ZanhuaThreeActGameV1(){
   {phase==='seal'&&<ZanhuaSealRitual viewport={viewport} busy={busy} seal={playerSeal} onStamp={setPlayerSeal} onCover={returnPaintingToRoom} coverLabel="返回畫坊" onExplore={()=>{setPhase('free');setFocusing(false);}}/>}
   {collection.flight&&<LanternSparkDiscovery key={collection.flight.token} artwork={zanhuaCollectionItems[collection.flight.category]} discovery={{token:collection.flight.token,newlyCollected:true,findingId:collection.flight.category,source:{x:collection.flight.x,y:collection.flight.y},destination:{x:collection.flight.x+collection.flight.dx,y:collection.flight.y+collection.flight.dy},frame:viewport.frame}} onDone={collection.settle}/>}
   {(notice||sound.state==='error')&&!overlay&&<LanternNotice key={notice||sound.state} quiet text={notice||'音樂未能載入，可再次點擊音樂開關重試。'}/>}
-  {overlay==='journal'&&<LanternJournal findings={findings} edition={zanhuaJournalEdition} collected={Object.keys(origins)} sessionOnly={!storageAvailable} compact={viewport.frame.width<760} onClose={closeJournal}
+  {overlay==='journal'&&<LanternJournal spread findings={findings} edition={zanhuaJournalEdition} collected={Object.keys(origins)} sessionOnly={!storageAvailable} compact={viewport.frame.width<760} onClose={closeJournal}
    onLook={lookAtFinding}/>}
   {overlay==='hint'&&<ChapterDialog label="人物樣貌" className="lantern-appearance-help" onClose={closeOverlay}>
    <p className="lantern-eyebrow">先看樣貌，再入畫尋找</p><h2>{depth===0?'可曾見過這張面孔？':'再看一個細節'}</h2><div className="lantern-appearance-body"><figure className="lantern-appearance-figure"><img className="lantern-face-illustration" src={step.portrait} alt={step.appearance}/><figcaption>樣貌摹繪，原畫為準</figcaption></figure><div className="lantern-appearance-copy"><p>{depth===0?step.appearance:step.hints[depth-1]}</p><button className="lantern-return-link" onClick={closeOverlay}>回畫中找找<ArrowRight size={17}/></button></div></div>
@@ -493,6 +488,12 @@ export function ZanhuaThreeActGameV1(){
    <details><summary>原畫與資料來源</summary><p><a href={zanhuaSource} target="_blank" rel="noreferrer">完整畫面複製圖 · Wikimedia Commons</a></p>{zanhuaHistorySources.map(source=><p key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.label}</a></p>)}</details>
    <p className="lantern-source-note">配樂：<a href={chapterMusicTracks.zanhua.source} target="_blank" rel="noreferrer">{chapterMusicTracks.zanhua.title} · {chapterMusicTracks.zanhua.author}</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>。現代背景配樂，不是唐代曲目復原。</p>
   </ChapterDialog>}
-  {overlay==='menu'&&<ChapterDialog label="畫卷操作" onClose={closeOverlay}><h2>畫卷操作</h2><p>拖曳移動畫卷；滾輪、雙指或鍵盤＋／－縮放。按 F 切換凝神與彩色。</p><div className="lantern-menu-controls">{(['in','out','overview'] as const).map((type,n)=><button className="small-button" key={type} onClick={()=>{setOverlay(null);setCommand({type,token:++token.current});}}>{['放大','縮小','回到卷左'][n]}</button>)}</div><div className="lantern-paper-actions"><button className="lantern-text-button" onClick={()=>setOverlay('about')}>畫作小記</button><button className="lantern-text-button" onClick={restart}>再尋一次</button><button className="lantern-text-button" onClick={returnToCover}>回到本章封面</button></div></ChapterDialog>}
+  {overlay==='menu'&&<ChapterDialog className="zanhua-scroll-tools" label="畫卷操作" onClose={closeOverlay}>
+   <p className="lantern-eyebrow">展卷細看</p><h2>畫卷操作</h2>
+   <div className="lantern-menu-controls">{(['out','in','overview'] as const).map((type,n)=><button className="small-button" key={type} onClick={()=>{setOverlay(null);setCommand({type,token:++token.current});}}>{['縮小 −','放大 ＋','回到卷左'][n]}</button>)}</div>
+   <dl className="zanhua-controls-guide"><div><dt>移動畫卷</dt><dd>按住畫面拖曳</dd></div><div><dt>遠近細看</dt><dd>滾輪、雙指或 ＋／−</dd></div><div><dt>凝神觀察</dt><dd>按 F 切換彩色與凝神</dd></div></dl>
+   <div className="zanhua-menu-links"><button className="lantern-text-button" onClick={()=>setOverlay('about')}>畫作小記 →</button><button className="lantern-text-button" onClick={returnToCover}>回到本章封面 →</button></div>
+   <button className="lantern-text-button zanhua-menu-restart" onClick={restart}>重新尋人</button>
+  </ChapterDialog>}
  </main>;
 }

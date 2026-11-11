@@ -24,10 +24,10 @@ function CollectionIllustration({finding,locked=false,artwork}:{finding:LanternF
   </span>;
 }
 
-export function LanternJournal({collected,onClose,onLook,compact,findings=lanternFindings,sessionOnly=false,edition:customEdition}: {
+export function LanternJournal({collected,onClose,onLook,compact,findings=lanternFindings,sessionOnly=false,edition:customEdition,spread=false}: {
   collected: string[]; findings?: LanternFinding[]; sessionOnly?:boolean; onClose: () => void;
   onLook: (finding: LanternFinding, onSettled: () => void) => void; compact: boolean;
-  edition?:Partial<JournalEdition>;
+  edition?:Partial<JournalEdition>; spread?:boolean;
 }) {
   const edition={...defaultEdition,...customEdition};
   const [selected,setSelected] = useState<string | null>(null);
@@ -52,12 +52,12 @@ export function LanternJournal({collected,onClose,onLook,compact,findings=lanter
   }, []);
   useEffect(() => {
     const current = findings.find(item=>item.id===selection.current);
-    if(!current || closing)return;
+    if(!current || closing || spread)return;
     const token = ++request.current;
     window.clearTimeout(timer.current);
     setMoving(true);
     look.current(current,()=>{if(token===request.current)setMoving(false);});
-  }, [compact]);
+  }, [compact,spread]);
   useEffect(()=>{pages.current?.scrollTo({top:0});setLooking(false);ref.current?.focus({preventScroll:true});},[selected,souvenir]);
   useEffect(()=>{ref.current?.focus({preventScroll:true});},[looking]);
   const close = () => {
@@ -69,6 +69,7 @@ export function LanternJournal({collected,onClose,onLook,compact,findings=lanter
     if(moving || closing || id===selected && !souvenir)return;
     const next = findings.find(item=>item.id===id);
     if(!next || !collected.includes(id))return;
+    if(spread){setSelected(id);setSouvenir(false);setLooking(false);return;}
     const token = ++request.current;
     setMoving(true);setLooking(false);
     window.clearTimeout(timer.current);
@@ -98,8 +99,8 @@ export function LanternJournal({collected,onClose,onLook,compact,findings=lanter
     look.current(finding,()=>{if(token===request.current){setLooking(true);setMoving(false);}});
   };
   return <section ref={ref} tabIndex={-1} role="dialog" aria-modal="true" aria-label={edition.title}
-    className={`lantern-journal-layer lantern-field-journal ${selected&&!souvenir?'is-detail':'is-overview'} ${moving?'is-moving':''} ${looking?'is-looking':''} ${closing?'is-closing':''}`}
-    style={{'--journal-texture':`url("${assetPath('art/ui/reading-paper.png')}")`} as CSSProperties}
+    className={`lantern-journal-layer lantern-field-journal ${spread?'is-sticker-spread':''} ${selected&&!souvenir?'is-detail':'is-overview'} ${moving?'is-moving':''} ${looking?'is-looking':''} ${closing?'is-closing':''}`}
+    style={{'--spread-art':`url("${assetPath('atelier/assets/album-river-v1/album-spread.png')}")`,'--journal-texture':`url("${assetPath('art/ui/reading-paper.png')}")`} as CSSProperties}
     onKeyDown={event=>{
       if(event.key==='Escape'){event.preventDefault();event.stopPropagation();if(looking)setLooking(false);else close();return;}
       if(event.key!=='Tab')return;
@@ -128,7 +129,7 @@ export function LanternJournal({collected,onClose,onLook,compact,findings=lanter
               <span className="collection-item-state" aria-hidden="true">{found?'已收下':''}</span>
             </button>;
           })}</div>
-          {count===findings.length&&<button className="collection-souvenir-link" onClick={()=>overview(true)}>翻開{edition.souvenirTitle} <span aria-hidden="true">→</span></button>}
+          {!spread&&count===findings.length&&<button className="collection-souvenir-link" onClick={()=>overview(true)}>翻開{edition.souvenirTitle} <span aria-hidden="true">→</span></button>}
         </div>}
         {finding&&!souvenir&&<article className="collection-detail" key={finding.id}>
           <button className="collection-back" onClick={()=>overview()}>← 全部收藏</button>
@@ -137,7 +138,7 @@ export function LanternJournal({collected,onClose,onLook,compact,findings=lanter
           <p className="collection-observe">{finding.observe}</p>
           <p className="collection-body">{finding.note}</p>
           <button className="collection-look" onClick={lookInPainting}>看看畫中位置 <span aria-hidden="true">↗</span></button>
-          <p className="collection-next"><span>再留意一處</span>{finding.next}</p>
+          {!spread&&<p className="collection-next"><span>再留意一處</span>{finding.next}</p>}
           <details className="collection-source"><summary>畫作資料</summary><p>{edition.sourceNote??(finding.id==='costume'?'左側為原畫；收藏圖樣沿用動畫的創作姿勢，完整衣袍含補繪部分，不作為原畫被遮擋處的依據。':'左側為原畫，收藏圖樣為依畫中細節製作的插畫。')}</p><a href={edition.sourceUrl} target="_blank" rel="noreferrer">{edition.sourceLabel}</a><p>{sessionOnly?'樣段收藏只在本次預覽保留。':'收藏保存在此瀏覽器，重新尋人仍保留。'}</p></details>
           {available.length>1&&<nav className="collection-detail-nav" aria-label="已收藏見聞"><button aria-label="上一則已收藏見聞" onClick={()=>step(-1)}>←</button><span>{available.findIndex(item=>item.id===selected)+1}／{available.length}</span><button aria-label="下一則已收藏見聞" onClick={()=>step(1)}>→</button></nav>}
         </article>}
@@ -152,7 +153,7 @@ export function LanternJournal({collected,onClose,onLook,compact,findings=lanter
       </div>
       {!selected&&!souvenir&&<footer className="collection-footer">{count?'點選已收下的圖樣，回看畫中的發現。':edition.emptyHint}</footer>}
     </div>
-    <button className="collection-return" onClick={close}>← 回到長卷</button>
+    {!spread&&<button className="collection-return" onClick={close}>← 回到長卷</button>}
     {looking&&<button className="collection-resume" onClick={()=>setLooking(false)}>繼續閱讀 →</button>}
   </section>;
 }

@@ -86,7 +86,7 @@ export function ZanhuaInPaintingStudy({person,viewport,anchorViewport,selected,o
  const flight={left:start.left+(end.left-start.left)*ease,top:start.top+(end.top-start.top)*ease,width:start.width+(end.width-start.width)*ease,height:start.height+(end.height-start.height)*ease};
  const reading=reduced||instantPart||clock>=1250;
  const showingItem=Boolean(loaded&&item&&crop&&!original);
- const canMoveToGuide=(!exploreByClue||person<2)&&item&&showingItem&&reading&&seen.includes(item.id);
+ const canMoveToGuide=item&&showingItem&&reading&&seen.includes(item.id);
  const guiding=!exploreByClue&&guide&&!showingItem&&guide.id!==focusedItem?.id;
  const prompt=original?'原畫對照':failed?'摹繪暫未載入，可返回原畫。':!loaded?'摹繪載入中…':!arrived?'沿着原畫，逐步展開完整造型摹繪。':guide?.prompt;
  const revealY=pose.y-100+(source.height*pose.scale+200)*arrival;
@@ -130,7 +130,6 @@ export function ZanhuaInPaintingStudy({person,viewport,anchorViewport,selected,o
   </svg>}
   {active&&<aside className="zanhua-study-part-paper zanhua-guided-paper" style={{left:paper.left,top:paper.top,width:paper.width,maxHeight:paper.height}} aria-label={item&&!original?`${item.label}解說`:'造型細看解說'} data-stage={reading?'reading':clock>=250?'travelling':'focusing'}>
    {item&&crop&&showingItem&&<div className="zanhua-guided-part-content" key={selected}>
-   <button className="zanhua-study-part-close lantern-text-button" aria-label="收起部件解說" onClick={()=>{onSelect(null);targets.current[selected!]?.focus({preventScroll:true});}}>{exploreByClue?'回到畫中':'合回盛裝'} ×</button>
    <svg viewBox={crop.join(' ')} className="zanhua-study-separated-art" style={{height:art.height,opacity:instantPart||reduced?1:Math.max(0,Math.min(1,(clock-1000)/250))}} preserveAspectRatio="xMidYMid meet" role="img" aria-label={`${item.label}獨立美術摹繪`}>
     <defs><clipPath id={`${id}-crop`}><rect x={crop[0]} y={crop[1]} width={crop[2]} height={crop[3]}/></clipPath>{layer?.atlasPath&&<clipPath id={`${id}-part`}><path d={layer.atlasPath}/></clipPath>}</defs>
     <g clipPath={`url(#${id}-crop)`}><image href={assetPath(atlas)} width={dress?.atlasWidth??zanhuaCoiffureLayers.width} height={dress?.atlasHeight??zanhuaCoiffureLayers.height} clipPath={layer?.atlasPath?`url(#${id}-part)`:undefined}/><ZanhuaArtEdge asset={`${kind}-${layer?.id??item.id}`}/></g>

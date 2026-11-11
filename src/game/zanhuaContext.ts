@@ -89,8 +89,8 @@ export const zanhuaThreeActStoryDialogue=[
 ];
 
 export const zanhuaMaidSideStory={
- dialogue:'娘子，把花拿穩些。我往旁邊挪一挪，風就不直吹着你了。',
- explanation:'長柄從侍女的雙手斜向上伸，連着有花葉紋的橢圓扇面。她以紅帶束起雙髻。畫家把拈花和執扇兩個動作放在一起，讓人看見遊賞者和隨侍者各在做甚麼。',
+ dialogue:'娘子，把花拿穩些。我把扇抬高一點，免得碰着你的簪花。',
+ explanation:'侍女雙手執扇，扇面繪有花葉。她身旁的女子拈花遊賞。',
  source:1,
 };
 

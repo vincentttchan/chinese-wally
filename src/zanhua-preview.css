@@ -379,3 +379,67 @@
 .zanhua-returning-to-atelier::before{content:'';position:fixed;inset:0;z-index:2147483001;background:#efe3cb;animation:zanhua-return-to-atelier 440ms ease both}
 @keyframes zanhua-return-to-atelier{from{opacity:0}to{opacity:1}}
 @media(prefers-reduced-motion:reduce){.zanhua-returning-to-atelier::before{animation-duration:100ms}}
+
+/* 2026-11-11: short observation slips and a compact scroll tool sheet. */
+@media(min-width:760px){
+ .zanhua-preview.is-story-reading .lantern-observation-note {width:min(460px,calc(100% - 32px));padding:18px 26px;}
+ .zanhua-preview.is-story-reading.is-dog-study .lantern-observation-note {width:var(--zanhua-dog-note-width);padding:18px 26px;}
+}
+.zanhua-preview.is-story-reading .lantern-observation-note h2 {margin:0 0 6px;font-size:20px;}
+.zanhua-preview.is-story-reading .lantern-note-body {white-space:normal;line-height:1.65;margin:0;font-size:17px;}
+.zanhua-preview .zanhua-scroll-tools {justify-content:flex-end;align-items:flex-start;padding:20px;}
+.zanhua-scroll-tools .lantern-paper {width:min(390px,100%);padding:36px 28px 26px;max-height:calc(100dvh - 40px);overflow:auto;}
+.zanhua-scroll-tools h2 {margin:8px 0 24px;font-size:28px;}
+.zanhua-scroll-tools .lantern-menu-controls {display:flex;gap:10px;flex-wrap:wrap;}
+.zanhua-scroll-tools .lantern-menu-controls button {flex:1;min-width:82px;padding:10px 6px;}
+.zanhua-controls-guide {margin:24px 0;font-size:15px;line-height:1.7;}
+.zanhua-controls-guide>div {display:flex;justify-content:space-between;gap:16px;margin:10px 0;}
+.zanhua-controls-guide dd {margin:0;color:#77745e;text-align:right;}
+.zanhua-menu-links {display:grid;gap:16px;border-top:1px solid #9c8c6544;padding-top:20px;}
+.zanhua-menu-links button {text-align:left;}
+.zanhua-menu-restart {margin-top:28px;font-size:13px;color:#886b56;}
+
+/* A chapter journal is a book of discoveries; the optional personal souvenir stays in the atelier album. */
+.zanhua-preview .is-sticker-spread {--book-width:min(96vw,175.68dvh);background:#231f1980;}
+.zanhua-preview .is-sticker-spread .collection-paper {inset:50% auto auto 50%;width:var(--book-width);height:calc(var(--book-width) / 1.83);transform:translate(-50%,-50%);background:var(--spread-art) center/contain no-repeat;mask-image:none;}
+.zanhua-preview .is-sticker-spread .collection-reading {inset:50% auto auto 51%;width:calc(var(--book-width) * .83);height:calc(var(--book-width) / 1.83 * .80);transform:translate(-50%,-50%);padding:0;}
+.is-sticker-spread .collection-kicker {display:none;}
+.is-sticker-spread .collection-title-row h1 {font-size:clamp(23px,2.5vw,34px);}
+.is-sticker-spread .collection-title-row {padding-right:50px;}
+.is-sticker-spread .collection-title-row>span {border:0;font-size:14px;}
+.is-sticker-spread .collection-close {position:absolute;top:-4px;right:-24px;}
+.is-sticker-spread .collection-header {padding-bottom:12px;}
+.is-sticker-spread .collection-introduction {font-size:15px;margin:8px 0 12px;}
+.zanhua-preview .is-sticker-spread .collection-grid {grid-template-columns:repeat(4,minmax(0,1fr));gap:6%;}
+.zanhua-preview .is-sticker-spread .collection-item .collection-illustration {width:min(100%,28dvh);filter:drop-shadow(1px 0 0 #fff9e8) drop-shadow(-1px 0 0 #fff9e8) drop-shadow(0 2px 2px #58492f33);}
+.is-sticker-spread .collection-item-state {border:0!important;font-size:12px;}
+.is-sticker-spread .collection-footer {font-size:13px;border:0;padding:8px 0 0;}
+.is-sticker-spread .collection-detail {display:grid;grid-template-columns:45% 1fr;column-gap:9%;max-width:none;padding:0 0 12px;align-content:center;min-height:100%;}
+.is-sticker-spread .collection-back {grid-column:1/-1;justify-self:start;font-size:14px;}
+.is-sticker-spread .collection-detail-heading {grid-column:2;grid-row:2;align-self:end;}
+.is-sticker-spread .collection-detail-heading>p {margin:0 0 6px;}
+.is-sticker-spread .collection-detail-heading h2 {font-size:30px;margin:0 0 20px;}
+.is-sticker-spread .collection-detail-art {grid-column:1;grid-row:2/7;flex-direction:column;justify-content:center;gap:12px;margin:0;}
+.is-sticker-spread .collection-detail-art .collection-illustration {width:min(100%,42dvh,360px);filter:drop-shadow(2px 0 0 #fff9e8) drop-shadow(-2px 0 0 #fff9e8) drop-shadow(0 3px 2px #58492f33);}
+.is-sticker-spread .collection-detail-art figcaption {max-width:none;font-size:11px;}
+.is-sticker-spread .collection-detail>.collection-observe,.is-sticker-spread .collection-detail>.collection-body,.is-sticker-spread .collection-detail>.collection-look,.is-sticker-spread .collection-detail>.collection-source {grid-column:2;}
+.is-sticker-spread .collection-observe {font-size:15px;margin:0 0 12px;}
+.is-sticker-spread .collection-body {font-size:18px;line-height:1.85;margin:0 0 10px;}
+.is-sticker-spread .collection-look {justify-self:start;margin:5px 0 8px;font-size:15px;}
+.is-sticker-spread .collection-detail-nav {grid-column:2;margin:12px 0 0;padding:0;border:0;justify-content:flex-end;}
+.zanhua-preview .is-sticker-spread.is-looking {background:none;}
+@media(max-width:759px){
+ .zanhua-preview .is-sticker-spread .collection-paper {position:fixed;inset:0;width:auto;height:auto;transform:none;background:var(--journal-texture) center/cover;}
+ .zanhua-preview .is-sticker-spread .collection-reading {position:relative;inset:auto;width:auto;height:auto;transform:none;min-height:100%;padding:28px 24px 40px;}
+ .is-sticker-spread .collection-title-row {padding-right:44px;flex-direction:column;align-items:flex-start;gap:4px;}
+ .is-sticker-spread .collection-title-row>span {margin:0;}
+ .is-sticker-spread .collection-close {right:0;top:-8px;}
+ .zanhua-preview .is-sticker-spread .collection-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+ .is-sticker-spread .collection-detail {display:flex;flex-direction:column;align-items:stretch;gap:10px;}
+ .is-sticker-spread .collection-detail-heading {align-self:stretch;}
+ .is-sticker-spread .collection-back {align-self:flex-start;}
+ .is-sticker-spread .collection-detail-heading h2 {margin-bottom:4px;font-size:27px;}
+ .is-sticker-spread .collection-detail-art .collection-illustration {width:min(55vw,230px);}
+ .is-sticker-spread .collection-detail-art {margin:8px 0 16px;}
+ .is-sticker-spread .collection-detail-nav {justify-content:center;}
+}

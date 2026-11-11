@@ -38,7 +38,7 @@ export const zanhuaCollectionItems:Record<string,CollectionArtwork>={
 const texts:Record<ZanhuaCategory,{court:number;observe:string;note:string;next:string}>={
  blossom:{court:0,observe:'花朵簪在髮髻上，與細小髮飾並置。',note:'五位女子的頭上都可見花飾。花的形狀與髮飾的位置各有差異，是比對人物裝扮的線索。這裡只收藏髮髻上的簪花，不把手中花或花樹算作同一類。',next:'再看看執扇侍女的髮髻，有甚麼不同？'},
  fan:{court:1,observe:'一根長柄連着橢圓扇面，扇面上也有花葉線條。',note:'侍女以雙手持着長柄扇。順着長柄追看，就能把人物手勢與器物連起來；扇面上的裝飾則要靠近原畫細看。',next:'看看人物手中還拿着甚麼。'},
- dog:{court:2,observe:'小犬身上可見濃密毛髮與紅色繫帶。',note:'全畫有兩隻小犬，分布在不同女子附近。牠們的朝向與人物的動作相互呼應；發現另一隻仍可比較，但收藏只記一次。',next:'另一段畫面裡，也有一位毛茸茸的小伙伴。'},
+ dog:{court:2,observe:'小犬身上可見濃密毛髮與紅色繫帶。',note:'兩隻小犬分別伴在女子身旁。牠們抬頭、回望的姿態，與人物的手勢相互呼應。',next:'另一段畫面裡，也有一位毛茸茸的小伙伴。'},
  crane:{court:2,observe:'鶴彎曲的長頸、羽翼與細足，都由線條交代。',note:'畫中這隻鶴與兩隻小犬一起，讓人物之間的空位也有可看的細節。先看牠的姿態，再看與周圍人物的距離，不用替畫中動物補上沒有依據的故事。',next:'動物附近的人物，正做着甚麼？'},
 };
 export const zanhuaCategories=Object.keys(texts) as ZanhuaCategory[];
@@ -48,7 +48,7 @@ export function zanhuaFindings(origins:ZanhuaOrigins):LanternFinding[]{
   return {id,title:zanhuaCollectionItems[id].title,teaser:zanhuaCollectionItems[id].mystery,quote:'',...texts[id],crop:{image:zanhuaImage,sourceWidth:6455,rect:location.crop},actor:location.actor};
  });
 }
-export const zanhuaJournalEdition:JournalEdition={title:'簪花見聞冊',introduction:'把衣飾、器物與小動物，收成自己的畫中見聞。',emptyHint:'回到畫中，點點髮髻上的花、扇子或小動物。',courts:['髮髻與裝扮','手勢與器物','畫中動物'],items:zanhuaCollectionItems,sourceUrl:zanhuaSource,sourceLabel:'《簪花仕女圖》完整原畫與來源',sourceNote:'左側為原畫；收藏圖樣是依畫中細節製作的遊戲插畫，不當作原畫證據。詳情回看的位置，是你首次發現這一類見聞的地方。',illustrationCaption:'依原畫創作的收藏圖樣',souvenirTitle:'我的簪花見聞',souvenirBody:'從髮髻上的花，到長柄扇、小犬與鶴，你已看見人物之外的細節。',souvenirObserve:'這些細節讓衣飾、動作與身邊的小伙伴，在畫中有了聯繫。',souvenirSource:'《簪花仕女圖》 · 遼寧省博物館藏'};
+export const zanhuaJournalEdition:JournalEdition={title:'簪花見聞冊',introduction:'把衣飾、器物與小動物，收成自己的畫中見聞。',emptyHint:'回到畫中，點點髮髻上的花、扇子或小動物。',courts:['髮髻與裝扮','手勢與器物','畫中動物'],items:zanhuaCollectionItems,sourceUrl:zanhuaSource,sourceLabel:'《簪花仕女圖》完整原畫與來源',sourceNote:'圖樣依原畫細節繪製。點按「看看畫中位置」，可以回到首次發現這件物品的地方。',illustrationCaption:'依原畫創作的收藏圖樣',souvenirTitle:'我的簪花見聞',souvenirBody:'從髮髻上的花，到長柄扇、小犬與鶴，你已看見人物之外的細節。',souvenirObserve:'這些細節讓衣飾、動作與身邊的小伙伴，在畫中有了聯繫。',souvenirSource:'《簪花仕女圖》 · 遼寧省博物館藏'};
 
 const storageKey='chinese-wally:zanhua-findings:v1';
 export function loadZanhuaOrigins():ZanhuaOrigins{
