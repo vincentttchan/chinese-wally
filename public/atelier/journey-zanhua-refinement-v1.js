@@ -89,6 +89,9 @@ export function chapterJourney(frame, prompt, {
     prompt.hidden = true;
     prompt.classList.remove('is-compact');
     frame.title = chapters[index].title;
+    if (frame.ownerDocument.body.classList.contains('gallery-visible')) {
+      frame.ownerDocument.title = chapters[index].title + ' · 畫中尋人';
+    }
     const url = new URL(chapters[index].page, import.meta.url);
     const current = frame.contentDocument?.URL;
     if (current?.split('#')[0] === url.href.split('#')[0]) {
