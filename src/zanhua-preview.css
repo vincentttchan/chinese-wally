@@ -17,7 +17,7 @@
 .zanhua-maid-in-painting {
  position:absolute;left:0;top:0;transform-origin:0 0;max-width:none;
  filter:var(--painting-grade);
- mask-image:linear-gradient(transparent,#000 8%,#000 88%,transparent);
+
 }
 
 .zanhua-preview .zanhua-skip-animation {position:absolute;right:20px;bottom:24px;z-index:21;}
@@ -443,3 +443,6 @@
  .is-sticker-spread .collection-detail-art {margin:8px 0 16px;}
  .is-sticker-spread .collection-detail-nav {justify-content:center;}
 }
+
+/* The character speaks while the original detail is already open to observation. */
+.zanhua-context-whisper{font-size:14px;line-height:1.65;color:#72715b;margin:0 0 8px;}

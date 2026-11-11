@@ -3,10 +3,10 @@ import {assetPath} from '../game/assets.ts';
 import {zanhuaImage} from '../game/zanhuaPreview.ts';
 import type {SceneViewport} from './ScrollScene.tsx';
 
-// The independent study stays registered to the original figure. Feet and head
-// remain still; the fan makes one small, continuous tilt and return.
+// The independent study defines the articulated hands, handle and fan. The
+// original silk supplies their finish; the head, robe and feet never dissolve.
 const patch={x:3480,y:360,width:710,height:1018};
-const duration=4400;
+const duration=4600;
 const smooth=(x:number)=>{const t=Math.max(0,Math.min(1,x));return t*t*(3-2*t);};
 export function ZanhuaMaidAnimation({viewport,onDone}:{viewport:SceneViewport;onDone:()=>void}){
  const canvas=useRef<HTMLCanvasElement>(null),done=useRef(onDone);done.current=onDone;
@@ -20,41 +20,41 @@ export function ZanhuaMaidAnimation({viewport,onDone}:{viewport:SceneViewport;on
   Promise.all([original.decode(),study.decode()]).then(()=>{
    if(cancelled)return;window.clearTimeout(timeout);
    const {x,y,width,height}=patch;
-   const art=document.createElement('canvas');art.width=width;art.height=height;
-   const a=art.getContext('2d')!;a.drawImage(study,0,0,width,height);
-   const pixels=a.getImageData(0,0,width,height).data;
-   const back=document.createElement('canvas');back.width=width;back.height=height;
-   const b=back.getContext('2d')!;
-   // Borrow adjacent silk only inside the silhouette, never a rectangular tile.
+   const surface=()=>{const c=document.createElement('canvas');c.width=width;c.height=height;return c;};
+   const originalPatch=surface(),o=originalPatch.getContext('2d')!;o.drawImage(original,x,y,width,height,0,0,width,height);
+   const drawing=surface(),d=drawing.getContext('2d')!;d.drawImage(study,0,0,width,height);
+   // One articulated unit: both grips stay attached to the same handle.
+   const regions=new Path2D('M365 290 L356 235 L383 115 Q445 4 570 18 Q697 20 697 158 Q685 255 560 266 L436 257 Z M83 548 L288 345 L310 327 L320 346 L98 566 Z M264 330 Q284 313 303 333 L321 385 L304 431 L282 418 L265 374 Z M66 518 L93 492 L121 507 L114 546 L94 581 L70 575 Z');
+   const mask=surface(),m=mask.getContext('2d')!;m.fill(regions);
+   m.globalCompositeOperation='destination-in';m.drawImage(drawing,0,0);
+   const moving=surface(),a=moving.getContext('2d')!;a.drawImage(originalPatch,0,0);a.globalCompositeOperation='destination-in';a.drawImage(mask,0,0);
+   // Fill only the vacated moving silhouettes, preserving every fixed pixel.
+   const pixels=m.getImageData(0,0,width,height).data;
+   const repair=surface(),b=repair.getContext('2d')!;
    for(let row=0;row<height;row++){
-    let first=width,last=0;
-    for(let col=0;col<width;col++)if(pixels[(row*width+col)*4+3]>24){first=Math.min(first,col);last=Math.max(last,col);}
-    if(first>last)continue;
-    const middle=(first+last)/2;
-    const left=Math.max(0,first-5),right=Math.min(width,last+6);
-    b.drawImage(original,Math.max(0,x+first-22),y+row,12,1,left,row,middle-left,1);
-    b.drawImage(original,x+last+10,y+row,12,1,middle,row,right-middle,1);
+    let col=0;
+    while(col<width){
+     while(col<width&&pixels[(row*width+col)*4+3]<24)col++;
+     const first=col;
+     while(col<width&&pixels[(row*width+col)*4+3]>=24)col++;
+     if(first===col)continue;
+     const left=Math.max(0,first-3),right=Math.min(width,col+3),mid=(left+right)/2;
+     b.drawImage(originalPatch,Math.max(0,left-10),row,7,1,left,row,mid-left,1);
+     b.drawImage(originalPatch,Math.min(width-7,right+3),row,7,1,mid,row,right-mid,1);
+    }
    }
-   // A slight feather avoids a hard cut line against the aged silk.
-   b.globalCompositeOperation='destination-in';b.filter='blur(3px)';b.drawImage(art,0,0);b.filter='none';
-   const grip={x:300,y:355};
-   const fanPath=new Path2D('M285 323 L320 360 L423 260 L710 275 L710 0 L370 0 L350 200 Z');
-   const body=document.createElement('canvas');body.width=width;body.height=height;
-   const bodyContext=body.getContext('2d')!;bodyContext.drawImage(art,0,0);
-   bodyContext.globalCompositeOperation='destination-out';bodyContext.fill(fanPath);
-   const fan=document.createElement('canvas');fan.width=width;fan.height=height;
-   const fanContext=fan.getContext('2d')!;fanContext.clip(fanPath);fanContext.drawImage(art,0,0);
+   b.globalCompositeOperation='destination-in';b.filter='blur(1.2px)';b.drawImage(mask,0,0);b.filter='none';
+   const frame=surface(),f=frame.getContext('2d')!;
+   const pivot={x:90,y:548};
    const paint=(now:number)=>{
     if(cancelled)return;start??=now;const time=now-start;
     if(time>=duration){done.current();return;}
-    const lift=smooth((time-650)/1200)*(1-smooth((time-2600)/1200));
-    const fade=smooth(time/500)*smooth((duration-time)/500);
-    ctx.clearRect(0,0,width,height);ctx.globalAlpha=fade;
-    ctx.drawImage(back,0,0);
-    ctx.drawImage(body,0,0);
-    ctx.save();ctx.translate(grip.x,grip.y);ctx.rotate(-.012*lift);ctx.translate(-grip.x,-grip.y);
-    ctx.drawImage(fan,0,0);ctx.restore();
-    ctx.globalAlpha=1;raf=requestAnimationFrame(paint);
+    const lift=smooth((time-500)/1500)*(1-smooth((time-2600)/1500));
+    const fade=smooth(time/350)*smooth((duration-time)/350);
+    f.clearRect(0,0,width,height);f.drawImage(repair,0,0);
+    f.save();f.translate(pivot.x,pivot.y);f.rotate(-.018*lift);f.translate(-pivot.x,-pivot.y);f.drawImage(moving,0,0);f.restore();
+    ctx.clearRect(0,0,width,height);ctx.globalAlpha=fade;ctx.drawImage(frame,0,0);ctx.globalAlpha=1;
+    raf=requestAnimationFrame(paint);
    };
    raf=requestAnimationFrame(paint);
   },()=>{window.clearTimeout(timeout);if(!cancelled)done.current();});

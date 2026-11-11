@@ -96,7 +96,8 @@ export function ZanhuaThreeActGameV1(){
  const collectorContext=phase==='context'&&index===2&&contextStep===1;
  const historicalTurn=collectorContext||contextSeen&&contextTurn>=conversation.reply.length;
  const collectionDetail=detail?.id==='seal'||detail?.id.startsWith('collector-');
- const dialogueText=contextSeen?[...conversation.reply,...conversation.history][contextTurn]:conversation.invite;
+ const contextReplies=collectorContext?[...conversation.reply,...conversation.history]:conversation.reply;
+ const dialogueText=contextSeen?contextReplies[contextTurn]:conversation.invite;
  const observing=phase==='observe'||phase==='interpret'||phase==='context'||phase==='animate'||phase==='complete';
  const blocked=!ready||busy||phase==='intro'||phase==='found'||phase==='clue'||phase==='animate'||Boolean(overlay)||Boolean(maidScene)||phase==='complete'||phase==='seal';
  const sound=useAmbience(blocked||observing||figureStudy,chapterMusicTracks.zanhua);
@@ -223,6 +224,10 @@ export function ZanhuaThreeActGameV1(){
   pan({x:3835/zanhuaSize.width,y:869/zanhuaSize.height},false,undefined,{x:.5,y:.5},
    scale/coverView(frame,zanhuaSize).scale,true,true);
  }
+ function readMaidExplanation(){
+  setMaidScene('explanation');
+  if(!claimed.current.fan){const receipt=saveFinding('fan-maid',false);if(maidReturn.current)maidReturn.current.showReceipt=receipt;}
+ }
  function closeMaidScene(){
   const saved=maidReturn.current;
   if(!saved)return;
@@ -281,7 +286,7 @@ export function ZanhuaThreeActGameV1(){
   return [{left:0,top:0,width:355,height:150},{left:viewport.frame.width-270,top:0,width:270,height:95}];
  }
  function frameSpeaker(id=step.id,onSettled?:()=>void){pan(zanhuaMouths[id],false,onSettled);}
- function startContext(){if(busy||phase!=='interpret')return;setDetail(null);setConfirmation(null);setContextStep(0);setContextSeen(false);setContextLooking(false);setContextTurn(0);setPhase('context');}
+ function startContext(){if(busy||phase!=='interpret')return;setDetail(null);setConfirmation(null);setContextStep(0);setContextSeen(false);setContextLooking(true);setContextTurn(0);setPhase('context');frameContext(0);}
  function lookContext(){if(busy||phase!=='context')return;setDetail(null);setConfirmation(null);setContextLooking(true);frameContext(contextStep);}
  function openFigureStudy(person=index){
   // Keep the original camera ready to return to when the compact composition closes.
@@ -311,9 +316,9 @@ export function ZanhuaThreeActGameV1(){
  function nextContext(){
   if(busy||phase!=='context'||!contextSeen)return;
   if(detail){setDetail(null);return;}
-  if(contextTurn+1<conversation.reply.length+conversation.history.length){setContextTurn(value=>value+1);return;}
+  if(contextTurn+1<contextReplies.length){setContextTurn(value=>value+1);return;}
   if(contextStep+1===zanhuaContext[index].length){continueStory();return;}
-  const next=contextStep+1;setDetail(null);setConfirmation(null);setContextStep(next);setContextSeen(false);setContextLooking(false);setContextTurn(0);frameContext(next);
+  const next=contextStep+1;setDetail(null);setConfirmation(null);setContextStep(next);setContextSeen(false);setContextLooking(true);setContextTurn(0);frameContext(next);
  }
  function finishMotion(){setPhase('interpret');}
 
@@ -376,9 +381,9 @@ export function ZanhuaThreeActGameV1(){
   pan({x:505/zanhuaSize.width,y:zanhuaPlayerSeal.y/zanhuaSize.height},false,undefined,compact?{x:.43,y:.30}:{x:.30,y:.58},scale/coverView(viewport.frame,zanhuaSize).scale,true,true);
  }
  function fullScreen(){if(document.fullscreenElement)void document.exitFullscreen?.();else void document.documentElement.requestFullscreen?.().catch(()=>setNotice('可在目前視窗繼續觀畫。'));}
- const dogNoteWidth=Math.min(420,viewport.frame.width-32);
- const dogNoteLeft=Math.max(16,Math.min(viewport.frame.width-dogNoteWidth-16,viewport.view.x+5500*viewport.view.scale-dogNoteWidth-24));
- const heading=phase==='context'?context.title:step.title;
+ const dogNoteWidth=Math.min(420,viewport.frame.width-32,Math.max(280,630*viewport.view.scale-32));
+ const dogNoteLeft=Math.max(16,Math.min(viewport.frame.width-dogNoteWidth-16,viewport.view.x+5125*viewport.view.scale-dogNoteWidth/2));
+ const heading=phase==='context'&&index===0?(contextStep===0?'深色衣料下，露出了甚麼？':'紅底花紋，繞過了哪裏？'):phase==='context'?context.title:step.title;
  const observationPrompt=index===1?'從她拈花的手往回看，哪一層衣料底下還透得出肩臂的輪廓？點點那裏。':step.prompt;
  const observationAction=index===1?'點擊透得出肩臂輪廓的衣料':step.action;
  const review=zanhuaReviewShots[reviewStep];
@@ -428,10 +433,10 @@ export function ZanhuaThreeActGameV1(){
    speakerLabel={detail?(collectionDetail?'原畫流傳小注':'衣飾與髮型小注'):historicalTurn?'畫外解說：歷史資料':`畫中女子的遊戲虛構對白`}
    caption={detail?(collectionDetail?'原畫小注 · 流傳線索':index===2&&contextStep===0?'衣飾小注 · 原畫細節':'衣飾小注 · 原畫細看'):historicalTurn?'畫外解說 · 史料':`${contextSpeaker.name} · 遊戲對白`} narration={Boolean(detail)||historicalTurn||!mouthVisible(conversation.speaker)}
    text={detail?.body??dialogueText} speechGeometry={{openSpaceCandidates:true,maxWidth:310,reservedRects:speechSpace(),anchor:speakingAnchor(conversation.speaker),faces:Object.values(zanhuaMouths),heads:zanhuaHeads}}
-   actionLabel={detail?'返回人物對話':!contextSeen?'讓我看看':contextTurn+1<conversation.reply.length+conversation.history.length?'聽下去':contextStep+1===zanhuaContext[index].length?'循她的線索走':'再看下一處'}
+   actionLabel={detail?'返回人物對話':!contextSeen?'讓我看看':contextTurn+1<contextReplies.length?'聽下去':contextStep+1===zanhuaContext[index].length?'循她的線索走':'再看下一處'}
    onContinue={contextSeen?nextContext:lookContext}>
     {detail&&<div className="zanhua-detail-links"><a href={zanhuaHistorySources[detail.source].url} target="_blank" rel="noreferrer">資料依據 ↗</a></div>}
-    {!detail&&contextSeen&&contextTurn+1===conversation.reply.length+conversation.history.length&&<details className="zanhua-dialogue-source"><summary>這段的資料依據</summary><a href={zanhuaHistorySources[context.source].url} target="_blank" rel="noreferrer">{zanhuaHistorySources[context.source].label} ↗</a></details>}
+    {!detail&&contextSeen&&contextTurn+1===contextReplies.length&&<details className="zanhua-dialogue-source"><summary>這段的資料依據</summary><a href={zanhuaHistorySources[context.source].url} target="_blank" rel="noreferrer">{zanhuaHistorySources[context.source].label} ↗</a></details>}
   </LanternEmperorSpeech>}
   {observing&&!figureStudy&&!maidScene&&phase!=='complete'&&<>
    {phase==='observe'&&!busy&&<LanternPaintingTarget pointerThrough region={step.region} artworkSize={zanhuaSize} viewport={viewport} label={observationAction} buttonRef={actionRef} onClick={observe}/>}
@@ -439,6 +444,7 @@ export function ZanhuaThreeActGameV1(){
    {phase==='context'&&lookingForScarf&&!busy&&context.additionalRegion&&<LanternPaintingTarget pointerThrough region={context.additionalRegion} artworkSize={zanhuaSize} viewport={viewport} label={index===0?"點擊手臂下方露出的紅底花紋":"點擊垂到身前的花紋末端"} onClick={()=>revealContext()}/>}
    {collectorContext&&contextLooking&&!busy&&zanhuaCollectorSeals.map((seal,n)=><LanternPaintingTarget key={seal.id} pointerThrough region={seal.region} artworkSize={zanhuaSize} viewport={viewport} label={`${contextSeen?'細看':'點擊'}${seal.label}`} buttonRef={n===0?actionRef:undefined} onClick={()=>{if(contextSeen)selectAnnotation(zanhuaAnnotations[2][1].find(item=>item.id===seal.id)!);else revealContext(seal.id);}}/>)}
    {phase!=='animate'&&phase!=='interpret'&&(phase!=='context'||contextLooking&&!contextSeen)&&<LanternPaintingNote index={index} anchor={observationAnchor} artworkSize={zanhuaSize} viewport={viewport} label={phase==='context'?`循着細節讀畫 · ${contextStep+1} / ${zanhuaContext[index].length}`:`原畫觀察 · ${index+1} / 3`} title={phase==='observe'&&index===0?'她在逗誰？':heading} busy={busy} noteRef={noteRef}>
+    {phase==='context'&&!collectorContext&&<p className="zanhua-context-whisper">{contextSpeaker.name}：{conversation.invite}</p>}
     <p className="lantern-note-body">{phase==='context'?context.prompt:index===0?'順着長柄往下看，點一點抬頭的小犬。':observationPrompt}</p>
    </LanternPaintingNote>}
   </>}
@@ -452,7 +458,7 @@ export function ZanhuaThreeActGameV1(){
    narration={maidScene==='explanation'||!mouthVisible('P3')}
    speechGeometry={{openSpaceCandidates:true,maxWidth:310,reservedRects:[{left:viewport.view.x+3530*viewport.view.scale,top:viewport.view.y+395*viewport.view.scale,width:630*viewport.view.scale,height:555*viewport.view.scale}],anchor:mouthVisible('P3')?zanhuaMouths.P3:zanhuaSpot('fan-maid')!.actor,faces:Object.values(zanhuaMouths),heads:zanhuaHeads}}
    text={zanhuaMaidSideStory[maidScene]} actionLabel={maidScene==='dialogue'?'細看長柄扇':'繼續觀畫'}
-   onContinue={maidScene==='dialogue'?()=>setMaidScene('explanation'):closeMaidScene}>
+   onContinue={maidScene==='dialogue'?readMaidExplanation:closeMaidScene}>
     {maidScene==='explanation'&&<>
      <div className="zanhua-detail-links"><a href={zanhuaHistorySources[zanhuaMaidSideStory.source].url} target="_blank" rel="noreferrer">資料依據 ↗</a></div>
     </>}
