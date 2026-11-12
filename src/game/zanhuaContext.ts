@@ -77,7 +77,7 @@ export const zanhuaThreeActContextDialogue=[
  [{speaker:'P1',invite:'慢些，別踩着腳邊那抹紅。喏，這邊。',reply:['罷了，才理好的裙襬又要皺了。你倒是玩得高興。'],history:[]},
   {speaker:'P1',invite:'等等，肩頭那條長帶滑下來了。你先別撲過來。',reply:['怎麼，我的手才停一下，你就等不及了？'],history:['女子垂下的目光、斜伸的長柄和仰頭的小犬連成一次逗弄。盛裝的衣飾也隨這個手勢疊在一起。']}],
  [{speaker:'P4',invite:'你替我拿一會兒？我這袖子寬，怕拂着花。',reply:['好了，這枝還是我拿着吧。你看，花瓣才開了一半。'],history:[]},
-  {speaker:'P4',invite:'且慢，袖外那條帶子勾住了。等我把它理順。',reply:['花枝我拿穩了。你慢慢扇，這點風正好。'],history:['薄紗透出手臂的輪廓，披帛從臂旁垂下。兩層衣料的線條襯出拈花的手勢。']}],
+  {speaker:'P4',invite:'',reply:['花枝我拿穩了。你慢慢扇，這點風正好。'],history:['薄紗透出手臂的輪廓，披帛從臂旁垂下。兩層衣料的線條襯出拈花的手勢。']}],
  [{speaker:'P6',invite:'你站得近，替我看看，花簪在這一側可好？',reply:['那就簪在這兒。髻邊那支小釵也留着吧。'],history:zanhuaContextDialogue[2][0].history},
   {speaker:'P6',invite:'畫卷左側的裝裱上留着幾枚紅印。點其中一枚，看看誰曾珍藏這幅畫。',reply:[],history:zanhuaContextDialogue[2][1].history}],
 ];

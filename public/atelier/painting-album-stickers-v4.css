@@ -1,0 +1,9 @@
+@import url('painting-album-stickers-v3.css?v=1');
+.sticker-album .memento-preview-sticker{display:flex;align-items:center;justify-content:center;width:88%;flex:1;min-height:90px;max-height:68%;padding:8px;border:0;background:transparent;cursor:pointer;}
+.memento-preview-sticker .memento-art{width:100%;height:100%;max-width:100%;max-height:100%;flex:1;transition:transform .25s ease,filter .25s ease;}
+.memento-preview-sticker:hover .memento-art,.memento-preview-sticker:focus-visible .memento-art{transform:translateY(-5px) rotate(-2deg);filter:drop-shadow(0 7px 4px #6b463628);}
+.sticker-album .memento-preview-sticker:focus-visible{outline:1px solid #9e573e;outline-offset:4px;}
+.memento-preview:empty{background:none;}
+.sticker-album .memento-detail-actions{justify-content:flex-end;}
+@media(max-width:650px){.sticker-album .memento-preview-sticker{grid-row:1;min-height:52px;width:64px;height:64px;padding:0;}.memento-preview-sticker .memento-art{width:64px;height:64px;}.memento-preview h4{grid-column:2;}}
+@media(prefers-reduced-motion:reduce){.memento-preview-sticker .memento-art{transition:none;}.memento-preview-sticker:hover .memento-art{transform:none;}}

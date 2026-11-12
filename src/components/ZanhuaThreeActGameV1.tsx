@@ -220,8 +220,8 @@ export function ZanhuaThreeActGameV1(){
   setMaidScene('dialogue');
   setMaidPlaying(true);
   const {frame}=viewport;
-  const scale=Math.min((frame.width-32)/710,(frame.height-52)/1018);
-  pan({x:3835/zanhuaSize.width,y:869/zanhuaSize.height},false,undefined,{x:.5,y:.5},
+  const scale=Math.min((frame.width-40)/820,(frame.height-28)/1070);
+  pan({x:3835/zanhuaSize.width,y:846/zanhuaSize.height},false,undefined,{x:.5,y:.5},
    scale/coverView(frame,zanhuaSize).scale,true,true);
  }
  function readMaidExplanation(){
@@ -444,7 +444,7 @@ export function ZanhuaThreeActGameV1(){
    {phase==='context'&&lookingForScarf&&!busy&&context.additionalRegion&&<LanternPaintingTarget pointerThrough region={context.additionalRegion} artworkSize={zanhuaSize} viewport={viewport} label={index===0?"點擊手臂下方露出的紅底花紋":"點擊垂到身前的花紋末端"} onClick={()=>revealContext()}/>}
    {collectorContext&&contextLooking&&!busy&&zanhuaCollectorSeals.map((seal,n)=><LanternPaintingTarget key={seal.id} pointerThrough region={seal.region} artworkSize={zanhuaSize} viewport={viewport} label={`${contextSeen?'細看':'點擊'}${seal.label}`} buttonRef={n===0?actionRef:undefined} onClick={()=>{if(contextSeen)selectAnnotation(zanhuaAnnotations[2][1].find(item=>item.id===seal.id)!);else revealContext(seal.id);}}/>)}
    {phase!=='animate'&&phase!=='interpret'&&(phase!=='context'||contextLooking&&!contextSeen)&&<LanternPaintingNote index={index} anchor={observationAnchor} artworkSize={zanhuaSize} viewport={viewport} label={phase==='context'?`循着細節讀畫 · ${contextStep+1} / ${zanhuaContext[index].length}`:`原畫觀察 · ${index+1} / 3`} title={phase==='observe'&&index===0?'她在逗誰？':heading} busy={busy} noteRef={noteRef}>
-    {phase==='context'&&!collectorContext&&<p className="zanhua-context-whisper">{contextSpeaker.name}：{conversation.invite}</p>}
+    {phase==='context'&&!collectorContext&&conversation.invite&&<p className="zanhua-context-whisper">{contextSpeaker.name}：{conversation.invite}</p>}
     <p className="lantern-note-body">{phase==='context'?context.prompt:index===0?'順着長柄往下看，點一點抬頭的小犬。':observationPrompt}</p>
    </LanternPaintingNote>}
   </>}
