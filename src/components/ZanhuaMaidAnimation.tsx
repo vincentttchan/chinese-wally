@@ -1,7 +1,7 @@
 import {useEffect,useRef} from 'react';
 import {assetPath} from '../game/assets.ts';
 import {zanhuaImage} from '../game/zanhuaPreview.ts';
-import {zanhuaMaidRigDuration,zanhuaMaidRigPose,zanhuaMaidBodyPoint,zanhuaMaidFanPoint} from '../game/zanhuaMaidPerformance.ts';
+import {maidMotionDuration,maidMotionPose,maidFanPoint,maidSkinChannels} from '../game/zanhuaMaidMotionV2.ts';
 import type {SceneViewport} from './ScrollScene.tsx';
 
 const patch={x:3480,y:360,width:710,height:1018},pad=96;
@@ -55,22 +55,48 @@ export function ZanhuaMaidAnimation({viewport,onDone}:{viewport:SceneViewport;on
    const body=registeredImage(bodyImage,true),fan=registeredImage(fanImage,true);
    const shader=(kind:number,source:string)=>{const value=gl.createShader(kind)!;resources.shaders.push(value);gl.shaderSource(value,source);gl.compileShader(value);if(!gl.getShaderParameter(value,gl.COMPILE_STATUS))throw Error('Maid shader unavailable');return value;};
    const program=gl.createProgram()!;resources.programs.push(program);
-   gl.attachShader(program,shader(gl.VERTEX_SHADER,'attribute vec2 a_position;attribute vec2 a_uv;uniform vec2 u_size;varying vec2 v_uv;void main(){vec2 p=a_position/u_size;gl_Position=vec4(p.x*2.0-1.0,1.0-p.y*2.0,0,1);v_uv=a_uv;}'));
+   gl.attachShader(program,shader(gl.VERTEX_SHADER,`
+    attribute vec2 a_position; attribute vec2 a_uv;
+    attribute vec4 a_torso; attribute vec2 a_cloth; attribute vec4 a_bones;
+    uniform vec2 u_size; uniform float u_skinned;
+    uniform mat3 u_torso; uniform mat3 u_head; uniform mat3 u_fan;
+    uniform mat3 u_lower_upper; uniform mat3 u_lower_fore; uniform mat3 u_raised_upper; uniform mat3 u_raised_fore;
+    uniform vec2 u_cloth_lower; uniform vec2 u_cloth_raised;
+    varying vec2 v_uv;
+    void main(){
+     vec3 p=vec3(a_position,1.0); vec2 q=p.xy;
+     if(u_skinned>0.5){
+      q=a_torso.x*p.xy+a_torso.y*((u_torso*p).xy-p.xy)+a_torso.z*((u_head*p).xy-p.xy)+a_torso.w*(u_fan*p).xy;
+      q+=a_bones.x*(u_lower_upper*p).xy+a_bones.y*(u_lower_fore*p).xy+a_bones.z*(u_raised_upper*p).xy+a_bones.w*(u_raised_fore*p).xy;
+      q+=a_cloth.x*u_cloth_lower+a_cloth.y*u_cloth_raised;
+     }
+     q=(q+vec2(${pad}.0))/u_size;
+     gl_Position=vec4(q.x*2.0-1.0,1.0-q.y*2.0,0,1); v_uv=a_uv;
+    }`));
    gl.attachShader(program,shader(gl.FRAGMENT_SHADER,'precision mediump float;uniform sampler2D u_image;varying vec2 v_uv;void main(){gl_FragColor=texture2D(u_image,v_uv);}'));
    gl.linkProgram(program);if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error('Maid program unavailable');gl.useProgram(program);
    const position=gl.getAttribLocation(program,'a_position'),uv=gl.getAttribLocation(program,'a_uv');
+   const skinAttributes=['a_torso','a_cloth','a_bones'].map(name=>gl.getAttribLocation(program,name));
+   const skinned=gl.getUniformLocation(program,'u_skinned');
+   const matrixNames=['u_torso','u_head','u_fan','u_lower_upper','u_lower_fore','u_raised_upper','u_raised_fore'];
+   const matrices=matrixNames.map(name=>gl.getUniformLocation(program,name));
+   const clothLocations=['u_cloth_lower','u_cloth_raised'].map(name=>gl.getUniformLocation(program,name));
    gl.uniform2f(gl.getUniformLocation(program,'u_size'),output.width,output.height);
    const texture=(image:HTMLCanvasElement)=>{const t=gl.createTexture()!;resources.textures.push(t);gl.bindTexture(gl.TEXTURE_2D,t);gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL,true);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,image);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);return t;};
    const buffer=(data:Float32Array|Uint16Array,target:number=gl.ARRAY_BUFFER,dynamic=false)=>{const value=gl.createBuffer()!;resources.buffers.push(value);gl.bindBuffer(target,value);gl.bufferData(target,data,dynamic?gl.DYNAMIC_DRAW:gl.STATIC_DRAW);return value;};
    const cols=71,rows=102,points:Array<{x:number;y:number}>=[],coords:number[]=[],indices:number[]=[];
    for(let y=0;y<=rows;y++)for(let x=0;x<=cols;x++){points.push({x:x/cols*patch.width,y:y/rows*patch.height});coords.push(x/cols,y/rows);}
    for(let y=0;y<rows;y++)for(let x=0;x<cols;x++){const i=y*(cols+1)+x;indices.push(i,i+1,i+cols+1,i+1,i+cols+2,i+cols+1);}
-   const vertices=new Float32Array(points.length*2),mesh=buffer(vertices,gl.ARRAY_BUFFER,true),texcoords=buffer(new Float32Array(coords)),triangles=buffer(new Uint16Array(indices),gl.ELEMENT_ARRAY_BUFFER);
+   const mesh=buffer(new Float32Array(points.flatMap(p=>[p.x,p.y]))),texcoords=buffer(new Float32Array(coords)),triangles=buffer(new Uint16Array(indices),gl.ELEMENT_ARRAY_BUFFER);
+   const skin=points.map(p=>maidSkinChannels(p.x,p.y));
+   const skinBuffers=[buffer(new Float32Array(skin.flatMap(s=>s.torso))),buffer(new Float32Array(skin.flatMap(s=>s.cloth))),buffer(new Float32Array(skin.flatMap(s=>s.bones)))];
    const corners=[{x:0,y:0},{x:patch.width,y:0},{x:0,y:patch.height},{x:patch.width,y:patch.height}];
-   const quadVertices=new Float32Array(corners.flatMap(p=>[p.x+pad,p.y+pad]));
+   const quadVertices=new Float32Array(corners.flatMap(p=>[p.x,p.y]));
    const fixedQuad=buffer(quadVertices),fanQuad=buffer(new Float32Array(8),gl.ARRAY_BUFFER,true),quadUV=buffer(new Float32Array([0,0,1,0,0,1,1,1])),quadTriangles=buffer(new Uint16Array([0,1,2,1,3,2]),gl.ELEMENT_ARRAY_BUFFER);
    const bodyTexture=texture(body),fanTexture=texture(fan),handsTexture=texture(handsInFront(body)),plateTexture=texture(preparePlate(plate,painting,body,fan));
-   const draw=(p:WebGLBuffer,t:WebGLBuffer,i:WebGLBuffer,image:WebGLTexture,count:number)=>{
+   const draw=(p:WebGLBuffer,t:WebGLBuffer,i:WebGLBuffer,image:WebGLTexture,count:number,isBody=false)=>{
+    gl.uniform1f(skinned,isBody?1:0);
+    skinAttributes.forEach((attribute,i)=>{gl.bindBuffer(gl.ARRAY_BUFFER,skinBuffers[i]);gl.enableVertexAttribArray(attribute);gl.vertexAttribPointer(attribute,i===1?2:4,gl.FLOAT,false,0,0);});
     gl.bindBuffer(gl.ARRAY_BUFFER,p);gl.enableVertexAttribArray(position);gl.vertexAttribPointer(position,2,gl.FLOAT,false,0,0);
     gl.bindBuffer(gl.ARRAY_BUFFER,t);gl.enableVertexAttribArray(uv);gl.vertexAttribPointer(uv,2,gl.FLOAT,false,0,0);
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,i);gl.bindTexture(gl.TEXTURE_2D,image);gl.drawElements(gl.TRIANGLES,count,gl.UNSIGNED_SHORT,0);
@@ -78,19 +104,20 @@ export function ZanhuaMaidAnimation({viewport,onDone}:{viewport:SceneViewport;on
    gl.enable(gl.BLEND);gl.blendFunc(gl.ONE,gl.ONE_MINUS_SRC_ALPHA);gl.viewport(0,0,output.width,output.height);gl.clearColor(0,0,0,0);
    const paint=(now:number)=>{
     if(stopped)return;start??=now;const time=now-start;
-    if(time>=zanhuaMaidRigDuration){finish();return;}
-    const pose=zanhuaMaidRigPose(time);
-    output.dataset.motionStage=time<1700?'turn':time<3000?'lift':time<5600?'fan':'return';
-    points.forEach((p,i)=>{const q=zanhuaMaidBodyPoint(p.x,p.y,time,pose);vertices[i*2]=q.x+pad;vertices[i*2+1]=q.y+pad;});
-    gl.bindBuffer(gl.ARRAY_BUFFER,mesh);gl.bufferSubData(gl.ARRAY_BUFFER,0,vertices);
-    corners.forEach((p,i)=>{const q=zanhuaMaidFanPoint(p.x,p.y,time,pose);quadVertices[i*2]=q.x+pad;quadVertices[i*2+1]=q.y+pad;});
+    if(time>=maidMotionDuration){finish();return;}
+    const pose=maidMotionPose(time);
+    output.dataset.motionStage=time<1250?'turn':time<2850?'lift':time<6000?'fan':'return';
+    const values=[pose.torso,pose.head,pose.fan,pose.arms[0].upper,pose.arms[0].fore,pose.arms[1].upper,pose.arms[1].fore];
+    values.forEach((m,i)=>gl.uniformMatrix3fv(matrices[i],false,new Float32Array([m.a,m.b,0,m.c,m.d,0,m.tx,m.ty,1])));
+    pose.cloth.forEach((q,i)=>gl.uniform2f(clothLocations[i],q.x,q.y));
+    corners.forEach((p,i)=>{const q=maidFanPoint(p.x,p.y,pose);quadVertices[i*2]=q.x;quadVertices[i*2+1]=q.y;});
     gl.bindBuffer(gl.ARRAY_BUFFER,fanQuad);gl.bufferSubData(gl.ARRAY_BUFFER,0,quadVertices);
     gl.clear(gl.COLOR_BUFFER_BIT);
-    output.style.opacity=String(smooth(time/550)*smooth((zanhuaMaidRigDuration-time)/550));
+    output.style.opacity=String(smooth(time/550)*smooth((maidMotionDuration-time)/550));
     draw(fixedQuad,quadUV,quadTriangles,plateTexture,6);
-    draw(mesh,texcoords,triangles,bodyTexture,indices.length);
+    draw(mesh,texcoords,triangles,bodyTexture,indices.length,true);
     draw(fanQuad,quadUV,quadTriangles,fanTexture,6);
-    draw(mesh,texcoords,triangles,handsTexture,indices.length);
+    draw(mesh,texcoords,triangles,handsTexture,indices.length,true);
     raf=requestAnimationFrame(paint);
    };raf=requestAnimationFrame(paint);
   }).catch(finish);
