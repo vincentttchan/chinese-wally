@@ -11,6 +11,7 @@ import {ZanhuaMaidAnimation} from './ZanhuaMaidAnimation.tsx';
 import {useCallback,useEffect,useLayoutEffect,useRef,useState} from 'react';
 import type {CSSProperties} from 'react';
 import {ScrollScene} from './ScrollScene.tsx';
+import {ZanhuaPlayGuide} from './ZanhuaPlayGuide.tsx';
 import type {SceneCommand,SceneHint,SceneViewport,StudyCommand} from './ScrollScene.tsx';
 import type {SceneActor} from '../game/level.ts';
 import {LanternEmperorSpeech} from './LanternEmperorSpeech.tsx';
@@ -63,6 +64,7 @@ export function ZanhuaThreeActGameV1(){
  const [hint,setHint]=useState<SceneHint|null>(null),[command,setCommand]=useState<SceneCommand|null>(null);
  const [reply,setReply]=useState<{id:string;text:string;token:number}|null>(null),[notice,setNotice]=useState('');
  const [reviewStep,setReviewStep]=useState(0);
+ const [learningControls,setLearningControls]=useState(false),[guideReplay,setGuideReplay]=useState(0);
  const reviewFrameSize=useRef<SceneViewport['frame']|null>(null);
  const [contextStep,setContextStep]=useState(collectorEntry?1:0),[contextSeen,setContextSeen]=useState(false);
  const [contextLooking,setContextLooking]=useState(collectorEntry),[contextTurn,setContextTurn]=useState(0);
@@ -201,7 +203,7 @@ export function ZanhuaThreeActGameV1(){
   return true;
  }
  function inspect(id:string){
-  if(blocked||figureStudy)return;
+  if(blocked||figureStudy||learningControls)return;
   if(id==='P3'||id==='fan-maid'){
    openMaidScene(id==='fan-maid');
    return;
@@ -389,7 +391,7 @@ export function ZanhuaThreeActGameV1(){
  const review=zanhuaReviewShots[reviewStep];
  const reviewFinished=reviewStep===zanhuaReviewShots.length-1;
  return <main data-chapter-preview={initialPhase!=='intro'&&phase!=='intro'?'':undefined} style={{'--zanhua-dog-note-left':`${dogNoteLeft}px`,'--zanhua-dog-note-width':`${dogNoteWidth}px`} as CSSProperties} className={`immersive-game lantern-game zanhua-preview ${ready?'scene-loaded':''} ${phase==='found'||phase==='clue'||observing?'is-near-view':''} ${overlay==='journal'?'is-journal-open':''} ${index===0&&(observing||phase==='clue')?'is-dog-study':''} ${observing&&phase!=='animate'?'is-story-reading':''} ${phase==='context'?'is-context-reading':''} ${phase==='context'||phase==='clue'?'is-stable-reading':''} ${phase==='complete'?'is-ending is-scroll-review':''} ${phase==='animate'||maidPlaying?'is-figure-motion':''} ${maidScene?'is-maid-scene':''}`} aria-label="簪花仕女圖 · 畫中尋人">
-  <ScrollScene image={zanhuaImage} artworkSize={zanhuaSize} actors={figureStudy?[]:[...zanhuaPeople,...zanhuaSpots.map(s=>s.actor)]} hitResolver={resolveZanhuaHit} active={phase!=='intro'} blocked={blocked}
+  <ScrollScene image={zanhuaImage} artworkSize={zanhuaSize} actors={figureStudy||learningControls?[]:[...zanhuaPeople,...zanhuaSpots.map(s=>s.actor)]} hitResolver={resolveZanhuaHit} active={phase!=='intro'} blocked={blocked}
    resetKey={reset} hint={hint} command={command} studyCommand={studyCamera} onInspect={inspect} onReady={setReady}
    onExplore={()=>setReply(null)} onMiss={()=>{setReply(null);if(phase==='observe')setNotice(observationPrompt.replace('\n',''));else if(phase==='context'&&!contextSeen)setNotice(index<2?context.prompt:context.action);}}
    initialRegion={{x:initialPhase==='intro'||initialPhase==='search'?0:actor.x,y:.5}} initialFocus={{x:.5,y:.5}}
@@ -413,7 +415,7 @@ export function ZanhuaThreeActGameV1(){
     {phase!=='free'&&<section className="lantern-target" aria-label="本次人物提示"><button className="lantern-face-reference" aria-label="放大人物樣貌" onClick={help}><img className="lantern-face-illustration" src={step.portrait} alt={`${step.appearance}（樣貌摹繪，原畫為準）`}/></button>
      <div><p className="lantern-eyebrow">尋人 · {String(index+1).padStart(2,'0')} / 03</p><h1>尋找這張面孔</h1><p className="lantern-trail">{step.appearance}</p><p className="lantern-progress">已尋得 {index} / 3 位</p></div>
     </section>}
-    <div className="lantern-tools"><button className="lantern-mode" aria-pressed={focusing} onClick={()=>setFocusing(v=>!v)}>{focusing?'轉回彩色':'凝神觀察'}</button><button className="round-control" aria-busy={sound.state==='loading'} aria-label={soundLabel} aria-pressed={sound.state==='on'} onClick={()=>void sound.toggle()}>{sound.state==='on'?<Volume2 size={19}/>:<VolumeX size={19}/>}</button><button className="round-control" aria-label="切換全螢幕" onClick={fullScreen}><Maximize size={18}/></button><button className="round-control" aria-label="畫卷操作" onClick={()=>setOverlay('menu')}><MoreHorizontal size={20}/></button></div>
+    <div className="lantern-tools"><button className="lantern-mode" data-tip="凝神／彩色 · F" aria-pressed={focusing} onClick={()=>setFocusing(v=>!v)}>{focusing?'轉回彩色':'凝神觀察'}</button><button className="round-control" data-tip="本章音樂" aria-busy={sound.state==='loading'} aria-label={soundLabel} aria-pressed={sound.state==='on'} onClick={()=>void sound.toggle()}>{sound.state==='on'?<Volume2 size={19}/>:<VolumeX size={19}/>}</button><button className="round-control" data-tip="全螢幕" aria-label="切換全螢幕" onClick={fullScreen}><Maximize size={18}/></button><button className="round-control" data-tip="畫卷操作" aria-label="畫卷操作" onClick={()=>setOverlay('menu')}><MoreHorizontal size={20}/></button></div>
    </header>
    <footer className="lantern-footer" inert={blocked} hidden={phase==='seal'}>
     <button ref={book} className={`lantern-quiet-button lantern-journal-button ${collection.receiving?'is-spark-arriving':''}`} onClick={openJournal}><BookOpen size={18}/>見聞冊 <span>{Object.keys(origins).length}／4</span></button>
@@ -498,8 +500,9 @@ export function ZanhuaThreeActGameV1(){
    <p className="lantern-eyebrow">展卷細看</p><h2>畫卷操作</h2>
    <div className="lantern-menu-controls">{(['out','in','overview'] as const).map((type,n)=><button className="small-button" key={type} onClick={()=>{setOverlay(null);setCommand({type,token:++token.current});}}>{['縮小 −','放大 ＋','回到卷左'][n]}</button>)}</div>
    <dl className="zanhua-controls-guide"><div><dt>移動畫卷</dt><dd>按住畫面拖曳</dd></div><div><dt>遠近細看</dt><dd>滾輪、雙指或 ＋／−</dd></div><div><dt>凝神觀察</dt><dd>按 F 切換彩色與凝神</dd></div></dl>
-   <div className="zanhua-menu-links"><button className="lantern-text-button" onClick={()=>setOverlay('about')}>畫作小記 →</button><button className="lantern-text-button" onClick={returnToCover}>回到本章封面 →</button></div>
+   <div className="zanhua-menu-links"><button className="lantern-text-button" onClick={()=>{setOverlay(null);setGuideReplay(v=>v+1);}}>重看操作教學 →</button><button className="lantern-text-button" onClick={()=>setOverlay('about')}>畫作小記 →</button><button className="lantern-text-button" onClick={returnToCover}>回到本章封面 →</button></div>
    <button className="lantern-text-button zanhua-menu-restart" onClick={restart}>重新尋人</button>
   </ChapterDialog>}
+  <ZanhuaPlayGuide searching={phase==='search'} studying={phase==='context'&&!figureStudy} hasDog={Boolean(origins.dog)} found={phase==='found'||index>0} blocked={blocked||figureStudy} journalOpen={overlay==='journal'} viewport={viewport} focusing={focusing} setFocusing={setFocusing} onHold={setLearningControls} replay={guideReplay}/>
  </main>;
 }

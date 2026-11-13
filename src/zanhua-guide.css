@@ -1,0 +1,11 @@
+.zanhua-play-guide{position:absolute;z-index:24;left:50%;bottom:106px;transform:translateX(-50%);box-sizing:border-box;width:min(490px,calc(100% - 40px));padding:15px 24px;background:url('/art/ui/lantern-silk-note-v1.png') center/112% 126% no-repeat;color:#414735;box-shadow:0 5px 22px #28281920;font-family:'LXGW WenKai TC',serif;}
+.zanhua-play-guide .lantern-eyebrow{font-size:12px;margin:0 0 4px;}
+.zanhua-play-guide h2{font-size:20px;line-height:1.5;font-weight:500;margin:0 0 5px;}
+.zanhua-play-guide p,.zanhua-play-guide li{font-size:15px;line-height:1.7;margin:0;}
+.zanhua-play-guide ul{padding-left:20px;margin:8px 0;}
+.zanhua-play-guide button{display:block;margin:7px 0 0 auto;padding:3px 0;background:none;border:0;border-bottom:1px solid #7a785f66;color:inherit;font:inherit;font-size:14px;cursor:pointer;}
+.zanhua-preview[data-guide-step='focus'] .lantern-mode,.zanhua-preview[data-guide-step='journal'] .lantern-journal-button{outline:2px solid #b08c4f;outline-offset:5px;}
+.zanhua-preview .lantern-tools button[data-tip]{position:relative;}
+.zanhua-preview .lantern-tools button[data-tip]::after{content:attr(data-tip);position:absolute;top:calc(100% + 10px);right:0;white-space:nowrap;padding:7px 12px;background:#eee6d2;color:#414735;font:15px 'LXGW WenKai TC',serif;opacity:0;pointer-events:none;box-shadow:0 3px 10px #2222;}
+.zanhua-preview .lantern-tools button[data-tip]:hover::after,.zanhua-preview .lantern-tools button[data-tip]:focus-visible::after{opacity:1;}
+@media(max-width:650px){.zanhua-play-guide{bottom:125px;padding:12px 18px;width:calc(100% - 30px);}.zanhua-play-guide h2{font-size:18px;}.zanhua-play-guide p,.zanhua-play-guide li{font-size:14px;}}
