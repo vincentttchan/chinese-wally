@@ -1,7 +1,7 @@
 import {useEffect,useRef} from 'react';
 import {assetPath} from '../game/assets.ts';
 import {zanhuaImage} from '../game/zanhuaPreview.ts';
-import {maidMotionDuration,maidMotionPose,maidFanPoint,maidSkinChannels} from '../game/zanhuaMaidMotionV2.ts';
+import {maidMotionDuration,maidMotionPose,maidFanPoint,maidSkinChannels} from '../game/zanhuaMaidMotionV3.ts';
 import type {SceneViewport} from './ScrollScene.tsx';
 
 const patch={x:3480,y:360,width:710,height:1018},pad=96;
