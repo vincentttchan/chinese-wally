@@ -448,7 +448,3 @@
 .zanhua-context-whisper{font-size:14px;line-height:1.65;color:#72715b;margin:0 0 8px;}
 
 /* A separate illustrated performance, independent of the scroll's pigments and camera. */
-.zanhua-maid-performance{position:absolute;inset:0;z-index:18;overflow:hidden;background:#eee6d4 url('/art/ui/reading-paper.png') center/cover no-repeat;pointer-events:none;}
-.zanhua-maid-standee{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);max-width:none;}
-.zanhua-maid-performance-label{position:absolute;left:28px;top:22px;margin:0;color:#64694f;font:16px 'LXGW WenKai TC',serif;letter-spacing:.15em;}
-.zanhua-maid-performance-caption{position:absolute;left:28px;bottom:24px;margin:0;color:#77765f;font:13px 'LXGW WenKai TC',serif;}
