@@ -11,7 +11,7 @@ import {ZanhuaMaidAnimation} from './ZanhuaMaidAnimation.tsx';
 import {useCallback,useEffect,useLayoutEffect,useRef,useState} from 'react';
 import type {CSSProperties} from 'react';
 import {ScrollScene} from './ScrollScene.tsx';
-import {ZanhuaPlayGuide} from './ZanhuaPlayGuide.tsx';
+import {ZanhuaPlayGuide,useZanhuaPlayGuide} from './ZanhuaPlayGuide.tsx';
 import type {SceneCommand,SceneHint,SceneViewport,StudyCommand} from './ScrollScene.tsx';
 import type {SceneActor} from '../game/level.ts';
 import {LanternEmperorSpeech} from './LanternEmperorSpeech.tsx';
@@ -64,7 +64,6 @@ export function ZanhuaThreeActGameV1(){
  const [hint,setHint]=useState<SceneHint|null>(null),[command,setCommand]=useState<SceneCommand|null>(null);
  const [reply,setReply]=useState<{id:string;text:string;token:number}|null>(null),[notice,setNotice]=useState('');
  const [reviewStep,setReviewStep]=useState(0);
- const [learningControls,setLearningControls]=useState(false),[guideReplay,setGuideReplay]=useState(0);
  const reviewFrameSize=useRef<SceneViewport['frame']|null>(null);
  const [contextStep,setContextStep]=useState(collectorEntry?1:0),[contextSeen,setContextSeen]=useState(false);
  const [contextLooking,setContextLooking]=useState(collectorEntry),[contextTurn,setContextTurn]=useState(0);
@@ -102,6 +101,7 @@ export function ZanhuaThreeActGameV1(){
  const dialogueText=contextSeen?contextReplies[contextTurn]:conversation.invite;
  const observing=phase==='observe'||phase==='interpret'||phase==='context'||phase==='animate'||phase==='complete';
  const blocked=!ready||busy||phase==='intro'||phase==='found'||phase==='clue'||phase==='animate'||Boolean(overlay)||Boolean(maidScene)||phase==='complete'||phase==='seal';
+ const guide=useZanhuaPlayGuide({searching:phase==='search',studying:phase==='context'&&!figureStudy,hasDog:Boolean(origins.dog),found:phase==='found'||index>0,blocked:blocked||figureStudy,journalOpen:overlay==='journal'});
  const sound=useAmbience(blocked||observing||figureStudy,chapterMusicTracks.zanhua);
  const soundLabel=sound.state==='loading'?'音樂載入中，點擊取消':sound.state==='on'?'關閉音樂':sound.state==='error'?'重試本章音樂':'開啟本章音樂';
  const observationAnchor:SceneActor={...actor,...(phase==='context'?context.focus:step.focus),width:.045,height:.12};
@@ -118,7 +118,7 @@ export function ZanhuaThreeActGameV1(){
  useEffect(()=>{if(!reply)return;const id=setTimeout(()=>setReply(null),5500);return()=>clearTimeout(id);},[reply]);
  useEffect(()=>{if(!notice)return;const id=setTimeout(()=>setNotice(''),3000);return()=>clearTimeout(id);},[notice]);
  useEffect(()=>{if((phase==='observe'||phase==='context'&&contextLooking&&!contextSeen)&&!busy&&!maidScene)actionRef.current?.focus({preventScroll:true});else if(observing&&!busy)noteRef.current?.focus({preventScroll:true});},[phase,busy,contextSeen,contextStep,maidScene]);
- useEffect(()=>{const handle=(event:KeyboardEvent)=>{if(overlay||phase==='intro'||phase==='animate'||phase==='seal'||event.ctrlKey||event.metaKey||event.altKey)return;if(maidScene){if(event.key==='Escape')closeMaidScene();return;}if(event.key.toLowerCase()==='f'){event.preventDefault();setFocusing(v=>!v);}if(event.key==='Escape')setReply(null);};window.addEventListener('keydown',handle);return()=>window.removeEventListener('keydown',handle);},[overlay,phase,maidScene,viewport]);
+ useEffect(()=>{const handle=(event:KeyboardEvent)=>{if(guide.active||overlay||phase==='intro'||phase==='animate'||phase==='seal'||event.ctrlKey||event.metaKey||event.altKey)return;if(maidScene){if(event.key==='Escape')closeMaidScene();return;}if(event.key.toLowerCase()==='f'){event.preventDefault();setFocusing(v=>!v);}if(event.key==='Escape')setReply(null);};window.addEventListener('keydown',handle);return()=>window.removeEventListener('keydown',handle);},[overlay,phase,maidScene,viewport,guide.active]);
  useEffect(()=>{if(!ready||snapshot.current)return;snapshot.current=true;if(initialPhase==='complete'){openEnding();}else if(collectorEntry){setFocusing(false);frameContext(1);}else if(initialPhase==='observe'||initialPhase==='interpret'){setFocusing(false);if(initialPhase==='interpret')frameSpeaker();else frameObservation();}},[ready]);
  useEffect(()=>{
   const previous=reviewFrameSize.current,{frame}=viewport;
@@ -176,6 +176,7 @@ export function ZanhuaThreeActGameV1(){
  // Physical observation taps share ScrollScene's drag/pinch threshold and coordinates.
  function activateObservation(world:{x:number;y:number}){
   if(blocked)return false;
+  if(guide.active&&guide.active!=='find')return true;
   if(figureStudy){const part=resolveZanhuaStudyHit(index,world,viewport,studyAnchor??viewport,studyScope);if(part)setStudyPart(part);return true;}
   if(phase==='free'){
    for(const which of [0,1,2])if(resolveZanhuaStudyHit(which,world)){setIndex(which);openFigureStudy(which);return true;}
@@ -203,7 +204,8 @@ export function ZanhuaThreeActGameV1(){
   return true;
  }
  function inspect(id:string){
-  if(blocked||figureStudy||learningControls)return;
+  if(blocked||figureStudy)return;
+  if(guide.active&&(guide.active!=='find'||id!==step.id))return;
   if(id==='P3'||id==='fan-maid'){
    openMaidScene(id==='fan-maid');
    return;
@@ -390,8 +392,8 @@ export function ZanhuaThreeActGameV1(){
  const observationAction=index===1?'點擊透得出肩臂輪廓的衣料':step.action;
  const review=zanhuaReviewShots[reviewStep];
  const reviewFinished=reviewStep===zanhuaReviewShots.length-1;
- return <main data-chapter-preview={initialPhase!=='intro'&&phase!=='intro'?'':undefined} style={{'--zanhua-dog-note-left':`${dogNoteLeft}px`,'--zanhua-dog-note-width':`${dogNoteWidth}px`} as CSSProperties} className={`immersive-game lantern-game zanhua-preview ${ready?'scene-loaded':''} ${phase==='found'||phase==='clue'||observing?'is-near-view':''} ${overlay==='journal'?'is-journal-open':''} ${index===0&&(observing||phase==='clue')?'is-dog-study':''} ${observing&&phase!=='animate'?'is-story-reading':''} ${phase==='context'?'is-context-reading':''} ${phase==='context'||phase==='clue'?'is-stable-reading':''} ${phase==='complete'?'is-ending is-scroll-review':''} ${phase==='animate'||maidPlaying?'is-figure-motion':''} ${maidScene?'is-maid-scene':''}`} aria-label="簪花仕女圖 · 畫中尋人">
-  <ScrollScene image={zanhuaImage} artworkSize={zanhuaSize} actors={figureStudy||learningControls?[]:[...zanhuaPeople,...zanhuaSpots.map(s=>s.actor)]} hitResolver={resolveZanhuaHit} active={phase!=='intro'} blocked={blocked}
+ return <main data-guide-step={guide.active??undefined} data-chapter-preview={initialPhase!=='intro'&&phase!=='intro'?'':undefined} style={{'--zanhua-dog-note-left':`${dogNoteLeft}px`,'--zanhua-dog-note-width':`${dogNoteWidth}px`} as CSSProperties} className={`immersive-game lantern-game zanhua-preview ${ready?'scene-loaded':''} ${phase==='found'||phase==='clue'||observing?'is-near-view':''} ${overlay==='journal'?'is-journal-open':''} ${index===0&&(observing||phase==='clue')?'is-dog-study':''} ${observing&&phase!=='animate'?'is-story-reading':''} ${phase==='context'?'is-context-reading':''} ${phase==='context'||phase==='clue'?'is-stable-reading':''} ${phase==='complete'?'is-ending is-scroll-review':''} ${phase==='animate'||maidPlaying?'is-figure-motion':''} ${maidScene?'is-maid-scene':''}`} aria-label="簪花仕女圖 · 畫中尋人">
+  <ScrollScene image={zanhuaImage} artworkSize={zanhuaSize} actors={figureStudy?[]:guide.active?guide.active==='find'?[actor]:[]:[...zanhuaPeople,...zanhuaSpots.map(s=>s.actor)]} hitResolver={resolveZanhuaHit} active={phase!=='intro'} blocked={blocked||guide.active==='journal'||guide.active==='review'}
    resetKey={reset} hint={hint} command={command} studyCommand={studyCamera} onInspect={inspect} onReady={setReady}
    onExplore={()=>setReply(null)} onMiss={()=>{setReply(null);if(phase==='observe')setNotice(observationPrompt.replace('\n',''));else if(phase==='context'&&!contextSeen)setNotice(index<2?context.prompt:context.action);}}
    initialRegion={{x:initialPhase==='intro'||initialPhase==='search'?0:actor.x,y:.5}} initialFocus={{x:.5,y:.5}}
@@ -411,18 +413,19 @@ export function ZanhuaThreeActGameV1(){
    </section>}
   </>:<>
 
-   <header className="lantern-hud" inert={blocked} hidden={phase==='seal'}>
-    {phase!=='free'&&<section className="lantern-target" aria-label="本次人物提示"><button className="lantern-face-reference" aria-label="放大人物樣貌" onClick={help}><img className="lantern-face-illustration" src={step.portrait} alt={`${step.appearance}（樣貌摹繪，原畫為準）`}/></button>
-     <div><p className="lantern-eyebrow">尋人 · {String(index+1).padStart(2,'0')} / 03</p><h1>尋找這張面孔</h1><p className="lantern-trail">{step.appearance}</p><p className="lantern-progress">已尋得 {index} / 3 位</p></div>
+   {(!guide.active||guide.active==='find')&&<header className="lantern-hud" inert={blocked} hidden={phase==='seal'}>
+    {phase!=='free'&&<section className="lantern-target" aria-label="本次人物提示">{guide.active==='find'?<span className="lantern-face-reference"><img className="lantern-face-illustration" src={step.portrait} alt={step.appearance}/></span>:<button className="lantern-face-reference" aria-label="放大人物樣貌" onClick={help}><img className="lantern-face-illustration" src={step.portrait} alt={`${step.appearance}（樣貌摹繪，原畫為準）`}/></button>}
+     <div><p className="lantern-eyebrow">尋人 · {String(index+1).padStart(2,'0')} / 03</p><h1>尋找這張面孔</h1><p className="lantern-trail">{step.appearance}</p>{guide.active==='find'?<p className="zanhua-guide-find-line">照着樣貌，在畫中找到她。</p>:<p className="lantern-progress">已尋得 {index} / 3 位</p>}</div>
     </section>}
-    <div className="lantern-tools"><button className="lantern-mode" data-tip="凝神／彩色 · F" aria-pressed={focusing} onClick={()=>setFocusing(v=>!v)}>{focusing?'轉回彩色':'凝神觀察'}</button><button className="round-control" data-tip="本章音樂" aria-busy={sound.state==='loading'} aria-label={soundLabel} aria-pressed={sound.state==='on'} onClick={()=>void sound.toggle()}>{sound.state==='on'?<Volume2 size={19}/>:<VolumeX size={19}/>}</button><button className="round-control" data-tip="全螢幕" aria-label="切換全螢幕" onClick={fullScreen}><Maximize size={18}/></button><button className="round-control" data-tip="畫卷操作" aria-label="畫卷操作" onClick={()=>setOverlay('menu')}><MoreHorizontal size={20}/></button></div>
-   </header>
-   <footer className="lantern-footer" inert={blocked} hidden={phase==='seal'}>
+    {!guide.active&&<div className="lantern-tools"><button className="lantern-mode" data-tip="凝神／彩色 · F" aria-pressed={focusing} onClick={()=>setFocusing(v=>!v)}>{focusing?'轉回彩色':'凝神觀察'}</button><button className="round-control" data-tip="本章音樂" aria-busy={sound.state==='loading'} aria-label={soundLabel} aria-pressed={sound.state==='on'} onClick={()=>void sound.toggle()}>{sound.state==='on'?<Volume2 size={19}/>:<VolumeX size={19}/>}</button><button className="round-control" data-tip="全螢幕" aria-label="切換全螢幕" onClick={fullScreen}><Maximize size={18}/></button><button className="round-control" data-tip="畫卷操作" aria-label="畫卷操作" onClick={()=>setOverlay('menu')}><MoreHorizontal size={20}/></button></div>}
+   </header>}
+   {(!guide.active||guide.active==='journal')&&<footer className="lantern-footer" inert={blocked} hidden={phase==='seal'}>
     <button ref={book} className={`lantern-quiet-button lantern-journal-button ${collection.receiving?'is-spark-arriving':''}`} onClick={openJournal}><BookOpen size={18}/>見聞冊 <span>{Object.keys(origins).length}／4</span></button>
-    <LanternNavigator image={zanhuaImage} stops={stops} window={scrollWindow} onNavigate={x=>setHint({region:{x,y:.5},token:++token.current})}/>
-    <button className="lantern-quiet-button" onClick={phase==='free'?openEnding:help}><CircleHelp size={18}/>{phase==='free'?'回看發現':'給我提示'}</button>
-   </footer>
+    {!guide.active&&<><LanternNavigator image={zanhuaImage} stops={stops} window={scrollWindow} onNavigate={x=>setHint({region:{x,y:.5},token:++token.current})}/>
+    <button className="lantern-quiet-button" onClick={phase==='free'?openEnding:help}><CircleHelp size={18}/>{phase==='free'?'回看發現':'給我提示'}</button></>}
+   </footer>}
   </>}
+  {!guide.active&&<>
   {(phase==='found'||phase==='clue')&&!busy&&!overlay&&!figureStudy&&!maidScene&&<LanternEmperorSpeech stablePlacement trapFocus={false} actor={actor} people={zanhuaPeople} artworkSize={zanhuaSize} viewport={viewport} speakerLabel="畫中女子的遊戲虛構對白" extraWidth={28}
    speechGeometry={{openSpaceCandidates:true,maxWidth:310,reservedRects:speechSpace(),anchor:phase==='clue'?speakingAnchor(step.id):zanhuaMouths[step.id],faces:Object.values(zanhuaMouths),heads:zanhuaHeads}}
    narration={phase==='clue'&&!mouthVisible(step.id)} caption={phase==='clue'?`${actor.name} · 遊戲對白`:undefined} text={phase==='found'?storyDialogue.found:storyDialogue.clue} progress={phase==='found'?index+1:undefined} progressText={`尋得第${['一','二','三'][index]}位女子`} actionLabel={phase==='found'?step.near:index===2?'看看她們的生活':'循線索找下一位'} onContinue={phase==='found'?near:advance}/>}
@@ -500,9 +503,10 @@ export function ZanhuaThreeActGameV1(){
    <p className="lantern-eyebrow">展卷細看</p><h2>畫卷操作</h2>
    <div className="lantern-menu-controls">{(['out','in','overview'] as const).map((type,n)=><button className="small-button" key={type} onClick={()=>{setOverlay(null);setCommand({type,token:++token.current});}}>{['縮小 −','放大 ＋','回到卷左'][n]}</button>)}</div>
    <dl className="zanhua-controls-guide"><div><dt>移動畫卷</dt><dd>按住畫面拖曳</dd></div><div><dt>遠近細看</dt><dd>滾輪、雙指或 ＋／−</dd></div><div><dt>凝神觀察</dt><dd>按 F 切換彩色與凝神</dd></div></dl>
-   <div className="zanhua-menu-links"><button className="lantern-text-button" onClick={()=>{setOverlay(null);setGuideReplay(v=>v+1);}}>重看操作教學 →</button><button className="lantern-text-button" onClick={()=>setOverlay('about')}>畫作小記 →</button><button className="lantern-text-button" onClick={returnToCover}>回到本章封面 →</button></div>
+   <div className="zanhua-menu-links"><button className="lantern-text-button" onClick={()=>{setOverlay(null);guide.replay();}}>重看操作教學 →</button><button className="lantern-text-button" onClick={()=>setOverlay('about')}>畫作小記 →</button><button className="lantern-text-button" onClick={returnToCover}>回到本章封面 →</button></div>
    <button className="lantern-text-button zanhua-menu-restart" onClick={restart}>重新尋人</button>
   </ChapterDialog>}
-  <ZanhuaPlayGuide searching={phase==='search'} studying={phase==='context'&&!figureStudy} hasDog={Boolean(origins.dog)} found={phase==='found'||index>0} blocked={blocked||figureStudy} journalOpen={overlay==='journal'} viewport={viewport} focusing={focusing} setFocusing={setFocusing} onHold={setLearningControls} replay={guideReplay}/>
+  </>}
+  <ZanhuaPlayGuide guide={guide} viewport={viewport} setFocusing={setFocusing}/>
  </main>;
 }
