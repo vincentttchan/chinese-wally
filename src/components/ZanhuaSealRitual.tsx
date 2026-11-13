@@ -42,7 +42,7 @@ export function ZanhuaPlayerSeal({viewport,text,pressing=false}:{viewport:SceneV
  return <div className={`zanhua-player-seal${pressing?' is-revealing':''}`} style={{left:view.x+s.x*view.scale-size/2,top:view.y+s.y*view.scale-size/2,width:size,height:size}} role="img" aria-label={`我的觀畫紀念印：${text}（遊戲新增）`}><SealFace text={text}/></div>;
 }
 
-export function ZanhuaSealRitual({viewport,busy,seal,onStamp,onExplore,onCover,coverLabel="回到本章封面"}:{viewport:SceneViewport;busy:boolean;seal:string|null;onStamp:(text:string)=>void;onExplore:()=>void;onCover:()=>void;coverLabel?:string}){
+export function ZanhuaSealRitual({viewport,busy,seal,onStamp,onExplore,onCover,onSkip,coverLabel="回到本章封面"}:{viewport:SceneViewport;busy:boolean;seal:string|null;onStamp:(text:string)=>void;onExplore:()=>void;onCover:()=>void;onSkip?:()=>void;coverLabel?:string}){
  const [draft,setDraft]=useState('觀畫留記'),[pressed,setPressed]=useState<string|null>(null);
  const [artReady,setArtReady]=useState(false),[artFailed,setArtFailed]=useState(false),[artAttempt,setArtAttempt]=useState(0);
  const root=useRef<HTMLDivElement>(null),target=useRef<HTMLButtonElement>(null),next=useRef<HTMLButtonElement>(null);
@@ -84,6 +84,7 @@ export function ZanhuaSealRitual({viewport,busy,seal,onStamp,onExplore,onCover,c
    {!done&&<p className="lantern-note-caption">印位在左方朱印虛影處，輕點即可落印。</p>}
    <a className="zanhua-seal-font-credit" href="https://xiaoxue.iis.sinica.edu.tw/chongxi/" target="_blank" rel="noreferrer">篆字：崇羲篆體 · 王心怡等製作</a>
    {artFailed?<button className="lantern-note-next" onClick={()=>setArtAttempt(value=>value+1)}>重新備印<ArrowRight size={18}/></button>:done?<div className="zanhua-seal-actions"><button ref={next} className="lantern-note-next" onClick={onCover}>{coverLabel}<ArrowRight size={18}/></button><button className="lantern-return-link" onClick={onExplore}>留在畫中自由探索<ArrowRight size={17}/></button></div>:<button className="lantern-note-next" disabled={waiting||pressing||invalid} onClick={()=>setPressed(text)}>{waiting?'正在備印':pressing?'正在落印':'蓋下我的印章'}<ArrowRight size={18}/></button>}
+   {!done&&onSkip&&!pressing&&<button className="lantern-return-link" disabled={busy} onClick={onSkip}>暫不留印，返回畫坊</button>}
   </section>
  </div>;
 }

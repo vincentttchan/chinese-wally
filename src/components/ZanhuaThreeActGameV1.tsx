@@ -106,6 +106,7 @@ export function ZanhuaThreeActGameV1(){
  const soundLabel=sound.state==='loading'?'音樂載入中，點擊取消':sound.state==='on'?'關閉音樂':sound.state==='error'?'重試本章音樂':'開啟本章音樂';
  const observationAnchor:SceneActor={...actor,...(phase==='context'?context.focus:step.focus),width:.045,height:.12};
  const closeOverlay=()=>{if(overlay==='journal')closeJournal();else setOverlay(null);};
+ useEffect(()=>{const handle=(event:MessageEvent)=>{if(event.origin===location.origin&&event.source===window.parent&&event.data?.type==='study-fullscreen-return-error')setNotice('請先按 Esc 離開全螢幕，再返回畫坊。');};window.addEventListener('message',handle);return()=>window.removeEventListener('message',handle);},[]);
  useEffect(()=>{const previous=document.title;document.title='簪花仕女圖 · 畫中尋人';return()=>{document.title=previous;};},[]);
  useLayoutEffect(()=>{
   const note=noteRef.current??((phase==='context'||phase==='interpret')?document.querySelector<HTMLElement>('.zanhua-preview .lantern-emperor-speech'):null);
@@ -361,7 +362,8 @@ export function ZanhuaThreeActGameV1(){
   setReply(null);setFocusing(false);setConfirmation(null);setDetail(null);setPhase('complete');
   frameReview(0);
  }
- function returnPaintingToRoom(){
+ async function returnPaintingToRoom(){
+  if(document.fullscreenElement){try{await document.exitFullscreen();}catch{setNotice('請先按 Esc 離開全螢幕，再返回畫坊。');return;}}
   if(playerSeal){
    try{localStorage.setItem('chinese-wally:atelier:zanhua-seal:v1',playerSeal);}catch{}
   }
@@ -474,15 +476,14 @@ export function ZanhuaThreeActGameV1(){
     label={`畫中回望 · ${reviewStep+1}／${zanhuaReviewShots.length}`} title={review.title} busy={busy}>
     <p className="lantern-note-body" aria-live="polite">{review.body}</p>
     <nav aria-label="回望畫卷">
-     <button className="lantern-note-next" disabled={busy} onClick={()=>reviewFinished?returnPaintingToRoom():frameReview(reviewStep+1)}>
-      {reviewFinished?'讀畢此卷':'再望一處'} <span aria-hidden="true">→</span>
+     <button className="lantern-note-next" disabled={busy} onClick={()=>reviewFinished?beginSeal():frameReview(reviewStep+1)}>
+      {reviewFinished?'留印紀念':'再望一處'} <span aria-hidden="true">→</span>
      </button>
-     {reviewFinished&&<button className="lantern-text-button zanhua-review-seal" disabled={busy} onClick={beginSeal}>留印紀念</button>}
     </nav>
    </LanternPaintingNote>
   </div>}
   {playerSeal&&<ZanhuaPlayerSeal viewport={viewport} text={playerSeal}/>}
-  {phase==='seal'&&<ZanhuaSealRitual viewport={viewport} busy={busy} seal={playerSeal} onStamp={setPlayerSeal} onCover={returnPaintingToRoom} coverLabel="返回畫坊" onExplore={()=>{setPhase('free');setFocusing(false);}}/>}
+  {phase==='seal'&&<ZanhuaSealRitual viewport={viewport} busy={busy} seal={playerSeal} onStamp={setPlayerSeal} onCover={returnPaintingToRoom} onSkip={returnPaintingToRoom} coverLabel="返回畫坊" onExplore={()=>{setPhase('free');setFocusing(false);}}/>}
   {collection.flight&&<LanternSparkDiscovery key={collection.flight.token} artwork={zanhuaCollectionItems[collection.flight.category]} discovery={{token:collection.flight.token,newlyCollected:true,findingId:collection.flight.category,source:{x:collection.flight.x,y:collection.flight.y},destination:{x:collection.flight.x+collection.flight.dx,y:collection.flight.y+collection.flight.dy},frame:viewport.frame}} onDone={collection.settle}/>}
   {(notice||sound.state==='error')&&!overlay&&<LanternNotice key={notice||sound.state} quiet text={notice||'音樂未能載入，可再次點擊音樂開關重試。'}/>}
   {overlay==='journal'&&<LanternJournal spread findings={findings} edition={zanhuaJournalEdition} collected={Object.keys(origins)} sessionOnly={!storageAvailable} compact={viewport.frame.width<760} onClose={closeJournal}
