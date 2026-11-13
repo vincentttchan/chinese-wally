@@ -1,3 +1,4 @@
+import {zanhuaHeadObservationShot} from '../game/zanhuaHeadObservation.ts';
 import {assetPath} from '../game/assets.ts';
 import {zanhuaMountingSeals,zanhuaPlayerSeal,zanhuaCollectorSeals,resolveZanhuaCollectorSeal} from '../game/zanhuaSeal.ts';
 import {ZanhuaThreeActEntryV1} from './ZanhuaThreeActEntryV1.tsx';
@@ -256,12 +257,18 @@ export function ZanhuaThreeActGameV1(){
   }});
  }
 
+ function frameHeadObservation(){
+  const shot=zanhuaHeadObservationShot(viewport.frame);
+  pan(shot.region,false,undefined,shot.screenAnchor,shot.scaleRatio,shot.allowHorizontalMargin,shot.allowVerticalMargin);
+ }
  function frameObservation(which=index){
+  if(which===2){frameHeadObservation();return;}
   pan(zanhuaSteps[which].focus);
  }
  function near(){if(busy||phase!=='found')return;setConfirmation(null);setFocusing(false);setPhase('observe');frameObservation();}
  function continueStory(){if(busy||phase!=='context'||!contextSeen)return;setDetail(null);setConfirmation(null);setPhase('clue');}
  function frameContext(which:number){
+  if(index===2&&which===0){frameHeadObservation();return;}
   const current=zanhuaContext[index][which];
   if(index===0&&which===1&&viewport.frame.width<700){
    // The shoulder needs to land below the original-painting clue on narrow screens.
