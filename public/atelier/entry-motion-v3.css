@@ -1,0 +1,33 @@
+.opening.entering-hall .art,
+.opening.is-approaching-desk .art {
+  clip-path: inset(0 -6.279905%);
+}
+.opening.entering-hall .art::after {
+  transition: none;
+}
+.opening.entering-hall .hall {
+  visibility: visible;
+  opacity: 1;
+}
+.opening.entering-hall .threshold-camera {
+  z-index: 1;
+}
+.opening.entering-hall .threshold-camera::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 2.1% 4% at 41.9% 33%, #ffe3a88a, #ffc46531 75%, transparent 100%);
+  pointer-events: none;
+}
+.opening.is-approaching-desk .desk-composition {
+  visibility: visible;
+  opacity: 0;
+}
+.desk-transition-focus {
+  position: absolute;
+  inset: 0 -6.279905%;
+  opacity: var(--desk-focus-opacity, 0);
+  -webkit-backdrop-filter: blur(var(--desk-defocus, 0px));
+  backdrop-filter: blur(var(--desk-defocus, 0px));
+  mask-image: radial-gradient(ellipse 39% 32% at 50% 73.1%, transparent 54%, #000 100%);
+}
