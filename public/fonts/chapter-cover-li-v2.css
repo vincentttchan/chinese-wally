@@ -1,0 +1,19 @@
+/* 教育部隸書 3.0 © 中華民國教育部。CC BY-ND 3.0 TW。詳見 MoeLI-credits.md。 */
+@font-face {
+  font-family: "MOE Li";
+  src: url("MoeLI-3.0.ttf") format("truetype");
+  font-display: swap;
+}
+
+.introduction:where(.zanhua-entry-cover-v1, .lantern-entry-cover-v1, .luoshen-entry-cover-v1, #introduction) .intro-title > h1 {
+  font-family: "MOE Li", "Noto Serif TC", "Songti TC", PMingLiU, serif;
+  letter-spacing: .12em;
+}
+
+#introduction.introduction .intro-title > h1 {
+  letter-spacing: .06em;
+}
+
+.luoshen-entry-cover-v1 .intro-title > h1 {
+  letter-spacing: .16em;
+}
