@@ -22,3 +22,21 @@
 | 洛水之間 | 0.16 em | 「入畫」PNG，無淡紙底 | 「尋人」文字印，無淡紙底 |
 
 兩版首頁和四章封面均可開啟，主標均載入教育部隸書。封存版四章共用同一張 2,932 位元組的崇羲篆體「入畫」PNG。八張封面的實際顯示符合各自的部署紀錄。這次作業只在本機還原及核對，並補記結果。
+
+## GitHub 與正式站核對
+
+2026-11-19（香港）。從 GitHub `main` 分支的 [AGENTS.md「四章封面正式封存」段落](https://github.com/vincentttchan/chinese-wally/blob/00715cc2831eec75493b11dad6550d0cb19e62e3/AGENTS.md#L5-L7) 核對「本機還原紀錄」相對連結。目標頁面可開啟，HTTP 回應為 200。
+
+| 封存標記 | 核對所得提交 |
+| --- | --- |
+| [`site-2026-11-19-four-chapter-covers`](https://github.com/vincentttchan/chinese-wally/tree/site-2026-11-19-four-chapter-covers) | `23a4541646e8ca81b884110af0797c5f1b424a8b` |
+| [`site-2026-11-19-before-cover-ruhua`](https://github.com/vincentttchan/chinese-wally/tree/site-2026-11-19-before-cover-ruhua) | `adbeee1fb9e957a4920d05741d23b065c9835938` |
+
+核對時，[正式站](https://vincentttchan.github.io/chinese-wally/) 使用 GitHub Pages 部署 `7902752761`，狀態為成功，提交為 `23a4541646e8ca81b884110af0797c5f1b424a8b`，與本次封存標記一致。 [部署紀錄](https://github.com/vincentttchan/chinese-wally/actions/runs/44448286370)
+
+以下正式站檔案的大小及 SHA-256 均符合 [封存版逐檔清單](website-file-manifest.json)。
+
+- `index.html`
+- `atelier/index.html`
+- `fonts/chapter-cover-li-v2.css`
+- `fonts/chongxi/cover-seal-ruhua.png`
