@@ -42,3 +42,17 @@
 - `atelier/index.html`
 - `fonts/chapter-cover-li-v2.css`
 - `fonts/chongxi/cover-seal-ruhua.png`
+
+## 正式站重新部署核對
+
+2026-11-19 12:32:02（香港）重新部署成功。GitHub Pages 部署編號為 `7904148319`，使用 `main` 提交 `9db1001`（`9db10017c869a5defe0724676de6b4d6fdb21055`）。 [GitHub Actions 部署紀錄](https://github.com/vincentttchan/chinese-wally/actions/runs/44458812868)
+
+重新部署後從正式網址取回下列七個檔案，SHA-256 均與[封存版逐檔清單](website-file-manifest.json)相符。
+
+- `index.html`
+- `atelier/index.html`
+- `atelier/lantern-dialogue-v2.html`
+- `atelier/kangqu.html`
+- `assets/index-S3FOhSfo.js`
+- `fonts/chapter-cover-li-v2.css`
+- `fonts/chongxi/cover-seal-ruhua.png`
