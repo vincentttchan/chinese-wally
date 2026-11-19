@@ -27,6 +27,8 @@
 
 2026-11-19（香港）。從 GitHub `main` 分支的 [AGENTS.md「四章封面正式封存」段落](https://github.com/vincentttchan/chinese-wally/blob/00715cc2831eec75493b11dad6550d0cb19e62e3/AGENTS.md#L5-L7) 核對「本機還原紀錄」相對連結。目標頁面可開啟，HTTP 回應為 200。
 
+同日核對，封存 Release 與 AGENTS.md 的連結均可開啟更新版紀錄（HTTP 200），兩者都可看到「GitHub 與正式站核對」段落。
+
 | 封存標記 | 核對所得提交 |
 | --- | --- |
 | [`site-2026-11-19-four-chapter-covers`](https://github.com/vincentttchan/chinese-wally/tree/site-2026-11-19-four-chapter-covers) | `23a4541646e8ca81b884110af0797c5f1b424a8b` |
