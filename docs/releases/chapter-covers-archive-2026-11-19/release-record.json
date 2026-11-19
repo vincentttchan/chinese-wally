@@ -1,0 +1,78 @@
+{
+  "archiveDate": "2026-11-19",
+  "timezone": "Asia/Hong_Kong",
+  "recordedAtUTC": "2026-11-19T03:49:57.664094+00:00",
+  "site": "https://vincentttchan.github.io/chinese-wally/",
+  "releaseURL": "https://github.com/vincentttchan/chinese-wally/releases/tag/site-2026-11-19-four-chapter-covers",
+  "current": {
+    "tag": "site-2026-11-19-four-chapter-covers",
+    "deployedCommit": "23a4541646e8ca81b884110af0797c5f1b424a8b",
+    "deploymentId": 7902752761,
+    "deploymentStatusId": 22592736196,
+    "deploymentStatus": "success",
+    "deployedAtUTC": "2026-11-19T03:01:34Z",
+    "actionsRun": 44448286370,
+    "actionsRunURL": "https://github.com/vincentttchan/chinese-wally/actions/runs/44448286370",
+    "artifactId": 14493583887,
+    "artifactName": "github-pages-artifact.zip",
+    "artifactBytes": 701415327,
+    "artifactSHA256": "3630d6c76452b7c85110c8c94ae8d1248f79671c947b158a117c7fa44059764c",
+    "officialDigestMatched": true,
+    "websiteFiles": 866
+  },
+  "previous": {
+    "tag": "site-2026-11-19-before-cover-ruhua",
+    "deployedCommit": "adbeee1fb9e957a4920d05741d23b065c9835938",
+    "deploymentId": 7885749839,
+    "deploymentStatusId": 22530239796,
+    "deploymentStatus": "success",
+    "deployedAtUTC": "2026-11-18T14:14:53Z",
+    "actionsRun": 44321877439,
+    "actionsRunURL": "https://github.com/vincentttchan/chinese-wally/actions/runs/44321877439",
+    "artifactId": 14434952111,
+    "artifactName": "original-github-pages-artifact.zip",
+    "artifactBytes": 701409477,
+    "artifactSHA256": "3ea41648664aafc405f8894e5b70b81d0319f064047b75ef5dadf76fd1e19421",
+    "officialDigestMatched": true,
+    "websiteFiles": 865
+  },
+  "coverSpacingEm": {
+    "zanhua": 0.12,
+    "lantern": 0.12,
+    "kangqu": 0.06,
+    "luoshen": 0.16
+  },
+  "sharedSeal": {
+    "text": "入畫",
+    "typeface": "崇羲篆體",
+    "asset": {
+      "path": "fonts/chongxi/cover-seal-ruhua.png",
+      "bytes": 2932,
+      "sha256": "bd45d5d29e548902e7980ae8fbbee7b98753ba972650d8974f64201ebac5f68c"
+    },
+    "paperBacking": [
+      "lantern"
+    ]
+  },
+  "deploymentDiff": {
+    "added": [
+      "assets/index-S3FOhSfo.js",
+      "fonts/chongxi/cover-seal-ruhua.png"
+    ],
+    "removed": [
+      "assets/index-Du6fNKG6.js"
+    ],
+    "modified": [
+      "atelier/lantern-dialogue-v2.html",
+      "fonts/chapter-cover-li-v2.css",
+      "fonts/chongxi/CREDITS.md",
+      "index.html"
+    ]
+  },
+  "acceptance": {
+    "date": "2026-11-19",
+    "environment": "正式站，Chrome，390 × 844",
+    "observed": "四章共用 2,932 位元組 PNG，封面無完整篆體請求；淡紙底只套用於宮中小印。四章隸書主標字距與確認版一致。",
+    "verifiedUnchanged": "兩份原始部署包內，畫坊首頁 HTML、遊戲共用 CSS 及崇羲篆體原檔的逐檔 SHA-256 一致。"
+  }
+}
