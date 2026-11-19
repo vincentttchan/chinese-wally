@@ -417,7 +417,7 @@ export function ZanhuaThreeActGameV1(){
      <p className="intro-chapter">遼寧省博物館藏 · 絹本設色 · 畫心46×180厘米</p>
      <p className="intro-story">{'這卷絹畫傳為唐代周昉所作，\n留下貴族女子遊賞、盛裝的身影。\n從面孔，找到她們各自的故事。'}</p>
     </div></div><button className="intro-enter" disabled={entryStarted} onClick={()=>setEntryStarted(true)}><span>{entryStarted&&!coverLeaving?'正在展卷':'走進這一卷'}</span><ArrowRight size={23}/></button>
-    </div><div className="intro-title"><h1>簪花仕女圖</h1><span className="intro-seal" aria-hidden="true">尋人</span></div></div>
+    </div><div className="intro-title"><h1>簪花仕女圖</h1><span className="intro-seal" aria-hidden="true">入畫</span></div></div>
     <div className="intro-footer"><p>在原畫中尋找三位女子 · 動作與表情為遊戲演繹</p><ChapterLinks current="zanhua"/></div>
    </section>}
   </>:<>

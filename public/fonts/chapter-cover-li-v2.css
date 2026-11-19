@@ -17,3 +17,18 @@
 .luoshen-entry-cover-v1 .intro-title > h1 {
   letter-spacing: .16em;
 }
+
+/* 「入畫」由崇羲篆體原檔排印。署名與授權見 chongxi/CREDITS.md。 */
+.introduction:where(.zanhua-entry-cover-v1, .lantern-entry-cover-v1, .luoshen-entry-cover-v1, #introduction) .intro-title > .intro-seal {
+  width: 28px;
+  height: 45px;
+  color: transparent;
+  background-image: url("chongxi/cover-seal-ruhua.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 31px;
+}
+
+.lantern-entry-cover-v1[aria-label="宮中鬧元宵封面"] .intro-title > .intro-seal {
+  background-color: rgb(249 239 213 / .62);
+}
