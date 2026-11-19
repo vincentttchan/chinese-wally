@@ -4,7 +4,7 @@
 
 ## 2026-11-19 四章封面正式封存（封面維護基準）
 
-- 固定標記 `site-2026-11-19-four-chapter-covers` 指向實際部署提交 `23a4541646e8ca81b884110af0797c5f1b424a8b`。正式部署、核對及還原見 `docs/releases/chapter-covers-archive-2026-11-19.md`。
+- 固定標記 `site-2026-11-19-four-chapter-covers` 指向實際部署提交 `23a4541646e8ca81b884110af0797c5f1b424a8b`。正式部署、核對及還原見 `docs/releases/chapter-covers-archive-2026-11-19.md`。 兩版的檔案與封面核對見[本機還原紀錄](docs/releases/chapter-covers-archive-2026-11-19/local-restore-2026-11-19.md)。
 - 四章封面主標沿用教育部隸書。簪花、宮中直排字距均為 0.12 em，《在人群中聽樂》為 0.06 em，洛水為 0.16 em。四章小印統一使用崇羲篆體「入畫」，沿用共用透明 PNG、朱色印框及位置，淡紙底只用於《宮中鬧元宵》。
 - 原版固定標記 `site-2026-11-19-before-cover-ruhua` 對應 `adbeee1fb9e957a4920d05741d23b065c9835938`。Release 保存本次及更新前的實際部署包、逐檔指紋和部署紀錄。既有標記及附件完整保留，後續封面修改另立版本。
 - 本封存只更新維護文件及發布附件。畫坊首頁、各章遊戲與現行旅程不受封面基準更新影響。
